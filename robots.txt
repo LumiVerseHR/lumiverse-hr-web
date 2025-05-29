@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lumiverse.hr/sitemap.xml
+
+# Crawl-delay (optional - removes if you want faster crawling)
+Crawl-delay: 1 

@@ -1,0 +1,26 @@
+{
+  "name": "LumiVerse - AI Solutions for Business",
+  "short_name": "LumiVerse",
+  "description": "Transform your business with AI innovation. Comprehensive AI solutions tailored to your business needs.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#bb86fc",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "technology", "ai"],
+  "lang": "en"
+}

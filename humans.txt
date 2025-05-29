@@ -1,0 +1,17 @@
+/* TEAM */
+CEO & Founder: Tihomir Jauk
+Contact: tihomir.jauk [at] lumiverse.hr
+LinkedIn: https://www.linkedin.com/in/tihomirjauk
+Location: Zagreb, Croatia
+
+/* THANKS */
+AI & Technology: For making innovation accessible
+Open Source Community: For providing amazing tools and libraries
+
+/* SITE */
+Last update: 2024/01/15
+Language: English
+Doctype: HTML5
+Standards: HTML5, CSS3, ES6+
+Components: TailwindCSS, FontAwesome
+Software: VS Code, Git 
