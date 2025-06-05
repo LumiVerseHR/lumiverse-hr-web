@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-KDSBK2G9NS");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pitaj Lider - AI Business Intelligence Assistant | LumiVerse</title>
+    <meta
+      name="description"
+      content="Pitaj Lider is an advanced AI assistant that revolutionizes business research with access to 200,000+ articles and comprehensive company registry data."
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0a0a0a;
+        color: #fafafa;
+      }
+      .gradient-text {
+        background: linear-gradient(45deg, #bb86fc, #3700b3);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero-gradient {
+        background: linear-gradient(
+            135deg,
+            rgba(10, 10, 10, 0.95) 0%,
+            rgba(10, 10, 10, 0.8) 100%
+          ),
+          url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(187, 134, 252, 0.1),
+          0 10px 10px -5px rgba(187, 134, 252, 0.04);
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background: #bb86fc;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .feature-icon {
+        background: linear-gradient(135deg, #bb86fc, #3700b3);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header
+      class="fixed w-full bg-opacity-90 bg-black backdrop-filter backdrop-blur-lg z-50"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-2">
+            <a href="index.html" class="text-2xl font-bold gradient-text"
+              >LumiVerse</a
+            >
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              class="nav-link text-gray-300 hover:text-white transition"
+              >Home</a
+            >
+            <a
+              href="index.html#services"
+              class="nav-link text-gray-300 hover:text-white transition"
+              >Services</a
+            >
+            <a
+              href="index.html#solutions"
+              class="nav-link text-gray-300 hover:text-white transition"
+              >Solutions</a
+            >
+            <a
+              href="index.html#projects"
+              class="nav-link text-gray-300 hover:text-white transition"
+              >Projects</a
+            >
+            <a
+              href="index.html#contact"
+              class="nav-link text-gray-300 hover:text-white transition"
+              >Contact</a
+            >
+          </nav>
+          <button class="md:hidden text-white">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center pt-20">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl">
+          <div class="flex items-center mb-8">
+            <div class="text-purple-500 mr-6">
+              <i class="fas fa-search text-5xl"></i>
+            </div>
+            <div>
+              <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                <span class="gradient-text">Pitaj Lider</span>
+              </h1>
+              <p class="text-xl md:text-2xl text-gray-300">
+                AI-Powered Business Intelligence Assistant
+              </p>
+            </div>
+          </div>
+
+          <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            Revolutionary AI assistant that transforms business research and
+            decision-making by providing instant access to comprehensive market
+            intelligence, company insights, and real-time data analysis.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="index.html#contact"
+              class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition"
+            >
+              Request Demo
+            </a>
+            <a
+              href="#features"
+              class="inline-block border border-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-600/10 transition"
+            >
+              Explore Features
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section id="features" class="py-20 bg-black">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Powerful AI Capabilities
+          </h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            Pitaj Lider combines advanced natural language processing with
+            comprehensive data access to deliver unparalleled business
+            intelligence
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div class="bg-gray-900 p-8 rounded-xl card-hover">
+            <div class="flex items-center mb-6">
+              <i class="fas fa-database text-4xl feature-icon mr-4"></i>
+              <div>
+                <h3 class="text-2xl font-semibold gradient-text">
+                  Massive Knowledge Base
+                </h3>
+                <p class="text-gray-400">200,000+ Curated Articles</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-4">
+              Access to an extensive database of carefully curated articles
+              covering:
+            </p>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Market trends and industry analysis</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Business intelligence reports</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Economic indicators and forecasts</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Competitive landscape insights</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-900 p-8 rounded-xl card-hover">
+            <div class="flex items-center mb-6">
+              <i class="fas fa-building text-4xl feature-icon mr-4"></i>
+              <div>
+                <h3 class="text-2xl font-semibold gradient-text">
+                  Company Registry Access
+                </h3>
+                <p class="text-gray-400">Real-time Court Registry Data</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-4">
+              Instant access to comprehensive company information including:
+            </p>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Basic company registration details</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Financial status and health indicators</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Legal standings and compliance</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Ownership structure and key personnel</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Capabilities Section -->
+    <section class="py-20 bg-gray-900">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Advanced AI Technology
+          </h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            Built on cutting-edge artificial intelligence and machine learning
+            technologies
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-black p-8 rounded-xl text-center">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-brain text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">
+              Natural Language Processing
+            </h3>
+            <p class="text-gray-400">
+              Advanced NLP capabilities enable natural conversation and
+              sophisticated query understanding for intuitive interaction.
+            </p>
+          </div>
+
+          <div class="bg-black p-8 rounded-xl text-center">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-chart-line text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Real-time Analytics</h3>
+            <p class="text-gray-400">
+              Instant data processing and analysis providing immediate insights
+              and actionable intelligence for quick decision-making.
+            </p>
+          </div>
+
+          <div class="bg-black p-8 rounded-xl text-center">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-sync-alt text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Continuous Learning</h3>
+            <p class="text-gray-400">
+              Machine learning algorithms that continuously improve performance
+              and accuracy based on user interactions and feedback.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="py-20 bg-black">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Perfect For</h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            Designed to serve various business professionals and use cases
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-gray-900 p-6 rounded-xl text-center card-hover">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-user-tie text-3xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Business Analysts</h3>
+            <p class="text-gray-400 text-sm">
+              Comprehensive market research and competitive analysis
+            </p>
+          </div>
+
+          <div class="bg-gray-900 p-6 rounded-xl text-center card-hover">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-handshake text-3xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Sales Teams</h3>
+            <p class="text-gray-400 text-sm">
+              Prospect research and lead qualification insights
+            </p>
+          </div>
+
+          <div class="bg-gray-900 p-6 rounded-xl text-center card-hover">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-chart-bar text-3xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Investors</h3>
+            <p class="text-gray-400 text-sm">
+              Due diligence and investment opportunity analysis
+            </p>
+          </div>
+
+          <div class="bg-gray-900 p-6 rounded-xl text-center card-hover">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-briefcase text-3xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Consultants</h3>
+            <p class="text-gray-400 text-sm">
+              Client industry insights and strategic recommendations
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-900">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Transform Your Business Intelligence?
+          </h2>
+          <p class="text-xl text-gray-400 mb-8">
+            Experience the power of AI-driven insights with Pitaj Lider.
+            Schedule a demo to see how it can revolutionize your decision-making
+            process.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://calendly.com/tihomirjauk/30min"
+              target="_blank"
+              class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition"
+            >
+              Schedule Demo
+            </a>
+            <a
+              href="index.html#contact"
+              class="inline-block border border-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-600/10 transition"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+      <div class="container mx-auto px-6">
+        <div class="text-center">
+          <div class="text-2xl font-bold gradient-text mb-6">LumiVerse</div>
+          <p class="text-gray-400 mb-8">Making AI accessible for everyone</p>
+          <div class="flex justify-center">
+            <a
+              href="https://www.linkedin.com/company/lumiversehr"
+              target="_blank"
+              class="text-gray-400 hover:text-purple-500 transition"
+            >
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400"
+        >
+          <p>&copy; 2023 LumiVerse. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
