@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-KDSBK2G9NS");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Lider Digital Archive - AI-Powered Magazine Digitization | LumiVerse
+    </title>
+    <meta
+      name="description"
+      content="Digitization of Lider magazine's 50,000+ article archive using optical character recognition, document analysis, and Croatian language processing algorithms."
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0a0a0a;
+        color: #fafafa;
+      }
+      .gradient-text {
+        background: linear-gradient(45deg, #bb86fc, #3700b3);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero-gradient {
+        background: linear-gradient(
+            135deg,
+            rgba(10, 10, 10, 0.95) 0%,
+            rgba(10, 10, 10, 0.8) 100%
+          ),
+          url("https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(187, 134, 252, 0.1),
+          0 10px 10px -5px rgba(187, 134, 252, 0.04);
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background: #bb86fc;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .feature-icon {
+        background: linear-gradient(135deg, #bb86fc, #3700b3);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header
+      class="fixed w-full bg-opacity-90 bg-black backdrop-filter backdrop-blur-lg z-50"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-2">
+            <a href="index.html" class="text-2xl font-bold gradient-text"
+              >LumiVerse</a
+            >
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              class="nav-link text-gray-300 hover:text-white transition"
+              >Home</a
+            >
+            <a
+              href="index.html#services"
+              class="nav-link text-gray-300 hover:text-white transition"
+              >Services</a
+            >
+            <a
+              href="index.html#solutions"
+              class="nav-link text-gray-300 hover:text-white transition"
+              >Solutions</a
+            >
+            <a
+              href="index.html#projects"
+              class="nav-link text-gray-300 hover:text-white transition"
+              >Projects</a
+            >
+            <a
+              href="index.html#contact"
+              class="nav-link text-gray-300 hover:text-white transition"
+              >Contact</a
+            >
+          </nav>
+          <button class="md:hidden text-white">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center pt-20">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl">
+          <div class="flex items-center mb-8">
+            <div class="text-purple-500 mr-6">
+              <i class="fas fa-file-pdf text-5xl"></i>
+            </div>
+            <div>
+              <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                <span class="gradient-text">Lider Digital Archive</span>
+              </h1>
+              <p class="text-xl md:text-2xl text-gray-300">
+                AI-Powered Magazine Digitization Platform
+              </p>
+            </div>
+          </div>
+
+          <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            Converting decades of Lider magazine content from PDF format into
+            structured, searchable digital data using optical character
+            recognition and document analysis algorithms.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="index.html#contact"
+              class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition"
+            >
+              Request Demo
+            </a>
+            <a
+              href="#challenges"
+              class="inline-block border border-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-600/10 transition"
+            >
+              Explore Technology
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Overview Section -->
+    <section class="py-20 bg-black">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Project Overview</h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            A comprehensive digitization initiative processing 50,000+ articles
+            from Lider magazine's printed archive
+          </p>
+        </div>
+
+        <!-- Archive Sample Image -->
+        <div class="flex justify-center mb-16">
+          <div class="max-w-4xl w-full">
+            <div class="bg-gray-900 p-8 rounded-xl">
+              <h3 class="text-2xl font-bold mb-6 text-center">
+                Original Magazine Archive Sample
+              </h3>
+              <div class="rounded-lg overflow-hidden shadow-2xl">
+                <img
+                  src="images/0017_014.jpg"
+                  alt="Original Lider magazine page showing complex layout with multiple columns, images, and Croatian text - demonstrating the challenges overcome in the digitization process"
+                  class="w-full h-auto object-contain"
+                  style="max-height: 800px"
+                />
+              </div>
+              <p class="text-gray-400 text-center mt-4 text-sm">
+                Sample page from Lider magazine archive showcasing the
+                complexity of layouts processed by our AI digitization pipeline
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-gray-900 p-8 rounded-xl text-center card-hover">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-newspaper text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">50,000+</h3>
+            <p class="text-gray-400">Articles Processed</p>
+          </div>
+
+          <div class="bg-gray-900 p-8 rounded-xl text-center card-hover">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-calendar text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Decades</h3>
+            <p class="text-gray-400">of Magazine Content</p>
+          </div>
+
+          <div class="bg-gray-900 p-8 rounded-xl text-center card-hover">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-language text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Croatian</h3>
+            <p class="text-gray-400">Language Processing</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Challenges Section -->
+    <section id="challenges" class="py-20 bg-gray-900">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Technical Challenges
+          </h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            Complex AI and computer vision challenges overcome during the
+            digitization process
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-black p-8 rounded-xl card-hover">
+            <div class="flex items-center mb-6">
+              <i class="fas fa-eye text-4xl feature-icon mr-4"></i>
+              <div>
+                <h3 class="text-2xl font-semibold gradient-text">
+                  Layout Detection & OCR
+                </h3>
+                <p class="text-gray-400">Document Structure Analysis</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-4">
+              Computer vision algorithms to analyze magazine layouts and extract
+              text content:
+            </p>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Multi-column text recognition</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Article boundary detection</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Image and caption identification</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Multi-page article tracking</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-black p-8 rounded-xl card-hover">
+            <div class="flex items-center mb-6">
+              <i class="fas fa-language text-4xl feature-icon mr-4"></i>
+              <div>
+                <h3 class="text-2xl font-semibold gradient-text">
+                  Croatian Language AI
+                </h3>
+                <p class="text-gray-400">Specialized NLP Processing</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-4">
+              Overcoming challenges with Croatian language processing using
+              current AI models:
+            </p>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Custom language model training</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Diacritical mark preservation</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Context-aware text correction</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Author and title extraction</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Pipeline Section -->
+    <section class="py-20 bg-black">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Processing Pipeline
+          </h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            Multi-stage AI pipeline converting unstructured PDFs to structured
+            digital content
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-gray-900 p-6 rounded-xl text-center card-hover">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-file-pdf text-3xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">1. PDF Ingestion</h3>
+            <p class="text-gray-400 text-sm">
+              Automated processing of scanned magazine pages
+            </p>
+          </div>
+
+          <div class="bg-gray-900 p-6 rounded-xl text-center card-hover">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-search-plus text-3xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">2. Layout Analysis</h3>
+            <p class="text-gray-400 text-sm">
+              Computer vision for structure detection and segmentation
+            </p>
+          </div>
+
+          <div class="bg-gray-900 p-6 rounded-xl text-center card-hover">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-font text-3xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">3. OCR & Extraction</h3>
+            <p class="text-gray-400 text-sm">
+              Text recognition algorithms with Croatian language processing
+            </p>
+          </div>
+
+          <div class="bg-gray-900 p-6 rounded-xl text-center card-hover">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-database text-3xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">4. Data Structuring</h3>
+            <p class="text-gray-400 text-sm">
+              Converting to searchable, structured digital format
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="py-20 bg-gray-900">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            System Capabilities
+          </h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            Document processing technologies for digitization and content
+            extraction
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-black p-8 rounded-xl text-center">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-puzzle-piece text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">
+              Multi-Page Article Tracking
+            </h3>
+            <p class="text-gray-400">
+              Algorithms that identify and connect article content spanning
+              multiple magazine pages using pattern recognition techniques.
+            </p>
+          </div>
+
+          <div class="bg-black p-8 rounded-xl text-center">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-user-edit text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Author Recognition</h3>
+            <p class="text-gray-400">
+              Pattern recognition algorithms to extract and standardize author
+              information from magazine layouts and text formats.
+            </p>
+          </div>
+
+          <div class="bg-black p-8 rounded-xl text-center">
+            <div class="text-purple-500 mb-4">
+              <i class="fas fa-cogs text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Post-Processing Pipeline</h3>
+            <p class="text-gray-400">
+              Data validation and quality control processes for conversion from
+              unstructured to structured document format.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results & Impact Section -->
+    <section class="py-20 bg-black">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Results & Impact</h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            Converting archived content into structured digital format for
+            improved accessibility and searchability
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="bg-gray-900 p-8 rounded-xl">
+            <h3 class="text-2xl font-semibold mb-4 gradient-text">
+              Digital Preservation
+            </h3>
+            <p class="text-gray-300 mb-6">
+              Digitized Croatian business journalism archive into structured
+              format with full-text search capabilities and metadata indexing.
+            </p>
+            <ul class="space-y-3 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Complete archive digitization</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Metadata enrichment</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Full-text search capability</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-900 p-8 rounded-xl">
+            <h3 class="text-2xl font-semibold mb-4 gradient-text">
+              Technical Implementation
+            </h3>
+            <p class="text-gray-300 mb-6">
+              Developed specialized algorithms for Croatian language processing
+              and document structure analysis for multilingual content
+              digitization.
+            </p>
+            <ul class="space-y-3 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Custom language models</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>OCR algorithm optimization</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-purple-500 mr-3"></i>
+                <span>Scalable processing pipeline</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-900">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Need Document Digitization Solutions?
+          </h2>
+          <p class="text-xl text-gray-400 mb-8">
+            Apply our document processing algorithms and multilingual content
+            digitization techniques for archive conversion projects.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://calendly.com/tihomirjauk/30min"
+              target="_blank"
+              class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition"
+            >
+              Schedule Consultation
+            </a>
+            <a
+              href="index.html#contact"
+              class="inline-block border border-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-600/10 transition"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+      <div class="container mx-auto px-6">
+        <div class="text-center">
+          <div class="text-2xl font-bold gradient-text mb-6">LumiVerse</div>
+          <p class="text-gray-400 mb-8">Making AI accessible for everyone</p>
+          <div class="flex justify-center">
+            <a
+              href="https://www.linkedin.com/company/lumiversehr"
+              target="_blank"
+              class="text-gray-400 hover:text-purple-500 transition"
+            >
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400"
+        >
+          <p>&copy; 2023 LumiVerse. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
