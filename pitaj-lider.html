@@ -1,459 +1,696 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-KDSBK2G9NS");
-    </script>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pitaj Lider - AI Business Intelligence Assistant | LumiVerse</title>
-    <meta
-      name="description"
-      content="Pitaj Lider is an AI assistant for business research providing access to 200,000+ articles and company registry data through natural language processing."
-    />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pitaj Lider - AI Business Intelligence Assistant | LumiVerse</title>
+  <meta name="description" content="AI-powered business intelligence assistant with access to 200,000+ articles and real-time company registry data. Natural language queries for instant business insights.">
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #0a0a0a;
-        color: #fafafa;
-      }
-      .gradient-text {
-        background: linear-gradient(45deg, #bb86fc, #3700b3);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-      .hero-gradient {
-        background: linear-gradient(
-            135deg,
-            rgba(10, 10, 10, 0.95) 0%,
-            rgba(10, 10, 10, 0.8) 100%
-          ),
-          url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80");
-        background-size: cover;
-        background-position: center;
-      }
-      .card-hover {
-        transition: all 0.3s ease;
-      }
-      .card-hover:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgba(187, 134, 252, 0.1),
-          0 10px 10px -5px rgba(187, 134, 252, 0.04);
-      }
-      .nav-link {
-        position: relative;
-      }
-      .nav-link::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -4px;
-        left: 0;
-        background: #bb86fc;
-        transition: width 0.3s ease;
-      }
-      .nav-link:hover::after {
-        width: 100%;
-      }
-      .feature-icon {
-        background: linear-gradient(135deg, #bb86fc, #3700b3);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-    </style>
-  </head>
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
 
-  <body>
-    <!-- Header -->
-    <header
-      class="fixed w-full bg-opacity-90 bg-black backdrop-filter backdrop-blur-lg z-50"
-    >
-      <div class="container mx-auto px-6 py-4">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center space-x-2">
-            <a href="index.html" class="text-2xl font-bold gradient-text"
-              >LumiVerse</a
-            >
-          </div>
-          <nav class="hidden md:flex space-x-8">
-            <a
-              href="index.html"
-              class="nav-link text-gray-300 hover:text-white transition"
-              >Home</a
-            >
-            <a
-              href="index.html#services"
-              class="nav-link text-gray-300 hover:text-white transition"
-              >Services</a
-            >
-            <a
-              href="index.html#solutions"
-              class="nav-link text-gray-300 hover:text-white transition"
-              >Solutions</a
-            >
-            <a
-              href="index.html#projects"
-              class="nav-link text-gray-300 hover:text-white transition"
-              >Projects</a
-            >
-            <a
-              href="index.html#contact"
-              class="nav-link text-gray-300 hover:text-white transition"
-              >Contact</a
-            >
-          </nav>
-          <button class="md:hidden text-white">
-            <i class="fas fa-bars text-xl"></i>
-          </button>
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(255, 77, 77, 0.15), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(77, 255, 255, 0.1), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 77, 77, 0.1);
+      border: 1px solid rgba(255, 77, 77, 0.2);
+      border-radius: 100px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .hero-image-showcase img {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, var(--bg-primary), transparent 30%);
+      border-radius: 16px;
+      pointer-events: none;
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .feature-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .feature-showcase-reverse {
+      direction: rtl;
+    }
+
+    .feature-showcase-reverse > * {
+      direction: ltr;
+    }
+
+    .feature-visual {
+      position: relative;
+    }
+
+    .feature-visual-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .feature-visual-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.2), rgba(255, 143, 77, 0.1));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .use-case-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .use-case-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .use-case-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .use-case-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 143, 77, 0.1));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin: 0 auto 1.25rem;
+    }
+
+    .use-case-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .use-case-text {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.1), transparent 50%);
+      pointer-events: none;
+    }
+
+    .external-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .external-link-btn:hover {
+      background: var(--accent);
+      color: var(--bg-primary);
+      border-color: var(--accent);
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .feature-showcase {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .feature-showcase-reverse {
+        direction: ltr;
+      }
+
+      .use-case-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+
+      .use-case-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#work" class="nav-link">Work</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#services" class="mobile-nav-link">Services</a>
+    <a href="index.html#work" class="mobile-nav-link">Work</a>
+    <a href="index.html#about" class="mobile-nav-link">About</a>
+    <a href="index.html#contact" class="mobile-nav-link">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="index.html#work">Work</a>
+        <span>/</span>
+        <span>Pitaj Lider</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-robot"></i>
+        AI Assistant
+      </div>
+
+      <h1 class="display-lg mb-4">Pitaj Lider</h1>
+      <p class="body-lg text-secondary" style="max-width: 700px;">
+        Business intelligence assistant that transforms how professionals access market data. Natural language queries against 200,000+ articles and real-time company registry information.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://lidermedia.hr/lider-bi/" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i>
+          See It Live
+        </a>
+        <a href="index.html#contact" class="btn btn-secondary">
+          Build Something Similar
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <img src="images/pitaj-lider-ai-assistant.jpg" alt="Pitaj Lider AI Assistant interface showing natural language query processing and business intelligence insights">
+        <div class="hero-image-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">200K+</div>
+          <div class="stat-label">Articles Indexed</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">Real-time</div>
+          <div class="stat-label">Company Registry Data</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">NLP</div>
+          <div class="stat-label">Natural Language Queries</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">24/7</div>
+          <div class="stat-label">Always Available</div>
         </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="hero-gradient min-h-screen flex items-center pt-20">
-      <div class="container mx-auto px-6">
-        <div class="max-w-4xl">
-          <div class="flex items-center mb-8">
-            <div class="text-purple-500 mr-6">
-              <i class="fas fa-search text-5xl"></i>
-            </div>
-            <div>
-              <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-                <span class="gradient-text">Pitaj Lider</span>
-              </h1>
-              <p class="text-xl md:text-2xl text-gray-300">
-                AI-Powered Business Intelligence Assistant
-              </p>
-            </div>
-          </div>
-
-          <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-            AI assistant for business research and decision support, providing
-            access to market intelligence, company information, and data
-            analysis through natural language queries.
-          </p>
-
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a
-              href="index.html#contact"
-              class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition"
-            >
-              Request Demo
-            </a>
-            <a
-              href="#features"
-              class="inline-block border border-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-600/10 transition"
-            >
-              Explore Features
-            </a>
-          </div>
-        </div>
+  <!-- Features Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 5rem;">
+        <span class="section-label">System Capabilities</span>
+        <h2 class="display-md section-title">What It Does</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Two powerful data sources, unified through intelligent AI that understands context and intent.
+        </p>
       </div>
-    </section>
 
-    <!-- Key Features Section -->
-    <section id="features" class="py-20 bg-black">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            AI System Capabilities
-          </h2>
-          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-            Pitaj Lider uses natural language processing algorithms with
-            structured data access to provide business intelligence analysis
-          </p>
-        </div>
-
-        <!-- AI Assistant Showcase -->
-        <div class="flex justify-center mb-16">
-          <div class="max-w-4xl w-full">
-            <div class="bg-gray-900 p-8 rounded-xl">
-              <h3 class="text-2xl font-bold mb-6 text-center gradient-text">
-                AI Business Intelligence System
-              </h3>
-              <div class="rounded-lg overflow-hidden shadow-2xl">
-                <img
-                  src="images/pitaj-lider-ai-assistant.jpg"
-                  alt="Pitaj Lider AI Assistant interface showing natural language query processing, data analysis, and business intelligence features"
-                  class="w-full h-auto object-contain"
-                  style="max-height: 600px"
-                />
-              </div>
-              <p class="text-gray-400 text-center mt-4 text-sm">
-                AI-based system for business data access and analysis through
-                natural language interface
-              </p>
-              <div class="text-center mt-6">
-                <a
-                  href="https://lidermedia.hr/lider-bi/"
-                  target="_blank"
-                  class="inline-flex items-center px-6 py-3 border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white rounded-lg font-medium transition-all duration-300"
-                >
-                  <i class="fas fa-external-link-alt mr-2 text-sm"></i>
-                  See Lider BI in Action
-                </a>
-              </div>
+      <!-- Feature 1: Article Database -->
+      <div class="feature-showcase mb-6">
+        <div class="feature-visual">
+          <div class="feature-visual-card">
+            <div class="feature-visual-icon">
+              <i class="fas fa-database"></i>
             </div>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <div class="bg-gray-900 p-8 rounded-xl card-hover">
-            <div class="flex items-center mb-6">
-              <i class="fas fa-database text-4xl feature-icon mr-4"></i>
-              <div>
-                <h3 class="text-2xl font-semibold gradient-text">
-                  Article Database
-                </h3>
-                <p class="text-gray-400">200,000+ Curated Articles</p>
-              </div>
-            </div>
-            <p class="text-gray-300 mb-4">
-              Access to a database of indexed articles covering:
-            </p>
-            <ul class="space-y-2 text-gray-400">
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Market trends and industry analysis</span>
+            <h3 class="heading-md mb-2">Article Database</h3>
+            <p class="text-secondary mb-4">200,000+ curated business articles</p>
+            <ul class="feature-list">
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Market trends & industry analysis
               </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Business intelligence reports</span>
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Business intelligence reports
               </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Economic indicators and forecasts</span>
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Economic indicators & forecasts
               </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Competitive landscape insights</span>
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Competitive landscape insights
               </li>
             </ul>
           </div>
+        </div>
+        <div>
+          <span class="section-label">Knowledge Base</span>
+          <h3 class="display-md mb-4">Decades of Business Intelligence</h3>
+          <p class="body-lg text-secondary mb-4">
+            Every article from Lider magazine's archive, structured and indexed for semantic search. Ask questions in natural language, get answers with sources.
+          </p>
+          <p class="text-secondary">
+            The system understands context. Ask about a company's market position, and it pulls relevant articles, competitor mentions, industry trends - all in seconds.
+          </p>
+        </div>
+      </div>
 
-          <div class="bg-gray-900 p-8 rounded-xl card-hover">
-            <div class="flex items-center mb-6">
-              <i class="fas fa-building text-4xl feature-icon mr-4"></i>
-              <div>
-                <h3 class="text-2xl font-semibold gradient-text">
-                  Company Registry Access
-                </h3>
-                <p class="text-gray-400">Real-time Court Registry Data</p>
-              </div>
+      <!-- Feature 2: Company Registry -->
+      <div class="feature-showcase feature-showcase-reverse" style="margin-top: 6rem;">
+        <div class="feature-visual">
+          <div class="feature-visual-card">
+            <div class="feature-visual-icon">
+              <i class="fas fa-building"></i>
             </div>
-            <p class="text-gray-300 mb-4">
-              Access to company registry information including:
-            </p>
-            <ul class="space-y-2 text-gray-400">
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Basic company registration details</span>
+            <h3 class="heading-md mb-2">Company Registry</h3>
+            <p class="text-secondary mb-4">Real-time court registry data</p>
+            <ul class="feature-list">
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Company registration details
               </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Financial status and health indicators</span>
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Financial status indicators
               </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Legal standings and compliance</span>
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Legal standings & compliance
               </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Ownership structure and key personnel</span>
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Ownership & key personnel
               </li>
             </ul>
           </div>
         </div>
+        <div>
+          <span class="section-label">Live Data</span>
+          <h3 class="display-md mb-4">Real-time Company Information</h3>
+          <p class="body-lg text-secondary mb-4">
+            Direct access to official company registry data. Current status, financial health, ownership structure - verified information, not scraped guesses.
+          </p>
+          <p class="text-secondary">
+            Combined with article intelligence, you get the full picture: what a company says publicly, what the market says about them, and what the official records show.
+          </p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Technical Capabilities Section -->
-    <section class="py-20 bg-gray-900">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Technical Implementation
-          </h2>
-          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-            Built using artificial intelligence and machine learning algorithms
-            for natural language processing and data analysis
+  <!-- Technical Implementation -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">Under the Hood</span>
+        <h2 class="display-md section-title">Technical Implementation</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Built for accuracy, speed, and continuous improvement.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3 class="bento-title">Natural Language Processing</h3>
+          <p class="bento-text">
+            Advanced NLP that understands Croatian business terminology, interprets complex queries, and extracts intent from conversational input.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-black p-8 rounded-xl text-center">
-            <div class="text-purple-500 mb-4">
-              <i class="fas fa-brain text-4xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-4">
-              Natural Language Processing
-            </h3>
-            <p class="text-gray-400">
-              Natural language processing algorithms enable query interpretation
-              and response generation for business data analysis.
-            </p>
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-search"></i>
           </div>
-
-          <div class="bg-black p-8 rounded-xl text-center">
-            <div class="text-purple-500 mb-4">
-              <i class="fas fa-chart-line text-4xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-4">Real-time Analytics</h3>
-            <p class="text-gray-400">
-              Data processing and statistical analysis providing insights for
-              business decision support and trend identification.
-            </p>
-          </div>
-
-          <div class="bg-black p-8 rounded-xl text-center">
-            <div class="text-purple-500 mb-4">
-              <i class="fas fa-sync-alt text-4xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-4">Continuous Learning</h3>
-            <p class="text-gray-400">
-              Machine learning algorithms that continuously improve performance
-              and accuracy based on user interactions and feedback.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Use Cases Section -->
-    <section class="py-20 bg-black">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Perfect For</h2>
-          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-            Designed to serve various business professionals and use cases
+          <h3 class="bento-title">Semantic Search</h3>
+          <p class="bento-text">
+            Vector embeddings and RAG architecture for context-aware retrieval. Finds relevant information even when exact keywords don't match.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-gray-900 p-6 rounded-xl text-center card-hover">
-            <div class="text-purple-500 mb-4">
-              <i class="fas fa-user-tie text-3xl"></i>
-            </div>
-            <h3 class="text-lg font-semibold mb-2">Business Analysts</h3>
-            <p class="text-gray-400 text-sm">
-              Comprehensive market research and competitive analysis
-            </p>
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-chart-line"></i>
           </div>
-
-          <div class="bg-gray-900 p-6 rounded-xl text-center card-hover">
-            <div class="text-purple-500 mb-4">
-              <i class="fas fa-handshake text-3xl"></i>
-            </div>
-            <h3 class="text-lg font-semibold mb-2">Sales Teams</h3>
-            <p class="text-gray-400 text-sm">
-              Prospect research and lead qualification insights
-            </p>
-          </div>
-
-          <div class="bg-gray-900 p-6 rounded-xl text-center card-hover">
-            <div class="text-purple-500 mb-4">
-              <i class="fas fa-chart-bar text-3xl"></i>
-            </div>
-            <h3 class="text-lg font-semibold mb-2">Investors</h3>
-            <p class="text-gray-400 text-sm">
-              Due diligence and investment opportunity analysis
-            </p>
-          </div>
-
-          <div class="bg-gray-900 p-6 rounded-xl text-center card-hover">
-            <div class="text-purple-500 mb-4">
-              <i class="fas fa-briefcase text-3xl"></i>
-            </div>
-            <h3 class="text-lg font-semibold mb-2">Consultants</h3>
-            <p class="text-gray-400 text-sm">
-              Client industry insights and strategic recommendations
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-20 bg-gray-900">
-      <div class="container mx-auto px-6">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">
-            Implement AI-Based Business Intelligence
-          </h2>
-          <p class="text-xl text-gray-400 mb-8">
-            Evaluate AI-driven data analysis capabilities with Pitaj Lider.
-            Schedule a demonstration to assess system functionality for your
-            business requirements.
+          <h3 class="bento-title">Real-time Analytics</h3>
+          <p class="bento-text">
+            Live data processing for instant insights. Company lookups, trend analysis, and cross-referencing happen in milliseconds.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://calendly.com/tihomirjauk/30min"
-              target="_blank"
-              class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition"
-            >
-              Schedule Demo
-            </a>
-            <a
-              href="index.html#contact"
-              class="inline-block border border-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-600/10 transition"
-            >
-              Contact Us
-            </a>
-          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-black py-12">
-      <div class="container mx-auto px-6">
-        <div class="text-center">
-          <div class="text-2xl font-bold gradient-text mb-6">LumiVerse</div>
-          <p class="text-gray-400 mb-8">Making AI accessible for everyone</p>
-          <div class="flex justify-center">
-            <a
-              href="https://www.linkedin.com/company/lumiversehr"
-              target="_blank"
-              class="text-gray-400 hover:text-purple-500 transition"
-            >
-              <i class="fab fa-linkedin text-xl"></i>
-            </a>
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-sync-alt"></i>
           </div>
+          <h3 class="bento-title">Continuous Learning</h3>
+          <p class="bento-text">
+            The system improves with use. Query patterns inform model updates, user feedback refines responses, and new content is automatically indexed and integrated.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Feedback loop integration
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Automatic content updates
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Query optimization over time
+            </li>
+          </ul>
         </div>
-        <div
-          class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400"
-        >
-          <p>&copy; 2023 LumiVerse. All rights reserved.</p>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h3 class="bento-title">API Integration</h3>
+          <p class="bento-text">
+            Connects to external data sources, court registries, and content management systems through secure, maintained integrations.
+          </p>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">Who Uses It</span>
+        <h2 class="display-md section-title">Built For</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Designed for professionals who need reliable business intelligence fast.
+        </p>
+      </div>
+
+      <div class="use-case-grid">
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3 class="use-case-title">Business Analysts</h3>
+          <p class="use-case-text">Market research and competitive analysis in minutes, not days</p>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 class="use-case-title">Sales Teams</h3>
+          <p class="use-case-text">Prospect research and lead qualification with verified data</p>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <h3 class="use-case-title">Investors</h3>
+          <p class="use-case-text">Due diligence and opportunity analysis backed by sources</p>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h3 class="use-case-title">Consultants</h3>
+          <p class="use-case-text">Client industry insights and strategic recommendations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Build Your Own AI Assistant</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 600px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          Pitaj Lider is a custom implementation. We can build something similar for your industry, your data, your use case.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
+          <a href="https://calendly.com/tihomirjauk/30min" target="_blank" class="btn btn-primary">
+            <i class="fas fa-calendar-alt"></i>
+            Schedule a Call
+          </a>
+          <a href="index.html#contact" class="btn btn-secondary">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI solutions that transform how businesses operate. Based in Zagreb, working globally.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#services" class="footer-link">AI Strategy</a></li>
+            <li><a href="index.html#services" class="footer-link">Process Automation</a></li>
+            <li><a href="index.html#services" class="footer-link">Predictive Analytics</a></li>
+            <li><a href="index.html#services" class="footer-link">Document AI</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Work</h4>
+          <ul class="footer-links">
+            <li><a href="pitaj-lider.html" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="lider-pdf-archive.html" class="footer-link">Lider Archive</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Email Us</a></li>
+            <li><a href="https://calendly.com/tihomirjauk/30min" target="_blank" class="footer-link">Book a Call</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2024 LumiVerse d.o.o. All rights reserved.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
 </html>

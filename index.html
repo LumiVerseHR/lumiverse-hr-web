@@ -1,538 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Head section remains the same -->
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
 
-      gtag("config", "G-KDSBK2G9NS");
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LumiVerse - AI Solutions for Business</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #0a0a0a;
-        color: #fafafa;
-      }
-      .gradient-text {
-        background: linear-gradient(45deg, #bb86fc, #3700b3);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-      .hero-gradient {
-        background: linear-gradient(
-            135deg,
-            rgba(10, 10, 10, 0.95) 0%,
-            rgba(10, 10, 10, 0.8) 100%
-          ),
-          url("https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80");
-        background-size: cover;
-        background-position: center;
-      }
-      .card-hover {
-        transition: all 0.3s ease;
-      }
-      .card-hover:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgba(187, 134, 252, 0.1),
-          0 10px 10px -5px rgba(187, 134, 252, 0.04);
-      }
-      .nav-link {
-        position: relative;
-      }
-      .nav-link::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -4px;
-        left: 0;
-        background: #bb86fc;
-        transition: width 0.3s ease;
-      }
-      .nav-link:hover::after {
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Header - Removed About link -->
-    <header
-      class="fixed w-full bg-opacity-90 bg-black backdrop-filter backdrop-blur-lg z-50"
-    >
-      <div class="container mx-auto px-6 py-4">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center space-x-2">
-            <div class="text-2xl font-bold gradient-text">LumiVerse</div>
-          </div>
-          <nav class="hidden md:flex space-x-8">
-            <a
-              href="#services"
-              class="nav-link text-gray-300 hover:text-white transition"
-              >Services</a
-            >
-            <a
-              href="#solutions"
-              class="nav-link text-gray-300 hover:text-white transition"
-              >Solutions</a
-            >
-            <a
-              href="#projects"
-              class="nav-link text-gray-300 hover:text-white transition"
-              >Projects</a
-            >
-            <a
-              href="#contact"
-              class="nav-link text-gray-300 hover:text-white transition"
-              >Contact</a
-            >
-          </nav>
-          <button class="md:hidden text-white">
-            <i class="fas fa-bars text-xl"></i>
-          </button>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LumiVerse - AI Solutions That Transform Business</title>
+  <meta name="description" content="We build artificial intelligence solutions that automate processes, analyze patterns, and optimize operations. Based in Zagreb, working globally.">
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#services" class="mobile-nav-link">Services</a>
+    <a href="#work" class="mobile-nav-link">Work</a>
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="mesh-gradient"></div>
+    <div class="geo-shape geo-shape-1"></div>
+    <div class="geo-shape geo-shape-2"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-label">
+          <span class="hero-label-dot"></span>
+          AI Solutions Studio
+        </div>
+
+        <h1 class="hero-title">
+          <span class="display-xl">We build</span><br>
+          <span class="display-xl gradient-text">intelligent</span><br>
+          <span class="display-xl">systems</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Artificial intelligence that automates processes, uncovers patterns in data, and transforms how businesses operate. From concept to deployment.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">
+            Start a Project
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#work" class="btn btn-secondary">
+            View Our Work
+          </a>
         </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <!-- Rest of sections remain the same until the Contact section -->
-    <!-- Hero Section -->
-    <section class="hero-gradient min-h-screen flex items-center pt-20">
-      <div class="container mx-auto px-6">
-        <div class="max-w-3xl">
-          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Business Process Optimization with
-            <span class="gradient-text">AI Implementation</span>
-          </h1>
-          <p class="text-xl md:text-2xl text-gray-300 mb-8">
-            We develop artificial intelligence solutions to automate business
-            processes, analyze data patterns, and optimize operational
-            efficiency.
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Do</span>
+        <h2 class="display-md section-title">Services</h2>
+        <p class="section-description">
+          End-to-end AI implementation, from strategy to production systems.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Large Card -->
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3 class="bento-title">AI Strategy & Consulting</h3>
+          <p class="bento-text">
+            We analyze your business processes and identify where AI creates the most impact. Clear roadmaps, realistic timelines, measurable outcomes. No hype, just results.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a
-              href="#contact"
-              class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition"
-            >
-              Get Started
-            </a>
-            <a
-              href="#services"
-              class="inline-block border border-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-600/10 transition"
-            >
-              Learn More
-            </a>
-          </div>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Process analysis & opportunity mapping
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Technology stack recommendations
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              ROI projections & implementation plans
+            </li>
+          </ul>
         </div>
-      </div>
-    </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-black">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
-          <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-            Comprehensive AI solutions tailored to your business needs
+        <!-- Regular Card -->
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3 class="bento-title">Process Automation</h3>
+          <p class="bento-text">
+            Intelligent automation that handles repetitive tasks, routes decisions, and integrates with your existing systems.
           </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-gray-900 p-8 rounded-xl card-hover">
-            <div class="text-purple-500 mb-4">
-              <i class="fas fa-brain text-4xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-4">AI Strategy Consulting</h3>
-            <p class="text-gray-400">
-              Strategic guidance on implementing AI technologies to maximize ROI
-              and business impact.
-            </p>
-          </div>
-          <div class="bg-gray-900 p-8 rounded-xl card-hover">
-            <div class="text-purple-500 mb-4">
-              <i class="fas fa-robot text-4xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-4">Process Automation</h3>
-            <p class="text-gray-400">
-              Intelligent automation solutions that streamline operations and
-              reduce costs.
-            </p>
-          </div>
-          <div class="bg-gray-900 p-8 rounded-xl card-hover">
-            <div class="text-purple-500 mb-4">
-              <i class="fas fa-chart-line text-4xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-4">Predictive Analytics</h3>
-            <p class="text-gray-400">
-              Data-driven insights to help you make better business decisions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Solutions Section -->
-    <section id="solutions" class="py-20 bg-gray-900">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Solutions</h2>
-          <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-            Implementation of LumiFlows.ai platform for automated business
-            operations
+        <!-- Regular Card -->
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="bento-title">Predictive Analytics</h3>
+          <p class="bento-text">
+            Machine learning models that forecast trends, detect anomalies, and surface insights hidden in your data.
           </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div class="bg-black p-8 rounded-xl">
-            <h3 class="text-2xl font-semibold mb-4 gradient-text">
-              LumiFlows.ai Platform
-            </h3>
-            <p class="text-gray-400 mb-6">
-              Our flagship AI platform that simplifies integration and
-              automation for businesses of all sizes.
-            </p>
-            <ul class="space-y-4">
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Easy integration with existing systems</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Customizable workflows</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Real-time analytics and reporting</span>
-              </li>
-            </ul>
-          </div>
-          <div class="bg-black p-8 rounded-xl">
-            <h3 class="text-2xl font-semibold mb-4 gradient-text">
-              Custom AI Development
-            </h3>
-            <p class="text-gray-400 mb-6">
-              Tailored AI solutions designed specifically for your business
-              needs and challenges.
-            </p>
-            <ul class="space-y-4">
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Personalized AI models</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Scalable architecture</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-purple-500 mr-3"></i>
-                <span>Ongoing support and maintenance</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-black">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Projects</h2>
-          <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-            AI-based solutions for business process automation and data analysis
+        <!-- Regular Card -->
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3 class="bento-title">NLP & Chat Systems</h3>
+          <p class="bento-text">
+            Custom AI assistants that understand context, retrieve knowledge, and communicate naturally with users.
           </p>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-4xl mx-auto">
-          <!-- Pitaj Lider Project -->
-          <div class="bg-gray-900 rounded-xl overflow-hidden card-hover">
-            <div class="p-8">
-              <div class="flex items-center mb-6">
-                <div class="text-purple-500 mr-4">
-                  <i class="fas fa-search text-3xl"></i>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-bold">
-                    <a
-                      href="pitaj-lider.html"
-                      class="gradient-text hover:brightness-125 transition-all duration-300"
-                    >
-                      Pitaj Lider
-                    </a>
-                  </h3>
-                  <p class="text-gray-400">
-                    AI-Powered Business Intelligence Assistant
-                  </p>
-                </div>
-              </div>
 
-              <p class="text-gray-300 mb-6 text-lg leading-relaxed">
-                AI assistant for business research and data analysis, providing
-                access to structured market intelligence and company registry
-                information through natural language processing.
-              </p>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div class="bg-black p-6 rounded-lg">
-                  <div class="flex items-center mb-3">
-                    <i class="fas fa-database text-purple-400 mr-3"></i>
-                    <h4 class="font-semibold">Knowledge Base</h4>
-                  </div>
-                  <p class="text-gray-400 text-sm">
-                    Access to 200,000+ curated articles covering market trends,
-                    industry insights, and business intelligence
-                  </p>
-                </div>
-
-                <div class="bg-black p-6 rounded-lg">
-                  <div class="flex items-center mb-3">
-                    <i class="fas fa-building text-purple-400 mr-3"></i>
-                    <h4 class="font-semibold">Company Registry</h4>
-                  </div>
-                  <p class="text-gray-400 text-sm">
-                    Real-time access to court registry data with basic company
-                    information, financial status, and legal standings
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex flex-wrap gap-3 mb-6">
-                <span
-                  class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm"
-                >
-                  Natural Language Processing
-                </span>
-                <span
-                  class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm"
-                >
-                  Data Analytics
-                </span>
-                <span
-                  class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm"
-                >
-                  Business Intelligence
-                </span>
-                <span
-                  class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm"
-                >
-                  Real-time Data
-                </span>
-              </div>
-
-              <div class="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="pitaj-lider.html"
-                  class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition text-center"
-                >
-                  Learn More
-                </a>
-                <a
-                  href="#contact"
-                  class="inline-block border border-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-600/10 transition text-center"
-                >
-                  Get Started
-                </a>
-              </div>
-            </div>
+        <!-- Large Card -->
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-eye"></i>
           </div>
-
-          <!-- Lider Archive Digitization Project -->
-          <div class="bg-gray-900 rounded-xl overflow-hidden card-hover">
-            <div class="p-8">
-              <div class="flex items-center mb-6">
-                <div class="text-purple-500 mr-4">
-                  <i class="fas fa-file-pdf text-3xl"></i>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-bold">
-                    <a
-                      href="lider-pdf-archive.html"
-                      class="gradient-text hover:brightness-125 transition-all duration-300"
-                    >
-                      Lider Digital Archive
-                    </a>
-                  </h3>
-                  <p class="text-gray-400">
-                    AI-Powered Magazine Digitization Platform
-                  </p>
-                </div>
-              </div>
-
-              <p class="text-gray-300 mb-6 text-lg leading-relaxed">
-                Digitization of Lider magazine's printed archive, converting
-                50,000+ articles from PDF format into structured, searchable
-                digital content using optical character recognition and natural
-                language processing techniques.
-              </p>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div class="bg-black p-6 rounded-lg">
-                  <div class="flex items-center mb-3">
-                    <i class="fas fa-eye text-purple-400 mr-3"></i>
-                    <h4 class="font-semibold">OCR & Layout Detection</h4>
-                  </div>
-                  <p class="text-gray-400 text-sm">
-                    Optical character recognition with layout detection
-                    algorithms to identify article boundaries and multi-page
-                    content structures
-                  </p>
-                </div>
-
-                <div class="bg-black p-6 rounded-lg">
-                  <div class="flex items-center mb-3">
-                    <i class="fas fa-language text-purple-400 mr-3"></i>
-                    <h4 class="font-semibold">Croatian Language Processing</h4>
-                  </div>
-                  <p class="text-gray-400 text-sm">
-                    Specialized natural language processing for Croatian
-                    language content, overcoming challenges with current VLMs
-                    and LLMs
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex flex-wrap gap-3 mb-6">
-                <span
-                  class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm"
-                >
-                  Computer Vision
-                </span>
-                <span
-                  class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm"
-                >
-                  OCR Technology
-                </span>
-                <span
-                  class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm"
-                >
-                  Document Processing
-                </span>
-                <span
-                  class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm"
-                >
-                  Data Structuring
-                </span>
-              </div>
-
-              <div class="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="lider-pdf-archive.html"
-                  class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition text-center"
-                >
-                  Learn More
-                </a>
-                <a
-                  href="#contact"
-                  class="inline-block border border-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-600/10 transition text-center"
-                >
-                  Get Started
-                </a>
-              </div>
-            </div>
-          </div>
+          <h3 class="bento-title">Document Intelligence</h3>
+          <p class="bento-text">
+            OCR, layout analysis, and data extraction from complex documents. We've digitized archives with 50,000+ articles and built systems that process thousands of pages daily.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Multi-format document processing
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Structured data extraction
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Archive digitization at scale
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section - Updated with Calendly link -->
-    <section id="contact" class="py-20 bg-black">
-      <div class="container mx-auto px-6">
-        <div class="max-w-4xl mx-auto bg-gray-900 rounded-2xl p-8 md:p-12">
-          <h2 class="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
-              <div class="space-y-4">
-                <div class="flex items-center">
-                  <i class="fas fa-building text-purple-500 w-6"></i>
-                  <span class="ml-4">
-                    LumiVerse d.o.o.<br />
-                    Markuševečka cesta 20C<br />
-                    Zagreb, Croatia
-                  </span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-phone text-purple-500 w-6"></i>
-                  <span class="ml-4">+385 95 911 99 47</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-envelope text-purple-500 w-6"></i>
-                  <a
-                    href="mailto:tihomir.jauk@lumiverse.hr"
-                    class="ml-4 text-purple-400 hover:text-purple-300"
-                  >
-                    tihomir.jauk@lumiverse.hr
-                  </a>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-id-card text-purple-500 w-6"></i>
-                  <span class="ml-4">VAT ID: HR88595646800</span>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold mb-4">
-                Schedule a Consultation
-              </h3>
-              <p class="text-gray-400 mb-6">
-                Contact us to discuss AI implementation for your business
-                requirements.
-              </p>
-              <a
-                href="https://calendly.com/tihomirjauk/30min"
-                target="_blank"
-                class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition"
-              >
-                Book a Meeting
-              </a>
-            </div>
-          </div>
+  <!-- Solutions Section -->
+  <section id="about" class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+        <span class="section-label">Our Platform</span>
+        <h2 class="display-md section-title">LumiFlows.ai</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Our internal platform for rapid AI deployment. Pre-built components, tested integrations, battle-hardened infrastructure.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4" style="margin-top: 4rem;">
+        <div class="bento-card">
+          <h3 class="heading-md mb-3">Platform Features</h3>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-plug"></i></span>
+              Plug-and-play AI components
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-cogs"></i></span>
+              Customizable workflows
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-chart-bar"></i></span>
+              Real-time analytics dashboard
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-lock"></i></span>
+              Enterprise-grade security
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-expand-arrows-alt"></i></span>
+              Scales from prototype to production
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <h3 class="heading-md mb-3">Custom Development</h3>
+          <p class="bento-text mb-4">
+            When off-the-shelf doesn't cut it, we build from scratch. Tailored AI models, custom integrations, bespoke architectures designed for your specific challenges.
+          </p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-code"></i></span>
+              Custom model training
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-network-wired"></i></span>
+              System integration
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-headset"></i></span>
+              Ongoing support & iteration
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer - Updated social links -->
-    <footer class="bg-gray-900 py-12">
-      <div class="container mx-auto px-6">
-        <div class="text-center">
-          <div class="text-2xl font-bold gradient-text mb-6">LumiVerse</div>
-          <p class="text-gray-400 mb-8">Making AI accessible for everyone</p>
-          <div class="flex justify-center">
-            <a
-              href="https://www.linkedin.com/company/lumiversehr"
-              target="_blank"
-              class="text-gray-400 hover:text-purple-500 transition"
-            >
-              <i class="fab fa-linkedin text-xl"></i>
+  <!-- Work / Projects Section -->
+  <section id="work" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Case Studies</span>
+        <h2 class="display-md section-title">Selected Work</h2>
+        <p class="section-description">
+          Real projects. Real results. Here's what we've built.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <!-- Project 1: Pitaj Lider -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Data analytics dashboard visualization">
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-tag">AI Assistant</span>
+            <h3 class="project-title">Pitaj Lider</h3>
+            <p class="project-description">
+              Business intelligence assistant with access to 200,000+ articles and real-time company registry data. Natural language queries, instant insights.
+            </p>
+            <div class="project-features">
+              <span class="project-feature">NLP</span>
+              <span class="project-feature">RAG</span>
+              <span class="project-feature">Data Analytics</span>
+              <span class="project-feature">Real-time API</span>
+            </div>
+            <a href="pitaj-lider.html" class="btn btn-ghost">
+              View Case Study
+              <i class="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>
-        <div
-          class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400"
-        >
-          <p>&copy; 2023 LumiVerse. All rights reserved.</p>
+
+        <!-- Project 2: Lider Digital Archive -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=80" alt="Magazine archive and document processing">
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-tag">Document AI</span>
+            <h3 class="project-title">Lider Digital Archive</h3>
+            <p class="project-description">
+              Digitized decades of business magazine content. 50,000+ articles converted from PDFs to structured, searchable data using custom OCR and Croatian NLP.
+            </p>
+            <div class="project-features">
+              <span class="project-feature">OCR</span>
+              <span class="project-feature">Computer Vision</span>
+              <span class="project-feature">Croatian NLP</span>
+              <span class="project-feature">Data Pipeline</span>
+            </div>
+            <a href="lider-pdf-archive.html" class="btn btn-ghost">
+              View Case Study
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+        <span class="section-label">How We Work</span>
+        <h2 class="display-md section-title">Our Process</h2>
+        <p class="section-description" style="max-width: 100%;">
+          From initial conversation to production deployment.
+        </p>
+      </div>
+
+      <div class="process-grid" style="margin-top: 4rem;">
+        <div class="process-step">
+          <div class="process-number">01</div>
+          <h3 class="process-title">Discovery</h3>
+          <p class="process-text">
+            We dig into your processes, data, and goals. Identify quick wins and long-term opportunities.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">02</div>
+          <h3 class="process-title">Design</h3>
+          <p class="process-text">
+            Architecture decisions, technology selection, proof-of-concept development.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">03</div>
+          <h3 class="process-title">Build</h3>
+          <p class="process-text">
+            Iterative development with frequent demos. You see progress weekly, not monthly.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">04</div>
+          <h3 class="process-title">Deploy</h3>
+          <p class="process-text">
+            Production launch, monitoring setup, team training. We stick around until it works.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <span class="section-label">Get in Touch</span>
+          <h2 class="display-md section-title">Let's build something.</h2>
+          <p class="section-description mb-5">
+            Have a project in mind? Let's talk about what AI can do for your business.
+          </p>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Office</h4>
+                <p>LumiVerse d.o.o.<br>Markuševečka cesta 20C<br>Zagreb, Croatia</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <p>+385 95 911 99 47</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <a href="mailto:tihomir.jauk@lumiverse.hr">tihomir.jauk@lumiverse.hr</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>VAT ID</h4>
+                <p>HR88595646800</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-cta">
+          <h3 class="heading-md mb-3">Schedule a Call</h3>
+          <p class="text-secondary mb-5">
+            Book a 30-minute consultation. We'll discuss your challenges, explore possibilities, and see if we're a good fit.
+          </p>
+          <a href="https://calendly.com/tihomirjauk/30min" target="_blank" class="btn btn-primary w-full" style="justify-content: center;">
+            <i class="fas fa-calendar-alt"></i>
+            Book a Meeting
+          </a>
+
+          <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--glass-border);">
+            <p class="text-muted" style="font-size: 0.9rem;">
+              Prefer email? Write to us directly and we'll respond within 24 hours.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI solutions that transform how businesses operate. Based in Zagreb, working globally.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services" class="footer-link">AI Strategy</a></li>
+            <li><a href="#services" class="footer-link">Process Automation</a></li>
+            <li><a href="#services" class="footer-link">Predictive Analytics</a></li>
+            <li><a href="#services" class="footer-link">Document AI</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Work</h4>
+          <ul class="footer-links">
+            <li><a href="pitaj-lider.html" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="lider-pdf-archive.html" class="footer-link">Lider Archive</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Email Us</a></li>
+            <li><a href="https://calendly.com/tihomirjauk/30min" target="_blank" class="footer-link">Book a Call</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2024 LumiVerse d.o.o. All rights reserved.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
 </html>
