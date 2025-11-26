@@ -547,6 +547,9 @@ body {
   position: relative;
   height: 300px;
   overflow: hidden;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .project-image img {
@@ -587,6 +590,17 @@ body {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+.project-title-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-title-link:hover .project-title {
+  color: var(--accent);
+  transition: color 0.3s ease;
 }
 
 .project-description {
@@ -1049,4 +1063,9 @@ body {
 @media (max-width: 768px) {
   .md\:hidden { display: none; }
   .md\:grid-1 { grid-template-columns: 1fr; }
+
+  /* Force all grid utilities to single column on mobile */
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
 }
