@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bridj.ai - AI Marketing Intelligence Platform | LumiVerse</title>
+  <meta name="description" content="Tech Lead consulting for a UK AI marketing intelligence startup. From architecture to deployment - turning real sales conversations into actionable marketing campaigns.">
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(77, 255, 255, 0.12), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(255, 77, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(77, 255, 255, 0.1);
+      border: 1px solid rgba(77, 255, 255, 0.2);
+      border-radius: 100px;
+      color: var(--accent-tertiary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .hero-image-showcase-inner {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(77, 255, 255, 0.5), transparent);
+    }
+
+    .hero-image-showcase-inner img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #4DFFFF 0%, #4D9FFF 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .role-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-tertiary), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(77, 255, 255, 0.3);
+    }
+
+    .role-card:hover::before {
+      opacity: 1;
+    }
+
+    .role-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(77, 255, 255, 0.15), rgba(77, 159, 255, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent-tertiary);
+      margin-bottom: 1.5rem;
+    }
+
+    .role-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .bento-card-cyan .bento-icon {
+      background: linear-gradient(135deg, rgba(77, 255, 255, 0.15), rgba(77, 159, 255, 0.1));
+      color: var(--accent-tertiary);
+    }
+
+    .bento-card-cyan:hover {
+      border-color: rgba(77, 255, 255, 0.3);
+    }
+
+    .bento-card-cyan::before {
+      background: linear-gradient(90deg, transparent, var(--accent-tertiary), transparent);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(77, 255, 255, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#work" class="nav-link">Work</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#services" class="mobile-nav-link">Services</a>
+    <a href="index.html#work" class="mobile-nav-link">Work</a>
+    <a href="index.html#about" class="mobile-nav-link">About</a>
+    <a href="index.html#contact" class="mobile-nav-link">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="index.html#work">Work</a>
+        <span>/</span>
+        <span>Bridj.ai</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-user-tie"></i>
+        Tech Lead Consulting
+      </div>
+
+      <h1 class="display-lg mb-4">Bridj.ai</h1>
+      <p class="body-lg text-secondary" style="max-width: 700px;">
+        Building an AI marketing intelligence platform from the ground up. Tech leadership for a UK startup turning real sales conversations into campaigns that convert.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://bridj.ai" target="_blank" class="btn btn-primary" style="background: var(--accent-tertiary); color: var(--bg-primary);">
+          <i class="fas fa-external-link-alt"></i>
+          Visit Bridj.ai
+        </a>
+        <a href="index.html#contact" class="btn btn-secondary">
+          Hire a Tech Lead
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <img src="images/bridj-ai-growth.png" alt="Bridj.ai marketing intelligence platform dashboard showing campaign insights and sales conversation analysis">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">UK</div>
+          <div class="stat-label">Startup</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">Full</div>
+          <div class="stat-label">Tech Lead</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">Sales</div>
+          <div class="stat-label">to Marketing AI</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">Prod</div>
+          <div class="stat-label">Production Ready</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Role Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">Our Role</span>
+        <h2 class="display-md section-title">What We Did</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Full technical leadership from day one. Architecture decisions, team mentoring, and hands-on development.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-icon">
+            <i class="fas fa-drafting-compass"></i>
+          </div>
+          <h3 class="role-title">Architecture & Tech Decisions</h3>
+          <p class="role-text mb-4">
+            System design from scratch. Technology selection, scalability planning, and infrastructure decisions that set the foundation for growth.
+          </p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Microservices architecture design
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Technology stack selection
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Scalability & performance planning
+            </li>
+          </ul>
+        </div>
+
+        <div class="role-card">
+          <div class="role-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="role-title">Team Leadership</h3>
+          <p class="role-text mb-4">
+            Code reviews, mentoring junior developers, sprint planning, and setting technical direction. Building the team alongside the product.
+          </p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Code reviews & quality standards
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Developer mentoring
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Sprint planning & delivery
+            </li>
+          </ul>
+        </div>
+
+        <div class="role-card">
+          <div class="role-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="role-title">Hands-on Development</h3>
+          <p class="role-text mb-4">
+            Not just strategy - hands on the keyboard. Core AI/ML pipeline, backend architecture, API design, and third-party integrations.
+          </p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Core AI/ML pipeline development
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Backend architecture & API design
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Third-party integrations
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Built Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">The Product</span>
+        <h2 class="display-md section-title">What We Built</h2>
+        <p class="section-description" style="max-width: 100%;">
+          An AI platform that turns raw sales conversations into marketing gold.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3 class="bento-title">Conversation Intelligence</h3>
+          <p class="bento-text">
+            Ingesting real sales calls and extracting themes, pain points, objections, and buying signals. Unstructured audio becomes structured market intelligence.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h3 class="bento-title">Campaign Engine</h3>
+          <p class="bento-text">
+            Turning conversation insights into actionable marketing campaigns. The AI identifies messaging that resonates and suggests campaigns based on real customer language.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="bento-title">Real-time Analytics</h3>
+          <p class="bento-text">
+            Dashboard showing conversation trends, emerging opportunities, competitive mentions, and risk signals. Updated as new conversations are processed.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-lg bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h3 class="bento-title">Data Pipeline</h3>
+          <p class="bento-text">
+            End-to-end processing of unstructured conversation data into structured, actionable insights. From raw audio to tagged themes, sentiment analysis, and campaign recommendations - all automated.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Audio transcription & speaker diarization
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Theme extraction & sentiment analysis
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Automated campaign generation
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h3 class="bento-title">Integration Layer</h3>
+          <p class="bento-text">
+            Connecting existing sales and marketing tools. CRM sync, marketing platform integrations, and webhook-based automation for seamless workflow.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Need Technical Leadership for Your AI Product?</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 600px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          We embed as your tech lead. Architecture, team building, hands-on development - whatever your startup needs to ship.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
+          <a href="https://calendly.com/tihomirjauk/30min" target="_blank" class="btn btn-primary" style="background: var(--accent-tertiary); color: var(--bg-primary);">
+            <i class="fas fa-calendar-alt"></i>
+            Schedule a Call
+          </a>
+          <a href="index.html#contact" class="btn btn-secondary">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI tools that make humans unstoppable. Based in Zagreb, working globally.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#services" class="footer-link">AI Strategy</a></li>
+            <li><a href="index.html#services" class="footer-link">Process Automation</a></li>
+            <li><a href="index.html#services" class="footer-link">Predictive Analytics</a></li>
+            <li><a href="index.html#services" class="footer-link">Document AI</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Work</h4>
+          <ul class="footer-links">
+            <li><a href="tvrtko.html" class="footer-link">Tvrtko.ai</a></li>
+            <li><a href="bridj.html" class="footer-link">Bridj.ai</a></li>
+            <li><a href="pitaj-lider.html" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="lider-pdf-archive.html" class="footer-link">Lider Archive</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Email Us</a></li>
+            <li><a href="https://calendly.com/tihomirjauk/30min" target="_blank" class="footer-link">Book a Call</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2024 LumiVerse d.o.o. All rights reserved.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
+</html>
