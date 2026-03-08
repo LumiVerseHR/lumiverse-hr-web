@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tvrtko.ai — AI Agent za vašu web stranicu</title>
+
+    <!-- Fonts: Instrument Serif for executive feel + Switzer for clean body -->
+    <link href="https://api.fontshare.com/v2/css?f[]=instrument-serif@400,400-italic&f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===========================================
+           CSS CUSTOM PROPERTIES
+           Warm executive palette: deep navy + coral accent
+           =========================================== */
+        :root {
+            --bg-primary: #050508;
+            --bg-secondary: #0c0c14;
+            --bg-card: rgba(255, 255, 255, 0.035);
+            --bg-card-hover: rgba(255, 255, 255, 0.06);
+            --text-primary: #eeeef2;
+            --text-secondary: #8a8a9a;
+            --coral: #FF4D4D;
+            --cyan: #4DFFFF;
+            --coral-glow: rgba(255, 77, 77, 0.2);
+            --cyan-glow: rgba(77, 255, 255, 0.15);
+            --warm-white: #f5f0eb;
+
+            --font-display: 'Instrument Serif', serif;
+            --font-body: 'Switzer', sans-serif;
+
+            --title-size: clamp(2.2rem, 6.5vw, 5.5rem);
+            --h2-size: clamp(1.5rem, 4vw, 3rem);
+            --h3-size: clamp(1rem, 2vw, 1.5rem);
+            --subtitle-size: clamp(0.95rem, 2vw, 1.35rem);
+            --body-size: clamp(0.8rem, 1.3vw, 1.1rem);
+            --small-size: clamp(0.65rem, 1vw, 0.85rem);
+            --label-size: clamp(0.6rem, 0.9vw, 0.75rem);
+
+            --slide-padding: clamp(1.5rem, 5vw, 5rem);
+            --content-gap: clamp(1rem, 2.5vw, 2.5rem);
+            --element-gap: clamp(0.25rem, 1vw, 1rem);
+
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --duration-normal: 0.7s;
+        }
+
+        /* ===========================================
+           RESET & BASE
+           =========================================== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* ===========================================
+           VIEWPORT FITTING: MANDATORY BASE STYLES
+           =========================================== */
+        html, body { height: 100%; overflow-x: hidden; }
+        html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .slide-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-height: 100%;
+            overflow: hidden;
+            padding: var(--slide-padding);
+            position: relative;
+            z-index: 1;
+        }
+        img, .image-container {
+            max-width: 100%;
+            max-height: min(50vh, 400px);
+            object-fit: contain;
+        }
+
+        /* ===========================================
+           RESPONSIVE BREAKPOINTS
+           =========================================== */
+        @media (max-height: 700px) {
+            :root {
+                --slide-padding: clamp(0.75rem, 3vw, 2rem);
+                --content-gap: clamp(0.4rem, 1.5vw, 1rem);
+                --title-size: clamp(1.5rem, 5vw, 2.8rem);
+                --h2-size: clamp(1.2rem, 3vw, 2rem);
+            }
+        }
+        @media (max-height: 600px) {
+            :root {
+                --slide-padding: clamp(0.5rem, 2.5vw, 1.5rem);
+                --content-gap: clamp(0.3rem, 1vw, 0.75rem);
+                --title-size: clamp(1.2rem, 4.5vw, 2.2rem);
+                --body-size: clamp(0.7rem, 1.2vw, 0.95rem);
+            }
+            .nav-dots, .keyboard-hint, .decorative, .slide-counter { display: none; }
+        }
+        @media (max-height: 500px) {
+            :root {
+                --slide-padding: clamp(0.4rem, 2vw, 1rem);
+                --title-size: clamp(1rem, 3.5vw, 1.5rem);
+                --h2-size: clamp(0.9rem, 2.5vw, 1.25rem);
+                --body-size: clamp(0.65rem, 1vw, 0.85rem);
+            }
+        }
+        @media (max-width: 600px) {
+            :root { --title-size: clamp(1.5rem, 8vw, 2.8rem); }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr !important; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.2s !important;
+            }
+            html { scroll-behavior: auto; }
+        }
+
+        /* ===========================================
+           PROGRESS BAR
+           =========================================== */
+        .progress-bar {
+            position: fixed;
+            top: 0; left: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--coral), var(--cyan));
+            z-index: 1000;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* ===========================================
+           NAV DOTS
+           =========================================== */
+        .nav-dots {
+            position: fixed;
+            right: clamp(0.75rem, 2vw, 1.5rem);
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+        .nav-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+        .nav-dot.active {
+            background: var(--coral);
+            box-shadow: 0 0 12px var(--coral-glow);
+            transform: scale(1.4);
+        }
+
+        /* ===========================================
+           SLIDE COUNTER
+           =========================================== */
+        .slide-counter {
+            position: fixed;
+            bottom: clamp(0.75rem, 2vw, 1.5rem);
+            right: clamp(0.75rem, 2vw, 1.5rem);
+            font-family: var(--font-body);
+            font-size: var(--label-size);
+            color: var(--text-secondary);
+            z-index: 1000;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+
+        /* ===========================================
+           ANIMATIONS
+           =========================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity var(--duration-normal) var(--ease-out-expo),
+                        transform var(--duration-normal) var(--ease-out-expo);
+        }
+        .slide.visible .reveal { opacity: 1; transform: translateY(0); }
+        .reveal:nth-child(1) { transition-delay: 0.05s; }
+        .reveal:nth-child(2) { transition-delay: 0.15s; }
+        .reveal:nth-child(3) { transition-delay: 0.25s; }
+        .reveal:nth-child(4) { transition-delay: 0.35s; }
+        .reveal:nth-child(5) { transition-delay: 0.45s; }
+        .reveal:nth-child(6) { transition-delay: 0.55s; }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.94);
+            transition: opacity 0.7s, transform 0.7s var(--ease-out-expo);
+        }
+        .slide.visible .reveal-scale { opacity: 1; transform: scale(1); }
+
+        /* ===========================================
+           BACKGROUNDS
+           =========================================== */
+        .gradient-mesh {
+            position: absolute; inset: 0; z-index: 0; pointer-events: none;
+        }
+        .gradient-mesh::before, .gradient-mesh::after {
+            content: ''; position: absolute; border-radius: 50%; filter: blur(100px);
+        }
+        .gradient-mesh::before {
+            width: 55%; height: 60%; bottom: -15%; left: -10%;
+            background: radial-gradient(ellipse, var(--coral-glow) 0%, transparent 70%);
+        }
+        .gradient-mesh::after {
+            width: 45%; height: 55%; top: -10%; right: -8%;
+            background: radial-gradient(ellipse, var(--cyan-glow) 0%, transparent 70%);
+        }
+
+        .subtle-grid {
+            position: absolute; inset: 0; z-index: 0; pointer-events: none;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 80px 80px;
+        }
+
+        /* Soft line decoration */
+        .accent-line {
+            width: 48px; height: 2px;
+            background: linear-gradient(90deg, var(--coral), var(--cyan));
+            border-radius: 2px;
+            margin-bottom: clamp(0.5rem, 1.5vw, 1.2rem);
+        }
+
+        /* ===========================================
+           TYPOGRAPHY — EXECUTIVE SERIF STYLE
+           =========================================== */
+        h1 {
+            font-family: var(--font-display);
+            font-size: var(--title-size);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            color: var(--warm-white);
+        }
+        h2 {
+            font-family: var(--font-display);
+            font-size: var(--h2-size);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            color: var(--warm-white);
+        }
+        h3 {
+            font-family: var(--font-body);
+            font-size: var(--h3-size);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-size: var(--subtitle-size);
+            color: var(--text-secondary);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        .label {
+            font-family: var(--font-body);
+            font-size: var(--label-size);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+            color: var(--coral);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, var(--coral), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .coral { color: var(--coral); }
+        .cyan { color: var(--cyan); }
+        em { font-family: var(--font-display); font-style: italic; color: var(--warm-white); }
+
+        /* ===========================================
+           COMPONENTS
+           =========================================== */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: clamp(1rem, 2.5vw, 1.8rem);
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+        .card:hover {
+            border-color: rgba(255, 77, 77, 0.15);
+            background: var(--bg-card-hover);
+        }
+        .card h3 {
+            font-size: clamp(0.85rem, 1.4vw, 1.1rem);
+            margin-bottom: clamp(0.25rem, 0.6vw, 0.5rem);
+        }
+        .card p {
+            font-size: var(--small-size);
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .card .card-icon {
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            margin-bottom: clamp(0.4rem, 1vw, 0.8rem);
+        }
+
+        .stat-block { text-align: center; }
+        .stat-value {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 400;
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: var(--small-size);
+            color: var(--text-secondary);
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(1.5rem, 4vw, 3rem);
+            align-items: center;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .three-col {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(0.6rem, 1.5vw, 1rem);
+            width: 100%;
+            max-width: 960px;
+        }
+        .four-col {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: clamp(0.5rem, 1.2vw, 0.8rem);
+            width: 100%;
+            max-width: 960px;
+        }
+
+        /* ===========================================
+           TITLE SLIDE
+           =========================================== */
+        .title-slide .slide-content {
+            align-items: center;
+            text-align: center;
+            gap: clamp(0.8rem, 2vw, 1.5rem);
+        }
+
+        /* ===========================================
+           QUOTE HIGHLIGHT
+           =========================================== */
+        .quote-block {
+            font-family: var(--font-display);
+            font-size: clamp(1.2rem, 3vw, 2.2rem);
+            font-style: italic;
+            line-height: 1.4;
+            color: var(--warm-white);
+            max-width: 700px;
+            text-align: center;
+            position: relative;
+        }
+        .quote-block::before {
+            content: '\201E';
+            position: absolute;
+            left: clamp(-1.5rem, -3vw, -2.5rem);
+            top: -0.2em;
+            font-size: 2em;
+            color: var(--coral);
+            opacity: 0.4;
+        }
+
+        /* ===========================================
+           BENEFIT ROW
+           =========================================== */
+        .benefit-row {
+            display: flex;
+            align-items: flex-start;
+            gap: clamp(0.6rem, 1.5vw, 1rem);
+            padding: clamp(0.5rem, 1vw, 0.8rem) 0;
+        }
+        .benefit-row .benefit-num {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            color: var(--coral);
+            line-height: 1;
+            min-width: 2em;
+            opacity: 0.6;
+        }
+        .benefit-row h3 {
+            font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+            margin-bottom: 2px;
+        }
+        .benefit-row p {
+            font-size: var(--small-size);
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* ===========================================
+           CTA SLIDE
+           =========================================== */
+        .cta-slide .slide-content {
+            align-items: center;
+            text-align: center;
+            gap: var(--content-gap);
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: clamp(12px, 1.8vw, 18px) clamp(28px, 4vw, 48px);
+            background: linear-gradient(135deg, var(--coral), #ff6b6b);
+            color: white;
+            border: none;
+            border-radius: 100px;
+            font-family: var(--font-body);
+            font-size: var(--body-size);
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 40px var(--coral-glow);
+        }
+        .contact-grid {
+            display: flex;
+            gap: clamp(1.5rem, 4vw, 3rem);
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: var(--small-size);
+            color: var(--text-secondary);
+        }
+        .contact-grid a {
+            color: var(--cyan);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-grid a:hover { color: var(--warm-white); }
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+        .contact-item strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Floating orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            filter: blur(80px);
+            animation: float-orb 20s ease-in-out infinite;
+        }
+        @keyframes float-orb {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(15px, -25px) scale(1.05); }
+            66% { transform: translate(-10px, 12px) scale(0.97); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="progress-bar" id="progressBar"></div>
+    <nav class="nav-dots" id="navDots"></nav>
+    <div class="slide-counter" id="slideCounter">01 / 08</div>
+
+    <!-- ===========================================
+         SLIDE 1: NASLOV
+         =========================================== -->
+    <section class="slide title-slide" data-slide="0">
+        <div class="gradient-mesh"></div>
+        <div class="subtle-grid"></div>
+        <div class="orb" style="width: 500px; height: 500px; top: -20%; right: -10%; background: radial-gradient(circle, var(--coral-glow), transparent 70%);"></div>
+        <div class="orb" style="width: 400px; height: 400px; bottom: -15%; left: -5%; background: radial-gradient(circle, var(--cyan-glow), transparent 70%); animation-delay: -7s;"></div>
+        <div class="slide-content">
+            <div class="label reveal" style="letter-spacing: 0.3em;">Tvrtko.ai</div>
+            <h1 class="reveal">
+                Vaš <em>AI agent</em>,<br>na vašoj web stranici
+            </h1>
+            <p class="subtitle reveal" style="max-width: 550px;">
+                Prodaje. Zakazuje sastanke. Generira ponude.<br>Pretvara posjetitelje u kupce &mdash; 24 sata dnevno, 7 dana u tjednu.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 2: PROBLEM
+         =========================================== -->
+    <section class="slide" data-slide="1">
+        <div class="subtle-grid"></div>
+        <div class="slide-content" style="align-items: center;">
+            <div class="accent-line reveal"></div>
+            <span class="label reveal">Problem</span>
+            <div class="quote-block reveal" style="margin-top: clamp(0.8rem, 2vw, 1.5rem);">
+                75% posjetitelja vaše web stranice ode bez kontakta. Svaki od njih bio je potencijalni kupac.
+            </div>
+            <div class="reveal" style="display: flex; gap: clamp(2rem, 5vw, 4rem); margin-top: clamp(1.5rem, 3vw, 2.5rem); flex-wrap: wrap; justify-content: center;">
+                <div class="stat-block">
+                    <div class="stat-value coral">75%</div>
+                    <div class="stat-label">posjetitelja ode bez akcije</div>
+                </div>
+                <div class="stat-block">
+                    <div class="stat-value" style="color: var(--text-secondary);">2-3%</div>
+                    <div class="stat-label">prosječna konverzija web stranica</div>
+                </div>
+                <div class="stat-block">
+                    <div class="stat-value" style="color: var(--text-secondary);">0</div>
+                    <div class="stat-label">prodavača radi u 2 ujutro</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 3: RJEŠENJE
+         =========================================== -->
+    <section class="slide" data-slide="2">
+        <div class="gradient-mesh"></div>
+        <div class="slide-content" style="align-items: center;">
+            <div class="accent-line reveal"></div>
+            <span class="label reveal">Rješenje</span>
+            <h2 class="reveal" style="text-align: center; max-width: 750px; margin-top: clamp(0.3rem, 0.8vw, 0.6rem);">
+                AI agent koji <em>razumije</em> vaš posao i <span class="gradient-text">prodaje umjesto vas</span>
+            </h2>
+            <p class="subtitle reveal" style="text-align: center; max-width: 600px; margin-top: clamp(0.5rem, 1.2vw, 1rem);">
+                Jedna linija koda na vašoj stranici. Agent poznaje vaše proizvode, cijene i način rada &mdash; i razgovara s posjetiteljima kao da je dio vašeg tima.
+            </p>
+            <div class="three-col reveal-scale" style="margin-top: clamp(0.8rem, 2vw, 1.5rem);">
+                <div class="card" style="text-align: center;">
+                    <div class="card-icon">&#x1F4AC;</div>
+                    <h3>Razgovara</h3>
+                    <p>Odgovara na pitanja, preporučuje proizvode, vodi kupca kroz ponudu</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div class="card-icon">&#x1F4CB;</div>
+                    <h3>Prodaje</h3>
+                    <p>Generira ponude u PDF-u, šalje e-mailove, zakazuje sastanke</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div class="card-icon">&#x1F4C8;</div>
+                    <h3>Konvertira</h3>
+                    <p>Hvata leadove, boduje ih, šalje u vaš CRM automatski</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 4: KAKO RADI — NE CHATBOT, COPILOT
+         =========================================== -->
+    <section class="slide" data-slide="3">
+        <div class="subtle-grid"></div>
+        <div class="slide-content" style="align-items: center;">
+            <div class="accent-line reveal"></div>
+            <span class="label reveal">Ključna razlika</span>
+            <h2 class="reveal" style="text-align: center; max-width: 800px; margin-top: clamp(0.3rem, 0.8vw, 0.6rem);">
+                Ne običan chatbot.<br>Vaš <em>digitalni prodavač</em>.
+            </h2>
+            <div class="two-col reveal" style="margin-top: clamp(0.8rem, 2vw, 1.5rem);">
+                <div style="display: flex; flex-direction: column; gap: clamp(0.5rem, 1.2vh, 0.9rem);">
+                    <div class="benefit-row">
+                        <div class="benefit-num">01</div>
+                        <div>
+                            <h3>Navigira vašom stranicom</h3>
+                            <p>Vodi kupca do pravog proizvoda, skrola, označava sadržaj</p>
+                        </div>
+                    </div>
+                    <div class="benefit-row">
+                        <div class="benefit-num">02</div>
+                        <div>
+                            <h3>Popunjava forme</h3>
+                            <p>Pomaže kupcu ispuniti narudžbu, kontakt formu ili upit</p>
+                        </div>
+                    </div>
+                    <div class="benefit-row">
+                        <div class="benefit-num">03</div>
+                        <div>
+                            <h3>Zatvara posao</h3>
+                            <p>Generira ponudu, šalje e-mail, zakazuje sastanak &mdash; sve u razgovoru</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: clamp(0.8rem, 2vh, 1.5rem); justify-content: center;">
+                    <div class="stat-block">
+                        <div class="stat-value gradient-text">2&ndash;3x</div>
+                        <div class="stat-label">veća stopa konverzije</div>
+                    </div>
+                    <div class="stat-block">
+                        <div class="stat-value gradient-text">+30%</div>
+                        <div class="stat-label">veća prosječna vrijednost narudžbe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 5: ZA KOGA — INDUSTRIJE
+         =========================================== -->
+    <section class="slide" data-slide="4">
+        <div class="gradient-mesh"></div>
+        <div class="slide-content" style="align-items: center;">
+            <div class="accent-line reveal"></div>
+            <span class="label reveal">Za koga je</span>
+            <h2 class="reveal" style="margin-top: clamp(0.3rem, 0.8vw, 0.6rem); margin-bottom: clamp(0.5rem, 1.5vw, 1rem);">
+                Gotova rješenja za <em>vašu industriju</em>
+            </h2>
+            <div class="four-col reveal-scale">
+                <div class="card" style="text-align: center;">
+                    <div class="card-icon">&#x1F6D2;</div>
+                    <h3>E-Commerce</h3>
+                    <p>Pretraga proizvoda, košarica, praćenje narudžbi</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div class="card-icon">&#x1F3E0;</div>
+                    <h3>Nekretnine</h3>
+                    <p>Pretraga ponude, virtualne ture, kalkulacije</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div class="card-icon">&#x2708;&#xFE0F;</div>
+                    <h3>Turizam</h3>
+                    <p>Rezervacije, preporuke, više jezika</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div class="card-icon">&#x1FA7A;</div>
+                    <h3>Zdravstvo</h3>
+                    <p>Naručivanje, trijaža, obavijesti</p>
+                </div>
+            </div>
+            <div class="three-col reveal-scale" style="margin-top: clamp(0.4rem, 1vw, 0.6rem); max-width: 720px;">
+                <div class="card" style="text-align: center;">
+                    <div class="card-icon">&#x2696;&#xFE0F;</div>
+                    <h3>Pravne usluge</h3>
+                    <p>Baza propisa, rokovi, konzultacije</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div class="card-icon">&#x1F6E1;&#xFE0F;</div>
+                    <h3>Osiguranje</h3>
+                    <p>Usporedba polica, štete, premije</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div class="card-icon">&#x1F4BC;</div>
+                    <h3>Agencije</h3>
+                    <p>Scoping, portfolio, ponude</p>
+                </div>
+            </div>
+            <p class="reveal" style="font-size: var(--small-size); color: var(--text-secondary); margin-top: clamp(0.5rem, 1vw, 0.8rem); text-align: center;">
+                Prilagođeno hrvatskom tržištu &mdash; OIB, PDV, IBAN, hrvatski jezik
+            </p>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 6: ŠTO DOBIVATE — KONKRETNE KORISTI
+         =========================================== -->
+    <section class="slide" data-slide="5">
+        <div class="subtle-grid"></div>
+        <div class="slide-content" style="align-items: center;">
+            <div class="accent-line reveal"></div>
+            <span class="label reveal">Što dobivate</span>
+            <h2 class="reveal" style="text-align: center; max-width: 700px; margin-top: clamp(0.3rem, 0.8vw, 0.6rem); margin-bottom: clamp(0.5rem, 1.5vw, 1.2rem);">
+                Sve što vaš <em>prodajni tim</em> treba
+            </h2>
+            <div class="three-col reveal-scale">
+                <div class="card">
+                    <h3 style="color: var(--coral);">Generiranje ponuda</h3>
+                    <p>Agent sastavlja profesionalne PDF ponude s vašim cijenama, logom i uvjetima &mdash; tijekom razgovora.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--coral);">CRM integracija</h3>
+                    <p>Automatski stvara kontakte u HubSpot, Pipedrive ili Salesforce. Boduje ih po kvaliteti razgovora.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--coral);">Zakazivanje sastanaka</h3>
+                    <p>Provjerava kalendar vašeg tima i zakazuje sastanke &mdash; Google Calendar, Outlook, Cal.com.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--cyan);">Brendirani e-mailovi</h3>
+                    <p>Šalje ponude, follow-up poruke i potvrde s vaše e-mail adrese. Vaš brend, ne naš.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--cyan);">Timske obavijesti</h3>
+                    <p>Novi kontakt? Nova ponuda? Vaš tim dobiva obavijest na Slack, Teams ili e-mail u realnom vremenu.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--cyan);">Potpuna kontrola</h3>
+                    <p>Sustav odobrenja: agent traži dozvolu vašeg tima prije financijskih ili kritičnih akcija.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 7: TRACTION — DOKAZ
+         =========================================== -->
+    <section class="slide" data-slide="6">
+        <div class="gradient-mesh"></div>
+        <div class="slide-content" style="align-items: center;">
+            <div class="accent-line reveal"></div>
+            <span class="label reveal">Već u primjeni</span>
+            <h2 class="reveal" style="text-align: center; max-width: 700px; margin-top: clamp(0.3rem, 0.8vw, 0.6rem);">
+                Prvi klijent je <em>uživo</em>
+            </h2>
+            <div class="reveal" style="display: flex; gap: clamp(2rem, 5vw, 4rem); margin-top: clamp(1rem, 2.5vw, 2rem); margin-bottom: clamp(1rem, 2.5vw, 2rem); flex-wrap: wrap; justify-content: center;">
+                <div class="stat-block">
+                    <div class="stat-value gradient-text">Lider Media</div>
+                    <div class="stat-label">Prvi klijent, agent u produkciji</div>
+                </div>
+            </div>
+            <div class="two-col reveal" style="max-width: 800px;">
+                <div class="card">
+                    <h3>Što je već gotovo</h3>
+                    <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 8px;">
+                        <span style="font-size: var(--small-size); color: var(--cyan);">&#x2713; AI agent framework</span>
+                        <span style="font-size: var(--small-size); color: var(--cyan);">&#x2713; Baza znanja po klijentu</span>
+                        <span style="font-size: var(--small-size); color: var(--cyan);">&#x2713; Multi-model podrška</span>
+                        <span style="font-size: var(--small-size); color: var(--cyan);">&#x2713; Admin panel i analitika</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Što dolazi</h3>
+                    <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 8px;">
+                        <span style="font-size: var(--small-size); color: var(--text-secondary);">&#x25CB; Ugradivi widget za web stranice</span>
+                        <span style="font-size: var(--small-size); color: var(--text-secondary);">&#x25CB; Generiranje ponuda i dokumenata</span>
+                        <span style="font-size: var(--small-size); color: var(--text-secondary);">&#x25CB; CRM i kalendar integracije</span>
+                        <span style="font-size: var(--small-size); color: var(--text-secondary);">&#x25CB; Gotovi paketi za industrije</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 8: CTA
+         =========================================== -->
+    <section class="slide cta-slide" data-slide="7">
+        <div class="gradient-mesh"></div>
+        <div class="orb" style="width: 500px; height: 500px; top: -18%; left: -8%; background: radial-gradient(circle, var(--coral-glow), transparent 70%);"></div>
+        <div class="orb" style="width: 400px; height: 400px; bottom: -18%; right: -6%; background: radial-gradient(circle, var(--cyan-glow), transparent 70%); animation-delay: -10s;"></div>
+        <div class="slide-content">
+            <div class="accent-line reveal"></div>
+            <h2 class="reveal">
+                Želite AI agenta<br>na <em>vašoj stranici</em>?
+            </h2>
+            <p class="subtitle reveal" style="max-width: 500px;">
+                Javite nam se za besplatnu demonstraciju i procjenu za vaš posao.
+            </p>
+            <a href="mailto:info@lumiverse.hr" class="cta-button reveal" style="margin-top: clamp(0.3rem, 1vw, 0.8rem);">
+                Dogovorite prezentaciju &rarr;
+            </a>
+            <div class="contact-grid reveal" style="margin-top: clamp(1rem, 2.5vw, 2rem);">
+                <div class="contact-item">
+                    <strong>LumiVerse d.o.o.</strong>
+                    <span>Zagreb, Hrvatska</span>
+                </div>
+                <div class="contact-item">
+                    <a href="mailto:info@lumiverse.hr">info@lumiverse.hr</a>
+                    <a href="https://www.lumiverse.hr">www.lumiverse.hr</a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://tvrtko.ai">tvrtko.ai</a>
+                    <span style="font-size: var(--label-size);">OIB: 88595646800</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================================
+       SLIDE PRESENTATION CONTROLLER
+       =========================================== -->
+    <script>
+        class SlidePresentation {
+            constructor() {
+                this.slides = document.querySelectorAll('.slide');
+                this.currentSlide = 0;
+                this.isScrolling = false;
+                this.setupIntersectionObserver();
+                this.setupKeyboardNav();
+                this.setupTouchNav();
+                this.setupWheelNav();
+                this.setupProgressBar();
+                this.setupNavDots();
+                this.updateCounter();
+            }
+
+            setupIntersectionObserver() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            const idx = Array.from(this.slides).indexOf(entry.target);
+                            if (idx !== -1) {
+                                this.currentSlide = idx;
+                                this.updateNavDots();
+                                this.updateProgressBar();
+                                this.updateCounter();
+                            }
+                        }
+                    });
+                }, { threshold: 0.5 });
+                this.slides.forEach(slide => observer.observe(slide));
+            }
+
+            setupKeyboardNav() {
+                document.addEventListener('keydown', (e) => {
+                    if (['ArrowDown', 'ArrowRight', 'Space', 'PageDown'].includes(e.code)) {
+                        e.preventDefault();
+                        this.goToSlide(this.currentSlide + 1);
+                    } else if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(e.code)) {
+                        e.preventDefault();
+                        this.goToSlide(this.currentSlide - 1);
+                    } else if (e.code === 'Home') {
+                        e.preventDefault();
+                        this.goToSlide(0);
+                    } else if (e.code === 'End') {
+                        e.preventDefault();
+                        this.goToSlide(this.slides.length - 1);
+                    }
+                });
+            }
+
+            setupTouchNav() {
+                let startY = 0;
+                document.addEventListener('touchstart', (e) => { startY = e.touches[0].clientY; }, { passive: true });
+                document.addEventListener('touchend', (e) => {
+                    const diff = startY - e.changedTouches[0].clientY;
+                    if (Math.abs(diff) > 50) this.goToSlide(this.currentSlide + (diff > 0 ? 1 : -1));
+                }, { passive: true });
+            }
+
+            setupWheelNav() {
+                document.addEventListener('wheel', (e) => {
+                    if (this.isScrolling) return;
+                    if (Math.abs(e.deltaY) > 30) {
+                        this.isScrolling = true;
+                        this.goToSlide(this.currentSlide + (e.deltaY > 0 ? 1 : -1));
+                        setTimeout(() => { this.isScrolling = false; }, 800);
+                    }
+                }, { passive: true });
+            }
+
+            goToSlide(index) {
+                const target = Math.max(0, Math.min(index, this.slides.length - 1));
+                this.slides[target].scrollIntoView({ behavior: 'smooth' });
+                this.currentSlide = target;
+                this.updateNavDots();
+                this.updateProgressBar();
+                this.updateCounter();
+            }
+
+            setupProgressBar() { this.updateProgressBar(); }
+            updateProgressBar() {
+                const pct = ((this.currentSlide) / (this.slides.length - 1)) * 100;
+                document.getElementById('progressBar').style.width = pct + '%';
+            }
+
+            setupNavDots() {
+                const nav = document.getElementById('navDots');
+                this.slides.forEach((_, i) => {
+                    const dot = document.createElement('button');
+                    dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+                    dot.setAttribute('aria-label', `Slajd ${i + 1}`);
+                    dot.addEventListener('click', () => this.goToSlide(i));
+                    nav.appendChild(dot);
+                });
+            }
+            updateNavDots() {
+                document.querySelectorAll('.nav-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === this.currentSlide);
+                });
+            }
+
+            updateCounter() {
+                const current = String(this.currentSlide + 1).padStart(2, '0');
+                const total = String(this.slides.length).padStart(2, '0');
+                document.getElementById('slideCounter').textContent = `${current} / ${total}`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => { new SlidePresentation(); });
+    </script>
+</body>
+</html>
