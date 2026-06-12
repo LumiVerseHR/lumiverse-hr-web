@@ -1,11 +1,11 @@
 {
-  "name": "LumiVerse - AI Solutions for Business",
+  "name": "LumiVerse - We Build Better Humans",
   "short_name": "LumiVerse",
-  "description": "Transform your business with AI innovation. Comprehensive AI solutions tailored to your business needs.",
+  "description": "AI tools that amplify your team's capabilities, automate mundane tasks, and let humans focus on work that matters.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#bb86fc",
+  "background_color": "#050508",
+  "theme_color": "#050508",
   "orientation": "portrait-primary",
   "icons": [
     {
