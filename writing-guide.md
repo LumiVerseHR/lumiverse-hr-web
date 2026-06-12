@@ -57,7 +57,7 @@ Subject does the action. More direct, more engaging.
 ### 5. Write Like You Talk
 If you wouldn't say it in a meeting, don't write it.
 
-**Before:** "Implementation of LumiFlows.ai platform for automated business operations"
+**Before:** "Implementation of a proprietary AI platform for automated business operations"
 
 **After:** "When off-the-shelf doesn't cut it, we build from scratch."
 
@@ -74,7 +74,7 @@ If you wouldn't say it in a meeting, don't write it.
 
 **After:** Action-oriented, benefit-focused
 - "What We Do" → "Services"
-- "Our Platform" → "LumiFlows.ai"
+- "Our Platform" → "Our Product" (Titlomat.com)
 - "Case Studies" → "Selected Work"
 
 ### Section Labels

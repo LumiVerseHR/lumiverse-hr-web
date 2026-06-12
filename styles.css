@@ -323,6 +323,26 @@ body {
   flex-wrap: wrap;
 }
 
+/* Hero WebGL shader canvas - replaces mesh gradient when WebGL is available */
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.hero.shader-active .hero-canvas {
+  opacity: 1;
+}
+
+.hero.shader-active .mesh-gradient {
+  opacity: 0;
+}
+
 /* Animated Background Gradient - Stripe inspired */
 .mesh-gradient {
   position: absolute;
@@ -338,6 +358,7 @@ body {
     radial-gradient(ellipse 50% 50% at 30% 50%, rgba(77, 255, 255, 0.1), transparent);
   filter: blur(60px);
   animation: meshMove 20s ease-in-out infinite;
+  transition: opacity 1.2s ease;
 }
 
 @keyframes meshMove {

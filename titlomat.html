@@ -12,12 +12,12 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bridj.ai - AI Marketing Intelligence Platform | LumiVerse</title>
-  <meta name="description" content="Tech Lead consulting for a UK AI marketing intelligence startup. From architecture to deployment - turning real sales conversations into actionable marketing campaigns.">
+  <title>Titlomat.com - Automatic Subtitles for Croatian YouTube | LumiVerse</title>
+  <meta name="description" content="Titlomat adds Croatian and English subtitles to your YouTube videos automatically. No file uploads, no timeline editing. A 60-minute episode is subtitled in ~5 minutes. Made in Zagreb by LumiVerse.">
 
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
 
   <style>
     .case-study-hero {
@@ -37,8 +37,8 @@
       right: 0;
       width: 60%;
       height: 100%;
-      background: radial-gradient(ellipse at 70% 30%, rgba(77, 255, 255, 0.12), transparent 60%),
-                  radial-gradient(ellipse at 90% 80%, rgba(255, 77, 77, 0.08), transparent 50%);
+      background: radial-gradient(ellipse at 70% 30%, rgba(255, 77, 77, 0.12), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(255, 143, 77, 0.08), transparent 50%);
       pointer-events: none;
     }
 
@@ -47,10 +47,10 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.5rem 1rem;
-      background: rgba(77, 255, 255, 0.1);
-      border: 1px solid rgba(77, 255, 255, 0.2);
+      background: rgba(255, 77, 77, 0.1);
+      border: 1px solid rgba(255, 77, 77, 0.2);
       border-radius: 100px;
-      color: var(--accent-tertiary);
+      color: var(--accent);
       font-size: 0.85rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
@@ -77,7 +77,7 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(77, 255, 255, 0.5), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 77, 77, 0.5), transparent);
     }
 
     .hero-image-showcase-inner img {
@@ -105,7 +105,7 @@
     .stat-value {
       font-size: clamp(2.5rem, 5vw, 4rem);
       font-weight: 800;
-      background: linear-gradient(135deg, #4DFFFF 0%, #4D9FFF 100%);
+      background: var(--gradient-accent);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -135,30 +135,38 @@
       left: 0;
       right: 0;
       height: 2px;
-      background: linear-gradient(90deg, var(--accent-tertiary), transparent);
+      background: linear-gradient(90deg, var(--accent), transparent);
       opacity: 0;
       transition: opacity 0.3s ease;
     }
 
     .role-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(77, 255, 255, 0.3);
+      border-color: rgba(255, 77, 77, 0.3);
     }
 
     .role-card:hover::before {
       opacity: 1;
     }
 
+    .role-number {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
     .role-icon {
       width: 64px;
       height: 64px;
-      background: linear-gradient(135deg, rgba(77, 255, 255, 0.15), rgba(77, 159, 255, 0.1));
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 143, 77, 0.1));
       border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.5rem;
-      color: var(--accent-tertiary);
+      color: var(--accent);
       margin-bottom: 1.5rem;
     }
 
@@ -173,17 +181,57 @@
       line-height: 1.7;
     }
 
-    .bento-card-cyan .bento-icon {
-      background: linear-gradient(135deg, rgba(77, 255, 255, 0.15), rgba(77, 159, 255, 0.1));
-      color: var(--accent-tertiary);
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
     }
 
-    .bento-card-cyan:hover {
-      border-color: rgba(77, 255, 255, 0.3);
+    .pricing-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
     }
 
-    .bento-card-cyan::before {
-      background: linear-gradient(90deg, transparent, var(--accent-tertiary), transparent);
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .pricing-card-featured {
+      border-color: rgba(255, 77, 77, 0.35);
+      background: linear-gradient(180deg, rgba(255, 77, 77, 0.06), var(--glass));
+    }
+
+    .pricing-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .pricing-price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .pricing-period {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .pricing-credits {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--glass-border);
     }
 
     .cta-section {
@@ -202,7 +250,7 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(ellipse at center, rgba(77, 255, 255, 0.08), transparent 50%);
+      background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.08), transparent 50%);
       pointer-events: none;
     }
 
@@ -210,10 +258,18 @@
       .stats-container {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 640px) {
       .stats-container {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-grid {
         grid-template-columns: 1fr;
       }
 
@@ -261,32 +317,32 @@
         <span>/</span>
         <a href="index.html#work">Work</a>
         <span>/</span>
-        <span>Bridj.ai</span>
+        <span>Titlomat.com</span>
       </div>
 
       <div class="case-study-tag">
-        <i class="fas fa-user-tie"></i>
-        Tech Lead Consulting
+        <i class="fas fa-closed-captioning"></i>
+        Our Product &middot; AI Subtitles
       </div>
 
-      <h1 class="display-lg mb-4">Bridj.ai</h1>
+      <h1 class="display-lg mb-4">Titlomat.com</h1>
       <p class="body-lg text-secondary" style="max-width: 700px;">
-        Building an AI marketing intelligence platform from the ground up. Tech leadership for a UK startup turning real sales conversations into campaigns that convert.
+        YouTube doesn't auto-caption Croatian. We do. Titlomat adds Croatian and English subtitles to every new video automatically - while you're already working on the next episode.
       </p>
 
       <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
-        <a href="https://bridj.ai" target="_blank" class="btn btn-primary" style="background: var(--accent-tertiary); color: var(--bg-primary);">
+        <a href="https://titlomat.com" target="_blank" class="btn btn-primary">
           <i class="fas fa-external-link-alt"></i>
-          Visit Bridj.ai
+          Try Titlomat Free
         </a>
         <a href="index.html#contact" class="btn btn-secondary">
-          Hire a Tech Lead
+          Talk to Us
         </a>
       </div>
 
       <div class="hero-image-showcase">
         <div class="hero-image-showcase-inner">
-          <img src="images/bridj-ai-growth.png" alt="Bridj.ai marketing intelligence platform dashboard showing campaign insights and sales conversation analysis">
+          <img src="images/titlomat-landing.png" alt="Titlomat.com landing page showing automatic Croatian and English subtitle generation for YouTube videos">
         </div>
       </div>
     </div>
@@ -297,105 +353,96 @@
     <div class="container">
       <div class="stats-container">
         <div class="stat-block">
-          <div class="stat-value">UK</div>
-          <div class="stat-label">Startup</div>
+          <div class="stat-value">~5 min</div>
+          <div class="stat-label">To subtitle a 60-minute episode</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">Full</div>
-          <div class="stat-label">Tech Lead</div>
+          <div class="stat-value">95%+</div>
+          <div class="stat-label">Accuracy on clean audio</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">Sales</div>
-          <div class="stat-label">to Marketing AI</div>
+          <div class="stat-value">12&times;</div>
+          <div class="stat-label">Faster than the audio itself</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">Prod</div>
-          <div class="stat-label">Production Ready</div>
+          <div class="stat-value">2</div>
+          <div class="stat-label">Languages - Croatian &amp; English</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Role Section -->
+  <!-- How It Works Section -->
   <section class="section">
     <div class="container">
       <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
-        <span class="section-label">Our Role</span>
-        <h2 class="display-md section-title">What We Did</h2>
+        <span class="section-label">How It Works</span>
+        <h2 class="display-md section-title">Connect Once, Forget It</h2>
         <p class="section-description" style="max-width: 100%;">
-          Full technical leadership from day one. Architecture decisions, team mentoring, and hands-on development.
+          No file uploads. No SRT exports. No timeline editing. Signup takes 30 seconds.
         </p>
       </div>
 
       <div class="grid grid-3 gap-4">
         <div class="role-card">
+          <div class="role-number">01</div>
           <div class="role-icon">
-            <i class="fas fa-drafting-compass"></i>
+            <i class="fab fa-youtube"></i>
           </div>
-          <h3 class="role-title">Architecture & Tech Decisions</h3>
+          <h3 class="role-title">Connect Your Channel</h3>
           <p class="role-text mb-4">
-            System design from scratch. Technology selection, scalability planning, and infrastructure decisions that set the foundation for growth.
+            One-time YouTube authorization that asks for exactly one thing: permission to add subtitles. No access to comments, analytics, or private data.
           </p>
           <ul class="feature-list">
             <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Microservices architecture design
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              30-second signup, no credit card
             </li>
             <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Technology stack selection
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Scalability & performance planning
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Subtitle permission only
             </li>
           </ul>
         </div>
 
         <div class="role-card">
+          <div class="role-number">02</div>
           <div class="role-icon">
-            <i class="fas fa-users"></i>
+            <i class="fas fa-language"></i>
           </div>
-          <h3 class="role-title">Team Leadership</h3>
+          <h3 class="role-title">AI Transcribes &amp; Translates</h3>
           <p class="role-text mb-4">
-            Code reviews, mentoring junior developers, sprint planning, and setting technical direction. Building the team alongside the product.
+            Speech recognition tuned for Croatian, then translation to English. Your custom vocabulary keeps names, brands, and industry terms spelled right.
           </p>
           <ul class="feature-list">
             <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Code reviews & quality standards
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              95%+ accuracy on clean audio
             </li>
             <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Developer mentoring
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Sprint planning & delivery
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Custom dictionaries per channel
             </li>
           </ul>
         </div>
 
         <div class="role-card">
+          <div class="role-number">03</div>
           <div class="role-icon">
-            <i class="fas fa-code"></i>
+            <i class="fas fa-cloud-upload-alt"></i>
           </div>
-          <h3 class="role-title">Hands-on Development</h3>
+          <h3 class="role-title">Subtitles Go Live</h3>
           <p class="role-text mb-4">
-            Not just strategy - hands on the keyboard. Core AI/ML pipeline, backend architecture, API design, and third-party integrations.
+            Croatian and English subtitles land directly on your YouTube video. Want a final say? Turn on preview mode and approve before publishing.
           </p>
           <ul class="feature-list">
             <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Core AI/ML pipeline development
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Auto-published to YouTube
             </li>
             <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Backend architecture & API design
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Third-party integrations
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Optional preview before going live
             </li>
           </ul>
         </div>
@@ -403,97 +450,144 @@
     </div>
   </section>
 
-  <!-- What We Built Section -->
+  <!-- Why It Matters Section -->
   <section class="section section-dark">
     <div class="container">
       <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
-        <span class="section-label">The Product</span>
-        <h2 class="display-md section-title">What We Built</h2>
+        <span class="section-label">Why It Matters</span>
+        <h2 class="display-md section-title">Stop Losing Your Audience</h2>
         <p class="section-description" style="max-width: 100%;">
-          An AI platform that turns raw sales conversations into marketing gold.
+          A typical Croatian channel misses 15-30% of its potential audience without subtitles. That's viewers watching on mute, non-native speakers, and the entire English-speaking world.
         </p>
       </div>
 
       <div class="bento-grid">
-        <div class="bento-card bento-card-cyan">
+        <div class="bento-card bento-card-lg">
           <div class="bento-icon">
-            <i class="fas fa-headset"></i>
+            <i class="fas fa-globe"></i>
           </div>
-          <h3 class="bento-title">Conversation Intelligence</h3>
+          <h3 class="bento-title">Built for the Croatian Creator Economy</h3>
           <p class="bento-text">
-            Ingesting real sales calls and extracting themes, pain points, objections, and buying signals. Unstructured audio becomes structured market intelligence.
-          </p>
-        </div>
-
-        <div class="bento-card bento-card-cyan">
-          <div class="bento-icon">
-            <i class="fas fa-bullhorn"></i>
-          </div>
-          <h3 class="bento-title">Campaign Engine</h3>
-          <p class="bento-text">
-            Turning conversation insights into actionable marketing campaigns. The AI identifies messaging that resonates and suggests campaigns based on real customer language.
-          </p>
-        </div>
-
-        <div class="bento-card bento-card-cyan">
-          <div class="bento-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h3 class="bento-title">Real-time Analytics</h3>
-          <p class="bento-text">
-            Dashboard showing conversation trends, emerging opportunities, competitive mentions, and risk signals. Updated as new conversations are processed.
-          </p>
-        </div>
-
-        <div class="bento-card bento-card-lg bento-card-cyan">
-          <div class="bento-icon">
-            <i class="fas fa-project-diagram"></i>
-          </div>
-          <h3 class="bento-title">Data Pipeline</h3>
-          <p class="bento-text">
-            End-to-end processing of unstructured conversation data into structured, actionable insights. From raw audio to tagged themes, sentiment analysis, and campaign recommendations - all automated.
+            Big platforms skip small languages - YouTube's auto-captions don't support Croatian. Titlomat fills that gap with speech AI built specifically for Croatian podcasts and YouTube channels, from solo creators to podcast networks and media agencies.
           </p>
           <ul class="feature-list mt-4">
             <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Audio transcription & speaker diarization
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Croatian-first speech recognition
             </li>
             <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Theme extraction & sentiment analysis
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              English subtitles open global reach
             </li>
             <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Automated campaign generation
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Works for channels of any size
             </li>
           </ul>
         </div>
 
-        <div class="bento-card bento-card-cyan">
+        <div class="bento-card">
           <div class="bento-icon">
-            <i class="fas fa-plug"></i>
+            <i class="fas fa-volume-mute"></i>
           </div>
-          <h3 class="bento-title">Integration Layer</h3>
+          <h3 class="bento-title">Mute Viewers</h3>
           <p class="bento-text">
-            Connecting existing sales and marketing tools. CRM sync, marketing platform integrations, and webhook-based automation for seamless workflow.
+            Most social video plays silently. Subtitles keep those viewers watching instead of scrolling past.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-magnifying-glass-chart"></i>
+          </div>
+          <h3 class="bento-title">Search &amp; Discovery</h3>
+          <p class="bento-text">
+            Subtitle text makes your videos searchable. YouTube understands what you said - and ranks you for it.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <h3 class="bento-title">Privacy by Design</h3>
+          <p class="bento-text">
+            Titlomat asks only for subtitle permission. Your comments, analytics, and private data stay yours.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-universal-access"></i>
+          </div>
+          <h3 class="bento-title">Accessibility</h3>
+          <p class="bento-text">
+            Deaf and hard-of-hearing viewers can't watch without captions. With Titlomat, every episode includes them by default.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
+  <!-- Pricing Section -->
   <section class="section">
     <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">Pricing</span>
+        <h2 class="display-md section-title">Start Free, Scale When Ready</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Credits-based pricing. No credit card to start, no contracts to escape.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-name">Free</div>
+          <div class="pricing-price">&euro;0</div>
+          <div class="pricing-period">per month</div>
+          <div class="pricing-credits">100 credits</div>
+        </div>
+
+        <div class="pricing-card pricing-card-featured">
+          <div class="pricing-name">Creator</div>
+          <div class="pricing-price">&euro;19</div>
+          <div class="pricing-period">per month</div>
+          <div class="pricing-credits">6,500 credits</div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-name">Pro</div>
+          <div class="pricing-price">&euro;49</div>
+          <div class="pricing-period">per month</div>
+          <div class="pricing-credits">20,000 credits</div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-name">Studio</div>
+          <div class="pricing-price">&euro;149</div>
+          <div class="pricing-period">per month</div>
+          <div class="pricing-credits">85,000 credits</div>
+        </div>
+      </div>
+
+      <p class="text-center text-muted mt-5" style="font-size: 0.9rem;">
+        Current pricing at <a href="https://titlomat.com" target="_blank" class="footer-link" style="color: var(--accent);">titlomat.com</a>. Made in Zagreb.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
       <div class="cta-section">
-        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Need Technical Leadership for Your AI Product?</h2>
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Your Next Video Deserves Subtitles</h2>
         <p class="body-lg text-secondary mb-5" style="max-width: 600px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
-          We embed as your tech lead. Architecture, team building, hands-on development - whatever your startup needs to ship.
+          Connect your channel in 30 seconds. Your first videos are on us - 100 free credits, no credit card.
         </p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
-          <a href="https://calendly.com/tihomirjauk/30min" target="_blank" class="btn btn-primary" style="background: var(--accent-tertiary); color: var(--bg-primary);">
-            <i class="fas fa-calendar-alt"></i>
-            Schedule a Call
+          <a href="https://titlomat.com" target="_blank" class="btn btn-primary">
+            <i class="fas fa-closed-captioning"></i>
+            Try Titlomat Free
           </a>
           <a href="index.html#contact" class="btn btn-secondary">
             Contact Us
