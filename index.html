@@ -50,7 +50,8 @@
   </div>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
     <div class="mesh-gradient"></div>
     <div class="geo-shape geo-shape-1"></div>
     <div class="geo-shape geo-shape-2"></div>
@@ -90,9 +91,9 @@
     <div class="container">
       <div class="section-header">
         <span class="section-label">What We Do</span>
-        <h2 class="display-md section-title">Extend Your Team</h2>
+        <h2 class="display-md section-title">From Idea to Shipped</h2>
         <p class="section-description">
-          AI handles the grind. Your people handle the decisions.
+          We build our own AI products and embed with teams to ship theirs.
         </p>
       </div>
 
@@ -100,24 +101,60 @@
         <!-- Large Card -->
         <div class="bento-card bento-card-lg">
           <div class="bento-icon">
-            <i class="fas fa-brain"></i>
+            <i class="fas fa-rocket"></i>
           </div>
-          <h3 class="bento-title">AI Strategy & Consulting</h3>
+          <h3 class="bento-title">Product Development</h3>
           <p class="bento-text">
-            We find where your team wastes time on repetitive work and fix it. Clear roadmaps to multiply your people's output without multiplying headcount.
+            We build AI products end to end - from first prototype to paying customers. Titlomat and Tvrtko.ai started as ideas. Now they're live products with real users.
           </p>
           <ul class="feature-list mt-4">
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Process analysis & opportunity mapping
+              Prototype to production in weeks, not quarters
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Technology stack recommendations
+              Full stack: AI pipeline, backend, UX
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              ROI projections & implementation plans
+              Proven live: Titlomat.com & Tvrtko.ai
+            </li>
+          </ul>
+        </div>
+
+        <!-- Regular Card -->
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3 class="bento-title">AI Strategy</h3>
+          <p class="bento-text">
+            We find where your team wastes time on repetitive work and fix it. Clear roadmaps to multiply output without multiplying headcount.
+          </p>
+        </div>
+
+        <!-- Large Card -->
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-drafting-compass"></i>
+          </div>
+          <h3 class="bento-title">Tech Consulting</h3>
+          <p class="bento-text">
+            We embed as your tech lead. Architecture decisions, code reviews, team mentoring, hands-on development - whatever your product needs to ship. That's how Bridj.ai went from concept to production.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Architecture & technology decisions
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Code reviews & team mentoring
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Hands-on development when it counts
             </li>
           </ul>
         </div>
@@ -132,114 +169,66 @@
             Free your team from copy-paste hell. We automate the boring stuff so humans can do the thinking.
           </p>
         </div>
-
-        <!-- Regular Card -->
-        <div class="bento-card">
-          <div class="bento-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h3 class="bento-title">Predictive Analytics</h3>
-          <p class="bento-text">
-            Give your team superpowers. AI spots patterns humans miss and surfaces insights before problems happen.
-          </p>
-        </div>
-
-        <!-- Regular Card -->
-        <div class="bento-card">
-          <div class="bento-icon">
-            <i class="fas fa-comments"></i>
-          </div>
-          <h3 class="bento-title">NLP & Chat Systems</h3>
-          <p class="bento-text">
-            AI assistants that answer questions, find information, and handle inquiries - so your people don't have to.
-          </p>
-        </div>
-
-        <!-- Large Card -->
-        <div class="bento-card bento-card-lg">
-          <div class="bento-icon">
-            <i class="fas fa-eye"></i>
-          </div>
-          <h3 class="bento-title">Document Intelligence</h3>
-          <p class="bento-text">
-            Stop humans from manually processing documents. Our AI reads, extracts, and organizes data from thousands of pages - work that would take your team weeks.
-          </p>
-          <ul class="feature-list mt-4">
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Multi-format document processing
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Structured data extraction
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Archive digitization at scale
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Solutions Section -->
+  <!-- Product Section -->
   <section id="about" class="section section-dark">
     <div class="container">
       <div class="section-header text-center" style="max-width: 800px; margin-left: auto; margin-right: auto;">
-        <span class="section-label">Our Platform</span>
-        <h2 class="display-md section-title">LumiFlows.ai</h2>
+        <span class="section-label">Our Product</span>
+        <h2 class="display-md section-title">Titlomat.com</h2>
         <p class="section-description" style="max-width: 100%;">
-          The engine behind human augmentation. Pre-built AI components that plug into your workflow and start working immediately.
+          Automatic English subtitles for Croatian YouTube channels. Connect your channel once - subtitles show up on YouTube by themselves. No file uploads, no timeline editing.
         </p>
       </div>
 
       <div class="grid grid-2 gap-4" style="margin-top: 4rem;">
         <div class="bento-card">
-          <h3 class="heading-md mb-3">Platform Features</h3>
+          <h3 class="heading-md mb-3">How It Works</h3>
           <ul class="feature-list">
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-plug"></i></span>
-              Plug-and-play AI components
+              Connects directly to YouTube - no uploads, no exports
             </li>
             <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-cogs"></i></span>
-              Customizable workflows
+              <span class="feature-list-icon"><i class="fas fa-bolt"></i></span>
+              Subtitles ready in 5-12 minutes per hour of audio
             </li>
             <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-chart-bar"></i></span>
-              Real-time analytics dashboard
+              <span class="feature-list-icon"><i class="fas fa-bullseye"></i></span>
+              95%+ accuracy on clean audio
             </li>
             <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-lock"></i></span>
-              Enterprise-grade security
+              <span class="feature-list-icon"><i class="fas fa-book"></i></span>
+              Custom vocabulary for names and brand terms
             </li>
             <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-expand-arrows-alt"></i></span>
-              Scales from prototype to production
+              <span class="feature-list-icon"><i class="fas fa-eye"></i></span>
+              Preview every subtitle before it goes live
             </li>
           </ul>
         </div>
 
         <div class="bento-card">
-          <h3 class="heading-md mb-3">Custom Development</h3>
+          <h3 class="heading-md mb-3">Why It Matters</h3>
           <p class="bento-text mb-4">
-            When your team needs something unique, we build it. Tailored AI tools designed around how your people actually work.
+            Croatian channels lose 15-30% of their potential audience without English subtitles. Titlomat wins that audience back - in Croatian and English, automatically. Built for solo creators, podcast networks, and agencies.
           </p>
-          <ul class="feature-list">
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-code"></i></span>
-              Custom model training
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-network-wired"></i></span>
-              System integration
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-headset"></i></span>
-              Ongoing support & iteration
-            </li>
-          </ul>
+          <p class="bento-text mb-4">
+            Start free with 100 credits. Made in Zagreb.
+          </p>
+          <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+            <a href="titlomat.html" class="btn btn-ghost">
+              View Product Page
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="https://titlomat.com" target="_blank" class="btn btn-ghost">
+              Try Titlomat Free
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -498,16 +487,17 @@
         <div>
           <h4 class="footer-title">Services</h4>
           <ul class="footer-links">
+            <li><a href="#services" class="footer-link">Product Development</a></li>
+            <li><a href="#services" class="footer-link">Tech Consulting</a></li>
             <li><a href="#services" class="footer-link">AI Strategy</a></li>
             <li><a href="#services" class="footer-link">Process Automation</a></li>
-            <li><a href="#services" class="footer-link">Predictive Analytics</a></li>
-            <li><a href="#services" class="footer-link">Document AI</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-title">Work</h4>
           <ul class="footer-links">
+            <li><a href="titlomat.html" class="footer-link">Titlomat.com</a></li>
             <li><a href="tvrtko.html" class="footer-link">Tvrtko.ai</a></li>
             <li><a href="bridj.html" class="footer-link">Bridj.ai</a></li>
             <li><a href="pitaj-lider.html" class="footer-link">Pitaj Lider</a></li>
@@ -588,6 +578,157 @@
         }
       });
     });
+
+    // Hero shader background — slow dot-grid wave field in brand colors.
+    // Falls back to the CSS mesh gradient if WebGL is unavailable.
+    (function () {
+      const hero = document.getElementById('hero');
+      const canvas = document.getElementById('heroCanvas');
+      if (!hero || !canvas) return;
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const glOpts = { antialias: false, depth: false, stencil: false, alpha: false, powerPreference: 'low-power' };
+      const gl = canvas.getContext('webgl', glOpts) || canvas.getContext('experimental-webgl', glOpts);
+      if (!gl) return;
+
+      const vertSrc = 'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
+      const fragSrc = `
+        #ifdef GL_FRAGMENT_PRECISION_HIGH
+        precision highp float;
+        #else
+        precision mediump float;
+        #endif
+        uniform vec2 u_res;
+        uniform float u_time;
+
+        float hash21(vec2 p) {
+          p = fract(p * vec2(123.34, 456.21));
+          p += dot(p, p + 45.32);
+          return fract(p.x * p.y);
+        }
+
+        void main() {
+          vec2 uv = gl_FragCoord.xy / u_res.xy;
+          float t = u_time * 0.12;
+
+          // square grid of dots, ~40 rows tall
+          float cell = u_res.y / 40.0;
+          vec2 g = gl_FragCoord.xy / cell;
+          vec2 id = floor(g);
+          vec2 f = fract(g) - 0.5;
+
+          // slow interfering waves sampled at the cell center
+          vec2 c = (id + 0.5) * cell / u_res.y;
+          float w1 = sin(c.x * 2.6 - t * 0.9 + sin(c.y * 2.2 + t * 0.5));
+          float w2 = sin(c.y * 3.4 + t * 0.7 + sin((c.x + c.y) * 2.0 - t * 0.4));
+          float w = 0.5 + 0.5 * (w1 * 0.6 + w2 * 0.4);
+          w *= w;
+
+          // dot radius follows the wave
+          float r = mix(0.06, 0.28, w);
+          float dotMask = smoothstep(r, r * 0.4, length(f));
+
+          // rare cells blink softly, like indicator LEDs
+          float h = hash21(id);
+          float blink = step(0.99, h) * (0.5 + 0.5 * sin(u_time * 1.5 + h * 50.0));
+
+          // coral base with a drifting cyan band
+          vec3 coral = vec3(1.0, 0.302, 0.302);
+          vec3 cyan = vec3(0.302, 1.0, 1.0);
+          float band = 0.5 + 0.5 * sin(c.x * 1.6 - c.y * 1.2 + t * 0.35);
+          vec3 dotCol = mix(coral, cyan, smoothstep(0.72, 1.0, band) * 0.65);
+
+          // faint diagonal scan sweep, one pass every ~25s
+          float sweep = smoothstep(0.94, 1.0, fract((uv.x + uv.y) * 0.5 - u_time * 0.04));
+
+          float bright = dotMask * (0.15 + 0.9 * w + 0.6 * blink + 0.35 * sweep);
+
+          // keep the left side (headline area) dark for readability
+          float vx = smoothstep(0.0, 0.72, uv.x);
+          float vy = smoothstep(0.0, 0.55, uv.y);
+          float vig = 0.15 + 0.85 * vx * vy;
+
+          vec3 bg = vec3(0.020, 0.020, 0.031);
+          vec3 col = bg + dotCol * bright * vig;
+
+          gl_FragColor = vec4(col, 1.0);
+        }
+      `;
+
+      function compile(type, src) {
+        const s = gl.createShader(type);
+        gl.shaderSource(s, src);
+        gl.compileShader(s);
+        return gl.getShaderParameter(s, gl.COMPILE_STATUS) ? s : null;
+      }
+
+      const vs = compile(gl.VERTEX_SHADER, vertSrc);
+      const fs = compile(gl.FRAGMENT_SHADER, fragSrc);
+      if (!vs || !fs) return;
+
+      const prog = gl.createProgram();
+      gl.attachShader(prog, vs);
+      gl.attachShader(prog, fs);
+      gl.linkProgram(prog);
+      if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) return;
+      gl.useProgram(prog);
+
+      gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+      const loc = gl.getAttribLocation(prog, 'a');
+      gl.enableVertexAttribArray(loc);
+      gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+      const uRes = gl.getUniformLocation(prog, 'u_res');
+      const uTime = gl.getUniformLocation(prog, 'u_time');
+
+      // crisp dots need near-native resolution; the shader is cheap enough
+      function resize() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+        const w = Math.max(1, Math.floor(hero.clientWidth * dpr));
+        const h = Math.max(1, Math.floor(hero.clientHeight * dpr));
+        if (canvas.width !== w || canvas.height !== h) {
+          canvas.width = w;
+          canvas.height = h;
+          gl.viewport(0, 0, w, h);
+        }
+      }
+
+      let raf = null;
+      let heroVisible = true;
+      const start = performance.now();
+
+      function frame(now) {
+        raf = null;
+        gl.uniform2f(uRes, canvas.width, canvas.height);
+        gl.uniform1f(uTime, (now - start) / 1000);
+        gl.drawArrays(gl.TRIANGLES, 0, 3);
+        if (!reduceMotion && heroVisible && !document.hidden) {
+          raf = requestAnimationFrame(frame);
+        }
+      }
+
+      function play() {
+        if (!raf) raf = requestAnimationFrame(frame);
+      }
+
+      new IntersectionObserver(entries => {
+        heroVisible = entries[0].isIntersecting;
+        if (heroVisible) play();
+      }).observe(hero);
+
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) play();
+      });
+      window.addEventListener('resize', () => {
+        resize();
+        play();
+      });
+
+      hero.classList.add('shader-active');
+      resize();
+      play();
+    })();
   </script>
 
 </body>
