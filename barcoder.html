@@ -12,8 +12,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Titlomat.com - Automatic Subtitles for Croatian YouTube | LumiVerse</title>
-  <meta name="description" content="Titlomat adds Croatian and English subtitles to your YouTube videos automatically. No file uploads, no timeline editing. A 60-minute episode is subtitled in ~5 minutes. By LumiVerse.">
+  <title>Barcoder - An Encyclopedia of QR &amp; Barcode Standards | LumiVerse</title>
+  <meta name="description" content="Barcoder catalogues 463 QR, barcode and visual-code standards across 197 countries, cross-referenced with the 1,076 wallets that read them. A reference work built by LumiVerse.">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -187,57 +187,39 @@
       line-height: 1.7;
     }
 
-    .pricing-grid {
+    /* Pipeline: how a page gets from research to published */
+    .pipeline {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
+      margin-top: 3rem;
     }
 
-    .pricing-card {
+    .pipeline-step {
       background: var(--glass);
       border: 1px solid var(--glass-border);
-      border-radius: 20px;
-      padding: 2rem;
-      text-align: center;
-      transition: all 0.3s ease;
+      border-radius: 16px;
+      padding: 1.75rem;
+      position: relative;
     }
 
-    .pricing-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(255, 77, 77, 0.3);
-    }
-
-    .pricing-card-featured {
-      border-color: rgba(255, 77, 77, 0.35);
-      background: linear-gradient(180deg, rgba(255, 77, 77, 0.06), var(--glass));
-    }
-
-    .pricing-name {
+    .pipeline-path {
+      font-family: 'SFMono-Regular', Menlo, Consolas, monospace;
       font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-secondary);
-      margin-bottom: 1rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
     }
 
-    .pricing-price {
-      font-size: 2.5rem;
-      font-weight: 800;
-      line-height: 1.1;
+    .pipeline-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
     }
 
-    .pricing-period {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    .pricing-credits {
+    .pipeline-text {
       color: var(--text-secondary);
       font-size: 0.95rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--glass-border);
+      line-height: 1.6;
     }
 
     .cta-section {
@@ -261,21 +243,15 @@
     }
 
     @media (max-width: 1024px) {
-      .stats-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .pricing-grid {
+      .stats-container,
+      .pipeline {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 640px) {
-      .stats-container {
-        grid-template-columns: 1fr;
-      }
-
-      .pricing-grid {
+      .stats-container,
+      .pipeline {
         grid-template-columns: 1fr;
       }
 
@@ -323,32 +299,32 @@
         <span>/</span>
         <a href="index.html#work">Work</a>
         <span>/</span>
-        <span>Titlomat.com</span>
+        <span>Barcoder</span>
       </div>
 
       <div class="case-study-tag">
-        <i class="fas fa-closed-captioning"></i>
-        Our Product &middot; AI Subtitles
+        <i class="fas fa-qrcode"></i>
+        Our Project &middot; Reference Encyclopedia
       </div>
 
-      <h1 class="display-lg mb-4">Titlomat.com</h1>
-      <p class="body-lg text-secondary" style="max-width: 700px;">
-        YouTube doesn't auto-caption Croatian. We do. Titlomat adds Croatian and English subtitles to every new video automatically - while you're already working on the next episode.
+      <h1 class="display-lg mb-4">Barcoder</h1>
+      <p class="body-lg text-secondary" style="max-width: 720px;">
+        Scan a payment QR in Zagreb and one in Manila and you're looking at two unrelated standards. Barcoder catalogues all of them - 463 visual-code standards across 197 countries, cross-referenced with the 1,076 wallets that read them.
       </p>
 
       <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
-        <a href="https://titlomat.com" target="_blank" class="btn btn-primary">
+        <a href="https://barcoder.lumiverse.hr" target="_blank" rel="noopener" class="btn btn-primary">
           <i class="fas fa-external-link-alt"></i>
-          Try Titlomat Free
+          Open Barcoder
         </a>
         <a href="index.html#contact" class="btn btn-secondary">
-          Talk to Us
+          Build Something Similar
         </a>
       </div>
 
       <div class="hero-image-showcase">
         <div class="hero-image-showcase-inner">
-          <img src="images/titlomat-landing.png" alt="Titlomat.com landing page showing automatic Croatian and English subtitle generation for YouTube videos">
+          <img src="images/barcoder-landing.png" alt="Barcoder landing page showing the catalogue counts: 463 standards, 197 countries, 1,076 wallets and 112 sample codes">
         </div>
       </div>
     </div>
@@ -359,33 +335,80 @@
     <div class="container">
       <div class="stats-container">
         <div class="stat-block">
-          <div class="stat-value">~5 min</div>
-          <div class="stat-label">To subtitle a 60-minute episode</div>
+          <div class="stat-value">463</div>
+          <div class="stat-label">Visual-code standards catalogued</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">95%+</div>
-          <div class="stat-label">Accuracy on clean audio</div>
+          <div class="stat-value">197</div>
+          <div class="stat-label">Countries with payment-scheme reports</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">12&times;</div>
-          <div class="stat-label">Faster than the audio itself</div>
+          <div class="stat-value">1,076</div>
+          <div class="stat-label">Wallets cross-referenced</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">2</div>
-          <div class="stat-label">Languages - Croatian &amp; English</div>
+          <div class="stat-value">112</div>
+          <div class="stat-label">Real sample codes to test against</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- How It Works Section -->
+  <!-- Why It Exists -->
   <section class="section">
     <div class="container">
-      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
-        <span class="section-label">How It Works</span>
-        <h2 class="display-md section-title">Connect Once, Forget It</h2>
+      <div class="section-header text-center" style="max-width: 760px; margin: 0 auto 4rem;">
+        <span class="section-label">Why It Exists</span>
+        <h2 class="display-md section-title">Nobody Wrote This Down</h2>
         <p class="section-description" style="max-width: 100%;">
-          No file uploads. No SRT exports. No timeline editing. Signup takes 30 seconds.
+          The answers live in central bank announcements, ISO/IEC specs, scheme documentation, vendor PDFs and regulator filings - in a dozen languages, none of them talking to each other. Barcoder pulls them into one cross-referenced place.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <h3 class="heading-md mb-3">The Questions It Answers</h3>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-circle-question"></i></span>
+              Which QR standard does this country's instant-payment scheme use?
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-circle-question"></i></span>
+              Will this wallet scan a merchant code from that scheme?
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-circle-question"></i></span>
+              What's actually inside this payload I just decoded?
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-circle-question"></i></span>
+              How do two national schemes interoperate at the counter?
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <h3 class="heading-md mb-3">Who Reads It</h3>
+          <p class="bento-text mb-4">
+            Payments engineers integrating a new market. Fintech teams sizing wallet coverage before launch. Wallet providers checking which rails they can ride. Researchers who need a citation, not a forum post.
+          </p>
+          <p class="bento-text">
+            Every page names its sources. Vol. I, Edition 2026 - and it grows with each commit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Inside -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">What's Inside</span>
+        <h2 class="display-md section-title">Three Ways In</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Every entry links to the others. Start from a standard, a country, or a wallet - you end up in the same graph.
         </p>
       </div>
 
@@ -393,20 +416,20 @@
         <div class="role-card">
           <div class="role-number">01</div>
           <div class="role-icon">
-            <i class="fab fa-youtube"></i>
+            <i class="fas fa-barcode"></i>
           </div>
-          <h3 class="role-title">Connect Your Channel</h3>
+          <h3 class="role-title">Standards</h3>
           <p class="role-text mb-4">
-            One-time YouTube authorization that asks for exactly one thing: permission to add subtitles. No access to comments, analytics, or private data.
+            Every QR, barcode and visual-code specification we can find evidence for - EMV merchant-presented modes, national instant-payment QRs, retail GS1 codes, niche transit codes.
           </p>
           <ul class="feature-list">
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              30-second signup, no credit card
+              463 entries, A to Z
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Subtitle permission only
+              PIX, UPI, KHQR, Bharat QR, EAN-13, Code 128
             </li>
           </ul>
         </div>
@@ -414,20 +437,20 @@
         <div class="role-card">
           <div class="role-number">02</div>
           <div class="role-icon">
-            <i class="fas fa-language"></i>
+            <i class="fas fa-earth-americas"></i>
           </div>
-          <h3 class="role-title">AI Transcribes &amp; Translates</h3>
+          <h3 class="role-title">Payments by Country</h3>
           <p class="role-text mb-4">
-            Speech recognition tuned for Croatian, then translation to English. Your custom vocabulary keeps names, brands, and industry terms spelled right.
+            A page per country covering which schemes operate there, what visual codes those schemes use, and how interoperability works at the merchant counter.
           </p>
           <ul class="feature-list">
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              95%+ accuracy on clean audio
+              197 countries, no gaps
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Custom dictionaries per channel
+              Scheme, code and rail on one page
             </li>
           </ul>
         </div>
@@ -435,20 +458,20 @@
         <div class="role-card">
           <div class="role-number">03</div>
           <div class="role-icon">
-            <i class="fas fa-cloud-upload-alt"></i>
+            <i class="fas fa-wallet"></i>
           </div>
-          <h3 class="role-title">Subtitles Go Live</h3>
+          <h3 class="role-title">Wallets</h3>
           <p class="role-text mb-4">
-            Croatian and English subtitles land directly on your YouTube video. Want a final say? Turn on preview mode and approve before publishing.
+            One page per wallet - GCash, Alipay, Revolut, M-Pesa and the rest - covering which standards each supports, in which markets, and against which underlying rails.
           </p>
           <ul class="feature-list">
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Auto-published to YouTube
+              1,076 wallet profiles
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Optional preview before going live
+              Market and rail coverage per wallet
             </li>
           </ul>
         </div>
@@ -456,129 +479,155 @@
     </div>
   </section>
 
-  <!-- Why It Matters Section -->
-  <section class="section section-dark">
+  <!-- The Scanner -->
+  <section class="section">
     <div class="container">
       <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
-        <span class="section-label">Why It Matters</span>
-        <h2 class="display-md section-title">Stop Losing Your Audience</h2>
+        <span class="section-label">The Scanner</span>
+        <h2 class="display-md section-title">Point It At a Code</h2>
         <p class="section-description" style="max-width: 100%;">
-          A typical Croatian channel misses 15-30% of its potential audience without subtitles. That's viewers watching on mute, non-native speakers, and the entire English-speaking world.
+          A reference book you can run. Scan a code, paste a payload, or generate one - and land on the standard that explains it.
         </p>
       </div>
 
       <div class="bento-grid">
         <div class="bento-card bento-card-lg">
           <div class="bento-icon">
-            <i class="fas fa-globe"></i>
+            <i class="fas fa-magnifying-glass"></i>
           </div>
-          <h3 class="bento-title">Built for the Croatian Creator Economy</h3>
+          <h3 class="bento-title">Identification, Not Just Decoding</h3>
           <p class="bento-text">
-            Big platforms skip small languages - YouTube's auto-captions don't support Croatian. Titlomat fills that gap with speech AI built specifically for Croatian podcasts and YouTube channels, from solo creators to podcast networks and media agencies.
+            Plenty of tools read a QR code. Barcoder tells you what it <em>is</em>. Decoded payloads are matched against all 463 standards and 1,076 wallets using URI schemes, TLV structures (EMVCo MPM), contact formats and payment-scheme identifiers.
           </p>
           <ul class="feature-list mt-4">
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Croatian-first speech recognition
+              Payment QRs: PIX, UPI, PromptPay, SGQR, DuitNow
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              English subtitles open global reach
+              Bank transfers: HUB3, SEPA EPC, Swiss QR-bill
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Works for channels of any size
+              Crypto URIs, vCard, MECARD, WiFi, calendar
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Every match links to its reference page
             </li>
           </ul>
         </div>
 
         <div class="bento-card">
           <div class="bento-icon">
-            <i class="fas fa-volume-mute"></i>
+            <i class="fas fa-camera"></i>
           </div>
-          <h3 class="bento-title">Mute Viewers</h3>
+          <h3 class="bento-title">Camera Scan</h3>
           <p class="bento-text">
-            Most social video plays silently. Subtitles keep those viewers watching instead of scrolling past.
+            Point your phone at a code in the wild. Decode and identify in the browser - no app to install.
           </p>
         </div>
 
         <div class="bento-card">
           <div class="bento-icon">
-            <i class="fas fa-magnifying-glass-chart"></i>
+            <i class="fas fa-paste"></i>
           </div>
-          <h3 class="bento-title">Search &amp; Discovery</h3>
+          <h3 class="bento-title">Paste &amp; Decode</h3>
           <p class="bento-text">
-            Subtitle text makes your videos searchable. YouTube understands what you said - and ranks you for it.
+            Drop in a raw payload string. Get the matching standard and every field broken out and labelled.
           </p>
         </div>
 
         <div class="bento-card">
           <div class="bento-icon">
-            <i class="fas fa-shield-halved"></i>
+            <i class="fas fa-images"></i>
           </div>
-          <h3 class="bento-title">Privacy by Design</h3>
+          <h3 class="bento-title">Sample Gallery</h3>
           <p class="bento-text">
-            Titlomat asks only for subtitle permission. Your comments, analytics, and private data stay yours.
+            112 real codes from schemes around the world. Test your own parser against something authentic.
           </p>
         </div>
 
         <div class="bento-card">
           <div class="bento-icon">
-            <i class="fas fa-universal-access"></i>
+            <i class="fas fa-sliders"></i>
           </div>
-          <h3 class="bento-title">Accessibility</h3>
+          <h3 class="bento-title">Encoder Playground</h3>
           <p class="bento-text">
-            Deaf and hard-of-hearing viewers can't watch without captions. With Titlomat, every episode includes them by default.
+            40 encoders. Fill in the form, generate a valid code, then scan it back - all on one page.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pricing Section -->
-  <section class="section">
+  <!-- How It's Built -->
+  <section class="section section-dark">
     <div class="container">
-      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
-        <span class="section-label">Pricing</span>
-        <h2 class="display-md section-title">Start Free, Scale When Ready</h2>
+      <div class="section-header text-center" style="max-width: 760px; margin: 0 auto 4rem;">
+        <span class="section-label">How It's Built</span>
+        <h2 class="display-md section-title">The Content Is the Repo</h2>
         <p class="section-description" style="max-width: 100%;">
-          Credits-based pricing. No credit card to start, no contracts to escape.
+          Every page on Barcoder is rendered from a single markdown file checked into the repository. No CMS. No admin backend. No production-only edits.
         </p>
       </div>
 
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <div class="pricing-name">Free</div>
-          <div class="pricing-price">&euro;0</div>
-          <div class="pricing-period">per month</div>
-          <div class="pricing-credits">100 credits</div>
+      <div class="pipeline">
+        <div class="pipeline-step">
+          <div class="pipeline-path">reports/</div>
+          <h3 class="pipeline-title">Research</h3>
+          <p class="pipeline-text">
+            Each country starts as long-form research - central bank sources, scheme docs, regulator filings, read and written up.
+          </p>
         </div>
 
-        <div class="pricing-card pricing-card-featured">
-          <div class="pricing-name">Creator</div>
-          <div class="pricing-price">&euro;19</div>
-          <div class="pricing-period">per month</div>
-          <div class="pricing-credits">6,500 credits</div>
+        <div class="pipeline-step">
+          <div class="pipeline-path">.claude/skills/</div>
+          <h3 class="pipeline-title">Extract</h3>
+          <p class="pipeline-text">
+            Claude Code skills pull structured per-standard and per-country pages out of that research, consistently every time.
+          </p>
         </div>
 
-        <div class="pricing-card">
-          <div class="pricing-name">Pro</div>
-          <div class="pricing-price">&euro;49</div>
-          <div class="pricing-period">per month</div>
-          <div class="pricing-credits">20,000 credits</div>
+        <div class="pipeline-step">
+          <div class="pipeline-path">docs/</div>
+          <h3 class="pipeline-title">Commit</h3>
+          <p class="pipeline-text">
+            Pages land as markdown in the repo. Every published claim is traceable to the commit that introduced it.
+          </p>
         </div>
 
-        <div class="pricing-card">
-          <div class="pricing-name">Studio</div>
-          <div class="pricing-price">&euro;149</div>
-          <div class="pricing-period">per month</div>
-          <div class="pricing-credits">85,000 credits</div>
+        <div class="pipeline-step">
+          <div class="pipeline-path">web</div>
+          <h3 class="pipeline-title">Render</h3>
+          <p class="pipeline-text">
+            The backend reads those files, the frontend renders them. Boring on purpose - and reproducible from source.
+          </p>
         </div>
       </div>
 
-      <p class="text-center text-muted mt-5" style="font-size: 0.9rem;">
-        Current pricing at <a href="https://titlomat.com" target="_blank" class="footer-link" style="color: var(--accent);">titlomat.com</a>.
-      </p>
+      <div class="grid grid-2 gap-4" style="margin-top: 3rem;">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-code-branch"></i>
+          </div>
+          <h3 class="bento-title">Auditable by Design</h3>
+          <p class="bento-text">
+            A reference work is only worth as much as its sourcing. Because the content is the repo, any page can be traced back through git to the change that wrote it - and corrected the same way anyone corrects code.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-user-astronaut"></i>
+          </div>
+          <h3 class="bento-title">One Person, Encyclopedic Scope</h3>
+          <p class="bento-text">
+            197 country reports is a research-team-year of work. AI agents did the extraction and drafting; a human set the structure, checked the sources and shipped it. That's the whole LumiVerse thesis in one project.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -586,17 +635,17 @@
   <section class="section" style="padding-top: 0;">
     <div class="container">
       <div class="cta-section">
-        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Your Next Video Deserves Subtitles</h2>
-        <p class="body-lg text-secondary mb-5" style="max-width: 600px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
-          Connect your channel in 30 seconds. Your first videos are on us - 100 free credits, no credit card.
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Have a Domain Nobody Mapped?</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 620px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          Barcoder is what happens when you point AI research pipelines at a scattered field and make every output auditable. The same approach works on your industry's mess.
         </p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
-          <a href="https://titlomat.com" target="_blank" class="btn btn-primary">
-            <i class="fas fa-closed-captioning"></i>
-            Try Titlomat Free
+          <a href="https://barcoder.lumiverse.hr" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fas fa-qrcode"></i>
+            Open Barcoder
           </a>
           <a href="index.html#contact" class="btn btn-secondary">
-            Contact Us
+            Schedule a Call
           </a>
         </div>
       </div>
