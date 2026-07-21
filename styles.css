@@ -1090,3 +1090,141 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Case-study showcase — slideshow with a WebGL mosaic transition.
+   Behaviour lives in showcase.js; see the header comment there for the
+   three progressive-enhancement levels this CSS has to cover.
+   ========================================================================== */
+
+.showcase {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: var(--bg-tertiary);
+}
+
+/* Slides stack; without JS only the first is visible, which is the old
+   single-static-image behaviour. */
+.showcase-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.55s ease;
+}
+
+.showcase-slide:first-of-type,
+.showcase-slide.is-active {
+  opacity: 1;
+}
+
+/* Once the canvas is up it owns the pixels; the images stay in the DOM as
+   texture sources and for their alt text. */
+.showcase-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.showcase-ui {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.showcase-arrow,
+.showcase-dot {
+  pointer-events: auto;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.showcase-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  background: rgba(5, 5, 8, 0.55);
+  backdrop-filter: blur(10px);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.showcase-arrow-prev { left: 1rem; }
+.showcase-arrow-next { right: 1rem; }
+
+.showcase:hover .showcase-arrow,
+.showcase:focus-within .showcase-arrow {
+  opacity: 1;
+}
+
+.showcase-arrow:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg-primary);
+}
+
+.showcase-arrow:focus-visible,
+.showcase-dot:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  opacity: 1;
+}
+
+.showcase-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 100px;
+  background: rgba(5, 5, 8, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+}
+
+.showcase-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease, width 0.3s ease;
+}
+
+.showcase-dot.is-active {
+  width: 22px;
+  border-radius: 100px;
+  background: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .showcase-arrow { display: none; }
+  .showcase-dots { bottom: 0.6rem; }
+}
+
+/* Motion-sensitive visitors get a plain crossfade and no autoplay
+   (showcase.js skips WebGL and the timer); keep the controls usable. */
+@media (prefers-reduced-motion: reduce) {
+  .showcase-slide { transition: opacity 0.01s linear; }
+}
