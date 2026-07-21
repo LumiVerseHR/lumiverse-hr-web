@@ -46,6 +46,7 @@ Case studies, listed in the order they appear in the homepage **Work** section:
 
 ```
 styles.css          Shared stylesheet — every page links to this
+showcase.js         Hero-image slideshow with a WebGL mosaic transition
 style-guide.md      Design system: colors, type scale, components
 writing-guide.md    Voice, tone and copy conventions
 images/             Screenshots and photography
@@ -82,6 +83,30 @@ They define the visual system and the copy voice, and the existing pages follow 
 5. Put images in `images/`, keep them roughly 100–300 KB, and use **real product
    screenshots, not stock photography**. The homepage makes no external image requests;
    keep it that way.
+6. For the hero image, prefer the **showcase slideshow** (below) over a single static
+   screenshot.
+
+### The hero showcase
+
+`showcase.js` turns a stack of `<img>` into a slideshow whose transition breaks the
+frame into tiles that flip to the next image in a diagonal wave. Add
+`<script src="showcase.js" defer></script>` to the page head and use:
+
+```html
+<div class="showcase" data-showcase data-interval="5200">
+  <img class="showcase-slide" src="images/thing-1.jpg" alt="…">
+  <img class="showcase-slide" loading="lazy" decoding="async" src="images/thing-2.jpg" alt="…">
+  <img class="showcase-slide" loading="lazy" decoding="async" src="images/thing-3.jpg" alt="…">
+</div>
+```
+
+- **Give every slide the same aspect ratio** (the set so far is 1440×900). Mismatches
+  are cropped rather than stretched, but a consistent set looks better.
+- Keep the first slide eager and lazy-load the rest, as above.
+- Dots, arrows, arrow-keys and autoplay-pause-on-hover come for free. It degrades to a
+  CSS crossfade without WebGL, to the first image without JS, and drops the animation
+  entirely under `prefers-reduced-motion`.
+- Two slides is the minimum; below that the script leaves the markup alone.
 
 Two layout gotchas worth knowing:
 

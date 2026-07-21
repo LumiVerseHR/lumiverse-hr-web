@@ -36,11 +36,22 @@
     'uniform vec2 u_res;',
     'uniform vec2 u_tiles;',
     'uniform float u_progress;',
+    'uniform float u_fromAspect;',
+    'uniform float u_toAspect;',
     '',
     'float hash21(vec2 p) {',
     '  p = fract(p * vec2(123.34, 456.21));',
     '  p += dot(p, p + 45.32);',
     '  return fract(p.x * p.y);',
+    '}',
+    '',
+    // object-fit: cover, in shader form — crop the long axis instead of
+    // stretching, so a slide that isn't the container's aspect still reads right.
+    'vec2 coverUV(vec2 uv, float imgAspect, float boxAspect) {',
+    '  vec2 s = imgAspect > boxAspect',
+    '    ? vec2(boxAspect / imgAspect, 1.0)',
+    '    : vec2(1.0, imgAspect / boxAspect);',
+    '  return (uv - 0.5) * s + 0.5;',
     '}',
     '',
     'void main() {',
@@ -58,8 +69,12 @@
     '  local = local * local * (3.0 - 2.0 * local);',
     '',
     // Outgoing tile drifts back, incoming settles forward into place.
-    '  vec2 fromUV = center + (uv - center) * (1.0 + 0.22 * local);',
-    '  vec2 toUV   = center + (uv - center) * (0.84 + 0.16 * local);',
+    '  vec2 fromBox = center + (uv - center) * (1.0 + 0.22 * local);',
+    '  vec2 toBox   = center + (uv - center) * (0.84 + 0.16 * local);',
+    '',
+    '  float boxAspect = u_res.x / u_res.y;',
+    '  vec2 fromUV = coverUV(fromBox, u_fromAspect, boxAspect);',
+    '  vec2 toUV   = coverUV(toBox, u_toAspect, boxAspect);',
     '',
     '  vec3 a = texture2D(u_from, clamp(fromUV, 0.0, 1.0)).rgb;',
     '  vec3 b = texture2D(u_to, clamp(toUV, 0.0, 1.0)).rgb;',
@@ -195,6 +210,8 @@
       uni.res = gl.getUniformLocation(prog, 'u_res');
       uni.tiles = gl.getUniformLocation(prog, 'u_tiles');
       uni.progress = gl.getUniformLocation(prog, 'u_progress');
+      uni.fromAspect = gl.getUniformLocation(prog, 'u_fromAspect');
+      uni.toAspect = gl.getUniformLocation(prog, 'u_toAspect');
       gl.uniform1i(gl.getUniformLocation(prog, 'u_from'), 0);
       gl.uniform1i(gl.getUniformLocation(prog, 'u_to'), 1);
 
@@ -217,6 +234,11 @@
       }
     }
 
+    function aspectOf(i) {
+      var img = slides[i];
+      return (img.naturalWidth && img.naturalHeight) ? img.naturalWidth / img.naturalHeight : 1.6;
+    }
+
     function draw(from, to, progress) {
       if (!gl) return;
       gl.activeTexture(gl.TEXTURE0);
@@ -229,6 +251,8 @@
       var rows = Math.max(5, Math.round(cols / (root.clientWidth / Math.max(1, root.clientHeight))));
       gl.uniform2f(uni.tiles, cols, rows);
       gl.uniform1f(uni.progress, progress);
+      gl.uniform1f(uni.fromAspect, aspectOf(from));
+      gl.uniform1f(uni.toAspect, aspectOf(to));
       gl.drawArrays(gl.TRIANGLES, 0, 3);
     }
 
