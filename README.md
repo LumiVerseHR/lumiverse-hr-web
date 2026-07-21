@@ -22,13 +22,23 @@ behave differently than in production.
 | File | Purpose |
 |------|---------|
 | `index.html` | Homepage — services, Titlomat product section, case studies, process, contact |
-| `rentalica.html` | Case study — legacy PHP rewrite into a multi-tenant SaaS |
-| `barcoder.html` | Case study — encyclopedia of QR, barcode and visual-code standards |
 | `titlomat.html` | Product page — automatic Croatian and English YouTube subtitles |
-| `tvrtko.html` | Case study — Croatian business intelligence platform |
-| `bridj.html` | Case study — AI marketing intelligence, tech-lead consulting |
-| `pitaj-lider.html` | Case study — business intelligence assistant |
-| `lider-pdf-archive.html` | Case study — magazine archive digitization |
+
+Case studies, listed in the order they appear in the homepage **Work** section:
+
+| File | Purpose |
+|------|---------|
+| `bridj.html` | AI marketing intelligence — tech-lead consulting engagement |
+| `barcoder.html` | An encyclopedia of QR, barcode and visual-code standards |
+| `aimito.html` | Comic-book apparel brand for developers, built around a content engine |
+| `rentalica.html` | A decade-old PHP rent-a-car system rebuilt as a multi-tenant SaaS |
+| `overserved.html` | A tower-defense game, as a test of how far AI-assisted development goes |
+| `tvrtko.html` | Croatian business intelligence platform |
+| `pitaj-lider.html` | Business intelligence assistant |
+| `lider-pdf-archive.html` | Magazine archive digitization |
+
+| Other | Purpose |
+|------|---------|
 | `404.html` | Error page |
 | `decks/tvrtko-agents.html` | Standalone presentation deck |
 
@@ -39,7 +49,7 @@ styles.css          Shared stylesheet — every page links to this
 style-guide.md      Design system: colors, type scale, components
 writing-guide.md    Voice, tone and copy conventions
 images/             Screenshots and photography
-sitemap.xml         Update when adding a page
+sitemap.xml         Update when adding or reordering pages; priorities track homepage order
 robots.txt          Crawler rules
 manifest.json       PWA manifest
 .htaccess           Apache rewrite, caching and security headers
@@ -62,11 +72,24 @@ They define the visual system and the copy voice, and the existing pages follow 
 
 ### Adding a case study
 
-1. Copy an existing case study page as the starting point.
-2. Add a `.project-card` to the Work section of `index.html`.
-3. Add the page to the footer **Work** list on *every* page.
-4. Add a `<url>` entry to `sitemap.xml`.
-5. Put images in `images/` and keep them reasonably sized (roughly 100–300 KB).
+1. Copy an existing case study page as the starting point — `rentalica.html` and
+   `aimito.html` are the most complete examples.
+2. Add a `.project-card` to the Work section of `index.html`, and renumber the
+   `<!-- Project N: … -->` comments.
+3. Add the page to the footer **Work** list on *every* page (it is duplicated in each).
+4. Add a `<url>` entry to `sitemap.xml` — priorities descend in homepage Work order,
+   so reordering the cards means re-laddering the priorities too.
+5. Put images in `images/`, keep them roughly 100–300 KB, and use **real product
+   screenshots, not stock photography**. The homepage makes no external image requests;
+   keep it that way.
+
+Two layout gotchas worth knowing:
+
+- **`.bento-grid` is 3 columns and `.bento-card-lg` spans 2.** Make the card widths add
+  up to a multiple of 3 or the last row ends up with a gap — e.g. 2 large + 5 regular.
+- **Card images are cropped to a 300px-tall box with `object-fit: cover`.** Portrait
+  source images need `object-position: top` (see the Lider Archive card) or the crop
+  lands on a meaningless middle slice.
 
 ## Stack
 
