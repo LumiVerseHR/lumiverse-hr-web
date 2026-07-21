@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Aimito - A Store With a Content Engine Inside It | LumiVerse</title>
+  <meta name="description" content="A comic-book apparel brand for developers: 889 original designs, cross-modal vibe search over CLIP embeddings, and a generation pipeline that makes new artwork a build step instead of a budget line. By LumiVerse.">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(255, 77, 77, 0.12), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(255, 143, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 77, 77, 0.1);
+      border: 1px solid rgba(255, 77, 77, 0.2);
+      border-radius: 100px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .hero-image-showcase-inner {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 77, 77, 0.5), transparent);
+    }
+
+    .hero-image-showcase-inner img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .role-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .role-card:hover::before {
+      opacity: 1;
+    }
+
+    .role-number {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .role-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 143, 77, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .role-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* The name reveal */
+    .name-panel {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 3.5rem;
+      text-align: center;
+    }
+
+    .name-say {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .name-say em {
+      font-style: normal;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+
+      .name-panel,
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#work" class="nav-link">Work</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#services" class="mobile-nav-link">Services</a>
+    <a href="index.html#work" class="mobile-nav-link">Work</a>
+    <a href="index.html#about" class="mobile-nav-link">About</a>
+    <a href="index.html#contact" class="mobile-nav-link">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="index.html#work">Work</a>
+        <span>/</span>
+        <span>The Aimito</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-shirt"></i>
+        Our Product &middot; Commerce &amp; Content Engine
+      </div>
+
+      <h1 class="display-lg mb-4">The Aimito</h1>
+      <p class="body-lg text-secondary" style="max-width: 740px;">
+        A comic-book apparel brand for developers - 889 original designs, a search that takes a feeling instead of a keyword, and a pipeline that makes new artwork a build step rather than a budget line.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://theaimito.com" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i>
+          Visit The Aimito
+        </a>
+        <a href="index.html#contact" class="btn btn-secondary">
+          Build One For Your Brand
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <img src="images/aimito-landing.jpg" alt="The Aimito storefront - every dev is a hero, dress like one - with a semantic vibe search bar">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">889</div>
+          <div class="stat-label">Original designs, zero licensing risk</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">10</div>
+          <div class="stat-label">Themed collections, called squads</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">0</div>
+          <div class="stat-label">Units of inventory held</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">&euro;0</div>
+          <div class="stat-label">Outside funding raised</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Name -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+        <span class="section-label">Start With the Name</span>
+        <h2 class="display-md section-title">Two Jokes in One Word</h2>
+      </div>
+
+      <div class="name-panel">
+        <p class="name-say">
+          The Aimito.<br>
+          Say it out loud: <em>daj mi to.</em>
+        </p>
+        <p class="body-lg text-secondary" style="max-width: 620px; margin: 0 auto;">
+          In English it reads "the AI-mito." In Croatian it's "gimme that" - the exact sound an impulse buy makes. The AI angle and the purchase intent, hiding in the same four syllables. The buy button on every product just says <strong style="color: var(--text-primary);">Gimme that</strong>.
+        </p>
+        <p class="text-muted mt-4" style="font-size: 0.95rem;">
+          The site is English-only. The Croatian is saved as a reveal on the About page, not sprinkled through the UI.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Exists -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">The Motivation</span>
+        <h2 class="display-md section-title">A Tribe With Nothing Good to Wear</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Developers are one of the most identity-driven, meme-fluent and well-paid groups on the internet. They already buy clothing to signal who they are - conference tees, company swag, "it's always DNS" mugs. The trigger is humour plus belonging, and it repeats.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-store-slash"></i>
+          </div>
+          <h3 class="heading-md mb-3">What They're Offered Instead</h3>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-minus"></i></span>
+              Enormous unmoderated marketplaces - vast selection, thin quality, trademark landmines, no brand to belong to
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-minus"></i></span>
+              One-joke shops with a dozen shirts and no reason to ever come back
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-minus"></i></span>
+              Company swag stores, which have a world but aren't funny and aren't for sale to the tribe
+            </li>
+          </ul>
+          <p class="bento-text mt-4">
+            Nobody owns the curated lane: original art, a brand world, and a way to find the thing you meant.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3 class="heading-md mb-3">Why Now</h3>
+          <p class="bento-text mb-4">
+            "AI slop." Vibe coding. The confidently wrong model. An entire comedic seam opened up in the last two years and nobody had mined it properly - which is why two of the ten squads are AI Slop and AI Voices.
+          </p>
+          <p class="bento-text">
+            Every design is original artwork, which turns the marketplaces' structural weakness - takedowns and trademark risk - into a moat instead of a threat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Engine -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+        <span class="section-label">The Real Product</span>
+        <h2 class="display-md section-title">A Content Engine Wearing a Shop</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Anyone can put a joke on a shirt. The defensible part is the loop underneath: the marginal cost of a new design is compute, and so is the marginal cost of a new advert. Competitors buy content as a line item. Here it's a build step.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-number">01</div>
+          <div class="role-icon">
+            <i class="fas fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="role-title">Generate</h3>
+          <p class="role-text">
+            A local generation stack produces artwork in batches - no per-image API bill, no external rights questions, and the freedom to throw most of it away.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">02</div>
+          <div class="role-icon">
+            <i class="fas fa-filter"></i>
+          </div>
+          <h3 class="role-title">Curate</h3>
+          <p class="role-text">
+            A quality and diversity pass prunes hard. Generation is cheap, so the catalogue is defined by what gets cut - the same lesson the game taught us about taste being the scarce input.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">03</div>
+          <div class="role-icon">
+            <i class="fas fa-film"></i>
+          </div>
+          <h3 class="role-title">Produce</h3>
+          <p class="role-text">
+            A promo pipeline turns any design into a vertical hero clip starring a recurring caped character, with the deterministic branding pieces composited identically every time.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">04</div>
+          <div class="role-icon">
+            <i class="fas fa-tower-broadcast"></i>
+          </div>
+          <h3 class="role-title">Distribute</h3>
+          <p class="role-text">
+            Short-form video and the places the tribe actually lives. A bootstrapped brand can't buy attention, so the plan is built around content that costs compute rather than budget.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">05</div>
+          <div class="role-icon">
+            <i class="fas fa-cart-shopping"></i>
+          </div>
+          <h3 class="role-title">Convert</h3>
+          <p class="role-text">
+            Vibe search turns a described feeling into a product page. Print-on-demand fulfilment means no inventory, no upfront capital and worldwide shipping from day one.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">06</div>
+          <div class="role-icon">
+            <i class="fas fa-arrow-rotate-left"></i>
+          </div>
+          <h3 class="role-title">Feed It Back</h3>
+          <p class="role-text">
+            Which jokes convert decides what gets generated next. The loop closes, and the catalogue starts learning the audience instead of guessing at it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Under the Hood -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Under the Hood</span>
+        <h2 class="display-md section-title">Where the Engineering Went</h2>
+        <p class="section-description" style="max-width: 100%;">
+          The interesting problems weren't "make an image." They were everything that has to be true before a generated picture becomes a garment somebody is happy to receive.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-magnifying-glass"></i>
+          </div>
+          <h3 class="bento-title">Search That Takes a Feeling</h3>
+          <p class="bento-text">
+            Type "3am on-call despair" or "npm chaos" and get the shirt you meant. The query and the artwork live in one shared embedding space, so text finds images directly - no keyword tagging, no manual taxonomy across 889 designs. Product pages use the same vectors in reverse for visually similar neighbours.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              CLIP embeddings served by a dedicated microservice
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              PostgreSQL with pgvector, HNSW-indexed for fast nearest-neighbour
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Trigram fallback, so the search box is never useless
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              The killer feature for gift buyers: "shirt for my programmer boyfriend"
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3 class="bento-title">A Model That Checks the Art</h3>
+          <p class="bento-text">
+            A multimodal model running on local hardware reviews designs at publish time - reading back the text, catching botched background removal, and flagging anything not print-worthy. No cloud call, no per-image cost.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-shapes"></i>
+          </div>
+          <h3 class="bento-title">Most of It Isn't Prompting</h3>
+          <p class="bento-text">
+            Diffusion models are bad at legible text and precise layout, and a joke shirt is mostly legible text and precise layout. So the recurring formats are built by deterministic generators instead: certification badges with curved ring text, syntax-highlighted code panels, OS error dialogs, captcha grids, nutrition-facts labels, flowcharts, tonal ASCII art. The model supplies illustration; code supplies typography.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Composition and typesetting are a separate, repeatable stage
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Same joke format, infinite variations, consistent every time
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-ruler"></i>
+          </div>
+          <h3 class="bento-title">A Measured Print Box</h3>
+          <p class="bento-text">
+            The exact printable area of each garment was measured by printing a calibration pattern through the fulfiller's own mockup generator and reading the result back - not estimated.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-file-image"></i>
+          </div>
+          <h3 class="bento-title">The Audit That Caught 65</h3>
+          <p class="bento-text">
+            A pre-launch sweep of all 889 designs found 65 with no print-resolution file - every one of which would have handed the printer a dead link on a real order. All 65 were regenerated and upscaled before anyone could buy them.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3 class="bento-title">No Mockup Slop</h3>
+          <p class="bento-text">
+            Every product photo is the real garment with the real print, not a glossy fake. It's the brand's trust promise: what you see is what ships.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="bento-title">Which Shirts It Works On</h3>
+          <p class="bento-text">
+            Pale artwork disappears on a cream tee. Rules decide the garment colours each design is offered on, and a colour-adaptation step retunes two-tone text so it survives the switch.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <img src="images/aimito-designs.jpg" alt="A grid of Aimito designs - certification badges, captcha grids, error dialogs, mascot stickers and nutrition-facts labels">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Status / What it proves -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2 gap-4" style="align-items: center;">
+        <div>
+          <span class="section-label">Where It Stands</span>
+          <h2 class="display-md section-title mb-4">Built, Stocked, Running</h2>
+          <p class="body-lg text-secondary mb-4">
+            The storefront is live, the catalogue is full, and the purchase path - checkout, tax, fulfilment, confirmation email - is wired end to end against real providers.
+          </p>
+          <p class="text-secondary">
+            What's left is the part no pipeline can automate: distribution. Getting the first hundred people to find it, wear it, and tell someone. That's the honest state of it, and it's the phase the whole engine was built to make survivable on a bootstrapped budget.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <h3 class="heading-md mb-3">Built On</h3>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Next.js 16 and React 19 storefront, Tailwind
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              FastAPI, SQLAlchemy 2.0, background worker on Redis
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              PostgreSQL 16 with pgvector, S3-compatible object storage
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Stripe Checkout with EU VAT handling, print-on-demand fulfilment
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Every service containerized, deployed behind a reverse proxy
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bento-card mt-4">
+        <h3 class="heading-md mb-3">Why This Is in Our Portfolio</h3>
+        <p class="bento-text">
+          The Aimito is the commercial version of a thesis we keep testing: when generation gets cheap, the advantage moves to whoever built the machinery around it - the curation pass, the deterministic composition, the automated quality check, the loop that feeds sales data back into what gets made next. A brand that manufactures its own catalogue and its own marketing is just the clearest way to demonstrate that. The same engine works for anyone whose growth is throttled by how much content they can afford to produce.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Content as a Build Step</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 640px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          If your growth is limited by how much content you can afford to make, that's a pipeline problem, not a budget problem. Go look at the store first - then let's talk about yours.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
+          <a href="https://theaimito.com" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fas fa-shirt"></i>
+            Visit The Aimito
+          </a>
+          <a href="index.html#contact" class="btn btn-secondary">
+            Start a Project
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI tools that make humans unstoppable. Based in Zagreb, working globally.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#services" class="footer-link">Product Development</a></li>
+            <li><a href="index.html#services" class="footer-link">Tech Consulting</a></li>
+            <li><a href="index.html#services" class="footer-link">AI Strategy</a></li>
+            <li><a href="index.html#services" class="footer-link">Process Automation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Work</h4>
+          <ul class="footer-links">
+            <li><a href="titlomat.html" class="footer-link">Titlomat.com</a></li>
+            <li><a href="aimito.html" class="footer-link">The Aimito</a></li>
+            <li><a href="barcoder.html" class="footer-link">Barcoder</a></li>
+            <li><a href="rentalica.html" class="footer-link">Rentalica</a></li>
+            <li><a href="overserved.html" class="footer-link">Overserved</a></li>
+            <li><a href="tvrtko.html" class="footer-link">Tvrtko.ai</a></li>
+            <li><a href="bridj.html" class="footer-link">Bridj.ai</a></li>
+            <li><a href="pitaj-lider.html" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="lider-pdf-archive.html" class="footer-link">Lider Archive</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Email Us</a></li>
+            <li><a href="https://calendly.com/tihomirjauk/30min" target="_blank" class="footer-link">Book a Call</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2024 LumiVerse d.o.o. All rights reserved.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
+</html>
