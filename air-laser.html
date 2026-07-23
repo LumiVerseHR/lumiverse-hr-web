@@ -12,8 +12,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Aimito - A Store With a Content Engine Inside It | LumiVerse</title>
-  <meta name="description" content="A comic-book apparel brand for developers: 889 original designs, cross-modal vibe search over CLIP embeddings, and a generation pipeline that makes new artwork a build step instead of a budget line. By LumiVerse.">
+  <title>Air-Plasma Aerial Displays - Research | LumiVerse</title>
+  <meta name="description" content="A 49-page physics design study computed end-to-end by an AI-agentic simulation station: ~12 open-source simulators, one Claude Code loop, every number cross-checked or retracted. The method, not the hologram, is the point. By LumiVerse.">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -44,7 +44,7 @@
       width: 60%;
       height: 100%;
       background: radial-gradient(ellipse at 70% 30%, rgba(255, 77, 77, 0.12), transparent 60%),
-                  radial-gradient(ellipse at 90% 80%, rgba(255, 143, 77, 0.08), transparent 50%);
+                  radial-gradient(ellipse at 90% 80%, rgba(77, 255, 255, 0.06), transparent 50%);
       pointer-events: none;
     }
 
@@ -60,6 +60,28 @@
       font-size: 0.85rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
+    }
+
+    /* Prominent honesty note — this is computed, not built. */
+    .honesty-note {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      max-width: 720px;
+      margin-top: 2rem;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--glass-border);
+      border-left: 3px solid var(--accent);
+      border-radius: 10px;
+      background: var(--glass);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .honesty-note i {
+      color: var(--accent);
+      margin-top: 0.2rem;
     }
 
     .hero-image-showcase {
@@ -90,6 +112,14 @@
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .figure-caption {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.5;
     }
 
     .stats-section {
@@ -187,24 +217,18 @@
       line-height: 1.7;
     }
 
-    /* The name reveal */
-    .name-panel {
-      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
-      border: 1px solid var(--glass-border);
-      border-radius: 24px;
-      padding: 3.5rem;
+    /* The retraction pull-quote */
+    .pullquote {
+      max-width: 820px;
+      margin: 3rem auto 0;
       text-align: center;
-    }
-
-    .name-say {
-      font-size: clamp(2rem, 5vw, 3.25rem);
-      font-weight: 800;
+      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+      font-weight: 700;
       letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin-bottom: 1.25rem;
+      line-height: 1.3;
     }
 
-    .name-say em {
+    .pullquote em {
       font-style: normal;
       background: var(--gradient-accent);
       -webkit-background-clip: text;
@@ -243,7 +267,6 @@
         grid-template-columns: 1fr;
       }
 
-      .name-panel,
       .cta-section {
         padding: 2.5rem 1.5rem;
       }
@@ -289,39 +312,48 @@
       <div class="breadcrumb">
         <a href="index.html">Home</a>
         <span>/</span>
-        <a href="index.html#work">Work</a>
+        <a href="index.html#research">Research</a>
         <span>/</span>
-        <span>The Aimito</span>
+        <span>Air-Plasma Aerial Displays</span>
       </div>
 
       <div class="case-study-tag">
-        <i class="fas fa-shirt"></i>
-        Our Product &middot; Commerce &amp; Content Engine
+        <i class="fas fa-atom"></i>
+        Independent Research &middot; Physics &times; AI Agents
       </div>
 
-      <h1 class="display-lg mb-4">The Aimito</h1>
-      <p class="body-lg text-secondary" style="max-width: 740px;">
-        A comic-book apparel brand for developers - 889 original designs, a search that takes a feeling instead of a keyword, and a pipeline that makes new artwork a build step rather than a budget line.
+      <h1 class="display-lg mb-4">A Hologram, Without Touching a Laser</h1>
+      <p class="body-lg text-secondary" style="max-width: 760px;">
+        A 49-page design study for a glowing image that floats in open air - its physics, optics, control loops and bill of materials - computed end to end by a stack of open-source physics simulators driven by an AI agent. No optical bench. No laser ever switched on.
       </p>
 
+      <div class="honesty-note">
+        <i class="fas fa-circle-info"></i>
+        <span>Every number here is <strong style="color: var(--text-primary);">computed, not measured</strong>. No device has been built. The claim is not "it works" - it's that there's no remaining physics reason it shouldn't, and what's left is engineering and measurement.</span>
+      </div>
+
       <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
-        <a href="https://theaimito.com" target="_blank" rel="noopener" class="btn btn-primary">
-          <i class="fas fa-external-link-alt"></i>
-          Visit The Aimito
+        <a href="https://github.com/LumiVerseHR/air-laser-physics/releases/tag/paper-v1.0" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-file-lines"></i>
+          Read the 49-Page Study
         </a>
-        <a href="index.html#contact" class="btn btn-secondary">
-          Build One For Your Brand
+        <a href="https://github.com/LumiVerseHR/air-laser-physics" target="_blank" rel="noopener" class="btn btn-secondary">
+          <i class="fab fa-github"></i>
+          View the Repository
         </a>
       </div>
 
       <div class="hero-image-showcase">
         <div class="hero-image-showcase-inner">
-          <div class="showcase" data-showcase data-interval="5200">
-            <img class="showcase-slide" src="images/aimito-1.jpg" alt="The Aimito storefront - every dev is a hero, dress like one - with the vibe search bar">
-            <img class="showcase-slide" loading="lazy" decoding="async" src="images/aimito-2.jpg" alt="Vibe search results for &quot;3am on-call despair&quot; - 24 matching on-call designs">
-            <img class="showcase-slide" loading="lazy" decoding="async" src="images/aimito-3.jpg" alt="Swipe the Slop - flicking through the 889-design catalogue one card at a time">
+          <div class="showcase" data-showcase data-interval="5600">
+            <img class="showcase-slide" src="images/airlaser-wire.jpg" alt="Computed voxel image - a cube-plus-sphere wireframe drawn in plasma sparks, front and side projection">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="images/airlaser-localize.jpg" alt="Computed voxel localization - as the two beams cross at a wider angle, the glowing core collapses from a streak into an addressable point">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="images/airlaser-spark.jpg" alt="Computed 2-D radiation-hydrodynamics of the laser-air spark - temperature, emissivity and the blast wave">
           </div>
         </div>
+        <p class="figure-caption">
+          Real output from the simulations - not renders. Left to right: a computed wireframe frame, the crossing-beam localization collapsing to a point, and the 2-D rad-hydro of a single spark.
+        </p>
       </div>
     </div>
   </section>
@@ -331,108 +363,74 @@
     <div class="container">
       <div class="stats-container">
         <div class="stat-block">
-          <div class="stat-value">889</div>
-          <div class="stat-label">Original designs, zero licensing risk</div>
+          <div class="stat-value">~12</div>
+          <div class="stat-label">Open-source simulators, one agent loop</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">10</div>
-          <div class="stat-label">Themed collections, called squads</div>
+          <div class="stat-value">40+</div>
+          <div class="stat-label">Simulations across nine physics regimes</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">0</div>
-          <div class="stat-label">Units of inventory held</div>
+          <div class="stat-value">22</div>
+          <div class="stat-label">DOI-verified references, every number checked</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">&euro;0</div>
-          <div class="stat-label">Outside funding raised</div>
+          <div class="stat-value">3 days</div>
+          <div class="stat-label">For the bulk of the work (66 of 88 commits)</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- The Name -->
+  <!-- The Thesis -->
   <section class="section">
     <div class="container">
-      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 3rem;">
-        <span class="section-label">Start With the Name</span>
-        <h2 class="display-md section-title">Two Jokes in One Word</h2>
-      </div>
-
-      <div class="name-panel">
-        <p class="name-say">
-          The Aimito.<br>
-          Say it out loud: <em>daj mi to.</em>
-        </p>
-        <p class="body-lg text-secondary" style="max-width: 620px; margin: 0 auto;">
-          In English it reads "the AI-mito." In Croatian it's "gimme that" - the exact sound an impulse buy makes. The AI angle and the purchase intent, hiding in the same four syllables. The buy button on every product just says <strong style="color: var(--text-primary);">Gimme that</strong>.
-        </p>
-        <p class="text-muted mt-4" style="font-size: 0.95rem;">
-          The site is English-only. The Croatian is saved as a reveal on the About page, not sprinkled through the UI.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why It Exists -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
-        <span class="section-label">The Motivation</span>
-        <h2 class="display-md section-title">A Tribe With Nothing Good to Wear</h2>
+      <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+        <span class="section-label">Why This Exists</span>
+        <h2 class="display-md section-title">You Can Automate What You Can Verify</h2>
         <p class="section-description" style="max-width: 100%;">
-          Developers are one of the most identity-driven, meme-fluent and well-paid groups on the internet. They already buy clothing to signal who they are - conference tees, company swag, "it's always DNS" mugs. The trigger is humour plus belonging, and it repeats.
+          Coding got automated first because you can run the test - the verifier was already there. So the real question is which other fields are already past that gate. Physics is one of them, and almost nobody had built the harness to exploit it.
         </p>
       </div>
 
       <div class="grid grid-2 gap-4">
         <div class="bento-card">
           <div class="bento-icon">
-            <i class="fas fa-store-slash"></i>
+            <i class="fas fa-key"></i>
           </div>
-          <h3 class="heading-md mb-3">What They're Offered Instead</h3>
-          <ul class="feature-list">
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-minus"></i></span>
-              Enormous unmoderated marketplaces - vast selection, thin quality, trademark landmines, no brand to belong to
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-minus"></i></span>
-              One-joke shops with a dozen shirts and no reason to ever come back
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-minus"></i></span>
-              Company swag stores, which have a world but aren't funny and aren't for sale to the tribe
-            </li>
-          </ul>
-          <p class="bento-text mt-4">
-            Nobody owns the curated lane: original art, a brand world, and a way to find the thing you meant.
+          <h3 class="heading-md mb-3">The Answer Key Was Already Written</h3>
+          <p class="bento-text mb-4">
+            The constants are measured. The cross-sections are tabulated in HITRAN, LXCat and NIST. Most regimes have a closed-form limit you can check a number against. That isn't a benchmark someone still has to build - it's two centuries of physics, sitting in the open, ready to grade an answer.
+          </p>
+          <p class="bento-text">
+            Physics has always had the verifiability. What it lacked was an agent that could call the tools and check its own work against that record.
           </p>
         </div>
 
         <div class="bento-card">
           <div class="bento-icon">
-            <i class="fas fa-clock"></i>
+            <i class="fas fa-wrench"></i>
           </div>
-          <h3 class="heading-md mb-3">Why Now</h3>
+          <h3 class="heading-md mb-3">So We Built the Harness</h3>
           <p class="bento-text mb-4">
-            "AI slop." Vibe coding. The confidently wrong model. An entire comedic seam opened up in the last two years and nobody had mined it properly - which is why two of the ten squads are AI Slop and AI Voices.
+            A dozen open-source physics simulators, each in its own container, each wrapped so a single agent can call all of them. The loop proposes a configuration, runs the container, reads the resulting figure back, checks it against the literature, and decides what to run next.
           </p>
           <p class="bento-text">
-            Every design is original artwork, which turns the marketplaces' structural weakness - takedowns and trademark risk - into a moat instead of a threat.
+            Then we pointed it at one hard, cross-disciplinary question - can you draw a glowing image in mid-air? - to see how far it would get.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- The Engine -->
-  <section class="section">
+  <!-- The Machine -->
+  <section class="section section-dark">
     <div class="container">
       <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 4rem;">
-        <span class="section-label">The Real Product</span>
-        <h2 class="display-md section-title">A Content Engine Wearing a Shop</h2>
+        <span class="section-label">The Machine</span>
+        <h2 class="display-md section-title">An Agent That Runs a Lab</h2>
         <p class="section-description" style="max-width: 100%;">
-          Anyone can put a joke on a shirt. The defensible part is the loop underneath: the marginal cost of a new design is compute, and so is the marginal cost of a new advert. Competitors buy content as a line item. Here it's a build step.
+          The physics is the subject. The deliverable is the method: a verifiable, reproducible agentic system that spans a dozen tools which barely share a vocabulary, let alone a data format. This is the part that transfers to any domain with an answer key.
         </p>
       </div>
 
@@ -440,108 +438,111 @@
         <div class="role-card">
           <div class="role-number">01</div>
           <div class="role-icon">
-            <i class="fas fa-wand-magic-sparkles"></i>
+            <i class="fab fa-docker"></i>
           </div>
-          <h3 class="role-title">Generate</h3>
+          <h3 class="role-title">One Container Per Simulator</h3>
           <p class="role-text">
-            A local generation stack produces artwork in batches - no per-image API bill, no external rights questions, and the freedom to throw most of it away.
+            No scientific dependency ever touches the host. Quantum chemistry in one container, particle-in-cell plasma codes in another, line-by-line radiative transfer in a third, custom radiation-hydrodynamics in a fourth - each with its own pinned toolchain.
           </p>
         </div>
 
         <div class="role-card">
           <div class="role-number">02</div>
           <div class="role-icon">
-            <i class="fas fa-filter"></i>
+            <i class="fas fa-plug"></i>
           </div>
-          <h3 class="role-title">Curate</h3>
+          <h3 class="role-title">One Tool Surface</h3>
           <p class="role-text">
-            A quality and diversity pass prunes hard. Generation is cheap, so the catalogue is defined by what gets cut - the same lesson the game taught us about taste being the scarce input.
+            Each simulator is wrapped as an MCP server, so the same agent calls all of them regardless of the language or runtime inside. A dozen incompatible codes become one uniform set of tools.
           </p>
         </div>
 
         <div class="role-card">
           <div class="role-number">03</div>
           <div class="role-icon">
-            <i class="fas fa-film"></i>
+            <i class="fas fa-diagram-project"></i>
           </div>
-          <h3 class="role-title">Produce</h3>
+          <h3 class="role-title">Five Explicit Roles</h3>
           <p class="role-text">
-            A promo pipeline turns any design into a vertical hero clip starring a recurring caped character, with the deterministic branding pieces composited identically every time.
+            A planner proposes the next configuration, a coder writes the simulator input deck, a runner executes the container, an analyst loads results and plots them, and a critic checks units, convergence and physical plausibility before anything is trusted.
           </p>
         </div>
 
         <div class="role-card">
           <div class="role-number">04</div>
           <div class="role-icon">
-            <i class="fas fa-tower-broadcast"></i>
+            <i class="fas fa-ruler-combined"></i>
           </div>
-          <h3 class="role-title">Distribute</h3>
+          <h3 class="role-title">A Data Contract Across Regimes</h3>
           <p class="role-text">
-            Short-form video and the places the tribe actually lives. A bootstrapped brand can't buy attention, so the plan is built around content that costs compute rather than budget.
+            Every quantity is unit-typed, so an energy can't be silently misread three containers downstream. Results serialize to typed datasets that become the explicit input to the next stage - every cross-regime hand-off auditable rather than assumed.
           </p>
         </div>
 
         <div class="role-card">
           <div class="role-number">05</div>
           <div class="role-icon">
-            <i class="fas fa-cart-shopping"></i>
+            <i class="fas fa-fingerprint"></i>
           </div>
-          <h3 class="role-title">Convert</h3>
+          <h3 class="role-title">Provenance on Every Figure</h3>
           <p class="role-text">
-            Vibe search turns a described feeling into a product page. Print-on-demand fulfilment means no inventory, no upfront capital and worldwide shipping from day one.
+            Every run is tracked and keyed by configuration hash and container pin, so any figure in the 49 pages traces back to the exact parameters and code version that produced it. Reproducible by construction.
           </p>
         </div>
 
         <div class="role-card">
           <div class="role-number">06</div>
           <div class="role-icon">
-            <i class="fas fa-arrow-rotate-left"></i>
+            <i class="fas fa-server"></i>
           </div>
-          <h3 class="role-title">Feed It Back</h3>
+          <h3 class="role-title">No Vendor Lock-In</h3>
           <p class="role-text">
-            Which jokes convert decides what gets generated next. The loop closes, and the catalogue starts learning the audience instead of guessing at it.
+            The main loop runs on Claude Code. The repository also ships a fully local variant - the same planner, tools and analyst driven by a model on the workstation, no API key - to prove the architecture doesn't depend on any one provider.
           </p>
         </div>
+      </div>
+
+      <div class="bento-card mt-5">
+        <h3 class="heading-md mb-3">The Detail That Mattered Most: The Figures Get Read Back</h3>
+        <p class="bento-text">
+          Generated plots aren't treated as finished artifacts - they're inspected as part of analysis. Several discrepancies between what was expected and what the physics actually produced were caught by looking at a light curve and thinking <em>that shape is wrong</em>. The agent writes the input deck, runs the container and reads the plot; the human's job becomes choosing which question is worth asking next, and refusing any answer that hasn't been checked against something real.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Under the Hood -->
-  <section class="section section-dark">
+  <!-- What It Found -->
+  <section class="section">
     <div class="container">
       <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
-        <span class="section-label">Under the Hood</span>
-        <h2 class="display-md section-title">Where the Engineering Went</h2>
+        <span class="section-label">What It Found</span>
+        <h2 class="display-md section-title">The Device the Numbers Describe</h2>
         <p class="section-description" style="max-width: 100%;">
-          The interesting problems weren't "make an image." They were everything that has to be true before a generated picture becomes a garment somebody is happy to receive.
+          Focus a laser hard enough and it rips electrons off the air at the focal point - a microscopic spark, a pixel with a real address in space. Move ten thousand of them sixty times a second and the eye sees a picture. Here is what the physics says about building one.
         </p>
       </div>
 
       <div class="bento-grid">
         <div class="bento-card bento-card-lg">
           <div class="bento-icon">
-            <i class="fas fa-magnifying-glass"></i>
+            <i class="fas fa-crosshairs"></i>
           </div>
-          <h3 class="bento-title">Search That Takes a Feeling</h3>
+          <h3 class="bento-title">Two Beams, Harmless Until They Meet</h3>
           <p class="bento-text">
-            Type "3am on-call despair" or "npm chaos" and get the shirt you meant. The query and the artwork live in one shared embedding space, so text finds images directly - no keyword tagging, no manual taxonomy across 889 designs. Product pages use the same vectors in reverse for visually similar neighbours.
+            A single beam strong enough to ionize air is strong enough to hurt an eye anywhere along its path. So the design crosses two beams, each individually too weak to spark anything - only their intersection lights up. Air breakdown scales as intensity to the eleventh power, so the crossing point ignites about 10<sup>23</sup> times faster than anywhere along either beam. That isn't a preference; it's a switch that pins the glowing dot to one point in space.
           </p>
           <ul class="feature-list mt-4">
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              CLIP embeddings served by a dedicated microservice
+              The beams stay eye-safe along their paths; only the voxel ignites
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              PostgreSQL with pgvector, HNSW-indexed for fast nearest-neighbour
+              A resonant two-colour scheme drops the required intensity ~18&times;
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Trigram fallback, so the search box is never useless
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              The killer feature for gift buyers: "shirt for my programmer boyfriend"
+              The obvious nitrogen channel turns out two-photon-dark - you only learn that by computing it
             </li>
           </ul>
         </div>
@@ -550,127 +551,146 @@
           <div class="bento-icon">
             <i class="fas fa-eye"></i>
           </div>
-          <h3 class="bento-title">A Model That Checks the Art</h3>
+          <h3 class="bento-title">Bright Enough to See</h3>
           <p class="bento-text">
-            A multimodal model running on local hardware reviews designs at publish time - reading back the text, catching botched background removal, and flagging anything not print-worthy. No cloud call, no per-image cost.
-          </p>
-        </div>
-
-        <div class="bento-card bento-card-lg">
-          <div class="bento-icon">
-            <i class="fas fa-shapes"></i>
-          </div>
-          <h3 class="bento-title">Most of It Isn't Prompting</h3>
-          <p class="bento-text">
-            Diffusion models are bad at legible text and precise layout, and a joke shirt is mostly legible text and precise layout. So the recurring formats are built by deterministic generators instead: certification badges with curved ring text, syntax-highlighted code panels, OS error dialogs, captcha grids, nutrition-facts labels, flowcharts, tonal ASCII art. The model supplies illustration; code supplies typography.
-          </p>
-          <ul class="feature-list mt-4">
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Composition and typesetting are a separate, repeatable stage
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Same joke format, infinite variations, consistent every time
-            </li>
-          </ul>
-        </div>
-
-        <div class="bento-card">
-          <div class="bento-icon">
-            <i class="fas fa-ruler"></i>
-          </div>
-          <h3 class="bento-title">A Measured Print Box</h3>
-          <p class="bento-text">
-            The exact printable area of each garment was measured by printing a calibration pattern through the fulfiller's own mockup generator and reading the result back - not estimated.
+            A dark-adapted eye needs about 100 photons at the cornea. The computed voxel delivers around 184 - a conservative margin. And brightness climbs with plasma temperature at almost fixed energy: hotter plasma, not more power, is the cheap knob.
           </p>
         </div>
 
         <div class="bento-card">
           <div class="bento-icon">
-            <i class="fas fa-file-image"></i>
+            <i class="fas fa-tag"></i>
           </div>
-          <h3 class="bento-title">The Audit That Caught 65</h3>
+          <h3 class="bento-title">The Laser Is 3-8&times; Too Expensive</h3>
           <p class="bento-text">
-            A pre-launch sweep of all 889 designs found 65 with no print-resolution file - every one of which would have handed the printer a dead link on a real order. All 65 were regenerated and upscaled before anyone could buy them.
+            A prototype priced from real vendor catalogues comes to ~$378,000, more than half of it one femtosecond laser. But the physics only needs ~50&nbsp;nJ per flash at sub-watt average power - a compact fibre source at $15k-$60k, not an industrial amplifier.
           </p>
         </div>
 
         <div class="bento-card">
           <div class="bento-icon">
-            <i class="fas fa-camera"></i>
+            <i class="fas fa-diagram-successor"></i>
           </div>
-          <h3 class="bento-title">No Mockup Slop</h3>
+          <h3 class="bento-title">The Wavelengths Fell Out of the Chemistry</h3>
           <p class="bento-text">
-            Every product photo is the real garment with the real print, not a glossy fake. It's the brand's trust promise: what you see is what ships.
+            Tuning the two colours onto real quantum energy levels in oxygen and nitrogen is what buys the 18&times; efficiency. The recipe wasn't guessed - it came out of the quantum-chemistry calculation, dark channels and all.
           </p>
         </div>
 
         <div class="bento-card">
           <div class="bento-icon">
-            <i class="fas fa-palette"></i>
+            <i class="fas fa-hand-sparkles"></i>
           </div>
-          <h3 class="bento-title">Which Shirts It Works On</h3>
+          <h3 class="bento-title">Safe to Touch, Within Air Limits</h3>
           <p class="bento-text">
-            Pale artwork disappears on a cream tee. Rules decide the garment colours each design is offered on, and a colour-adaptation step retunes two-tone text so it survives the switch.
+            The image is lit-up air - you can pass your hand through it. The ozone and nitrogen oxides a spark produces stay well inside health limits with modest ventilation. The delivery beams are still Class-4 and need boxing - a known engineering job.
           </p>
         </div>
-      </div>
 
-      <div class="hero-image-showcase">
-        <div class="hero-image-showcase-inner">
-          <img src="images/aimito-designs.jpg" alt="A grid of Aimito designs - certification badges, captcha grids, error dialogs, mascot stickers and nutrition-facts labels">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-vector-square"></i>
+          </div>
+          <h3 class="bento-title">A Wireframe, Not a Solid</h3>
+          <p class="bento-text">
+            At ~10<sup>4</sup> voxels the display draws line-and-point art - cubes, text, outlines - and the bottleneck is the scanner, not the voxel. A solid volume would need a hundred times the addressing rate. The sparse look is a consequence of the physics, not a style choice.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Status / What it proves -->
-  <section class="section">
+  <!-- The Retraction -->
+  <section class="section section-dark">
     <div class="container">
-      <div class="grid grid-2 gap-4" style="align-items: center;">
-        <div>
-          <span class="section-label">Where It Stands</span>
-          <h2 class="display-md section-title mb-4">Built, Stocked, Running</h2>
-          <p class="body-lg text-secondary mb-4">
-            The storefront is live, the catalogue is full, and the purchase path - checkout, tax, fulfilment, confirmation email - is wired end to end against real providers.
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">The Result We Threw Away</span>
+        <h2 class="display-md section-title">The Part That Matters Most</h2>
+        <p class="section-description" style="max-width: 100%;">
+          At one point a radiation-hydrodynamics run reproduced a real air-spark's light curve beautifully - exactly the figure you build a section around. It was wrong.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-bug"></i>
+          </div>
+          <h3 class="heading-md mb-3">The Match Was an Artifact of a Bug</h3>
+          <p class="bento-text mb-4">
+            The solver wasn't conserving energy. Rebuilt properly, a spurious amplification factor collapsed from 1407&times; to 1.4&times;, and the beautiful agreement collapsed with it. The real glow had to be reassigned to entirely different physics.
           </p>
-          <p class="text-secondary">
-            What's left is the part no pipeline can automate: distribution. Getting the first hundred people to find it, wear it, and tell someone. That's the honest state of it, and it's the phase the whole engine was built to make survivable on a bootstrapped budget.
+          <p class="bento-text">
+            The conclusion was withdrawn rather than defended. It sits in the paper described as what it was.
           </p>
         </div>
 
         <div class="bento-card">
-          <h3 class="heading-md mb-3">Built On</h3>
+          <div class="bento-icon">
+            <i class="fas fa-ban"></i>
+          </div>
+          <h3 class="heading-md mb-3">A Dead End, Published on Purpose</h3>
+          <p class="bento-text mb-4">
+            There's a tempting shortcut - skip the plasma, use cheap laser pointers, let dust scatter the light into a point. It was computed, and it cannot work: scattering is linear, so the beam glows along its whole path instead of at a point.
+          </p>
+          <p class="bento-text">
+            That failure is informative - it's exactly why the nonlinear plasma approach is the right one. Better to publish the dead end than quietly omit it.
+          </p>
+        </div>
+      </div>
+
+      <p class="pullquote">
+        A simulation campaign that never retracts anything isn't careful - <em>it's unfalsifiable.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- Why It's Here -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2 gap-4" style="align-items: center;">
+        <div>
+          <span class="section-label">Why It's in Our Portfolio</span>
+          <h2 class="display-md section-title mb-4">The Method Is the Product</h2>
+          <p class="body-lg text-secondary mb-4">
+            The whole point isn't the hologram. It's that a Tech Lead who is not a plasma physicist built a system that produced a rigorous, cross-checked physics study - because the verifier carried the domain knowledge, not the builder.
+          </p>
+          <p class="text-secondary">
+            That's the same discipline we bring to client work: generation is cheap, so the leverage lives in the scaffolding around it - the data contract, the provenance, the vendor independence, and a verifier that measures the thing you actually care about. Across everything we build, the moat is the verifier, not the generator. This is that thesis proven in the hardest possible place.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <h3 class="heading-md mb-3">What Transfers to Your Domain</h3>
           <ul class="feature-list">
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Next.js 16 and React 19 storefront, Tailwind
+              A repeatable agent loop over many tools, not a one-off prompt
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              FastAPI, SQLAlchemy 2.0, background worker on Redis
+              A verifier gate, so the system checks its own work before you trust it
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              PostgreSQL 16 with pgvector, S3-compatible object storage
+              Full provenance - every output traces to its exact inputs and code
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Stripe Checkout with EU VAT handling, print-on-demand fulfilment
+              Vendor-independent by design, with a local fallback
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Every service containerized, deployed behind a reverse proxy
+              The honesty to retract what doesn't survive the check
             </li>
           </ul>
         </div>
       </div>
 
       <div class="bento-card mt-4">
-        <h3 class="heading-md mb-3">Why This Is in Our Portfolio</h3>
+        <h3 class="heading-md mb-3">Open, and Checkable</h3>
         <p class="bento-text">
-          The Aimito is the commercial version of a thesis we keep testing: when generation gets cheap, the advantage moves to whoever built the machinery around it - the curation pass, the deterministic composition, the automated quality check, the loop that feeds sales data back into what gets made next. A brand that manufactures its own catalogue and its own marketing is just the clearest way to demonstrate that. The same engine works for anyone whose growth is throttled by how much content they can afford to produce.
+          The full manuscript, the LaTeX source, the simulation station and every container definition are public - code under the MIT license, paper and figures under CC&nbsp;BY&nbsp;4.0. Every quantitative result is cross-checked against published literature or an analytic limit, with its uncertainty stated inline. Where a closed form exists, the computed number is checked against it: a nitrogen polarizability within 1.7% of reference, a breakdown field that recovers the textbook value, a maser threshold matched to machine precision. You don't have to take any of it on trust.
         </p>
       </div>
     </div>
@@ -680,14 +700,14 @@
   <section class="section" style="padding-top: 0;">
     <div class="container">
       <div class="cta-section">
-        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Content as a Build Step</h2>
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Have a Field With an Answer Key?</h2>
         <p class="body-lg text-secondary mb-5" style="max-width: 640px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
-          If your growth is limited by how much content you can afford to make, that's a pipeline problem, not a budget problem. Go look at the store first - then let's talk about yours.
+          If your domain has measurements to check against - a simulator, a spec, a ground truth - it can be put behind a verifying agent loop. That's what we build. Read the study first, then let's talk about yours.
         </p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
-          <a href="https://theaimito.com" target="_blank" rel="noopener" class="btn btn-primary">
-            <i class="fas fa-shirt"></i>
-            Visit The Aimito
+          <a href="https://github.com/LumiVerseHR/air-laser-physics" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fab fa-github"></i>
+            Explore the Repository
           </a>
           <a href="index.html#contact" class="btn btn-secondary">
             Start a Project
@@ -729,10 +749,7 @@
             <li><a href="barcoder.html" class="footer-link">Barcoder</a></li>
             <li><a href="rentalica.html" class="footer-link">Rentalica</a></li>
             <li><a href="overserved.html" class="footer-link">Overserved</a></li>
-            <li><a href="tvrtko.html" class="footer-link">Tvrtko.ai</a></li>
-            <li><a href="bridj.html" class="footer-link">Bridj.ai</a></li>
-            <li><a href="pitaj-lider.html" class="footer-link">Pitaj Lider</a></li>
-            <li><a href="lider-pdf-archive.html" class="footer-link">Lider Archive</a></li>
+            <li><a href="index.html#research" class="footer-link">Research</a></li>
           </ul>
         </div>
 

@@ -37,6 +37,12 @@ Case studies, listed in the order they appear in the homepage **Work** section:
 | `pitaj-lider.html` | Business intelligence assistant |
 | `lider-pdf-archive.html` | Magazine archive digitization |
 
+Research (its own homepage band + nav item, kept distinct from the Work grid):
+
+| File | Purpose |
+|------|---------|
+| `air-laser.html` | Design study for an air-plasma aerial display, computed by an AI-agentic simulation station - the studio's own R&D |
+
 | Other | Purpose |
 |------|---------|
 | `404.html` | Error page |

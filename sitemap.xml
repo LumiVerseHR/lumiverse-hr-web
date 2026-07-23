@@ -19,6 +19,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Research -->
+  <url>
+    <loc>https://lumiverse.hr/air-laser.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Case studies, in homepage order -->
   <url>
     <loc>https://lumiverse.hr/bridj.html</loc>
