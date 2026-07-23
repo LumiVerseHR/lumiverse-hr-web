@@ -12,8 +12,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bridj.ai - AI Marketing Intelligence Platform | LumiVerse</title>
-  <meta name="description" content="Tech Lead consulting for a UK AI marketing intelligence startup. From architecture to deployment - turning real sales conversations into actionable marketing campaigns.">
+  <title>Bridj.ai - Embedded Tech Lead for a B2B Intelligence Platform | LumiVerse</title>
+  <meta name="description" content="A year as embedded tech lead for Bridj, a UK conversational-and-operational-intelligence platform. Architecture, a 17-service system, an AI agent layer, multi-cloud infra, and release sign-off - by LumiVerse.">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -23,7 +23,7 @@
 
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
 
   <style>
     .case-study-hero {
@@ -92,6 +92,14 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
 
+    .figure-caption {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+
     .stats-section {
       padding: 4rem 0;
       border-top: 1px solid var(--glass-border);
@@ -155,6 +163,14 @@
       opacity: 1;
     }
 
+    .role-number {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent-tertiary);
+      margin-bottom: 1rem;
+    }
+
     .role-icon {
       width: 64px;
       height: 64px;
@@ -192,6 +208,78 @@
       background: linear-gradient(90deg, transparent, var(--accent-tertiary), transparent);
     }
 
+    /* Architecture flow — the pipeline LumiVerse built */
+    .arch-flow {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 3rem;
+      counter-reset: arch;
+    }
+
+    .arch-stage {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      position: relative;
+    }
+
+    .arch-stage-num {
+      font-family: 'SFMono-Regular', Menlo, Consolas, monospace;
+      font-size: 0.8rem;
+      color: var(--accent-tertiary);
+      margin-bottom: 0.6rem;
+    }
+
+    .arch-stage-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .arch-stage-text {
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      line-height: 1.6;
+    }
+
+    .arch-stage-tools {
+      margin-top: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .arch-chip {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--accent-tertiary);
+      background: rgba(77, 255, 255, 0.08);
+      border: 1px solid rgba(77, 255, 255, 0.18);
+      border-radius: 100px;
+      padding: 0.2rem 0.6rem;
+    }
+
+    .stack-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 3rem;
+      justify-content: center;
+    }
+
+    .stack-pill {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 100px;
+      padding: 0.5rem 1rem;
+    }
+
     .cta-section {
       background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
       border-radius: 24px;
@@ -216,18 +304,24 @@
       .stats-container {
         grid-template-columns: repeat(2, 1fr);
       }
+      .arch-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 640px) {
       .stats-container {
         grid-template-columns: 1fr;
       }
-
+      .arch-flow {
+        grid-template-columns: 1fr;
+      }
       .cta-section {
         padding: 2.5rem 1.5rem;
       }
     }
   </style>
+  <script src="showcase.js" defer></script>
 </head>
 <body>
 
@@ -274,16 +368,16 @@
 
       <div class="case-study-tag">
         <i class="fas fa-user-tie"></i>
-        Tech Lead Consulting
+        Tech Lead Consulting &middot; Embedded, Ongoing
       </div>
 
       <h1 class="display-lg mb-4">Bridj.ai</h1>
-      <p class="body-lg text-secondary" style="max-width: 700px;">
-        Building an AI marketing intelligence platform from the ground up. Tech leadership for a UK startup turning real sales conversations into campaigns that convert.
+      <p class="body-lg text-secondary" style="max-width: 740px;">
+        A year and counting as embedded tech lead for a UK conversational-and-operational-intelligence platform - the layer that connects what customers actually say to what a business does next. Architecture, hands-on engineering across a 17-service system, and the final sign-off on every release.
       </p>
 
       <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
-        <a href="https://bridj.ai" target="_blank" class="btn btn-primary" style="background: var(--accent-tertiary); color: var(--bg-primary);">
+        <a href="https://bridj.ai" target="_blank" rel="noopener" class="btn btn-primary" style="background: var(--accent-tertiary); color: var(--bg-primary);">
           <i class="fas fa-external-link-alt"></i>
           Visit Bridj.ai
         </a>
@@ -294,8 +388,15 @@
 
       <div class="hero-image-showcase">
         <div class="hero-image-showcase-inner">
-          <img src="images/bridj-ai-growth.png" alt="Bridj.ai marketing intelligence platform dashboard showing campaign insights and sales conversation analysis">
+          <div class="showcase" data-showcase data-interval="5400">
+            <img class="showcase-slide" src="images/bridj-dashboard.jpg" alt="The Bridj platform home dashboard - live insights, emerging risks and opportunities, and the themes shaping the pipeline">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="images/bridj-hero.jpg" alt="Bridj marketing site - 'I can't shake the feeling we've missed something'">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="images/bridj-intel.jpg" alt="Bridj positioning - the intelligence layer connecting what's said in conversations to what the business does next">
+          </div>
         </div>
+        <p class="figure-caption">
+          Bridj's own product and public site. Dashboard shown with demo data.
+        </p>
       </div>
     </div>
   </section>
@@ -305,185 +406,288 @@
     <div class="container">
       <div class="stats-container">
         <div class="stat-block">
-          <div class="stat-value">UK</div>
-          <div class="stat-label">Startup</div>
+          <div class="stat-value">1 yr+</div>
+          <div class="stat-label">Embedded as tech lead, still going</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">Full</div>
-          <div class="stat-label">Tech Lead</div>
+          <div class="stat-value">17</div>
+          <div class="stat-label">Services across the platform</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">Sales</div>
-          <div class="stat-label">to Marketing AI</div>
+          <div class="stat-value">7</div>
+          <div class="stat-label">Data-source integrations</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">Prod</div>
-          <div class="stat-label">Production Ready</div>
+          <div class="stat-value">4</div>
+          <div class="stat-label">Production AI agents</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Role Section -->
+  <!-- What Bridj Does -->
   <section class="section">
     <div class="container">
-      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
-        <span class="section-label">Our Role</span>
-        <h2 class="display-md section-title">What We Did</h2>
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">The Product</span>
+        <h2 class="display-md section-title">An Intelligence Layer for the Whole Business</h2>
         <p class="section-description" style="max-width: 100%;">
-          Full technical leadership from day one. Architecture decisions, team mentoring, and hands-on development.
+          Every company generates thousands of conversations, calls and customer interactions. Bridj connects to the tools where those live and turns them into a single source of truth - surfacing the trends, opportunities, risks and issues that would otherwise slip through the cracks, for marketing, sales, product and leadership alike.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3 class="bento-title">Insights, Not Transcripts</h3>
+          <p class="bento-text">
+            Raw conversation data becomes tagged themes, emerging risks and opportunities, and the topics shaping the pipeline - refreshed on a schedule, not dug out by hand.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3 class="bento-title">Ask Bridj</h3>
+          <p class="bento-text">
+            A conversational AI layer that answers questions over an organisation's own insights and data, drafts content from what's resonating, and writes executive briefings - in natural language.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-pen-nib"></i>
+          </div>
+          <h3 class="bento-title">Content That Lands</h3>
+          <p class="bento-text">
+            Campaign and content generation grounded in what customers actually said - built from real conversations rather than guesswork, and refined interactively.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Architecture -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+        <span class="section-label">The Architecture</span>
+        <h2 class="display-md section-title">What We Built Underneath</h2>
+        <p class="section-description" style="max-width: 100%;">
+          The product is one screen. Behind it is a pipeline that carries messy, multi-source conversation data all the way to answers - designed, built and owned as tech lead, stage by stage.
+        </p>
+      </div>
+
+      <div class="arch-flow">
+        <div class="arch-stage">
+          <div class="arch-stage-num">01 &middot; ingest</div>
+          <h3 class="arch-stage-title">Connect &amp; Sync</h3>
+          <p class="arch-stage-text">
+            OAuth connectors pull data from seven external systems - major CRMs, meeting recorders and revenue-intelligence tools - on a schedule, into cloud storage. Stateless and independently scalable, so a slow sync never touches the app.
+          </p>
+          <div class="arch-stage-tools">
+            <span class="arch-chip">OAuth</span>
+            <span class="arch-chip">7 sources</span>
+            <span class="arch-chip">GCS</span>
+          </div>
+        </div>
+
+        <div class="arch-stage">
+          <div class="arch-stage-num">02 &middot; refine</div>
+          <h3 class="arch-stage-title">Validate, Load &amp; Clean</h3>
+          <p class="arch-stage-text">
+            A three-stage pipeline validates every incoming file, quarantines the failures, loads the good data to a raw store, then cleans it into a normalized shape - so downstream AI never sees malformed input.
+          </p>
+          <div class="arch-stage-tools">
+            <span class="arch-chip">Event-driven</span>
+            <span class="arch-chip">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="arch-stage">
+          <div class="arch-stage-num">03 &middot; embed</div>
+          <h3 class="arch-stage-title">Summarize &amp; Vectorize</h3>
+          <p class="arch-stage-text">
+            Transcripts are summarized and embedded into a vector store, isolated per organisation. This is the substrate that makes semantic search and retrieval possible.
+          </p>
+          <div class="arch-stage-tools">
+            <span class="arch-chip">Embeddings</span>
+            <span class="arch-chip">pgvector</span>
+            <span class="arch-chip">Multi-tenant</span>
+          </div>
+        </div>
+
+        <div class="arch-stage">
+          <div class="arch-stage-num">04 &middot; reason</div>
+          <h3 class="arch-stage-title">Insight Engine</h3>
+          <p class="arch-stage-text">
+            A batch pipeline runs retrieval-augmented generation and clustering to turn the vectorized data into the insights, themes and signals that appear on the dashboard, persisted to an analytics database.
+          </p>
+          <div class="arch-stage-tools">
+            <span class="arch-chip">RAG</span>
+            <span class="arch-chip">Clustering</span>
+          </div>
+        </div>
+
+        <div class="arch-stage">
+          <div class="arch-stage-num">05 &middot; converse</div>
+          <h3 class="arch-stage-title">Agent Layer</h3>
+          <p class="arch-stage-text">
+            Four purpose-built AI agents - insight Q&amp;A, content generation, data analysis and executive briefings - stream answers to the app, and an MCP server exposes the same tools to external AI clients. Every query scoped to one organisation.
+          </p>
+          <div class="arch-stage-tools">
+            <span class="arch-chip">Agno</span>
+            <span class="arch-chip">MCP</span>
+            <span class="arch-chip">SSE streaming</span>
+          </div>
+        </div>
+
+        <div class="arch-stage">
+          <div class="arch-stage-num">06 &middot; deliver</div>
+          <h3 class="arch-stage-title">Multi-Tenant App</h3>
+          <p class="arch-stage-text">
+            The web application: organisation-level data isolation, a five-role permissions model, subscription billing, and a modern React front end - the surface everything else feeds.
+          </p>
+          <div class="arch-stage-tools">
+            <span class="arch-chip">FastAPI</span>
+            <span class="arch-chip">Next.js</span>
+            <span class="arch-chip">Stripe</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack-line">
+        <span class="stack-pill">Next.js 15 &amp; React 19</span>
+        <span class="stack-pill">FastAPI &amp; SQLAlchemy 2.0</span>
+        <span class="stack-pill">PostgreSQL &amp; pgvector</span>
+        <span class="stack-pill">Agno agents &amp; MCP</span>
+        <span class="stack-pill">Terraform</span>
+        <span class="stack-pill">Hetzner &amp; GCP</span>
+        <span class="stack-pill">Stripe billing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Tech Lead Role -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">The Role</span>
+        <h2 class="display-md section-title">More Than Hands on a Keyboard</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Embedded tech lead isn't a title on a slide - it's the person the release can't ship without. Three jobs at once: architect, builder, and the technical gate before production.
         </p>
       </div>
 
       <div class="grid grid-3 gap-4">
         <div class="role-card">
+          <div class="role-number">01</div>
           <div class="role-icon">
             <i class="fas fa-drafting-compass"></i>
           </div>
-          <h3 class="role-title">Architecture & Tech Decisions</h3>
-          <p class="role-text mb-4">
-            System design from scratch. Technology selection, scalability planning, and infrastructure decisions that set the foundation for growth.
+          <h3 class="role-title">Architect</h3>
+          <p class="role-text">
+            System design from first principles: the service boundaries, the data contracts between them, the choice to split ingestion, batch AI and interactive AI into separate scalable pieces. Decisions that still hold a year of growth later.
           </p>
-          <ul class="feature-list">
-            <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Microservices architecture design
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Technology stack selection
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Scalability & performance planning
-            </li>
-          </ul>
         </div>
 
         <div class="role-card">
-          <div class="role-icon">
-            <i class="fas fa-users"></i>
-          </div>
-          <h3 class="role-title">Team Leadership</h3>
-          <p class="role-text mb-4">
-            Code reviews, mentoring junior developers, sprint planning, and setting technical direction. Building the team alongside the product.
-          </p>
-          <ul class="feature-list">
-            <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Code reviews & quality standards
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Developer mentoring
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Sprint planning & delivery
-            </li>
-          </ul>
-        </div>
-
-        <div class="role-card">
+          <div class="role-number">02</div>
           <div class="role-icon">
             <i class="fas fa-code"></i>
           </div>
-          <h3 class="role-title">Hands-on Development</h3>
-          <p class="role-text mb-4">
-            Not just strategy - hands on the keyboard. Core AI/ML pipeline, backend architecture, API design, and third-party integrations.
+          <h3 class="role-title">Builder</h3>
+          <p class="role-text">
+            Hands on the keyboard across the whole stack - AI pipeline, backend, infrastructure, front end - and the reviewer who sets the quality bar for everyone else's. Plus the un-glamorous wins, like consolidating three drifting data repos into one clean ingestion monorepo.
           </p>
-          <ul class="feature-list">
-            <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Core AI/ML pipeline development
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Backend architecture & API design
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Third-party integrations
-            </li>
-          </ul>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">03</div>
+          <div class="role-icon">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h3 class="role-title">Release Authority</h3>
+          <p class="role-text">
+            Formal technical sign-off: nothing reaches production without it. Dependency and risk analysis across a release, migration and rollout planning, and the final go / no-go call - the safety valve between "done" and "deployed".
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- What We Built Section -->
+  <!-- Engineering Maturity -->
   <section class="section section-dark">
     <div class="container">
-      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
-        <span class="section-label">The Product</span>
-        <h2 class="display-md section-title">What We Built</h2>
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">How It's Run</span>
+        <h2 class="display-md section-title">Built Like It's Meant to Last</h2>
         <p class="section-description" style="max-width: 100%;">
-          An AI platform that turns raw sales conversations into marketing gold.
+          A one-person prototype and a platform a team can safely ship to every week are different things. This is the second one.
         </p>
       </div>
 
       <div class="bento-grid">
-        <div class="bento-card bento-card-cyan">
-          <div class="bento-icon">
-            <i class="fas fa-headset"></i>
-          </div>
-          <h3 class="bento-title">Conversation Intelligence</h3>
-          <p class="bento-text">
-            Ingesting real sales calls and extracting themes, pain points, objections, and buying signals. Unstructured audio becomes structured market intelligence.
-          </p>
-        </div>
-
-        <div class="bento-card bento-card-cyan">
-          <div class="bento-icon">
-            <i class="fas fa-bullhorn"></i>
-          </div>
-          <h3 class="bento-title">Campaign Engine</h3>
-          <p class="bento-text">
-            Turning conversation insights into actionable marketing campaigns. The AI identifies messaging that resonates and suggests campaigns based on real customer language.
-          </p>
-        </div>
-
-        <div class="bento-card bento-card-cyan">
-          <div class="bento-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h3 class="bento-title">Real-time Analytics</h3>
-          <p class="bento-text">
-            Dashboard showing conversation trends, emerging opportunities, competitive mentions, and risk signals. Updated as new conversations are processed.
-          </p>
-        </div>
-
         <div class="bento-card bento-card-lg bento-card-cyan">
           <div class="bento-icon">
-            <i class="fas fa-project-diagram"></i>
+            <i class="fas fa-cloud"></i>
           </div>
-          <h3 class="bento-title">Data Pipeline</h3>
+          <h3 class="bento-title">Infrastructure as Code, Multi-Cloud</h3>
           <p class="bento-text">
-            End-to-end processing of unstructured conversation data into structured, actionable insights. From raw audio to tagged themes, sentiment analysis, and campaign recommendations - all automated.
+            The whole estate is defined in Terraform across production and a parity sandbox, spanning two cloud providers, with disaster recovery in its own region. Environments are reproducible, not hand-tended - and a new one is a config change, not a weekend.
           </p>
           <ul class="feature-list mt-4">
             <li class="feature-list-item">
               <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Audio transcription & speaker diarization
+              Production + sandbox parity from the same modules
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Theme extraction & sentiment analysis
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
-              Automated campaign generation
+              Cross-region disaster recovery
             </li>
           </ul>
         </div>
 
         <div class="bento-card bento-card-cyan">
           <div class="bento-icon">
-            <i class="fas fa-plug"></i>
+            <i class="fas fa-vials"></i>
           </div>
-          <h3 class="bento-title">Integration Layer</h3>
+          <h3 class="bento-title">Tested End to End</h3>
           <p class="bento-text">
-            Connecting existing sales and marketing tools. CRM sync, marketing platform integrations, and webhook-based automation for seamless workflow.
+            A dedicated Playwright suite exercises the real user journeys against both sandbox and production, so regressions are caught before a release reaches the sign-off gate.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-arrows-rotate"></i>
+          </div>
+          <h3 class="bento-title">CI/CD &amp; Shared Workflows</h3>
+          <p class="bento-text">
+            Automated build, test and deploy across every repo, with a shared library of reusable pipeline steps so seventeen services stay consistent instead of each reinventing its own.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <h3 class="bento-title">Multi-Tenant by Construction</h3>
+          <p class="bento-text">
+            Organisation isolation runs through every layer - storage, embeddings, agents, app - with role-based access control, so one customer's data can never surface in another's.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+          <h3 class="bento-title">A Real Process</h3>
+          <p class="bento-text">
+            Definition of Done, a QA stage, and release management with formal technical sign-off - lightweight governance that lets a team move fast without breaking production.
           </p>
         </div>
       </div>
@@ -495,11 +699,11 @@
     <div class="container">
       <div class="cta-section">
         <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Need Technical Leadership for Your AI Product?</h2>
-        <p class="body-lg text-secondary mb-5" style="max-width: 600px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
-          We embed as your tech lead. Architecture, team building, hands-on development - whatever your startup needs to ship.
+        <p class="body-lg text-secondary mb-5" style="max-width: 620px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          We embed as your tech lead: architecture, hands-on engineering across the whole stack, and the judgement to say when a release is actually ready. From first commit to production, and the year after.
         </p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
-          <a href="https://calendly.com/tihomirjauk/30min" target="_blank" class="btn btn-primary" style="background: var(--accent-tertiary); color: var(--bg-primary);">
+          <a href="https://calendly.com/tihomirjauk/30min" target="_blank" rel="noopener" class="btn btn-primary" style="background: var(--accent-tertiary); color: var(--bg-primary);">
             <i class="fas fa-calendar-alt"></i>
             Schedule a Call
           </a>
