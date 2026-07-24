@@ -1228,3 +1228,58 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .showcase-slide { transition: opacity 0.01s linear; }
 }
+
+/* ==========================================================================
+   Mobile refinements (phones ≤ 640px)
+   Tighter spacing/padding, and full-bleed hero images on case-study/detail
+   pages. Selectors are body-scoped or descendant-scoped so they beat the
+   per-page <style> blocks on specificity; the one !important beats inline
+   section-header margins. Desktop layout is untouched.
+   ========================================================================== */
+@media (max-width: 640px) {
+  /* Tighter global rhythm */
+  .container { padding-left: 1.15rem; padding-right: 1.15rem; }
+  .section { padding-top: 3.25rem; padding-bottom: 3.25rem; }
+  .section-header { margin-bottom: 2.25rem !important; }
+
+  /* Less bulky card interiors */
+  .bento-card,
+  .project-content { padding: 1.5rem; }
+  body .role-card { padding: 1.5rem; }
+  body .pipeline-step,
+  body .arch-stage { padding: 1.35rem; }
+
+  /* Per-page section bands */
+  body .stats-section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  body .cta-section { padding: 2.25rem 1.25rem; }
+
+  /* Case-study hero image: full-bleed, edge to edge.
+     Covers all three hero-image structures across the pages. */
+  .case-study-hero .hero-image-showcase,
+  .case-study-hero .image-showcase {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: 2.5rem;
+  }
+  .case-study-hero .hero-image-showcase-inner,
+  .case-study-hero .image-showcase-inner {
+    padding: 0;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    background: transparent;
+  }
+  .case-study-hero .hero-image-showcase img,
+  .case-study-hero .hero-image-showcase-inner img,
+  .case-study-hero .showcase,
+  .case-study-hero .image-showcase-inner img {
+    border-radius: 0;
+  }
+  /* Keep caption text off the screen edges once the image bleeds out */
+  .figure-caption,
+  .image-caption {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+}
