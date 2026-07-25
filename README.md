@@ -136,6 +136,16 @@ Two layout gotchas worth knowing:
 Hosted on **Vercel** with GitHub integration. Pushing to `main` deploys automatically —
 there is no separate deploy step or script.
 
+## SEO notes
+
+- Every page carries a `<link rel="canonical">` on the **www** host (the canonical
+  host — `lumiverse.hr` 308-redirects to `www.lumiverse.hr`). `404.html` is `noindex`
+  instead. `sitemap.xml` and `robots.txt` use the same www host.
+- **IndexNow** (fast re-crawl for Bing/Yandex/Seznam): the public key file
+  `<key>.txt` lives at the site root, and `scripts/indexnow.py` submits the sitemap's
+  page URLs. After a deploy that adds/changes pages, run `python3 scripts/indexnow.py`
+  (the key file must be live first). The key is public by design — not a secret.
+
 ## Contact
 
 - **Company:** LumiVerse d.o.o., Markuševečka cesta 20C, 10000 Zagreb, Croatia
