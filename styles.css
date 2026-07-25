@@ -1283,3 +1283,28 @@ body {
     padding-right: 1.15rem;
   }
 }
+
+/* ==========================================================================
+   Titlomat "Our Product" section — animated speech-waveform background.
+   A background metaphor for the speech-to-text the product does: an incoming
+   speech waveform scrolls into a processing "read head" and resolves into
+   caption-text lines. Behaviour in titlomat-wave.js; Canvas 2D, fades in,
+   pauses offscreen, and respects prefers-reduced-motion. No JS -> the section
+   renders exactly as before (empty transparent canvas).
+   ========================================================================== */
+#about { overflow: hidden; }
+
+.titlomat-wave {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.titlomat-wave.wave-active { opacity: 1; }
+
+#about .container { position: relative; z-index: 1; }
