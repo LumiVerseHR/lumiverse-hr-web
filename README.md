@@ -34,6 +34,7 @@ Case studies, listed in the order they appear in the homepage **Work** section:
 | `rentalica.html` | A decade-old PHP rent-a-car system rebuilt as a multi-tenant SaaS |
 | `overserved.html` | A tower-defense game, as a test of how far AI-assisted development goes |
 | `tvrtko.html` | Croatian business intelligence platform |
+| `country-guides.html` | Multi-tenant travel-guide platform — four branded country sites from one codebase, AI-written content |
 | `pitaj-lider.html` | Business intelligence assistant |
 | `lider-pdf-archive.html` | Magazine archive digitization |
 
