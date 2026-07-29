@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Internal reference page: not for indexing, not linked from the site -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>LumiVerse Brand Book — Visual System & Asset Kit</title>
+  <meta name="description" content="Internal brand book for LumiVerse: logo, colour, type, components, and ready-to-export templates for every social format.">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+
+  <style>
+    :root { --bg-yellow: #FFD54D; }
+
+    body { background: var(--bg-primary); }
+
+    /* ---- page frame ---- */
+    .bb-top {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(5,5,8,0.8); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .bb-top .brand { display: flex; align-items: center; gap: 0.7rem; font-weight: 700; font-size: 1.15rem; }
+    .bb-top .brand svg { width: 28px; height: 28px; }
+    .bb-jump { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+    .bb-jump a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color .2s; }
+    .bb-jump a:hover { color: var(--accent); }
+    .bb-back { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
+    .bb-back:hover { color: var(--text-secondary); }
+
+    .bb-wrap { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+
+    .bb-hero { padding: 5rem 0 3rem; }
+    .bb-hero .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.8rem; }
+    .bb-hero h1 { font-size: clamp(2.6rem, 7vw, 5rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.02; margin: 0.6rem 0 1.2rem; }
+    .bb-hero p { color: var(--text-secondary); max-width: 640px; font-size: 1.1rem; line-height: 1.6; }
+    .bb-note { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.6rem; padding: 0.5rem 1rem; border: 1px solid var(--glass-border); border-radius: 100px; color: var(--text-muted); font-size: 0.82rem; }
+
+    section.bb { padding: 3.5rem 0; border-top: 1px solid var(--glass-border); }
+    .bb-h { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .bb-h .num { color: var(--accent); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.1em; }
+    .bb-h h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; letter-spacing: -0.02em; }
+    .bb-h p { color: var(--text-secondary); font-size: 0.95rem; margin-left: auto; max-width: 420px; }
+    .bb-sub { color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.72rem; font-weight: 700; margin: 2rem 0 1rem; }
+
+    .card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 16px; }
+    .grid { display: grid; gap: 1.25rem; }
+
+    /* ---- reusable branded canvas (the look every asset shares) ---- */
+    .canvas {
+      position: relative; width: 100%; height: 100%; overflow: hidden;
+      background:
+        radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 1.5px) 0 0 / 22px 22px,
+        radial-gradient(ellipse 70% 95% at 84% 12%, rgba(255,77,77,0.38), transparent 60%),
+        radial-gradient(ellipse 60% 85% at 72% 96%, rgba(255,143,77,0.22), transparent 55%),
+        radial-gradient(ellipse 50% 60% at 20% 60%, rgba(77,255,255,0.10), transparent 60%),
+        var(--bg-primary);
+      display: flex; align-items: center;
+    }
+    .canvas.center { justify-content: center; text-align: center; }
+    .canvas.light {
+      background:
+        radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 1.5px) 0 0 / 22px 22px,
+        radial-gradient(ellipse 70% 95% at 84% 12%, rgba(255,77,77,0.18), transparent 60%),
+        radial-gradient(ellipse 60% 85% at 72% 96%, rgba(255,143,77,0.14), transparent 55%),
+        #f4f4f6;
+    }
+
+    /* logo lockup, sized by the canvas font-size (set per format) */
+    .lockup { display: flex; flex-direction: column; gap: 0.5em; padding: 0 1.5em; }
+    .canvas.center .lockup { align-items: center; padding: 1em; }
+    .lockup-row { display: flex; align-items: center; gap: 0.5em; }
+    .canvas.center .lockup-row { justify-content: center; }
+    .orb { width: 1.4em; height: 1.4em; flex: none; }
+    .wm { font-size: 1.7em; font-weight: 700; letter-spacing: -0.02em; color: #FAFAFA; line-height: 1; }
+    .canvas.light .wm { color: #0c0c10; }
+    .tag { font-size: 0.62em; letter-spacing: 0.01em; color: rgba(250,250,250,0.72); line-height: 1.3; }
+    .canvas.light .tag { color: rgba(12,12,16,0.7); }
+    .tag .accent { color: var(--accent-secondary); }
+
+    /* grid lockup: orb on the wordmark line, tagline aligned to the wordmark's left edge */
+    .logolock { display: inline-grid; grid-template-columns: auto auto; column-gap: 0.5em; row-gap: 0.32em; align-items: center; justify-items: start; }
+    .logolock .orb { grid-column: 1; grid-row: 1; }
+    .logolock .wm { grid-column: 2; grid-row: 1; }
+    .logolock .tag { grid-column: 2; grid-row: 2; }
+
+    /* format preview frame — keeps true aspect ratio, caption below */
+    .fmt { }
+    .fmt-frame {
+      container-type: size;
+      width: 100%; border-radius: 12px; overflow: hidden;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    }
+    .fmt-cap { display: flex; align-items: baseline; gap: 0.8rem; margin-top: 0.7rem; }
+    .fmt-cap .name { font-weight: 600; font-size: 0.92rem; }
+    .fmt-cap .dim { color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+    .fmt-cap .dl, .fmt-cap .dl-group { margin-left: auto; }
+
+    /* download links */
+    .dl { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.72rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding: 0.26rem 0.6rem; border: 1px solid var(--glass-border); border-radius: 6px; transition: all .2s; white-space: nowrap; }
+    .dl { background: transparent; }
+    .dl:hover { color: var(--accent); border-color: rgba(255,77,77,0.35); background: rgba(255,77,77,0.05); }
+    button.dl { cursor: pointer; font-family: inherit; }
+    .dl.copied { color: #4ddb8f; border-color: rgba(77,219,143,0.45); background: rgba(77,219,143,0.08); }
+    .dl i { font-size: 0.68rem; }
+    .dl-group { display: inline-flex; gap: 0.4rem; }
+    .dl-bar { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; padding: 1.3rem 1.5rem; margin-bottom: 2.2rem; border: 1px solid rgba(255,77,77,0.22); background: rgba(255,77,77,0.05); border-radius: 14px; }
+    .dl-bar .txt { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.5; }
+    .dl-bar .txt b { color: var(--text-primary); }
+    .dl-all { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.5rem; border-radius: 10px; background: var(--accent); color: var(--bg-primary); font-weight: 700; text-decoration: none; font-size: 0.95rem; transition: transform .2s, box-shadow .2s; white-space: nowrap; }
+    .dl-all:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(255,77,77,0.3); }
+    .fmt-hint { color: var(--text-secondary); font-size: 0.82rem; margin-top: 0.35rem; line-height: 1.5; }
+
+    /* safe-area overlay (for platform crops) */
+    .safe { position: absolute; border: 1px dashed rgba(255,255,255,0.45); border-radius: 4px; pointer-events: none; }
+    .safe::after {
+      content: attr(data-label); position: absolute; top: 0.4em; left: 0.6em;
+      font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(255,255,255,0.7); background: rgba(0,0,0,0.4); padding: 2px 6px; border-radius: 4px; white-space: nowrap;
+    }
+    .circle-safe { position: absolute; inset: 0; margin: auto; border-radius: 50%; border: 1px dashed rgba(255,255,255,0.5); }
+
+    /* ---- colour swatches ---- */
+    .swatches { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+    .sw { border-radius: 14px; overflow: hidden; border: 1px solid var(--glass-border); }
+    .sw .chip { height: 96px; }
+    .sw .meta { padding: 0.85rem 1rem; }
+    .sw .meta .n { font-weight: 600; font-size: 0.9rem; }
+    .sw .meta .h { color: var(--text-secondary); font-size: 0.8rem; font-family: 'SFMono-Regular', Menlo, monospace; margin-top: 0.2rem; }
+    .sw .meta .r { color: var(--text-muted); font-size: 0.72rem; font-family: 'SFMono-Regular', Menlo, monospace; }
+
+    /* ---- gradients / texture tiles ---- */
+    .tiles { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .tile { border-radius: 14px; overflow: hidden; border: 1px solid var(--glass-border); }
+    .tile .fill { height: 120px; }
+    .tile .lbl { padding: 0.7rem 0.9rem; font-size: 0.8rem; color: var(--text-secondary); }
+    .tile .lbl b { color: var(--text-primary); font-weight: 600; display: block; margin-bottom: 0.15rem; font-size: 0.85rem; }
+
+    /* ---- type scale ---- */
+    .type-row { padding: 1.1rem 0; border-bottom: 1px solid var(--glass-border); display: flex; align-items: baseline; gap: 1.5rem; flex-wrap: wrap; }
+    .type-row:last-child { border-bottom: none; }
+    .type-row .meta { width: 150px; flex: none; color: var(--text-muted); font-size: 0.75rem; font-family: 'SFMono-Regular', Menlo, monospace; }
+    .type-row .sample { color: var(--text-primary); }
+
+    /* ---- components kitchen sink ---- */
+    .ks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); align-items: start; }
+    .ks .card { padding: 1.6rem; }
+    .ks-label { color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.68rem; font-weight: 700; margin-bottom: 1rem; }
+    .pill { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.9rem; border-radius: 100px; font-size: 0.8rem; font-weight: 600; }
+    .pill.coral { background: rgba(255,77,77,0.1); border: 1px solid rgba(255,77,77,0.2); color: var(--accent); }
+    .pill.cyan { background: rgba(77,255,255,0.08); border: 1px solid rgba(77,255,255,0.2); color: var(--accent-tertiary); }
+    .pill.glass { background: var(--glass); border: 1px solid var(--glass-border); color: var(--text-secondary); }
+    .ico { width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: var(--accent); background: linear-gradient(135deg, rgba(255,77,77,0.15), rgba(255,143,77,0.1)); }
+
+    /* ---- voice do/don't ---- */
+    .voice { grid-template-columns: 1fr 1fr; }
+    .voice .card { padding: 1.6rem; }
+    .voice h4 { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; font-size: 1rem; }
+    .voice .do h4 { color: #4ddb8f; }
+    .voice .dont h4 { color: var(--accent); }
+    .voice ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .voice li { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; padding-left: 1.4rem; position: relative; }
+    .voice .do li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: #4ddb8f; position: absolute; left: 0; font-size: 0.75rem; top: 0.15rem; }
+    .voice .dont li::before { content: '\f00d'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--accent); position: absolute; left: 0; font-size: 0.8rem; top: 0.1rem; }
+    .badwords { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+    .badwords span { text-decoration: line-through; color: var(--text-muted); font-size: 0.82rem; padding: 0.2rem 0.6rem; border: 1px solid var(--glass-border); border-radius: 6px; }
+
+    /* ---- specs table ---- */
+    .specs { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    .specs th, .specs td { text-align: left; padding: 0.8rem 1rem; border-bottom: 1px solid var(--glass-border); }
+    .specs th { color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    .specs td { color: var(--text-secondary); }
+    .specs td:first-child { color: var(--text-primary); font-weight: 600; }
+    .specs td .px { font-family: 'SFMono-Regular', Menlo, monospace; color: var(--accent-secondary); }
+    .specs-wrap { overflow-x: auto; border: 1px solid var(--glass-border); border-radius: 14px; }
+
+    .misuse { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+    .misuse .m { border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); }
+    .misuse .box { height: 90px; display: flex; align-items: center; justify-content: center; background: var(--bg-tertiary); }
+    .misuse .cap { padding: 0.6rem 0.8rem; font-size: 0.76rem; color: var(--text-secondary); display: flex; align-items: center; gap: 0.4rem; }
+    .misuse .cap i { color: var(--accent); }
+
+    .bb-foot { padding: 3rem 0 4rem; border-top: 1px solid var(--glass-border); color: var(--text-muted); font-size: 0.85rem; }
+
+    @media (max-width: 720px) {
+      .bb-jump { display: none; }
+      .voice { grid-template-columns: 1fr; }
+      .bb-h p { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- reusable SVG marks -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="lvg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#FF4D4D"/>
+        <stop offset="0.55" stop-color="#FF8F4D"/>
+        <stop offset="1" stop-color="#FFD54D"/>
+      </linearGradient>
+    </defs>
+    <!-- app-icon: dark rounded tile + ring + orb (the favicon) -->
+    <symbol id="lv-mark" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="14" fill="#050508"/>
+      <circle cx="32" cy="32" r="21" fill="none" stroke="#FF4D4D" stroke-opacity="0.3" stroke-width="2"/>
+      <circle cx="32" cy="32" r="14" fill="url(#lvg)"/>
+    </symbol>
+    <!-- orb only: floats on any background -->
+    <symbol id="lv-orb" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="21" fill="none" stroke="#FF4D4D" stroke-opacity="0.4" stroke-width="2.5"/>
+      <circle cx="32" cy="32" r="14" fill="url(#lvg)"/>
+    </symbol>
+  </svg>
+
+  <!-- top bar -->
+  <div class="bb-top">
+    <div class="brand"><svg viewBox="0 0 64 64"><use href="#lv-mark"/></svg> LumiVerse <span style="color:var(--text-muted);font-weight:500">Brand Book</span></div>
+    <nav class="bb-jump">
+      <a href="#foundations">Foundations</a>
+      <a href="#logo">Logo</a>
+      <a href="#colour">Colour</a>
+      <a href="#type">Type</a>
+      <a href="#texture">Texture</a>
+      <a href="#components">Components</a>
+      <a href="#social">Social Kit</a>
+      <a href="#specs">Specs</a>
+    </nav>
+    <a class="bb-back" href="index.html">&larr; lumiverse.hr</a>
+  </div>
+
+  <div class="bb-wrap">
+
+    <!-- hero -->
+    <header class="bb-hero">
+      <div class="eyebrow">LumiVerse d.o.o. — Visual Identity</div>
+      <h1>Brand Book &amp;<br>Asset Kit</h1>
+      <p>One place for the LumiVerse visual system — logo, colour, type and components — plus ready-to-export templates for every social format, so everything we publish looks like it came from the same studio.</p>
+      <div class="bb-note"><i class="fas fa-lock" style="color:var(--accent)"></i> Internal reference — not indexed, not linked from the public site.</div>
+    </header>
+
+    <!-- 01 Foundations -->
+    <section class="bb" id="foundations">
+      <div class="bb-h"><span class="num">01</span><h2>Foundations</h2><p>Who we are and how we sound, in one screen.</p></div>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(240px,1fr));">
+        <div class="card" style="padding:1.6rem">
+          <div class="ks-label">Studio</div>
+          <div style="font-size:1.25rem;font-weight:700">LumiVerse</div>
+          <div style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.3rem">AI Product Studio · Zagreb, Croatia</div>
+        </div>
+        <div class="card" style="padding:1.6rem">
+          <div class="ks-label">Tagline</div>
+          <div style="font-size:1.25rem;font-weight:700">We Build Better Humans</div>
+          <div style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.3rem">Supporting: “AI tools that make humans unstoppable.”</div>
+        </div>
+        <div class="card" style="padding:1.6rem">
+          <div class="ks-label">Promise</div>
+          <div style="font-size:1.05rem;font-weight:600;line-height:1.4">Better tools. Better focus. Better output. Still human.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 Logo -->
+    <section class="bb" id="logo">
+      <div class="bb-h"><span class="num">02</span><h2>Logo</h2><p>The wordmark for headers, the orb for marks and avatars.</p></div>
+
+      <div class="grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="fmt">
+          <div class="fmt-frame" style="aspect-ratio: 16/9">
+            <div class="canvas center"><div class="logolock" style="font-size:9cqmin"><svg class="orb" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span class="wm">LumiVerse</span><span class="tag">We build better humans</span></div></div>
+          </div>
+          <div class="fmt-cap"><span class="name">Primary lockup — on dark</span><a class="dl" href="assets/brand/lumiverse-logo-dark-1600x500.png" download><i class="fas fa-download"></i> PNG</a></div>
+          <div class="fmt-hint">Default. The orb sits left of the wordmark. Wordmark is Inter 700, letter-spacing −0.02em.</div>
+        </div>
+        <div class="fmt">
+          <div class="fmt-frame" style="aspect-ratio: 16/9">
+            <div class="canvas light center"><div class="logolock" style="font-size:9cqmin"><svg class="orb" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span class="wm">LumiVerse</span><span class="tag">We build better humans</span></div></div>
+          </div>
+          <div class="fmt-cap"><span class="name">Primary lockup — on light</span><a class="dl" href="assets/brand/lumiverse-logo-light-1600x500.png" download><i class="fas fa-download"></i> PNG</a></div>
+          <div class="fmt-hint">Wordmark switches to near-black (#0c0c10); the orb keeps its coral→yellow gradient.</div>
+        </div>
+      </div>
+
+      <div class="bb-sub">Mark &amp; app icon</div>
+      <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(150px,1fr));">
+        <div class="fmt"><div class="fmt-frame" style="aspect-ratio:1/1"><div class="canvas center"><svg style="width:52%;height:52%" viewBox="0 0 64 64"><use href="#lv-orb"/></svg></div></div><div class="fmt-cap"><span class="name">Orb</span><span class="dl-group"><a class="dl" href="assets/brand/lumiverse-orb.svg" download><i class="fas fa-download"></i> SVG</a><a class="dl" href="assets/brand/lumiverse-orb-1024.png" download><i class="fas fa-download"></i> PNG</a></span></div></div>
+        <div class="fmt"><div class="fmt-frame" style="aspect-ratio:1/1;border:none"><svg style="width:100%;height:100%;display:block" viewBox="0 0 64 64"><use href="#lv-mark"/></svg></div><div class="fmt-cap"><span class="name">App icon / favicon</span><span class="dl-group"><a class="dl" href="assets/brand/lumiverse-mark.svg" download><i class="fas fa-download"></i> SVG</a><a class="dl" href="assets/brand/lumiverse-app-icon-512.png" download><i class="fas fa-download"></i> PNG</a></span></div></div>
+        <div class="fmt"><div class="fmt-frame" style="aspect-ratio:1/1"><div class="canvas center"><div class="lockup" style="font-size:16cqmin"><div class="lockup-row" style="flex-direction:column;gap:0.4em"><svg class="orb" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span class="wm" style="font-size:1.15em">LumiVerse</span></div></div></div></div><div class="fmt-cap"><span class="name">Stacked</span></div></div>
+      </div>
+
+      <div class="bb-sub">Monochrome — documents, invoices &amp; print</div>
+      <div class="grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="fmt">
+          <div class="fmt-frame" style="aspect-ratio: 1600/500; background:#ffffff; display:flex; align-items:center; justify-content:center;">
+            <img src="assets/brand/lumiverse-logo-black-1600x500.png" alt="LumiVerse logo in solid black" style="width:82%; display:block;">
+          </div>
+          <div class="fmt-cap"><span class="name">Black lockup</span><a class="dl" href="assets/brand/lumiverse-logo-black-1600x500.png" download><i class="fas fa-download"></i> PNG</a></div>
+          <div class="fmt-hint">Single-colour black on light backgrounds — invoices, letterheads, contracts, quotes, any document.</div>
+        </div>
+        <div class="fmt">
+          <div class="fmt-frame" style="aspect-ratio: 1600/500; background:#0c0c10; display:flex; align-items:center; justify-content:center;">
+            <img src="assets/brand/lumiverse-logo-white-1600x500.png" alt="LumiVerse logo reversed in white" style="width:82%; display:block;">
+          </div>
+          <div class="fmt-cap"><span class="name">White lockup (reversed)</span><a class="dl" href="assets/brand/lumiverse-logo-white-1600x500.png" download><i class="fas fa-download"></i> PNG</a></div>
+          <div class="fmt-hint">Reversed, for dark letterheads, slide decks, and printing on dark stock.</div>
+        </div>
+      </div>
+      <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); margin-top:1.25rem;">
+        <div class="fmt"><div class="fmt-frame" style="aspect-ratio:1/1; background:#fff; display:flex; align-items:center; justify-content:center;"><img src="assets/brand/lumiverse-orb-black-1024.png" alt="black orb mark" style="width:52%; display:block;"></div><div class="fmt-cap"><span class="name">Black mark</span><span class="dl-group"><a class="dl" href="assets/brand/lumiverse-orb-black.svg" download><i class="fas fa-download"></i> SVG</a><a class="dl" href="assets/brand/lumiverse-orb-black-1024.png" download><i class="fas fa-download"></i> PNG</a></span></div></div>
+        <div class="fmt"><div class="fmt-frame" style="aspect-ratio:1/1; background:#0c0c10; display:flex; align-items:center; justify-content:center;"><img src="assets/brand/lumiverse-orb-white-1024.png" alt="white orb mark" style="width:52%; display:block;"></div><div class="fmt-cap"><span class="name">White mark</span><span class="dl-group"><a class="dl" href="assets/brand/lumiverse-orb-white.svg" download><i class="fas fa-download"></i> SVG</a><a class="dl" href="assets/brand/lumiverse-orb-white-1024.png" download><i class="fas fa-download"></i> PNG</a></span></div></div>
+      </div>
+
+      <div class="bb-sub">Clear space &amp; misuse</div>
+      <div class="grid misuse">
+        <div class="m"><div class="box"><svg style="height:34px;transform:scaleX(1.6)" viewBox="0 0 64 64"><use href="#lv-orb"/></svg></div><div class="cap"><i class="fas fa-xmark"></i> Don’t stretch</div></div>
+        <div class="m"><div class="box"><svg style="height:34px;filter:grayscale(1)" viewBox="0 0 64 64"><use href="#lv-orb"/></svg></div><div class="cap"><i class="fas fa-xmark"></i> Don’t desaturate</div></div>
+        <div class="m"><div class="box" style="background:#2a6df4"><svg style="height:34px" viewBox="0 0 64 64"><use href="#lv-orb"/></svg></div><div class="cap"><i class="fas fa-xmark"></i> Don’t recolour bg</div></div>
+        <div class="m"><div class="box"><svg style="height:34px;filter:drop-shadow(0 0 10px #FF4D4D)" viewBox="0 0 64 64"><use href="#lv-orb"/></svg></div><div class="cap"><i class="fas fa-xmark"></i> Don’t add glow</div></div>
+        <div class="m"><div class="box" style="gap:6px"><svg style="height:26px" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span style="font-weight:700;font-size:0.8rem">Give it room</span></div><div class="cap"><i class="fas fa-check" style="color:#4ddb8f"></i> Min clear space = orb height</div></div>
+      </div>
+    </section>
+
+    <!-- 03 Colour -->
+    <section class="bb" id="colour">
+      <div class="bb-h"><span class="num">03</span><h2>Colour</h2><p>Dark canvas, one coral→yellow gradient, cyan only for accent variety.</p></div>
+
+      <div class="bb-sub">Backgrounds</div>
+      <div class="grid swatches">
+        <div class="sw"><div class="chip" style="background:#050508"></div><div class="meta"><div class="n">BG Primary</div><div class="h">#050508</div><div class="r">rgb(5, 5, 8)</div></div></div>
+        <div class="sw"><div class="chip" style="background:#0c0c10"></div><div class="meta"><div class="n">BG Secondary</div><div class="h">#0C0C10</div><div class="r">rgb(12, 12, 16)</div></div></div>
+        <div class="sw"><div class="chip" style="background:#111116"></div><div class="meta"><div class="n">BG Tertiary</div><div class="h">#111116</div><div class="r">rgb(17, 17, 22)</div></div></div>
+      </div>
+
+      <div class="bb-sub">Accent</div>
+      <div class="grid swatches">
+        <div class="sw"><div class="chip" style="background:#FF4D4D"></div><div class="meta"><div class="n">Coral <span style="color:var(--text-muted);font-weight:400">· primary</span></div><div class="h">#FF4D4D</div><div class="r">rgb(255, 77, 77)</div></div></div>
+        <div class="sw"><div class="chip" style="background:#FF8F4D"></div><div class="meta"><div class="n">Orange <span style="color:var(--text-muted);font-weight:400">· mid</span></div><div class="h">#FF8F4D</div><div class="r">rgb(255, 143, 77)</div></div></div>
+        <div class="sw"><div class="chip" style="background:#FFD54D"></div><div class="meta"><div class="n">Yellow <span style="color:var(--text-muted);font-weight:400">· highlight</span></div><div class="h">#FFD54D</div><div class="r">rgb(255, 213, 77)</div></div></div>
+        <div class="sw"><div class="chip" style="background:#4DFFFF"></div><div class="meta"><div class="n">Cyan <span style="color:var(--text-muted);font-weight:400">· variety</span></div><div class="h">#4DFFFF</div><div class="r">rgb(77, 255, 255)</div></div></div>
+      </div>
+
+      <div class="bb-sub">Text</div>
+      <div class="grid swatches">
+        <div class="sw"><div class="chip" style="background:#FAFAFA"></div><div class="meta"><div class="n">Text Primary</div><div class="h">#FAFAFA</div><div class="r">rgb(250, 250, 250)</div></div></div>
+        <div class="sw"><div class="chip" style="background:#888888"></div><div class="meta"><div class="n">Text Secondary</div><div class="h">#888888</div><div class="r">rgb(136, 136, 136)</div></div></div>
+        <div class="sw"><div class="chip" style="background:#555555"></div><div class="meta"><div class="n">Text Muted</div><div class="h">#555555</div><div class="r">rgb(85, 85, 85)</div></div></div>
+      </div>
+    </section>
+
+    <!-- 04 Type -->
+    <section class="bb" id="type">
+      <div class="bb-h"><span class="num">04</span><h2>Typography</h2><p>Inter, everywhere. Tight tracking on display, normal on body.</p></div>
+      <div class="card" style="padding:1.5rem 1.8rem">
+        <div class="type-row"><div class="meta">Display XL · 800<br>clamp 3.5–10rem</div><div class="sample" style="font-size:3.2rem;font-weight:800;letter-spacing:-0.04em;line-height:1">We Build Better Humans</div></div>
+        <div class="type-row"><div class="meta">Display LG · 700<br>clamp 2.5–6rem</div><div class="sample" style="font-size:2.4rem;font-weight:700;letter-spacing:-0.03em">Page &amp; case-study titles</div></div>
+        <div class="type-row"><div class="meta">Display MD · 700<br>clamp 2–4rem</div><div class="sample" style="font-size:1.8rem;font-weight:700;letter-spacing:-0.02em">Section titles</div></div>
+        <div class="type-row"><div class="meta">Heading · 600</div><div class="sample" style="font-size:1.3rem;font-weight:600">Card &amp; subsection headings</div></div>
+        <div class="type-row"><div class="meta">Body · 400</div><div class="sample" style="font-size:1rem;color:var(--text-secondary);max-width:520px">Body copy is Inter 400 in Text Secondary. Active voice, concrete numbers, no hype — the sentences stay short and do one job each.</div></div>
+        <div class="type-row"><div class="meta">Label · 600<br>uppercase · 0.12em</div><div class="sample" style="font-size:0.8rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent)">Section Label</div></div>
+        <div class="type-row"><div class="meta">Mono · accents</div><div class="sample" style="font-family:'SFMono-Regular',Menlo,monospace;font-size:0.95rem;color:var(--text-secondary)">Code · data · SQL snippets</div></div>
+      </div>
+    </section>
+
+    <!-- 05 Texture -->
+    <section class="bb" id="texture">
+      <div class="bb-h"><span class="num">05</span><h2>Gradients &amp; Texture</h2><p>The building blocks every asset backdrop is made of.</p></div>
+      <div class="grid tiles">
+        <div class="tile"><div class="fill" style="background:linear-gradient(135deg,#FF4D4D 0%,#FF8F4D 50%,#FFD54D 100%)"></div><div class="lbl"><b>Accent gradient</b>135° · coral → orange → yellow</div></div>
+        <div class="tile"><div class="fill" style="background:linear-gradient(135deg,#4DFFFF 0%,#4D9FFF 100%)"></div><div class="lbl"><b>Cool gradient</b>135° · cyan → blue (variety only)</div></div>
+        <div class="tile"><div class="fill" style="background:radial-gradient(ellipse 80% 80% at 80% 20%,rgba(255,77,77,0.35),transparent),radial-gradient(ellipse 60% 60% at 60% 80%,rgba(255,143,77,0.22),transparent),radial-gradient(ellipse 50% 50% at 30% 50%,rgba(77,255,255,0.12),transparent),#050508"></div><div class="lbl"><b>Mesh glow</b>Hero / banner backdrop</div></div>
+        <div class="tile"><div class="fill" style="background:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.08) 1px,transparent 1.5px) 0 0/16px 16px,#050508"></div><div class="lbl"><b>Dot grid</b>Subtle texture over dark</div></div>
+        <div class="tile"><div class="fill" style="background:rgba(255,255,255,0.03);border-bottom:1px solid rgba(255,255,255,0.08)"></div><div class="lbl"><b>Glass</b>rgba(255,255,255,.03) + .08 border</div></div>
+        <div class="tile"><div class="fill" style="background:var(--bg-primary);position:relative;overflow:hidden"><div style="position:absolute;inset:0;background:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.05) 1px,transparent 1.5px) 0 0/22px 22px,radial-gradient(ellipse 70% 95% at 84% 12%,rgba(255,77,77,0.38),transparent 60%),radial-gradient(ellipse 60% 85% at 72% 96%,rgba(255,143,77,0.22),transparent 55%)"></div></div><div class="lbl"><b>Signature canvas</b>Dot grid + mesh — used for all assets below</div></div>
+      </div>
+    </section>
+
+    <!-- 06 Components -->
+    <section class="bb" id="components">
+      <div class="bb-h"><span class="num">06</span><h2>Components</h2><p>The recurring UI parts, at a glance.</p></div>
+      <div class="grid ks">
+        <div class="card">
+          <div class="ks-label">Buttons</div>
+          <div style="display:flex;flex-direction:column;gap:0.8rem;align-items:flex-start">
+            <span class="btn btn-primary" style="cursor:default">Primary CTA</span>
+            <span class="btn btn-secondary" style="cursor:default">Secondary</span>
+            <span style="color:var(--accent);font-weight:600;font-size:0.9rem">Ghost link&nbsp;<i class="fas fa-arrow-right" style="font-size:0.75rem"></i></span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ks-label">Pills &amp; tags</div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
+            <span class="pill coral"><i class="fas fa-circle" style="font-size:0.5rem"></i> Coral tag</span>
+            <span class="pill cyan">Cyan tag</span>
+            <span class="pill glass">Feature</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ks-label">Icon container</div>
+          <div style="display:flex;gap:0.8rem">
+            <div class="ico"><i class="fas fa-bolt"></i></div>
+            <div class="ico"><i class="fas fa-layer-group"></i></div>
+            <div class="ico"><i class="fas fa-wand-magic-sparkles"></i></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ks-label">Stat block</div>
+          <div style="font-size:2.6rem;font-weight:800;line-height:1;background:linear-gradient(135deg,#FF4D4D,#FF8F4D 50%,#FFD54D);-webkit-background-clip:text;background-clip:text;color:transparent">200K+</div>
+          <div style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem">Gradient numeral + label</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 Social kit -->
+    <section class="bb" id="social">
+      <div class="bb-h"><span class="num">07</span><h2>Social &amp; Format Kit</h2><p>Every template at true proportions. Download any one, or grab the whole kit.</p></div>
+
+      <div class="dl-bar">
+        <a class="dl-all" href="assets/brand/lumiverse-brand-assets.zip" download><i class="fas fa-download"></i> Download all assets (.zip)</a>
+        <span class="txt"><b>23 files · 2.7 MB</b> — every social template as a true-size PNG, the colour and monochrome (black / white) logo lockups, and the orb and app-icon marks (PNG + SVG). Each item below also downloads on its own.</span>
+      </div>
+
+      <div class="bb-sub">Profile avatar — one design, every platform</div>
+      <div class="grid" style="grid-template-columns: 220px 1fr; align-items:center; gap:2rem;">
+        <div class="fmt" style="max-width:220px">
+          <div class="fmt-frame" style="aspect-ratio:1/1">
+            <div class="canvas center">
+              <svg style="width:46%;height:46%" viewBox="0 0 64 64"><use href="#lv-orb"/></svg>
+              <div class="circle-safe"></div>
+            </div>
+          </div>
+          <div class="fmt-cap"><span class="name">Avatar</span><span class="dim">800×800</span><a class="dl" href="assets/brand/lumiverse-avatar-800.png" download><i class="fas fa-download"></i> PNG</a></div>
+        </div>
+        <div class="fmt-hint" style="margin:0">
+          One square avatar covers LinkedIn (300×300), YouTube (800×800), X (400×400), Facebook (170×170) and Instagram (320×320). Export the master at <b style="color:var(--text-primary)">800×800</b> and let each platform downscale. The dashed circle is the crop most platforms apply — keep the orb inside it. On very small sizes use the orb alone (no wordmark).
+        </div>
+      </div>
+
+      <div class="bb-sub">LinkedIn</div>
+      <div class="grid" style="gap:2rem">
+        <div class="fmt">
+          <div class="fmt-frame" style="aspect-ratio: 1128/191">
+            <div class="canvas" style="padding-left:4%"><div class="logolock" style="font-size:20cqmin"><svg class="orb" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span class="wm">LumiVerse</span><span class="tag"><span class="accent">We build better humans</span></span></div></div>
+          </div>
+          <div class="fmt-cap"><span class="name">Company page cover</span><span class="dim">1128 × 191</span><a class="dl" href="assets/brand/lumiverse-linkedin-company-cover-1128x191.png" download><i class="fas fa-download"></i> PNG</a></div>
+          <div class="fmt-hint">The logo avatar overlaps the lower-left of this banner on desktop — keep the left ~200px clear of anything important.</div>
+        </div>
+        <div class="fmt">
+          <div class="fmt-frame" style="aspect-ratio: 1584/396">
+            <div class="canvas" style="padding-left:4%"><div class="logolock" style="font-size:15cqmin"><svg class="orb" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span class="wm">LumiVerse</span><span class="tag">AI tools that make humans unstoppable · Zagreb</span></div></div>
+          </div>
+          <div class="fmt-cap"><span class="name">Personal profile banner</span><span class="dim">1584 × 396</span><a class="dl" href="assets/brand/lumiverse-linkedin-banner-1584x396.png" download><i class="fas fa-download"></i> PNG</a></div>
+          <div class="fmt-hint">The profile photo covers the lower-left corner — keep that area clear.</div>
+        </div>
+      </div>
+
+      <div class="bb-sub">Facebook</div>
+      <div class="fmt">
+        <div class="fmt-frame" style="aspect-ratio: 820/312">
+          <div class="canvas" style="padding-left:11%"><div class="logolock" style="font-size:13cqmin"><svg class="orb" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span class="wm">LumiVerse</span><span class="tag">We build better humans</span></div>
+            <div class="safe" data-label="mobile-safe 640×312" style="inset:0 90px"></div>
+          </div>
+        </div>
+        <div class="fmt-cap"><span class="name">Page cover</span><span class="dim">820 × 312</span><a class="dl" href="assets/brand/lumiverse-facebook-cover-820x312.png" download><i class="fas fa-download"></i> PNG</a></div>
+        <div class="fmt-hint">Desktop shows the full 820×312; mobile crops the sides to ~640 wide. Keep the lockup inside the dashed safe area.</div>
+      </div>
+
+      <div class="bb-sub">YouTube</div>
+      <div class="fmt">
+        <div class="fmt-frame" style="aspect-ratio: 2560/1440">
+          <div class="canvas center"><div class="logolock" style="font-size:5cqmin"><svg class="orb" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span class="wm">LumiVerse</span><span class="tag">We build better humans</span></div>
+            <div class="safe" data-label="TV / all-device safe 1546×423" style="width:60.4%;height:29.4%;top:35.3%;left:19.8%"></div>
+          </div>
+        </div>
+        <div class="fmt-cap"><span class="name">Channel banner</span><span class="dim">2560 × 1440</span><a class="dl" href="assets/brand/lumiverse-youtube-banner-2560x1440.png" download><i class="fas fa-download"></i> PNG</a></div>
+        <div class="fmt-hint">Upload the full 2560×1440, but keep the logo and text inside the centre <b>1546×423</b> safe box — that’s all that shows on phones and TVs. The rest is only seen on wide desktop.</div>
+      </div>
+
+      <div class="bb-sub">X / Twitter</div>
+      <div class="fmt">
+        <div class="fmt-frame" style="aspect-ratio: 1500/500">
+          <div class="canvas" style="padding-left:4%"><div class="logolock" style="font-size:14cqmin"><svg class="orb" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span class="wm">LumiVerse</span><span class="tag">We build better humans</span></div></div>
+        </div>
+        <div class="fmt-cap"><span class="name">Header</span><span class="dim">1500 × 500</span><a class="dl" href="assets/brand/lumiverse-x-header-1500x500.png" download><i class="fas fa-download"></i> PNG</a></div>
+        <div class="fmt-hint">The avatar covers the lower-left; keep it clear.</div>
+      </div>
+
+      <div class="bb-sub">Instagram</div>
+      <div class="grid" style="grid-template-columns: 1fr 1fr; gap:2rem; align-items:start;">
+        <div class="fmt">
+          <div class="fmt-frame" style="aspect-ratio: 1/1">
+            <div class="canvas center"><div class="logolock" style="font-size:9cqmin"><svg class="orb" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span class="wm">LumiVerse</span><span class="tag">We build better humans</span></div></div>
+          </div>
+          <div class="fmt-cap"><span class="name">Feed post</span><span class="dim">1080 × 1080</span><a class="dl" href="assets/brand/lumiverse-instagram-post-1080x1080.png" download><i class="fas fa-download"></i> PNG</a></div>
+        </div>
+        <div class="fmt" style="max-width:320px">
+          <div class="fmt-frame" style="aspect-ratio: 9/16">
+            <div class="canvas center"><div class="lockup" style="font-size:8cqmin"><div class="lockup-row" style="flex-direction:column;gap:0.5em"><svg class="orb" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span class="wm">LumiVerse</span></div><span class="tag" style="text-align:center">We build better humans</span></div>
+              <div class="safe" data-label="content safe" style="inset:14% 6%"></div>
+            </div>
+          </div>
+          <div class="fmt-cap"><span class="name">Story / Reel</span><span class="dim">1080 × 1920</span><a class="dl" href="assets/brand/lumiverse-instagram-story-1080x1920.png" download><i class="fas fa-download"></i> PNG</a></div>
+        </div>
+      </div>
+
+      <div class="bb-sub">Link preview &amp; web banners</div>
+      <div class="grid" style="gap:2rem">
+        <div class="fmt">
+          <div class="fmt-frame" style="aspect-ratio: 1200/630">
+            <div class="canvas" style="padding-left:5%"><div class="logolock" style="font-size:11cqmin"><svg class="orb" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span class="wm">LumiVerse</span><span class="tag"><span class="accent">We build better humans</span></span></div></div>
+          </div>
+          <div class="fmt-cap"><span class="name">Open Graph / link share</span><span class="dim">1200 × 630</span><a class="dl" href="assets/brand/lumiverse-og-default-1200x630.png" download><i class="fas fa-download"></i> PNG</a></div>
+          <div class="fmt-hint">Already generated per page in <code style="color:var(--accent-secondary)">/images/og/</code>. This is the default studio card for anything without its own image.</div>
+        </div>
+        <div class="grid" style="grid-template-columns: 1fr 300px; gap:2rem; align-items:start;">
+          <div class="fmt">
+            <div class="fmt-frame" style="aspect-ratio: 728/90">
+              <div class="canvas"><div class="lockup" style="font-size:34cqmin;padding:0 1em"><div class="lockup-row"><svg class="orb" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span class="wm">LumiVerse</span><span class="tag" style="margin-left:0.8em">We build better humans</span></div></div></div>
+            </div>
+            <div class="fmt-cap"><span class="name">Leaderboard banner</span><span class="dim">728 × 90</span><a class="dl" href="assets/brand/lumiverse-leaderboard-728x90.png" download><i class="fas fa-download"></i> PNG</a></div>
+          </div>
+          <div class="fmt">
+            <div class="fmt-frame" style="aspect-ratio: 300/250">
+              <div class="canvas center"><div class="lockup" style="font-size:12cqmin"><div class="lockup-row" style="flex-direction:column;gap:0.4em"><svg class="orb" viewBox="0 0 64 64"><use href="#lv-orb"/></svg><span class="wm">LumiVerse</span></div><span class="tag" style="text-align:center">We build better humans</span></div></div>
+            </div>
+            <div class="fmt-cap"><span class="name">Medium rectangle</span><span class="dim">300 × 250</span><a class="dl" href="assets/brand/lumiverse-medium-rectangle-300x250.png" download><i class="fas fa-download"></i> PNG</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 Specs -->
+    <section class="bb" id="specs">
+      <div class="bb-h"><span class="num">08</span><h2>Export Specs</h2><p>Copy-ready dimensions for every asset.</p></div>
+      <div class="specs-wrap">
+        <table class="specs">
+          <thead><tr><th>Asset</th><th>Dimensions</th><th>Ratio</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Profile avatar (master)</td><td class="px">800 × 800</td><td>1:1</td><td>Downscales for LinkedIn 300, YouTube 800, X 400, FB 170, IG 320. Renders as a circle.</td></tr>
+            <tr><td>LinkedIn company cover</td><td class="px">1128 × 191</td><td>5.9:1</td><td>Keep left ~200px clear (logo overlap).</td></tr>
+            <tr><td>LinkedIn personal banner</td><td class="px">1584 × 396</td><td>4:1</td><td>Lower-left covered by profile photo.</td></tr>
+            <tr><td>Facebook cover</td><td class="px">820 × 312</td><td>2.63:1</td><td>Mobile-safe centre ≈ 640 wide.</td></tr>
+            <tr><td>YouTube channel banner</td><td class="px">2560 × 1440</td><td>16:9</td><td>All-device safe area centre 1546 × 423.</td></tr>
+            <tr><td>X / Twitter header</td><td class="px">1500 × 500</td><td>3:1</td><td>Avatar covers lower-left.</td></tr>
+            <tr><td>Instagram feed post</td><td class="px">1080 × 1080</td><td>1:1</td><td>Carousels use the same square.</td></tr>
+            <tr><td>Instagram story / Reel</td><td class="px">1080 × 1920</td><td>9:16</td><td>Keep content out of top/bottom 14%.</td></tr>
+            <tr><td>Open Graph / link share</td><td class="px">1200 × 630</td><td>1.91:1</td><td>Per-page images live in /images/og/.</td></tr>
+            <tr><td>Leaderboard ad</td><td class="px">728 × 90</td><td>8.1:1</td><td>Horizontal lockup, tagline inline.</td></tr>
+            <tr><td>Medium rectangle ad</td><td class="px">300 × 250</td><td>1.2:1</td><td>Stacked lockup.</td></tr>
+            <tr><td>Favicon / app icon</td><td class="px">512 × 512</td><td>1:1</td><td>Dark tile + ring + orb (the mark).</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Voice -->
+    <section class="bb" id="voice">
+      <div class="bb-h"><span class="num">09</span><h2>Voice</h2><p>Active, direct, no hype. Full detail in writing-guide.md.</p></div>
+      <div class="grid voice">
+        <div class="card do">
+          <h4><i class="fas fa-circle-check"></i> Do</h4>
+          <ul>
+            <li>Lead with the payload. Concrete numbers over adjectives.</li>
+            <li>Active voice. Short sentence. Then a longer one. Then short again.</li>
+            <li>Specific CTAs — “Start a Project”, “Hire a Tech Lead”.</li>
+            <li>Say what needed a human, and what’s still left. Honesty is the differentiator.</li>
+          </ul>
+        </div>
+        <div class="card dont">
+          <h4><i class="fas fa-circle-xmark"></i> Don’t</h4>
+          <ul>
+            <li>No corporate filler or passive voice.</li>
+            <li>No “Learn More” / “Get Started” CTAs.</li>
+            <li>Avoid these words:</li>
+          </ul>
+          <div class="badwords"><span>utilize</span><span>leverage</span><span>seamless</span><span>robust</span><span>empower</span><span>cutting-edge</span><span>synergy</span><span>solution</span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bb-foot">
+      LumiVerse d.o.o. · Brand Book · Internal reference. Source tokens: <code>styles.css</code>, <code>style-guide.md</code>, <code>writing-guide.md</code>.
+    </footer>
+  </div>
+
+  <script>
+    // Add a "copy absolute link" button beside every download link (and the zip).
+    // Copies the production URL so the link is usable once the page is online.
+    (function () {
+      var ORIGIN = 'https://www.lumiverse.hr';
+      function absUrl(href) { return ORIGIN + '/' + String(href).replace(/^\//, ''); }
+      function copy(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(text);
+        return new Promise(function (resolve, reject) {
+          var t = document.createElement('textarea');
+          t.value = text; t.style.position = 'fixed'; t.style.opacity = '0';
+          document.body.appendChild(t); t.focus(); t.select();
+          try { document.execCommand('copy'); resolve(); } catch (e) { reject(e); }
+          t.remove();
+        });
+      }
+      var targets = document.querySelectorAll('a.dl[href][download], a.dl-all[href][download]');
+      targets.forEach(function (a) {
+        var url = absUrl(a.getAttribute('href'));
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'dl dl-copy';
+        btn.title = 'Copy link: ' + url;
+        btn.setAttribute('aria-label', 'Copy link');
+        btn.innerHTML = '<i class="fas fa-link"></i>';
+        btn.addEventListener('click', function () {
+          copy(url).then(function () {
+            var html = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i>';
+            btn.classList.add('copied');
+            setTimeout(function () { btn.innerHTML = html; btn.classList.remove('copied'); }, 1300);
+          });
+        });
+        a.after(btn);
+      });
+    })();
+  </script>
+
+</body>
+</html>
