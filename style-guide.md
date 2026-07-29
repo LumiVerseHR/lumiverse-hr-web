@@ -6,8 +6,8 @@ This document defines the design system for the LumiVerse website. Follow these 
 
 ## Brand Identity
 
-**Company:** LumiVerse - AI Solutions Studio
-**Tagline:** "We build intelligent systems"
+**Company:** LumiVerse - AI Product Studio
+**Tagline:** "We Build Better Humans"
 **Tone:** Professional, bold, confident, no-hype, results-focused
 
 ---
@@ -511,4 +511,4 @@ lumiverse-hr-web/
 
 ---
 
-*Last updated: November 2024*
+*Last updated: July 2026*

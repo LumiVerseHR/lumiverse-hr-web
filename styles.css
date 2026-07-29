@@ -1317,7 +1317,7 @@ body {
    pauses offscreen, and respects prefers-reduced-motion. No JS -> the section
    renders exactly as before (empty transparent canvas).
    ========================================================================== */
-#about { overflow: hidden; }
+#product { overflow: hidden; }
 
 .titlomat-wave {
   position: absolute;
@@ -1332,4 +1332,4 @@ body {
 
 .titlomat-wave.wave-active { opacity: 1; }
 
-#about .container { position: relative; z-index: 1; }
+#product .container { position: relative; z-index: 1; }

@@ -90,7 +90,7 @@ Added small uppercase labels above headlines for context:
 > "Business Process Optimization with AI Implementation"
 
 **After:**
-> "We build intelligent systems"
+> "We build Better Humans"
 
 The new approach:
 - Massive, bold statement
@@ -297,7 +297,7 @@ Added human touches:
 > "Making AI accessible for everyone"
 
 ### After:
-> "AI solutions that transform how businesses operate. Based in Zagreb, working globally."
+> "AI tools that make humans unstoppable. Based in Zagreb, working globally."
 
 More specific, grounds the company geographically while showing global reach.
 
@@ -360,9 +360,9 @@ Vary rhythm. Short sentence. Then a longer one that expands on the idea and prov
 
 ### Hero (Homepage)
 ```
-Label: AI Solutions Studio
-Headline: We build / intelligent / systems
-Subhead: Artificial intelligence that automates processes, uncovers patterns in data, and transforms how businesses operate. From concept to deployment.
+Label: AI Product Studio
+Headline: We build / Better / Humans
+Subhead: Better tools. Better focus. Better output. Still human.
 CTA Primary: Start a Project
 CTA Secondary: View Our Work
 ```
@@ -394,4 +394,4 @@ CTA Secondary: Contact Us
 
 ---
 
-*Last updated: November 2024*
+*Last updated: July 2026*

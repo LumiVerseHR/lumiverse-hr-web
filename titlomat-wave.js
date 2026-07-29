@@ -15,7 +15,7 @@
 (function () {
   'use strict';
 
-  var section = document.getElementById('about');
+  var section = document.getElementById('product');
   var canvas = document.getElementById('titlomatWave');
   if (!section || !canvas) return;
   var ctx = canvas.getContext('2d');
