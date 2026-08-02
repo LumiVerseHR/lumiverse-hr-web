@@ -1333,3 +1333,38 @@ body {
 .titlomat-wave.wave-active { opacity: 1; }
 
 #product .container { position: relative; z-index: 1; }
+
+/* ---- At-capacity note (temporary, while fully booked) ---- */
+.capacity-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  background: rgba(255, 143, 77, 0.12);
+  border: 1px solid rgba(255, 143, 77, 0.3);
+  color: var(--accent-secondary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.capacity-badge i { font-size: 0.5rem; }
+.capacity-note {
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.capacity-note p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.capacity-note a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.capacity-note a:hover { text-decoration: underline; }
