@@ -14,19 +14,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://www.lumiverse.hr/country-guides.html">
   <title>Country Guides - One Codebase, Four Travel Sites, AI-Written | LumiVerse</title>
-  <meta name="description" content="A multi-tenant platform serving four branded travel sites - Croatia, Slovenia, the Netherlands and Switzerland - from one codebase, with AI-written content.">
+  <meta name="description" content="A multi-tenant platform serving five branded travel sites - Croatia, Slovenia, the Netherlands, Switzerland and France - from one codebase, with AI-written content.">
   <!-- Open Graph / social sharing -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="LumiVerse">
   <meta property="og:title" content="Country Guides - One Codebase, Four Travel Sites, AI-Written | LumiVerse">
-  <meta property="og:description" content="A multi-tenant platform serving four branded travel sites - Croatia, Slovenia, the Netherlands and Switzerland - from one codebase, with AI-written content.">
+  <meta property="og:description" content="A multi-tenant platform serving five branded travel sites - Croatia, Slovenia, the Netherlands, Switzerland and France - from one codebase, with AI-written content.">
   <meta property="og:url" content="https://www.lumiverse.hr/country-guides.html">
   <meta property="og:image" content="https://www.lumiverse.hr/images/og/country-guides.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Country Guides - One Codebase, Four Travel Sites, AI-Written | LumiVerse">
-  <meta name="twitter:description" content="A multi-tenant platform serving four branded travel sites - Croatia, Slovenia, the Netherlands and Switzerland - from one codebase, with AI-written content.">
+  <meta name="twitter:description" content="A multi-tenant platform serving five branded travel sites - Croatia, Slovenia, the Netherlands, Switzerland and France - from one codebase, with AI-written content.">
   <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/country-guides.jpg">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -273,6 +273,45 @@
       margin-top: 0.35rem;
     }
 
+    /* Featured site card (full-width, horizontal) */
+    .site-card.featured {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    .site-card.featured .site-card-head { flex: 1; }
+    .site-card.featured .site-stats {
+      grid-template-columns: repeat(4, auto);
+      gap: 2.75rem;
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .site-new {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(255, 77, 77, 0.12);
+      border: 1px solid rgba(255, 77, 77, 0.25);
+      padding: 0.15rem 0.5rem;
+      border-radius: 100px;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+    }
+    @media (max-width: 720px) {
+      .site-card.featured { flex-direction: column; align-items: stretch; gap: 1.5rem; }
+      .site-card.featured .site-stats {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        border-top: 1px solid var(--glass-border);
+        padding-top: 1.25rem;
+      }
+    }
+
     .cta-section {
       background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
       border-radius: 24px;
@@ -397,7 +436,7 @@
 
       <h1 class="display-lg mb-4">Country Guides</h1>
       <p class="body-lg text-secondary" style="max-width: 760px;">
-        Four branded travel sites - Croatia, Slovenia, the Netherlands and Switzerland - running on one codebase, with an AI pipeline that researches and writes every destination, attraction and article. A new country is a config file, not a fork.
+        Five branded travel sites - Croatia, Slovenia, the Netherlands, Switzerland and France - running on one codebase, with an AI pipeline that researches and writes every destination, attraction and article. A new country is a config file, not a fork.
       </p>
 
       <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
@@ -417,6 +456,7 @@
             <img class="showcase-slide" loading="lazy" decoding="async" src="images/countryguides-2.jpg" alt="switzerland-explorer.com - the same platform rebranded for Switzerland, hero over Zurich">
             <img class="showcase-slide" loading="lazy" decoding="async" src="images/countryguides-3.jpg" alt="dutch-guide.com - the platform rebranded for the Netherlands, hero over an Amsterdam canal">
             <img class="showcase-slide" loading="lazy" decoding="async" src="images/countryguides-4.jpg" alt="A generated Dubrovnik destination page - rating, region, tabbed attractions and quick facts">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="images/countryguides-5.jpg" alt="french-guides.com - the platform rebranded for France, hero over the Eiffel Tower">
           </div>
         </div>
       </div>
@@ -428,15 +468,15 @@
     <div class="container">
       <div class="stats-container">
         <div class="stat-block">
-          <div class="stat-value">4</div>
+          <div class="stat-value">5</div>
           <div class="stat-label">Live country sites on one codebase</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">1,300+</div>
+          <div class="stat-value">2,000+</div>
           <div class="stat-label">Attractions researched and written</div>
         </div>
         <div class="stat-block">
-          <div class="stat-value">480+</div>
+          <div class="stat-value">580+</div>
           <div class="stat-label">Destinations across the network</div>
         </div>
         <div class="stat-block">
@@ -611,11 +651,15 @@
           <ul class="feature-list mt-4">
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              croatian-guide.com, slovenia-guide.com, dutch-guide.com, switzerland-explorer.com
+              croatian-guide.com, slovenia-guide.com, dutch-guide.com, switzerland-explorer.com, french-guides.com
             </li>
             <li class="feature-list-item">
               <span class="feature-list-icon"><i class="fas fa-check"></i></span>
               Same components, different data - no per-site forks to keep in sync
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              More markets already built and staged - Portugal, Bosnia and Serbia are waiting on a domain
             </li>
           </ul>
         </div>
@@ -706,13 +750,41 @@
     <div class="container">
       <div class="section-header text-center" style="max-width: 760px; margin: 0 auto 4rem;">
         <span class="section-label">See Them Live</span>
-        <h2 class="display-md section-title">Four Countries, Live Right Now</h2>
+        <h2 class="display-md section-title">Five Countries, Live Right Now</h2>
         <p class="section-description" style="max-width: 100%;">
           Every number here is a page you can open. Each site runs the same platform on its own domain, with its own content.
         </p>
       </div>
 
       <div class="sites-grid">
+        <a class="site-card featured" href="https://french-guides.com" target="_blank" rel="noopener">
+          <div class="site-card-head">
+            <span class="site-flag">&#127467;&#127479;</span>
+            <div>
+              <div class="site-country">France <span class="site-new">Newest</span></div>
+              <div class="site-domain">french-guides.com <i class="fas fa-arrow-up-right-from-square"></i></div>
+            </div>
+          </div>
+          <div class="site-stats">
+            <div>
+              <div class="site-stat-num">111</div>
+              <div class="site-stat-label">Destinations</div>
+            </div>
+            <div>
+              <div class="site-stat-num">709</div>
+              <div class="site-stat-label">Attractions</div>
+            </div>
+            <div>
+              <div class="site-stat-num">28</div>
+              <div class="site-stat-label">Articles</div>
+            </div>
+            <div>
+              <div class="site-stat-num">45</div>
+              <div class="site-stat-label">Blog posts</div>
+            </div>
+          </div>
+        </a>
+
         <a class="site-card" href="https://croatian-guide.com" target="_blank" rel="noopener">
           <div class="site-card-head">
             <span class="site-flag">&#127469;&#127479;</span>
@@ -727,11 +799,11 @@
               <div class="site-stat-label">Destinations</div>
             </div>
             <div>
-              <div class="site-stat-num">499</div>
+              <div class="site-stat-num">523</div>
               <div class="site-stat-label">Attractions</div>
             </div>
             <div>
-              <div class="site-stat-num">21</div>
+              <div class="site-stat-num">22</div>
               <div class="site-stat-label">Articles</div>
             </div>
             <div>
@@ -755,11 +827,11 @@
               <div class="site-stat-label">Destinations</div>
             </div>
             <div>
-              <div class="site-stat-num">519</div>
+              <div class="site-stat-num">565</div>
               <div class="site-stat-label">Attractions</div>
             </div>
             <div>
-              <div class="site-stat-num">16</div>
+              <div class="site-stat-num">17</div>
               <div class="site-stat-label">Articles</div>
             </div>
             <div>
@@ -783,7 +855,7 @@
               <div class="site-stat-label">Destinations</div>
             </div>
             <div>
-              <div class="site-stat-num">236</div>
+              <div class="site-stat-num">284</div>
               <div class="site-stat-label">Attractions</div>
             </div>
             <div>
@@ -811,7 +883,7 @@
               <div class="site-stat-label">Destinations</div>
             </div>
             <div>
-              <div class="site-stat-num">108</div>
+              <div class="site-stat-num">123</div>
               <div class="site-stat-label">Attractions</div>
             </div>
             <div>
