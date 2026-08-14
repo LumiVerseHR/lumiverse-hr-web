@@ -35,6 +35,7 @@ Case studies, listed in the order they appear in the homepage **Work** section:
 | `overserved.html` | A tower-defense game, as a test of how far AI-assisted development goes |
 | `tvrtko.html` | Croatian business intelligence platform |
 | `country-guides.html` | Multi-tenant travel-guide platform — five branded country sites from one codebase, AI-written content |
+| `army-adria.html` | BTS fan-community platform (magazine, archive, games, member accounts) - built by one non-developer in two weeks with AI |
 | `pitaj-lider.html` | Business intelligence assistant |
 | `lider-pdf-archive.html` | Magazine archive digitization |
 
