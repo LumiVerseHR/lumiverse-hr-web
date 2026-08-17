@@ -54,6 +54,8 @@ Research (its own homepage band + nav item, kept distinct from the Work grid):
 
 ```
 styles.css          Shared stylesheet — every page links to this
+partials/           Canonical shared nav & footer (see Shared nav & footer)
+scripts/            sync_shared.py (nav/footer sync + drift check), indexnow.py
 showcase.js         Hero-image slideshow with a WebGL mosaic transition
 style-guide.md      Design system: colors, type scale, components
 writing-guide.md    Voice, tone and copy conventions
@@ -79,13 +81,32 @@ They define the visual system and the copy voice, and the existing pages follow 
 - Every page carries the same nav, mobile nav, footer, and the nav-scroll and
   mobile-toggle scripts. Copy an existing page rather than starting from scratch.
 
+### Shared nav & footer
+
+The top `<nav>` and the `<footer>` are byte-identical on every content page, so
+they live once in `partials/nav.html` and `partials/footer.html` (in "subpage"
+form, e.g. `index.html#work`). The homepage's legitimate variant — same-page
+anchors (`#work`) and a `/` logo — is derived automatically, so `index.html` is
+kept in sync too.
+
+- **Edit the partial, not the pages.** After changing `partials/nav.html` or
+  `partials/footer.html`, run `python3 scripts/sync_shared.py` to write the change
+  into all pages.
+- **`python3 scripts/sync_shared.py --check`** verifies every page matches and
+  exits non-zero on drift. It runs in `deploy.sh` and in the `.githooks/pre-commit`
+  hook — enable the hook once per clone with `git config core.hooksPath .githooks`.
+- `404.html` and `brand-guide.html` carry intentionally minimal chrome and are
+  skipped.
+
 ### Adding a case study
 
 1. Copy an existing case study page as the starting point — `rentalica.html` and
    `aimito.html` are the most complete examples.
 2. Add a `.project-card` to the Work section of `index.html`, and renumber the
    `<!-- Project N: … -->` comments.
-3. Add the page to the footer **Work** list on *every* page (it is duplicated in each).
+3. Add the page to the footer **Work** list in `partials/footer.html`, then run
+   `python3 scripts/sync_shared.py` to propagate it to every page (see
+   [Shared nav & footer](#shared-nav--footer)).
 4. Add a `<url>` entry to `sitemap.xml` — priorities descend in homepage Work order,
    so reordering the cards means re-laddering the priorities too.
 5. Put images in `images/`, keep them roughly 100–300 KB, and use **real product

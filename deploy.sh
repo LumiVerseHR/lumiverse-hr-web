@@ -15,15 +15,20 @@ DEST="${DEPLOY_PATH:-/var/www/lumiverse.hr}"
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$HERE"
 
+# Fail the deploy if the shared nav/footer drifted across pages.
+python3 scripts/sync_shared.py --check
+
 # Everything the site serves, nothing it doesn't.
 rsync -avz --delete \
   --exclude '.git' \
   --exclude '.gitignore' \
   --exclude '.DS_Store' \
   --exclude '.playwright-mcp' \
+  --exclude '.githooks' \
   --exclude 'reports' \
   --exclude 'deploy.sh' \
   --exclude 'scripts' \
+  --exclude 'partials' \
   --exclude 'README.md' \
   ./ "${HOST}:${DEST}/"
 

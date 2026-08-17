@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Block a commit if the shared nav/footer drifted across pages.
+# Enable once per clone:  git config core.hooksPath .githooks
+set -euo pipefail
+HERE="$(git rev-parse --show-toplevel)"
+python3 "$HERE/scripts/sync_shared.py" --check
