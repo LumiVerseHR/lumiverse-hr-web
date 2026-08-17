@@ -135,8 +135,11 @@ Two layout gotchas worth knowing:
 
 ## Deployment
 
-Hosted on **Vercel** with GitHub integration. Pushing to `main` deploys automatically —
-there is no separate deploy step or script.
+**Currently** hosted on Vercel with GitHub integration — pushing to `main`
+deploys automatically, so treat `main` as production. **Planned migration**
+to a VPS (build locally, rsync over ssh — see `deploy.sh` and the migration
+issue #8); after cutover, Vercel will be disconnected and `./deploy.sh`
+becomes the only deploy path.
 
 ## SEO notes
 
