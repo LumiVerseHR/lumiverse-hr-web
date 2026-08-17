@@ -1,0 +1,481 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "LumiVerse" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Services" [ref=e8] [cursor=pointer]:
+            - /url: "#services"
+        - listitem [ref=e9]:
+          - link "Work" [ref=e10] [cursor=pointer]:
+            - /url: "#work"
+        - listitem [ref=e11]:
+          - link "Research" [ref=e12] [cursor=pointer]:
+            - /url: "#research"
+        - listitem [ref=e13]:
+          - link "Product" [ref=e14] [cursor=pointer]:
+            - /url: "#product"
+        - listitem [ref=e15]:
+          - link "About" [ref=e16] [cursor=pointer]:
+            - /url: "#about"
+        - listitem [ref=e17]:
+          - link "Contact" [ref=e18] [cursor=pointer]:
+            - /url: "#contact"
+      - link "Let's Talk" [ref=e19] [cursor=pointer]:
+        - /url: "#contact"
+      - text: 
+  - generic [ref=e24]:
+    - generic [ref=e25]: AI Product Studio
+    - heading "We build Better Humans" [level=1] [ref=e27]
+    - paragraph [ref=e28]: Better tools. Better focus. Better output. Still human.
+    - generic [ref=e29]:
+      - link "Start a Project " [ref=e30] [cursor=pointer]:
+        - /url: "#contact"
+        - text: Start a Project
+        - generic [ref=e31]: 
+      - link "View Our Work" [ref=e32] [cursor=pointer]:
+        - /url: "#work"
+  - generic [ref=e34]:
+    - generic [ref=e35]:
+      - generic [ref=e36]: What We Do
+      - heading "From Idea to Shipped" [level=2] [ref=e37]
+      - paragraph [ref=e38]: We build our own AI products and embed with teams to ship theirs.
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]: 
+        - heading "Product Development" [level=3] [ref=e43]
+        - paragraph [ref=e44]: We build AI products end to end - from first prototype to paying customers. Titlomat and Tvrtko.ai started as ideas. Now they're live products with real users.
+        - list [ref=e45]:
+          - listitem [ref=e46]:
+            - generic [ref=e47]: 
+            - text: Prototype to production in weeks, not quarters
+          - listitem [ref=e49]:
+            - generic [ref=e50]: 
+            - text: "Full stack: AI pipeline, backend, UX"
+          - listitem [ref=e52]:
+            - generic [ref=e53]: 
+            - text: "Proven live: Titlomat.com & Tvrtko.ai"
+      - generic [ref=e55]:
+        - generic [ref=e56]: 
+        - heading "AI Strategy" [level=3] [ref=e58]
+        - paragraph [ref=e59]: We find where your team wastes time on repetitive work and fix it. Clear roadmaps to multiply output without multiplying headcount.
+      - generic [ref=e60]:
+        - generic [ref=e61]: 
+        - heading "Tech Consulting" [level=3] [ref=e63]
+        - paragraph [ref=e64]: We embed as your tech lead. Architecture decisions, code reviews, team mentoring, hands-on development - whatever your product needs to ship. That's how Bridj went from concept to production.
+        - list [ref=e65]:
+          - listitem [ref=e66]:
+            - generic [ref=e67]: 
+            - text: Architecture & technology decisions
+          - listitem [ref=e69]:
+            - generic [ref=e70]: 
+            - text: Code reviews & team mentoring
+          - listitem [ref=e72]:
+            - generic [ref=e73]: 
+            - text: Hands-on development when it counts
+      - generic [ref=e75]:
+        - generic [ref=e76]: 
+        - heading "Process Automation" [level=3] [ref=e78]
+        - paragraph [ref=e79]: Free your team from copy-paste hell. We automate the boring stuff so humans can do the thinking.
+  - generic [ref=e81]:
+    - generic [ref=e82]:
+      - generic [ref=e83]: Our Product
+      - heading "Titlomat.com" [level=2] [ref=e84]
+      - paragraph [ref=e85]: Automatic English subtitles for Croatian YouTube channels. Connect your channel once - subtitles show up on YouTube by themselves. No file uploads, no timeline editing.
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - heading "How It Works" [level=3] [ref=e88]
+        - list [ref=e89]:
+          - listitem [ref=e90]:
+            - generic [ref=e91]: 
+            - text: Connects directly to YouTube - no uploads, no exports
+          - listitem [ref=e93]:
+            - generic [ref=e94]: 
+            - text: Subtitles ready in 5-12 minutes per hour of audio
+          - listitem [ref=e96]:
+            - generic [ref=e97]: 
+            - text: 95%+ accuracy on clean audio
+          - listitem [ref=e99]:
+            - generic [ref=e100]: 
+            - text: Custom vocabulary for names and brand terms
+          - listitem [ref=e102]:
+            - generic [ref=e103]: 
+            - text: Preview every subtitle before it goes live
+      - generic [ref=e105]:
+        - heading "Why It Matters" [level=3] [ref=e106]
+        - paragraph [ref=e107]: Croatian channels lose 15-30% of their potential audience without English subtitles. Titlomat wins that audience back - in Croatian and English, automatically. Built for solo creators, podcast networks, and agencies.
+        - paragraph [ref=e108]: Start free with 100 credits.
+        - generic [ref=e109]:
+          - link "View Product Page " [ref=e110] [cursor=pointer]:
+            - /url: titlomat.html
+            - text: View Product Page
+            - generic [ref=e111]: 
+          - link "Try Titlomat Free " [ref=e112] [cursor=pointer]:
+            - /url: https://titlomat.com
+            - text: Try Titlomat Free
+            - generic [ref=e113]: 
+  - generic [ref=e115]:
+    - generic [ref=e116]:
+      - generic [ref=e117]: Case Studies
+      - heading "Humans, Amplified" [level=2] [ref=e118]
+      - paragraph [ref=e119]: Real teams. Real results. See how we've extended human capabilities.
+    - generic [ref=e120]:
+      - generic [ref=e121]:
+        - link [ref=e122] [cursor=pointer]:
+          - /url: bridj.html
+          - img "Bridj - the intelligence layer connecting what's said in conversations to what the business does next" [ref=e123]
+        - generic [ref=e125]:
+          - generic [ref=e126]: Tech Lead Consulting
+          - link [ref=e127] [cursor=pointer]:
+            - /url: bridj.html
+            - heading "Bridj" [level=3] [ref=e128]
+          - paragraph [ref=e129]: A year and counting as embedded tech lead for a UK intelligence platform - a 17-service system with an AI agent layer, multi-cloud infrastructure, and the final sign-off on every release.
+          - generic [ref=e130]:
+            - generic [ref=e131]: System Architecture
+            - generic [ref=e132]: AI Agent Layer
+            - generic [ref=e133]: Multi-Cloud IaC
+            - generic [ref=e134]: Release Authority
+          - link "View Case Study " [ref=e135] [cursor=pointer]:
+            - /url: bridj.html
+            - text: View Case Study
+            - generic [ref=e136]: 
+      - generic [ref=e137]:
+        - link [ref=e138] [cursor=pointer]:
+          - /url: barcoder.html
+          - img "Barcoder encyclopedia of QR, barcode and visual-code standards" [ref=e139]
+        - generic [ref=e141]:
+          - generic [ref=e142]: Reference Platform
+          - link [ref=e143] [cursor=pointer]:
+            - /url: barcoder.html
+            - heading "Barcoder" [level=3] [ref=e144]
+          - paragraph [ref=e145]: An encyclopedia of QR, barcode and visual-code standards. 463 standards across 197 countries, cross-referenced with the 1,076 wallets that read them.
+          - generic [ref=e146]:
+            - generic [ref=e147]: Payments QR
+            - generic [ref=e148]: Code Scanner
+            - generic [ref=e149]: AI Research Pipeline
+            - generic [ref=e150]: Markdown-Native
+          - link "View Case Study " [ref=e151] [cursor=pointer]:
+            - /url: barcoder.html
+            - text: View Case Study
+            - generic [ref=e152]: 
+      - generic [ref=e153]:
+        - link [ref=e154] [cursor=pointer]:
+          - /url: aimito.html
+          - img "The Aimito, a comic-book apparel brand for developers" [ref=e155]
+        - generic [ref=e157]:
+          - generic [ref=e158]: Commerce & Content Engine
+          - link [ref=e159] [cursor=pointer]:
+            - /url: aimito.html
+            - heading "The Aimito" [level=3] [ref=e160]
+          - paragraph [ref=e161]: A comic-book apparel brand for developers. 889 original designs, search that takes a feeling instead of a keyword, and a pipeline that makes new artwork a build step rather than a budget line.
+          - generic [ref=e162]:
+            - generic [ref=e163]: Semantic Search
+            - generic [ref=e164]: CLIP + pgvector
+            - generic [ref=e165]: Design Pipeline
+            - generic [ref=e166]: Stripe + POD
+          - link "View Case Study " [ref=e167] [cursor=pointer]:
+            - /url: aimito.html
+            - text: View Case Study
+            - generic [ref=e168]: 
+      - generic [ref=e169]:
+        - link [ref=e170] [cursor=pointer]:
+          - /url: rentalica.html
+          - img "Rentalica fleet management platform for rent-a-car operators" [ref=e171]
+        - generic [ref=e173]:
+          - generic [ref=e174]: Legacy Modernization
+          - link [ref=e175] [cursor=pointer]:
+            - /url: rentalica.html
+            - heading "Rentalica" [level=3] [ref=e176]
+          - paragraph [ref=e177]: A rent-a-car back-office that ran a decade on PHP 5.6, rebuilt as a modern multi-tenant SaaS - then taken further with per-vehicle P&L, OCR scanning, a document archive, CRM and a guarded AI assistant.
+          - generic [ref=e178]:
+            - generic [ref=e179]: Legacy Rewrite
+            - generic [ref=e180]: Data Migration
+            - generic [ref=e181]: OCR + AI Assistant
+            - generic [ref=e182]: Multi-Tenant SaaS
+          - link "View Case Study " [ref=e183] [cursor=pointer]:
+            - /url: rentalica.html
+            - text: View Case Study
+            - generic [ref=e184]: 
+      - generic [ref=e185]:
+        - link [ref=e186] [cursor=pointer]:
+          - /url: mojkraj.html
+          - img "MOJ KRAJ. AI-operated Croatian news portal" [ref=e187]
+        - generic [ref=e189]:
+          - generic [ref=e190]: AI Newsroom
+          - link [ref=e191] [cursor=pointer]:
+            - /url: mojkraj.html
+            - heading "MOJ KRAJ." [level=3] [ref=e192]
+          - paragraph [ref=e193]: "A Croatian news portal run as a public experiment: articles written fresh from cited sources, three automated pre-publish checks, human oversight - and a front page for every town big media skip."
+          - generic [ref=e194]:
+            - generic [ref=e195]: AI Journalism
+            - generic [ref=e196]: Groundedness Checks
+            - generic [ref=e197]: Hyperlocal
+            - generic [ref=e198]: Next.js + FastAPI
+          - link "View Case Study " [ref=e199] [cursor=pointer]:
+            - /url: mojkraj.html
+            - text: View Case Study
+            - generic [ref=e200]: 
+      - generic [ref=e201]:
+        - link [ref=e202] [cursor=pointer]:
+          - /url: overserved.html
+          - img "Overserved, a satirical AI-themed tower defense game" [ref=e203]
+        - generic [ref=e205]:
+          - generic [ref=e206]: AI-Built Game
+          - link [ref=e207] [cursor=pointer]:
+            - /url: overserved.html
+            - heading "Overserved" [level=3] [ref=e208]
+          - paragraph [ref=e209]: "A satirical AI tower-defense game: 7 worlds, 140 levels, 605 generated art assets, built in three weeks. An honest test of how far AI gets with code, art and content - and where it doesn't."
+          - generic [ref=e210]:
+            - generic [ref=e211]: Phaser + TypeScript
+            - generic [ref=e212]: Generated Art
+            - generic [ref=e213]: Bot Playtesting
+            - generic [ref=e214]: Built in Public
+          - link "View Case Study " [ref=e215] [cursor=pointer]:
+            - /url: overserved.html
+            - text: View Case Study
+            - generic [ref=e216]: 
+      - generic [ref=e217]:
+        - link [ref=e218] [cursor=pointer]:
+          - /url: tvrtko.html
+          - img "Tvrtko.ai business intelligence platform for Croatian companies" [ref=e219]
+        - generic [ref=e221]:
+          - generic [ref=e222]: Business Intelligence
+          - link [ref=e223] [cursor=pointer]:
+            - /url: tvrtko.html
+            - heading "Tvrtko.ai" [level=3] [ref=e224]
+          - paragraph [ref=e225]: Croatian business intelligence platform with 200,000+ companies, financial data from 2008-2024, and an AI assistant. Data-driven decisions in seconds.
+          - generic [ref=e226]:
+            - generic [ref=e227]: AI Search
+            - generic [ref=e228]: Financial Data
+            - generic [ref=e229]: Credit Ratings
+            - generic [ref=e230]: Data Export
+          - link "View Case Study " [ref=e231] [cursor=pointer]:
+            - /url: tvrtko.html
+            - text: View Case Study
+            - generic [ref=e232]: 
+      - generic [ref=e233]:
+        - link [ref=e234] [cursor=pointer]:
+          - /url: country-guides.html
+          - img "croatian-guide.com homepage - one of four branded travel sites Country Guides serves from a single codebase" [ref=e235]
+        - generic [ref=e237]:
+          - generic [ref=e238]: AI Content Platform
+          - link [ref=e239] [cursor=pointer]:
+            - /url: country-guides.html
+            - heading "Country Guides" [level=3] [ref=e240]
+          - paragraph [ref=e241]: One codebase serving four branded travel sites - Croatia, Slovenia, the Netherlands and Switzerland. An AI pipeline researches and writes every destination, attraction and article.
+          - generic [ref=e242]:
+            - generic [ref=e243]: Multi-Tenant
+            - generic [ref=e244]: AI Pipeline
+            - generic [ref=e245]: SEO at Scale
+            - generic [ref=e246]: Laravel + React
+          - link "View Case Study " [ref=e247] [cursor=pointer]:
+            - /url: country-guides.html
+            - text: View Case Study
+            - generic [ref=e248]: 
+      - generic [ref=e249]:
+        - link [ref=e250] [cursor=pointer]:
+          - /url: pitaj-lider.html
+          - img "Pitaj Lider AI assistant interface, answering questions in Croatian on lidermedia.hr" [ref=e251]
+        - generic [ref=e253]:
+          - generic [ref=e254]: AI Assistant
+          - link [ref=e255] [cursor=pointer]:
+            - /url: pitaj-lider.html
+            - heading "Pitaj Lider" [level=3] [ref=e256]
+          - paragraph [ref=e257]: Business intelligence assistant with access to 200,000+ articles and real-time company registry data. Natural language queries, instant insights.
+          - generic [ref=e258]:
+            - generic [ref=e259]: NLP
+            - generic [ref=e260]: RAG
+            - generic [ref=e261]: Data Analytics
+            - generic [ref=e262]: Real-time API
+          - link "View Case Study " [ref=e263] [cursor=pointer]:
+            - /url: pitaj-lider.html
+            - text: View Case Study
+            - generic [ref=e264]: 
+      - generic [ref=e265]:
+        - link [ref=e266] [cursor=pointer]:
+          - /url: lider-pdf-archive.html
+          - img "Original Lider magazine page - the multi-column Croatian layout digitized by the archive project" [ref=e267]
+        - generic [ref=e269]:
+          - generic [ref=e270]: Document AI
+          - link [ref=e271] [cursor=pointer]:
+            - /url: lider-pdf-archive.html
+            - heading "Lider Digital Archive" [level=3] [ref=e272]
+          - paragraph [ref=e273]: Digitized decades of business magazine content. 50,000+ articles converted from PDFs to structured, searchable data using custom OCR and Croatian NLP.
+          - generic [ref=e274]:
+            - generic [ref=e275]: OCR
+            - generic [ref=e276]: Computer Vision
+            - generic [ref=e277]: Croatian NLP
+            - generic [ref=e278]: Data Pipeline
+          - link "View Case Study " [ref=e279] [cursor=pointer]:
+            - /url: lider-pdf-archive.html
+            - text: View Case Study
+            - generic [ref=e280]: 
+  - generic [ref=e282]:
+    - generic [ref=e283]:
+      - generic [ref=e284]: Research
+      - heading "We Point Our Tools at Hard Questions" [level=2] [ref=e285]
+      - paragraph [ref=e286]: The same agentic systems we build for clients, turned loose on our own curiosity - open, cross-checked, and honest about what's computed versus proven.
+    - generic [ref=e287]:
+      - link [ref=e288] [cursor=pointer]:
+        - /url: air-laser.html
+        - img "Computed voxel wireframe - a glowing image drawn in air, front and side projection" [ref=e289]
+      - generic [ref=e290]:
+        - generic [ref=e291]: Independent Research · Physics × AI Agents
+        - heading "A Hologram, Without Touching a Laser" [level=3] [ref=e292]
+        - paragraph [ref=e293]: A 49-page physics design study for a glowing image that floats in mid-air - computed end to end by a dozen open-source simulators driven by one AI agent loop. Every number cross-checked against the literature, and the one result that couldn't survive that check was retracted. No laser ever switched on.
+        - paragraph [ref=e294]: Computed, not built - the honest version of the claim is inside.
+        - link "Read the Research " [ref=e295] [cursor=pointer]:
+          - /url: air-laser.html
+          - text: Read the Research
+          - generic [ref=e296]: 
+  - generic [ref=e298]:
+    - generic [ref=e299]:
+      - generic [ref=e300]: About
+      - heading "Small studio, unreasonable range" [level=2] [ref=e301]
+      - paragraph [ref=e302]: LumiVerse is a founder-led AI product studio in Zagreb. We do two things - build our own products, and embed with teams to build theirs - and we're deliberately generalist about it. The same hands that rebuilt a ten-year-old rent-a-car system on a modern stack also run an agentic simulation station that computes plasma-display physics. Range isn't a lack of focus. It's the focus.
+    - generic [ref=e303]:
+      - generic [ref=e304]:
+        - generic [ref=e305]: 
+        - heading "We eat our own cooking" [level=3] [ref=e307]
+        - paragraph [ref=e308]: Titlomat, Tvrtko.ai and Country Guides are LumiVerse products in production, with real users - not slideware. We know what shipping costs because we pay it ourselves.
+      - generic [ref=e309]:
+        - generic [ref=e310]: 
+        - heading "We embed, we don't hover" [level=3] [ref=e312]
+        - paragraph [ref=e313]: For a UK intelligence platform we've owned architecture, a 17-service system and release sign-off for over a year. We join your team and ship with it - not from a deck.
+      - generic [ref=e314]:
+        - generic [ref=e315]: 
+        - heading "Honest about the hard parts" [level=3] [ref=e317]
+        - paragraph [ref=e318]: Every case study here says what needed a human and what's still rough. Generation is cheap; judgement isn't. The moat is the verifier, not the generator.
+    - paragraph [ref=e319]:
+      - strong [ref=e320]: LumiVerse d.o.o.
+      - text: · Zagreb, Croatia · founded and led by Tihomir Jauk
+  - generic [ref=e322]:
+    - generic [ref=e323]:
+      - generic [ref=e324]: How We Work
+      - heading "Our Process" [level=2] [ref=e325]
+      - paragraph [ref=e326]: From "my team is drowning in busywork" to "my team is unstoppable."
+    - generic [ref=e327]:
+      - generic [ref=e328]:
+        - generic [ref=e329]: "01"
+        - heading "Discovery" [level=3] [ref=e330]
+        - paragraph [ref=e331]: We shadow your team. Find the tasks that drain them. Identify what AI can take off their plate.
+      - generic [ref=e332]:
+        - generic [ref=e333]: "02"
+        - heading "Design" [level=3] [ref=e334]
+        - paragraph [ref=e335]: Build tools around how your people actually work. Not the other way around.
+      - generic [ref=e336]:
+        - generic [ref=e337]: "03"
+        - heading "Build" [level=3] [ref=e338]
+        - paragraph [ref=e339]: Rapid iteration with your team in the loop. They test it, we improve it. Weekly.
+      - generic [ref=e340]:
+        - generic [ref=e341]: "04"
+        - heading "Deploy" [level=3] [ref=e342]
+        - paragraph [ref=e343]: Launch, train your team, stick around until they're flying. Then iterate.
+  - generic [ref=e346]:
+    - generic [ref=e347]:
+      - generic [ref=e348]: Get in Touch
+      - heading "Ready to upgrade your team?" [level=2] [ref=e349]
+      - paragraph [ref=e350]: Let's talk about what's slowing your people down - and how to fix it.
+      - generic [ref=e351]:
+        - generic [ref=e352]:
+          - generic [ref=e353]: 
+          - generic [ref=e355]:
+            - heading "Office" [level=4] [ref=e356]
+            - paragraph [ref=e357]: LumiVerse d.o.o.Markuševečka cesta 20CZagreb, Croatia
+        - generic [ref=e358]:
+          - generic [ref=e359]: 
+          - generic [ref=e361]:
+            - heading "Phone" [level=4] [ref=e362]
+            - paragraph [ref=e363]: +385 95 911 99 47
+        - generic [ref=e364]:
+          - generic [ref=e365]: 
+          - generic [ref=e367]:
+            - heading "Email" [level=4] [ref=e368]
+            - link "tihomir.jauk@lumiverse.hr" [ref=e369] [cursor=pointer]:
+              - /url: mailto:tihomir.jauk@lumiverse.hr
+        - generic [ref=e370]:
+          - generic [ref=e371]: 
+          - generic [ref=e373]:
+            - heading "VAT ID" [level=4] [ref=e374]
+            - paragraph [ref=e375]: HR88595646800
+    - generic [ref=e376]:
+      - heading "Schedule a Call" [level=3] [ref=e377]
+      - paragraph [ref=e378]: 30 minutes. We'll map out where your team loses time and show you what's possible.
+      - link " Book a Meeting" [ref=e379] [cursor=pointer]:
+        - /url: https://calendly.com/tihomirjauk/30min
+        - generic [ref=e380]: 
+        - text: Book a Meeting
+      - paragraph [ref=e382]: Prefer email? Write to us directly and we'll respond within 24 hours.
+  - contentinfo [ref=e383]:
+    - generic [ref=e384]:
+      - generic [ref=e385]:
+        - generic [ref=e386]:
+          - link "LumiVerse" [ref=e387] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e389]: AI tools that make humans unstoppable. Based in Zagreb, working globally.
+        - generic [ref=e390]:
+          - heading "Services" [level=4] [ref=e391]
+          - list [ref=e392]:
+            - listitem [ref=e393]:
+              - link "Product Development" [ref=e394] [cursor=pointer]:
+                - /url: "#services"
+            - listitem [ref=e395]:
+              - link "Tech Consulting" [ref=e396] [cursor=pointer]:
+                - /url: "#services"
+            - listitem [ref=e397]:
+              - link "AI Strategy" [ref=e398] [cursor=pointer]:
+                - /url: "#services"
+            - listitem [ref=e399]:
+              - link "Process Automation" [ref=e400] [cursor=pointer]:
+                - /url: "#services"
+        - generic [ref=e401]:
+          - heading "Work" [level=4] [ref=e402]
+          - list [ref=e403]:
+            - listitem [ref=e404]:
+              - link "Titlomat.com" [ref=e405] [cursor=pointer]:
+                - /url: titlomat.html
+            - listitem [ref=e406]:
+              - link "The Aimito" [ref=e407] [cursor=pointer]:
+                - /url: aimito.html
+            - listitem [ref=e408]:
+              - link "Barcoder" [ref=e409] [cursor=pointer]:
+                - /url: barcoder.html
+            - listitem [ref=e410]:
+              - link "Rentalica" [ref=e411] [cursor=pointer]:
+                - /url: rentalica.html
+            - listitem [ref=e412]:
+              - link "Overserved" [ref=e413] [cursor=pointer]:
+                - /url: overserved.html
+            - listitem [ref=e414]:
+              - link "Tvrtko.ai" [ref=e415] [cursor=pointer]:
+                - /url: tvrtko.html
+            - listitem [ref=e416]:
+              - link "Bridj" [ref=e417] [cursor=pointer]:
+                - /url: bridj.html
+            - listitem [ref=e418]:
+              - link "Country Guides" [ref=e419] [cursor=pointer]:
+                - /url: country-guides.html
+            - listitem [ref=e420]:
+              - link "Pitaj Lider" [ref=e421] [cursor=pointer]:
+                - /url: pitaj-lider.html
+            - listitem [ref=e422]:
+              - link "Lider Archive" [ref=e423] [cursor=pointer]:
+                - /url: lider-pdf-archive.html
+        - generic [ref=e424]:
+          - heading "Contact" [level=4] [ref=e425]
+          - list [ref=e426]:
+            - listitem [ref=e427]:
+              - link "Email Us" [ref=e428] [cursor=pointer]:
+                - /url: mailto:tihomir.jauk@lumiverse.hr
+            - listitem [ref=e429]:
+              - link "Book a Call" [ref=e430] [cursor=pointer]:
+                - /url: https://calendly.com/tihomirjauk/30min
+            - listitem [ref=e431]:
+              - link "LinkedIn" [ref=e432] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/lumiversehr
+      - generic [ref=e433]:
+        - paragraph [ref=e434]: © 2026 LumiVerse d.o.o. All rights reserved.
+        - link "LinkedIn" [ref=e436] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/lumiversehr
+          - generic [ref=e437]: 
