@@ -38,6 +38,7 @@ Case studies, listed in the order they appear in the homepage **Work** section:
 | `army-adria.html` | BTS fan-community platform (magazine, archive, games, member accounts) - built by one non-developer in two weeks with AI |
 | `pitaj-lider.html` | Business intelligence assistant |
 | `lider-pdf-archive.html` | Magazine archive digitization |
+| `lider-translations.html` | Multilingual publishing — a Croatian newsroom AI-translated into 10 languages across 11 live WordPress sites |
 
 Research (its own homepage band + nav item, kept distinct from the Work grid):
 
