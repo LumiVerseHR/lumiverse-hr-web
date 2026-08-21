@@ -29,6 +29,12 @@
 
   <!-- Case studies, in homepage order -->
   <url>
+    <loc>https://www.lumiverse.hr/moj-kolega.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
     <loc>https://www.lumiverse.hr/bridj.html</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>

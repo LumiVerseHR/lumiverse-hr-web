@@ -28,6 +28,7 @@ Case studies, listed in the order they appear in the homepage **Work** section:
 
 | File | Purpose |
 |------|---------|
+| `moj-kolega.html` | Moj Kolega — a managed AI employee (embeddable agent) for webshops: catalogue-grounded answers, recommendations, lead capture, escalation |
 | `bridj.html` | AI marketing intelligence — tech-lead consulting engagement |
 | `barcoder.html` | An encyclopedia of QR, barcode and visual-code standards |
 | `aimito.html` | Comic-book apparel brand for developers, built around a content engine |
