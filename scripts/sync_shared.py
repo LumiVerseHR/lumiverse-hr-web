@@ -20,10 +20,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PARTIALS = ROOT / "partials"
 
-# (name, opening-tag substring, closing-tag substring)
+# (name, opening-tag substring, closing-tag substring, required)
+# required=True  -> must exist on every synced page (missing = drift)
+# required=False -> only checked/synced on pages that actually contain it
 REGIONS = [
-    ("nav", "<nav ", "</nav>"),
-    ("footer", "<footer", "</footer>"),
+    ("nav", "<nav ", "</nav>", True),
+    ("footer", "<footer", "</footer>", True),
+    ("capacity-note", '<div class="capacity-note"', "</div>", False),
 ]
 
 # Pages that do NOT carry the full shared nav+footer, by design.
@@ -62,7 +65,7 @@ def main():
     check = "--check" in sys.argv
 
     canon = {}
-    for name, _, _ in REGIONS:
+    for name, *_ in REGIONS:
         f = PARTIALS / f"{name}.html"
         if not f.exists():
             print(f"missing canonical partial: {f.relative_to(ROOT)}", file=sys.stderr)
@@ -72,10 +75,11 @@ def main():
     drift, changed = [], []
     for p in pages():
         text = new_text = p.read_text()
-        for name, start, end in REGIONS:
+        for name, start, end, required in REGIONS:
             found = extract(new_text, start, end)
             if not found:
-                drift.append((p.name, name, f"MISSING <{name}> region"))
+                if required:
+                    drift.append((p.name, name, f"MISSING <{name}> region"))
                 continue
             actual, si, ei = found
             want = expected(p.name, canon[name])
@@ -104,7 +108,8 @@ def main():
                 print()
             print("Fix with:  python3 scripts/sync_shared.py")
             return 1
-        print(f"✓ nav + footer in sync across {len(pages())} pages")
+        names = ", ".join(name for name, *_ in REGIONS)
+        print(f"✓ shared regions ({names}) in sync across {len(pages())} pages")
         return 0
 
     if changed:
