@@ -154,6 +154,19 @@ for (const [enFile, hrFile, enRoute, hrRoute] of pairs) {
   checkAbsolutePaths(hrFile, hr);
 }
 
+// Structured-data breadcrumbs are what a search result renders, so they have
+// to match the visible breadcrumb rather than stay in the source language.
+const englishCrumbs = ["Home", "Work", "Research"];
+for (const [, hrFile] of pairs) {
+  const html = read(hrFile);
+  if (!html) continue;
+  for (const crumb of englishCrumbs) {
+    if (html.includes(`"name": "${crumb}"`)) {
+      fail(hrFile, `structured-data breadcrumb still reads "${crumb}"`);
+    }
+  }
+}
+
 // Our own products default to Croatian at their root and expose the English
 // version at /en, so each tree has to link the matching one. Verified live:
 // titlomat.com/ is lang="hr", mojkolega.hr/ redirects to /hr, mojkraj.hr/ is
