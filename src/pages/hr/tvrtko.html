@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.lumiverse.hr/hr/tvrtko">
+  <link rel="alternate" hreflang="en" href="https://www.lumiverse.hr/tvrtko">
+  <link rel="alternate" hreflang="hr" href="https://www.lumiverse.hr/hr/tvrtko">
+  <link rel="alternate" hreflang="x-default" href="https://www.lumiverse.hr/tvrtko">
+  <title>Tvrtko.ai - hrvatska platforma poslovne inteligencije | LumiVerse</title>
+  <meta name="description" content="Hrvatska platforma poslovne inteligencije: više od 200.000 tvrtki, financijski podaci od 2008. do 2024., kreditni rejtinzi i AI asistent.">
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Tvrtko.ai - hrvatska platforma poslovne inteligencije | LumiVerse">
+  <meta property="og:description" content="Hrvatska platforma poslovne inteligencije: više od 200.000 tvrtki, financijski podaci od 2008. do 2024., kreditni rejtinzi i AI asistent.">
+  <meta property="og:url" content="https://www.lumiverse.hr/hr/tvrtko">
+  <meta property="og:image" content="https://www.lumiverse.hr/images/og/tvrtko.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tvrtko.ai - hrvatska platforma poslovne inteligencije | LumiVerse">
+  <meta name="twitter:description" content="Hrvatska platforma poslovne inteligencije: više od 200.000 tvrtki, financijski podaci od 2008. do 2024., kreditni rejtinzi i AI asistent.">
+  <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/tvrtko.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(255, 77, 77, 0.15), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(77, 255, 255, 0.1), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 77, 77, 0.1);
+      border: 1px solid rgba(255, 77, 77, 0.2);
+      border-radius: 100px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .hero-image-showcase img {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, var(--bg-primary), transparent 30%);
+      border-radius: 16px;
+      pointer-events: none;
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .feature-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .feature-showcase-reverse {
+      direction: rtl;
+    }
+
+    .feature-showcase-reverse > * {
+      direction: ltr;
+    }
+
+    .feature-visual {
+      position: relative;
+    }
+
+    .feature-visual-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .feature-visual-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.2), rgba(255, 143, 77, 0.1));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .use-case-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .use-case-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .use-case-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .use-case-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 143, 77, 0.1));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin: 0 auto 1.25rem;
+    }
+
+    .use-case-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .use-case-text {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.1), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .feature-showcase {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .feature-showcase-reverse {
+        direction: ltr;
+      }
+
+      .use-case-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+
+      .use-case-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Početna",
+      "item": "https://www.lumiverse.hr/hr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Reference",
+      "item": "https://www.lumiverse.hr/hr/#work"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Tvrtko.ai",
+      "item": "https://www.lumiverse.hr/hr/tvrtko"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/hr/" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="/hr/#services" class="nav-link">Usluge</a></li>
+        <li><a href="/hr/#work" class="nav-link">Reference</a></li>
+        <li><a href="/hr/#research" class="nav-link">Istraživanje</a></li>
+        <li><a href="/hr/#product" class="nav-link">Proizvod</a></li>
+        <li><a href="/hr/#about" class="nav-link">O nama</a></li>
+        <li><a href="/hr/#contact" class="nav-link">Kontakt</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-lang">
+          <a href="/tvrtko" hreflang="en" lang="en" title="English version">EN</a>
+          <span aria-current="true">HR</span>
+        </div>
+        <a href="/hr/#contact" class="nav-cta">Razgovarajmo</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Otvori izbornik">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/hr/#services" class="mobile-nav-link">Usluge</a>
+    <a href="/hr/#work" class="mobile-nav-link">Reference</a>
+    <a href="/hr/#research" class="mobile-nav-link">Istraživanje</a>
+    <a href="/hr/#product" class="mobile-nav-link">Proizvod</a>
+    <a href="/hr/#about" class="mobile-nav-link">O nama</a>
+    <a href="/hr/#contact" class="mobile-nav-link">Kontakt</a>
+    <div class="mobile-nav-lang">
+      <a href="/tvrtko" hreflang="en" lang="en">EN</a>
+      <span aria-current="true">HR</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/hr/">Početna</a>
+        <span>/</span>
+        <a href="/hr/#work">Reference</a>
+        <span>/</span>
+        <span>Tvrtko.ai</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-chart-bar"></i>
+        Platforma poslovne inteligencije
+      </div>
+
+      <h1 class="display-lg mb-4">Tvrtko.ai</h1>
+      <p class="body-lg text-secondary" style="max-width: 700px;">
+        Poslovne odluke utemeljene na podacima, za hrvatsko tržište. Više od 200.000 tvrtki, financijska izvješća od 2008. do 2024., kreditni rejtinzi i AI asistent koji govori hrvatski.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://tvrtko.ai" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i>
+          Isprobajte besplatno
+        </a>
+        <a href="/hr/#contact" class="btn btn-secondary">
+          Napravite nešto slično
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <img src="/images/tvrtko-ai-landing.png" alt="Platforma poslovne inteligencije Tvrtko.ai s pretragom tvrtki i analizom financijskih podataka">
+        <div class="hero-image-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">200K+</div>
+          <div class="stat-label">Tvrtki</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">1.68M+</div>
+          <div class="stat-label">Financijskih izvješća</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">2008-2024</div>
+          <div class="stat-label">Financijski podaci</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">Dnevno</div>
+          <div class="stat-label">Osvježavanje podataka</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 5rem;">
+        <span class="section-label">Mogućnosti platforme</span>
+        <h2 class="display-md section-title">Što radi</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Dva stupa poslovne inteligencije: podaci o tvrtkama i financijska analiza, spojeni kroz AI.
+        </p>
+      </div>
+
+      <!-- Feature 1: Company Intelligence -->
+      <div class="feature-showcase mb-6">
+        <div class="feature-visual">
+          <div class="feature-visual-card">
+            <div class="feature-visual-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3 class="heading-md mb-2">Podaci o tvrtkama</h3>
+            <p class="text-secondary mb-4">Više od 200.000 hrvatskih tvrtki</p>
+            <ul class="feature-list">
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Napredna pretraga po nazivu, OIB-u ili djelatnosti
+              </li>
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Podaci iz sudskog registra i pravni status
+              </li>
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Vlasnička struktura i ključne osobe
+              </li>
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Registar stvarnih vlasnika
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <span class="section-label">Registar tvrtki</span>
+          <h3 class="display-md mb-4">Svaka hrvatska tvrtka, jedna pretraga</h3>
+          <p class="body-lg text-secondary mb-4">
+            Pretražujte po nazivu tvrtke, OIB-u ili djelatnosti. Odmah dobivate podatke iz sudskog registra, vlasničke lance i stvarne vlasnike — sve iz službenih izvora.
+          </p>
+          <p class="text-secondary">
+            Nema više kopanja po više državnih portala. Tvrtko.ai objedinjuje podatke iz sudskog registra, FINA-e i registra stvarnih vlasnika u jedno pretraživo sučelje.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 2: Financial Analysis -->
+      <div class="feature-showcase feature-showcase-reverse" style="margin-top: 6rem;">
+        <div class="feature-visual">
+          <div class="feature-visual-card">
+            <div class="feature-visual-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="heading-md mb-2">Financijska analiza</h3>
+            <p class="text-secondary mb-4">GFI podaci od 2008. do 2024.</p>
+            <ul class="feature-list">
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Bilance i računi dobiti i gubitka
+              </li>
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Kretanje prihoda i analiza rasta
+              </li>
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Kreditni rejtinzi od A do D, s metodologijom
+              </li>
+              <li class="feature-list-item">
+                <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+                Usporedba s djelatnošću i konkurencijom
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <span class="section-label">Financijski podaci</span>
+          <h3 class="display-md mb-4">16 godina financijske povijesti</h3>
+          <p class="body-lg text-secondary mb-4">
+            Cjelovita GFI financijska izvješća od 2008. do 2024. Bilance, računi dobiti i gubitka, kretanje prihoda — sve prikazano i spremno za analizu.
+          </p>
+          <p class="text-secondary">
+            Naš sustav kreditnog rejtinga ocjenjuje tvrtke od A do D na temelju financijskog zdravlja, povijesti plaćanja i usporedbe s djelatnošću. Znajte s kime poslujete prije nego što potpišete ugovor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Implementation -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">Ispod haube</span>
+        <h2 class="display-md section-title">Tehnička izvedba</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Građeno za brzinu, točnost i hrvatsko tržište.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3 class="bento-title">AI pretraživanje</h3>
+          <p class="bento-text">
+            Semantička pretraga koja razumije opise djelatnosti na hrvatskom. Tražite po tome čime se tvrtka bavi, a ne samo po nazivu. Pronađite konkurente, dobavljače ili partnere po djelatnosti.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3 class="bento-title">Objedinjavanje podataka</h3>
+          <p class="bento-text">
+            Objedinjeni podaci iz sudskog registra, FINA-inih financijskih izvješća i registra stvarnih vlasnika. Dnevno automatsko osvježavanje drži sve aktualnim.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="bento-title">Kreditno ocjenjivanje</h3>
+          <p class="bento-text">
+            Vlastiti algoritam za procjenu rizika koji tvrtke ocjenjuje od A do D. Kombinira financijske pokazatelje, ponašanje pri plaćanju i usporedbu s djelatnošću za pouzdanu ocjenu.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3 class="bento-title">AI asistent „Pitaj Tvrtka"</h3>
+          <p class="bento-text">
+            Pitanja prirodnim jezikom, na hrvatskom. Pitajte o tvrtkama, usporedite financije ili zatražite analizu — AI razumije kontekst i vraća strukturirane odgovore s izvorima.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Pitanja prirodnim jezikom, na hrvatskom
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Usporedba i analiza tvrtki
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Strukturirani odgovori s izvorima podataka
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-file-export"></i>
+          </div>
+          <h3 class="bento-title">Izvoz podataka i integracija</h3>
+          <p class="bento-text">
+            Izvezite podatke o tvrtkama i financije u Excel. Formati spremni za CRM, za prodajne timove. Skupni izvoz za istraživačke i analitičke projekte.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">Tko ga koristi</span>
+        <h2 class="display-md section-title">Namijenjeno</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Profesionalcima kojima brzo trebaju pouzdani podaci o hrvatskim tvrtkama.
+        </p>
+      </div>
+
+      <div class="use-case-grid">
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 class="use-case-title">Prodajni timovi</h3>
+          <p class="use-case-text">Istraživanje potencijalnih klijenata, kvalifikacija upita i provjera tvrtki u nekoliko minuta</p>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-search-dollar"></i>
+          </div>
+          <h3 class="use-case-title">Dubinska analiza</h3>
+          <p class="use-case-text">Vlasnički lanci, financijsko zdravlje i procjena kreditnog rizika za preuzimanja i partnerstva</p>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <h3 class="use-case-title">Financijska analiza</h3>
+          <p class="use-case-text">16 godina financijskih podataka, usporedbe s djelatnošću i analiza trendova, nadohvat ruke</p>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3 class="use-case-title">Računovođe i pravnici</h3>
+          <p class="use-case-text">Provjera klijenata, status tvrtke i podaci za regulatornu usklađenost</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Treba Vam platforma poslovne inteligencije?</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 600px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          Tvrtko.ai naš je vlastiti proizvod. Možemo napraviti nešto slično za Vaše tržište, Vašu industriju i Vaše izvore podataka.
+        </p>
+        <div class="capacity-note" style="position: relative; z-index: 1;">
+          <span class="capacity-badge"><i class="fas fa-circle"></i> Popunjeni smo za nove razvojne projekte</span>
+          <p>Trenutačno smo popunjeni za nove razvojne projekte i embedded angažmane — pišite nam na <a href="mailto:tihomir.jauk@lumiverse.hr">tihomir.jauk@lumiverse.hr</a> pa Vas kontaktiramo čim se oslobodimo. Zanima Vas neki od naših proizvoda — Tvrtko.ai, Moj Kolega, Titlomat i ostali? <strong>Oni su dostupni odmah</strong> — javite se i pomoći ćemo Vam da krenete.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/hr/" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI alati koji ljude čine nezaustavljivima. Sjedište u Zagrebu, klijenti diljem svijeta.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Usluge</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/#services" class="footer-link">Razvoj proizvoda</a></li>
+            <li><a href="/hr/#services" class="footer-link">Tehnološko savjetovanje</a></li>
+            <li><a href="/hr/#services" class="footer-link">AI strategija</a></li>
+            <li><a href="/hr/#services" class="footer-link">Automatizacija procesa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Reference</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/moj-kolega" class="footer-link">Moj Kolega</a></li>
+            <li><a href="/hr/titlomat" class="footer-link">Titlomat</a></li>
+            <li><a href="/hr/aimito" class="footer-link">The Aimito</a></li>
+            <li><a href="/hr/mojkraj" class="footer-link">MOJ KRAJ.</a></li>
+            <li><a href="/hr/barcoder" class="footer-link">Barcoder</a></li>
+            <li><a href="/hr/rentalica" class="footer-link">Rentalica</a></li>
+            <li><a href="/hr/overserved" class="footer-link">Overserved</a></li>
+            <li><a href="/hr/tvrtko" class="footer-link">Tvrtko</a></li>
+            <li><a href="/hr/bridj" class="footer-link">Bridj</a></li>
+            <li><a href="/hr/country-guides" class="footer-link">Country Guides</a></li>
+            <li><a href="/hr/army-adria" class="footer-link">ARMY Adria</a></li>
+            <li><a href="/hr/pitaj-lider" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="/hr/lider-pdf-archive" class="footer-link">Lider Arhiva</a></li>
+            <li><a href="/hr/lider-translations" class="footer-link">Lider Prijevodi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kontakt</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Pošaljite nam e-mail</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 LumiVerse d.o.o. Sva prava pridržana.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Moj Kolega AI assistant widget -->
+    <script src="https://widget.mojkolega.hr/embed.js" data-agent="demo-agent-www-lumiverse-hr-clwyqg" data-key="kol_114e846b83c8bafdce937764d1a004cb" defer></script>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
+</html>

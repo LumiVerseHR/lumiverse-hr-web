@@ -15,6 +15,8 @@ cd "$HERE"
 
 npm run build
 npm run test:parity
+npm run test:i18n
+npm run test:seo
 npm run test:routes
 
 ssh "${HOST}" "mkdir -p '${DEST}/releases'"

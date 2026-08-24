@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.lumiverse.hr/hr/air-laser">
+  <link rel="alternate" hreflang="en" href="https://www.lumiverse.hr/air-laser.html">
+  <link rel="alternate" hreflang="hr" href="https://www.lumiverse.hr/hr/air-laser">
+  <link rel="alternate" hreflang="x-default" href="https://www.lumiverse.hr/air-laser.html">
+  <title>Zračni plazmeni zasloni - istraživanje | LumiVerse</title>
+  <meta name="description" content="Studija fizike na 49 stranica, izračunata na agentskoj simulacijskoj stanici: dvanaestak open-source simulatora, svaki broj provjeren s literaturom.">
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Zračni plazmeni zasloni - istraživanje | LumiVerse">
+  <meta property="og:description" content="Studija fizike na 49 stranica, izračunata na agentskoj simulacijskoj stanici: dvanaestak open-source simulatora, svaki broj provjeren s literaturom.">
+  <meta property="og:url" content="https://www.lumiverse.hr/hr/air-laser">
+  <meta property="og:image" content="https://www.lumiverse.hr/images/og/air-laser.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zračni plazmeni zasloni - istraživanje | LumiVerse">
+  <meta name="twitter:description" content="Studija fizike na 49 stranica, izračunata na agentskoj simulacijskoj stanici: dvanaestak open-source simulatora, svaki broj provjeren s literaturom.">
+  <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/air-laser.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(255, 77, 77, 0.12), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(77, 255, 255, 0.06), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 77, 77, 0.1);
+      border: 1px solid rgba(255, 77, 77, 0.2);
+      border-radius: 100px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Prominent honesty note — this is computed, not built. */
+    .honesty-note {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      max-width: 720px;
+      margin-top: 2rem;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--glass-border);
+      border-left: 3px solid var(--accent);
+      border-radius: 10px;
+      background: var(--glass);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .honesty-note i {
+      color: var(--accent);
+      margin-top: 0.2rem;
+    }
+
+    .hero-image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .hero-image-showcase-inner {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 77, 77, 0.5), transparent);
+    }
+
+    .hero-image-showcase-inner img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .figure-caption {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .role-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .role-card:hover::before {
+      opacity: 1;
+    }
+
+    .role-number {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .role-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 143, 77, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .role-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* The retraction pull-quote */
+    .pullquote {
+      max-width: 820px;
+      margin: 3rem auto 0;
+      text-align: center;
+      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+
+    .pullquote em {
+      font-style: normal;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+  <script src="/showcase.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Početna",
+      "item": "https://www.lumiverse.hr/hr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Istraživanje",
+      "item": "https://www.lumiverse.hr/hr/#research"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Zračni plazmeni zasloni",
+      "item": "https://www.lumiverse.hr/hr/air-laser"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/hr/" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="/hr/#services" class="nav-link">Usluge</a></li>
+        <li><a href="/hr/#work" class="nav-link">Reference</a></li>
+        <li><a href="/hr/#research" class="nav-link">Istraživanje</a></li>
+        <li><a href="/hr/#product" class="nav-link">Proizvod</a></li>
+        <li><a href="/hr/#about" class="nav-link">O nama</a></li>
+        <li><a href="/hr/#contact" class="nav-link">Kontakt</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-lang">
+          <a href="/air-laser" hreflang="en" lang="en" title="English version">EN</a>
+          <span aria-current="true">HR</span>
+        </div>
+        <a href="/hr/#contact" class="nav-cta">Razgovarajmo</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Otvori izbornik">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/hr/#services" class="mobile-nav-link">Usluge</a>
+    <a href="/hr/#work" class="mobile-nav-link">Reference</a>
+    <a href="/hr/#research" class="mobile-nav-link">Istraživanje</a>
+    <a href="/hr/#product" class="mobile-nav-link">Proizvod</a>
+    <a href="/hr/#about" class="mobile-nav-link">O nama</a>
+    <a href="/hr/#contact" class="mobile-nav-link">Kontakt</a>
+    <div class="mobile-nav-lang">
+      <a href="/air-laser" hreflang="en" lang="en">EN</a>
+      <span aria-current="true">HR</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/hr/">Početna</a>
+        <span>/</span>
+        <a href="/hr/#research">Istraživanje</a>
+        <span>/</span>
+        <span>Zračni plazmeni zasloni</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-atom"></i>
+        Neovisno istraživanje &middot; Fizika &times; AI agenti
+      </div>
+
+      <h1 class="display-lg mb-4">Hologram, bez ijednog upaljenog lasera</h1>
+      <p class="body-lg text-secondary" style="max-width: 760px;">
+        Projektna studija na 49 stranica za svjetleću sliku koja lebdi u otvorenom zraku — njezina fizika, optika, upravljačke petlje i popis materijala — izračunata od početka do kraja nizom open-source fizikalnih simulatora koje vodi AI agent. Bez optičkog stola. Nijedan laser nikad nije upaljen.
+      </p>
+
+      <div class="honesty-note">
+        <i class="fas fa-circle-info"></i>
+        <span>Svaki je broj ovdje <strong style="color: var(--text-primary);">izračunat, a ne izmjeren</strong>. Nijedan uređaj nije izgrađen. Tvrdnja nije „radi" — nego da nije preostao nijedan fizikalni razlog zašto ne bi radilo, a ono što je ostalo jest inženjerstvo i mjerenje.</span>
+      </div>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://github.com/LumiVerseHR/air-laser-physics/releases/tag/paper-v1.0" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-file-lines"></i>
+          Pročitajte studiju na 49 stranica
+        </a>
+        <a href="https://github.com/LumiVerseHR/air-laser-physics" target="_blank" rel="noopener" class="btn btn-secondary">
+          <i class="fab fa-github"></i>
+          Pogledajte repozitorij
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <div class="showcase" data-showcase data-interval="5600">
+            <img class="showcase-slide" src="/images/airlaser-wire.jpg" alt="Izračunata voxel slika - žičani model kocke i kugle iscrtan plazmenim iskrama, prednja i bočna projekcija">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/airlaser-localize.jpg" alt="Izračunata lokalizacija voxela - kako se dvije zrake sijeku pod širim kutom, svjetleća se jezgra iz crte skuplja u adresibilnu točku">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/airlaser-spark.jpg" alt="Izračunata 2D radijacijska hidrodinamika laserske iskre u zraku - temperatura, emisivnost i udarni val">
+          </div>
+        </div>
+        <p class="figure-caption">
+          Stvarni ispis iz simulacija — nisu renderi. Slijeva nadesno: izračunata sličica žičanog modela, lokalizacija ukrštenih zraka koja se skuplja u točku i 2D radijacijska hidrodinamika jedne iskre.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">~12</div>
+          <div class="stat-label">Open-source simulatora, jedna petlja agenata</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">40+</div>
+          <div class="stat-label">Simulacija kroz devet fizikalnih režima</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">22</div>
+          <div class="stat-label">Referenci provjerenih preko DOI-ja, svaki broj provjeren</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">3 dana</div>
+          <div class="stat-label">Za najveći dio posla (66 od 88 commitova)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Thesis -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+        <span class="section-label">Zašto ovo postoji</span>
+        <h2 class="display-md section-title">Automatizirati se može ono što se može provjeriti</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Programiranje je prvo automatizirano jer se test može pokrenuti — provjeravač je već postojao. Pravo je pitanje, dakle, koja su još područja već prošla tu granicu. Fizika je jedno od njih, a gotovo nitko nije izgradio okvir koji bi to iskoristio.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-key"></i>
+          </div>
+          <h3 class="heading-md mb-3">Rješenja su već bila napisana</h3>
+          <p class="bento-text mb-4">
+            Konstante su izmjerene. Udarni presjeci tablično su zapisani u HITRAN-u, LXCat-u i NIST-u. Većina režima ima zatvoreni granični izraz s kojim se broj može usporediti. To nije mjerilo koje netko tek treba izgraditi — to su dva stoljeća fizike, javno dostupna i spremna ocijeniti odgovor.
+          </p>
+          <p class="bento-text">
+            Fizika je oduvijek imala provjerljivost. Nedostajao joj je agent koji može pozvati alate i vlastiti rad usporediti s tim zapisom.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-wrench"></i>
+          </div>
+          <h3 class="heading-md mb-3">Zato smo izgradili okvir</h3>
+          <p class="bento-text mb-4">
+            Dvanaestak open-source fizikalnih simulatora, svaki u vlastitom kontejneru i svaki omotan tako da ih jedan agent može sve pozvati. Petlja predlaže konfiguraciju, pokreće kontejner, čita dobiveni grafikon, uspoređuje ga s literaturom i odlučuje što pokrenuti sljedeće.
+          </p>
+          <p class="bento-text">
+            Zatim smo je usmjerili na jedno teško, međudisciplinarno pitanje — može li se svjetleća slika iscrtati u zraku? — da vidimo dokle će stići.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Machine -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+        <span class="section-label">Stroj</span>
+        <h2 class="display-md section-title">Agent koji vodi laboratorij</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Fizika je tema. Rezultat je metoda: provjerljiv, ponovljiv agentski sustav koji obuhvaća dvanaestak alata koji jedva dijele nazivlje, a kamoli format podataka. To je dio koji se prenosi na svako područje koje ima rješenja za provjeru.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-number">01</div>
+          <div class="role-icon">
+            <i class="fab fa-docker"></i>
+          </div>
+          <h3 class="role-title">Jedan kontejner po simulatoru</h3>
+          <p class="role-text">
+            Nijedna znanstvena ovisnost nikad ne dotakne domaćina. Kvantna kemija u jednom kontejneru, particle-in-cell plazmeni kodovi u drugom, prijenos zračenja liniju po liniju u trećem, vlastita radijacijska hidrodinamika u četvrtom — svaki s vlastitim, fiksiranim alatima.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">02</div>
+          <div class="role-icon">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h3 class="role-title">Jedno sučelje alata</h3>
+          <p class="role-text">
+            Svaki je simulator omotan kao MCP poslužitelj, pa ih isti agent poziva bez obzira na jezik ili okruženje unutra. Dvanaestak nekompatibilnih kodova postaje jedan ujednačen skup alata.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">03</div>
+          <div class="role-icon">
+            <i class="fas fa-diagram-project"></i>
+          </div>
+          <h3 class="role-title">Pet izričitih uloga</h3>
+          <p class="role-text">
+            Planer predlaže sljedeću konfiguraciju, koder piše ulazne podatke za simulator, izvršitelj pokreće kontejner, analitičar učitava rezultate i crta ih, a kritičar provjerava mjerne jedinice, konvergenciju i fizikalnu uvjerljivost prije nego što se ičemu povjeruje.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">04</div>
+          <div class="role-icon">
+            <i class="fas fa-ruler-combined"></i>
+          </div>
+          <h3 class="role-title">Podatkovni ugovor kroz sve režime</h3>
+          <p class="role-text">
+            Svaka veličina nosi tip mjerne jedinice, pa se energija ne može potiho krivo pročitati tri kontejnera dalje. Rezultati se zapisuju kao tipizirani skupovi podataka koji postaju izričit ulaz sljedeće faze — svaka predaja između režima provjerljiva je, a ne pretpostavljena.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">05</div>
+          <div class="role-icon">
+            <i class="fas fa-fingerprint"></i>
+          </div>
+          <h3 class="role-title">Podrijetlo na svakom grafikonu</h3>
+          <p class="role-text">
+            Svako se pokretanje bilježi i ključem veže uz hash konfiguracije i verziju kontejnera, pa se svaki grafikon na 49 stranica može pratiti do točnih parametara i verzije koda koji su ga proizveli. Ponovljivo po konstrukciji.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">06</div>
+          <div class="role-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3 class="role-title">Bez vezanja uz dobavljača</h3>
+          <p class="role-text">
+            Glavna petlja radi na Claude Codeu. Repozitorij donosi i posve lokalnu inačicu — isti planer, alate i analitičara koje vodi model na radnoj stanici, bez API ključa — da dokaže kako arhitektura ne ovisi ni o jednom pružatelju.
+          </p>
+        </div>
+      </div>
+
+      <div class="bento-card mt-5">
+        <h3 class="heading-md mb-3">Detalj koji je najviše značio: grafikoni se čitaju natrag</h3>
+        <p class="bento-text">
+          Generirani se grafikoni ne tretiraju kao gotov proizvod — pregledavaju se kao dio analize. Nekoliko je neslaganja između očekivanog i onoga što je fizika stvarno dala uhvaćeno gledanjem krivulje svjetlosti i mišlju <em>taj oblik nije dobar</em>. Agent piše ulazne podatke, pokreće kontejner i čita grafikon; čovjekov posao postaje odabir pitanja koje se sljedeće isplati postaviti i odbijanje svakog odgovora koji nije provjeren s nečim stvarnim.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What It Found -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Što je pronašla</span>
+        <h2 class="display-md section-title">Uređaj koji brojke opisuju</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Fokusirajte laser dovoljno jako i on u žarištu otkine elektrone sa zraka — mikroskopska iskra, piksel sa stvarnom adresom u prostoru. Pomaknite deset tisuća takvih iskri šezdeset puta u sekundi i oko vidi sliku. Evo što fizika kaže o izradi takvog uređaja.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-crosshairs"></i>
+          </div>
+          <h3 class="bento-title">Dvije zrake, bezopasne dok se ne sretnu</h3>
+          <p class="bento-text">
+            Jedna zraka dovoljno jaka da ionizira zrak dovoljno je jaka i da ozlijedi oko bilo gdje na svom putu. Zato izvedba križa dvije zrake, od kojih je svaka zasebno preslaba da bi išta zapalila — svijetli samo njihovo sjecište. Proboj zraka raste s jedanaestom potencijom intenziteta, pa se sjecište pali otprilike 10<sup>23</sup> puta brže nego bilo gdje uzduž ijedne zrake. To nije stvar izbora, nego prekidač koji svjetleću točku prikiva na jedno mjesto u prostoru.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Zrake su na svom putu sigurne za oko; pali se samo voxel
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Rezonantna dvobojna shema smanjuje potreban intenzitet oko 18&times;
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Očiti dušikov kanal ispada dvofotonski taman — to se sazna samo računanjem
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3 class="bento-title">Dovoljno svijetlo da se vidi</h3>
+          <p class="bento-text">
+            Oku prilagođenom na mrak treba stotinjak fotona na rožnici. Izračunati voxel isporučuje oko 184 — konzervativna zaliha. A svjetlina raste s temperaturom plazme uz gotovo nepromijenjenu energiju: jeftina ručica je vrelija plazma, a ne veća snaga.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-tag"></i>
+          </div>
+          <h3 class="bento-title">Laser je 3 do 8&times; preskup</h3>
+          <p class="bento-text">
+            Prototip izračunat po stvarnim katalozima dobavljača dolazi na oko 378.000 dolara, od čega je više od polovice jedan femtosekundni laser. Ali fizici treba tek oko 50&nbsp;nJ po bljesku uz prosječnu snagu ispod vata — kompaktan vlaknasti izvor od 15 do 60 tisuća dolara, a ne industrijsko pojačalo.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-diagram-successor"></i>
+          </div>
+          <h3 class="bento-title">Valne duljine ispale su iz kemije</h3>
+          <p class="bento-text">
+            Ugađanje dviju boja na stvarne kvantne energijske razine kisika i dušika donosi onih 18&times; učinkovitosti. Recept nije pogođen — izašao je iz kvantnokemijskog računa, zajedno s tamnim kanalima.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-hand-sparkles"></i>
+          </div>
+          <h3 class="bento-title">Sigurno na dodir, unutar granica za zrak</h3>
+          <p class="bento-text">
+            Slika je osvijetljeni zrak — kroz nju možete provući ruku. Ozon i dušikovi oksidi koje iskra stvara ostaju znatno ispod zdravstvenih granica uz skromnu ventilaciju. Dovodne su zrake i dalje 4. klase i treba ih zatvoriti u kućište — poznat inženjerski posao.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-vector-square"></i>
+          </div>
+          <h3 class="bento-title">Žičani model, a ne puno tijelo</h3>
+          <p class="bento-text">
+            Pri otprilike 10<sup>4</sup> voxela zaslon crta linije i točke — kocke, tekst, obrise — a usko grlo je skener, ne voxel. Puni bi volumen tražio sto puta veću brzinu adresiranja. Rijetki izgled posljedica je fizike, a ne stilski izbor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Retraction -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Rezultat koji smo bacili</span>
+        <h2 class="display-md section-title">Dio koji najviše znači</h2>
+        <p class="section-description" style="max-width: 100%;">
+          U jednom je trenutku radijacijsko-hidrodinamički proračun prekrasno reproducirao krivulju svjetlosti stvarne iskre u zraku — točno onakav grafikon oko kojeg se gradi cijelo poglavlje. Bio je pogrešan.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-bug"></i>
+          </div>
+          <h3 class="heading-md mb-3">Poklapanje je bilo posljedica greške</h3>
+          <p class="bento-text mb-4">
+            Rješavač nije čuvao energiju. Nakon ispravne izrade lažni je faktor pojačanja pao s 1407&times; na 1,4&times;, a s njim se srušilo i ono prekrasno slaganje. Stvarni je sjaj trebalo pripisati posve drugoj fizici.
+          </p>
+          <p class="bento-text">
+            Zaključak je povučen, a ne branjen. U radu stoji opisan onakvim kakav je bio.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-ban"></i>
+          </div>
+          <h3 class="heading-md mb-3">Slijepa ulica, objavljena namjerno</h3>
+          <p class="bento-text mb-4">
+            Postoji primamljiv prečac — preskočiti plazmu, uzeti jeftine laserske pokazivače i pustiti da prašina rasprši svjetlost u točku. Izračunato je i ne može raditi: raspršenje je linearno, pa zraka svijetli cijelim svojim putem umjesto u jednoj točki.
+          </p>
+          <p class="bento-text">
+            Taj je neuspjeh poučan — upravo je zato nelinearni plazmeni pristup ispravan. Bolje je slijepu ulicu objaviti nego je potiho izostaviti.
+          </p>
+        </div>
+      </div>
+
+      <p class="pullquote">
+        Simulacijska kampanja koja nikad ništa ne povuče nije pažljiva — <em>ona je neoboriva.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- Why It's Here -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2 gap-4" style="align-items: center;">
+        <div>
+          <span class="section-label">Zašto je ovo u našim referencama</span>
+          <h2 class="display-md section-title mb-4">Metoda je proizvod</h2>
+          <p class="body-lg text-secondary mb-4">
+            Poanta nije hologram. Poanta je da je tech lead koji nije fizičar plazme izgradio sustav koji je proizveo strogu, unakrsno provjerenu fizikalnu studiju — jer je znanje o području nosio provjeravač, a ne graditelj.
+          </p>
+          <p class="text-secondary">
+            To je ista disciplina koju donosimo u rad s klijentima: generiranje je jeftino, pa prednost živi u skeli oko njega — podatkovnom ugovoru, podrijetlu rezultata, neovisnosti o dobavljaču i provjeravaču koji mjeri ono do čega Vam je stvarno stalo. U svemu što gradimo prednost je u onome što provjerava, a ne u onome što generira. Ovo je ta teza dokazana na najtežem mogućem mjestu.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <h3 class="heading-md mb-3">Što se prenosi u Vaše područje</h3>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Ponovljiva petlja agenata nad mnogo alata, a ne jednokratan prompt
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Provjera na izlazu, da sustav sam provjeri svoj rad prije nego što mu povjerujete
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Potpuno podrijetlo — svaki se rezultat prati do točnih ulaza i koda
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Neovisnost o dobavljaču po dizajnu, uz lokalnu zamjenu
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Poštenje da se povuče ono što ne preživi provjeru
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bento-card mt-4">
+        <h3 class="heading-md mb-3">Otvoreno i provjerljivo</h3>
+        <p class="bento-text">
+          Cijeli rukopis, LaTeX izvor, simulacijska stanica i svaka definicija kontejnera javni su — kod pod licencom MIT, rad i grafike pod CC&nbsp;BY&nbsp;4.0. Svaki je kvantitativni rezultat unakrsno provjeren s objavljenom literaturom ili analitičkim graničnim izrazom, uz navedenu nesigurnost. Ondje gdje postoji zatvoreni oblik, izračunati se broj s njim uspoređuje: polarizabilnost dušika unutar 1,7% od referentne, polje proboja koje vraća udžbeničku vrijednost, maserski prag pogođen do strojne preciznosti. Ništa od toga ne morate uzeti na vjeru.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Imate područje s gotovim rješenjima za provjeru?</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 640px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          Ako Vaše područje ima mjerenja s kojima se rezultat može usporediti — simulator, specifikaciju, provjerenu istinu — može se staviti iza petlje agenata koja provjerava. To je ono što gradimo. Prvo pročitajte studiju, pa razgovarajmo o Vašem.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
+          <a href="https://github.com/LumiVerseHR/air-laser-physics" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fab fa-github"></i>
+            Istražite repozitorij
+          </a>
+          <a href="/hr/#contact" class="btn btn-secondary">
+            Pokrenite projekt
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/hr/" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI alati koji ljude čine nezaustavljivima. Sjedište u Zagrebu, klijenti diljem svijeta.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Usluge</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/#services" class="footer-link">Razvoj proizvoda</a></li>
+            <li><a href="/hr/#services" class="footer-link">Tehnološko savjetovanje</a></li>
+            <li><a href="/hr/#services" class="footer-link">AI strategija</a></li>
+            <li><a href="/hr/#services" class="footer-link">Automatizacija procesa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Reference</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/moj-kolega" class="footer-link">Moj Kolega</a></li>
+            <li><a href="/hr/titlomat" class="footer-link">Titlomat</a></li>
+            <li><a href="/hr/aimito" class="footer-link">The Aimito</a></li>
+            <li><a href="/hr/mojkraj" class="footer-link">MOJ KRAJ.</a></li>
+            <li><a href="/hr/barcoder" class="footer-link">Barcoder</a></li>
+            <li><a href="/hr/rentalica" class="footer-link">Rentalica</a></li>
+            <li><a href="/hr/overserved" class="footer-link">Overserved</a></li>
+            <li><a href="/hr/tvrtko" class="footer-link">Tvrtko</a></li>
+            <li><a href="/hr/bridj" class="footer-link">Bridj</a></li>
+            <li><a href="/hr/country-guides" class="footer-link">Country Guides</a></li>
+            <li><a href="/hr/army-adria" class="footer-link">ARMY Adria</a></li>
+            <li><a href="/hr/pitaj-lider" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="/hr/lider-pdf-archive" class="footer-link">Lider Arhiva</a></li>
+            <li><a href="/hr/lider-translations" class="footer-link">Lider Prijevodi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kontakt</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Pošaljite nam e-mail</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 LumiVerse d.o.o. Sva prava pridržana.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Moj Kolega AI assistant widget -->
+    <script src="https://widget.mojkolega.hr/embed.js" data-agent="demo-agent-www-lumiverse-hr-clwyqg" data-key="kol_114e846b83c8bafdce937764d1a004cb" defer></script>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
+</html>

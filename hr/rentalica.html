@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.lumiverse.hr/hr/rentalica">
+  <link rel="alternate" hreflang="en" href="https://www.lumiverse.hr/rentalica.html">
+  <link rel="alternate" hreflang="hr" href="https://www.lumiverse.hr/hr/rentalica">
+  <link rel="alternate" hreflang="x-default" href="https://www.lumiverse.hr/rentalica.html">
+  <title>Rentalica - prepisivanje sustava starog deset godina | LumiVerse</title>
+  <meta name="description" content="Rent-a-car sustav star deset godina prepisan s PHP-a 5.6 u moderan multi-tenant SaaS: prvo istovjetnost, provjerena migracija, uvježbani prelazak.">
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Rentalica - prepisivanje sustava starog deset godina | LumiVerse">
+  <meta property="og:description" content="Rent-a-car sustav star deset godina prepisan s PHP-a 5.6 u moderan multi-tenant SaaS: prvo istovjetnost, provjerena migracija, uvježbani prelazak.">
+  <meta property="og:url" content="https://www.lumiverse.hr/hr/rentalica">
+  <meta property="og:image" content="https://www.lumiverse.hr/images/og/rentalica.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rentalica - prepisivanje sustava starog deset godina | LumiVerse">
+  <meta name="twitter:description" content="Rent-a-car sustav star deset godina prepisan s PHP-a 5.6 u moderan multi-tenant SaaS: prvo istovjetnost, provjerena migracija, uvježbani prelazak.">
+  <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/rentalica.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(255, 77, 77, 0.12), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(255, 143, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 77, 77, 0.1);
+      border: 1px solid rgba(255, 77, 77, 0.2);
+      border-radius: 100px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .hero-image-showcase-inner {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 77, 77, 0.5), transparent);
+    }
+
+    .hero-image-showcase-inner img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .role-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .role-card:hover::before {
+      opacity: 1;
+    }
+
+    .role-number {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .role-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 143, 77, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .role-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Before/after stack comparison */
+    .stack-table {
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .stack-row {
+      display: grid;
+      grid-template-columns: 180px 1fr 1fr;
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stack-row:last-child {
+      border-bottom: none;
+    }
+
+    .stack-row-head {
+      background: rgba(255, 255, 255, 0.02);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .stack-cell {
+      padding: 1.25rem 1.5rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      border-left: 1px solid var(--glass-border);
+    }
+
+    .stack-cell:first-child {
+      border-left: none;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .stack-cell-old {
+      color: var(--text-muted);
+    }
+
+    .stack-cell-new {
+      color: var(--text-secondary);
+      background: rgba(255, 77, 77, 0.03);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .stack-row {
+        grid-template-columns: 1fr;
+      }
+
+      .stack-row-head {
+        display: none;
+      }
+
+      .stack-cell {
+        border-left: none;
+        border-top: 1px solid var(--glass-border);
+        padding: 1rem 1.25rem;
+      }
+
+      .stack-cell:first-child {
+        border-top: none;
+        padding-bottom: 0.5rem;
+      }
+
+      .stack-cell-old::before {
+        content: 'Before — ';
+        color: var(--text-muted);
+        font-weight: 600;
+      }
+
+      .stack-cell-new::before {
+        content: 'After — ';
+        color: var(--accent);
+        font-weight: 600;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+  <script src="/showcase.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Početna",
+      "item": "https://www.lumiverse.hr/hr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Reference",
+      "item": "https://www.lumiverse.hr/hr/#work"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Rentalica",
+      "item": "https://www.lumiverse.hr/hr/rentalica"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/hr/" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="/hr/#services" class="nav-link">Usluge</a></li>
+        <li><a href="/hr/#work" class="nav-link">Reference</a></li>
+        <li><a href="/hr/#research" class="nav-link">Istraživanje</a></li>
+        <li><a href="/hr/#product" class="nav-link">Proizvod</a></li>
+        <li><a href="/hr/#about" class="nav-link">O nama</a></li>
+        <li><a href="/hr/#contact" class="nav-link">Kontakt</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-lang">
+          <a href="/rentalica" hreflang="en" lang="en" title="English version">EN</a>
+          <span aria-current="true">HR</span>
+        </div>
+        <a href="/hr/#contact" class="nav-cta">Razgovarajmo</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Otvori izbornik">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/hr/#services" class="mobile-nav-link">Usluge</a>
+    <a href="/hr/#work" class="mobile-nav-link">Reference</a>
+    <a href="/hr/#research" class="mobile-nav-link">Istraživanje</a>
+    <a href="/hr/#product" class="mobile-nav-link">Proizvod</a>
+    <a href="/hr/#about" class="mobile-nav-link">O nama</a>
+    <a href="/hr/#contact" class="mobile-nav-link">Kontakt</a>
+    <div class="mobile-nav-lang">
+      <a href="/rentalica" hreflang="en" lang="en">EN</a>
+      <span aria-current="true">HR</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/hr/">Početna</a>
+        <span>/</span>
+        <a href="/hr/#work">Reference</a>
+        <span>/</span>
+        <span>Rentalica</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-arrows-rotate"></i>
+        Naš proizvod &middot; Modernizacija naslijeđenog sustava
+      </div>
+
+      <h1 class="display-lg mb-4">Rentalica</h1>
+      <p class="body-lg text-secondary" style="max-width: 740px;">
+        Rent-a-car back-office koji je više od deset godina radio na PHP-u 5.6, prepisan kao moderan multi-tenant SaaS — s desetljećem rezervacija, ugovora i dokumenata prenesenim bez ijednog zahtjeva korisniku da resetira lozinku. A onda odveden mnogo dalje nego što je stari sustav ikad mogao.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://rentalica.lumiverse.hr" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i>
+          Pogledajte Rentalicu
+        </a>
+        <a href="/hr/#contact" class="btn btn-secondary">
+          Modernizirajte svoj sustav
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <div class="showcase" data-showcase data-interval="5200">
+            <img class="showcase-slide" src="/images/rentalica-1.jpg" alt="Naslovnica Rentalice - koje vozilo zarađuje, a koje Vas potiho košta">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/rentalica-2.jpg" alt="Pregled mogućnosti Rentalice za upravitelje voznih parkova">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/rentalica-3.jpg" alt="AI asistent Rentalice odgovara na pitanje o voznom parku na hrvatskom, uz prikazan provjereni SQL upit samo za čitanje">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">10+</div>
+          <div class="stat-label">Godina migriranih produkcijskih podataka</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">22</div>
+          <div class="stat-label">Tablica prepisanih na PostgreSQL</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">0</div>
+          <div class="stat-label">Potrebnih resetiranja lozinke</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">102</div>
+          <div class="stat-label">Automatiziranih testova koji čuvaju prepisani sustav</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Starting Point -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 760px; margin: 0 auto 4rem;">
+        <span class="section-label">Polazna točka</span>
+        <h2 class="display-md section-title">Softver koji je i dalje radio</h2>
+        <p class="section-description" style="max-width: 100%;">
+          FlexiRent nije bio pokvaren. Desetljeće je svaki dan vodio stvarnu rent-a-car tvrtku. Samo je stajao na stacku s kojeg je svijet otišao — a to je teži problem od prepisivanja nečega što nitko ne koristi.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-triangle-exclamation"></i>
+          </div>
+          <h3 class="heading-md mb-3">Što je radilo</h3>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-minus"></i></span>
+              PHP 5.6 na Ubuntuu 14.04 — oboje davno bez podrške
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-minus"></i></span>
+              Vlastiti PHP MVC framework, oko 55 tisuća redaka
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-minus"></i></span>
+              MySQL 5.5 bez stranih ključeva — veze se održavaju u kodu aplikacije
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-minus"></i></span>
+              JSON skriven u TEXT stupcima, dopuštenja spremljena kao CSV
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-minus"></i></span>
+              440 MB ugovora i skenova na disku jednog poslužitelja
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-clock-rotate-left"></i>
+          </div>
+          <h3 class="heading-md mb-3">Zašto ovakva prepisivanja propadaju</h3>
+          <p class="bento-text mb-4">
+            Uobičajen je pristup pročitati stari kod, pogađati poslovna pravila i isporučiti nešto što izgleda bolje, ali potiho griješi u detaljima. Korisnik to primijeti u drugom tjednu, kad ugovor ispiše krivi polog.
+          </p>
+          <p class="bento-text">
+            Desetljeće ponašanja u produkciji ne nalazi se u kodu. Ono je u rubnim slučajevima, zaobilaznim rješenjima i brojkama koje ljudi provjeravaju svako jutro. To je ono što prepisivanje mora prvo sačuvati.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Domain Experience -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="grid grid-2 gap-4" style="align-items: center;">
+        <div>
+          <span class="section-label">Zašto mi</span>
+          <h2 class="display-md section-title mb-4">Original smo napisali mi</h2>
+          <p class="body-lg text-secondary mb-4">
+            FlexiRent nismo naslijedili od nekoga drugog. Izradio ga je LumiVerse, a zatim ga više od deset godina održavao u produkciji, dok ga je stvarni upravitelj voznog parka koristio svaki dan.
+          </p>
+          <p class="text-secondary">
+            To je deset godina gledanja kako se posao stvarno odvija: koji se ekrani otvaraju prvi ujutro, koja polja uvijek ostaju prazna, što djelatnik radi kad se kombi u nedjelju vrati oštećen. Ništa od toga nigdje nije zapisano. Zato je prepisivanje moglo preskočiti fazu otkrivanja i krenuti ravno u izradu.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <h3 class="heading-md mb-3">Poznavanje domene, a ne nagađanje</h3>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Specifičnosti hrvatskog najma — kontrolna znamenka OIB-a, AO i kasko osiguranje, datumi registracije i tehničkog pregleda
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Pravila cijena koja uključuju podjelu s partnerima i provizije
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              PDF ugovori koji se moraju ispisivati točno kao i prije
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Tijekovi rada preslikani dovoljno vjerno da prelazak ne traži ponovnu edukaciju
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Process -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 760px; margin: 0 auto 4rem;">
+        <span class="section-label">Proces</span>
+        <h2 class="display-md section-title">Prvo istovjetnost, pa ideje</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Pravilo koje je ovo učinilo sigurnim: mijenjaj tehnologiju ili mijenjaj proizvod, nikad oboje odjednom. Novi je sustav morao biti dokazivo istovjetan prije nego što je smio biti bolji.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-number">01</div>
+          <div class="role-icon">
+            <i class="fas fa-box-archive"></i>
+          </div>
+          <h3 class="role-title">Snimiti sve, ne promijeniti ništa</h3>
+          <p class="role-text">
+            Potpuna sigurnosna kopija produkcije, samo za čitanje: 2.855 datoteka, cijela baza, konfiguracija web poslužitelja. Živi poslužitelj nikad nije mijenjan. Svaka se kasnija odluka mogla provjeriti na zamrznutoj, provjerenoj kopiji.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">02</div>
+          <div class="role-icon">
+            <i class="fab fa-docker"></i>
+          </div>
+          <h3 class="role-title">Pokrenuti staru aplikaciju lokalno</h3>
+          <p class="role-text">
+            PHP 5.6, Apache i MySQL zapakirani u Docker da naslijeđeni sustav radi na prijenosniku. Ne da ga se održi na životu — nego da postoji referentna izvedba za usporedbu, ekran po ekran, broj po broj.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">03</div>
+          <div class="role-icon">
+            <i class="fas fa-magnifying-glass-chart"></i>
+          </div>
+          <h3 class="role-title">Najprije napisati analizu</h3>
+          <p class="role-text">
+            Svaka tablica preslikana na ciljni entitet, svaka implicitna veza dokumentirana, svaki rizik popisan prije ijednog retka novog koda: JSON blobovi, neispravni nul-datumi, CSV dopuštenja, generator PDF-ova.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">04</div>
+          <div class="role-icon">
+            <i class="fas fa-clone"></i>
+          </div>
+          <h3 class="role-title">Prepisati do istovjetnosti</h3>
+          <p class="role-text">
+            Vjerna replika na novom stacku — isti ekrani, isti brojevi, nijedna nova ideja — označena i zamrznuta kao točka povratka. Poboljšanja nisu bila dopuštena dok se ta verzija nije poklopila sa starom.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">05</div>
+          <div class="role-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3 class="role-title">Migrirati, pa dokazati</h3>
+          <p class="role-text">
+            Iz MySQL-a u PostgreSQL: JSON blobovi normalizirani, dodani pravi strani ključevi, neispravni datumi pretvoreni. Zatim su automatske provjere integriteta između baza uspoređivale broj redaka i zapise s izvorom dok se nisu poklopili.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">06</div>
+          <div class="role-icon">
+            <i class="fas fa-right-left"></i>
+          </div>
+          <h3 class="role-title">Uvježbati prelazak</h3>
+          <p class="role-text">
+            Zapisani postupak s povratkom na staro u svakoj fazi: zamrzni staru aplikaciju, ponovno migriraj svježe podatke, provjeri s brojkama prije zamrzavanja, pa prebaci. Uvježbavanje u cijelosti, bez diranja produkcije.
+          </p>
+        </div>
+      </div>
+
+      <div class="bento-card mt-5">
+        <h3 class="heading-md mb-3">Detalj zbog kojeg je prelazak prošao bezbolno</h3>
+        <p class="bento-text">
+          Naslijeđeni je sustav lozinke spremao kao bcrypt sažetke. Bcrypt je bcrypt — novi backend te iste sažetke provjerava izravno. Svaki je korisnik zadržao točno ono korisničko ime i lozinku koje je već imao. Bez e-mailova za resetiranje, bez poziva podršci i bez poruke „migrirali smo, evo Vaših novih podataka za prijavu". Datoteke iz starog sustava prenesene su na isti način: isti dokumenti, iste poveznice, i dalje se preuzimaju.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before / After -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">Prije i poslije</span>
+        <h2 class="display-md section-title">Što se zapravo promijenilo</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Ista poslovna pravila. Posve drukčiji temelj.
+        </p>
+      </div>
+
+      <div class="stack-table">
+        <div class="stack-row stack-row-head">
+          <div class="stack-cell">Sloj</div>
+          <div class="stack-cell">Naslijeđeno</div>
+          <div class="stack-cell">Rentalica</div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-cell">Izvršno okruženje</div>
+          <div class="stack-cell stack-cell-old">PHP 5.6 na Ubuntuu 14.04, oboje bez podrške</div>
+          <div class="stack-cell stack-cell-new">Python i Node u kontejnerima, aktualna izdanja</div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-cell">Backend</div>
+          <div class="stack-cell stack-cell-old">Vlastiti PHP MVC framework, oko 55 tisuća redaka za održavanje</div>
+          <div class="stack-cell stack-cell-new">FastAPI + SQLAlchemy 2.0, tipizirano i automatski dokumentirano</div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-cell">Baza podataka</div>
+          <div class="stack-cell stack-cell-old">MySQL 5.5, bez stranih ključeva, JSON u TEXT stupcima</div>
+          <div class="stack-cell stack-cell-new">PostgreSQL sa stvarnim ograničenjima i JSONB-om ondje gdje mu je mjesto</div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-cell">Frontend</div>
+          <div class="stack-cell stack-cell-old">Bootstrap 3 administratorska tema, generirana na poslužitelju</div>
+          <div class="stack-cell stack-cell-new">Next.js 15 i React 19 s generiranim tipiziranim API klijentom</div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-cell">Prijava</div>
+          <div class="stack-cell stack-cell-old">Vlastite datoteke sesija, dopuštenja kao niz odvojen zarezima</div>
+          <div class="stack-cell stack-cell-new">Sesije u httpOnly kolačićima, provjera uloga na svakom zahtjevu</div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-cell">Višekorisničkost</div>
+          <div class="stack-cell stack-cell-old">Jedna tvrtka, jedna instalacija</div>
+          <div class="stack-cell stack-cell-new">Multi-tenant, s odvajanjem koje se provodi na razini upita</div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-cell">Testovi</div>
+          <div class="stack-cell stack-cell-old">Nema ih</div>
+          <div class="stack-cell stack-cell-new">102 backend testa i pokrivenost end-to-end testovima u pregledniku</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- After Parity -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+        <span class="section-label">Nakon istovjetnosti</span>
+        <h2 class="display-md section-title">Nismo stali na kopiji</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Vjerna je replika bila sigurnosni uvjet, a ne cilj. Kad su podaci bili dokazani, a stari sustav i dalje stajao kao točka povratka, novi se temelj počeo isplaćivati — mogućnostima koje PHP 5.6 nikad ne bi ponio.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="bento-title">Analitika koja odgovara na jedino pitanje koje je važno</h3>
+          <p class="bento-text">
+            Većina softvera za vozne parkove prikazuje prihod. Rentalica prikazuje ono što ostane. Svaki se trošak unosi jednom, s razdobljem — jednokratno, mjesečno ili godišnje — pa se raspoređuje po mjesecima koje stvarno pokriva i tereti vozilo koje ga je izazvalo. Leasing, AO i kasko, registracija, gume, servis i gorivo slijeću na pravi kombi.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Neto rezultat po vozilu — brojka koju prije nitko nije imao
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Prikaz praga isplativosti: pokriva li ovomjesečni prihod vozni park?
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Tjedni sažetak: vozila u minusu, neiskorištena imovina, police koje ističu, nenaplaćeni najmovi
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Sastav voznog parka na bilo koji datum u prošlosti, za planiranje kapaciteta
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Podjela s partnerima i provizije uračunate u samu matematiku
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-file-invoice"></i>
+          </div>
+          <h3 class="bento-title">Računi koji sami ispune svoj obrazac</h3>
+          <p class="bento-text">
+            Fotografirajte račun ili potvrdu s benzinske. Snimka se čita na licu mjesta, a zatim se izvlače iznos, datum, izdavatelj, OIB dobavljača, broj računa i registracijska oznaka, predlaže se kategorija troška i pronalazi vozilo. Uključujući hrvatski zapis decimala. Ništa se ne sprema dok čovjek ne potvrdi.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3 class="bento-title">Asistent koji govori hrvatski i SQL</h3>
+          <p class="bento-text">
+            Pitajte na običnom hrvatskom koji putnički kombi mjesečno prijeđe najmanje kilometara i dobit ćete tri stvari: odgovor, tablicu iz koje je došao i točan upit koji ga je proizveo. Ništa nije skriveno iza oblačića za chat — korisnik može provjeriti rad prije nego što mu povjeruje.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Pitanja na hrvatskom, odgovori s prikazanim upitom
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Pitanja o dobiti idu u pravi obračun dobiti i gubitka, nikad se ne procjenjuju
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Približno pronalaženje vozila, pa i pogreška u tipkanju nađe pravi kombi
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Trajne upute — recite jednom da je auto privatan i zapamtit će to
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-id-card"></i>
+          </div>
+          <h3 class="bento-title">Skeniranje dokumenata, na vlastitoj infrastrukturi</h3>
+          <p class="bento-text">
+            Vozačke dozvole, osobne iskaznice, putovnice i prometne dozvole razvrstava i čita OCR servis na vlastitim poslužiteljima, pa snimke ostaju na Vašoj infrastrukturi. Strojno čitljive zone obrađuju se s ICAO kontrolnim znamenkama — čisto očitanje samo sebe potvrđuje.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-folder-tree"></i>
+          </div>
+          <h3 class="bento-title">Arhiva dokumenata dostojna imena</h3>
+          <p class="bento-text">
+            Svaka priložena datoteka slijeće na jedno mjesto i pretraživa je po onome što u njoj piše, jer se izdvojeni tekst sprema uz datoteku. Tablica poveznica bilježi uz što je svaki dokument vezan — pa možete iz dokumenta natrag do njegova vozila, troška ili ugovora, i pronaći one koji nisu vezani ni uz što.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-address-book"></i>
+          </div>
+          <h3 class="bento-title">Kontakti, izrasli u CRM</h3>
+          <p class="bento-text">
+            Jedan imenik za kupce, tvrtke i partnere, razvrstan grupama i oznakama. Svaki kontakt otvara cijeli profil: svaki najam, svaki ugovor, što još duguje, uz povezane zadatke i dokumente. Brojevi dozvola, kategorije i datumi isteka stoje na samom zapisu.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-list-check"></i>
+          </div>
+          <h3 class="bento-title">Posao koji se ne drži u nečijoj glavi</h3>
+          <p class="bento-text">
+            Popisi zadataka po osobi i zajednički za tim, svaki zadatak prikvačen uz vozilo, rezervaciju ili kupca na koje se odnosi, s nositeljem, prioritetom i rokom. Istek registracije, osiguranja i tehničkog pregleda sam podiže podsjetnik, a da se itko ne mora sjetiti pogledati.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Guardrails -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Teški dio</span>
+        <h2 class="display-md section-title">Pustiti AI blizu stvarne baze</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Asistent koji piše upite nad živim poslovanjem vrijedan je povjerenja onoliko koliko i ono što stoji između njega i podataka. Ova se ograničenja provode u kodu i u PostgreSQL-u — a ne uljudno traže u promptu.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-number">01</div>
+          <div class="role-icon">
+            <i class="fas fa-filter-circle-xmark"></i>
+          </div>
+          <h3 class="role-title">Na popisu dopuštenih, ne na povjerenje</h3>
+          <p class="role-text">
+            Svaka se generirana naredba raščlanjuje u sintaksno stablo i popisuje se svaka tablica koje se dotiče — uključujući one zakopane u podupitima i spojevima preko zareza. Sve izvan odobrenog skupa odbija se prije nego što dođe do baze. Računi djelatnika i sažeci lozinki trajno su izvan dosega.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">02</div>
+          <div class="role-icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h3 class="role-title">Odvajanje koje se ne da nagovoriti</h3>
+          <p class="role-text">
+            Prije izvršavanja svaka se navedena tablica prepisuje u filtrirani pogled na retke tog korisnika, pa se neprecizan upit razrješava na prave podatke po konstrukciji, a ne po dobrom ponašanju. Zajednički tablični izrazi odbijaju se u startu — inače bi mogli redefinirati taj filtar.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">03</div>
+          <div class="role-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3 class="role-title">Samo za čitanje, na razini baze</h3>
+          <p class="role-text">
+            Upiti se izvršavaju unutar transakcije samo za čitanje, s vremenskim ograničenjem naredbe i tvrdim ograničenjem broja redaka, a ta se transakcija uvijek poništava. Upis ne odbija modelova bolja prosudba — on se na toj vezi jednostavno ne može dogoditi.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Zaglavili ste sa sustavom koji ne možete ugasiti?</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 640px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          Ako je softver koji vodi Vaše poslovanje star, nedokumentiran i prevažan da bi se smio pokvariti, to je problem koji rješavamo. Prvo istovjetnost, dokazano netaknuti podaci i prelazak koji se može poništiti.
+        </p>
+        <div class="capacity-note" style="position: relative; z-index: 1;">
+          <span class="capacity-badge"><i class="fas fa-circle"></i> Popunjeni smo za nove razvojne projekte</span>
+          <p>Trenutačno smo popunjeni za nove razvojne projekte i embedded angažmane — pišite nam na <a href="mailto:tihomir.jauk@lumiverse.hr">tihomir.jauk@lumiverse.hr</a> pa Vas kontaktiramo čim se oslobodimo. Zanima Vas neki od naših proizvoda — Tvrtko.ai, Moj Kolega, Titlomat i ostali? <strong>Oni su dostupni odmah</strong> — javite se i pomoći ćemo Vam da krenete.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/hr/" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI alati koji ljude čine nezaustavljivima. Sjedište u Zagrebu, klijenti diljem svijeta.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Usluge</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/#services" class="footer-link">Razvoj proizvoda</a></li>
+            <li><a href="/hr/#services" class="footer-link">Tehnološko savjetovanje</a></li>
+            <li><a href="/hr/#services" class="footer-link">AI strategija</a></li>
+            <li><a href="/hr/#services" class="footer-link">Automatizacija procesa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Reference</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/moj-kolega" class="footer-link">Moj Kolega</a></li>
+            <li><a href="/hr/titlomat" class="footer-link">Titlomat</a></li>
+            <li><a href="/hr/aimito" class="footer-link">The Aimito</a></li>
+            <li><a href="/hr/mojkraj" class="footer-link">MOJ KRAJ.</a></li>
+            <li><a href="/hr/barcoder" class="footer-link">Barcoder</a></li>
+            <li><a href="/hr/rentalica" class="footer-link">Rentalica</a></li>
+            <li><a href="/hr/overserved" class="footer-link">Overserved</a></li>
+            <li><a href="/hr/tvrtko" class="footer-link">Tvrtko</a></li>
+            <li><a href="/hr/bridj" class="footer-link">Bridj</a></li>
+            <li><a href="/hr/country-guides" class="footer-link">Country Guides</a></li>
+            <li><a href="/hr/army-adria" class="footer-link">ARMY Adria</a></li>
+            <li><a href="/hr/pitaj-lider" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="/hr/lider-pdf-archive" class="footer-link">Lider Arhiva</a></li>
+            <li><a href="/hr/lider-translations" class="footer-link">Lider Prijevodi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kontakt</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Pošaljite nam e-mail</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 LumiVerse d.o.o. Sva prava pridržana.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Moj Kolega AI assistant widget -->
+    <script src="https://widget.mojkolega.hr/embed.js" data-agent="demo-agent-www-lumiverse-hr-clwyqg" data-key="kol_114e846b83c8bafdce937764d1a004cb" defer></script>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
+</html>

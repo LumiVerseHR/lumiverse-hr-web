@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.lumiverse.hr/hr/overserved">
+  <link rel="alternate" hreflang="en" href="https://www.lumiverse.hr/overserved">
+  <link rel="alternate" hreflang="hr" href="https://www.lumiverse.hr/hr/overserved">
+  <link rel="alternate" hreflang="x-default" href="https://www.lumiverse.hr/overserved">
+  <title>Overserved - dokle razvoj uz AI zaista stiže | LumiVerse</title>
+  <meta name="description" content="Satirična AI tower-defense igra - 7 svjetova, 140 razina, više od 600 generiranih grafika, izrađena u tri tjedna - iskren test dokle razvoj uz AI stiže.">
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Overserved - dokle razvoj uz AI zaista stiže | LumiVerse">
+  <meta property="og:description" content="Satirična AI tower-defense igra - 7 svjetova, 140 razina, više od 600 generiranih grafika, izrađena u tri tjedna - iskren test dokle razvoj uz AI stiže.">
+  <meta property="og:url" content="https://www.lumiverse.hr/hr/overserved">
+  <meta property="og:image" content="https://www.lumiverse.hr/images/og/overserved.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Overserved - dokle razvoj uz AI zaista stiže | LumiVerse">
+  <meta name="twitter:description" content="Satirična AI tower-defense igra - 7 svjetova, 140 razina, više od 600 generiranih grafika, izrađena u tri tjedna - iskren test dokle razvoj uz AI stiže.">
+  <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/overserved.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(255, 77, 77, 0.12), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(255, 143, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 77, 77, 0.1);
+      border: 1px solid rgba(255, 77, 77, 0.2);
+      border-radius: 100px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .hero-image-showcase-inner {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 77, 77, 0.5), transparent);
+    }
+
+    .hero-image-showcase-inner img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .role-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .role-card:hover::before {
+      opacity: 1;
+    }
+
+    .role-number {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .role-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 143, 77, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .role-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Devlog entry list */
+    .devlog-list {
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .devlog-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--glass-border);
+      transition: background 0.3s ease;
+    }
+
+    .devlog-item:last-child {
+      border-bottom: none;
+    }
+
+    .devlog-item:hover {
+      background: rgba(255, 77, 77, 0.03);
+    }
+
+    .devlog-date {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding-top: 0.15rem;
+    }
+
+    .devlog-title {
+      color: var(--text-primary);
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+
+      .devlog-item {
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+        padding: 1.25rem 1.5rem;
+      }
+
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+  <script src="/showcase.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Početna",
+      "item": "https://www.lumiverse.hr/hr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Reference",
+      "item": "https://www.lumiverse.hr/hr/#work"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Overserved",
+      "item": "https://www.lumiverse.hr/hr/overserved"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/hr/" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="/hr/#services" class="nav-link">Usluge</a></li>
+        <li><a href="/hr/#work" class="nav-link">Reference</a></li>
+        <li><a href="/hr/#research" class="nav-link">Istraživanje</a></li>
+        <li><a href="/hr/#product" class="nav-link">Proizvod</a></li>
+        <li><a href="/hr/#about" class="nav-link">O nama</a></li>
+        <li><a href="/hr/#contact" class="nav-link">Kontakt</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-lang">
+          <a href="/overserved" hreflang="en" lang="en" title="English version">EN</a>
+          <span aria-current="true">HR</span>
+        </div>
+        <a href="/hr/#contact" class="nav-cta">Razgovarajmo</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Otvori izbornik">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/hr/#services" class="mobile-nav-link">Usluge</a>
+    <a href="/hr/#work" class="mobile-nav-link">Reference</a>
+    <a href="/hr/#research" class="mobile-nav-link">Istraživanje</a>
+    <a href="/hr/#product" class="mobile-nav-link">Proizvod</a>
+    <a href="/hr/#about" class="mobile-nav-link">O nama</a>
+    <a href="/hr/#contact" class="mobile-nav-link">Kontakt</a>
+    <div class="mobile-nav-lang">
+      <a href="/overserved" hreflang="en" lang="en">EN</a>
+      <span aria-current="true">HR</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/hr/">Početna</a>
+        <span>/</span>
+        <a href="/hr/#work">Reference</a>
+        <span>/</span>
+        <span>Overserved</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-gamepad"></i>
+        Naš projekt &middot; Igra izrađena uz AI
+      </div>
+
+      <h1 class="display-lg mb-4">Overserved</h1>
+      <p class="body-lg text-secondary" style="max-width: 740px;">
+        Satirični tower defense na temu AI-ja: korisnike ne gađate, nego ih uslužujete. Sedam tržišta, 140 razina, više od 600 generiranih grafika, izrađeno u otprilike tri tjedna — kao iskren test dokle razvoj uz AI zaista stiže.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://overserved.lumiverse.hr/play/" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-play"></i>
+          Igrajte u pregledniku
+        </a>
+        <a href="https://overserved.lumiverse.hr/devlog/" target="_blank" rel="noopener" class="btn btn-secondary">
+          Pročitajte devlog
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <div class="showcase" data-showcase data-interval="5200">
+            <img class="showcase-slide" src="/images/overserved-1.jpg" alt="Overserved u igri - izometrijski lijevak od prijave do izlaza, s generiranim ukrasima i paletom kula">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/overserved-2.jpg" alt="Odabir tržišta u kampanji - sedam svjetova, svaki sa svojom lećom pameti, privatnosti i dojma">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/overserved-3.jpg" alt="Strip-kadar iz priče Overserveda - generirana grafika s uvodnom naracijom">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">3 tj.</div>
+          <div class="stat-label">Od praznog repozitorija do igrive igre</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">600+</div>
+          <div class="stat-label">Generiranih grafika, svaki prompt zabilježen</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">140</div>
+          <div class="stat-label">Razina, svaku podesio bot koji ju je odigrao</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">22</div>
+          <div class="stat-label">Zapisa u devlogu, objavljenih tijekom izrade</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Experiment -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Eksperiment</span>
+        <h2 class="display-md section-title">Dokle zaista stiže?</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Igra je brutalan testni slučaj. Treba joj kod koji radi, stotine usklađenih grafika, dizajn razina koji ostaje zabavan dvadeset sati i šale koje pogađaju. Promašite u bilo čemu i sve se ruši. Zato smo je napravili i zapisali što se dogodilo.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-flask"></i>
+          </div>
+          <h3 class="heading-md mb-3">Postava</h3>
+          <p class="bento-text mb-4">
+            Jedna osoba, tri tjedna, 580 commitova. Prava igra objavljena na pravom URL-u — ne prototip i ne demo snimka. Kampanja, beskonačno preživljavanje, stablo napretka, baza znanja, spremanje napretka i Android verzija.
+          </p>
+          <p class="bento-text">
+            Svaka odluka, slijepa ulica i vraćanje na staro zapisani su javno, dok su se događali.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-scale-balanced"></i>
+          </div>
+          <h3 class="heading-md mb-3">Pošten odgovor</h3>
+          <p class="bento-text mb-4">
+            Dalje nego što smo očekivali po količini — kod, grafika i razine dolazili su dovoljno brzo da opseg prestane biti ograničenje. Ne toliko daleko po ukusu. AI je znao reći može li se razina preživjeti, ali ne i je li dosadna.
+          </p>
+          <p class="bento-text">
+            Pokazalo se da je zanimljiv posao izrada alata koji čovjeku omogućuju brzu prosudbu — i zatim sama prosudba.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Where AI Did the Work -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 760px; margin: 0 auto 4rem;">
+        <span class="section-label">Gdje je AI odradio posao</span>
+        <h2 class="display-md section-title">Kod, grafika, razine, šale</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Četiri različite vrste rezultata, četiri različita pipelinea — svaki pretvoren u ponovljiv proces, a ne u sretan prompt.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="bento-title">Sama igra</h3>
+          <p class="bento-text">
+            Phaser 3 i TypeScript, oko 17.000 redaka u 54 modula: HUD s dvjema kamerama, matematika izometrijske projekcije, balistika projektila s opadanjem eksplozije po prstenovima polja, generiranje valova, sposobnosti bossova, sustav spremanja, proceduralni zvuk. Provjera tipova mora proći prije svakog pojedinog commita.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Nepromjenjiva pravila igre zapisana kao granice koje AI ne smije prijeći
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Ravnoteža živi u podatkovnim datotekama, nikad u improviziranoj logici scene
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Svaka mukotrpno naučena zamka zabilježena da se ne uči dvaput
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-route"></i>
+          </div>
+          <h3 class="bento-title">140 jedinstvenih putanja</h3>
+          <p class="bento-text">
+            Svaka razina dobiva vlastiti lijevak, generiran skriptom i zamrznut u build. Ulazi se izmjenjuju po sva četiri ruba, najmanji broj zavoja raste kako napredujete, a duljina je ograničena onime što to tržište može obraniti. Build se prekida ako ijedna razina padne ispod svog minimuma.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="bento-title">Više od 600 grafika, jedan pipeline</h3>
+          <p class="bento-text">
+            Kule, korisnici, bossovi, ukrasi, polja, ikone sučelja i strip-kadrovi — sve generirano, pa im je pozadinu uklonio segmentacijski model, obrezano na sadržaj, zabilježeno i ugrađeno. Prompt, sjeme, rezolucija i model za svako generiranje stoje u JSON datoteci u repozitoriju, pa se svaka grafika može ponoviti ili vratiti.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Cijeli je postupak zapisan kao ponovno upotrebljiva vještina, a ne kao navika
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Uklanjanje po boji zamijenjeno AI segmentacijom — prestalo je jesti tirkizni namještaj
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Likovi u četiri smjera izvedeni iz jedne plošne slike, za nekoliko centi
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-earth-asia"></i>
+          </div>
+          <h3 class="bento-title">Sedam svjetova, sedam skupova pravila</h3>
+          <p class="bento-text">
+            SAD, Europa, Kina, Afrika, Zemlja, svemir i odmetnici. Svako tržište nameće leću koja mijenja koliko dobar odgovor vrijedi — u Europi je privatnost kralj, uz obvezni sloj birokracije, a kineski vatrozid cenzurira jeftine odgovore. Iste kule, posve druga zagonetka.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-newspaper"></i>
+          </div>
+          <h3 class="bento-title">Šale</h3>
+          <p class="bento-text">
+            Satirične udarne vijesti između razina, dobacivanja jedva prikrivenih tehnoloških titana kao bossova i kula-chatbot koja pri svakom pogotku izbaci novi samodopadni odgovor. Napisano prema specifikaciji tona, pa je čovjek prosijao one koje su zaista pogodile.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-volume-high"></i>
+          </div>
+          <h3 class="bento-title">Zvuk bez zvučne biblioteke</h3>
+          <p class="bento-text">
+            Glazba i efekti sintetiziraju se u kodu umjesto da se uzorkuju — tema izbornika, klikovi sučelja, pogoci, eksplozije. Ništa za licenciranje, ništa za preuzimanje, a podešava se kao bilo koja druga podatkovna datoteka.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-mobile-screen"></i>
+          </div>
+          <h3 class="bento-title">Radi na mobitelu</h3>
+          <p class="bento-text">
+            Zapakirano za Android, sa zaključanom orijentacijom i uvodnim zaslonom, nakon prolaza za performanse koji je otkrio da vrijeme po sličici troši HUD koji se iscrtava šezdeset puta u sekundi — a ne sama igra.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <img src="/images/overserved-menu.jpg" alt="Glavni izbornik Overserveda s načinima kampanja, preživljavanje, laboratorij za istraživanje, AGI laboratorij i baza znanja">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Bot -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Dio koji nas je iznenadio</span>
+        <h2 class="display-md section-title">Bot koji igra igru</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Podešavanje težine najsporija je petlja u razvoju igara: promijeni broj, odigraj razinu ponovno, pogađaj. Zato je petlja predana automatskom igraču bez sučelja, koji stvarni pogon igre vrti u tijesnoj petlji i javlja koliko je blizu bio porazu.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-number">01</div>
+          <div class="role-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3 class="role-title">Igra kako treba</h3>
+          <p class="role-text">
+            Nije glupa skripta. Kule postavlja po graničnoj pokrivenosti, koristeći stvarni doseg svake kule, teži poljima prema izlazu gdje se propuštanja doista događaju, čita leću tržišta pri kupnji, štedi valutu, gradi laboratorije i troši na nadogradnje — jer stvarni igrač radi sve to, a bot koji to ne radi past će na razinama koje su zapravo dobre.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">02</div>
+          <div class="role-icon">
+            <i class="fas fa-ruler-combined"></i>
+          </div>
+          <h3 class="role-title">Pronašao je stvarne greške</h3>
+          <p class="role-text">
+            Puštanje kroz sve razine otkrilo je probleme koje nikakvo zurenje u tablicu ne bi: zid težine koji je nastao zbog omjera štete i cijene, a ne sirove štete, i bossove koji su prolazili neuslužni jer su kaskali iza vlastite pratnje, pa su kule gađale pratnju.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">03</div>
+          <div class="role-icon">
+            <i class="fas fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="role-title">Onda ih je i osmislio</h3>
+          <p class="role-text">
+            Kad je naučio dobro igrati, ručno podešavanje težine postalo je šum. Dizajn razina predan je njemu: svaki val raste dok ga bot jedva preživi. Svih 140 razina podesilo je nešto što ih je stvarno odigralo, a ne dizajner koji pogađa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Where It Needed a Human -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Druga polovica</span>
+        <h2 class="display-md section-title">Gdje je i dalje trebao čovjek</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Neuspjesi su koristan dio ovog eksperimenta. Svaki je od njih u devlogu, jer referenca koja nabraja samo pobjede ne vrijedi čitati.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-face-rolling-eyes"></i>
+          </div>
+          <h3 class="heading-md mb-3">Uravnoteženo nije isto što i zabavno</h3>
+          <p class="bento-text mb-4">
+            Bot je dokazao da se svaka razina može pobijediti. Nije mogao prepoznati da su neke dosadne. Ubačene su tri namjerno prejake kule i nije ih ni primijetio — ekonomija ih je progutala. „Može se preživjeti" mjerljivo je, „vrijedi dvadeset minuta Vaše večeri" nije.
+          </p>
+          <p class="bento-text">
+            Cijela značajka — nadogradnja kula po pojedinom svojstvu — objavljena je i izbrisana istog dana. Radila je besprijekorno i učinila igru gorom.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-rotate-left"></i>
+          </div>
+          <h3 class="heading-md mb-3">Vraćanje na staro bolje je od ponovnog generiranja</h3>
+          <p class="bento-text mb-4">
+            Ponovno generiranje usklađenog skupa, jednu po jednu grafiku, potiho ga uništava — svaki render odluta u mjerilu, perspektivi i kadru dok se zbirka prestane slagati sama sa sobom. Skup kula tako je mjerljivo pogoršan pa je vraćen iz gita.
+          </p>
+          <p class="bento-text">
+            Cijeli je svijet izašao kao drugi svijet s crvenim filtrom preko njega. Plošna boja nije likovno vodstvo, a to je rekao samo čovjek koji ga je pogledao.
+          </p>
+        </div>
+      </div>
+
+      <div class="bento-card mt-4">
+        <h3 class="heading-md mb-3">Što to zapravo znači za rad s klijentima</h3>
+        <p class="bento-text">
+          Lekcija nije „AI sada radi igre". Lekcija je da je generiranje jeftino, a prosudba nije, pa prednost leži u skeli oko generiranja: zabilježenom, ponovljivom pipelineu za grafiku; nepromjenjivim pravilima zapisanima ondje gdje se ne mogu zaboraviti; botu koji mjeri ono do čega Vam je stvarno stalo; i čovjeku čiji je cijeli posao odlučiti što je dobro. Overserved je mjesto gdje smo tu skelu izgradili i izmučili — u vlastito vrijeme, na projektu na kojem loša odluka ne stoji ništa.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Built in Public -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 720px; margin: 0 auto 4rem;">
+        <span class="section-label">Razvoj u javnosti</span>
+        <h2 class="display-md section-title">Dvadeset dva zapisa, s neuspjesima</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Bilješke iz izrade — što je pokušano, što se slomilo, čemu nas je naučilo. Nekoliko primjera:
+        </p>
+      </div>
+
+      <div class="devlog-list">
+        <div class="devlog-item">
+          <div class="devlog-date">2. srp</div>
+          <div class="devlog-title">Usko grlo nije bila igra. Bila je to ploča s rezultatima.</div>
+        </div>
+        <div class="devlog-item">
+          <div class="devlog-date">4. srp</div>
+          <div class="devlog-title">Prestao sam podešavati razine. Pustio sam bota da ih osmisli.</div>
+        </div>
+        <div class="devlog-item">
+          <div class="devlog-date">17. lip</div>
+          <div class="devlog-title">Napravio sam nadogradnje kula po svojstvima i izbrisao ih do večere.</div>
+        </div>
+        <div class="devlog-item">
+          <div class="devlog-date">19. lip</div>
+          <div class="devlog-title">Iz plošne AI slike izvukao sam likove u 4 smjera, po dva centa komad.</div>
+        </div>
+        <div class="devlog-item">
+          <div class="devlog-date">23. lip</div>
+          <div class="devlog-title">Napravio sam bota da odigra moju igru 140 puta. Našao je zid koji ja nisam vidio.</div>
+        </div>
+        <div class="devlog-item">
+          <div class="devlog-date">24. lip</div>
+          <div class="devlog-title">Jedan redak prompta popravio je 96 mojih zgrada.</div>
+        </div>
+        <div class="devlog-item">
+          <div class="devlog-date">25. lip</div>
+          <div class="devlog-title">Moja je tablica govorila da je igra uravnotežena. Nije mi mogla reći da je dosadna.</div>
+        </div>
+        <div class="devlog-item">
+          <div class="devlog-date">25. lip</div>
+          <div class="devlog-title">Napravio sam tri prejake kule. Bot ih nije ni primijetio.</div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="https://overserved.lumiverse.hr/devlog/" target="_blank" rel="noopener" class="btn btn-ghost">
+          Pročitajte sva 22 zapisa
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Želite ovo usmjereno na svoj backlog?</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 640px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          Pipelineovi iza Overserveda — ponovljivo generiranje, zapisana nepromjenjiva pravila, botovi koji mjere ono što je važno — isti su oni koje donosimo u rad s klijentima. Prvo odigrajte rezultat.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
+          <a href="https://overserved.lumiverse.hr/play/" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fas fa-play"></i>
+            Igrajte Overserved
+          </a>
+          <a href="/hr/#contact" class="btn btn-secondary">
+            Pokrenite projekt
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/hr/" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI alati koji ljude čine nezaustavljivima. Sjedište u Zagrebu, klijenti diljem svijeta.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Usluge</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/#services" class="footer-link">Razvoj proizvoda</a></li>
+            <li><a href="/hr/#services" class="footer-link">Tehnološko savjetovanje</a></li>
+            <li><a href="/hr/#services" class="footer-link">AI strategija</a></li>
+            <li><a href="/hr/#services" class="footer-link">Automatizacija procesa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Reference</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/moj-kolega" class="footer-link">Moj Kolega</a></li>
+            <li><a href="/hr/titlomat" class="footer-link">Titlomat</a></li>
+            <li><a href="/hr/aimito" class="footer-link">The Aimito</a></li>
+            <li><a href="/hr/mojkraj" class="footer-link">MOJ KRAJ.</a></li>
+            <li><a href="/hr/barcoder" class="footer-link">Barcoder</a></li>
+            <li><a href="/hr/rentalica" class="footer-link">Rentalica</a></li>
+            <li><a href="/hr/overserved" class="footer-link">Overserved</a></li>
+            <li><a href="/hr/tvrtko" class="footer-link">Tvrtko</a></li>
+            <li><a href="/hr/bridj" class="footer-link">Bridj</a></li>
+            <li><a href="/hr/country-guides" class="footer-link">Country Guides</a></li>
+            <li><a href="/hr/army-adria" class="footer-link">ARMY Adria</a></li>
+            <li><a href="/hr/pitaj-lider" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="/hr/lider-pdf-archive" class="footer-link">Lider Arhiva</a></li>
+            <li><a href="/hr/lider-translations" class="footer-link">Lider Prijevodi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kontakt</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Pošaljite nam e-mail</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 LumiVerse d.o.o. Sva prava pridržana.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Moj Kolega AI assistant widget -->
+    <script src="https://widget.mojkolega.hr/embed.js" data-agent="demo-agent-www-lumiverse-hr-clwyqg" data-key="kol_114e846b83c8bafdce937764d1a004cb" defer></script>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.lumiverse.hr/hr/mojkraj">
+  <link rel="alternate" hreflang="en" href="https://www.lumiverse.hr/mojkraj.html">
+  <link rel="alternate" hreflang="hr" href="https://www.lumiverse.hr/hr/mojkraj">
+  <link rel="alternate" hreflang="x-default" href="https://www.lumiverse.hr/mojkraj.html">
+  <title>MOJ KRAJ. - disciplinirana AI redakcija | LumiVerse</title>
+  <meta name="description" content="Hrvatski news portal koji vodi AI: originalni članci pisani iz citiranih izvora, devet automatskih provjera prije objave i ljudski nadzor.">
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="MOJ KRAJ. - disciplinirana AI redakcija | LumiVerse">
+  <meta property="og:description" content="Hrvatski news portal koji vodi AI: originalni članci pisani iz citiranih izvora, devet automatskih provjera prije objave i ljudski nadzor.">
+  <meta property="og:url" content="https://www.lumiverse.hr/hr/mojkraj">
+  <meta property="og:image" content="https://www.lumiverse.hr/images/og/mojkraj.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MOJ KRAJ. - disciplinirana AI redakcija | LumiVerse">
+  <meta name="twitter:description" content="Hrvatski news portal koji vodi AI: originalni članci pisani iz citiranih izvora, devet automatskih provjera prije objave i ljudski nadzor.">
+  <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/mojkraj.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(255, 77, 77, 0.12), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(255, 143, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 77, 77, 0.1);
+      border: 1px solid rgba(255, 77, 77, 0.2);
+      border-radius: 100px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .honesty-note {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      max-width: 720px;
+      margin-top: 2rem;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--glass-border);
+      border-left: 3px solid var(--accent);
+      border-radius: 10px;
+      background: var(--glass);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .honesty-note i {
+      color: var(--accent);
+      margin-top: 0.2rem;
+    }
+
+    .hero-image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .hero-image-showcase-inner {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 77, 77, 0.5), transparent);
+    }
+
+    .hero-image-showcase-inner img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .figure-caption {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Pipeline: how an article is made */
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+
+    .pipeline-step {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      position: relative;
+    }
+
+    .pipeline-num {
+      font-family: 'SFMono-Regular', Menlo, Consolas, monospace;
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .pipeline-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .pipeline-text {
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      line-height: 1.6;
+    }
+
+    .role-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .role-card:hover::before { opacity: 1; }
+
+    .role-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 143, 77, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .role-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Quote pulled from the About page */
+    .pullquote {
+      max-width: 860px;
+      margin: 3rem auto 0;
+      text-align: center;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.35;
+    }
+
+    .pullquote em {
+      font-style: normal;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .pullquote-sub {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 1rem;
+    }
+
+    .stack-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 2.5rem;
+      justify-content: center;
+    }
+
+    .stack-pill {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 100px;
+      padding: 0.5rem 1rem;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container { grid-template-columns: repeat(2, 1fr); }
+      .pipeline { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container { grid-template-columns: 1fr; }
+      .pipeline { grid-template-columns: 1fr; }
+      .cta-section { padding: 2.5rem 1.5rem; }
+    }
+  </style>
+  <script src="/showcase.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Početna",
+      "item": "https://www.lumiverse.hr/hr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Reference",
+      "item": "https://www.lumiverse.hr/hr/#work"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "MOJ KRAJ.",
+      "item": "https://www.lumiverse.hr/hr/mojkraj"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/hr/" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="/hr/#services" class="nav-link">Usluge</a></li>
+        <li><a href="/hr/#work" class="nav-link">Reference</a></li>
+        <li><a href="/hr/#research" class="nav-link">Istraživanje</a></li>
+        <li><a href="/hr/#product" class="nav-link">Proizvod</a></li>
+        <li><a href="/hr/#about" class="nav-link">O nama</a></li>
+        <li><a href="/hr/#contact" class="nav-link">Kontakt</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-lang">
+          <a href="/mojkraj" hreflang="en" lang="en" title="English version">EN</a>
+          <span aria-current="true">HR</span>
+        </div>
+        <a href="/hr/#contact" class="nav-cta">Razgovarajmo</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Otvori izbornik">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/hr/#services" class="mobile-nav-link">Usluge</a>
+    <a href="/hr/#work" class="mobile-nav-link">Reference</a>
+    <a href="/hr/#research" class="mobile-nav-link">Istraživanje</a>
+    <a href="/hr/#product" class="mobile-nav-link">Proizvod</a>
+    <a href="/hr/#about" class="mobile-nav-link">O nama</a>
+    <a href="/hr/#contact" class="mobile-nav-link">Kontakt</a>
+    <div class="mobile-nav-lang">
+      <a href="/mojkraj" hreflang="en" lang="en">EN</a>
+      <span aria-current="true">HR</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/hr/">Početna</a>
+        <span>/</span>
+        <a href="/hr/#work">Reference</a>
+        <span>/</span>
+        <span>MOJ KRAJ.</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-newspaper"></i>
+        Naš proizvod &middot; AI redakcija
+      </div>
+
+      <h1 class="display-lg mb-4">Disciplinirane AI vijesti,<br>sve do Vašeg mjesta</h1>
+      <p class="body-lg text-secondary" style="max-width: 760px;">
+        MOJ KRAJ. hrvatski je news portal vođen kao javni eksperiment: može li AI redakciju držati na <em>višoj</em> razini od prosjeka — svaki članak napisan iznova iz citiranih izvora, svaka tvrdnja provjerena prije objave — i pritom pokrivati mjesta koja su veliki mediji napustili? Stroj ne mora birati samo isplative gradove.
+      </p>
+
+      <div class="honesty-note">
+        <i class="fas fa-circle-info"></i>
+        <span>Svaki članak <strong style="color: var(--text-primary);">piše AI pod ljudskim uredničkim nadzorom</strong>, iz izvora navedenih na stranici — i portal to otvoreno kaže, vlastitim riječima. Ovdje transparentnost nije ograda, nego poanta.</span>
+      </div>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://mojkraj.hr" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i>
+          Posjetite MOJ KRAJ.
+        </a>
+        <a href="/hr/#contact" class="btn btn-secondary">
+          Napravite nešto slično
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <div class="showcase" data-showcase data-interval="5400">
+            <img class="showcase-slide" src="/images/hr/mojkraj-home.jpg" alt="Naslovnica MOJ KRAJ. - smiren hrvatski news portal kojemu je sadržaj na prvom mjestu">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/hr/mojkraj-local.jpg" alt="Lokalna naslovnica za Osijek - svako mjesto, otok i županija dobiva svoje izdanje">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/hr/mojkraj-article.jpg" alt="Članak na MOJ KRAJ. - originalan hrvatski tekst, navod izvora, označena AI ilustracija">
+          </div>
+        </div>
+        <p class="figure-caption">
+          Portal u pogonu: nacionalna naslovnica, lokalno izdanje jednog mjesta i članak — originalan tekst, citiran izvor, označena ilustracija.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">9</div>
+          <div class="stat-label">Automatskih provjera na svakom članku</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">0</div>
+          <div class="stat-label">Rečenica prepisanih iz izvora</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">HR&nbsp;+&nbsp;EN</div>
+          <div class="stat-label">Hrvatski, uz automatski preveden zrcalni portal</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">1</div>
+          <div class="stat-label">Operater, nekoliko minuta dnevno</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Exists -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Zašto postoji</span>
+        <h2 class="display-md section-title">Dvije frustracije, jedan portal</h2>
+        <p class="section-description" style="max-width: 100%;">
+          MOJ KRAJ. nastao je iz dvaju vrlo različitih poriva — prvi iz pozicije čitatelja umornih od buke, drugi iz pozicije studija znatiželjnog dokle AI stiže kad se ljestvica namjerno postavi visoko.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-face-frown-open"></i>
+          </div>
+          <h3 class="heading-md mb-3">Dosta clickbaita</h3>
+          <p class="bento-text mb-4">
+            Prosječan portal običan događaj pakira kao dramu, jer klik znači više od informacije. Htjeli smo suprotno: vijest koja iznese činjenicu, potkrijepi je izvorom i tu stane.
+          </p>
+          <p class="bento-text" style="font-style: italic; color: var(--text-muted);">
+            „naslovom kaže što se dogodilo, tekstom to potkrijepi izvorom, i tu stane." &mdash; iz pravila portala MOJ KRAJ.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-flask"></i>
+          </div>
+          <h3 class="heading-md mb-3">Javni eksperiment</h3>
+          <p class="bento-text mb-4">
+            S primijenjenim AI-jem radimo svaki dan, pa je pravo pitanje bilo dokle stiže kad se ljestvica postavi visoko: može li voditi redakciju <em>discipliniraniju</em> od prosječne — onu koja svaki članak piše iznova iz činjenica, svaku tvrdnju provjerava s izvorom i sama sebe ocjenjuje prije objave?
+          </p>
+          <p class="bento-text">
+            Odgovor koji nastaje: tehnologija upotrijebljena ne da bi se rezali troškovi na štetu čitatelja, nego da bi se podigao standard — uz jasna pravila i ljudski nadzor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Hyperlocal Thesis -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="grid grid-2 gap-4" style="align-items: center;">
+        <div>
+          <span class="section-label">„Moj kraj" u imenu</span>
+          <h2 class="display-md section-title mb-4">Naslovnica za svako mjesto</h2>
+          <p class="body-lg text-secondary mb-4">
+            Veliki mediji jure velike teme, a većinu mjesta u Hrvatskoj nitko ne pokriva. Ali stroj, za razliku od redakcije, ne mora birati samo isplative gradove.
+          </p>
+          <p class="text-secondary">
+            Zato svaki grad, otok i županija dobiva vlastitu naslovnicu — regionalne vijesti i servisne obavijesti iz susjedstva na jednom mjestu. Kratke lokalne obavijesti (zatvaranja cesta, prekidi opskrbe, obavijesti gradskih uprava) prenose se automatski kao „Ukratko iz kraja"; sve što ima pravu vijest u sebi postaje cjelovit članak s izvorom u izdanju tog mjesta. To je pokrivenost koju nacionalni mediji preskaču, dostižna samo zato što je trošak još jedne naslovnice blizu nule.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <h3 class="heading-md mb-3">Kako radi lokalni sloj</h3>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-map-pin"></i></span>
+              Odaberete mjesto jednom — portal pamti Vaše lokalno izdanje
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-building-columns"></i></span>
+              Prednost imaju službeni kanali gradova i županija — pravno najsigurniji izvori, i oni koje nitko drugi ne prati
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-location-dot"></i></span>
+              Svaki članak dobiva geooznaku i sam se usmjerava u pravo mjesto
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-bell"></i></span>
+              Servisne obavijesti prenose se kao kratke lokalne vijesti, a ne napuhuju u lažne članke
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How An Article Is Made -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Kako nastaje članak</span>
+        <h2 class="display-md section-title">Od agencijske vijesti do objavljenog i provjerenog teksta</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Ništa ne dolazi do čitatelja bez prolaska kroz svaku fazu. Generiranje je lakši dio; pouzdanim rezultat čini pipeline oko njega.
+        </p>
+      </div>
+
+      <div class="pipeline">
+        <div class="pipeline-step">
+          <div class="pipeline-num">01 &middot; ingest</div>
+          <h3 class="pipeline-title">Prikupljanje izvora</h3>
+          <p class="pipeline-text">
+            Agencijski servis, provjereni medijski kanali i službena priopćenja gradova i županija slijevaju se u sirovi red — svaka stavka označena podrijetlom i mjestom.
+          </p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="pipeline-num">02 &middot; write</div>
+          <h3 class="pipeline-title">Pisanje iznova</h3>
+          <p class="pipeline-text">
+            Namjenski redakcijski agent iz činjenica piše originalan hrvatski članak — obrnuta piramida, kućni stil, naveden izvor. Činjenice smiju doći samo iz citiranog izvora, citati se nikad ne izmišljaju, rečenice se nikad ne prepisuju.
+          </p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="pipeline-num">03 &middot; image</div>
+          <h3 class="pipeline-title">Provjera licence</h3>
+          <p class="pipeline-text">
+            Svaka slika prolazi provjeru autorskih prava. Ako se ne može pouzdano potvrditi da je licenca slobodna, portal generira vlastitu ilustraciju i označi je s „Ilustracija: AI". Bez fotorealističnih prikaza stvarnih osoba.
+          </p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="pipeline-num">04 &middot; check</div>
+          <h3 class="pipeline-title">Devet automatskih provjera</h3>
+          <p class="pipeline-text">
+            Prije objave svaki članak prolazi niz automatskih provjera — utemeljenost (svaka tvrdnja uspoređena s izvorom), neutralnost (ton prema akterima, uravnoteženost izvora), konkretnost, otkrivanje izmišljenih imena, pretjerana pravna uopćavanja, pravopis, rječnik i gramatička sročnost, uz provjeru da nijedna generirana slika ne prikazuje lice stvarne osobe. Pet je determinističkih, četiri ocjenjuje jezični model; sve ispod praga čeka na čovjeka.
+          </p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="pipeline-num">05 &middot; review</div>
+          <h3 class="pipeline-title">Ljudski nadzor</h3>
+          <p class="pipeline-text">
+            Urednik odobrava iz gustog administratorskog sučelja za operatere — ili se, po kategorijama, članci niskog rizika objavljuju sami. U svakom slučaju za standard odgovara čovjek, a cijela stvar radi u nekoliko minuta dnevno.
+          </p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="pipeline-num">06 &middot; publish</div>
+          <h3 class="pipeline-title">Objava i razvrstavanje</h3>
+          <p class="pipeline-text">
+            Članak izlazi sa strukturiranim metapodacima za tražilice, a geooznaka ga spušta na lokalnu naslovnicu pravog mjesta, uz njegovu tematsku rubriku.
+          </p>
+        </div>
+      </div>
+
+      <div class="stack-line">
+        <span class="stack-pill">Next.js 16 i React 19</span>
+        <span class="stack-pill">FastAPI i SQLAlchemy 2.0</span>
+        <span class="stack-pill">PostgreSQL</span>
+        <span class="stack-pill">Claude Code vještina</span>
+        <span class="stack-pill">Lokalno generiranje slika</span>
+        <span class="stack-pill">schema.org NewsArticle</span>
+        <span class="stack-pill">Analitika bez kolačića</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Discipline -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Disciplina</span>
+        <h2 class="display-md section-title">Pravila koja se ne savijaju</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Eksperiment nešto znači samo ako su pravila stvarna. Ova se provode u pipelineu i otvoreno iznose čitatelju.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-icon">
+            <i class="fas fa-quote-right"></i>
+          </div>
+          <h3 class="role-title">Samo činjenice, iz izvora</h3>
+          <p class="role-text">
+            Tvrdnja smije doći samo iz izvora navedenog u članku. Citati se nikad ne izmišljaju. Svaki se članak piše iznova, originalnim hrvatskim — činjenice su slobodne, izraz je autorsko djelo, i tako se prema njemu i postupa.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-icon">
+            <i class="fas fa-tag"></i>
+          </div>
+          <h3 class="role-title">Uvijek označeno</h3>
+          <p class="role-text">
+            AI ilustracije nose oznaku „Ilustracija: AI". Sponzorirani sadržaj označen je s „SPONZORIRANI SADRŽAJ" i imenom partnera te se nikad ne miješa s uredničkim izborom. Čitatelj uvijek zna što gleda.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-icon">
+            <i class="fas fa-pen-to-square"></i>
+          </div>
+          <h3 class="role-title">Pogriješili smo? Ispravljamo.</h3>
+          <p class="role-text">
+            Javna adresa za ispravke, poveznice na izvore u svakom članku i potpun impresum. Točnost ispred brzine izrijekom je pravilo — bolje da vijest bude točna nego prva.
+          </p>
+        </div>
+      </div>
+
+      <p class="pullquote">
+        Pravilo na kojem sve počiva: <em>važnije je da vijest bude točna nego da bude prva.</em>
+      </p>
+      <p class="pullquote-sub">
+        &mdash; iz rubrike O nama portala MOJ KRAJ.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why It's Here -->
+  <section class="section">
+    <div class="container">
+      <div class="bento-card">
+        <h3 class="heading-md mb-3">Zašto je ovo u našim referencama</h3>
+        <p class="bento-text">
+          MOJ KRAJ. dosad je najjasnija verzija uvjerenja koje prolazi kroz sve što gradimo: kad generiranje pojeftini, vrijednost prelazi na disciplinu oko njega — pravila o izvorima, provjere utemeljenosti i neutralnosti, provjeru licence i čovjeka koji odgovara za standard. To je ista teza kao i u ostatku našeg rada, uperena u jedno od težih mjesta za stjecanje povjerenja: vijesti. I to je namjeran, javan argument da se AI može upotrijebiti da <em>podigne</em> standard umjesto da ga potiho spusti — a samo takve AI proizvode i želimo graditi, za sebe i za bilo koga drugog.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Želite pogon za sadržaj iza kojeg možete stati?</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 640px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          Pipeline koji generira u velikom obujmu, ali sam sebe provjerava, navodi izvore i označava što je proizveo — u Vašoj domeni, na Vašem jeziku, po Vašem standardu. Prvo pročitajte MOJ KRAJ., pa razgovarajmo o Vašem.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
+          <a href="https://mojkraj.hr" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fas fa-newspaper"></i>
+            Pročitajte MOJ KRAJ.
+          </a>
+          <a href="/hr/#contact" class="btn btn-secondary">
+            Pokrenite projekt
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/hr/" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI alati koji ljude čine nezaustavljivima. Sjedište u Zagrebu, klijenti diljem svijeta.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Usluge</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/#services" class="footer-link">Razvoj proizvoda</a></li>
+            <li><a href="/hr/#services" class="footer-link">Tehnološko savjetovanje</a></li>
+            <li><a href="/hr/#services" class="footer-link">AI strategija</a></li>
+            <li><a href="/hr/#services" class="footer-link">Automatizacija procesa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Reference</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/moj-kolega" class="footer-link">Moj Kolega</a></li>
+            <li><a href="/hr/titlomat" class="footer-link">Titlomat</a></li>
+            <li><a href="/hr/aimito" class="footer-link">The Aimito</a></li>
+            <li><a href="/hr/mojkraj" class="footer-link">MOJ KRAJ.</a></li>
+            <li><a href="/hr/barcoder" class="footer-link">Barcoder</a></li>
+            <li><a href="/hr/rentalica" class="footer-link">Rentalica</a></li>
+            <li><a href="/hr/overserved" class="footer-link">Overserved</a></li>
+            <li><a href="/hr/tvrtko" class="footer-link">Tvrtko</a></li>
+            <li><a href="/hr/bridj" class="footer-link">Bridj</a></li>
+            <li><a href="/hr/country-guides" class="footer-link">Country Guides</a></li>
+            <li><a href="/hr/army-adria" class="footer-link">ARMY Adria</a></li>
+            <li><a href="/hr/pitaj-lider" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="/hr/lider-pdf-archive" class="footer-link">Lider Arhiva</a></li>
+            <li><a href="/hr/lider-translations" class="footer-link">Lider Prijevodi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kontakt</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Pošaljite nam e-mail</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 LumiVerse d.o.o. Sva prava pridržana.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Moj Kolega AI assistant widget -->
+    <script src="https://widget.mojkolega.hr/embed.js" data-agent="demo-agent-www-lumiverse-hr-clwyqg" data-key="kol_114e846b83c8bafdce937764d1a004cb" defer></script>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.lumiverse.hr/hr/bridj">
+  <link rel="alternate" hreflang="en" href="https://www.lumiverse.hr/bridj">
+  <link rel="alternate" hreflang="hr" href="https://www.lumiverse.hr/hr/bridj">
+  <link rel="alternate" hreflang="x-default" href="https://www.lumiverse.hr/bridj">
+  <title>Bridj - ugrađeni tech lead za B2B platformu | LumiVerse</title>
+  <meta name="description" content="Godina dana kao ugrađeni tech lead za Bridj, britansku platformu za analizu razgovora i poslovanja: arhitektura, sustav od 17 servisa, potpis na izdanjima.">
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Bridj - ugrađeni tech lead za B2B platformu | LumiVerse">
+  <meta property="og:description" content="Godina dana kao ugrađeni tech lead za Bridj, britansku platformu za analizu razgovora i poslovanja: arhitektura, sustav od 17 servisa, potpis na izdanjima.">
+  <meta property="og:url" content="https://www.lumiverse.hr/hr/bridj">
+  <meta property="og:image" content="https://www.lumiverse.hr/images/og/bridj.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bridj - ugrađeni tech lead za B2B platformu | LumiVerse">
+  <meta name="twitter:description" content="Godina dana kao ugrađeni tech lead za Bridj, britansku platformu za analizu razgovora i poslovanja: arhitektura, sustav od 17 servisa, potpis na izdanjima.">
+  <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/bridj.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(77, 255, 255, 0.12), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(255, 77, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(77, 255, 255, 0.1);
+      border: 1px solid rgba(77, 255, 255, 0.2);
+      border-radius: 100px;
+      color: var(--accent-tertiary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .hero-image-showcase-inner {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(77, 255, 255, 0.5), transparent);
+    }
+
+    .hero-image-showcase-inner img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .figure-caption {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #4DFFFF 0%, #4D9FFF 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .role-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-tertiary), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(77, 255, 255, 0.3);
+    }
+
+    .role-card:hover::before {
+      opacity: 1;
+    }
+
+    .role-number {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent-tertiary);
+      margin-bottom: 1rem;
+    }
+
+    .role-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(77, 255, 255, 0.15), rgba(77, 159, 255, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent-tertiary);
+      margin-bottom: 1.5rem;
+    }
+
+    .role-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .bento-card-cyan .bento-icon {
+      background: linear-gradient(135deg, rgba(77, 255, 255, 0.15), rgba(77, 159, 255, 0.1));
+      color: var(--accent-tertiary);
+    }
+
+    .bento-card-cyan:hover {
+      border-color: rgba(77, 255, 255, 0.3);
+    }
+
+    .bento-card-cyan::before {
+      background: linear-gradient(90deg, transparent, var(--accent-tertiary), transparent);
+    }
+
+    /* Architecture flow — the pipeline LumiVerse built */
+    .arch-flow {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 3rem;
+      counter-reset: arch;
+    }
+
+    .arch-stage {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      position: relative;
+    }
+
+    .arch-stage-num {
+      font-family: 'SFMono-Regular', Menlo, Consolas, monospace;
+      font-size: 0.8rem;
+      color: var(--accent-tertiary);
+      margin-bottom: 0.6rem;
+    }
+
+    .arch-stage-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .arch-stage-text {
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      line-height: 1.6;
+    }
+
+    .arch-stage-tools {
+      margin-top: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .arch-chip {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--accent-tertiary);
+      background: rgba(77, 255, 255, 0.08);
+      border: 1px solid rgba(77, 255, 255, 0.18);
+      border-radius: 100px;
+      padding: 0.2rem 0.6rem;
+    }
+
+    .stack-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 3rem;
+      justify-content: center;
+    }
+
+    .stack-pill {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 100px;
+      padding: 0.5rem 1rem;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(77, 255, 255, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .arch-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+      .arch-flow {
+        grid-template-columns: 1fr;
+      }
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+  <script src="/showcase.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Početna",
+      "item": "https://www.lumiverse.hr/hr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Reference",
+      "item": "https://www.lumiverse.hr/hr/#work"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Bridj",
+      "item": "https://www.lumiverse.hr/hr/bridj"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/hr/" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="/hr/#services" class="nav-link">Usluge</a></li>
+        <li><a href="/hr/#work" class="nav-link">Reference</a></li>
+        <li><a href="/hr/#research" class="nav-link">Istraživanje</a></li>
+        <li><a href="/hr/#product" class="nav-link">Proizvod</a></li>
+        <li><a href="/hr/#about" class="nav-link">O nama</a></li>
+        <li><a href="/hr/#contact" class="nav-link">Kontakt</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-lang">
+          <a href="/bridj" hreflang="en" lang="en" title="English version">EN</a>
+          <span aria-current="true">HR</span>
+        </div>
+        <a href="/hr/#contact" class="nav-cta">Razgovarajmo</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Otvori izbornik">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/hr/#services" class="mobile-nav-link">Usluge</a>
+    <a href="/hr/#work" class="mobile-nav-link">Reference</a>
+    <a href="/hr/#research" class="mobile-nav-link">Istraživanje</a>
+    <a href="/hr/#product" class="mobile-nav-link">Proizvod</a>
+    <a href="/hr/#about" class="mobile-nav-link">O nama</a>
+    <a href="/hr/#contact" class="mobile-nav-link">Kontakt</a>
+    <div class="mobile-nav-lang">
+      <a href="/bridj" hreflang="en" lang="en">EN</a>
+      <span aria-current="true">HR</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/hr/">Početna</a>
+        <span>/</span>
+        <a href="/hr/#work">Reference</a>
+        <span>/</span>
+        <span>Bridj</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-user-tie"></i>
+        Tech lead savjetovanje &middot; Ugrađeno i u tijeku
+      </div>
+
+      <h1 class="display-lg mb-4">Bridj</h1>
+      <p class="body-lg text-secondary" style="max-width: 740px;">
+        Više od godinu dana kao ugrađeni tech lead britanske platforme za analizu razgovora i poslovanja — sloja koji povezuje ono što kupci stvarno kažu s idućim potezom tvrtke. Arhitektura, razvoj vlastitim rukama kroz sustav od 17 servisa i završni potpis na svakom izdanju.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://bridj.ai" target="_blank" rel="noopener" class="btn btn-primary" style="background: var(--accent-tertiary); color: var(--bg-primary);">
+          <i class="fas fa-external-link-alt"></i>
+          Posjetite Bridj
+        </a>
+        <a href="/hr/#contact" class="btn btn-secondary">
+          Angažirajte tech leada
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <div class="showcase" data-showcase data-interval="5400">
+            <img class="showcase-slide" src="/images/bridj-dashboard.jpg" alt="Početna nadzorna ploča Bridj platforme - živi uvidi, rizici i prilike u nastanku te teme koje oblikuju prodajni lijevak">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/bridj-hero.jpg" alt="Marketinška stranica Bridja - 'I can't shake the feeling we've missed something'">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/bridj-intel.jpg" alt="Pozicioniranje Bridja - sloj inteligencije koji povezuje ono što je rečeno u razgovorima s idućim potezom tvrtke">
+          </div>
+        </div>
+        <p class="figure-caption">
+          Bridjev vlastiti proizvod i javna stranica. Nadzorna ploča prikazana s demo podacima.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">1+ god.</div>
+          <div class="stat-label">Ugrađeni kao tech lead, i dalje traje</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">17</div>
+          <div class="stat-label">Servisa u platformi</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">7</div>
+          <div class="stat-label">Integracija s izvorima podataka</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">4</div>
+          <div class="stat-label">AI agenata u produkciji</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Bridj Does -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Proizvod</span>
+        <h2 class="display-md section-title">Sloj inteligencije za cijelu tvrtku</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Svaka tvrtka proizvodi tisuće razgovora, poziva i interakcija s kupcima. Bridj se spaja na alate u kojima oni žive i pretvara ih u jedan izvor istine — iznosi trendove, prilike, rizike i probleme koji bi inače promakli, jednako za marketing, prodaju, proizvod i upravu.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3 class="bento-title">Uvidi, a ne transkripti</h3>
+          <p class="bento-text">
+            Sirovi podaci iz razgovora postaju označene teme, rizici i prilike u nastanku te teme koje oblikuju prodajni lijevak — osvježeni po rasporedu, a ne iskopani ručno.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3 class="bento-title">Pitaj Bridj</h3>
+          <p class="bento-text">
+            Razgovorni AI sloj koji odgovara na pitanja nad vlastitim uvidima i podacima organizacije, piše sadržaj na temelju onoga što odjekuje i sastavlja sažetke za upravu — prirodnim jezikom.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-pen-nib"></i>
+          </div>
+          <h3 class="bento-title">Sadržaj koji pogađa</h3>
+          <p class="bento-text">
+            Izrada kampanja i sadržaja utemeljena na onome što su kupci stvarno rekli — nastala iz stvarnih razgovora, a ne iz nagađanja, i dorađena kroz razgovor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Architecture -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+        <span class="section-label">Arhitektura</span>
+        <h2 class="display-md section-title">Što smo izgradili ispod</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Proizvod je jedan ekran. Iza njega je pipeline koji neuredne podatke iz razgovora, iz više izvora, nosi sve do odgovora — osmišljen, izgrađen i vođen iz uloge tech leada, korak po korak.
+        </p>
+      </div>
+
+      <div class="arch-flow">
+        <div class="arch-stage">
+          <div class="arch-stage-num">01 &middot; ingest</div>
+          <h3 class="arch-stage-title">Spajanje i sinkronizacija</h3>
+          <p class="arch-stage-text">
+            OAuth konektori po rasporedu povlače podatke iz sedam vanjskih sustava — vodećih CRM-ova, snimača sastanaka i alata za analizu prihoda — u pohranu u oblaku. Bez stanja i neovisno skalabilni, pa spora sinkronizacija nikad ne dotakne aplikaciju.
+          </p>
+          <div class="arch-stage-tools">
+            <span class="arch-chip">OAuth</span>
+            <span class="arch-chip">7 izvora</span>
+            <span class="arch-chip">GCS</span>
+          </div>
+        </div>
+
+        <div class="arch-stage">
+          <div class="arch-stage-num">02 &middot; refine</div>
+          <h3 class="arch-stage-title">Provjera, učitavanje i čišćenje</h3>
+          <p class="arch-stage-text">
+            Pipeline u tri koraka provjerava svaku dolaznu datoteku, neispravne stavlja u karantenu, dobre podatke učitava u sirovu pohranu i zatim ih čisti u normaliziran oblik — da AI nizvodno nikad ne vidi neispravan ulaz.
+          </p>
+          <div class="arch-stage-tools">
+            <span class="arch-chip">Vođeno događajima</span>
+            <span class="arch-chip">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="arch-stage">
+          <div class="arch-stage-num">03 &middot; embed</div>
+          <h3 class="arch-stage-title">Sažimanje i vektorizacija</h3>
+          <p class="arch-stage-text">
+            Transkripti se sažimaju i upisuju u vektorsku pohranu, odvojenu po organizaciji. To je podloga koja omogućuje semantičku pretragu i dohvat.
+          </p>
+          <div class="arch-stage-tools">
+            <span class="arch-chip">Embeddings</span>
+            <span class="arch-chip">pgvector</span>
+            <span class="arch-chip">Multi-tenant</span>
+          </div>
+        </div>
+
+        <div class="arch-stage">
+          <div class="arch-stage-num">04 &middot; reason</div>
+          <h3 class="arch-stage-title">Pogon uvida</h3>
+          <p class="arch-stage-text">
+            Skupni pipeline pokreće RAG i grupiranje kako bi vektorizirane podatke pretvorio u uvide, teme i signale koji se pojavljuju na nadzornoj ploči i spremaju u analitičku bazu.
+          </p>
+          <div class="arch-stage-tools">
+            <span class="arch-chip">RAG</span>
+            <span class="arch-chip">Grupiranje</span>
+          </div>
+        </div>
+
+        <div class="arch-stage">
+          <div class="arch-stage-num">05 &middot; converse</div>
+          <h3 class="arch-stage-title">Sloj agenata</h3>
+          <p class="arch-stage-text">
+            Četiri namjenska AI agenta — pitanja i odgovori nad uvidima, izrada sadržaja, analiza podataka i sažeci za upravu — odgovore prenose u aplikaciju, a MCP poslužitelj iste alate izlaže vanjskim AI klijentima. Svaki upit ograničen je na jednu organizaciju.
+          </p>
+          <div class="arch-stage-tools">
+            <span class="arch-chip">Agno</span>
+            <span class="arch-chip">MCP</span>
+            <span class="arch-chip">SSE streaming</span>
+          </div>
+        </div>
+
+        <div class="arch-stage">
+          <div class="arch-stage-num">06 &middot; deliver</div>
+          <h3 class="arch-stage-title">Multi-tenant aplikacija</h3>
+          <p class="arch-stage-text">
+            Web aplikacija: odvajanje podataka na razini organizacije, model dopuštenja s pet uloga, naplata pretplata i moderan React frontend — sučelje koje sve ostalo hrani.
+          </p>
+          <div class="arch-stage-tools">
+            <span class="arch-chip">FastAPI</span>
+            <span class="arch-chip">Next.js</span>
+            <span class="arch-chip">Stripe</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack-line">
+        <span class="stack-pill">Next.js 15 i React 19</span>
+        <span class="stack-pill">FastAPI i SQLAlchemy 2.0</span>
+        <span class="stack-pill">PostgreSQL i pgvector</span>
+        <span class="stack-pill">Agno agenti i MCP</span>
+        <span class="stack-pill">Terraform</span>
+        <span class="stack-pill">Hetzner i GCP</span>
+        <span class="stack-pill">Stripe naplata</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Tech Lead Role -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Uloga</span>
+        <h2 class="display-md section-title">Više od ruku na tipkovnici</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Ugrađeni tech lead nije titula na slajdu — to je osoba bez koje izdanje ne izlazi. Tri posla odjednom: arhitekt, graditelj i tehnička brana pred produkcijom.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-number">01</div>
+          <div class="role-icon">
+            <i class="fas fa-drafting-compass"></i>
+          </div>
+          <h3 class="role-title">Arhitekt</h3>
+          <p class="role-text">
+            Dizajn sustava iz prvih načela: granice servisa, podatkovni ugovori među njima, odluka da se prikupljanje podataka, skupni AI i interaktivni AI razdvoje u zasebne skalabilne dijelove. Odluke koje drže i nakon godine dana rasta.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">02</div>
+          <div class="role-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="role-title">Graditelj</h3>
+          <p class="role-text">
+            Ruke na tipkovnici kroz cijeli stack — AI pipeline, backend, infrastruktura, frontend — i recenzent koji svima ostalima postavlja mjeru kvalitete. Uz to i neatraktivne pobjede, poput spajanja triju podatkovnih repozitorija koji su se razilazili u jedan uredan monorepo za prikupljanje.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">03</div>
+          <div class="role-icon">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h3 class="role-title">Odgovornost za izdanja</h3>
+          <p class="role-text">
+            Službeni tehnički potpis: bez njega ništa ne ide u produkciju. Analiza ovisnosti i rizika za cijelo izdanje, planiranje migracija i uvođenja te završna odluka ide / ne ide — sigurnosni ventil između „gotovo" i „u produkciji".
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering Maturity -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Kako se vodi</span>
+        <h2 class="display-md section-title">Građeno da traje</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Prototip jedne osobe i platforma na koju tim svaki tjedan može sigurno isporučivati dvije su različite stvari. Ovo je ono drugo.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card bento-card-lg bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h3 class="bento-title">Infrastruktura kao kod, multi-cloud</h3>
+          <p class="bento-text">
+            Cijela je infrastruktura opisana u Terraformu, i za produkciju i za istovjetni sandbox, preko dvaju pružatelja usluga u oblaku, s oporavkom od katastrofe u vlastitoj regiji. Okruženja su ponovljiva, a ne ručno njegovana — novo je promjena konfiguracije, a ne cijeli vikend.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Produkcija i sandbox istovjetni iz istih modula
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(77, 255, 255, 0.15); color: var(--accent-tertiary);"><i class="fas fa-check"></i></span>
+              Oporavak od katastrofe u drugoj regiji
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-vials"></i>
+          </div>
+          <h3 class="bento-title">Testirano od kraja do kraja</h3>
+          <p class="bento-text">
+            Namjenski Playwright paket provjerava stvarne korisničke putove i na sandboxu i u produkciji, pa se regresije uhvate prije nego što izdanje dođe do potpisa.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-arrows-rotate"></i>
+          </div>
+          <h3 class="bento-title">CI/CD i zajednički workflowi</h3>
+          <p class="bento-text">
+            Automatizirani build, testiranje i deploy u svakom repozitoriju, uz zajedničku knjižnicu ponovno upotrebljivih koraka pipelinea, pa sedamnaest servisa ostaje usklađeno umjesto da svaki izmišlja svoje.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <h3 class="bento-title">Multi-tenant po konstrukciji</h3>
+          <p class="bento-text">
+            Odvajanje organizacija provlači se kroz svaki sloj — pohranu, vektore, agente, aplikaciju — uz kontrolu pristupa po ulogama, pa podaci jednog klijenta nikad ne mogu iskrsnuti kod drugog.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-cyan">
+          <div class="bento-icon">
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+          <h3 class="bento-title">Stvaran proces</h3>
+          <p class="bento-text">
+            Definicija gotovog, QA faza i upravljanje izdanjima sa službenim tehničkim potpisom — lagano upravljanje koje timu dopušta brzinu bez rušenja produkcije.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Treba li Vašem AI proizvodu tehnološko vodstvo?</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 620px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          Uključujemo se kao Vaš tech lead: arhitektura, razvoj vlastitim rukama kroz cijeli stack i prosudba koja zna reći kad je izdanje doista spremno. Od prvog commita do produkcije, i godinu dana poslije.
+        </p>
+        <div class="capacity-note" style="position: relative; z-index: 1;">
+          <span class="capacity-badge"><i class="fas fa-circle"></i> Popunjeni smo za nove razvojne projekte</span>
+          <p>Trenutačno smo popunjeni za nove razvojne projekte i embedded angažmane — pišite nam na <a href="mailto:tihomir.jauk@lumiverse.hr">tihomir.jauk@lumiverse.hr</a> pa Vas kontaktiramo čim se oslobodimo. Zanima Vas neki od naših proizvoda — Tvrtko.ai, Moj Kolega, Titlomat i ostali? <strong>Oni su dostupni odmah</strong> — javite se i pomoći ćemo Vam da krenete.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/hr/" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI alati koji ljude čine nezaustavljivima. Sjedište u Zagrebu, klijenti diljem svijeta.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Usluge</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/#services" class="footer-link">Razvoj proizvoda</a></li>
+            <li><a href="/hr/#services" class="footer-link">Tehnološko savjetovanje</a></li>
+            <li><a href="/hr/#services" class="footer-link">AI strategija</a></li>
+            <li><a href="/hr/#services" class="footer-link">Automatizacija procesa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Reference</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/moj-kolega" class="footer-link">Moj Kolega</a></li>
+            <li><a href="/hr/titlomat" class="footer-link">Titlomat</a></li>
+            <li><a href="/hr/aimito" class="footer-link">The Aimito</a></li>
+            <li><a href="/hr/mojkraj" class="footer-link">MOJ KRAJ.</a></li>
+            <li><a href="/hr/barcoder" class="footer-link">Barcoder</a></li>
+            <li><a href="/hr/rentalica" class="footer-link">Rentalica</a></li>
+            <li><a href="/hr/overserved" class="footer-link">Overserved</a></li>
+            <li><a href="/hr/tvrtko" class="footer-link">Tvrtko</a></li>
+            <li><a href="/hr/bridj" class="footer-link">Bridj</a></li>
+            <li><a href="/hr/country-guides" class="footer-link">Country Guides</a></li>
+            <li><a href="/hr/army-adria" class="footer-link">ARMY Adria</a></li>
+            <li><a href="/hr/pitaj-lider" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="/hr/lider-pdf-archive" class="footer-link">Lider Arhiva</a></li>
+            <li><a href="/hr/lider-translations" class="footer-link">Lider Prijevodi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kontakt</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Pošaljite nam e-mail</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 LumiVerse d.o.o. Sva prava pridržana.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Moj Kolega AI assistant widget -->
+    <script src="https://widget.mojkolega.hr/embed.js" data-agent="demo-agent-www-lumiverse-hr-clwyqg" data-key="kol_114e846b83c8bafdce937764d1a004cb" defer></script>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
+</html>

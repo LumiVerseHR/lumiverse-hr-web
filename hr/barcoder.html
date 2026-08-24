@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.lumiverse.hr/hr/barcoder">
+  <link rel="alternate" hreflang="en" href="https://www.lumiverse.hr/barcoder.html">
+  <link rel="alternate" hreflang="hr" href="https://www.lumiverse.hr/hr/barcoder">
+  <link rel="alternate" hreflang="x-default" href="https://www.lumiverse.hr/barcoder.html">
+  <title>Barcoder - enciklopedija standarda za QR i barkodove | LumiVerse</title>
+  <meta name="description" content="Barcoder katalogizira 463 standarda za QR, barkodove i vizualne kodove iz 197 zemalja, unakrsno povezana s 1.076 novčanika koji ih čitaju.">
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Barcoder - enciklopedija standarda za QR i barkodove | LumiVerse">
+  <meta property="og:description" content="Barcoder katalogizira 463 standarda za QR, barkodove i vizualne kodove iz 197 zemalja, unakrsno povezana s 1.076 novčanika koji ih čitaju.">
+  <meta property="og:url" content="https://www.lumiverse.hr/hr/barcoder">
+  <meta property="og:image" content="https://www.lumiverse.hr/images/og/barcoder.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Barcoder - enciklopedija standarda za QR i barkodove | LumiVerse">
+  <meta name="twitter:description" content="Barcoder katalogizira 463 standarda za QR, barkodove i vizualne kodove iz 197 zemalja, unakrsno povezana s 1.076 novčanika koji ih čitaju.">
+  <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/barcoder.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(255, 77, 77, 0.12), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(255, 143, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 77, 77, 0.1);
+      border: 1px solid rgba(255, 77, 77, 0.2);
+      border-radius: 100px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .hero-image-showcase-inner {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 77, 77, 0.5), transparent);
+    }
+
+    .hero-image-showcase-inner img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .role-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .role-card:hover::before {
+      opacity: 1;
+    }
+
+    .role-number {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .role-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 143, 77, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .role-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Pipeline: how a page gets from research to published */
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .pipeline-step {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      position: relative;
+    }
+
+    .pipeline-path {
+      font-family: 'SFMono-Regular', Menlo, Consolas, monospace;
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .pipeline-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .pipeline-text {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container,
+      .pipeline {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container,
+      .pipeline {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Početna",
+      "item": "https://www.lumiverse.hr/hr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Reference",
+      "item": "https://www.lumiverse.hr/hr/#work"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Barcoder",
+      "item": "https://www.lumiverse.hr/hr/barcoder"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/hr/" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="/hr/#services" class="nav-link">Usluge</a></li>
+        <li><a href="/hr/#work" class="nav-link">Reference</a></li>
+        <li><a href="/hr/#research" class="nav-link">Istraživanje</a></li>
+        <li><a href="/hr/#product" class="nav-link">Proizvod</a></li>
+        <li><a href="/hr/#about" class="nav-link">O nama</a></li>
+        <li><a href="/hr/#contact" class="nav-link">Kontakt</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-lang">
+          <a href="/barcoder" hreflang="en" lang="en" title="English version">EN</a>
+          <span aria-current="true">HR</span>
+        </div>
+        <a href="/hr/#contact" class="nav-cta">Razgovarajmo</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Otvori izbornik">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/hr/#services" class="mobile-nav-link">Usluge</a>
+    <a href="/hr/#work" class="mobile-nav-link">Reference</a>
+    <a href="/hr/#research" class="mobile-nav-link">Istraživanje</a>
+    <a href="/hr/#product" class="mobile-nav-link">Proizvod</a>
+    <a href="/hr/#about" class="mobile-nav-link">O nama</a>
+    <a href="/hr/#contact" class="mobile-nav-link">Kontakt</a>
+    <div class="mobile-nav-lang">
+      <a href="/barcoder" hreflang="en" lang="en">EN</a>
+      <span aria-current="true">HR</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/hr/">Početna</a>
+        <span>/</span>
+        <a href="/hr/#work">Reference</a>
+        <span>/</span>
+        <span>Barcoder</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-qrcode"></i>
+        Naš projekt &middot; Referentna enciklopedija
+      </div>
+
+      <h1 class="display-lg mb-4">Barcoder</h1>
+      <p class="body-lg text-secondary" style="max-width: 720px;">
+        Skenirajte platni QR u Zagrebu i jedan u Manili i gledate dva nepovezana standarda. Barcoder ih katalogizira sve — 463 vizualna kodna standarda iz 197 zemalja, unakrsno povezana s 1.076 novčanika koji ih čitaju.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://barcoder.lumiverse.hr" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i>
+          Otvorite Barcoder
+        </a>
+        <a href="/hr/#contact" class="btn btn-secondary">
+          Napravite nešto slično
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <img src="/images/barcoder-landing.png" alt="Naslovnica Barcodera s brojkama iz kataloga: 463 standarda, 197 zemalja, 1.076 novčanika i 112 primjera kodova">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">463</div>
+          <div class="stat-label">Katalogiziranih vizualnih kodnih standarda</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">197</div>
+          <div class="stat-label">Zemalja s izvještajima o platnim shemama</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">1,076</div>
+          <div class="stat-label">Unakrsno povezanih novčanika</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">112</div>
+          <div class="stat-label">Stvarnih primjera kodova za testiranje</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Exists -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 760px; margin: 0 auto 4rem;">
+        <span class="section-label">Zašto postoji</span>
+        <h2 class="display-md section-title">Nitko ovo nije zapisao</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Odgovori žive u objavama središnjih banaka, ISO/IEC specifikacijama, dokumentaciji shema, PDF-ovima dobavljača i regulatornim podnescima — na desetak jezika i međusobno nepovezani. Barcoder ih skuplja na jedno unakrsno povezano mjesto.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <h3 class="heading-md mb-3">Pitanja na koja odgovara</h3>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-circle-question"></i></span>
+              Koji QR standard koristi shema instantnih plaćanja u ovoj zemlji?
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-circle-question"></i></span>
+              Hoće li ovaj novčanik skenirati trgovački kod iz te sheme?
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-circle-question"></i></span>
+              Što se zapravo nalazi u ovom payloadu koji sam upravo dekodirao?
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-circle-question"></i></span>
+              Kako dvije nacionalne sheme surađuju na blagajni?
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <h3 class="heading-md mb-3">Tko ga čita</h3>
+          <p class="bento-text mb-4">
+            Inženjeri plaćanja koji integriraju novo tržište. Fintech timovi koji prije lansiranja procjenjuju pokrivenost novčanicima. Pružatelji novčanika koji provjeravaju na koje se infrastrukture mogu osloniti. Istraživači kojima treba citat, a ne objava s foruma.
+          </p>
+          <p class="bento-text">
+            Svaka stranica navodi svoje izvore. Svezak I., izdanje 2026. — i raste sa svakim commitom.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Inside -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">Što je unutra</span>
+        <h2 class="display-md section-title">Tri ulaza</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Svaki unos vodi na ostale. Krenete od standarda, zemlje ili novčanika — završite u istom grafu.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-number">01</div>
+          <div class="role-icon">
+            <i class="fas fa-barcode"></i>
+          </div>
+          <h3 class="role-title">Standardi</h3>
+          <p class="role-text mb-4">
+            Svaka QR, barkod i vizualna kodna specifikacija za koju možemo pronaći dokaz — EMV načini koje prikazuje trgovac, nacionalni QR-ovi za instantna plaćanja, maloprodajni GS1 kodovi, rijetki kodovi za javni prijevoz.
+          </p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              463 unosa, od A do Ž
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              PIX, UPI, KHQR, Bharat QR, EAN-13, Code 128
+            </li>
+          </ul>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">02</div>
+          <div class="role-icon">
+            <i class="fas fa-earth-americas"></i>
+          </div>
+          <h3 class="role-title">Plaćanja po zemljama</h3>
+          <p class="role-text mb-4">
+            Stranica po zemlji: koje sheme ondje rade, koje vizualne kodove te sheme koriste i kako izgleda međusobna suradnja na blagajni.
+          </p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              197 zemalja, bez rupa
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Shema, kod i infrastruktura na jednoj stranici
+            </li>
+          </ul>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">03</div>
+          <div class="role-icon">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <h3 class="role-title">Novčanici</h3>
+          <p class="role-text mb-4">
+            Stranica po novčaniku — GCash, Alipay, Revolut, M-Pesa i ostali — koje standarde podržava, na kojim tržištima i preko koje infrastrukture.
+          </p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              1.076 profila novčanika
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Pokrivenost tržišta i infrastrukture po novčaniku
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Scanner -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">Skener</span>
+        <h2 class="display-md section-title">Uperite ga u kod</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Priručnik koji se može pokrenuti. Skenirajte kod, zalijepite payload ili ga generirajte — i završite na standardu koji ga objašnjava.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-magnifying-glass"></i>
+          </div>
+          <h3 class="bento-title">Prepoznavanje, ne samo dekodiranje</h3>
+          <p class="bento-text">
+            Mnogi alati pročitaju QR kod. Barcoder Vam kaže što on <em>jest</em>. Dekodirani payloadi uspoređuju se sa svih 463 standarda i 1.076 novčanika pomoću URI shema, TLV struktura (EMVCo MPM), kontaktnih formata i identifikatora platnih shema.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Platni QR-ovi: PIX, UPI, PromptPay, SGQR, DuitNow
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Bankovni prijenosi: HUB3, SEPA EPC, Swiss QR-bill
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Kripto URI-ji, vCard, MECARD, WiFi, kalendar
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Svako podudaranje vodi na svoju referentnu stranicu
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3 class="bento-title">Skeniranje kamerom</h3>
+          <p class="bento-text">
+            Uperite mobitel u kod na terenu. Dekodiranje i prepoznavanje u pregledniku — bez instaliranja aplikacije.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-paste"></i>
+          </div>
+          <h3 class="bento-title">Zalijepite i dekodirajte</h3>
+          <p class="bento-text">
+            Ubacite sirovi payload. Dobijete standard koji mu odgovara i svako polje razloženo i označeno.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-images"></i>
+          </div>
+          <h3 class="bento-title">Galerija primjera</h3>
+          <p class="bento-text">
+            112 stvarnih kodova iz shema diljem svijeta. Testirajte vlastiti parser na nečemu autentičnom.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-sliders"></i>
+          </div>
+          <h3 class="bento-title">Igralište za enkodere</h3>
+          <p class="bento-text">
+            40 enkodera. Ispunite obrazac, generirajte valjan kod pa ga skenirajte natrag — sve na jednoj stranici.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It's Built -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 760px; margin: 0 auto 4rem;">
+        <span class="section-label">Kako je izgrađen</span>
+        <h2 class="display-md section-title">Sadržaj je repozitorij</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Svaka se stranica Barcodera prikazuje iz jedne markdown datoteke u repozitoriju. Bez CMS-a. Bez administratorskog sučelja. Bez izmjena koje postoje samo u produkciji.
+        </p>
+      </div>
+
+      <div class="pipeline">
+        <div class="pipeline-step">
+          <div class="pipeline-path">reports/</div>
+          <h3 class="pipeline-title">Istraživanje</h3>
+          <p class="pipeline-text">
+            Svaka zemlja počinje kao opsežno istraživanje — izvori središnje banke, dokumentacija shema, regulatorni podnesci, pročitano i zapisano.
+          </p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="pipeline-path">.claude/skills/</div>
+          <h3 class="pipeline-title">Izdvajanje</h3>
+          <p class="pipeline-text">
+            Claude Code vještine iz tog istraživanja izvlače strukturirane stranice po standardu i po zemlji, svaki put jednako.
+          </p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="pipeline-path">docs/</div>
+          <h3 class="pipeline-title">Commit</h3>
+          <p class="pipeline-text">
+            Stranice slijeću u repozitorij kao markdown. Svaka objavljena tvrdnja može se pratiti do commita koji ju je uveo.
+          </p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="pipeline-path">web</div>
+          <h3 class="pipeline-title">Prikaz</h3>
+          <p class="pipeline-text">
+            Backend čita te datoteke, frontend ih prikazuje. Dosadno namjerno — i ponovljivo iz izvora.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-2 gap-4" style="margin-top: 3rem;">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-code-branch"></i>
+          </div>
+          <h3 class="bento-title">Provjerljivo po dizajnu</h3>
+          <p class="bento-text">
+            Referentno djelo vrijedi onoliko koliko i njegovi izvori. Budući da je sadržaj repozitorij, svaka se stranica kroz git može pratiti do izmjene koja ju je napisala — i ispraviti isto onako kako se ispravlja kod.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-user-astronaut"></i>
+          </div>
+          <h3 class="bento-title">Jedna osoba, enciklopedijski opseg</h3>
+          <p class="bento-text">
+            197 izvještaja o zemljama godina je rada istraživačkog tima. AI agenti su izdvajali i pisali nacrte, čovjek je postavio strukturu, provjerio izvore i objavio. To je cijela teza LumiVersea u jednom projektu.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Imate područje koje nitko nije mapirao?</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 620px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          Barcoder je ono što nastane kad AI istraživačke pipeline usmjerite na rasuto područje i svaki izlaz učinite provjerljivim. Isti pristup radi i na neredu u Vašoj industriji.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
+          <a href="https://barcoder.lumiverse.hr" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fas fa-qrcode"></i>
+            Otvorite Barcoder
+          </a>
+          <a href="/hr/#contact" class="btn btn-secondary">
+            Dogovorite razgovor
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/hr/" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI alati koji ljude čine nezaustavljivima. Sjedište u Zagrebu, klijenti diljem svijeta.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Usluge</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/#services" class="footer-link">Razvoj proizvoda</a></li>
+            <li><a href="/hr/#services" class="footer-link">Tehnološko savjetovanje</a></li>
+            <li><a href="/hr/#services" class="footer-link">AI strategija</a></li>
+            <li><a href="/hr/#services" class="footer-link">Automatizacija procesa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Reference</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/moj-kolega" class="footer-link">Moj Kolega</a></li>
+            <li><a href="/hr/titlomat" class="footer-link">Titlomat</a></li>
+            <li><a href="/hr/aimito" class="footer-link">The Aimito</a></li>
+            <li><a href="/hr/mojkraj" class="footer-link">MOJ KRAJ.</a></li>
+            <li><a href="/hr/barcoder" class="footer-link">Barcoder</a></li>
+            <li><a href="/hr/rentalica" class="footer-link">Rentalica</a></li>
+            <li><a href="/hr/overserved" class="footer-link">Overserved</a></li>
+            <li><a href="/hr/tvrtko" class="footer-link">Tvrtko</a></li>
+            <li><a href="/hr/bridj" class="footer-link">Bridj</a></li>
+            <li><a href="/hr/country-guides" class="footer-link">Country Guides</a></li>
+            <li><a href="/hr/army-adria" class="footer-link">ARMY Adria</a></li>
+            <li><a href="/hr/pitaj-lider" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="/hr/lider-pdf-archive" class="footer-link">Lider Arhiva</a></li>
+            <li><a href="/hr/lider-translations" class="footer-link">Lider Prijevodi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kontakt</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Pošaljite nam e-mail</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 LumiVerse d.o.o. Sva prava pridržana.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Moj Kolega AI assistant widget -->
+    <script src="https://widget.mojkolega.hr/embed.js" data-agent="demo-agent-www-lumiverse-hr-clwyqg" data-key="kol_114e846b83c8bafdce937764d1a004cb" defer></script>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
+</html>

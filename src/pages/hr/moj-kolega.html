@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.lumiverse.hr/hr/moj-kolega">
+  <link rel="alternate" hreflang="en" href="https://www.lumiverse.hr/moj-kolega">
+  <link rel="alternate" hreflang="hr" href="https://www.lumiverse.hr/hr/moj-kolega">
+  <link rel="alternate" hreflang="x-default" href="https://www.lumiverse.hr/moj-kolega">
+  <title>Moj Kolega - AI zaposlenik za Vaš webshop | LumiVerse</title>
+  <meta name="description" content="Vođeni AI zaposlenik za Vaš webshop: odgovara kupcima, preporučuje iz kataloga, hvata upite i prosljeđuje ih Vašem timu, 24/7.">
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Moj Kolega - AI zaposlenik za Vaš webshop | LumiVerse">
+  <meta property="og:description" content="Vođeni AI zaposlenik za Vaš webshop: odgovara kupcima, preporučuje iz kataloga, hvata upite i prosljeđuje ih Vašem timu, 24/7.">
+  <meta property="og:url" content="https://www.lumiverse.hr/hr/moj-kolega">
+  <meta property="og:image" content="https://www.lumiverse.hr/images/og/moj-kolega.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Moj Kolega - AI zaposlenik za Vaš webshop | LumiVerse">
+  <meta name="twitter:description" content="Vođeni AI zaposlenik za Vaš webshop: odgovara kupcima, preporučuje iz kataloga, hvata upite i prosljeđuje ih Vašem timu, 24/7.">
+  <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/moj-kolega.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(255, 77, 77, 0.12), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(255, 143, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 77, 77, 0.1);
+      border: 1px solid rgba(255, 77, 77, 0.2);
+      border-radius: 100px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .hero-image-showcase-inner {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 77, 77, 0.5), transparent);
+    }
+
+    .hero-image-showcase-inner img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .role-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .role-card:hover::before {
+      opacity: 1;
+    }
+
+    .role-number {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .role-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 143, 77, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .role-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Live sites grid */
+    .sites-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .site-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .site-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .site-card-head {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .site-flag {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .site-country {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .site-domain {
+      font-size: 0.85rem;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.15rem;
+    }
+
+    .site-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      border-top: 1px solid var(--glass-border);
+      padding-top: 1.25rem;
+      margin-top: auto;
+    }
+
+    .site-stat-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .site-stat-label {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-top: 0.35rem;
+    }
+
+    /* Featured site card (full-width, horizontal) */
+    .site-card.featured {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    .site-card.featured .site-card-head { flex: 1; }
+    .site-card.featured .site-stats {
+      grid-template-columns: repeat(4, auto);
+      gap: 2.75rem;
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .site-new {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(255, 77, 77, 0.12);
+      border: 1px solid rgba(255, 77, 77, 0.25);
+      padding: 0.15rem 0.5rem;
+      border-radius: 100px;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+    }
+    @media (max-width: 720px) {
+      .site-card.featured { flex-direction: column; align-items: stretch; gap: 1.5rem; }
+      .site-card.featured .site-stats {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        border-top: 1px solid var(--glass-border);
+        padding-top: 1.25rem;
+      }
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sites-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+
+      .sites-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+  <script src="/showcase.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Početna",
+      "item": "https://www.lumiverse.hr/hr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Reference",
+      "item": "https://www.lumiverse.hr/hr/#work"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Moj Kolega",
+      "item": "https://www.lumiverse.hr/hr/moj-kolega"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/hr/" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="/hr/#services" class="nav-link">Usluge</a></li>
+        <li><a href="/hr/#work" class="nav-link">Reference</a></li>
+        <li><a href="/hr/#research" class="nav-link">Istraživanje</a></li>
+        <li><a href="/hr/#product" class="nav-link">Proizvod</a></li>
+        <li><a href="/hr/#about" class="nav-link">O nama</a></li>
+        <li><a href="/hr/#contact" class="nav-link">Kontakt</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-lang">
+          <a href="/moj-kolega" hreflang="en" lang="en" title="English version">EN</a>
+          <span aria-current="true">HR</span>
+        </div>
+        <a href="/hr/#contact" class="nav-cta">Razgovarajmo</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Otvori izbornik">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/hr/#services" class="mobile-nav-link">Usluge</a>
+    <a href="/hr/#work" class="mobile-nav-link">Reference</a>
+    <a href="/hr/#research" class="mobile-nav-link">Istraživanje</a>
+    <a href="/hr/#product" class="mobile-nav-link">Proizvod</a>
+    <a href="/hr/#about" class="mobile-nav-link">O nama</a>
+    <a href="/hr/#contact" class="mobile-nav-link">Kontakt</a>
+    <div class="mobile-nav-lang">
+      <a href="/moj-kolega" hreflang="en" lang="en">EN</a>
+      <span aria-current="true">HR</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/hr/">Početna</a>
+        <span>/</span>
+        <a href="/hr/#work">Reference</a>
+        <span>/</span>
+        <span>Moj Kolega</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-user-tie"></i>
+        Naš proizvod &middot; AI zaposlenik
+      </div>
+
+      <h1 class="display-lg mb-4">Moj Kolega</h1>
+      <p class="body-lg text-secondary" style="max-width: 800px;">
+        AI zaposlenik za Vaš webshop. Odgovara kupcima, preporučuje iz Vašeg kataloga, hvata upite koje biste izvan radnog vremena izgubili i prosljeđuje ih Vašem timu kad treba — 24/7. Mi ga postavljamo, nadziremo i svaki mjesec poboljšavamo. Vi vidite rezultate, a ne još jedan chatbot.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://mojkolega.hr" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i>
+          Posjetite Mog Kolegu
+        </a>
+        <a href="/hr/#contact" class="btn btn-secondary">
+          Napravite nešto slično
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <div class="showcase" data-showcase data-interval="5200">
+            <img class="showcase-slide" src="/images/hr/mojkolega-1.jpg" alt="mojkolega.hr - naslovnica Mog Kolege, agent odgovara na stvarno pitanje iz kataloga u ugrađenom chat widgetu">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/hr/mojkolega-2.jpg" alt="Noćni izvještaj - pitanja na koja je odgovoreno, preporuke i proslijeđeni upiti tijekom noći, riješeno samostalno naspram predano timu">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/hr/mojkolega-3.jpg" alt="Pet poslova koje Moj Kolega obavlja - utemeljeni odgovori, preporuke, prikupljanje upita i devet jezika, sve iz podataka same trgovine">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">24/7</div>
+          <div class="stat-label">Odgovara kupcima, danju i noću</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">9</div>
+          <div class="stat-label">Jezika koje prepoznaje i na kojima odgovara</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">5</div>
+          <div class="stat-label">Poslova koje obavlja, utemeljenih na Vašim podacima</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">Mjesečno</div>
+          <div class="stat-label">Podešavamo ga u svakom ciklusu poboljšanja</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Idea -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Ideja</span>
+        <h2 class="display-md section-title">Zaposlite ulogu, a ne chatbot</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Većina trgovina prikvači chatbot, gleda kako pogađa krivo i ugasi ga. Moj Kolega je suprotno: vođeni AI zaposlenik koji odgovara isključivo iz Vašeg kataloga i pravila, kaže „ne znam" umjesto da izmišlja i svaki je mjesec bolji jer ga netko doista prati.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 class="heading-md mb-3">Utemeljeno, nikad izmišljeno</h3>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Odgovara samo iz Vašeg kataloga i pravila
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Kad podatka nema, to i kaže te proslijedi dalje — ne pogađa
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Uz svaki predloženi proizvod ide razlog za kupnju, isključivo iz Vašeg kataloga
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Svaki se odgovor može pratiti do izvora iz kojeg je došao
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-user-gear"></i>
+          </div>
+          <h3 class="heading-md mb-3">Vođeno, ne uradi-sam</h3>
+          <p class="bento-text mb-4">
+            Ne dobivate uređivač promptova i izbornik modela. Zapošljavate ulogu — prodaja, podrška ili recepcija — a mi radimo ostalo: postavimo ga, povežemo Vaš katalog i testiramo ga na stvarnim pitanjima prije nego što ide u rad.
+          </p>
+          <p class="bento-text">
+            Zatim svaki mjesec šaljemo izvještaj o tome što su Vaši kupci pitali, što je agent riješio sam, što je promašio i što smo promijenili. Proizvod je upravo to poboljšanje, a ne nadzorna ploča koju morate stalno nadgledati.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What It Does -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+        <span class="section-label">Što radi</span>
+        <h2 class="display-md section-title">Pet poslova, odrađenih pouzdano</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Ne četrdeset poslova koje generički model odradi loše. Pet onih koji su webshopu doista važni, svaki utemeljen na Vašim podacima.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-number">01</div>
+          <div class="role-icon"><i class="fas fa-comments"></i></div>
+          <h3 class="role-title">Odgovara, utemeljeno</h3>
+          <p class="role-text">
+            Iz Vašeg kataloga i pravila. Kad ne zna, to kaže i preda dalje — nikad ne pogađa i ne košta Vas prodaje.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">02</div>
+          <div class="role-icon"><i class="fas fa-basket-shopping"></i></div>
+          <h3 class="role-title">Preporučuje pravi proizvod</h3>
+          <p class="role-text">
+            Dva ili tri prijedloga za potrebu i proračun, svaki s razlogom za kupnju — izvučeni iz Vašeg kataloga, nikad izmišljeni.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">03</div>
+          <div class="role-icon"><i class="fas fa-user-plus"></i></div>
+          <h3 class="role-title">Hvata upite koje biste izgubili</h3>
+          <p class="role-text">
+            Veleprodaja, B2B i neodlučni kupci — kvalificirani, s cijelim razgovorom, na Vašem stolu ujutro umjesto da nestanu do zore.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">04</div>
+          <div class="role-icon"><i class="fas fa-arrow-right-arrow-left"></i></div>
+          <h3 class="role-title">Sigurno prosljeđuje dalje</h3>
+          <p class="role-text">
+            Kad mu je preko glave, predaje Vašem timu s punim kontekstom — čista predaja, a ne blef.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">05</div>
+          <div class="role-icon"><i class="fas fa-language"></i></div>
+          <h3 class="role-title">Govori 9 jezika</h3>
+          <p class="role-text">
+            Prepoznaje jezik posjetitelja i sam se prebacuje — hrvatski, engleski, slovenski, srpski, njemački, talijanski, bosanski, mađarski i drugi.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">06</div>
+          <div class="role-icon"><i class="fas fa-moon"></i></div>
+          <h3 class="role-title">Radi noćnu smjenu</h3>
+          <p class="role-text">
+            Upiti izmiču upravo u satima kad Vaš tim nije tu. Moj Kolega ih pokriva — i ujutro Vam preda noćne razgovore.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Under the Hood -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+        <span class="section-label">Ispod haube</span>
+        <h2 class="display-md section-title">Jedna skripta, utemeljena u Vašoj trgovini</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Moj Kolega se na bilo koju stranicu spušta kao jedan widget — ali pouzdanim ga čini posao iza njega.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon"><i class="fas fa-code"></i></div>
+          <h3 class="bento-title">Ugradivi widget</h3>
+          <p class="bento-text">
+            Jedan script tag na bilo kojoj stranici. Odgovore prenosi token po token, zna na kojoj je stranici posjetitelj, na svakoj poruci prati njegov jezik i može se uključiti ili isključiti na daljinu — bez novog deploya.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Streaming chata preko SSE-a, svjestan konteksta stranice
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Prilagodba jezika po poruci i podesiv izgled
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Uključivanje, isključivanje i uvođenje na daljinu, bez diranja stranice domaćina
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon"><i class="fas fa-database"></i></div>
+          <h3 class="bento-title">Znanje iz Vašeg kataloga</h3>
+          <p class="bento-text">
+            Obilazi Vašu stranicu i prolazi kroz WooCommerce ili Shopify katalog, uz priložene datoteke i tekst. Hibridna vektorska i tekstualna pretraga pronalazi pravi odlomak, uz izvlačenje proizvoda i cijena, usklađeno s EU Omnibus pravilima o cijenama.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon"><i class="fas fa-list-check"></i></div>
+          <h3 class="bento-title">Zadaci: rad u pozadini</h3>
+          <p class="bento-text">
+            Osim chata, agent za trgovinu obavlja i zakazane zadatke — provjere kataloga, nadzor, tjednu analizu prodaje, čak i upisivanje natrag u Vašu trgovinu — svaki od njih prvo kao prijedlog na pregled, prije nego što se išta stvarno promijeni.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3 class="bento-title">Teško ga je prevariti</h3>
+          <p class="bento-text">
+            Nepouzdan sadržaj s weba i iz kataloga čisti se i ograđuje, okidač na ulazu hvata pokušaje ubacivanja uputa, a skener na izlazu zaustavlja curenje usred odgovora. Neće ga se nagovoriti da izađe iz uloge.
+          </p>
+        </div>
+      </div>
+
+      <div class="bento-card mt-5">
+        <h3 class="heading-md mb-3">Izgrađeno na</h3>
+        <p class="bento-text">
+          Next.js 16 i React 19 na frontendu; FastAPI s asinkronim SQLAlchemyjem na backendu i u pogonu agenta; Celery i Redis za obilaske i zakazane zadatke; PostgreSQL 17 s pgvectorom za pohranu i hibridnu pretragu — sve u Dockeru, dvojezično na hrvatskom i engleskom. Zanimljivo inženjerstvo nije model, nego sve ono što model drži poštenim.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Upoznajte AI zaposlenika svog webshopa</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 680px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          Moj Kolega je u pogonu i prima nove trgovine. Pogledajte kako odgovara na stvarna pitanja na Vašem jeziku, pa ga postavimo i za Vaš katalog.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
+          <a href="https://mojkolega.hr" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fas fa-external-link-alt"></i>
+            Posjetite mojkolega.hr
+          </a>
+          <a href="/hr/#contact" class="btn btn-secondary">
+            Razgovarajmo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/hr/" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI alati koji ljude čine nezaustavljivima. Sjedište u Zagrebu, klijenti diljem svijeta.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Usluge</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/#services" class="footer-link">Razvoj proizvoda</a></li>
+            <li><a href="/hr/#services" class="footer-link">Tehnološko savjetovanje</a></li>
+            <li><a href="/hr/#services" class="footer-link">AI strategija</a></li>
+            <li><a href="/hr/#services" class="footer-link">Automatizacija procesa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Reference</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/moj-kolega" class="footer-link">Moj Kolega</a></li>
+            <li><a href="/hr/titlomat" class="footer-link">Titlomat</a></li>
+            <li><a href="/hr/aimito" class="footer-link">The Aimito</a></li>
+            <li><a href="/hr/mojkraj" class="footer-link">MOJ KRAJ.</a></li>
+            <li><a href="/hr/barcoder" class="footer-link">Barcoder</a></li>
+            <li><a href="/hr/rentalica" class="footer-link">Rentalica</a></li>
+            <li><a href="/hr/overserved" class="footer-link">Overserved</a></li>
+            <li><a href="/hr/tvrtko" class="footer-link">Tvrtko</a></li>
+            <li><a href="/hr/bridj" class="footer-link">Bridj</a></li>
+            <li><a href="/hr/country-guides" class="footer-link">Country Guides</a></li>
+            <li><a href="/hr/army-adria" class="footer-link">ARMY Adria</a></li>
+            <li><a href="/hr/pitaj-lider" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="/hr/lider-pdf-archive" class="footer-link">Lider Arhiva</a></li>
+            <li><a href="/hr/lider-translations" class="footer-link">Lider Prijevodi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kontakt</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Pošaljite nam e-mail</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 LumiVerse d.o.o. Sva prava pridržana.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Moj Kolega AI assistant widget -->
+    <script src="https://widget.mojkolega.hr/embed.js" data-agent="demo-agent-www-lumiverse-hr-clwyqg" data-key="kol_114e846b83c8bafdce937764d1a004cb" defer></script>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
+</html>
