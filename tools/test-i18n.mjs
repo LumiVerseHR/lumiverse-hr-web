@@ -154,6 +154,31 @@ for (const [enFile, hrFile, enRoute, hrRoute] of pairs) {
   checkAbsolutePaths(hrFile, hr);
 }
 
+// Our own products default to Croatian at their root and expose the English
+// version at /en, so each tree has to link the matching one. Verified live:
+// titlomat.com/ is lang="hr", mojkolega.hr/ redirects to /hr, mojkraj.hr/ is
+// Croatian. Products with no second language (tvrtko.ai, theaimito.com) are
+// deliberately absent from this list.
+const bilingualProducts = ["titlomat.com", "mojkraj.hr", "mojkolega.hr"];
+for (const [enFile, hrFile] of pairs.map(([a, b]) => [a, b])) {
+  for (const [file, wantEnglish] of [[enFile, true], [hrFile, false]]) {
+    const html = read(file);
+    if (!html) continue;
+    for (const host of bilingualProducts) {
+      const bare = new RegExp(`href="https://${host.replace(".", "\\.")}/?"`, "g");
+      const english = new RegExp(`href="https://${host.replace(".", "\\.")}/en"`, "g");
+      const bareCount = (html.match(bare) ?? []).length;
+      const enCount = (html.match(english) ?? []).length;
+      if (wantEnglish && bareCount) {
+        fail(file, `links ${host} without /en — English readers would land on the Croatian site`);
+      }
+      if (!wantEnglish && enCount) {
+        fail(file, `links ${host}/en from the Croatian tree`);
+      }
+    }
+  }
+}
+
 // The Croatian error page is served by nginx under the /hr/ prefix.
 const hr404 = read("hr/404.html");
 if (!hr404) fail("hr/404.html", "missing Croatian error page");
