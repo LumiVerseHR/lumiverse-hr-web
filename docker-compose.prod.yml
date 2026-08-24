@@ -1,0 +1,53 @@
+# Dokploy production compose — LumiVerse marketing site (static, Astro build).
+# Placement: box 1 (dokploy-4gb-fsn1-1, 49.12.76.162 — the wildcard target).
+# Serves the apex site: www.lumiverse.hr canonical, lumiverse.hr -> www.
+# See deploy/runbooks/new-project.md and the newsportal reference compose.
+
+services:
+  lumiverse-web:
+    build:
+      context: .
+      dockerfile: deploy/dokploy/Dockerfile
+    restart: unless-stopped
+    networks: [default, dokploy-network]
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=dokploy-network
+
+      # HSTS (applied to the served www router)
+      - traefik.http.middlewares.lumiverse-hsts.headers.stsSeconds=31536000
+      - traefik.http.middlewares.lumiverse-hsts.headers.stsIncludeSubdomains=true
+
+      # www.lumiverse.hr — canonical, served by nginx on :80
+      - "traefik.http.routers.lumiverse-web.rule=Host(`www.lumiverse.hr`)"
+      - traefik.http.routers.lumiverse-web.entrypoints=websecure
+      - traefik.http.routers.lumiverse-web.tls.certresolver=letsencrypt
+      - traefik.http.routers.lumiverse-web.middlewares=lumiverse-hsts
+      - traefik.http.services.lumiverse-web.loadbalancer.server.port=80
+      - "traefik.http.routers.lumiverse-web-http.rule=Host(`www.lumiverse.hr`)"
+      - traefik.http.routers.lumiverse-web-http.entrypoints=web
+      - traefik.http.routers.lumiverse-web-http.middlewares=redirect-to-https@file
+      - traefik.http.routers.lumiverse-web-http.service=lumiverse-web
+
+      # lumiverse.hr (apex) -> https://www.lumiverse.hr/... (permanent)
+      - "traefik.http.middlewares.lumiverse-canonical.redirectregex.regex=^https?://[^/]+/(.*)"
+      - "traefik.http.middlewares.lumiverse-canonical.redirectregex.replacement=https://www.lumiverse.hr/$${1}"
+      - traefik.http.middlewares.lumiverse-canonical.redirectregex.permanent=true
+      - "traefik.http.routers.lumiverse-redir.rule=Host(`lumiverse.hr`)"
+      - traefik.http.routers.lumiverse-redir.entrypoints=websecure
+      - traefik.http.routers.lumiverse-redir.tls.certresolver=letsencrypt
+      - traefik.http.routers.lumiverse-redir.middlewares=lumiverse-canonical
+      - traefik.http.routers.lumiverse-redir.service=lumiverse-web
+      - "traefik.http.routers.lumiverse-redir-http.rule=Host(`lumiverse.hr`)"
+      - traefik.http.routers.lumiverse-redir-http.entrypoints=web
+      - traefik.http.routers.lumiverse-redir-http.middlewares=lumiverse-canonical
+      - traefik.http.routers.lumiverse-redir-http.service=lumiverse-web
+
+networks:
+  default:
+  dokploy-network:
+    external: true
