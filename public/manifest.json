@@ -1,0 +1,30 @@
+{
+  "name": "LumiVerse - We Build Better Humans",
+  "short_name": "LumiVerse",
+  "description": "AI tools that amplify your team's capabilities, automate mundane tasks, and let humans focus on work that matters.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050508",
+  "theme_color": "#050508",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "technology",
+    "ai"
+  ],
+  "lang": "en"
+}

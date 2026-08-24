@@ -1,36 +1,25 @@
 #!/usr/bin/env bash
-# Deploy the static site to a VPS via rsync-over-ssh.
+# Build and deploy the static site to a VPS via rsync-over-ssh.
 #
 #   DEPLOY_HOST=<ssh-alias> [DEPLOY_PATH=/var/www/lumiverse.hr] ./deploy.sh
-#
-# NOTE (2026-08-17): www.lumiverse.hr currently serves from Vercel
-# (git push to main auto-deploys). This script is prepared for the
-# planned VPS migration — see the migration issue in GitHub. Until DNS
-# moves, running this deploys to a box nothing points at.
 set -euo pipefail
 
 HOST="${DEPLOY_HOST:?set DEPLOY_HOST to the ssh alias of the target VPS}"
 DEST="${DEPLOY_PATH:-/var/www/lumiverse.hr}"
+SHA="$(git rev-parse --short HEAD)"
+STAMP="$(date -u +%Y%m%d%H%M%S)"
+RELEASE="${DEST}/releases/${STAMP}-${SHA}"
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$HERE"
 
-# Fail the deploy if the shared nav/footer drifted across pages.
-python3 scripts/sync_shared.py --check
+npm run build
+npm run test:parity
+npm run test:routes
 
-# Everything the site serves, nothing it doesn't.
-rsync -avz --delete \
-  --exclude '.git' \
-  --exclude '.gitignore' \
-  --exclude '.DS_Store' \
-  --exclude '.playwright-mcp' \
-  --exclude '.githooks' \
-  --exclude 'reports' \
-  --exclude 'deploy.sh' \
-  --exclude 'scripts' \
-  --exclude 'partials' \
-  --exclude 'README.md' \
-  ./ "${HOST}:${DEST}/"
+ssh "${HOST}" "mkdir -p '${DEST}/releases'"
+rsync -avz --delete dist/ "${HOST}:${RELEASE}/"
+ssh "${HOST}" "ln -sfn '${RELEASE}' '${DEST}/current'"
 
-echo "==> deployed to ${HOST}:${DEST}"
+echo "==> deployed ${SHA} to ${HOST}:${RELEASE}"
 echo "==> verify: curl -sI https://www.lumiverse.hr/ | head -3"

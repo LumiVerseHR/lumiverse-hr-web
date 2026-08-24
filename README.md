@@ -3,19 +3,35 @@
 The marketing site for **LumiVerse d.o.o.**, a human augmentation studio in Zagreb, Croatia.
 Live at [lumiverse.hr](https://www.lumiverse.hr/).
 
-Static HTML and CSS — no build step, no framework, nothing to install.
+Astro static site. The source is generated from the legacy HTML pages during
+the migration phase, then built to plain static files in `dist/` for VPS hosting.
 
 ## Running locally
 
-Any static file server works. From the repository root:
+Install dependencies once:
 
 ```bash
-python3 -m http.server 8080
-# then open http://localhost:8080
+npm install
 ```
 
-Note that `.htaccess` rules do not apply locally, so redirects and caching headers
-behave differently than in production.
+Run the Astro dev server:
+
+```bash
+npm run dev
+# then open the local URL Astro prints
+```
+
+Build and verify the production output:
+
+```bash
+npm run build
+npm run test:parity
+npm run test:routes
+npm run test:visual
+```
+
+`test:routes` and `test:visual` bind temporary localhost servers. In restricted
+environments they may require permission to listen on `127.0.0.1`.
 
 ## Pages
 
@@ -55,7 +71,9 @@ Research (its own homepage band + nav item, kept distinct from the Work grid):
 ## Supporting files
 
 ```
-styles.css          Shared stylesheet — every page links to this
+src/pages/          Astro source pages generated from the legacy HTML
+public/             Files copied verbatim into the built site root
+styles.css          Legacy shared stylesheet copied into public/styles.css
 partials/           Canonical shared nav, footer & capacity note (see Shared partials)
 scripts/            sync_shared.py (shared-partial sync + drift check), indexnow.py
 showcase.js         Hero-image slideshow with a WebGL mosaic transition
@@ -65,7 +83,7 @@ images/             Screenshots and photography
 sitemap.xml         Update when adding or reordering pages; priorities track homepage order
 robots.txt          Crawler rules
 manifest.json       PWA manifest
-.htaccess           Apache rewrite, caching and security headers
+nginx/              VPS routing, redirects, caching and security headers
 humans.txt          Credits
 security.txt        Security contact
 favicon.*           Icon set (ico, svg, 192, 512, apple-touch)
@@ -76,6 +94,8 @@ favicon.*           Icon set (ico, svg, 192, 512, apple-touch)
 **Read `style-guide.md` and `writing-guide.md` before adding or editing a page.**
 They define the visual system and the copy voice, and the existing pages follow them closely.
 
+- During the migration phase, edit the legacy root HTML/CSS/assets, then run
+  `npm run migrate` or `npm run build` to regenerate `src/pages` and `public`.
 - Shared styles live in `styles.css`. Page-specific styles go in a `<style>` block in
   that page's `<head>` — see `rentalica.html` or `titlomat.html`.
 - Case study pages share a structure: breadcrumb, tag pill, title, CTAs, hero image
@@ -164,17 +184,25 @@ Two layout gotchas worth knowing:
 
 ## Deployment
 
-**Currently** hosted on Vercel with GitHub integration — pushing to `main`
-deploys automatically, so treat `main` as production. **Planned migration**
-to a VPS (build locally, rsync over ssh — see `deploy.sh` and the migration
-issue #8); after cutover, Vercel will be disconnected and `./deploy.sh`
-becomes the only deploy path.
+Hosted as static files on a VPS. `./deploy.sh` builds the Astro site, runs parity
+and route checks, rsyncs `dist/` to a git-SHA release directory, and switches the
+`current` symlink.
+
+```bash
+DEPLOY_HOST=<ssh-alias> [DEPLOY_PATH=/var/www/lumiverse.hr] ./deploy.sh
+```
+
+Nginx should serve `/var/www/lumiverse.hr/current`; see
+`nginx/lumiverse.hr.conf`. The canonical routes are extensionless:
+`/rentalica`, `/titlomat`, etc. Requests for `/slug.html` and `/index.html`
+redirect permanently to `/slug` and `/`.
 
 ## SEO notes
 
-- Every page carries a `<link rel="canonical">` on the **www** host (the canonical
-  host — `lumiverse.hr` 308-redirects to `www.lumiverse.hr`). `404.html` is `noindex`
-  instead. `sitemap.xml` and `robots.txt` use the same www host.
+- Every page carries a `<link rel="canonical">` on the **www** host using the
+  extensionless URL. The canonical host is `www.lumiverse.hr`; `lumiverse.hr`
+  should 308-redirect to it. `404.html` is `noindex` instead. `sitemap.xml`
+  and `robots.txt` use the same www host.
 - **IndexNow** (fast re-crawl for Bing/Yandex/Seznam): the public key file
   `<key>.txt` lives at the site root, and `scripts/indexnow.py` submits the sitemap's
   page URLs. After a deploy that adds/changes pages, run `python3 scripts/indexnow.py`

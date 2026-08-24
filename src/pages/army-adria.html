@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.lumiverse.hr/army-adria">
+  <title>ARMY Adria - A Fan Built a Full Community Platform in Two Weeks | LumiVerse</title>
+  <meta name="description" content="A devoted BTS fan with no coding background built ARMY Adria - a full Croatian fan-community platform with magazine, archive, games and member accounts - in two weeks, using AI tools and LumiVerse's guidance.">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:title" content="ARMY Adria - A Fan Built a Full Community Platform in Two Weeks | LumiVerse">
+  <meta property="og:description" content="A devoted BTS fan with no coding background built ARMY Adria - a full Croatian fan-community platform with magazine, archive, games and member accounts - in two weeks, using AI tools and LumiVerse's guidance.">
+  <meta property="og:url" content="https://www.lumiverse.hr/army-adria">
+  <meta property="og:image" content="https://www.lumiverse.hr/images/og/army-adria.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ARMY Adria - A Fan Built a Full Community Platform in Two Weeks | LumiVerse">
+  <meta name="twitter:description" content="A devoted BTS fan with no coding background built ARMY Adria - a full Croatian fan-community platform - in two weeks, using AI tools and LumiVerse's guidance.">
+  <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/army-adria.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(168, 85, 247, 0.16), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(192, 132, 252, 0.10), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(168, 85, 247, 0.12);
+      border: 1px solid rgba(168, 85, 247, 0.28);
+      border-radius: 100px;
+      color: #c084fc;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image-showcase { margin-top: 4rem; position: relative; }
+
+    .hero-image-showcase-inner {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.6), transparent);
+    }
+
+    .hero-image-showcase-inner img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block { text-align: center; }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #f0abfc 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label { color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem; }
+
+    .role-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #a855f7, transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .role-card:hover { transform: translateY(-5px); border-color: rgba(168, 85, 247, 0.35); }
+    .role-card:hover::before { opacity: 1; }
+
+    .role-number { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; color: #c084fc; margin-bottom: 1rem; }
+
+    .role-icon {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.18), rgba(192, 132, 252, 0.1));
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; color: #c084fc; margin-bottom: 1.5rem;
+    }
+
+    .role-title { font-size: 1.35rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .role-text { color: var(--text-secondary); line-height: 1.7; }
+
+    /* purple bento icons on this page */
+    .feature-card .bento-icon {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.18), rgba(192, 132, 252, 0.1));
+      color: #c084fc;
+    }
+
+    .stack-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+    }
+    .stack-list { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.25rem; }
+    .stack-list span {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 100px;
+      background: rgba(168, 85, 247, 0.1);
+      border: 1px solid rgba(168, 85, 247, 0.22);
+      color: #d8b4fe;
+      font-weight: 500;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(ellipse at center, rgba(168, 85, 247, 0.09), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) { .stats-container { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) {
+      .stats-container { grid-template-columns: 1fr; }
+      .cta-section { padding: 2.5rem 1.5rem; }
+    }
+  </style>
+  <script src="showcase.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#services" class="nav-link">Services</a></li>
+        <li><a href="/#work" class="nav-link">Work</a></li>
+        <li><a href="/#research" class="nav-link">Research</a></li>
+        <li><a href="/#product" class="nav-link">Product</a></li>
+        <li><a href="/#about" class="nav-link">About</a></li>
+        <li><a href="/#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="/#contact" class="nav-cta">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/#services" class="mobile-nav-link">Services</a>
+    <a href="/#work" class="mobile-nav-link">Work</a>
+    <a href="/#research" class="mobile-nav-link">Research</a>
+    <a href="/#product" class="mobile-nav-link">Product</a>
+    <a href="/#about" class="mobile-nav-link">About</a>
+    <a href="/#contact" class="mobile-nav-link">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/#work">Work</a>
+        <span>/</span>
+        <span>ARMY Adria</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-heart"></i>
+        Community Platform &middot; A Social Experiment
+      </div>
+
+      <h1 class="display-lg mb-4">ARMY Adria</h1>
+      <p class="body-lg text-secondary" style="max-width: 760px;">
+        A complete BTS fan-community platform for Croatia and the region - an editorial magazine, a deep video and discography archive, five games and full member accounts. One devoted fan, with no coding background, built it herself in two weeks: AI tools in her hands, LumiVerse's build model behind her. Her love; our AI.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://www.bts-army-adria.com" target="_blank" rel="noopener" class="btn btn-primary" style="background: linear-gradient(135deg, #a855f7, #c084fc); color: #0b0510;">
+          <i class="fas fa-external-link-alt"></i>
+          Visit ARMY Adria
+        </a>
+        <a href="/#contact" class="btn btn-secondary">
+          Build Something Similar
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <div class="showcase" data-showcase data-interval="5200">
+            <img class="showcase-slide" src="images/armyadria-1.jpg" alt="ARMY Adria homepage - a purple night-sky hero for BTS fans from Croatia and the region">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="images/armyadria-2.jpg" alt="The Magazin section - an editorial grid of original Croatian BTS articles with category filters">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="images/armyadria-3.jpg" alt="The Zajednica community hub with custom illustrated cards for games and regional meetups">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="images/armyadria-4.jpg" alt="A 'Which BTS member are you?' personality quiz with a progress bar and answer cards">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">1</div>
+          <div class="stat-label">Builder, with no coding background</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">2</div>
+          <div class="stat-label">Weeks from idea to production</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">90+</div>
+          <div class="stat-label">Original Croatian articles &amp; guides</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">5</div>
+          <div class="stat-label">Interactive games &amp; quizzes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Experiment -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">The Experiment</span>
+        <h2 class="display-md section-title">Her Love, Our AI Build Model</h2>
+        <p class="section-description" style="max-width: 100%;">
+          We wanted to test the studio's whole thesis at its edge: give a motivated person with no engineering background the right AI tools and a little guidance, and see how far dedication carries them. So we handed the keys to a lifelong BTS fan who had never written a line of code - and got out of the way.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <div class="bento-icon" style="background: linear-gradient(135deg, rgba(168,85,247,0.18), rgba(192,132,252,0.1)); color:#c084fc;">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3 class="heading-md mb-3">The Part No Model Has</h3>
+          <p class="bento-text mb-4">
+            She brought the ingredient AI can't supply: taste, obsession, and love for the subject. She knew exactly what her community wanted because she is that community - a BTS fan from Croatia who wished a place like this existed.
+          </p>
+          <p class="bento-text">
+            Every one of the 90-plus articles is hers. Every game, every category, every bit of Croatian copy comes from someone who actually cares.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon" style="background: linear-gradient(135deg, rgba(168,85,247,0.18), rgba(192,132,252,0.1)); color:#c084fc;">
+            <i class="fas fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="heading-md mb-3">What We Provided</h3>
+          <p class="bento-text mb-4">
+            Not a development team. An AI build model, a production stack that could scale from a simple quiz to authenticated member accounts, and guidance whenever she hit a wall.
+          </p>
+          <p class="bento-text">
+            The engineering barrier came down. The person did the rest - and the person turned out to be more than enough.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What She Built -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 760px; margin: 0 auto 4rem;">
+        <span class="section-label">What She Built</span>
+        <h2 class="display-md section-title">Not a Landing Page - a Platform</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Two weeks in, this isn't a fan page with a few links. It's a content-plus-community product with everything a real portal needs - editorial, media, games and accounts, all in one place.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="bento-card feature-card">
+          <div class="bento-icon"><i class="fas fa-newspaper"></i></div>
+          <h3 class="bento-title">Editorial Magazine</h3>
+          <p class="bento-text">90-plus original Croatian articles - BTS stories, news and guides - across their own categories.</p>
+        </div>
+        <div class="bento-card feature-card">
+          <div class="bento-icon"><i class="fas fa-film"></i></div>
+          <h3 class="bento-title">Video Archive</h3>
+          <p class="bento-text">A curated library with a rich taxonomy: MVs, Run BTS, FESTA, Bangtan Bomb, dance practices, per-member solo videos and specials.</p>
+        </div>
+        <div class="bento-card feature-card">
+          <div class="bento-icon"><i class="fas fa-compact-disc"></i></div>
+          <h3 class="bento-title">Full Discography</h3>
+          <p class="bento-text">Every release, with in-page listening - the whole catalogue in one browsable place.</p>
+        </div>
+        <div class="bento-card feature-card">
+          <div class="bento-icon"><i class="fas fa-calendar-days"></i></div>
+          <h3 class="bento-title">Events Calendar</h3>
+          <p class="bento-text">Birthdays, anniversaries and releases - the dates the community lives by, in one calendar.</p>
+        </div>
+        <div class="bento-card feature-card">
+          <div class="bento-icon"><i class="fas fa-book-open"></i></div>
+          <h3 class="bento-title">Newcomer Guide</h3>
+          <p class="bento-text">Who's who, a glossary, a timeline, eras &amp; albums and membership how-tos - an on-ramp for new fans.</p>
+        </div>
+        <div class="bento-card feature-card">
+          <div class="bento-icon"><i class="fas fa-gamepad"></i></div>
+          <h3 class="bento-title">Five Games &amp; Quizzes</h3>
+          <p class="bento-text">"Which member are you?", three-level trivia, emoji song-guessing, a word search and album match - with progress saved to your profile.</p>
+        </div>
+        <div class="bento-card feature-card">
+          <div class="bento-icon"><i class="fas fa-user-shield"></i></div>
+          <h3 class="bento-title">Member Accounts</h3>
+          <p class="bento-text">Registration, login, password reset and a personal profile - with full, GDPR-compliant account management.</p>
+        </div>
+        <div class="bento-card feature-card">
+          <div class="bento-icon"><i class="fas fa-heart"></i></div>
+          <h3 class="bento-title">Personalization</h3>
+          <p class="bento-text">Playlists, favorites, video playlists and article likes - the site remembers what each fan cares about.</p>
+        </div>
+        <div class="bento-card feature-card">
+          <div class="bento-icon"><i class="fas fa-magnifying-glass"></i></div>
+          <h3 class="bento-title">Site-wide Search</h3>
+          <p class="bento-text">A quick command-style search across everything - articles, videos, discography and games.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Build -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">The Build</span>
+        <h2 class="display-md section-title">How Two Weeks Was Enough</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Fast didn't mean flimsy. The AI build model let one person move like a small team - designing, writing and shipping in parallel - on a stack built for production from day one.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-number">01</div>
+          <div class="role-icon"><i class="fas fa-people-group"></i></div>
+          <h3 class="role-title">One Person, Moving Like a Team</h3>
+          <p class="role-text">
+            With AI generating, refactoring and explaining alongside her, she designed the interface, wrote the content and built the features in parallel - the work of a small team, done by one.
+          </p>
+        </div>
+        <div class="role-card">
+          <div class="role-number">02</div>
+          <div class="role-icon"><i class="fas fa-lock"></i></div>
+          <h3 class="role-title">Production From Day One</h3>
+          <p class="role-text">
+            Not a prototype. Real accounts with hashed passwords, a proper database and GDPR-compliant account management - the boring, essential parts done properly, not faked.
+          </p>
+        </div>
+        <div class="role-card">
+          <div class="role-number">03</div>
+          <div class="role-icon"><i class="fas fa-scale-balanced"></i></div>
+          <h3 class="role-title">Cleared Before It Launched</h3>
+          <p class="role-text">
+            An unofficial fan project done right: the content was run through a BTS/HYBE legal review before going live, and the site states plainly that it isn't affiliated with BTS, HYBE or BIGHIT.
+          </p>
+        </div>
+      </div>
+
+      <div class="stack-card mt-5">
+        <h3 class="heading-md mb-3">Under the Hood</h3>
+        <p class="bento-text">
+          A modern, production-grade stack - the kind you'd expect behind a funded product, shipped by someone who'd never touched any of it two weeks earlier.
+        </p>
+        <div class="stack-list">
+          <span>Next.js 16 (App Router)</span>
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>Tailwind CSS</span>
+          <span>NextAuth (email/password, bcrypt)</span>
+          <span>Prisma ORM</span>
+          <span>libSQL (SQLite-compatible)</span>
+          <span>Docker</span>
+          <span>Dokploy on Hetzner</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What It Proves -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="grid grid-2 gap-4" style="align-items: center;">
+        <div>
+          <span class="section-label">What It Proves</span>
+          <h2 class="display-md section-title mb-4">The Barrier Was Never the Code</h2>
+          <p class="body-lg text-secondary mb-4">
+            For years, an idea like this needed a budget and a developer. Now it needed a fan who wouldn't quit.
+          </p>
+          <p class="text-secondary">
+            AI didn't replace a team - it removed the reason she needed one. That's not a slogan for us; it's the experiment, run on a person instead of a client. "AI tools that make humans unstoppable" is exactly what a full community platform, built in two weeks by one devoted fan, looks like.
+          </p>
+        </div>
+        <div class="bento-card">
+          <h3 class="heading-md mb-3">The Takeaway</h3>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(168,85,247,0.18); color:#c084fc;"><i class="fas fa-check"></i></span>
+              Dedication and taste are the scarce inputs - AI supplies the rest
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(168,85,247,0.18); color:#c084fc;"><i class="fas fa-check"></i></span>
+              A non-developer can now ship a real, authenticated product
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(168,85,247,0.18); color:#c084fc;"><i class="fas fa-check"></i></span>
+              Guidance beats hand-holding: unblock, don't take over
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon" style="background: rgba(168,85,247,0.18); color:#c084fc;"><i class="fas fa-check"></i></span>
+              Done right means done properly - real auth, real legal clearance
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Have an Idea and the Dedication to Match?</h2>
+        <div class="capacity-note" style="position: relative; z-index: 1;">
+          <span class="capacity-badge"><i class="fas fa-circle"></i> At capacity for new build work</span>
+          <p>We're fully booked for new custom builds and embedded roles right now — say hello at <a href="mailto:tihomir.jauk@lumiverse.hr">tihomir.jauk@lumiverse.hr</a> and we'll reach out when we reopen. Want to use one of our products — Tvrtko.ai, Moj Kolega, Titlomat and more? <strong>Those are open</strong> — get in touch and we'll help you get started.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI tools that make humans unstoppable. Based in Zagreb, working globally.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="/#services" class="footer-link">Product Development</a></li>
+            <li><a href="/#services" class="footer-link">Tech Consulting</a></li>
+            <li><a href="/#services" class="footer-link">AI Strategy</a></li>
+            <li><a href="/#services" class="footer-link">Process Automation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Work</h4>
+          <ul class="footer-links">
+            <li><a href="/moj-kolega" class="footer-link">Moj Kolega</a></li>
+            <li><a href="/titlomat" class="footer-link">Titlomat</a></li>
+            <li><a href="/aimito" class="footer-link">The Aimito</a></li>
+            <li><a href="/mojkraj" class="footer-link">MOJ KRAJ.</a></li>
+            <li><a href="/barcoder" class="footer-link">Barcoder</a></li>
+            <li><a href="/rentalica" class="footer-link">Rentalica</a></li>
+            <li><a href="/overserved" class="footer-link">Overserved</a></li>
+            <li><a href="/tvrtko" class="footer-link">Tvrtko</a></li>
+            <li><a href="/bridj" class="footer-link">Bridj</a></li>
+            <li><a href="/country-guides" class="footer-link">Country Guides</a></li>
+            <li><a href="/army-adria" class="footer-link">ARMY Adria</a></li>
+            <li><a href="/pitaj-lider" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="/lider-pdf-archive" class="footer-link">Lider Archive</a></li>
+            <li><a href="/lider-translations" class="footer-link">Lider Translations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Email Us</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 LumiVerse d.o.o. All rights reserved.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Moj Kolega AI assistant widget -->
+    <script src="https://widget.mojkolega.hr/embed.js" data-agent="demo-agent-www-lumiverse-hr-clwyqg" data-key="kol_114e846b83c8bafdce937764d1a004cb" defer></script>
+  </footer>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lumiverse.hr/"},
+    {"@type": "ListItem", "position": 2, "name": "Work", "item": "https://www.lumiverse.hr/#work"},
+    {"@type": "ListItem", "position": 3, "name": "ARMY Adria", "item": "https://www.lumiverse.hr/army-adria"}
+  ]
+}
+  </script>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) { nav.classList.add('nav-scrolled'); }
+      else { nav.classList.remove('nav-scrolled'); }
+    });
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) { icon.classList.remove('fa-bars'); icon.classList.add('fa-times'); }
+      else { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times'); icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
+</html>

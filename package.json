@@ -1,0 +1,21 @@
+{
+  "name": "lumiverse-hr-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "npm run migrate && astro build",
+    "preview": "astro preview",
+    "migrate": "node tools/migrate-to-astro.mjs",
+    "test:routes": "node tools/test-routes.mjs",
+    "test:parity": "node tools/test-parity.mjs",
+    "test:visual": "node tools/test-visual-parity.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.2.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.0"
+  }
+}

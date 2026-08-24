@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.lumiverse.hr/lider-pdf-archive">
+  <title>Lider Digital Archive - AI Document Digitization | LumiVerse</title>
+  <meta name="description" content="AI-powered digitization of 50,000+ magazine articles: custom OCR, layout detection and Croatian NLP turning decades of print into structured data.">
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:title" content="Lider Digital Archive - AI Document Digitization | LumiVerse">
+  <meta property="og:description" content="AI-powered digitization of 50,000+ magazine articles: custom OCR, layout detection and Croatian NLP turning decades of print into structured data.">
+  <meta property="og:url" content="https://www.lumiverse.hr/lider-pdf-archive">
+  <meta property="og:image" content="https://www.lumiverse.hr/images/og/lider-pdf-archive.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lider Digital Archive - AI Document Digitization | LumiVerse">
+  <meta name="twitter:description" content="AI-powered digitization of 50,000+ magazine articles: custom OCR, layout detection and Croatian NLP turning decades of print into structured data.">
+  <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/lider-pdf-archive.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(77, 255, 255, 0.12), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(255, 77, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(77, 255, 255, 0.1);
+      border: 1px solid rgba(77, 255, 255, 0.2);
+      border-radius: 100px;
+      color: var(--accent-tertiary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .image-showcase-inner {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(77, 255, 255, 0.5), transparent);
+    }
+
+    .image-showcase img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .image-caption {
+      text-align: center;
+      margin-top: 1.5rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #4DFFFF 0%, #4D9FFF 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .challenge-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .challenge-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-tertiary), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .challenge-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(77, 255, 255, 0.3);
+    }
+
+    .challenge-card:hover::before {
+      opacity: 1;
+    }
+
+    .challenge-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(77, 255, 255, 0.15), rgba(77, 159, 255, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent-tertiary);
+      margin-bottom: 1.5rem;
+    }
+
+    .challenge-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .challenge-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .pipeline-section {
+      position: relative;
+    }
+
+    .pipeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    .pipeline-grid::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--glass-border), rgba(77, 255, 255, 0.3), var(--glass-border));
+      z-index: 0;
+    }
+
+    .pipeline-step {
+      background: var(--bg-secondary);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    .pipeline-step:hover {
+      transform: translateY(-5px);
+      border-color: rgba(77, 255, 255, 0.3);
+    }
+
+    .pipeline-number {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, rgba(77, 255, 255, 0.2), rgba(77, 159, 255, 0.1));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent-tertiary);
+      margin: 0 auto 1.25rem;
+    }
+
+    .pipeline-icon {
+      font-size: 2rem;
+      color: var(--accent-tertiary);
+      margin-bottom: 1rem;
+    }
+
+    .pipeline-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .pipeline-text {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .result-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+    }
+
+    .result-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #4DFFFF 0%, #4D9FFF 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .result-text {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(77, 255, 255, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pipeline-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pipeline-grid::before {
+        display: none;
+      }
+
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+
+      .pipeline-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.lumiverse.hr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.lumiverse.hr/#work"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Lider Digital Archive",
+      "item": "https://www.lumiverse.hr/lider-pdf-archive"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#services" class="nav-link">Services</a></li>
+        <li><a href="/#work" class="nav-link">Work</a></li>
+        <li><a href="/#research" class="nav-link">Research</a></li>
+        <li><a href="/#product" class="nav-link">Product</a></li>
+        <li><a href="/#about" class="nav-link">About</a></li>
+        <li><a href="/#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="/#contact" class="nav-cta">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/#services" class="mobile-nav-link">Services</a>
+    <a href="/#work" class="mobile-nav-link">Work</a>
+    <a href="/#research" class="mobile-nav-link">Research</a>
+    <a href="/#product" class="mobile-nav-link">Product</a>
+    <a href="/#about" class="mobile-nav-link">About</a>
+    <a href="/#contact" class="mobile-nav-link">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/#work">Work</a>
+        <span>/</span>
+        <span>Lider Digital Archive</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-file-pdf"></i>
+        Document AI
+      </div>
+
+      <h1 class="display-lg mb-4">Lider Digital Archive</h1>
+      <p class="body-lg text-secondary" style="max-width: 700px;">
+        Decades of business journalism, locked in PDFs. We built an AI pipeline that extracted, structured, and indexed 50,000+ articles - making them searchable and ready for the age of AI.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="/#contact" class="btn btn-primary">
+          Digitize Your Archive
+        </a>
+        <a href="#pipeline" class="btn btn-secondary">
+          See How It Works
+        </a>
+      </div>
+
+      <div class="image-showcase">
+        <div class="image-showcase-inner">
+          <img src="images/0017_014.jpg" alt="Original Lider magazine page showing complex multi-column layout with images and Croatian text - demonstrating the complexity of documents processed">
+          <p class="image-caption">
+            Original magazine page showing the complex layouts our AI pipeline processes
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">50K+</div>
+          <div class="stat-label">Articles Processed</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">Decades</div>
+          <div class="stat-label">of Archive Content</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">Croatian</div>
+          <div class="stat-label">Language Processing</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">Structured</div>
+          <div class="stat-label">Searchable Data</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Challenge Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">The Challenge</span>
+        <h2 class="display-md section-title">Not Your Typical OCR Job</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Magazine layouts break standard document processing. Multi-column text, images that split articles, content that spans pages - this required custom AI.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="challenge-card">
+          <div class="challenge-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3 class="challenge-title">Layout Detection & OCR</h3>
+          <p class="challenge-text mb-4">
+            Magazine pages aren't documents. Articles wrap around images, jump across pages, and share space with ads. Standard OCR gives you garbled soup.
+          </p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Multi-column text recognition
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Article boundary detection
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Image and caption identification
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Multi-page article tracking
+            </li>
+          </ul>
+        </div>
+
+        <div class="challenge-card">
+          <div class="challenge-icon">
+            <i class="fas fa-language"></i>
+          </div>
+          <h3 class="challenge-title">Croatian Language AI</h3>
+          <p class="challenge-text mb-4">
+            Most AI models struggle with Croatian. Diacritical marks get mangled, context is lost, and business terminology comes out wrong.
+          </p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Custom language model training
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Diacritical mark preservation
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Context-aware text correction
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Author and title extraction
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pipeline Section -->
+  <section id="pipeline" class="section section-dark pipeline-section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">The Solution</span>
+        <h2 class="display-md section-title">Processing Pipeline</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Four stages from raw PDF to structured, searchable content.
+        </p>
+      </div>
+
+      <div class="pipeline-grid">
+        <div class="pipeline-step">
+          <div class="pipeline-number">1</div>
+          <div class="pipeline-icon">
+            <i class="fas fa-file-pdf"></i>
+          </div>
+          <h3 class="pipeline-title">PDF Ingestion</h3>
+          <p class="pipeline-text">
+            Automated processing of scanned magazine pages with quality normalization
+          </p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="pipeline-number">2</div>
+          <div class="pipeline-icon">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3 class="pipeline-title">Layout Analysis</h3>
+          <p class="pipeline-text">
+            Computer vision for structure detection, segmentation, and reading order
+          </p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="pipeline-number">3</div>
+          <div class="pipeline-icon">
+            <i class="fas fa-font"></i>
+          </div>
+          <h3 class="pipeline-title">OCR & Extraction</h3>
+          <p class="pipeline-text">
+            Text recognition with Croatian language processing and error correction
+          </p>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="pipeline-number">4</div>
+          <div class="pipeline-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3 class="pipeline-title">Data Structuring</h3>
+          <p class="pipeline-text">
+            Converting to searchable, structured format with metadata enrichment
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Capabilities -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">System Capabilities</span>
+        <h2 class="display-md section-title">What We Built</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Custom algorithms for the specific challenges of magazine digitization.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-puzzle-piece"></i>
+          </div>
+          <h3 class="bento-title">Multi-Page Tracking</h3>
+          <p class="bento-text">
+            Articles that continue on page 47 get automatically connected. Our algorithms track continuity markers and content flow across the entire magazine.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-user-edit"></i>
+          </div>
+          <h3 class="bento-title">Author Recognition</h3>
+          <p class="bento-text">
+            Pattern recognition extracts and normalizes author information from various byline formats and positions within magazine layouts.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-tags"></i>
+          </div>
+          <h3 class="bento-title">Auto-categorization</h3>
+          <p class="bento-text">
+            Machine learning classifies articles by topic, industry, and content type - making the archive instantly navigable by subject.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3 class="bento-title">Post-Processing Pipeline</h3>
+          <p class="bento-text">
+            Every extracted article runs through validation and quality control. Spell checking, format normalization, metadata enrichment, and deduplication happen automatically.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Automated quality scoring
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Cross-reference validation
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Human review queuing for edge cases
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3 class="bento-title">Full-text Indexing</h3>
+          <p class="bento-text">
+            Every word, every article, instantly searchable. The archive becomes a queryable database, ready for AI applications.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+        <span class="section-label">The Outcome</span>
+        <h2 class="display-md section-title">Results & Impact</h2>
+        <p class="section-description" style="max-width: 100%;">
+          From locked PDFs to living, searchable archive.
+        </p>
+      </div>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <h3 class="result-title">Digital Preservation</h3>
+          <p class="result-text">
+            Decades of Croatian business journalism preserved in structured, future-proof format. Full-text search across the entire archive.
+          </p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Complete archive digitization
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Rich metadata for every article
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Full-text search capability
+            </li>
+          </ul>
+        </div>
+
+        <div class="result-card">
+          <h3 class="result-title">AI-Ready Data</h3>
+          <p class="result-text">
+            The structured archive now powers Pitaj Lider - the AI assistant. What was locked in PDFs is now training data for business intelligence.
+          </p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Powers AI assistants
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Semantic search ready
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              RAG-compatible format
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Have Archives to Digitize?</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 600px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          Our document AI handles complex layouts, multiple languages, and archives of any size. Let's talk about your digitization project.
+        </p>
+        <div class="capacity-note" style="position: relative; z-index: 1;">
+          <span class="capacity-badge"><i class="fas fa-circle"></i> At capacity for new build work</span>
+          <p>We're fully booked for new custom builds and embedded roles right now — say hello at <a href="mailto:tihomir.jauk@lumiverse.hr">tihomir.jauk@lumiverse.hr</a> and we'll reach out when we reopen. Want to use one of our products — Tvrtko.ai, Moj Kolega, Titlomat and more? <strong>Those are open</strong> — get in touch and we'll help you get started.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI tools that make humans unstoppable. Based in Zagreb, working globally.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="/#services" class="footer-link">Product Development</a></li>
+            <li><a href="/#services" class="footer-link">Tech Consulting</a></li>
+            <li><a href="/#services" class="footer-link">AI Strategy</a></li>
+            <li><a href="/#services" class="footer-link">Process Automation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Work</h4>
+          <ul class="footer-links">
+            <li><a href="/moj-kolega" class="footer-link">Moj Kolega</a></li>
+            <li><a href="/titlomat" class="footer-link">Titlomat</a></li>
+            <li><a href="/aimito" class="footer-link">The Aimito</a></li>
+            <li><a href="/mojkraj" class="footer-link">MOJ KRAJ.</a></li>
+            <li><a href="/barcoder" class="footer-link">Barcoder</a></li>
+            <li><a href="/rentalica" class="footer-link">Rentalica</a></li>
+            <li><a href="/overserved" class="footer-link">Overserved</a></li>
+            <li><a href="/tvrtko" class="footer-link">Tvrtko</a></li>
+            <li><a href="/bridj" class="footer-link">Bridj</a></li>
+            <li><a href="/country-guides" class="footer-link">Country Guides</a></li>
+            <li><a href="/army-adria" class="footer-link">ARMY Adria</a></li>
+            <li><a href="/pitaj-lider" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="/lider-pdf-archive" class="footer-link">Lider Archive</a></li>
+            <li><a href="/lider-translations" class="footer-link">Lider Translations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Email Us</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 LumiVerse d.o.o. All rights reserved.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Moj Kolega AI assistant widget -->
+    <script src="https://widget.mojkolega.hr/embed.js" data-agent="demo-agent-www-lumiverse-hr-clwyqg" data-key="kol_114e846b83c8bafdce937764d1a004cb" defer></script>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
