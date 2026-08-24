@@ -34,7 +34,8 @@ npm run test:visual
 
 `test:routes` and `test:visual` bind temporary localhost servers. In restricted
 environments they may require permission to listen on `127.0.0.1`. `test:visual`
-also needs ImageMagick (`magick`) on PATH.
+also needs ImageMagick on PATH — either 7's `magick` or 6's `compare`
+(`sudo apt-get install imagemagick` gives you the latter).
 
 ## Pages
 
@@ -296,6 +297,21 @@ The live deployment is Dokploy rather than rsync: it builds
 `deploy/dokploy/Dockerfile` from `docker-compose.prod.yml`, and the container's
 nginx config is `deploy/dokploy/nginx.conf`. Keep that file and
 `nginx/lumiverse.hr.conf` in step when routing changes.
+
+**A push to `main` deploys itself.** A GitHub webhook calls the Dokploy compose
+service's refresh-token endpoint, which pulls the commit, rebuilds and swaps the
+container. Watch it at [deploy.lumiverse.hr](https://deploy.lumiverse.hr) or:
+
+```bash
+curl -sI https://www.lumiverse.hr/ | head -3
+```
+
+Dokploy only deploys the branch it is configured for (`main`). After a deploy
+that adds or changes pages, submit the canonical URLs for re-crawl:
+
+```bash
+npm run build && python3 scripts/indexnow.py
+```
 
 ## SEO notes
 

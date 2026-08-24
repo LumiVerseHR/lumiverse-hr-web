@@ -54,13 +54,26 @@ function listen(server) {
   });
 }
 
-// `magick compare` exits non-zero whenever the images differ, so a failure to
-// run it at all looks the same as a difference. Check it up front, or a machine
-// without ImageMagick reports every route as RMSE 1.0 and hides the real result.
-try {
-  execFileSync("magick", ["-version"], { stdio: "ignore" });
-} catch {
-  console.error("Visual parity needs ImageMagick on PATH (`magick`). Install it and re-run.");
+// ImageMagick 7 exposes `magick compare`; 6 ships `compare` as its own binary,
+// which is what Debian and Ubuntu still package. Pick whichever is present.
+//
+// Comparing exits non-zero whenever the images differ, so a failure to run it
+// at all looks the same as a difference. Resolve the binary up front, or a
+// machine without ImageMagick reports every route as RMSE 1.0 and hides the
+// real result.
+function resolveCompare() {
+  for (const [cmd, prefix] of [["magick", ["compare"]], ["compare", []]]) {
+    try {
+      execFileSync(cmd, [...prefix, "-version"], { stdio: "ignore" });
+      return { cmd, prefix };
+    } catch {}
+  }
+  return null;
+}
+
+const compare = resolveCompare();
+if (!compare) {
+  console.error("Visual parity needs ImageMagick on PATH (`magick` or `compare`). Install it and re-run.");
   process.exit(2);
 }
 
@@ -124,7 +137,7 @@ try {
       writeFileSync(migratedPath, migratedShot);
 
       try {
-        execFileSync("magick", ["compare", "-metric", "RMSE", originalPath, migratedPath, "null:"], {
+        execFileSync(compare.cmd, [...compare.prefix, "-metric", "RMSE", originalPath, migratedPath, "null:"], {
           encoding: "utf8",
           stdio: ["ignore", "pipe", "pipe"]
         });
