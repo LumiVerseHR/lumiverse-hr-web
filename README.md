@@ -219,6 +219,19 @@ the paths. It never overwrites an existing file, so it can't clobber a finished
 translation. The copy is left in English deliberately — translating it is the
 human step.
 
+**Localised images.** Screenshots live in `images/` and are shared by both
+trees. Where a product has its own Croatian UI, drop the Croatian capture in
+`images/hr/<same-name>` and point the Croatian page at `/images/hr/<name>` —
+that is what `hr/moj-kolega.html` does. Only worth it when the language is
+actually visible *and* the product has that language: most screenshots are
+either language-neutral or the language in them **is** the subject (the Lider
+Translations sites, Country Guides, The Aimito). `npm run test:i18n` fails if a
+page references an image that isn't there.
+
+Captures are 1440×900 for showcase slides and 1200×533 for homepage cards,
+JPEG, roughly 80–150 KB. Take them with Playwright at `deviceScaleFactor: 2`
+and downscale, dismissing the target site's cookie bar first.
+
 **Rules that the build enforces** (`npm run test:i18n`):
 
 - **Croatian pages use root-absolute URLs** — `/styles.css`, `/images/x.jpg`,
@@ -229,6 +242,11 @@ human step.
 - **The language switcher points at the counterpart page**, not the language home
   — see `{{alt_url}}` under [Shared partials](#shared-partials).
 - **Both trees are in `sitemap.xml`.**
+- **Every referenced image exists**, so a locale override can't silently 404.
+- **Bilingual products link the reader's language** — our own products default
+  to Croatian at their root and serve English at `/en`, so the English tree
+  links `/en` and the Croatian tree the bare domain.
+- **Structured-data breadcrumbs are Croatian**, matching the visible ones.
 
 `brand-guide.html` (an internal design reference) and `decks/tvrtko-agents.html`
 (a standalone deck) are English-only by design and carry no `hreflang`.

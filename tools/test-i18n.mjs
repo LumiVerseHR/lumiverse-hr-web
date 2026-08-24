@@ -4,7 +4,7 @@
 // are easy to get wrong and invisible until a crawler or a phone finds them:
 // missing counterparts, wrong canonicals, non-reciprocal hreflang, and the
 // relative asset paths that would 404 one directory down under /hr/.
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
@@ -152,6 +152,26 @@ for (const [enFile, hrFile, enRoute, hrRoute] of pairs) {
   });
 
   checkAbsolutePaths(hrFile, hr);
+}
+
+// A locale can override any shared image by dropping images/<locale>/<name>
+// next to it — that is how the Croatian tree gets Croatian product screenshots.
+// The override only helps if the file is actually there, so every referenced
+// image must resolve, in both trees.
+function everyPage(dir, base = "") {
+  const out = [];
+  for (const name of readdirSync(dir)) {
+    const full = `${dir}/${name}`;
+    if (statSync(full).isDirectory()) out.push(...everyPage(full, `${base}${name}/`));
+    else if (name.endsWith(".html")) out.push(`${base}${name}`);
+  }
+  return out;
+}
+for (const file of everyPage(dist)) {
+  const html = readFileSync(`${dist}/${file}`, "utf8");
+  for (const [, src] of html.matchAll(/<img[^>]+src="(\/images\/[^"]+)"/g)) {
+    if (!existsSync(path.join(dist, src))) fail(file, `image not found: ${src}`);
+  }
 }
 
 // Structured-data breadcrumbs are what a search result renders, so they have
