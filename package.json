@@ -11,6 +11,7 @@
     "test:routes": "node tools/test-routes.mjs",
     "test:parity": "node tools/test-parity.mjs",
     "test:i18n": "node tools/test-i18n.mjs",
+    "test:seo": "node tools/test-seo.mjs",
     "test:visual": "node tools/test-visual-parity.mjs"
   },
   "dependencies": {

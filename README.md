@@ -27,6 +27,7 @@ Build and verify the production output:
 npm run build
 npm run test:parity
 npm run test:i18n
+npm run test:seo
 npm run test:routes
 npm run test:visual
 ```
@@ -247,6 +248,11 @@ and downscale, dismissing the target site's cookie bar first.
   to Croatian at their root and serve English at `/en`, so the English tree
   links `/en` and the Croatian tree the bare domain.
 - **Structured-data breadcrumbs are Croatian**, matching the visible ones.
+
+`npm run test:seo` covers both trees: unique titles and descriptions within the
+lengths a SERP actually renders, `og:`/`twitter:` restating those same strings,
+one `<h1>`, a resolvable `og:image`, parseable JSON-LD, and the rule that an
+indexable page is in `sitemap.xml` while a `noindex` page is not.
 
 `brand-guide.html` (an internal design reference) and `decks/tvrtko-agents.html`
 (a standalone deck) are English-only by design and carry no `hreflang`.
