@@ -18,6 +18,23 @@
  *   </div>
  */
 (function () {
+  // Control labels follow the page language, so the Croatian tree under /hr/
+  // does not announce English strings to screen readers.
+  var STRINGS = {
+    en: {
+      prev: 'Previous screenshot',
+      next: 'Next screenshot',
+      choose: 'Choose screenshot',
+      slide: function (i, n) { return 'Screenshot ' + i + ' of ' + n; }
+    },
+    hr: {
+      prev: 'Prethodna snimka zaslona',
+      next: 'Sljedeća snimka zaslona',
+      choose: 'Odaberite snimku zaslona',
+      slide: function (i, n) { return 'Snimka zaslona ' + i + ' od ' + n; }
+    }
+  };
+  var t = STRINGS[(document.documentElement.lang || 'en').slice(0, 2).toLowerCase()] || STRINGS.en;
   'use strict';
 
   var TRANSITION_MS = 1150;
@@ -146,14 +163,14 @@
     var dots = document.createElement('div');
     dots.className = 'showcase-dots';
     dots.setAttribute('role', 'tablist');
-    dots.setAttribute('aria-label', 'Choose screenshot');
+    dots.setAttribute('aria-label', t.choose);
 
     var dotEls = slides.map(function (slide, i) {
       var d = document.createElement('button');
       d.type = 'button';
       d.className = 'showcase-dot' + (i === 0 ? ' is-active' : '');
       d.setAttribute('role', 'tab');
-      d.setAttribute('aria-label', 'Screenshot ' + (i + 1) + ' of ' + slides.length);
+      d.setAttribute('aria-label', t.slide(i + 1, slides.length));
       d.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
       d.addEventListener('click', function () {
         go(i);
@@ -163,9 +180,9 @@
       return d;
     });
 
-    ui.appendChild(arrow('prev', 'Previous screenshot'));
+    ui.appendChild(arrow('prev', t.prev));
     ui.appendChild(dots);
-    ui.appendChild(arrow('next', 'Next screenshot'));
+    ui.appendChild(arrow('next', t.next));
     root.appendChild(ui);
 
     function syncDots() {

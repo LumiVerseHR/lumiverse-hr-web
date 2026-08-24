@@ -5,19 +5,25 @@ const root = process.cwd();
 const pagesDir = path.join(root, "src", "pages");
 const publicDir = path.join(root, "public");
 
-const topLevelPages = readdirSync(root)
-  .filter((name) => name.endsWith(".html"))
-  .filter((name) => !name.startsWith("."));
-
-const nestedPages = ["decks/tvrtko-agents.html"];
-const allPages = [...topLevelPages, ...nestedPages].filter((page) => existsSync(path.join(root, page)));
-
-const routeMap = new Map();
-for (const page of allPages) {
-  const parsed = path.parse(page);
-  const route = parsed.name === "index" ? "/" : `/${path.join(parsed.dir, parsed.name)}`.replaceAll(path.sep, "/");
-  routeMap.set(page, route);
+function htmlPagesIn(dir) {
+  const from = path.join(root, dir);
+  if (!existsSync(from)) return [];
+  return readdirSync(from)
+    .filter((name) => name.endsWith(".html"))
+    .filter((name) => !name.startsWith("."))
+    .map((name) => (dir ? `${dir}/${name}` : name));
 }
+
+// English pages live at the repo root; each translation gets its own directory
+// (hr/ -> /hr/...). Add a locale here to pick up a new language tree.
+const localeDirs = ["hr"];
+
+const topLevelPages = htmlPagesIn("");
+const localePages = localeDirs.flatMap((dir) => htmlPagesIn(dir));
+const nestedPages = ["decks/tvrtko-agents.html"];
+const allPages = [...topLevelPages, ...localePages, ...nestedPages].filter((page) =>
+  existsSync(path.join(root, page))
+);
 
 function resetDir(dir) {
   rmSync(dir, { recursive: true, force: true });
@@ -35,10 +41,16 @@ function copyIfExists(name) {
   });
 }
 
+function extensionlessPath(slug) {
+  if (slug === "index") return "/";
+  if (slug.endsWith("/index")) return `/${slug.slice(0, -"index".length)}`;
+  return `/${slug}`;
+}
+
 function extensionlessHref(value) {
   if (value.startsWith("http://") || value.startsWith("https://")) {
     return value.replace(/https:\/\/www\.lumiverse\.hr\/([^"?#]+)\.html/g, (_match, slug) => {
-      return slug === "index" ? "https://www.lumiverse.hr/" : `https://www.lumiverse.hr/${slug}`;
+      return `https://www.lumiverse.hr${extensionlessPath(slug)}`;
     });
   }
 
@@ -47,10 +59,10 @@ function extensionlessHref(value) {
 
   const slug = match[1];
   const suffix = match[2] ?? "";
-  if (slug === "index") {
-    if (suffix.startsWith("#")) return `/${suffix}`;
-    if (suffix.startsWith("?")) return `/${suffix}`;
-    return "/";
+  // index.html -> /, hr/index.html -> /hr/
+  if (slug === "index" || slug.endsWith("/index")) {
+    const base = slug === "index" ? "/" : `/${slug.slice(0, -"index".length)}`;
+    return `${base}${suffix}`;
   }
   return `/${slug}${suffix}`;
 }
@@ -63,7 +75,7 @@ function normalizeHtml(html) {
   });
 
   next = next.replace(/https:\/\/www\.lumiverse\.hr\/([^"'<\s?#]+)\.html/g, (_match, slug) => {
-    return slug === "index" ? "https://www.lumiverse.hr/" : `https://www.lumiverse.hr/${slug}`;
+    return `https://www.lumiverse.hr${extensionlessPath(slug)}`;
   });
 
   next = next.replace(/"url":\s*"https:\/\/www\.lumiverse\.hr\/([^"]+)\.html"/g, (_match, slug) => {

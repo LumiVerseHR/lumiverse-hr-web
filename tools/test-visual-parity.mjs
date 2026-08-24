@@ -6,7 +6,7 @@ import { chromium } from "playwright";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
-const routes = ["/", "/rentalica", "/titlomat", "/country-guides"];
+const routes = ["/", "/rentalica", "/titlomat", "/country-guides", "/hr/", "/hr/rentalica"];
 const viewports = [
   { name: "desktop", width: 1440, height: 1000 },
   { name: "mobile", width: 390, height: 900 }
@@ -28,7 +28,7 @@ function makeServer(baseDir, cleanUrls) {
     const url = decodeURIComponent(rawUrl.split("?")[0].split("#")[0]);
     const candidates = [];
 
-    if (url === "/") candidates.push(path.join(baseDir, "index.html"));
+    if (url.endsWith("/")) candidates.push(path.join(baseDir, url, "index.html"));
     else {
       const clean = url.replace(/^\//, "");
       candidates.push(path.join(baseDir, clean));

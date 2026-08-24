@@ -13,11 +13,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://www.lumiverse.hr/aimito">
+  <link rel="alternate" hreflang="en" href="https://www.lumiverse.hr/aimito">
+  <link rel="alternate" hreflang="hr" href="https://www.lumiverse.hr/hr/aimito">
+  <link rel="alternate" hreflang="x-default" href="https://www.lumiverse.hr/aimito">
   <title>The Aimito - A Store With a Content Engine Inside It | LumiVerse</title>
   <meta name="description" content="A comic-book apparel brand for developers: 889 original designs, cross-modal vibe search over CLIP embeddings, and artwork generated as a build step.">
   <!-- Open Graph / social sharing -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="hr_HR">
   <meta property="og:title" content="The Aimito - A Store With a Content Engine Inside It | LumiVerse">
   <meta property="og:description" content="A comic-book apparel brand for developers: 889 original designs, cross-modal vibe search over CLIP embeddings, and artwork generated as a build step.">
   <meta property="og:url" content="https://www.lumiverse.hr/aimito">
@@ -310,7 +315,13 @@
         <li><a href="/#about" class="nav-link">About</a></li>
         <li><a href="/#contact" class="nav-link">Contact</a></li>
       </ul>
-      <a href="/#contact" class="nav-cta">Let's Talk</a>
+      <div class="nav-actions">
+        <div class="nav-lang">
+          <span aria-current="true">EN</span>
+          <a href="/hr/aimito" hreflang="hr" lang="hr" title="Hrvatska verzija">HR</a>
+        </div>
+        <a href="/#contact" class="nav-cta">Let's Talk</a>
+      </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <i class="fas fa-bars"></i>
       </button>
@@ -325,6 +336,10 @@
     <a href="/#product" class="mobile-nav-link">Product</a>
     <a href="/#about" class="mobile-nav-link">About</a>
     <a href="/#contact" class="mobile-nav-link">Contact</a>
+    <div class="mobile-nav-lang">
+      <span aria-current="true">EN</span>
+      <a href="/hr/aimito" hreflang="hr" lang="hr">HR</a>
+    </div>
   </div>
 
   <!-- Hero Section -->
