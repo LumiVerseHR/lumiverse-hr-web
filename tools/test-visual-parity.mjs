@@ -54,6 +54,16 @@ function listen(server) {
   });
 }
 
+// `magick compare` exits non-zero whenever the images differ, so a failure to
+// run it at all looks the same as a difference. Check it up front, or a machine
+// without ImageMagick reports every route as RMSE 1.0 and hides the real result.
+try {
+  execFileSync("magick", ["-version"], { stdio: "ignore" });
+} catch {
+  console.error("Visual parity needs ImageMagick on PATH (`magick`). Install it and re-run.");
+  process.exit(2);
+}
+
 const original = makeServer(root, true);
 const migrated = makeServer(dist, true);
 const originalPort = await listen(original);
@@ -120,7 +130,12 @@ try {
         });
       } catch (error) {
         const metric = `${error.stderr ?? ""}${error.stdout ?? ""}`;
-        const normalized = Number(metric.match(/\(([^)]+)\)/)?.[1] ?? "1");
+        const match = metric.match(/\(([^)]+)\)/);
+        if (!match) {
+          failures.push(`${viewport.name} ${route} could not be compared: ${metric.trim() || error.message}`);
+          continue;
+        }
+        const normalized = Number(match[1]);
         if (normalized > maxRmse) {
           failures.push(`${viewport.name} ${route} RMSE ${normalized.toFixed(5)}`);
         }
