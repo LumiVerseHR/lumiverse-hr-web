@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run migrate && astro build",
+    "build": "npm run migrate && astro build && node tools/finalize-build.mjs",
     "preview": "astro preview",
     "migrate": "node tools/migrate-to-astro.mjs",
     "test:routes": "node tools/test-routes.mjs",

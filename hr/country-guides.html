@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.lumiverse.hr/hr/country-guides">
+  <link rel="alternate" hreflang="en" href="https://www.lumiverse.hr/country-guides.html">
+  <link rel="alternate" hreflang="hr" href="https://www.lumiverse.hr/hr/country-guides">
+  <link rel="alternate" hreflang="x-default" href="https://www.lumiverse.hr/country-guides.html">
+  <title>Country Guides - One Codebase, Nine Travel Sites, AI-Written | LumiVerse</title>
+  <meta name="description" content="A multi-tenant platform running nine branded travel sites across Europe and North Africa from one codebase, with AI-written destinations, attractions and articles.">
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Country Guides - One Codebase, Nine Travel Sites, AI-Written | LumiVerse">
+  <meta property="og:description" content="A multi-tenant platform running nine branded travel sites across Europe and North Africa from one codebase, with AI-written destinations, attractions and articles.">
+  <meta property="og:url" content="https://www.lumiverse.hr/hr/country-guides">
+  <meta property="og:image" content="https://www.lumiverse.hr/images/og/country-guides.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Country Guides - One Codebase, Nine Travel Sites, AI-Written | LumiVerse">
+  <meta name="twitter:description" content="A multi-tenant platform running nine branded travel sites across Europe and North Africa from one codebase, with AI-written destinations, attractions and articles.">
+  <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/country-guides.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(255, 77, 77, 0.12), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(255, 143, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 77, 77, 0.1);
+      border: 1px solid rgba(255, 77, 77, 0.2);
+      border-radius: 100px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .hero-image-showcase-inner {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 77, 77, 0.5), transparent);
+    }
+
+    .hero-image-showcase-inner img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .role-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .role-card:hover::before {
+      opacity: 1;
+    }
+
+    .role-number {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .role-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 143, 77, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .role-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Live sites grid */
+    .sites-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .site-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .site-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .site-card-head {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .site-flag {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .site-country {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .site-domain {
+      font-size: 0.85rem;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.15rem;
+    }
+
+    .site-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      border-top: 1px solid var(--glass-border);
+      padding-top: 1.25rem;
+      margin-top: auto;
+    }
+
+    .site-stat-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .site-stat-label {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-top: 0.35rem;
+    }
+
+    /* Featured site card (full-width, horizontal) */
+    .site-card.featured {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    .site-card.featured .site-card-head { flex: 1; }
+    .site-card.featured .site-stats {
+      grid-template-columns: repeat(4, auto);
+      gap: 2.75rem;
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .site-new {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(255, 77, 77, 0.12);
+      border: 1px solid rgba(255, 77, 77, 0.25);
+      padding: 0.15rem 0.5rem;
+      border-radius: 100px;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+    }
+    @media (max-width: 720px) {
+      .site-card.featured { flex-direction: column; align-items: stretch; gap: 1.5rem; }
+      .site-card.featured .site-stats {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        border-top: 1px solid var(--glass-border);
+        padding-top: 1.25rem;
+      }
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sites-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+
+      .sites-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+  <script src="/showcase.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.lumiverse.hr/hr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.lumiverse.hr/hr/#work"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Country Guides",
+      "item": "https://www.lumiverse.hr/hr/country-guides"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/hr/" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="/hr/#services" class="nav-link">Usluge</a></li>
+        <li><a href="/hr/#work" class="nav-link">Reference</a></li>
+        <li><a href="/hr/#research" class="nav-link">Istraživanje</a></li>
+        <li><a href="/hr/#product" class="nav-link">Proizvod</a></li>
+        <li><a href="/hr/#about" class="nav-link">O nama</a></li>
+        <li><a href="/hr/#contact" class="nav-link">Kontakt</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-lang">
+          <a href="/country-guides" hreflang="en" lang="en" title="English version">EN</a>
+          <span aria-current="true">HR</span>
+        </div>
+        <a href="/hr/#contact" class="nav-cta">Razgovarajmo</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Otvori izbornik">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/hr/#services" class="mobile-nav-link">Usluge</a>
+    <a href="/hr/#work" class="mobile-nav-link">Reference</a>
+    <a href="/hr/#research" class="mobile-nav-link">Istraživanje</a>
+    <a href="/hr/#product" class="mobile-nav-link">Proizvod</a>
+    <a href="/hr/#about" class="mobile-nav-link">O nama</a>
+    <a href="/hr/#contact" class="mobile-nav-link">Kontakt</a>
+    <div class="mobile-nav-lang">
+      <a href="/country-guides" hreflang="en" lang="en">EN</a>
+      <span aria-current="true">HR</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/hr/">Home</a>
+        <span>/</span>
+        <a href="/hr/#work">Work</a>
+        <span>/</span>
+        <span>Country Guides</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-earth-europe"></i>
+        Our Product &middot; AI Content Platform
+      </div>
+
+      <h1 class="display-lg mb-4">Country Guides</h1>
+      <p class="body-lg text-secondary" style="max-width: 760px;">
+        Nine branded travel sites - from Croatia and Italy to France, Austria and Morocco - running on one codebase, with an AI pipeline that researches and writes every destination, attraction and article. A new country is a config file, not a fork.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://croatian-guide.com" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i>
+          View a Live Site
+        </a>
+        <a href="/hr/#contact" class="btn btn-secondary">
+          Build Something Similar
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <div class="showcase" data-showcase data-interval="5200">
+            <img class="showcase-slide" src="/images/countryguides-1.jpg" alt="croatian-guide.com homepage - an Explore Croatia hero over aerial Dubrovnik, with Top Destinations below">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/countryguides-2.jpg" alt="switzerland-explorer.com - the same platform rebranded for Switzerland, hero over Zurich">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/countryguides-3.jpg" alt="dutch-guide.com - the platform rebranded for the Netherlands, hero over an Amsterdam canal">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/countryguides-4.jpg" alt="A generated Dubrovnik destination page - rating, region, tabbed attractions and quick facts">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/countryguides-5.jpg" alt="french-guides.com - the platform rebranded for France, hero over the Eiffel Tower">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">9</div>
+          <div class="stat-label">Live country sites on one codebase</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">4,500+</div>
+          <div class="stat-label">Attractions researched and written</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">1,000+</div>
+          <div class="stat-label">Destinations across the network</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">38</div>
+          <div class="stat-label">Stages from research to published page</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Idea -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 760px; margin: 0 auto 4rem;">
+        <span class="section-label">The Idea</span>
+        <h2 class="display-md section-title">Build It Once, Ship Every Country</h2>
+        <p class="section-description" style="max-width: 100%;">
+          A travel guide has the same shape everywhere: a country, its regions, the places worth visiting, the things to see in them. So the site gets built once. Country, branding, currency, copy and content become data - not a separate codebase per site.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-sitemap"></i>
+          </div>
+          <h3 class="heading-md mb-3">The Same Shape Everywhere</h3>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Country &rarr; region &rarr; destination &rarr; attraction, the same hierarchy for every market
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Interest categories - castles, beaches, heritage - cut across destinations
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Articles, blog posts and multi-day itineraries layered on top
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Every entity carries its own quality and workflow state
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-code-branch"></i>
+          </div>
+          <h3 class="heading-md mb-3">Why Most Multi-Site Setups Rot</h3>
+          <p class="bento-text mb-4">
+            The usual way to launch a second country is to copy the first and change some text. Then the two drift. A fix lands in one and not the other, and within a year you're maintaining four codebases that used to be one.
+          </p>
+          <p class="bento-text">
+            Here there is exactly one application. What makes Croatia look like Croatia and Switzerland look like Switzerland lives in configuration and data, so a fix ships to every site at once and a new market adds nothing to maintain.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Content Engine -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+        <span class="section-label">The Content Engine</span>
+        <h2 class="display-md section-title">Every Page Is Researched, Then Written</h2>
+        <p class="section-description" style="max-width: 100%;">
+          No page is typed by hand, and none is invented from thin air. The pipeline finds real places on the open web, then writes them up against a fixed schema so every field lands exactly where the database expects it.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-number">01</div>
+          <div class="role-icon">
+            <i class="fas fa-magnifying-glass"></i>
+          </div>
+          <h3 class="role-title">Discover</h3>
+          <p class="role-text">
+            Web search finds the real destinations and attractions for a country. A duplicate check compares each candidate against what's already stored, so the pipeline never re-adds a place it already knows.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">02</div>
+          <div class="role-icon">
+            <i class="fas fa-file-code"></i>
+          </div>
+          <h3 class="role-title">Write to Schema</h3>
+          <p class="role-text">
+            A schema-bound model turns each place into a structured record, not free text. Every field is validated against the same Pydantic schema the database is shaped by - a malformed answer is retried, not published.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">03</div>
+          <div class="role-icon">
+            <i class="fas fa-circle-info"></i>
+          </div>
+          <h3 class="role-title">Enrich With Facts</h3>
+          <p class="role-text">
+            Opening hours, admission fees, how to get there. A separate research pass fills in the practical detail a traveller actually plans around, instead of leaving it to generic prose.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">04</div>
+          <div class="role-icon">
+            <i class="fas fa-tags"></i>
+          </div>
+          <h3 class="role-title">Sort by Interest</h3>
+          <p class="role-text">
+            Each attraction is tagged into interest categories - castles, beaches, history and heritage - so the same place surfaces in every way a visitor might go looking for it.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">05</div>
+          <div class="role-icon">
+            <i class="fas fa-link"></i>
+          </div>
+          <h3 class="role-title">Link and Answer</h3>
+          <p class="role-text">
+            Articles, destinations and attractions are cross-linked automatically, and common questions get their own FAQ section - useful for a reader skimming, and legible to a search engine.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">06</div>
+          <div class="role-icon">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h3 class="role-title">Readiness Gate</h3>
+          <p class="role-text">
+            Before a country goes live, an automated check audits content counts, SEO metadata, images and internal links. A site launches when it's actually complete, not when someone hopes it is.
+          </p>
+        </div>
+      </div>
+
+      <div class="bento-card mt-5">
+        <h3 class="heading-md mb-3">Fast Models, Guarded Output</h3>
+        <p class="bento-text">
+          Generation runs on a fast, low-cost model with an automatic fallback chain - if the primary provider stumbles, the next one picks up the same request rather than dropping the job. Because every response has to satisfy a strict schema before it's accepted, speed never comes at the cost of a broken record reaching the database. The schema definitions are treated as the contract between the AI and the app, and are deliberately hard to change by accident.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-site Architecture -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">One Platform, Many Brands</span>
+        <h2 class="display-md section-title">Nine Domains, One Deploy Pipeline</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Each site looks like it was built for one country. Underneath, they share everything that matters and differ only in data.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-sliders"></i>
+          </div>
+          <h3 class="bento-title">Identity Is a Config File</h3>
+          <p class="bento-text">
+            Domain, branding, SEO metadata, currency, timezone, analytics and the homepage and legal copy all live in one per-country config, next to that country's content tree. Launching a new market means adding a config and generating its content - not touching the application.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              croatian-guide.com, italian-guides.com, french-guides.com, slovenia-guide.com, dutch-guide.com, discover-austria.com, switzerland-explorer.com, portugal-guides.com, moroccan-guides.com
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Same components, different data - no per-site forks to keep in sync
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              More markets already built and staged - Bosnia and Serbia are next, waiting on go-live
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3 class="bento-title">A Database Per Site</h3>
+          <p class="bento-text">
+            Each live site is seeded one country at a time and runs its own database and its own application process. Sites stay isolated, and any one of them is simple to reason about on its own.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon">
+            <i class="fas fa-code-compare"></i>
+          </div>
+          <h3 class="bento-title">Deploy Only What Changed</h3>
+          <p class="bento-text">
+            Continuous deployment hashes the shared code and each country's data separately, then ships only the countries that actually changed. Editing Croatia's content never redeploys Switzerland, and a docs-only commit deploys nothing at all - the pipeline does the least work that's correct.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3 class="bento-title">SSL That Survives Deploys</h3>
+          <p class="bento-text">
+            The web server keeps its version-controlled base config separate from the live certificates, so an automated deploy can never overwrite an SSL renewal and knock a site offline.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Built for Scale -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">Built for Scale</span>
+        <h2 class="display-md section-title">Thousands of Pages, Each One Findable</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Publishing programmatic pages at volume is where SEO usually falls apart: duplicate URLs, thin structured data, pages that render blank without JavaScript. This was hardened for exactly that.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-number">01</div>
+          <div class="role-icon">
+            <i class="fas fa-diagram-project"></i>
+          </div>
+          <h3 class="role-title">Structured Data on Every Page</h3>
+          <p class="role-text">
+            Destinations, attractions, articles and FAQs each ship the right schema.org type - TouristAttraction, Place, FAQPage, BreadcrumbList - so a search engine reads them as places and answers, not just paragraphs of text.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">02</div>
+          <div class="role-icon">
+            <i class="fas fa-link-slash"></i>
+          </div>
+          <h3 class="role-title">One Canonical URL</h3>
+          <p class="role-text">
+            HTTPS, www and trailing slashes are normalized to a single canonical address, and filtered or paginated views are told not to index. No page ends up competing with itself for the same search.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">03</div>
+          <div class="role-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3 class="role-title">Rendered on the Server</h3>
+          <p class="role-text">
+            React pages are server-rendered, so a crawler - or a visitor on a slow phone - gets full HTML immediately. Per-site sitemaps are generated and kept current as content grows.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Sites -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 760px; margin: 0 auto 4rem;">
+        <span class="section-label">See Them Live</span>
+        <h2 class="display-md section-title">Nine Countries, Live Right Now</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Every number here is a page you can open. Each site runs the same platform on its own domain, with its own content.
+        </p>
+      </div>
+
+      <div class="sites-grid">
+        <a class="site-card featured" href="https://portugal-guides.com" target="_blank" rel="noopener">
+          <div class="site-card-head">
+            <span class="site-flag">&#127477;&#127481;</span>
+            <div>
+              <div class="site-country">Portugal <span class="site-new">Newest</span></div>
+              <div class="site-domain">portugal-guides.com <i class="fas fa-arrow-up-right-from-square"></i></div>
+            </div>
+          </div>
+          <div class="site-stats">
+            <div>
+              <div class="site-stat-num">85</div>
+              <div class="site-stat-label">Destinations</div>
+            </div>
+            <div>
+              <div class="site-stat-num">144</div>
+              <div class="site-stat-label">Attractions</div>
+            </div>
+            <div>
+              <div class="site-stat-num">40</div>
+              <div class="site-stat-label">Articles</div>
+            </div>
+            <div>
+              <div class="site-stat-num">62</div>
+              <div class="site-stat-label">Blog posts</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="site-card" href="https://italian-guides.com" target="_blank" rel="noopener">
+          <div class="site-card-head">
+            <span class="site-flag">&#127470;&#127481;</span>
+            <div>
+              <div class="site-country">Italy</div>
+              <div class="site-domain">italian-guides.com <i class="fas fa-arrow-up-right-from-square"></i></div>
+            </div>
+          </div>
+          <div class="site-stats">
+            <div>
+              <div class="site-stat-num">130</div>
+              <div class="site-stat-label">Destinations</div>
+            </div>
+            <div>
+              <div class="site-stat-num">924</div>
+              <div class="site-stat-label">Attractions</div>
+            </div>
+            <div>
+              <div class="site-stat-num">59</div>
+              <div class="site-stat-label">Articles</div>
+            </div>
+            <div>
+              <div class="site-stat-num">61</div>
+              <div class="site-stat-label">Blog posts</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="site-card" href="https://croatian-guide.com" target="_blank" rel="noopener">
+          <div class="site-card-head">
+            <span class="site-flag">&#127469;&#127479;</span>
+            <div>
+              <div class="site-country">Croatia</div>
+              <div class="site-domain">croatian-guide.com <i class="fas fa-arrow-up-right-from-square"></i></div>
+            </div>
+          </div>
+          <div class="site-stats">
+            <div>
+              <div class="site-stat-num">198</div>
+              <div class="site-stat-label">Destinations</div>
+            </div>
+            <div>
+              <div class="site-stat-num">789</div>
+              <div class="site-stat-label">Attractions</div>
+            </div>
+            <div>
+              <div class="site-stat-num">73</div>
+              <div class="site-stat-label">Articles</div>
+            </div>
+            <div>
+              <div class="site-stat-num">121</div>
+              <div class="site-stat-label">Blog posts</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="site-card" href="https://french-guides.com" target="_blank" rel="noopener">
+          <div class="site-card-head">
+            <span class="site-flag">&#127467;&#127479;</span>
+            <div>
+              <div class="site-country">France</div>
+              <div class="site-domain">french-guides.com <i class="fas fa-arrow-up-right-from-square"></i></div>
+            </div>
+          </div>
+          <div class="site-stats">
+            <div>
+              <div class="site-stat-num">111</div>
+              <div class="site-stat-label">Destinations</div>
+            </div>
+            <div>
+              <div class="site-stat-num">783</div>
+              <div class="site-stat-label">Attractions</div>
+            </div>
+            <div>
+              <div class="site-stat-num">48</div>
+              <div class="site-stat-label">Articles</div>
+            </div>
+            <div>
+              <div class="site-stat-num">61</div>
+              <div class="site-stat-label">Blog posts</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="site-card" href="https://slovenia-guide.com" target="_blank" rel="noopener">
+          <div class="site-card-head">
+            <span class="site-flag">&#127480;&#127470;</span>
+            <div>
+              <div class="site-country">Slovenia</div>
+              <div class="site-domain">slovenia-guide.com <i class="fas fa-arrow-up-right-from-square"></i></div>
+            </div>
+          </div>
+          <div class="site-stats">
+            <div>
+              <div class="site-stat-num">110</div>
+              <div class="site-stat-label">Destinations</div>
+            </div>
+            <div>
+              <div class="site-stat-num">608</div>
+              <div class="site-stat-label">Attractions</div>
+            </div>
+            <div>
+              <div class="site-stat-num">39</div>
+              <div class="site-stat-label">Articles</div>
+            </div>
+            <div>
+              <div class="site-stat-num">122</div>
+              <div class="site-stat-label">Blog posts</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="site-card" href="https://dutch-guide.com" target="_blank" rel="noopener">
+          <div class="site-card-head">
+            <span class="site-flag">&#127475;&#127473;</span>
+            <div>
+              <div class="site-country">Netherlands</div>
+              <div class="site-domain">dutch-guide.com <i class="fas fa-arrow-up-right-from-square"></i></div>
+            </div>
+          </div>
+          <div class="site-stats">
+            <div>
+              <div class="site-stat-num">136</div>
+              <div class="site-stat-label">Destinations</div>
+            </div>
+            <div>
+              <div class="site-stat-num">577</div>
+              <div class="site-stat-label">Attractions</div>
+            </div>
+            <div>
+              <div class="site-stat-num">53</div>
+              <div class="site-stat-label">Articles</div>
+            </div>
+            <div>
+              <div class="site-stat-num">94</div>
+              <div class="site-stat-label">Blog posts</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="site-card" href="https://discover-austria.com" target="_blank" rel="noopener">
+          <div class="site-card-head">
+            <span class="site-flag">&#127462;&#127481;</span>
+            <div>
+              <div class="site-country">Austria</div>
+              <div class="site-domain">discover-austria.com <i class="fas fa-arrow-up-right-from-square"></i></div>
+            </div>
+          </div>
+          <div class="site-stats">
+            <div>
+              <div class="site-stat-num">100</div>
+              <div class="site-stat-label">Destinations</div>
+            </div>
+            <div>
+              <div class="site-stat-num">295</div>
+              <div class="site-stat-label">Attractions</div>
+            </div>
+            <div>
+              <div class="site-stat-num">53</div>
+              <div class="site-stat-label">Articles</div>
+            </div>
+            <div>
+              <div class="site-stat-num">60</div>
+              <div class="site-stat-label">Blog posts</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="site-card" href="https://moroccan-guides.com" target="_blank" rel="noopener">
+          <div class="site-card-head">
+            <span class="site-flag">&#127474;&#127462;</span>
+            <div>
+              <div class="site-country">Morocco</div>
+              <div class="site-domain">moroccan-guides.com <i class="fas fa-arrow-up-right-from-square"></i></div>
+            </div>
+          </div>
+          <div class="site-stats">
+            <div>
+              <div class="site-stat-num">44</div>
+              <div class="site-stat-label">Destinations</div>
+            </div>
+            <div>
+              <div class="site-stat-num">215</div>
+              <div class="site-stat-label">Attractions</div>
+            </div>
+            <div>
+              <div class="site-stat-num">56</div>
+              <div class="site-stat-label">Articles</div>
+            </div>
+            <div>
+              <div class="site-stat-num">61</div>
+              <div class="site-stat-label">Blog posts</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="site-card" href="https://switzerland-explorer.com" target="_blank" rel="noopener">
+          <div class="site-card-head">
+            <span class="site-flag">&#127464;&#127469;</span>
+            <div>
+              <div class="site-country">Switzerland</div>
+              <div class="site-domain">switzerland-explorer.com <i class="fas fa-arrow-up-right-from-square"></i></div>
+            </div>
+          </div>
+          <div class="site-stats">
+            <div>
+              <div class="site-stat-num">88</div>
+              <div class="site-stat-label">Destinations</div>
+            </div>
+            <div>
+              <div class="site-stat-num">204</div>
+              <div class="site-stat-label">Attractions</div>
+            </div>
+            <div>
+              <div class="site-stat-num">45</div>
+              <div class="site-stat-label">Articles</div>
+            </div>
+            <div>
+              <div class="site-stat-num">59</div>
+              <div class="site-stat-label">Blog posts</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Want a Content Platform That Scales?</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 660px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          Country Guides is a platform play: build the engine once, launch a new market from a config file. If you publish content at volume - locations, listings, catalogues - that's the pattern we build.
+        </p>
+        <div class="capacity-note" style="position: relative; z-index: 1;">
+          <span class="capacity-badge"><i class="fas fa-circle"></i> Popunjeni smo za nove razvojne projekte</span>
+          <p>Trenutačno smo popunjeni za nove razvojne projekte i embedded angažmane — pišite nam na <a href="mailto:tihomir.jauk@lumiverse.hr">tihomir.jauk@lumiverse.hr</a> pa Vas kontaktiramo čim se oslobodimo. Zanima Vas neki od naših proizvoda — Tvrtko.ai, Moj Kolega, Titlomat i ostali? <strong>Oni su dostupni odmah</strong> — javite se i pomoći ćemo Vam da krenete.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/hr/" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI alati koji ljude čine nezaustavljivima. Sjedište u Zagrebu, klijenti diljem svijeta.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Usluge</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/#services" class="footer-link">Razvoj proizvoda</a></li>
+            <li><a href="/hr/#services" class="footer-link">Tehnološko savjetovanje</a></li>
+            <li><a href="/hr/#services" class="footer-link">AI strategija</a></li>
+            <li><a href="/hr/#services" class="footer-link">Automatizacija procesa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Reference</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/moj-kolega" class="footer-link">Moj Kolega</a></li>
+            <li><a href="/hr/titlomat" class="footer-link">Titlomat</a></li>
+            <li><a href="/hr/aimito" class="footer-link">The Aimito</a></li>
+            <li><a href="/hr/mojkraj" class="footer-link">MOJ KRAJ.</a></li>
+            <li><a href="/hr/barcoder" class="footer-link">Barcoder</a></li>
+            <li><a href="/hr/rentalica" class="footer-link">Rentalica</a></li>
+            <li><a href="/hr/overserved" class="footer-link">Overserved</a></li>
+            <li><a href="/hr/tvrtko" class="footer-link">Tvrtko</a></li>
+            <li><a href="/hr/bridj" class="footer-link">Bridj</a></li>
+            <li><a href="/hr/country-guides" class="footer-link">Country Guides</a></li>
+            <li><a href="/hr/army-adria" class="footer-link">ARMY Adria</a></li>
+            <li><a href="/hr/pitaj-lider" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="/hr/lider-pdf-archive" class="footer-link">Lider Arhiva</a></li>
+            <li><a href="/hr/lider-translations" class="footer-link">Lider Prijevodi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kontakt</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Pošaljite nam e-mail</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 LumiVerse d.o.o. Sva prava pridržana.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Moj Kolega AI assistant widget -->
+    <script src="https://widget.mojkolega.hr/embed.js" data-agent="demo-agent-www-lumiverse-hr-clwyqg" data-key="kol_114e846b83c8bafdce937764d1a004cb" defer></script>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
+</html>

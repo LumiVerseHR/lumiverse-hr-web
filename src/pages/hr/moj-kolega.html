@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDSBK2G9NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-KDSBK2G9NS");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.lumiverse.hr/hr/moj-kolega">
+  <link rel="alternate" hreflang="en" href="https://www.lumiverse.hr/moj-kolega">
+  <link rel="alternate" hreflang="hr" href="https://www.lumiverse.hr/hr/moj-kolega">
+  <link rel="alternate" hreflang="x-default" href="https://www.lumiverse.hr/moj-kolega">
+  <title>Moj Kolega (My Colleague) - An AI Employee for Your Webshop | LumiVerse</title>
+  <meta name="description" content="Moj Kolega is a managed AI employee for your webshop - it answers customers, recommends from your catalogue, captures the leads you'd lose and escalates to your team, 24/7. Built and run by LumiVerse.">
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Moj Kolega (My Colleague) - An AI Employee for Your Webshop | LumiVerse">
+  <meta property="og:description" content="Moj Kolega is a managed AI employee for your webshop - it answers customers, recommends from your catalogue, captures the leads you'd lose and escalates to your team, 24/7. Built and run by LumiVerse.">
+  <meta property="og:url" content="https://www.lumiverse.hr/hr/moj-kolega">
+  <meta property="og:image" content="https://www.lumiverse.hr/images/og/moj-kolega.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Moj Kolega (My Colleague) - An AI Employee for Your Webshop | LumiVerse">
+  <meta name="twitter:description" content="Moj Kolega is a managed AI employee for your webshop - it answers customers, recommends from your catalogue, captures the leads you'd lose and escalates to your team, 24/7. Built and run by LumiVerse.">
+  <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/moj-kolega.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+
+  <style>
+    .case-study-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-study-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at 70% 30%, rgba(255, 77, 77, 0.12), transparent 60%),
+                  radial-gradient(ellipse at 90% 80%, rgba(255, 143, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    .case-study-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 77, 77, 0.1);
+      border: 1px solid rgba(255, 77, 77, 0.2);
+      border-radius: 100px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image-showcase {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .hero-image-showcase-inner {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 77, 77, 0.5), transparent);
+    }
+
+    .hero-image-showcase-inner img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .stats-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .role-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .role-card:hover::before {
+      opacity: 1;
+    }
+
+    .role-number {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .role-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 143, 77, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .role-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Live sites grid */
+    .sites-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .site-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .site-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 77, 77, 0.3);
+    }
+
+    .site-card-head {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .site-flag {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .site-country {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .site-domain {
+      font-size: 0.85rem;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.15rem;
+    }
+
+    .site-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      border-top: 1px solid var(--glass-border);
+      padding-top: 1.25rem;
+      margin-top: auto;
+    }
+
+    .site-stat-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .site-stat-label {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-top: 0.35rem;
+    }
+
+    /* Featured site card (full-width, horizontal) */
+    .site-card.featured {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    .site-card.featured .site-card-head { flex: 1; }
+    .site-card.featured .site-stats {
+      grid-template-columns: repeat(4, auto);
+      gap: 2.75rem;
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .site-new {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(255, 77, 77, 0.12);
+      border: 1px solid rgba(255, 77, 77, 0.25);
+      padding: 0.15rem 0.5rem;
+      border-radius: 100px;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+    }
+    @media (max-width: 720px) {
+      .site-card.featured { flex-direction: column; align-items: stretch; gap: 1.5rem; }
+      .site-card.featured .site-stats {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        border-top: 1px solid var(--glass-border);
+        padding-top: 1.25rem;
+      }
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: 24px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sites-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+
+      .sites-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+  <script src="/showcase.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.lumiverse.hr/hr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.lumiverse.hr/hr/#work"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Moj Kolega",
+      "item": "https://www.lumiverse.hr/hr/moj-kolega"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/hr/" class="nav-logo">
+        <span class="nav-logo-dot"></span>
+        LumiVerse
+      </a>
+      <ul class="nav-links">
+        <li><a href="/hr/#services" class="nav-link">Usluge</a></li>
+        <li><a href="/hr/#work" class="nav-link">Reference</a></li>
+        <li><a href="/hr/#research" class="nav-link">Istraživanje</a></li>
+        <li><a href="/hr/#product" class="nav-link">Proizvod</a></li>
+        <li><a href="/hr/#about" class="nav-link">O nama</a></li>
+        <li><a href="/hr/#contact" class="nav-link">Kontakt</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-lang">
+          <a href="/moj-kolega" hreflang="en" lang="en" title="English version">EN</a>
+          <span aria-current="true">HR</span>
+        </div>
+        <a href="/hr/#contact" class="nav-cta">Razgovarajmo</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Otvori izbornik">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/hr/#services" class="mobile-nav-link">Usluge</a>
+    <a href="/hr/#work" class="mobile-nav-link">Reference</a>
+    <a href="/hr/#research" class="mobile-nav-link">Istraživanje</a>
+    <a href="/hr/#product" class="mobile-nav-link">Proizvod</a>
+    <a href="/hr/#about" class="mobile-nav-link">O nama</a>
+    <a href="/hr/#contact" class="mobile-nav-link">Kontakt</a>
+    <div class="mobile-nav-lang">
+      <a href="/moj-kolega" hreflang="en" lang="en">EN</a>
+      <span aria-current="true">HR</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/hr/">Home</a>
+        <span>/</span>
+        <a href="/hr/#work">Work</a>
+        <span>/</span>
+        <span>Moj Kolega</span>
+      </div>
+
+      <div class="case-study-tag">
+        <i class="fas fa-user-tie"></i>
+        Our Product &middot; AI Employee
+      </div>
+
+      <h1 class="display-lg mb-4">Moj Kolega <span style="font-size: 0.38em; font-weight: 600; color: var(--text-secondary); letter-spacing: 0; white-space: nowrap;">(My Colleague)</span></h1>
+      <p class="body-lg text-secondary" style="max-width: 800px;">
+        An AI employee for your webshop. It answers customers, recommends from your catalogue, captures the leads you'd lose after hours, and hands off to your team when it should - 24/7. We set it up, watch it, and improve it every month. You see results, not another chatbot.
+      </p>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://mojkolega.hr" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i>
+          Visit Moj Kolega
+        </a>
+        <a href="/hr/#contact" class="btn btn-secondary">
+          Build Something Similar
+        </a>
+      </div>
+
+      <div class="hero-image-showcase">
+        <div class="hero-image-showcase-inner">
+          <div class="showcase" data-showcase data-interval="5200">
+            <img class="showcase-slide" src="/images/mojkolega-1.jpg" alt="mojkolega.hr - the Moj Kolega homepage, with the agent answering a real catalogue question in the embedded chat widget">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/mojkolega-2.jpg" alt="An overnight report - questions answered, recommended and escalated through the night, resolved alone vs handed to the team">
+            <img class="showcase-slide" loading="lazy" decoding="async" src="/images/mojkolega-3.jpg" alt="The five jobs Moj Kolega does - grounded answers, recommendations, lead capture and nine languages, all from the shop's own data">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-block">
+          <div class="stat-value">24/7</div>
+          <div class="stat-label">Answering customers, day and night</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">9</div>
+          <div class="stat-label">Languages it detects and replies in</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">5</div>
+          <div class="stat-label">Jobs it does, grounded in your data</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">Monthly</div>
+          <div class="stat-label">We tune it, every improvement cycle</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Idea -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 780px; margin: 0 auto 4rem;">
+        <span class="section-label">The Idea</span>
+        <h2 class="display-md section-title">Hire a Role, Not a Chatbot</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Most shops bolt on a chatbot, watch it guess wrong, and switch it off. Moj Kolega is the opposite: a managed AI employee that answers only from your catalogue and policies, says "I don't know" instead of inventing, and gets better every month because someone is actually watching it.
+        </p>
+      </div>
+
+      <div class="grid grid-2 gap-4">
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 class="heading-md mb-3">Grounded, Never Invented</h3>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Answers only from your catalogue and policies
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              When the data isn't there, it says so and escalates - it doesn't guess
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Product picks come with a reason to buy, from your catalogue only
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Every answer is traceable to the source it came from
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">
+            <i class="fas fa-user-gear"></i>
+          </div>
+          <h3 class="heading-md mb-3">Managed, Not DIY</h3>
+          <p class="bento-text mb-4">
+            You don't get a prompt editor and a model picker. You hire a role - Sales, Support or Reception - and we do the rest: set it up, connect your catalogue, and test it against real questions before it goes live.
+          </p>
+          <p class="bento-text">
+            Then every month we send a report of what your customers asked, what the agent handled alone, what it missed, and what we changed. The improvement is the product, not a dashboard you have to babysit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What It Does -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+        <span class="section-label">What It Does</span>
+        <h2 class="display-md section-title">Five Jobs, Done Reliably</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Not forty jobs done badly by a generic model. Five that matter for a webshop, each grounded in your own data.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-4">
+        <div class="role-card">
+          <div class="role-number">01</div>
+          <div class="role-icon"><i class="fas fa-comments"></i></div>
+          <h3 class="role-title">Answers, Grounded</h3>
+          <p class="role-text">
+            From your catalogue and policies. When it doesn't know, it says so and hands off - it never guesses and costs you a sale.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">02</div>
+          <div class="role-icon"><i class="fas fa-basket-shopping"></i></div>
+          <h3 class="role-title">Recommends the Right Product</h3>
+          <p class="role-text">
+            Two or three picks for the need and the budget, each with a reason to buy - drawn from your catalogue, never invented.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">03</div>
+          <div class="role-icon"><i class="fas fa-user-plus"></i></div>
+          <h3 class="role-title">Captures Leads You'd Lose</h3>
+          <p class="role-text">
+            Wholesale, B2B and undecided buyers - qualified, with the full conversation, on your desk by morning instead of gone by dawn.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">04</div>
+          <div class="role-icon"><i class="fas fa-arrow-right-arrow-left"></i></div>
+          <h3 class="role-title">Escalates Safely</h3>
+          <p class="role-text">
+            When it's out of its depth, it hands off to your team with the full context - a clean handoff, not a bluff.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">05</div>
+          <div class="role-icon"><i class="fas fa-language"></i></div>
+          <h3 class="role-title">Speaks 9 Languages</h3>
+          <p class="role-text">
+            Detects the visitor's language and switches on its own - Croatian, English, Slovenian, Serbian, German, Italian, Bosnian, Hungarian and more.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-number">06</div>
+          <div class="role-icon"><i class="fas fa-moon"></i></div>
+          <h3 class="role-title">Works the Night Shift</h3>
+          <p class="role-text">
+            The hours your team is offline are when leads slip away. Moj Kolega covers them - and hands you the night's conversations in the morning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Under the Hood -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+        <span class="section-label">Under the Hood</span>
+        <h2 class="display-md section-title">One Script, Grounded in Your Shop</h2>
+        <p class="section-description" style="max-width: 100%;">
+          Moj Kolega drops onto any site as a single widget - but the work behind it is what makes it trustworthy.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon"><i class="fas fa-code"></i></div>
+          <h3 class="bento-title">An Embeddable Widget</h3>
+          <p class="bento-text">
+            One script tag on any site. It streams answers token by token, knows which page the visitor is on, matches their language on every message, and can be switched on or off remotely - no redeploy.
+          </p>
+          <ul class="feature-list mt-4">
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Streaming chat over SSE, page-context aware
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Per-message language matching and configurable appearance
+            </li>
+            <li class="feature-list-item">
+              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
+              Remote on/off and roll-out without touching the host site
+            </li>
+          </ul>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon"><i class="fas fa-database"></i></div>
+          <h3 class="bento-title">Knowledge From Your Catalogue</h3>
+          <p class="bento-text">
+            Crawls your site and walks your WooCommerce or Shopify catalogue, plus uploads and text. Hybrid vector-and-keyword search finds the right passage, with product and price extraction that respects EU Omnibus pricing.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-lg">
+          <div class="bento-icon"><i class="fas fa-list-check"></i></div>
+          <h3 class="bento-title">Duties: Work in the Background</h3>
+          <p class="bento-text">
+            Beyond the chat, the agent runs scheduled duties for the shop - catalogue audits, monitors, a weekly commerce analysis, even write-backs to your store - each one drafted for review before anything actually changes.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3 class="bento-title">Hard to Trick</h3>
+          <p class="bento-text">
+            Untrusted web and catalogue content is sanitized and fenced, an input tripwire catches injection attempts, and an output scanner stops leaks mid-stream. It won't be talked into going off-script.
+          </p>
+        </div>
+      </div>
+
+      <div class="bento-card mt-5">
+        <h3 class="heading-md mb-3">Built On</h3>
+        <p class="bento-text">
+          Next.js 16 and React 19 on the front end; FastAPI with async SQLAlchemy on the backend and agent runtime; Celery and Redis for crawls and scheduled duties; PostgreSQL 17 with pgvector for storage and hybrid search - all in Docker, bilingual in Croatian and English. The interesting engineering isn't the model; it's everything that keeps the model honest.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-section">
+        <h2 class="display-md mb-4" style="position: relative; z-index: 1;">Meet Your Webshop's AI Employee</h2>
+        <p class="body-lg text-secondary mb-5" style="max-width: 680px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
+          Moj Kolega is live and taking on shops now. See it answer real questions in your language, then get one set up for your own catalogue.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
+          <a href="https://mojkolega.hr" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fas fa-external-link-alt"></i>
+            Visit mojkolega.hr
+          </a>
+          <a href="/hr/#contact" class="btn btn-secondary">
+            Talk to Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/hr/" class="nav-logo">
+            <span class="nav-logo-dot"></span>
+            LumiVerse
+          </a>
+          <p>
+            AI alati koji ljude čine nezaustavljivima. Sjedište u Zagrebu, klijenti diljem svijeta.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Usluge</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/#services" class="footer-link">Razvoj proizvoda</a></li>
+            <li><a href="/hr/#services" class="footer-link">Tehnološko savjetovanje</a></li>
+            <li><a href="/hr/#services" class="footer-link">AI strategija</a></li>
+            <li><a href="/hr/#services" class="footer-link">Automatizacija procesa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Reference</h4>
+          <ul class="footer-links">
+            <li><a href="/hr/moj-kolega" class="footer-link">Moj Kolega</a></li>
+            <li><a href="/hr/titlomat" class="footer-link">Titlomat</a></li>
+            <li><a href="/hr/aimito" class="footer-link">The Aimito</a></li>
+            <li><a href="/hr/mojkraj" class="footer-link">MOJ KRAJ.</a></li>
+            <li><a href="/hr/barcoder" class="footer-link">Barcoder</a></li>
+            <li><a href="/hr/rentalica" class="footer-link">Rentalica</a></li>
+            <li><a href="/hr/overserved" class="footer-link">Overserved</a></li>
+            <li><a href="/hr/tvrtko" class="footer-link">Tvrtko</a></li>
+            <li><a href="/hr/bridj" class="footer-link">Bridj</a></li>
+            <li><a href="/hr/country-guides" class="footer-link">Country Guides</a></li>
+            <li><a href="/hr/army-adria" class="footer-link">ARMY Adria</a></li>
+            <li><a href="/hr/pitaj-lider" class="footer-link">Pitaj Lider</a></li>
+            <li><a href="/hr/lider-pdf-archive" class="footer-link">Lider Arhiva</a></li>
+            <li><a href="/hr/lider-translations" class="footer-link">Lider Prijevodi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kontakt</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Pošaljite nam e-mail</a></li>
+            <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 LumiVerse d.o.o. Sva prava pridržana.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Moj Kolega AI assistant widget -->
+    <script src="https://widget.mojkolega.hr/embed.js" data-agent="demo-agent-www-lumiverse-hr-clwyqg" data-key="kol_114e846b83c8bafdce937764d1a004cb" defer></script>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+</body>
+</html>
