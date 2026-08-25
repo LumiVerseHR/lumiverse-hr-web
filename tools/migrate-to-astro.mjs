@@ -1,4 +1,5 @@
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import path from "node:path";
 
 const root = process.cwd();
@@ -24,6 +25,30 @@ const nestedPages = ["decks/tvrtko-agents.html"];
 const allPages = [...topLevelPages, ...localePages, ...nestedPages].filter((page) =>
   existsSync(path.join(root, page))
 );
+
+// nginx serves css/js with `max-age=31536000, immutable`, which is a promise
+// that a given URL never changes its contents. Under a bare `styles.css` that
+// promise is false: a returning visitor keeps last year's stylesheet for a
+// year and renders new markup against it. Putting a content hash in the
+// filename makes the header true — a changed file is a new URL.
+const versionedAssets = ["styles.css", "showcase.js", "titlomat-wave.js"];
+const assetVersions = new Map();
+for (const name of versionedAssets) {
+  const from = path.join(root, name);
+  if (!existsSync(from)) continue;
+  const parsed = path.parse(name);
+  const hash = createHash("sha256").update(readFileSync(from)).digest("hex").slice(0, 8);
+  assetVersions.set(name, `${parsed.name}.${hash}${parsed.ext}`);
+}
+
+function versionAssetRefs(html) {
+  let next = html;
+  for (const [name, versioned] of assetVersions) {
+    // Both trees end up absolute: the Croatian pages sit one directory down.
+    next = next.replaceAll(`="${name}"`, `="/${versioned}"`).replaceAll(`="/${name}"`, `="/${versioned}"`);
+  }
+  return next;
+}
 
 function resetDir(dir) {
   rmSync(dir, { recursive: true, force: true });
@@ -82,6 +107,8 @@ function normalizeHtml(html) {
     return `"url": "https://www.lumiverse.hr/${slug}"`;
   });
 
+  next = versionAssetRefs(next);
+
   return next;
 }
 
@@ -116,6 +143,11 @@ for (const name of [
   "LumiVerse-white.png"
 ]) {
   copyIfExists(name);
+}
+
+for (const [name, versioned] of assetVersions) {
+  writeFileSync(path.join(publicDir, versioned), readFileSync(path.join(root, name)));
+  rmSync(path.join(publicDir, name), { force: true });
 }
 
 const sitemap = path.join(publicDir, "sitemap.xml");

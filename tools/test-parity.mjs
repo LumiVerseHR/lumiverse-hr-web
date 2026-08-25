@@ -40,9 +40,23 @@ for (const page of pages) {
   }
 }
 
+// css/js go out with `immutable`, so a URL must never change contents. Every
+// reference has to carry a content hash and resolve — an unversioned styles.css
+// looks fine on a cold browser and silently serves stale CSS to everyone else.
+const versioned = /^\/[^"]+\.[0-9a-f]{8}\.(?:css|js|mjs)$/;
+for (const page of pages) {
+  const built = path.join(dist, page);
+  if (!existsSync(built)) continue;
+  const html = readFileSync(built, "utf8");
+  for (const [, url] of html.matchAll(/(?:href|src)="(\/[^"]+\.(?:css|js|mjs))"/g)) {
+    if (!versioned.test(url)) failures.push(`${page}: ${url} is not content-hashed`);
+    else if (!existsSync(path.join(dist, url.slice(1)))) failures.push(`${page}: ${url} does not exist`);
+  }
+}
+
 if (failures.length) {
   console.error(failures.join("\n"));
   process.exit(1);
 }
 
-console.log(`Parity passed for ${pages.length} built HTML page(s).`);
+console.log(`Parity passed for ${pages.length} built HTML page(s), assets content-hashed.`);

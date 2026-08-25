@@ -233,40 +233,39 @@ body {
   box-shadow: 0 10px 30px rgba(255, 77, 77, 0.3);
 }
 
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-/* Language switcher — current locale is a plain span, the alternate a link */
+/* Language switcher — current locale is a plain span, the alternate a link.
+   Every rule is scoped to .nav-lang > * so an unstyled <a> can never fall back
+   to the browser's default link blue. */
 .nav-lang {
   display: inline-flex;
   align-items: center;
   border: 1px solid var(--glass-border);
-  border-radius: 6px;
+  border-radius: 999px;
   overflow: hidden;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.06em;
+  line-height: 1;
 }
 
 .nav-lang > * {
-  padding: 0.45rem 0.65rem;
+  display: block;
+  padding: 0.4rem 0.7rem;
   line-height: 1;
   text-decoration: none;
   color: var(--text-secondary);
   transition: color 0.3s ease, background 0.3s ease;
 }
 
-.nav-lang > a:hover {
+.nav-lang > a:hover,
+.nav-lang > a:focus-visible {
   color: var(--text-primary);
   background: var(--glass);
 }
 
 .nav-lang > [aria-current="true"] {
-  color: var(--text-primary);
-  background: var(--glass-border);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+  color: var(--bg-primary);
 }
 
 .nav-toggle {
@@ -319,6 +318,10 @@ body {
   letter-spacing: 0.06em;
   color: var(--text-secondary);
   text-decoration: none;
+}
+
+.mobile-nav-lang > a:hover {
+  color: var(--text-primary);
 }
 
 .mobile-nav-lang > [aria-current="true"] {
