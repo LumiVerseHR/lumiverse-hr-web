@@ -89,13 +89,14 @@ function checkPage(file, html, { lang, route, altRoute, altLang, ogLocale, altOg
   const ogUrl = attr(html, /<meta property="og:url" content="([^"]+)">/);
   if (ogUrl !== `${site}${route}`) fail(file, `og:url is "${ogUrl}", expected "${site}${route}"`);
 
-  // The language switcher must link to this page's counterpart, in the desktop
-  // nav and in the mobile overlay.
+  // One switcher, in the nav bar. It lives there rather than in the mobile
+  // overlay because the bar outranks the overlay (z-index 1000 vs 999) and so
+  // stays reachable at every width, menu open or shut.
   const switcherLinks = [...html.matchAll(/<a href="([^"]+)" hreflang="([^"]+)"[^>]*>/g)]
     .filter(([, , hreflang]) => hreflang === altLang)
     .map(([, href]) => href);
-  if (switcherLinks.length !== 2) {
-    fail(file, `expected 2 language-switcher links to "${altLang}", found ${switcherLinks.length}`);
+  if (switcherLinks.length !== 1) {
+    fail(file, `expected 1 language-switcher link to "${altLang}", found ${switcherLinks.length}`);
   }
   for (const href of switcherLinks) {
     if (href !== altRoute) fail(file, `language switcher points at "${href}", expected "${altRoute}"`);

@@ -270,6 +270,10 @@ body {
 
 .nav-toggle {
   display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
   background: none;
   border: none;
   color: var(--text-primary);
@@ -289,7 +293,12 @@ body {
   z-index: 999;
   padding: 6rem 2rem 2rem;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.25rem;
+  /* Six items at this size overflow a short phone. Without this the overflow
+     is simply unreachable — a fixed overlay does not scroll the page. */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 .mobile-nav.active {
@@ -301,32 +310,12 @@ body {
   font-weight: 600;
   color: var(--text-primary);
   text-decoration: none;
-  padding: 1rem 0;
+  padding: 0.75rem 0;
   border-bottom: 1px solid var(--glass-border);
+  flex-shrink: 0;
 }
 
-.mobile-nav-lang {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding-top: 0.5rem;
-}
 
-.mobile-nav-lang > * {
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: var(--text-secondary);
-  text-decoration: none;
-}
-
-.mobile-nav-lang > a:hover {
-  color: var(--text-primary);
-}
-
-.mobile-nav-lang > [aria-current="true"] {
-  color: var(--accent);
-}
 
 /* Hero Section */
 .hero {
@@ -1046,13 +1035,24 @@ body {
     display: none;
   }
 
-  /* The switcher moves into the mobile-nav overlay at this width. */
+  /* With the links gone, push the switcher over to sit beside the toggle
+     rather than floating in the middle of the bar. Give it a real touch
+     target while it is the only way to change language on a phone. */
   .nav-lang {
-    display: none;
+    margin-left: auto;
+    margin-right: 1.25rem;
+    min-height: 40px;
+  }
+
+  .nav-lang > * {
+    display: flex;
+    align-items: center;
+    padding: 0 0.85rem;
+    min-height: 40px;
   }
 
   .nav-toggle {
-    display: block;
+    display: flex;
   }
 
   .hero {
@@ -1070,6 +1070,20 @@ body {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .nav-logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-lang {
+    margin-right: 0.75rem;
   }
 }
 
