@@ -1445,3 +1445,140 @@ body {
   font-weight: 600;
 }
 .capacity-note a:hover { text-decoration: underline; }
+
+/* Cookie consent
+   ---------------------------------------------------------------------------
+   Bottom-centred glass strip that borrows the nav's blur and border and the
+   language switcher's pill buttons, so it reads as part of the chrome rather
+   than a bolted-on third-party widget. Sized to its own content, not the
+   viewport width — it is a note, not a wall. Sits above the nav (1000) and
+   the mobile nav overlay (999). Shown only by consent.js; markup ships
+   `hidden` so a visitor who already chose never sees a flash of it. */
+.consent {
+  position: fixed;
+  left: 50%;
+  bottom: 1.25rem;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: max-content;
+  max-width: min(38rem, calc(100vw - 2rem));
+  padding: 0.75rem 0.75rem 0.75rem 1.15rem;
+  background: rgba(5, 5, 8, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transform: translate(-50%, calc(100% + 1.5rem));
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* `display: flex` above outranks the UA sheet's `[hidden] { display: none }`,
+   so the attribute needs saying again or the banner never hides. */
+.consent[hidden] {
+  display: none;
+}
+
+.consent.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.consent-text {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.consent-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Both answers get the same shape and the same hit area. Only the fill
+   differs — enough to mark the primary action, not enough to hide the other
+   one, which is the line between a default and a dark pattern. */
+.consent-btn {
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+}
+
+.consent-btn:hover,
+.consent-btn:focus-visible {
+  color: var(--text-primary);
+  background: var(--glass);
+}
+
+.consent-btn-allow {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+  color: var(--bg-primary);
+}
+
+.consent-btn-allow:hover,
+.consent-btn-allow:focus-visible {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+  color: var(--bg-primary);
+  opacity: 0.88;
+}
+
+/* The Moj Kolega chat bubble owns the bottom-right corner on every page, at
+   z-index 2147483646 — nothing is going to outrank it, so the banner gets out
+   of its way instead. At 38rem the centred strip starts reaching the bubble
+   below roughly 872px of viewport, so lift it clear from 880px down. */
+@media (max-width: 880px) {
+  .consent {
+    bottom: 6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Full-width strip with the buttons on their own row: at this size the
+     centred pill would wrap its text to two lines and still crowd the
+     actions. */
+  .consent {
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    max-width: none;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+    transform: translateY(calc(100% + 1.5rem));
+  }
+
+  .consent.is-visible {
+    transform: translateY(0);
+  }
+
+  .consent-actions {
+    width: 100%;
+  }
+
+  .consent-btn {
+    flex: 1;
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .consent {
+    transition: none;
+  }
+}

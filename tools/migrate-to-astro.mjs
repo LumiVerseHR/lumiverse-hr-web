@@ -31,7 +31,7 @@ const allPages = [...topLevelPages, ...localePages, ...nestedPages].filter((page
 // promise is false: a returning visitor keeps last year's stylesheet for a
 // year and renders new markup against it. Putting a content hash in the
 // filename makes the header true — a changed file is a new URL.
-const versionedAssets = ["styles.css", "showcase.js", "titlomat-wave.js"];
+const versionedAssets = ["styles.css", "showcase.js", "titlomat-wave.js", "consent.js"];
 const assetVersions = new Map();
 for (const name of versionedAssets) {
   const from = path.join(root, name);
@@ -128,6 +128,7 @@ for (const name of [
   "styles.css",
   "showcase.js",
   "titlomat-wave.js",
+  "consent.js",
   "favicon.ico",
   "favicon.svg",
   "favicon-192.png",

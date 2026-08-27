@@ -37,6 +37,7 @@ REGIONS = [
     ("mobile-nav", '<div class="mobile-nav"', "div", True),
     ("footer", "<footer", "footer", True),
     ("capacity-note", '<div class="capacity-note"', "div", False),
+    ("consent", '<div class="consent"', "div", True),
 ]
 
 # Pages that do NOT carry the full shared chrome, by design.
