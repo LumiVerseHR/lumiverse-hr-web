@@ -1118,6 +1118,11 @@ body {
     gap: 1rem;
     text-align: center;
   }
+
+  .footer-bottom-left {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 }
 
 /* Animations */
@@ -1482,6 +1487,13 @@ body {
   display: none;
 }
 
+/* The strip takes focus when reopened from the footer so the region is
+   announced, but it is not itself interactive — the ring belongs on the
+   buttons inside it. */
+.consent:focus {
+  outline: none;
+}
+
 .consent.is-visible {
   opacity: 1;
   transform: translate(-50%, 0);
@@ -1542,6 +1554,46 @@ body {
    z-index 2147483646 — nothing is going to outrank it, so the banner gets out
    of its way instead. At 38rem the centred strip starts reaching the bubble
    below roughly 872px of viewport, so lift it clear from 880px down. */
+/* Footer "Cookie preferences" control. A <button>, not a link — it reopens
+   the strip rather than navigating anywhere — so it needs the button chrome
+   stripped back to match the footer links beside it. */
+/* The strip is fixed to the bottom, so at full scroll it floats over the end
+   of the page — including, at some widths, the very control that opens it.
+   No placement in this row is clear at every viewport width, so the row makes
+   room for the strip instead, and only while the strip is actually up. */
+body.consent-visible .footer-bottom {
+  padding-bottom: 5.5rem;
+}
+
+.footer-bottom-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.footer-consent-link {
+  padding: 0;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-consent-link:hover,
+.footer-consent-link:focus-visible {
+  color: var(--text-primary);
+}
+
+/* Reopened from the footer, the strip marks the standing choice — otherwise
+   "preferences" would ask the question without ever answering it. */
+.consent-btn[aria-pressed="true"] {
+  box-shadow: 0 0 0 2px var(--accent-tertiary);
+}
+
 @media (max-width: 880px) {
   .consent {
     bottom: 6rem;

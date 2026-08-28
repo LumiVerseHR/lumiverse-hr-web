@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Analytics (GA + Clarity) load from here, and only once allowed -->
-  <script src="/consent.26a31631.js" defer></script>
+  <script src="/consent.09f312d5.js" defer></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +34,7 @@
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#050508">
 
-  <link rel="stylesheet" href="/styles.96db27ee.css">
+  <link rel="stylesheet" href="/styles.3b863c20.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
@@ -810,9 +810,12 @@
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-copyright">
-          &copy; 2026 LumiVerse d.o.o. All rights reserved.
-        </p>
+        <div class="footer-bottom-left">
+          <p class="footer-copyright">
+            &copy; 2026 LumiVerse d.o.o. All rights reserved.
+          </p>
+          <button type="button" class="footer-consent-link" data-consent-open>Cookie preferences</button>
+        </div>
         <div class="footer-social">
           <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
@@ -861,7 +864,7 @@
     });
   </script>
 
-  <div class="consent" data-consent role="region" aria-label="Cookie consent" hidden>
+  <div class="consent" data-consent tabindex="-1" role="region" aria-label="Cookie consent" hidden>
     <p class="consent-text">We use analytics cookies to see what's working.</p>
     <div class="consent-actions">
       <button type="button" class="consent-btn" data-consent-deny>Deny</button>

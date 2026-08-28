@@ -810,9 +810,12 @@
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-copyright">
-          &copy; 2026 LumiVerse d.o.o. Sva prava pridržana.
-        </p>
+        <div class="footer-bottom-left">
+          <p class="footer-copyright">
+            &copy; 2026 LumiVerse d.o.o. Sva prava pridržana.
+          </p>
+          <button type="button" class="footer-consent-link" data-consent-open>Postavke kolačića</button>
+        </div>
         <div class="footer-social">
           <a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" aria-label="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
@@ -861,7 +864,7 @@
     });
   </script>
 
-  <div class="consent" data-consent role="region" aria-label="Privola za kolačiće" hidden>
+  <div class="consent" data-consent tabindex="-1" role="region" aria-label="Privola za kolačiće" hidden>
     <p class="consent-text">Koristimo analitičke kolačiće da vidimo što funkcionira.</p>
     <div class="consent-actions">
       <button type="button" class="consent-btn" data-consent-deny>Odbij</button>
