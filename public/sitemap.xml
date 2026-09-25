@@ -227,8 +227,14 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.lumiverse.hr/blog/lider-translations-pipeline</loc>
+    <loc>https://www.lumiverse.hr/blog/a-judge-that-mostly-agrees</loc>
     <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.lumiverse.hr/blog/lider-translations-pipeline</loc>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
