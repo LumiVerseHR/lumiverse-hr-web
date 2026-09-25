@@ -70,7 +70,7 @@ There's no single devlog habit across the studio. The raw material lives in date
 
 ## Needs sign-off: do not publish without it
 
-- **Clients:** Lider (Pitaj Lider eval, Lider Lab audio), Rentalica (every audit figure is the client's money; the `email-igor-*` letters are private), Bridj (named in the DreamState journal).
+- **Clients:** Lider: no sign-off needed for what we write here (decided 2026-09-25). Rentalica (every audit figure is the client's money; the `email-igor-*` letters are private), Bridj (named in the DreamState journal).
 - **MOJ KRAJ.:**
   - Never publish: server IP, deploy/tracking IDs, the sync token name, the WAF-bypass "stealth" scraper sidecar, Linker Media ad terms / consent-gate decision, HINA access terms, the AEM regulator filing.
   - Name no real people from incident commits.
