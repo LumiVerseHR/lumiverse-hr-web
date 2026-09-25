@@ -29,6 +29,8 @@ const parts = chrome(lang, altRoute);
 const url = `${site}${route}`;
 const altUrl = `${site}${altRoute}`;
 const enUrl = lang === "en" ? url : altUrl;
+// Frontmatter lands in JSON-LD; escape "<" so a "</script>" in a title
+// cannot close the tag early. JSON parsers read \u003c back as "<".
 ---
 <!DOCTYPE html>
 <html lang={s.htmlLang}>
@@ -85,7 +87,7 @@ const enUrl = lang === "en" ? url : altUrl;
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
 
-  {jsonLd.map((data) => <script is:inline type="application/ld+json" set:html={JSON.stringify(data, null, 2)} />)}
+  {jsonLd.map((data) => <script is:inline type="application/ld+json" set:html={JSON.stringify(data, null, 2).replace(/</g, "\\u003c")} />)}
 </head>
 <body>
   <Fragment set:html={parts.nav} />
