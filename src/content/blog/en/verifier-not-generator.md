@@ -1,7 +1,7 @@
 ---
 title: The Moat Is the Verifier, Not the Generator
 description: Generation got cheap. What makes AI output worth shipping is whatever checks it - four of our projects, four verifiers, and the one check a bot couldn't do.
-date: 2026-09-25
+date: 2026-09-24
 tags: [Agentic Engineering, AI Quality]
 related: [air-laser, overserved]
 image: /images/og/air-laser.jpg

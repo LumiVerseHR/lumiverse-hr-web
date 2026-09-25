@@ -1,7 +1,7 @@
 ---
 title: A Judge That Mostly Agrees Is Not a Judge
 description: We tested a small model as MOJ KRAJ.'s fact-check judge. It was faster, agreed on the easy calls, and would have published 15 of 20 articles the real judge held.
-date: 2026-09-24
+date: 2026-09-17
 tags: [Build Log, AI Evaluation]
 related: [mojkraj]
 image: /images/og/mojkraj.jpg

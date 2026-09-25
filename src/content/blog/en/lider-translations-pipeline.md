@@ -1,7 +1,7 @@
 ---
 title: One Newsroom, Ten Languages, 1.4M Articles
 description: How we translate a Croatian newsroom into ten languages every day - the English pivot, the cost per article, and the bug that duplicated a quarter of our rows.
-date: 2026-09-23
+date: 2026-09-10
 tags: [Build Log, AI Translation]
 related: [lider-translations]
 image: /images/og/lider-translations.jpg
