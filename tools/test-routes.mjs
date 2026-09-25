@@ -1,6 +1,7 @@
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
 import http from "node:http";
 import path from "node:path";
+import { readPosts } from "./blog-posts.mjs";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
@@ -28,8 +29,14 @@ const slugs = [
 // English-only pages: an internal design reference and a standalone deck.
 const enOnly = ["brand-guide", "decks/tvrtko-agents"];
 
-const enRoutes = ["/", ...slugs.map((slug) => `/${slug}`), ...enOnly.map((slug) => `/${slug}`)];
-const hrRoutes = ["/hr/", ...slugs.map((slug) => `/hr/${slug}`)];
+// Blog routes come from the posts themselves, so a new post is covered
+// without touching this file.
+const blogPosts = readPosts();
+const blogEn = ["/blog", ...blogPosts.filter((post) => post.lang === "en").map((post) => post.route)];
+const blogHr = ["/hr/blog", ...blogPosts.filter((post) => post.lang === "hr").map((post) => post.route)];
+
+const enRoutes = ["/", ...slugs.map((slug) => `/${slug}`), ...enOnly.map((slug) => `/${slug}`), ...blogEn];
+const hrRoutes = ["/hr/", ...slugs.map((slug) => `/hr/${slug}`), ...blogHr];
 const routes = [...enRoutes, ...hrRoutes];
 
 function resolveFile(url) {
@@ -37,6 +44,9 @@ function resolveFile(url) {
   if (clean === "/") return path.join(dist, "index.html");
   if (clean === "/hr/") return path.join(dist, "hr", "index.html");
   const noSlash = clean.replace(/^\//, "");
+  // nginx: try_files $uri $uri.html — a real file (the feed) wins as-is.
+  const exact = path.join(dist, noSlash);
+  if (existsSync(exact) && statSync(exact).isFile()) return exact;
   return path.join(dist, `${noSlash}.html`);
 }
 
@@ -100,6 +110,16 @@ try {
 
   for (const [from, to] of redirects) {
     await expectRedirect(from, to);
+  }
+
+  // The feed is a file, not a page: served as-is, and every post is in it.
+  const feed = await fetch(`${base}/blog/rss.xml`);
+  if (feed.status !== 200) throw new Error(`/blog/rss.xml returned ${feed.status}`);
+  const feedXml = await feed.text();
+  for (const post of blogPosts) {
+    if (!feedXml.includes(`<link>https://www.lumiverse.hr${post.route}</link>`)) {
+      throw new Error(`/blog/rss.xml is missing ${post.route}`);
+    }
   }
 
   // A missing Croatian URL must render the Croatian error page, not the English one.

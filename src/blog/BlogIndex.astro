@@ -1,0 +1,73 @@
+---
+import BlogLayout from "./BlogLayout.astro";
+import { blogIndexRoute } from "../../tools/blog-posts.mjs";
+import { postCard, postsFor } from "../../tools/blog-embed.mjs";
+import { allPosts } from "./posts.mjs";
+import { t } from "./i18n.mjs";
+
+const { lang } = Astro.props;
+const s = t[lang];
+const site = "https://www.lumiverse.hr";
+const route = blogIndexRoute(lang);
+const altRoute = blogIndexRoute(lang === "en" ? "hr" : "en");
+
+// Cards are rendered by the same function the homepage strip uses.
+const posts = postsFor(lang, await allPosts());
+const [lead, ...rest] = posts;
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "LumiVerse Blog",
+    url: `${site}${route}`,
+    inLanguage: lang,
+    publisher: { "@type": "Organization", name: "LumiVerse d.o.o.", url: `${site}/` }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: s.home, item: `${site}${s.homeRoute}` },
+      { "@type": "ListItem", position: 2, name: s.blog, item: `${site}${route}` }
+    ]
+  }
+];
+---
+<BlogLayout
+  lang={lang}
+  title={s.indexTitle}
+  description={s.indexDescription}
+  route={route}
+  altRoute={altRoute}
+  translated={true}
+  jsonLd={jsonLd}
+>
+  <section class="blog-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href={s.homeRoute}>{s.home}</a>
+        <span>/</span>
+        <span>{s.blog}</span>
+      </div>
+      <span class="section-label">{s.label}</span>
+      <h1 class="display-lg blog-hero-title">{s.heading[0]} <span class="gradient-text">{s.heading[1]}</span></h1>
+      <p class="section-description">{s.intro}</p>
+    </div>
+  </section>
+
+  <section class="blog-list">
+    <div class="container">
+      {posts.length === 0 && <p class="text-muted">{s.empty}</p>}
+      {lead && <Fragment set:html={postCard(lead, lang, { featured: true })} />}
+      {rest.length > 0 && (
+        <div class="post-grid">
+          {rest.map((post) => <Fragment set:html={postCard(post, lang)} />)}
+        </div>
+      )}
+      <p class="blog-rss">
+        <a href="/blog/rss.xml"><i class="fas fa-rss" aria-hidden="true"></i> {s.rss}</a>
+      </p>
+    </div>
+  </section>
+</BlogLayout>

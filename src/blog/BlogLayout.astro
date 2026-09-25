@@ -1,0 +1,139 @@
+---
+// Page shell for the blog: the same <head> conventions and chrome as the
+// hand-written pages, rendered by Astro instead of copied.
+import { assetVersions } from "../../tools/asset-version.mjs";
+import { chrome } from "./chrome.mjs";
+import { t } from "./i18n.mjs";
+
+const site = "https://www.lumiverse.hr";
+const {
+  lang,
+  title,
+  description,
+  route,
+  altRoute,
+  // true when altRoute is this page in the other language (hreflang pair),
+  // false when it is only somewhere sensible for the switcher to land
+  translated = false,
+  ogType = "website",
+  image = "/images/og/index.jpg",
+  jsonLd = [],
+  articleMeta = null
+} = Astro.props;
+
+const s = t[lang];
+const altLang = lang === "en" ? "hr" : "en";
+const versions = assetVersions();
+const asset = (name) => `/${versions.get(name)}`;
+const parts = chrome(lang, altRoute);
+const url = `${site}${route}`;
+const altUrl = `${site}${altRoute}`;
+const enUrl = lang === "en" ? url : altUrl;
+---
+<!DOCTYPE html>
+<html lang={s.htmlLang}>
+<head>
+  <!-- Analytics (GA + Clarity) load from here, and only once allowed -->
+  <script is:inline src={asset("consent.js")} defer></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href={url}>
+  {translated && (
+    <>
+      <link rel="alternate" hreflang={lang} href={url}>
+      <link rel="alternate" hreflang={altLang} href={altUrl}>
+      <link rel="alternate" hreflang="x-default" href={enUrl}>
+    </>
+  )}
+  <link rel="alternate" type="application/rss+xml" title="LumiVerse Blog" href={`${site}/blog/rss.xml`}>
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content={ogType}>
+  <meta property="og:site_name" content="LumiVerse">
+  <meta property="og:locale" content={s.ogLocale}>
+  {translated && <meta property="og:locale:alternate" content={t[altLang].ogLocale}>}
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={url}>
+  <meta property="og:image" content={`${site}${image}`}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  {articleMeta && (
+    <>
+      <meta property="article:published_time" content={articleMeta.published}>
+      {articleMeta.modified && <meta property="article:modified_time" content={articleMeta.modified}>}
+      <meta property="article:author" content={articleMeta.author}>
+      {articleMeta.tags.map((tag) => <meta property="article:tag" content={tag}>)}
+    </>
+  )}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={`${site}${image}`}>
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="stylesheet" href={asset("styles.css")}>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+
+  {jsonLd.map((data) => <script is:inline type="application/ld+json" set:html={JSON.stringify(data, null, 2)} />)}
+</head>
+<body>
+  <Fragment set:html={parts.nav} />
+
+  <main class="blog-main">
+    <slot />
+  </main>
+
+  <Fragment set:html={parts.mobileNav} />
+  <Fragment set:html={parts.footer} />
+
+  <script is:inline>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      const icon = navToggle.querySelector('i');
+      if (mobileNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+  </script>
+
+  <Fragment set:html={parts.consent} />
+</body>
+</html>

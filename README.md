@@ -165,6 +165,50 @@ Workflow:
    then translate the copy and add the card and footer link to the Croatian tree.
    `npm run test:i18n` fails until it exists. See [Languages](#languages).
 
+### Writing a blog post
+
+The blog is the one part of the site that is real Astro rather than migrated
+HTML. Posts are Markdown; everything else is generated.
+
+1. Create `src/content/blog/en/<slug>.md` (or `hr/` for a Croatian-first post).
+   The slug is the URL: `/blog/<slug>`, `/hr/blog/<slug>`.
+2. Frontmatter — validated at build time by `src/content.config.mjs`, so a bad
+   value fails `npm run build` with the file named:
+
+   ```yaml
+   ---
+   title: The Moat Is the Verifier, Not the Generator   # + " | LumiVerse" must fit 65 chars, or set seoTitle
+   description: 110-165 characters, used for the meta description and the cards.
+   date: 2026-09-25
+   tags: [Agentic Engineering, AI Quality]              # up to 4
+   related: [air-laser, overserved]                     # case-study slugs, linked at the foot
+   image: /images/og/air-laser.jpg                      # og image, defaults to the site card
+   translationOf: other-language-slug                   # only when a translation exists
+   draft: true                                          # builds nowhere until removed
+   ---
+   ```
+3. `npm run build`. That alone puts the post on `/blog`, the homepage
+   "Latest writing" strip (newest three), `sitemap.xml` and `/blog/rss.xml`.
+   Nothing to hand-edit.
+
+How it fits together:
+
+- **Routes** live in `src/blog/routes/` and are registered by a small
+  integration in `astro.config.mjs`, not placed in `src/pages/` — the migrate
+  step empties that directory on every run.
+- **Chrome** (nav, footer, consent strip) is read from `partials/` at build
+  time by `src/blog/chrome.mjs`, so the blog never needs `sync_shared.py`.
+- **The homepage strip and sitemap** are filled by the migrate step
+  (`tools/blog-embed.mjs`), because the homepage is hand-written HTML. The
+  strip goes where `index.html` / `hr/index.html` have `<!-- blog:latest -->`.
+- **Language:** English-first. The Croatian index lists Croatian posts, then
+  the English ones marked "Na engleskom". A post only gets `hreflang` when
+  `translationOf` pairs it; otherwise the language switcher goes to the other
+  blog index.
+- **Checks:** `test:seo` covers every post (title, description, sitemap,
+  one `<h1>`); `test:i18n` checks root-absolute links and reciprocal
+  `hreflang`; `test:routes` serves every post and checks the feed lists it.
+
 ### The hero showcase
 
 `showcase.js` turns a stack of `<img>` into a slideshow whose transition breaks the

@@ -91,6 +91,7 @@
         <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#work" class="nav-link">Work</a></li>
         <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="/blog" class="nav-link">Blog</a></li>
         <li><a href="#product" class="nav-link">Product</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -110,6 +111,7 @@
     <a href="#services" class="mobile-nav-link">Services</a>
     <a href="#work" class="mobile-nav-link">Work</a>
     <a href="#research" class="mobile-nav-link">Research</a>
+    <a href="/blog" class="mobile-nav-link">Blog</a>
     <a href="#product" class="mobile-nav-link">Product</a>
     <a href="#about" class="mobile-nav-link">About</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
@@ -675,6 +677,25 @@
     </div>
   </section>
 
+  <!-- Blog Section: cards are filled in from src/content/blog by the migrate step -->
+  <section id="blog" class="section section-dark blog-strip">
+    <div class="container">
+      <div class="blog-strip-header">
+        <div>
+          <span class="section-label">Blog</span>
+          <h2 class="heading-lg">Notes From the <span class="gradient-text">Workbench</span></h2>
+        </div>
+        <a href="/blog" class="btn btn-ghost">
+          All posts
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="post-grid">
+          <!-- blog:latest -->
+      </div>
+    </div>
+  </section>
+
   <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
@@ -889,6 +910,8 @@
           <ul class="footer-links">
             <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Email Us</a></li>
             <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+            <li><a href="/blog" class="footer-link">Blog</a></li>
+            <li><a href="/blog/rss.xml" class="footer-link">RSS Feed</a></li>
           </ul>
         </div>
       </div>
