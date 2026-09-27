@@ -43,8 +43,18 @@ for (const page of pages) {
 // css/js go out with `immutable`, so a URL must never change contents. Every
 // reference has to carry a content hash and resolve — an unversioned styles.css
 // looks fine on a cold browser and silently serves stale CSS to everyone else.
+// The blog is rendered by Astro rather than migrated, so it isn't in `pages`;
+// check every built page instead.
 const versioned = /^\/[^"]+\.[0-9a-f]{8}\.(?:css|js|mjs)$/;
-for (const page of pages) {
+const builtPages = [];
+(function walkDist(dir, base = "") {
+  for (const name of readdirSync(dir)) {
+    const file = path.join(dir, name);
+    if (statSync(file).isDirectory()) walkDist(file, path.join(base, name));
+    else if (name.endsWith(".html")) builtPages.push(path.join(base, name));
+  }
+})(dist);
+for (const page of builtPages) {
   const built = path.join(dist, page);
   if (!existsSync(built)) continue;
   const html = readFileSync(built, "utf8");
@@ -59,4 +69,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Parity passed for ${pages.length} built HTML page(s), assets content-hashed.`);
+console.log(`Parity passed for ${pages.length} migrated page(s); assets content-hashed on all ${builtPages.length}.`);

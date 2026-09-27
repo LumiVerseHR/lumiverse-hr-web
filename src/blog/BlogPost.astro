@@ -1,0 +1,137 @@
+---
+import { existsSync, readFileSync } from "node:fs";
+import { render } from "astro:content";
+import BlogLayout from "./BlogLayout.astro";
+import { blogIndexRoute, formatDate, isoDate } from "../../tools/blog-posts.mjs";
+import { translationFor } from "./posts.mjs";
+import { author, t } from "./i18n.mjs";
+
+const { post } = Astro.props;
+const { lang } = post;
+const s = t[lang];
+const site = "https://www.lumiverse.hr";
+const { Content } = await render(post.entry);
+
+const translation = await translationFor(post);
+const altRoute = translation ? translation.route : blogIndexRoute(lang === "en" ? "hr" : "en");
+const title = post.seoTitle ?? `${post.title} | LumiVerse`;
+
+// Related case studies, titled from the page itself so a rename there can't
+// leave a stale label here. The Croatian tree links the Croatian page.
+const related = post.related.map((slug) => {
+  const file = lang === "en" ? `${slug}.html` : `hr/${slug}.html`;
+  const html = readFileSync(existsSync(file) ? file : `${slug}.html`, "utf8");
+  const heading = html.match(/<meta property="og:title" content="([^"]+)">/)[1].replace(/ \| LumiVerse$/, "");
+  const [name, ...tagline] = heading.split(" - ");
+  const image = existsSync(`images/og/${slug}.jpg`) ? `/images/og/${slug}.jpg` : null;
+  return { slug, name, tagline: tagline.join(" - "), image, route: lang === "en" ? `/${slug}` : `/hr/${slug}` };
+});
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    inLanguage: lang,
+    datePublished: isoDate(post.date),
+    dateModified: isoDate(post.updated ?? post.date),
+    url: `${site}${post.route}`,
+    mainEntityOfPage: `${site}${post.route}`,
+    image: `${site}${post.image}`,
+    keywords: post.tags.join(", "),
+    author: { "@type": "Person", name: author.name, url: author.url, jobTitle: author.role.en },
+    publisher: {
+      "@type": "Organization",
+      name: "LumiVerse d.o.o.",
+      url: `${site}/`,
+      logo: { "@type": "ImageObject", url: `${site}/favicon-512.png` }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: s.home, item: `${site}${s.homeRoute}` },
+      { "@type": "ListItem", position: 2, name: s.blog, item: `${site}${blogIndexRoute(lang)}` },
+      { "@type": "ListItem", position: 3, name: post.title, item: `${site}${post.route}` }
+    ]
+  }
+];
+---
+<BlogLayout
+  lang={lang}
+  title={title}
+  description={post.description}
+  route={post.route}
+  altRoute={altRoute}
+  translated={Boolean(translation)}
+  ogType="article"
+  image={post.image}
+  jsonLd={jsonLd}
+  articleMeta={{
+    published: post.date.toISOString(),
+    modified: post.updated ? post.updated.toISOString() : null,
+    author: author.name,
+    tags: post.tags
+  }}
+>
+  <article class="post">
+    <header class="post-header">
+      <div class="container post-column">
+        <div class="breadcrumb">
+          <a href={s.homeRoute}>{s.home}</a>
+          <span>/</span>
+          <a href={blogIndexRoute(lang)}>{s.blog}</a>
+        </div>
+        {post.tags.length > 0 && (
+          <div class="post-tags">
+            {post.tags.map((tag) => <span class="project-tag">{tag}</span>)}
+          </div>
+        )}
+        <h1 class="post-title">{post.title}</h1>
+        <p class="post-lede">{post.description}</p>
+        <div class="post-byline">
+          <span class="post-avatar" aria-hidden="true">TJ</span>
+          <div>
+            <a href={author.url} target="_blank" rel="noopener author" class="post-author">{author.name}</a>
+            <span class="post-byline-meta">
+              {author.role[lang]}
+              <span aria-hidden="true">&middot;</span>
+              <time datetime={isoDate(post.date)}>{formatDate(post.date, lang)}</time>
+              <span aria-hidden="true">&middot;</span>
+              {post.minutes} {s.min}
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container post-column">
+      <div class="prose">
+        <Content />
+      </div>
+
+      {related.length > 0 && (
+        <aside class="post-related" aria-label={s.related}>
+          <span class="section-label">{s.related}</span>
+          {related.map((item) => (
+            <a href={item.route} class="post-related-card">
+              {item.image && <img src={item.image} alt="" loading="lazy" decoding="async" width="1200" height="630">}
+              <span class="post-related-body">
+                <span class="post-related-name">{item.name}</span>
+                {item.tagline && <span class="post-related-tagline">{item.tagline}</span>}
+                <span class="post-card-more">{s.relatedCta} <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+              </span>
+            </a>
+          ))}
+        </aside>
+      )}
+
+      <nav class="post-footer-nav">
+        <a href={blogIndexRoute(lang)} class="btn btn-ghost"><i class="fas fa-arrow-left" aria-hidden="true"></i> {s.back}</a>
+        <a href="/blog/rss.xml" class="post-rss"><i class="fas fa-rss" aria-hidden="true"></i> RSS</a>
+      </nav>
+    </div>
+  </article>
+</BlogLayout>

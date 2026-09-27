@@ -34,7 +34,7 @@
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#050508">
 
-  <link rel="stylesheet" href="/styles.3b863c20.css">
+  <link rel="stylesheet" href="/styles.8c2002d4.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
@@ -93,6 +93,7 @@
         <li><a href="#work" class="nav-link">Reference</a></li>
         <li><a href="#research" class="nav-link">Istraživanje</a></li>
         <li><a href="#product" class="nav-link">Proizvod</a></li>
+        <li><a href="/hr/blog" class="nav-link">Blog</a></li>
         <li><a href="#about" class="nav-link">O nama</a></li>
         <li><a href="#contact" class="nav-link">Kontakt</a></li>
       </ul>
@@ -112,6 +113,7 @@
     <a href="#work" class="mobile-nav-link">Reference</a>
     <a href="#research" class="mobile-nav-link">Istraživanje</a>
     <a href="#product" class="mobile-nav-link">Proizvod</a>
+    <a href="/hr/blog" class="mobile-nav-link">Blog</a>
     <a href="#about" class="mobile-nav-link">O nama</a>
     <a href="#contact" class="mobile-nav-link">Kontakt</a>
   </div>
@@ -676,6 +678,57 @@
     </div>
   </section>
 
+  <!-- Blog Section: cards are filled in from src/content/blog by the migrate step -->
+  <section id="blog" class="section section-dark blog-strip">
+    <div class="container">
+      <div class="blog-strip-header">
+        <div>
+          <span class="section-label">Blog</span>
+          <h2 class="heading-lg">Bilješke iz <span class="gradient-text">radionice</span></h2>
+        </div>
+        <a href="/hr/blog" class="btn btn-ghost">
+          Svi članci
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="post-grid">
+          <a class="post-card" href="/blog/verifier-not-generator">
+            <span class="post-card-meta">
+              <time datetime="2026-09-24">24. rujna 2026.</time>
+              <span aria-hidden="true">&middot;</span>
+              <span>5 min čitanja</span>
+              <span class="post-card-lang">Na engleskom</span>
+            </span>
+            <h3 class="post-card-title" lang="en">The Moat Is the Verifier, Not the Generator</h3>
+            <p class="post-card-excerpt" lang="en">Generation got cheap. What makes AI output worth shipping is whatever checks it - four of our projects, four verifiers, and the one check a bot couldn't do.</p>
+            <span class="post-card-more">Pročitaj članak <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="post-card" href="/blog/a-judge-that-mostly-agrees">
+            <span class="post-card-meta">
+              <time datetime="2026-09-17">17. rujna 2026.</time>
+              <span aria-hidden="true">&middot;</span>
+              <span>5 min čitanja</span>
+              <span class="post-card-lang">Na engleskom</span>
+            </span>
+            <h3 class="post-card-title" lang="en">A Judge That Mostly Agrees Is Not a Judge</h3>
+            <p class="post-card-excerpt" lang="en">We tested a small model as MOJ KRAJ.'s fact-check judge. It was faster, agreed on the easy calls, and would have published 15 of 20 articles the real judge held.</p>
+            <span class="post-card-more">Pročitaj članak <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="post-card" href="/blog/lider-translations-pipeline">
+            <span class="post-card-meta">
+              <time datetime="2026-09-10">10. rujna 2026.</time>
+              <span aria-hidden="true">&middot;</span>
+              <span>5 min čitanja</span>
+              <span class="post-card-lang">Na engleskom</span>
+            </span>
+            <h3 class="post-card-title" lang="en">One Newsroom, Ten Languages, 1.4M Articles</h3>
+            <p class="post-card-excerpt" lang="en">How we translate a Croatian newsroom into ten languages every day - the English pivot, the cost per article, and the bug that duplicated a quarter of our rows.</p>
+            <span class="post-card-more">Pročitaj članak <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+      </div>
+    </div>
+  </section>
+
   <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
@@ -890,6 +943,8 @@
           <ul class="footer-links">
             <li><a href="mailto:tihomir.jauk@lumiverse.hr" class="footer-link">Pošaljite nam e-mail</a></li>
             <li><a href="https://www.linkedin.com/company/lumiversehr" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+            <li><a href="/hr/blog" class="footer-link">Blog</a></li>
+            <li><a href="/blog/rss.xml" class="footer-link">RSS</a></li>
           </ul>
         </div>
       </div>

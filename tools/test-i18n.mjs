@@ -32,6 +32,7 @@ const slugs = [
 // [english file, croatian file, english route, croatian route]
 const pairs = [
   ["index.html", "hr/index.html", "/", "/hr/"],
+  ["blog.html", "hr/blog.html", "/blog", "/hr/blog"],
   ...slugs.map((slug) => [`${slug}.html`, `hr/${slug}.html`, `/${slug}`, `/hr/${slug}`])
 ];
 
@@ -117,7 +118,7 @@ function checkAbsolutePaths(file, html) {
     bad.add(value);
   }
   if (bad.size) {
-    fail(file, `relative URL(s) would break under /hr/: ${[...bad].join(", ")}`);
+    fail(file, `relative URL(s) would break one directory down: ${[...bad].join(", ")}`);
   }
 }
 
@@ -222,6 +223,30 @@ else {
   checkAbsolutePaths("hr/404.html", hr404);
 }
 
+// Blog posts sit one directory down in both trees (/blog/<slug>), so a
+// relative link breaks in English too. A post is translated only when it says
+// so, and then the pair must point at each other — never at a post that
+// doesn't exist or doesn't point back.
+const blogFiles = everyPage(dist).filter((file) => /^(?:hr\/)?blog\//.test(file));
+for (const file of blogFiles) {
+  const html = read(file);
+  checkAbsolutePaths(file, html);
+  const alts = alternates(html);
+  const self = attr(html, /<link rel="canonical" href="([^"]+)">/);
+  for (const [lang, href] of Object.entries(alts)) {
+    if (lang === "x-default") continue;
+    if (href === self) continue;
+    const target = read(`${href.slice(site.length + 1)}.html`);
+    if (!target) {
+      fail(file, `hreflang="${lang}" points at ${href}, which was not built`);
+      continue;
+    }
+    if (!Object.values(alternates(target)).includes(self)) {
+      fail(file, `hreflang="${lang}" points at ${href}, which does not point back`);
+    }
+  }
+}
+
 // Every Croatian route belongs in the sitemap.
 const sitemap = read("sitemap.xml");
 if (!sitemap) fail("sitemap.xml", "missing from build output");
@@ -238,4 +263,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`i18n checks passed for ${pairs.length} page pair(s), the Croatian 404 and the sitemap.`);
+console.log(`i18n checks passed for ${pairs.length} page pair(s), ${blogFiles.length} blog post(s), the Croatian 404 and the sitemap.`);
