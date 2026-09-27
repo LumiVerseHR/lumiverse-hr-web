@@ -5,7 +5,8 @@ It sets the **look**, not the ambition: when asked to go all out, go all out, in
 Anything not covered here is marked **ASK ME** — ask, don't choose.
 
 Sources: `styles.css`, `style-guide.md`, the homepage hero shader (`index.html`), and the first
-launch video (`brag-output/`, Sept 2026), which is the reference for "done right".
+launch video (Sept 2026, kept outside the repo; section 7 describes it shot by shot), which is
+the reference for "done right".
 
 ---
 
