@@ -2205,6 +2205,13 @@ body.consent-visible .footer-bottom {
   margin-top: 0.5rem;
 }
 
+.price-note {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
 .price-card-list {
   margin: 1.75rem 0;
   padding-top: 1.75rem;
@@ -2339,6 +2346,14 @@ body.consent-visible .footer-bottom {
   font-weight: 600;
   font-size: 0.925rem;
   text-align: right;
+}
+
+.system-row-price small {
+  display: block;
+  color: var(--text-secondary);
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
 }
 
 .system-row:hover strong {

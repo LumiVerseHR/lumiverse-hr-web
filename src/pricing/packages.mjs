@@ -14,6 +14,8 @@
 //   price.fullTime  with per: "month", the full-time rate; `from` is then
 //                   the part-time rate
 //
+// `priceNote` (optional, per language) is a short caveat shown under the price.
+//
 // `proof` is a case-study slug: the page has to exist, and the claim next to
 // it has to be something that page already states.
 
@@ -234,7 +236,8 @@ export const packages = [
         "A full-text index and an AI-ready export"
       ],
       proof: "Lider Archive: 50K+ magazine articles processed",
-      cta: "Digitise Your Archive"
+      cta: "Digitise Your Archive",
+      priceNote: "AI token and pipeline usage billed separately, at cost."
     },
     hr: {
       name: "Digitalizacija arhive",
@@ -246,7 +249,8 @@ export const packages = [
         "Indeks cijelog teksta i izvoz spreman za AI"
       ],
       proof: "Lider arhiva: obrađeno 50K+ članaka iz časopisa",
-      cta: "Digitalizirajte arhivu"
+      cta: "Digitalizirajte arhivu",
+      priceNote: "Potrošnja AI tokena i pipelinea naplaćuje se zasebno, po stvarnom trošku."
     }
   },
   {

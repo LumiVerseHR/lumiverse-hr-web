@@ -14,14 +14,15 @@ const escape = (value) =>
 // Case-study pages exist in both trees under the same slug.
 const caseStudy = (slug, lang) => (lang === "hr" ? `/hr/${slug}` : `/${slug}`);
 
-function priceBlock(price, lang) {
+function priceBlock(price, lang, note = "") {
   const p = priceParts(price, lang);
   return `<div class="price-card-price">
               ${p.lead ? `<span class="price-lead">${p.lead}</span>` : ""}
               <span class="price-amount">${escape(p.amount)}</span>
               <span class="price-unit">${p.unit}</span>
             </div>
-            ${p.then ? `<p class="price-then">${escape(p.then)}</p>` : ""}`;
+            ${p.then ? `<p class="price-then">${escape(p.then)}</p>` : ""}
+            ${note ? `<p class="price-note">${escape(note)}</p>` : ""}`;
 }
 
 // The full card on the pricing page. Its button fills in the form below.
@@ -42,7 +43,7 @@ export function priceCard(pkg, lang) {
             </div>
             <h3 class="price-card-name">${escape(c.name)}</h3>
             <p class="price-card-summary">${escape(c.summary)}</p>
-            ${priceBlock(pkg.price, lang)}
+            ${priceBlock(pkg.price, lang, c.priceNote)}
             <ul class="feature-list price-card-list">
               ${items}
             </ul>
@@ -80,7 +81,7 @@ export function servicesBlock(lang) {
       return `<li><a class="system-row" href="${pricing}#${pkg.id}">
               <span class="system-row-icon"><i class="fas ${pkg.icon}"></i></span>
               <span class="system-row-text"><strong>${escape(c.name)}</strong><span>${escape(c.summary)}</span></span>
-              <span class="system-row-price">${escape(priceLine(pkg.price, lang))}</span>
+              <span class="system-row-price">${escape(priceLine(pkg.price, lang))}${c.priceNote ? `<small>${escape(c.priceNote)}</small>` : ""}</span>
             </a></li>`;
     })
     .join("\n            ");

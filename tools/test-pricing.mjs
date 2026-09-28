@@ -71,6 +71,8 @@ for (const lang of langs) {
         if (!text.includes(formatEuro(amount, lang))) fail(file, `${pkg.id}: ${formatEuro(amount, lang)} is missing`);
       }
       if (!text.includes(pkg[lang].name.replace(/&/g, "&amp;"))) fail(file, `${pkg.id}: name "${pkg[lang].name}" is missing`);
+      // A caveat on a price travels with the price, wherever it's shown.
+      if (pkg[lang].priceNote && !text.includes(pkg[lang].priceNote)) fail(file, `${pkg.id}: price note is missing`);
     }
     if (html.includes("<!-- pricing:")) fail(file, "a pricing marker was left unfilled");
   }
