@@ -33,6 +33,7 @@ const slugs = [
 const pairs = [
   ["index.html", "hr/index.html", "/", "/hr/"],
   ["blog.html", "hr/blog.html", "/blog", "/hr/blog"],
+  ["pricing.html", "hr/pricing.html", "/pricing", "/hr/pricing"],
   ...slugs.map((slug) => [`${slug}.html`, `hr/${slug}.html`, `/${slug}`, `/hr/${slug}`])
 ];
 

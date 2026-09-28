@@ -12,6 +12,8 @@
     "test:parity": "node tools/test-parity.mjs",
     "test:i18n": "node tools/test-i18n.mjs",
     "test:seo": "node tools/test-seo.mjs",
+    "test:pricing": "node tools/test-pricing.mjs",
+    "test:contact": "node --test contact/server.test.mjs",
     "test:visual": "node tools/test-visual-parity.mjs"
   },
   "dependencies": {

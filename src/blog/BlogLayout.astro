@@ -18,7 +18,10 @@ const {
   ogType = "website",
   image = "/images/og/index.jpg",
   jsonLd = [],
-  articleMeta = null
+  articleMeta = null,
+  // The pricing page reuses this shell; it styles its own <main>.
+  mainClass = "blog-main",
+  scripts = []
 } = Astro.props;
 
 const s = t[lang];
@@ -92,7 +95,7 @@ const enUrl = lang === "en" ? url : altUrl;
 <body>
   <Fragment set:html={parts.nav} />
 
-  <main class="blog-main">
+  <main class={mainClass}>
     <slot />
   </main>
 
@@ -135,6 +138,8 @@ const enUrl = lang === "en" ? url : altUrl;
       });
     });
   </script>
+
+  {scripts.map((name) => <script is:inline src={asset(name)} defer></script>)}
 
   <Fragment set:html={parts.consent} />
 </body>

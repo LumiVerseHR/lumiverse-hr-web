@@ -92,6 +92,7 @@
         <li><a href="#work" class="nav-link">Work</a></li>
         <li><a href="#research" class="nav-link">Research</a></li>
         <li><a href="#product" class="nav-link">Product</a></li>
+        <li><a href="/pricing" class="nav-link">Pricing</a></li>
         <li><a href="/blog" class="nav-link">Blog</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -112,6 +113,7 @@
     <a href="#work" class="mobile-nav-link">Work</a>
     <a href="#research" class="mobile-nav-link">Research</a>
     <a href="#product" class="mobile-nav-link">Product</a>
+    <a href="/pricing" class="mobile-nav-link">Pricing</a>
     <a href="/blog" class="mobile-nav-link">Blog</a>
     <a href="#about" class="mobile-nav-link">About</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
@@ -161,82 +163,15 @@
         <span class="section-label">What We Do</span>
         <h2 class="display-md section-title">From Idea to Shipped</h2>
         <p class="section-description">
-          We build our own AI products and embed with teams to ship theirs.
+          Three ways to work with us, plus systems we've already shipped, packaged for yours. Every price is a real floor, fixed in writing before we start.
         </p>
       </div>
 
-      <div class="bento-grid">
-        <!-- Large Card -->
-        <div class="bento-card bento-card-lg">
-          <div class="bento-icon">
-            <i class="fas fa-rocket"></i>
-          </div>
-          <h3 class="bento-title">Product Development</h3>
-          <p class="bento-text">
-            We build AI products end to end - from first prototype to paying customers. Titlomat and Tvrtko.ai started as ideas. Now they're live products with real users.
-          </p>
-          <ul class="feature-list mt-4">
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Prototype to production in weeks, not quarters
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Full stack: AI pipeline, backend, UX
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Proven live: Titlomat.com & Tvrtko.ai
-            </li>
-          </ul>
-        </div>
+      <!-- Cards and prices are generated from src/pricing/packages.mjs by the migrate step -->
+      <!-- pricing:services -->
 
-        <!-- Regular Card -->
-        <div class="bento-card">
-          <div class="bento-icon">
-            <i class="fas fa-brain"></i>
-          </div>
-          <h3 class="bento-title">AI Strategy</h3>
-          <p class="bento-text">
-            We find where your team wastes time on repetitive work and fix it. Clear roadmaps to multiply output without multiplying headcount.
-          </p>
-        </div>
-
-        <!-- Large Card -->
-        <div class="bento-card bento-card-lg">
-          <div class="bento-icon">
-            <i class="fas fa-drafting-compass"></i>
-          </div>
-          <h3 class="bento-title">Tech Consulting</h3>
-          <p class="bento-text">
-            We embed as your tech lead. Architecture decisions, code reviews, team mentoring, hands-on development - whatever your product needs to ship. That's how Bridj went from concept to production.
-          </p>
-          <ul class="feature-list mt-4">
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Architecture & technology decisions
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Code reviews & team mentoring
-            </li>
-            <li class="feature-list-item">
-              <span class="feature-list-icon"><i class="fas fa-check"></i></span>
-              Hands-on development when it counts
-            </li>
-          </ul>
-        </div>
-
-        <!-- Regular Card -->
-        <div class="bento-card">
-          <div class="bento-icon">
-            <i class="fas fa-robot"></i>
-          </div>
-          <h3 class="bento-title">Process Automation</h3>
-          <p class="bento-text">
-            Free your team from copy-paste hell. We automate the boring stuff so humans can do the thinking.
-          </p>
-        </div>
+      <div class="services-more">
+        <a href="/pricing" class="btn btn-secondary">See All Pricing <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
       </div>
     </div>
   </section>
@@ -798,9 +733,9 @@
       <div class="contact-grid">
         <div>
           <span class="section-label">Get in Touch</span>
-          <h2 class="display-md section-title">At capacity for new build work</h2>
+          <h2 class="display-md section-title">Tell us what you're building</h2>
           <p class="section-description mb-5">
-            Fully booked for new custom builds and embedded roles at the moment - say hello and we'll reach out when we reopen. Want to use one of our products - Tvrtko.ai, Moj Kolega, Titlomat and more? Those are open - get in touch and we'll help you get started.
+            Open for new projects. Pick what you need, or describe it in your own words, and we'll reply within 24 hours. Want one of our products - Tvrtko.ai, Moj Kolega, Titlomat? Say which one.
           </p>
 
           <div class="contact-info">
@@ -847,15 +782,8 @@
         </div>
 
         <div class="contact-cta">
-          <span class="capacity-badge"><i class="fas fa-circle"></i> At capacity for new build work</span>
-          <h3 class="heading-md mb-3">Say hello anyway</h3>
-          <p class="text-secondary mb-5">
-            We're not taking on new custom builds right now, but we read everything - email us and we'll reply within 24 hours, and reach out when a slot opens. Already want to use one of our products? Those are open - just say which one.
-          </p>
-          <a href="mailto:tihomir.jauk@lumiverse.hr" class="btn btn-primary w-full" style="justify-content: center;">
-            <i class="fas fa-envelope"></i>
-            Email Us
-          </a>
+          <!-- The form is generated by tools/pricing-embed.mjs (contactForm) at build time -->
+          <!-- pricing:contact-form -->
         </div>
       </div>
     </div>
@@ -878,10 +806,11 @@
         <div>
           <h4 class="footer-title">Services</h4>
           <ul class="footer-links">
-            <li><a href="#services" class="footer-link">Product Development</a></li>
-            <li><a href="#services" class="footer-link">Tech Consulting</a></li>
-            <li><a href="#services" class="footer-link">AI Strategy</a></li>
-            <li><a href="#services" class="footer-link">Process Automation</a></li>
+            <li><a href="/pricing#ai-prototype" class="footer-link">AI Prototype</a></li>
+            <li><a href="/pricing#custom-ai-build" class="footer-link">Custom AI Product Build</a></li>
+            <li><a href="/pricing#embedded-tech-lead" class="footer-link">Embedded Tech Lead</a></li>
+            <li><a href="/pricing#systems" class="footer-link">Packaged Systems</a></li>
+            <li><a href="/pricing" class="footer-link">Pricing</a></li>
           </ul>
         </div>
 
@@ -1144,5 +1073,6 @@
       <button type="button" class="consent-btn consent-btn-allow" data-consent-allow>Allow</button>
     </div>
   </div>
+  <script src="contact.js" defer></script>
 </body>
 </html>

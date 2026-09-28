@@ -185,11 +185,14 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 3rem;
+  /* Eight links have to fit from 993px (where the hamburger takes over) up;
+     a fixed 3rem only fits seven, and only in English. */
+  gap: clamp(1rem, 2.4vw - 0.5rem, 3rem);
   list-style: none;
 }
 
 .nav-link {
+  white-space: nowrap;
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.9rem;
@@ -1416,16 +1419,17 @@ body {
 
 #product .container { position: relative; z-index: 1; }
 
-/* ---- At-capacity note (temporary, while fully booked) ---- */
+/* ---- Availability note (case-study CTAs; class names kept from the
+   at-capacity version so the synced partial didn't have to move) ---- */
 .capacity-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.4rem 1rem;
   border-radius: 100px;
-  background: rgba(255, 143, 77, 0.12);
-  border: 1px solid rgba(255, 143, 77, 0.3);
-  color: var(--accent-secondary);
+  background: rgba(255, 77, 77, 0.1);
+  border: 1px solid rgba(255, 77, 77, 0.3);
+  color: var(--accent);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -2110,5 +2114,463 @@ body.consent-visible .footer-bottom {
 
   .post-related-card {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Pricing
+   ---------------------------------------------------------------------------
+   /pricing, the homepage "What We Do" block and the contact form. Cards are
+   the site's glass card; the only gradient on the page stays in the h1, and
+   prices are plain white so nine of them don't fight for the accent. */
+.pricing-hero-ctas {
+  margin-top: 2.5rem;
+}
+
+.pricing-section .section-header {
+  margin-bottom: 3rem;
+}
+
+.price-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 2.25rem;
+  scroll-margin-top: 7rem;
+  transition: border-color 0.4s ease, transform 0.4s ease;
+}
+
+.price-card:hover,
+.price-card:target {
+  border-color: rgba(255, 77, 77, 0.3);
+}
+
+.price-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.price-card-top .project-tag {
+  margin-bottom: 0;
+}
+
+.price-card-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+}
+
+.price-card-summary {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.price-card-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.5rem;
+}
+
+.price-lead,
+.price-unit {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.price-amount {
+  font-size: clamp(2.25rem, 4vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.price-then {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.price-card-list {
+  margin: 1.75rem 0;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--glass-border);
+  gap: 0.85rem;
+}
+
+.price-card-list .feature-list-item {
+  align-items: flex-start;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.price-card-list .feature-list-icon {
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+.price-card-proof {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.price-card-proof i {
+  color: var(--accent);
+  margin-top: 0.2rem;
+}
+
+.price-card-proof:hover span {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.price-card-cta {
+  justify-content: center;
+}
+
+/* Homepage: three engagement cards, then the packaged systems as a list */
+.service-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-card .bento-text {
+  margin-bottom: 1.5rem;
+}
+
+.service-card-more {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.system-list {
+  margin-top: 1.5rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+}
+
+.system-list-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.system-list ul {
+  list-style: none;
+}
+
+.system-row {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--glass-border);
+  text-decoration: none;
+  color: inherit;
+}
+
+.system-list li:last-child .system-row {
+  border-bottom: 0;
+}
+
+.system-row-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 143, 77, 0.1));
+  color: var(--accent);
+}
+
+.system-row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.system-row-text span {
+  color: var(--text-secondary);
+  font-size: 0.925rem;
+}
+
+.system-row-price {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.925rem;
+  text-align: right;
+}
+
+.system-row:hover strong {
+  color: var(--accent);
+}
+
+.services-more {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+/* Ready-made products */
+.product-row {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+}
+
+.product-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.75rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  background: var(--glass);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.4s ease;
+}
+
+.product-link:hover {
+  border-color: rgba(255, 77, 77, 0.3);
+}
+
+.product-link strong {
+  font-size: 1.2rem;
+}
+
+.product-link span {
+  color: var(--text-secondary);
+}
+
+.product-link .product-link-more {
+  margin-top: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.925rem;
+}
+
+/* FAQ */
+.faq-list {
+  max-width: 860px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  color: var(--accent);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 70ch;
+  padding-bottom: 1.5rem;
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.form-optional {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.contact-form select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--text-secondary) 50%), linear-gradient(135deg, var(--text-secondary) 50%, transparent 50%);
+  background-position: calc(100% - 1.2rem) 55%, calc(100% - 0.85rem) 55%;
+  background-size: 0.35rem 0.35rem;
+  background-repeat: no-repeat;
+  padding-right: 2.5rem;
+}
+
+.contact-form select option,
+.contact-form select optgroup {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.form-trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-submit {
+  justify-content: center;
+}
+
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.form-status {
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+}
+
+.form-status[data-kind="error"] {
+  border-color: rgba(255, 77, 77, 0.4);
+}
+
+.form-status a {
+  color: var(--accent);
+}
+
+.form-privacy {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .system-list {
+    padding: 1.5rem;
+  }
+
+  .system-row {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .system-row-price {
+    grid-column: 2;
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .price-card {
+    padding: 1.75rem;
   }
 }

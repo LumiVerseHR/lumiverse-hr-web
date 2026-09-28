@@ -250,3 +250,42 @@ A test then fails if any rendered price differs from its YAML. This structure pr
    and mobile widths, then open a PR for your review. No merge until you approve. IndexNow runs only after deploy.
 
 Nothing on the live site changes until you've reviewed the branch.
+
+---
+
+## 7. Decisions (2026-09-29) and what was built
+
+These answers replace the proposal in sections 3–5 where they differ:
+1. **Open for business.** The "At capacity" copy is gone from the homepage and all 18 case-study CTAs. It now reads "Open for new projects", with links to prices and the form.
+2. **Price floors similar to Kodeful's**, in EUR, excluding VAT:
+
+   | Package | Floor | Kodeful |
+   |---|---|---|
+   | AI Prototype | €490 one-time, credited into the build | $497 |
+   | Custom AI Product Build | from €6,900/month | from $7,200/month |
+   | Embedded Tech Lead | from €4,900/month | none |
+   | AI Newsroom | €12,900 setup, then from €2,900/month | Operate: $14,500 + $3,000/month |
+   | Multilingual Publishing | €7,900 setup, then from €1,490/month | |
+   | AI Knowledge Assistant | €9,900 setup, then from €1,900/month | |
+   | Archive Digitisation | from €6,900 per project | |
+   | Multi-Site Content Network | €12,900 setup, then from €1,900/month | |
+   | Legacy System Rebuild | from €6,900/month | |
+3. **Descriptive names**, no brand names: three engagements, plus six "packaged systems", each taken from a system we've already shipped and linked to its case study.
+4. **Products are not priced here.** Moj Kolega, Titlomat and Tvrtko.ai appear in a "Ready-made products" row with links only.
+5. **No testimonials** for now.
+6. **Contact form.** On the homepage and the pricing page. It posts to a new `lumiverse-contact` container, which sends the email through Brevo.
+
+What's built: a single source of prices (`src/pricing/packages.mjs`); `/pricing` and `/hr/pricing` with FAQ, `OfferCatalog` and `FAQPage` JSON-LD; the homepage "What We Do" block rendered from that file; Pricing in the nav and footer; `test:pricing` and `test:contact`. See the README sections "Changing a price or package" and "Deployment → the contact form".
+
+### Still needs your call before merge
+- **The prices themselves.** They are the placeholders from section 3, scaled to Kodeful's.
+- **Claims these FAQ answers make:**
+  - AI model and hosting costs are billed at cost, itemised.
+  - The usual start is within two weeks of signing.
+  - For packaged systems, "the quote sets out what's yours" on IP.
+  - Replies come within 24 hours (the existing claim, kept).
+- **Brevo:**
+  - Create an API key, and verify `lumiverse.hr` (or the `CONTACT_FROM` domain) as a sender in Brevo.
+  - Set `BREVO_API_KEY` in Dokploy.
+  - Until then the form answers 503 and shows the email address instead.
+- **Privacy:** the form carries a short notice. A full privacy page is still missing from the site.

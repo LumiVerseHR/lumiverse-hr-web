@@ -35,8 +35,8 @@ const blogPosts = readPosts();
 const blogEn = ["/blog", ...blogPosts.filter((post) => post.lang === "en").map((post) => post.route)];
 const blogHr = ["/hr/blog", ...blogPosts.filter((post) => post.lang === "hr").map((post) => post.route)];
 
-const enRoutes = ["/", ...slugs.map((slug) => `/${slug}`), ...enOnly.map((slug) => `/${slug}`), ...blogEn];
-const hrRoutes = ["/hr/", ...slugs.map((slug) => `/hr/${slug}`), ...blogHr];
+const enRoutes = ["/", ...slugs.map((slug) => `/${slug}`), ...enOnly.map((slug) => `/${slug}`), ...blogEn, "/pricing"];
+const hrRoutes = ["/hr/", ...slugs.map((slug) => `/hr/${slug}`), ...blogHr, "/hr/pricing"];
 const routes = [...enRoutes, ...hrRoutes];
 
 function resolveFile(url) {
