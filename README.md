@@ -260,8 +260,8 @@ JSON-LD disagrees. The footer's Services column is a hand-written partial; the
 test checks it still names the three engagements. Bump `updated` in
 `packages.mjs` so the sitemap's `<lastmod>` moves too.
 
-A package's `proof` is a case-study slug, and the claim beside it must be a
-number that page already states.
+A package's `proof` is a case-study slug, and the claim beside it must be
+something that page already states.
 
 ## Languages
 

@@ -72,7 +72,7 @@ export const t = {
         ],
         [
           "Do you work outside Croatia?",
-          "Yes. We're based in Zagreb and work in English and Croatian. Our longest current engagement is with a UK company."
+          "Yes. We're based in Zagreb but work globally, and English is our main working language. Our longest current engagement is with a UK company."
         ],
         [
           "Do prices include VAT?",
@@ -143,7 +143,7 @@ export const t = {
         ],
         [
           "Radite li izvan Hrvatske?",
-          "Da. Sjedište nam je u Zagrebu, a radimo na hrvatskom i engleskom. Naš najdulji trenutni angažman je s tvrtkom iz Ujedinjenog Kraljevstva."
+          "Da. Sjedište nam je u Zagrebu, ali radimo globalno, a engleski nam je glavni radni jezik. Naš najdulji trenutni angažman je s tvrtkom iz Ujedinjenog Kraljevstva."
         ],
         [
           "Jesu li cijene s PDV-om?",

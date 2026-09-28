@@ -265,10 +265,10 @@ These answers replace the proposal in sections 3–5 where they differ:
    | Custom AI Product Build | from €6,900/month | from $7,200/month |
    | Embedded Tech Lead | from €4,500/month part-time, from €8,000/month full-time | none |
    | AI Newsroom | €16,000 setup, then from €400/month | Operate: $14,500 + $3,000/month |
-   | Multilingual Publishing | €7,900 setup, then from €1,490/month | |
-   | AI Knowledge Assistant | €9,900 setup, then from €1,900/month | |
+   | Multilingual Publishing | €7,900 setup, then from €180/month | |
+   | AI Knowledge Assistant | €4,900 setup, then from €250/month | |
    | Archive Digitisation | from €6,900 per project | |
-   | Multi-Site Content Network | €12,900 setup, then from €1,900/month | |
+   | Custom Internal Tool (replaces Multi-Site Content Network) | €18,000 setup, then from €180/month | |
    | Legacy System Rebuild | from €6,900/month | |
 3. **Descriptive names**, no brand names: three engagements, plus six "packaged systems", each taken from a system we've already shipped and linked to its case study.
 4. **Products are not priced here.** Moj Kolega, Titlomat and Tvrtko.ai appear in a "Ready-made products" row with links only.

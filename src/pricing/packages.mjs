@@ -15,7 +15,7 @@
 //                   the part-time rate
 //
 // `proof` is a case-study slug: the page has to exist, and the claim next to
-// it has to be a number that page already states.
+// it has to be something that page already states.
 
 // Last change to any price or package: the sitemap's <lastmod> for /pricing.
 export const updated = "2026-09-29";
@@ -160,7 +160,7 @@ export const packages = [
     id: "multilingual-publishing",
     group: "system",
     icon: "fa-language",
-    price: { from: 7900, per: "setup", then: 1490 },
+    price: { from: 7900, per: "setup", then: 180 },
     proof: "lider-translations",
     en: {
       name: "Multilingual Publishing",
@@ -191,7 +191,7 @@ export const packages = [
     id: "ai-knowledge-assistant",
     group: "system",
     icon: "fa-comments",
-    price: { from: 9900, per: "setup", then: 1900 },
+    price: { from: 4900, per: "setup", then: 250 },
     proof: "pitaj-lider",
     en: {
       name: "AI Knowledge Assistant",
@@ -250,34 +250,34 @@ export const packages = [
     }
   },
   {
-    id: "content-site-network",
+    id: "custom-internal-tool",
     group: "system",
-    icon: "fa-globe-europe",
-    price: { from: 12900, per: "setup", then: 1900 },
-    proof: "country-guides",
+    icon: "fa-tools",
+    price: { from: 18000, per: "setup", then: 180 },
+    proof: "rentalica",
     en: {
-      name: "Multi-Site Content Network",
-      summary: "Many branded sites on one codebase, every page researched, written and checked before it publishes.",
+      name: "Custom Internal Tool",
+      summary: "A tool built around how your company actually works: your data, your processes, your language.",
       includes: [
-        "One codebase, a config file per site",
-        "Research first, then writing, then a readiness gate",
-        "Structured data and one canonical URL per page",
-        "Deploys that ship only what changed"
+        "Built on your data and the systems you already run",
+        "Dashboards and reports that answer your real questions",
+        "An AI assistant that queries your data, read-only",
+        "Document scanning and archive, kept in-house"
       ],
-      proof: "Country Guides: 12 live sites on one codebase",
-      cta: "Ask About a Network"
+      proof: "Rentalica: analytics, a CRM and a read-only AI assistant, built into a rent-a-car system",
+      cta: "Ask About a Tool"
     },
     hr: {
-      name: "Mreža sadržajnih stranica",
-      summary: "Više brendiranih stranica na jednom kodu, a svaka stranica istražena, napisana i provjerena prije objave.",
+      name: "Interni alat po mjeri",
+      summary: "Alat izgrađen oko toga kako Vaša tvrtka stvarno radi: Vaši podaci, Vaši procesi, Vaš jezik.",
       includes: [
-        "Jedan kod, konfiguracijska datoteka po stranici",
-        "Prvo istraživanje, pa pisanje, pa provjera spremnosti",
-        "Strukturirani podaci i jedan kanonski URL po stranici",
-        "Objave koje isporučuju samo ono što se promijenilo"
+        "Izgrađen na Vašim podacima i sustavima koje već koristite",
+        "Nadzorne ploče i izvještaji koji odgovaraju na Vaša stvarna pitanja",
+        "AI asistent koji pretražuje Vaše podatke, samo za čitanje",
+        "Skeniranje i arhiva dokumenata, unutar tvrtke"
       ],
-      proof: "Country Guides: 12 živih stranica na jednom kodu",
-      cta: "Pitajte za mrežu"
+      proof: "Rentalica: analitika, CRM i AI asistent samo za čitanje, ugrađeni u rent-a-car sustav",
+      cta: "Pitajte za alat"
     }
   },
   {
