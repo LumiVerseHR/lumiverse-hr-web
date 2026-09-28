@@ -264,7 +264,7 @@ These answers replace the proposal in sections 3–5 where they differ:
    | AI Prototype | €490 one-time, credited into the build | $497 |
    | Custom AI Product Build | from €6,900/month | from $7,200/month |
    | Embedded Tech Lead | from €4,500/month part-time, from €8,000/month full-time | none |
-   | AI Newsroom | €12,900 setup, then from €2,900/month | Operate: $14,500 + $3,000/month |
+   | AI Newsroom | €16,000 setup, then from €400/month | Operate: $14,500 + $3,000/month |
    | Multilingual Publishing | €7,900 setup, then from €1,490/month | |
    | AI Knowledge Assistant | €9,900 setup, then from €1,900/month | |
    | Archive Digitisation | from €6,900 per project | |

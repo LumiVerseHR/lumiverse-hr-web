@@ -129,7 +129,7 @@ export const packages = [
     id: "ai-newsroom",
     group: "system",
     icon: "fa-newspaper",
-    price: { from: 12900, per: "setup", then: 2900 },
+    price: { from: 16000, per: "setup", then: 400 },
     proof: "mojkraj",
     en: {
       name: "AI Newsroom",
