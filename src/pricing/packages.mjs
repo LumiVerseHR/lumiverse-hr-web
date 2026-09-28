@@ -11,12 +11,17 @@
 //   price.from   the starting amount
 //   price.per    "once" (fixed fee) | "project" | "month" | "setup"
 //   price.then   with per: "setup", the monthly fee that follows
+//   price.fullTime  with per: "month", the full-time rate; `from` is then
+//                   the part-time rate
 //
 // `proof` is a case-study slug: the page has to exist, and the claim next to
 // it has to be a number that page already states.
 
 // Last change to any price or package: the sitemap's <lastmod> for /pricing.
 export const updated = "2026-09-29";
+
+// Every euro amount a package quotes, for the checks.
+export const amountsOf = (price) => [price.from, price.then, price.fullTime].filter(Boolean);
 
 export const groups = ["engagement", "system"];
 
@@ -91,7 +96,7 @@ export const packages = [
     id: "embedded-tech-lead",
     group: "engagement",
     icon: "fa-drafting-compass",
-    price: { from: 4900, per: "month" },
+    price: { from: 4500, per: "month", fullTime: 8000 },
     proof: "bridj",
     en: {
       name: "Embedded Tech Lead",
@@ -337,22 +342,34 @@ export function formatEuro(amount, lang) {
 }
 
 const unit = {
-  en: { once: "one-time", project: "per project", month: "per month", setup: "setup", from: "from", then: "then from", perMonth: "/month" },
-  hr: { once: "jednokratno", project: "po projektu", month: "mjesečno", setup: "postavljanje", from: "od", then: "zatim od", perMonth: "/mj." }
+  en: {
+    once: "one-time", project: "per project", month: "per month", setup: "setup", from: "from", then: "then from", perMonth: "/month",
+    partTime: "per month, part-time", fullTime: "full-time from"
+  },
+  hr: {
+    once: "jednokratno", project: "po projektu", month: "mjesečno", setup: "postavljanje", from: "od", then: "zatim od", perMonth: "/mj.",
+    partTime: "mjesečno, nepuno radno vrijeme", fullTime: "puno radno vrijeme od"
+  }
 };
 
 // The price as three short strings, so every surface lays it out the same:
 //   lead   "from" above the amount (empty for a fixed fee)
 //   amount "€6,900"
 //   unit   "per month" / "setup"
-//   then   "then from €2,900/month" (setup packages only)
+//   then   "then from €2,900/month" (setup packages), or
+//          "full-time from €8,000/month" (part-time/full-time packages)
 export function priceParts(price, lang) {
   const u = unit[lang];
+  const then = price.then
+    ? `${u.then} ${formatEuro(price.then, lang)}${u.perMonth}`
+    : price.fullTime
+      ? `${u.fullTime} ${formatEuro(price.fullTime, lang)}${u.perMonth}`
+      : "";
   return {
     lead: price.per === "once" ? "" : u.from,
     amount: formatEuro(price.from, lang),
-    unit: u[price.per],
-    then: price.then ? `${u.then} ${formatEuro(price.then, lang)}${u.perMonth}` : ""
+    unit: price.fullTime ? u.partTime : u[price.per],
+    then
   };
 }
 

@@ -7,7 +7,7 @@
 // on the way to dist/.
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { formatEuro, packages } from "../src/pricing/packages.mjs";
+import { amountsOf, formatEuro, packages } from "../src/pricing/packages.mjs";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
@@ -27,6 +27,9 @@ for (const pkg of packages) {
   ids.add(pkg.id);
   if (!Number.isInteger(pkg.price.from) || pkg.price.from <= 0) fail("packages.mjs", `${pkg.id}: bad price.from`);
   if (pkg.price.then !== undefined && pkg.price.per !== "setup") fail("packages.mjs", `${pkg.id}: "then" without per: "setup"`);
+  if (pkg.price.fullTime !== undefined && (pkg.price.per !== "month" || pkg.price.fullTime <= pkg.price.from)) {
+    fail("packages.mjs", `${pkg.id}: fullTime needs per: "month" and must exceed the part-time rate`);
+  }
   if (!["once", "project", "month", "setup"].includes(pkg.price.per)) fail("packages.mjs", `${pkg.id}: unknown per "${pkg.price.per}"`);
   for (const lang of langs) {
     const c = pkg[lang];
@@ -40,7 +43,7 @@ for (const pkg of packages) {
 
 // Euro amounts as each language writes them: "€6,900" and "6.900 €".
 const amountPattern = { en: /€\s?(\d{1,3}(?:,\d{3})*)/g, hr: /(\d{1,3}(?:\.\d{3})*)\s?€/g };
-const known = new Set(packages.flatMap((pkg) => [pkg.price.from, pkg.price.then]).filter(Boolean));
+const known = new Set(packages.flatMap((pkg) => amountsOf(pkg.price)));
 const visibleText = (html) =>
   html
     .replace(/<script\b[\s\S]*?<\/script>/gi, " ")
@@ -64,7 +67,7 @@ for (const lang of langs) {
     }
     // ...and every package's price where that package is listed.
     for (const pkg of packages) {
-      for (const amount of [pkg.price.from, pkg.price.then].filter(Boolean)) {
+      for (const amount of amountsOf(pkg.price)) {
         if (!text.includes(formatEuro(amount, lang))) fail(file, `${pkg.id}: ${formatEuro(amount, lang)} is missing`);
       }
       if (!text.includes(pkg[lang].name.replace(/&/g, "&amp;"))) fail(file, `${pkg.id}: name "${pkg[lang].name}" is missing`);
@@ -97,6 +100,7 @@ for (const lang of langs) {
       const first = specs[0].price ?? specs[0].minPrice;
       if (first !== pkg.price.from) fail(pricingPages[lang], `${pkg.id}: JSON-LD price ${first}, packages.mjs ${pkg.price.from}`);
       if (pkg.price.then && specs[1]?.minPrice !== pkg.price.then) fail(pricingPages[lang], `${pkg.id}: JSON-LD monthly fee differs`);
+      if (pkg.price.fullTime && specs[1]?.minPrice !== pkg.price.fullTime) fail(pricingPages[lang], `${pkg.id}: JSON-LD full-time rate differs`);
       if (specs.some((spec) => spec.valueAddedTaxIncluded !== false)) fail(pricingPages[lang], `${pkg.id}: JSON-LD must say VAT is excluded`);
     }
   }

@@ -24,6 +24,12 @@ function priceSpecification(price) {
   const base = { "@type": "UnitPriceSpecification", priceCurrency: "EUR", valueAddedTaxIncluded: false };
   const amount = price.per === "once" ? { price: price.from } : { minPrice: price.from };
   const first = { ...base, ...amount, ...(price.per === "month" ? { unitCode: "MON" } : {}) };
+  if (price.fullTime) {
+    return [
+      { ...first, name: "Part-time" },
+      { ...base, minPrice: price.fullTime, unitCode: "MON", name: "Full-time" }
+    ];
+  }
   if (!price.then) return first;
   return [first, { ...base, minPrice: price.then, unitCode: "MON" }];
 }
