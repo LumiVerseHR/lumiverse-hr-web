@@ -27,7 +27,7 @@ const slugs = [
 ];
 
 // English-only pages: an internal design reference and a standalone deck.
-const enOnly = ["brand-guide", "decks/tvrtko-agents"];
+const enOnly = ["brand-guide", "decks/tvrtko-agents", "v/reel-38bf03"];
 
 // Blog routes come from the posts themselves, so a new post is covered
 // without touching this file.

@@ -22,7 +22,8 @@ const localeDirs = ["hr"];
 
 const topLevelPages = htmlPagesIn("");
 const localePages = localeDirs.flatMap((dir) => htmlPagesIn(dir));
-const nestedPages = ["decks/tvrtko-agents.html"];
+// Unlisted pages: noindex, not in the sitemap, linked from nowhere.
+const nestedPages = ["decks/tvrtko-agents.html", "v/reel-38bf03.html"];
 const allPages = [...topLevelPages, ...localePages, ...nestedPages].filter((page) =>
   existsSync(path.join(root, page))
 );
