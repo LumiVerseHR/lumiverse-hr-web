@@ -3,7 +3,7 @@
 // the same functions, so a card or the form looks the same everywhere, and
 // the homepage gets its prices from src/pricing/packages.mjs at build time
 // rather than keeping its own copy.
-import { groups, packages, priceParts, priceLine } from "../src/pricing/packages.mjs";
+import { groups, inGroup, priceParts, priceLine } from "../src/pricing/packages.mjs";
 import { contactEmail, form, routes } from "../src/pricing/i18n.mjs";
 
 const site = "https://www.lumiverse.hr";
@@ -61,8 +61,7 @@ export function servicesBlock(lang) {
   const pricing = routes[lang].pricing;
   const more = { en: "Details", hr: "Detalji" }[lang];
   const systemsLabel = { en: "Packaged systems", hr: "Gotovi sustavi" }[lang];
-  const cards = packages
-    .filter((pkg) => pkg.group === "engagement")
+  const cards = inGroup("engagement")
     .map((pkg) => {
       const c = pkg[lang];
       return `<a class="bento-card service-card" href="${pricing}#${pkg.id}">
@@ -74,8 +73,7 @@ export function servicesBlock(lang) {
           </a>`;
     })
     .join("\n          ");
-  const rows = packages
-    .filter((pkg) => pkg.group === "system")
+  const rows = inGroup("system")
     .map((pkg) => {
       const c = pkg[lang];
       return `<li><a class="system-row" href="${pricing}#${pkg.id}">
@@ -102,8 +100,7 @@ export function contactForm(lang) {
   const f = form[lang];
   const optgroups = groups
     .map((group) => {
-      const options = packages
-        .filter((pkg) => pkg.group === group)
+      const options = inGroup(group)
         .map((pkg) => `<option value="${pkg.id}">${escape(pkg[lang].name)}</option>`)
         .join("");
       return `<optgroup label="${escape(group === "engagement" ? f.engagements : f.systems)}">${options}</optgroup>`;

@@ -4,7 +4,7 @@
 import BlogLayout from "../blog/BlogLayout.astro";
 import { contactForm, priceCard } from "../../tools/pricing-embed.mjs";
 import { form, routes, t } from "./i18n.mjs";
-import { packages, products } from "./packages.mjs";
+import { inGroup, packages, products } from "./packages.mjs";
 
 const { lang } = Astro.props;
 const s = t[lang];
@@ -15,8 +15,8 @@ const site = "https://www.lumiverse.hr";
 const home = { en: "Home", hr: "Početna" }[lang];
 const caseStudy = (slug) => (lang === "hr" ? `/hr/${slug}` : `/${slug}`);
 
-const engagements = packages.filter((pkg) => pkg.group === "engagement");
-const systems = packages.filter((pkg) => pkg.group === "system");
+const engagements = inGroup("engagement");
+const systems = inGroup("system");
 
 // The price as schema.org sees it: a floor (minPrice) unless it's a fixed
 // fee, monthly where it recurs, and never VAT-inclusive.

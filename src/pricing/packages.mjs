@@ -319,6 +319,13 @@ export const packages = [
 
 export const packageById = new Map(packages.map((pkg) => [pkg.id, pkg]));
 
+// A group in display order: engagements as listed above, packaged systems
+// cheapest first by their headline price (stable, so ties keep file order).
+export function inGroup(group) {
+  const members = packages.filter((pkg) => pkg.group === group);
+  return group === "system" ? members.sort((a, b) => a.price.from - b.price.from) : members;
+}
+
 // Ready-made products: linked from the pricing page, priced on their own sites.
 export const products = [
   {
