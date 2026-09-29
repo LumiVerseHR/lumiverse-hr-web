@@ -30,7 +30,7 @@ export const t = {
     systems: {
       label: "Packaged Systems",
       heading: "Built once, ready for yours",
-      text: "Each one is built on a system we've already shipped. Setup builds it on your data; the monthly fee runs it, checks its output and keeps improving it."
+      text: "Each one is built on a system we've already shipped. Setup builds it on your data; a small monthly fee keeps it running. AI usage and hosting are billed at cost."
     },
     products: {
       label: "Ready-Made Products",
@@ -52,7 +52,7 @@ export const t = {
         ],
         [
           "What does the monthly fee on a packaged system cover?",
-          "Running it, checking its output and improving it: monitoring, fixes, tuning on real results, and a monthly report of what the checks caught. AI model and hosting costs are billed at cost, itemised."
+          "Keeping it running: monitoring, hosting oversight, and fixes when something breaks. AI model and hosting costs are billed at cost, itemised. Tuning and new features are quoted separately, so the monthly fee stays small."
         ],
         [
           "Do you discount?",
@@ -60,7 +60,7 @@ export const t = {
         ],
         [
           "What if AI turns out to be the wrong tool?",
-          `Then the prototype tells you, for ${from("ai-prototype", "en")} instead of the price of a full build. We would rather lose a project than ship something that doesn't work.`
+          "We'll say so while scoping, before you've paid for a build. When the answer depends on your data, we test on a sample first and quote that as its own small step. We would rather lose a project than ship something that doesn't work."
         ],
         [
           "Who owns the code?",
@@ -101,7 +101,7 @@ export const t = {
     systems: {
       label: "Gotovi sustavi",
       heading: "Izgrađeno jednom, spremno za Vas",
-      text: "Svaki se temelji na sustavu koji smo već isporučili. Postavljanje ga gradi na Vašim podacima; mjesečna naknada ga vodi, provjerava njegove rezultate i stalno poboljšava."
+      text: "Svaki se temelji na sustavu koji smo već isporučili. Postavljanje ga gradi na Vašim podacima; mala mjesečna naknada održava ga u radu. AI potrošnja i hosting naplaćuju se po stvarnom trošku."
     },
     products: {
       label: "Gotovi proizvodi",
@@ -123,7 +123,7 @@ export const t = {
         ],
         [
           "Što pokriva mjesečna naknada za gotov sustav?",
-          "Vođenje sustava, provjeru njegovih rezultata i poboljšanja: nadzor, ispravke, podešavanje na stvarnim rezultatima i mjesečni izvještaj o tome što su provjere uhvatile. Troškovi AI modela i hostinga naplaćuju se po stvarnom trošku, razdvojeno."
+          "Održavanje sustava u radu: nadzor, brigu o hostingu i ispravke kad se nešto pokvari. Troškovi AI modela i hostinga naplaćuju se po stvarnom trošku, razdvojeno. Podešavanje i nove funkcije nude se zasebno, pa mjesečna naknada ostaje mala."
         ],
         [
           "Dajete li popuste?",
@@ -131,7 +131,7 @@ export const t = {
         ],
         [
           "Što ako se pokaže da AI nije pravi alat?",
-          `Onda će Vam to reći prototip, za ${from("ai-prototype", "hr")} umjesto cijene cijelog razvoja. Radije ćemo izgubiti projekt nego isporučiti nešto što ne radi.`
+          "Reći ćemo Vam to tijekom definiranja opsega, prije nego što platite razvoj. Kad odgovor ovisi o Vašim podacima, prvo testiramo na uzorku i to nudimo kao zaseban mali korak. Radije ćemo izgubiti projekt nego isporučiti nešto što ne radi."
         ],
         [
           "Tko je vlasnik koda?",

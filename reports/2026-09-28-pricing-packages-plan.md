@@ -262,14 +262,14 @@ These answers replace the proposal in sections 3–5 where they differ:
    | Package | Floor | Kodeful |
    |---|---|---|
    | AI Prototype | €490 one-time, credited into the build | $497 |
-   | Custom AI Product Build | from €6,900/month | from $7,200/month |
-   | Embedded Tech Lead | from €4,500/month part-time, from €8,000/month full-time | none |
+   | Custom AI Product Build | from €8,900/month | from $7,200/month |
+   | Embedded Tech Lead | from €4,500/month (2 days a week), from €8,000/month full-time | none |
    | AI Newsroom | €16,000 setup, then from €400/month | Operate: $14,500 + $3,000/month |
    | Multilingual Publishing | €7,900 setup, then from €180/month | |
    | AI Knowledge Assistant | €4,900 setup, then from €250/month | |
    | Archive Digitisation | from €6,900 per project | |
    | Custom Internal Tool (replaces Multi-Site Content Network) | €18,000 setup, then from €180/month | |
-   | Legacy System Rebuild | from €6,900/month | |
+   | Legacy System Rebuild | from €8,900/month | |
 3. **Descriptive names**, no brand names: three engagements, plus six "packaged systems", each taken from a system we've already shipped and linked to its case study.
 4. **Products are not priced here.** Moj Kolega, Titlomat and Tvrtko.ai appear in a "Ready-made products" row with links only.
 5. **No testimonials** for now.
@@ -289,3 +289,14 @@ What's built: a single source of prices (`src/pricing/packages.mjs`); `/pricing`
   - Set `BREVO_API_KEY` in Dokploy.
   - Until then the form answers 503 and shows the email address instead.
 - **Privacy:** the form carries a short notice. A full privacy page is still missing from the site.
+
+### Review pass (2026-09-29)
+Applied after a fairness review:
+- Builds now cost at least as much as a full-time tech lead (€8,900/month).
+- Monthly fees on packaged systems cover keeping the system running; tuning and new features are quoted separately. Every system with a monthly fee states that AI usage and hosting are billed at cost.
+- The €490 prototype is capped at up to 3 core flows, one week and one review call. The FAQ no longer claims the prototype tests the AI.
+- Part-time tech lead means 2 days a week.
+- The knowledge assistant setup includes one live data source; multilingual setup covers up to 3 languages.
+- "Senior team" changed to "senior engineers".
+
+Still open: a page-count anchor for Archive Digitisation, and whether €400/month is enough for the AI Newsroom.

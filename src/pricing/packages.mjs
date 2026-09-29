@@ -38,8 +38,8 @@ export const packages = [
       name: "AI Prototype",
       summary: "For testing an idea on real people before you commit to a full build.",
       includes: [
-        "A clickable, shareable prototype of the core flows",
-        "An honest verdict on where AI helps, and where it doesn't",
+        "A clickable prototype of up to 3 core flows, in one week",
+        "One review call, with an honest view on where AI fits and where it doesn't",
         "Scope and a fixed quote for the full build",
         "The fee is credited into the build"
       ],
@@ -51,8 +51,8 @@ export const packages = [
       name: "AI prototip",
       summary: "Za provjeru ideje na stvarnim ljudima prije nego što se obvežete na cijeli razvoj.",
       includes: [
-        "Klikabilni prototip ključnih tokova koji možete podijeliti",
-        "Iskrena procjena gdje AI pomaže, a gdje ne",
+        "Klikabilni prototip do 3 ključna toka, u tjedan dana",
+        "Jedan razgovor o prototipu, uz iskreno mišljenje gdje AI pomaže, a gdje ne",
         "Opseg i fiksna ponuda za cijeli razvoj",
         "Iznos se uračunava u razvoj"
       ],
@@ -65,11 +65,11 @@ export const packages = [
     id: "custom-ai-build",
     group: "engagement",
     icon: "fa-rocket",
-    price: { from: 6900, per: "month" },
+    price: { from: 8900, per: "month" },
     proof: "titlomat",
     en: {
       name: "Custom AI Product Build",
-      summary: "A production AI product, from agreed scope to paying users, built by a senior team.",
+      summary: "A production AI product, from agreed scope to paying users, built by senior engineers.",
       includes: [
         "Everything in the prototype",
         "Product design and full-stack engineering",
@@ -82,7 +82,7 @@ export const packages = [
     },
     hr: {
       name: "Razvoj AI proizvoda po mjeri",
-      summary: "AI proizvod u produkciji, od dogovorenog opsega do korisnika koji plaćaju, u izradi senior tima.",
+      summary: "AI proizvod u produkciji, od dogovorenog opsega do korisnika koji plaćaju, u izradi senior inženjera.",
       includes: [
         "Sve iz prototipa",
         "Dizajn proizvoda i full-stack razvoj",
@@ -143,7 +143,8 @@ export const packages = [
         "A human signs off before anything goes live"
       ],
       proof: "MOJ KRAJ: 9 automated checks on every article, 1 operator",
-      cta: "Ask About a Newsroom"
+      cta: "Ask About a Newsroom",
+      priceNote: "AI token and hosting usage billed separately, at cost."
     },
     hr: {
       name: "AI redakcija",
@@ -155,7 +156,8 @@ export const packages = [
         "Čovjek odobrava prije nego što išta izađe"
       ],
       proof: "MOJ KRAJ: 9 automatskih provjera svakog članka, 1 operater",
-      cta: "Pitajte za redakciju"
+      cta: "Pitajte za redakciju",
+      priceNote: "Potrošnja AI tokena i hosting naplaćuju se zasebno, po stvarnom trošku."
     }
   },
   {
@@ -169,24 +171,26 @@ export const packages = [
       summary: "Your site or newsroom translated and published in every language you need, every day.",
       includes: [
         "Author, date, images and categories carried across",
-        "A site per language, one shared theme",
+        "A site per language, one shared theme; setup covers up to 3 languages",
         "A daily refresh from your source",
         "Sitemaps per language site, so each one gets found"
       ],
       proof: "Lider Translations: ~1.4M articles in 10 languages",
-      cta: "Ask About Translation"
+      cta: "Ask About Translation",
+      priceNote: "AI token and hosting usage billed separately, at cost."
     },
     hr: {
       name: "Višejezično objavljivanje",
       summary: "Vaš portal ili redakcija, preveden i objavljen na svim jezicima koji Vam trebaju, svaki dan.",
       includes: [
         "Autor, datum, slike i kategorije prenose se s člankom",
-        "Stranica za svaki jezik, jedna zajednička tema",
+        "Stranica za svaki jezik, jedna zajednička tema; postavljanje uključuje do 3 jezika",
         "Dnevno osvježavanje iz Vašeg izvora",
         "Sitemape za svaku jezičnu stranicu, da se svaka može pronaći"
       ],
       proof: "Lider Translations: ~1,4 mil. članaka na 10 jezika",
-      cta: "Pitajte za prijevode"
+      cta: "Pitajte za prijevode",
+      priceNote: "Potrošnja AI tokena i hosting naplaćuju se zasebno, po stvarnom trošku."
     }
   },
   {
@@ -201,11 +205,12 @@ export const packages = [
       includes: [
         "Semantic search over your articles and documents",
         "Answers that cite where they came from",
-        "Live data from your systems or public registries",
-        "Monthly tuning on the questions people really ask"
+        "One live data source, from your systems or a public registry; more are quoted separately",
+        "An API or a chat widget for your team"
       ],
       proof: "Pitaj Lider: 200K+ articles and live company registry data",
-      cta: "Ask About an Assistant"
+      cta: "Ask About an Assistant",
+      priceNote: "AI token and hosting usage billed separately, at cost."
     },
     hr: {
       name: "AI asistent za Vaše znanje",
@@ -213,11 +218,12 @@ export const packages = [
       includes: [
         "Semantičko pretraživanje Vaših članaka i dokumenata",
         "Odgovori koji navode odakle su",
-        "Podaci uživo iz Vaših sustava ili javnih registara",
-        "Mjesečno podešavanje na pitanjima koja ljudi stvarno postavljaju"
+        "Jedan izvor podataka uživo, iz Vaših sustava ili javnog registra; dodatni se nude zasebno",
+        "API ili chat widget za Vaš tim"
       ],
       proof: "Pitaj Lider: 200K+ članaka i podaci sudskog registra uživo",
-      cta: "Pitajte za asistenta"
+      cta: "Pitajte za asistenta",
+      priceNote: "Potrošnja AI tokena i hosting naplaćuju se zasebno, po stvarnom trošku."
     }
   },
   {
@@ -269,7 +275,8 @@ export const packages = [
         "Document scanning and archive, kept in-house"
       ],
       proof: "Rentalica: analytics, a CRM and a read-only AI assistant, built into a rent-a-car system",
-      cta: "Ask About a Tool"
+      cta: "Ask About a Tool",
+      priceNote: "AI token and hosting usage billed separately, at cost."
     },
     hr: {
       name: "Interni alat po mjeri",
@@ -281,14 +288,15 @@ export const packages = [
         "Skeniranje i arhiva dokumenata, unutar tvrtke"
       ],
       proof: "Rentalica: analitika, CRM i AI asistent samo za čitanje, ugrađeni u rent-a-car sustav",
-      cta: "Pitajte za alat"
+      cta: "Pitajte za alat",
+      priceNote: "Potrošnja AI tokena i hosting naplaćuju se zasebno, po stvarnom trošku."
     }
   },
   {
     id: "legacy-system-rebuild",
     group: "system",
     icon: "fa-sync-alt",
-    price: { from: 6900, per: "month" },
+    price: { from: 8900, per: "month" },
     proof: "rentalica",
     en: {
       name: "Legacy System Rebuild",
@@ -355,11 +363,11 @@ export function formatEuro(amount, lang) {
 const unit = {
   en: {
     once: "one-time", project: "per project", month: "per month", setup: "setup", from: "from", then: "then from", perMonth: "/month",
-    partTime: "per month, part-time", fullTime: "full-time from"
+    partTime: "per month, 2 days a week", fullTime: "full-time from"
   },
   hr: {
     once: "jednokratno", project: "po projektu", month: "mjesečno", setup: "postavljanje", from: "od", then: "zatim od", perMonth: "/mj.",
-    partTime: "mjesečno, nepuno radno vrijeme", fullTime: "puno radno vrijeme od"
+    partTime: "mjesečno, 2 dana tjedno", fullTime: "puno radno vrijeme od"
   }
 };
 
