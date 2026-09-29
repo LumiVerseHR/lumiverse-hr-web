@@ -2452,6 +2452,9 @@ body.consent-visible .footer-bottom {
 
 /* Contact form */
 .contact-form {
+  /* The select's option list is drawn by the OS, not by this stylesheet;
+     without this it opens as a light system menu on a dark page. */
+  color-scheme: dark;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
