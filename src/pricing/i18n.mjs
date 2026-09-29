@@ -16,7 +16,7 @@ export const t = {
       `Starting prices up front: an AI prototype for ${from("ai-prototype", "en")}, custom AI product builds from ` +
       `${from("custom-ai-build", "en")} a month, and packaged systems like an AI newsroom. No hourly billing.`,
     label: "Pricing",
-    heading: ["Know the", "number", "before we talk"],
+    heading: ["Ballpark", "numbers", "before we talk"],
     intro:
       "Every engagement starts from a real floor. The final price depends on scope, and you get it fixed in writing before any work starts. Prices in EUR, excluding VAT.",
     heroCta: "Tell Us What You Need",
@@ -87,7 +87,7 @@ export const t = {
       `Cijene unaprijed: AI prototip za ${from("ai-prototype", "hr")}, razvoj AI proizvoda od ` +
       `${from("custom-ai-build", "hr")} mjesečno i gotovi sustavi poput AI redakcije. Bez naplate po satu.`,
     label: "Cijene",
-    heading: ["Znajte", "cijenu", "prije razgovora"],
+    heading: ["Okvirne", "cijene", "prije razgovora"],
     intro:
       "Svaki angažman ima stvarnu početnu cijenu. Konačna ovisi o opsegu, a dobivate je fiksnu i u pisanom obliku prije početka rada. Cijene su u eurima, bez PDV-a.",
     heroCta: "Recite nam što trebate",
