@@ -3,6 +3,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { chromium } from "playwright";
+import { latestStrip } from "./blog-embed.mjs";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
@@ -22,7 +23,7 @@ function contentType(file) {
   return "text/html; charset=utf-8";
 }
 
-function makeServer(baseDir, cleanUrls) {
+function makeServer(baseDir, cleanUrls, transform) {
   return createServer((req, res) => {
     const rawUrl = req.url ?? "/";
     const url = decodeURIComponent(rawUrl.split("?")[0].split("#")[0]);
@@ -43,7 +44,12 @@ function makeServer(baseDir, cleanUrls) {
     }
 
     res.writeHead(200, { "Content-Type": contentType(file) });
-    res.end(readFileSync(file));
+    if (!transform || !file.endsWith(".html")) {
+      res.end(readFileSync(file));
+      return;
+    }
+    const page = path.relative(baseDir, file).split(path.sep).join("/");
+    res.end(transform(readFileSync(file, "utf8"), page));
   });
 }
 
@@ -77,7 +83,10 @@ if (!compare) {
   process.exit(2);
 }
 
-const original = makeServer(root, true);
+// The migrate step fills the homepage's <!-- blog:latest --> marker, so the
+// source tree only becomes comparable to the build once it gets the same strip.
+// Reusing latestStrip keeps the two in step when the card markup changes.
+const original = makeServer(root, true, (html, page) => latestStrip(page, html));
 const migrated = makeServer(dist, true);
 const originalPort = await listen(original);
 const migratedPort = await listen(migrated);
