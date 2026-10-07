@@ -16,6 +16,7 @@ const home = { en: "Home", hr: "Početna" }[lang];
 const caseStudy = (slug) => (lang === "hr" ? `/hr/${slug}` : `/${slug}`);
 
 const engagements = inGroup("engagement");
+const upskill = inGroup("upskill");
 const systems = inGroup("system");
 
 // The price as schema.org sees it: a floor (minPrice) unless it's a fixed
@@ -23,7 +24,7 @@ const systems = inGroup("system");
 function priceSpecification(price) {
   const base = { "@type": "UnitPriceSpecification", priceCurrency: "EUR", valueAddedTaxIncluded: false };
   const amount = price.per === "once" ? { price: price.from } : { minPrice: price.from };
-  const first = { ...base, ...amount, ...(price.per === "month" ? { unitCode: "MON" } : {}) };
+  const first = { ...base, ...amount, ...(price.per === "month" ? { unitCode: "MON" } : price.per === "day" ? { unitCode: "DAY" } : {}) };
   if (price.fullTime) {
     return [
       { ...first, name: "Part-time" },
@@ -105,6 +106,19 @@ const jsonLd = [
       </div>
       <div class="price-grid">
         {engagements.map((pkg) => <Fragment set:html={priceCard(pkg, lang)} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section pricing-section" id="upskill">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">{s.upskill.label}</span>
+        <h2 class="display-md section-title">{s.upskill.heading}</h2>
+        <p class="section-description">{s.upskill.text}</p>
+      </div>
+      <div class="price-grid">
+        {upskill.map((pkg) => <Fragment set:html={priceCard(pkg, lang)} />)}
       </div>
     </div>
   </section>

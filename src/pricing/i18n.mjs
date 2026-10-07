@@ -27,6 +27,11 @@ export const t = {
       heading: "Start small or go all in",
       text: "A prototype to test the idea, a full build, or a senior tech lead inside your own team."
     },
+    upskill: {
+      label: "Upskill Your Team",
+      heading: "Make your own team AI-native",
+      text: "Rather do it yourselves? We train your people on their own work and leave them the tools, so the next system gets built in-house."
+    },
     systems: {
       label: "Packaged Systems",
       heading: "Built once, ready for yours",
@@ -53,6 +58,10 @@ export const t = {
         [
           "What does the monthly fee on a packaged system cover?",
           "Keeping it running: monitoring, hosting oversight, and fixes when something breaks. AI model and hosting costs are billed at cost, itemised. Tuning and new features are quoted separately, so the monthly fee stays small."
+        ],
+        [
+          "Can you train our team instead of building it for us?",
+          "Yes. A workshop takes one team through a day of their own work and leaves them reusable skills; a rollout does the same company-wide, with a monthly cadence. Many teams start with a workshop and build the rest themselves."
         ],
         [
           "Do you discount?",
@@ -98,6 +107,11 @@ export const t = {
       heading: "Krenite malo ili odmah punom snagom",
       text: "Prototip za provjeru ideje, cijeli razvoj ili senior tech lead unutar Vašeg tima."
     },
+    upskill: {
+      label: "Osposobite svoj tim",
+      heading: "Vaš tim, spreman za rad s AI-jem",
+      text: "Radije biste sami? Osposobljavamo Vaše ljude na njihovom stvarnom poslu i ostavljamo im alate, da sljedeći sustav izgradite u kući."
+    },
     systems: {
       label: "Gotovi sustavi",
       heading: "Izgrađeno jednom, spremno za Vas",
@@ -124,6 +138,10 @@ export const t = {
         [
           "Što pokriva mjesečna naknada za gotov sustav?",
           "Održavanje sustava u radu: nadzor, brigu o hostingu i ispravke kad se nešto pokvari. Troškovi AI modela i hostinga naplaćuju se po stvarnom trošku, razdvojeno. Podešavanje i nove funkcije nude se zasebno, pa mjesečna naknada ostaje mala."
+        ],
+        [
+          "Možete li osposobiti naš tim umjesto da gradite za nas?",
+          "Da. Radionica provede jedan tim kroz dan njihovog stvarnog posla i ostavi im vještine koje mogu ponovno koristiti; uvođenje radi isto za cijelu tvrtku, uz mjesečni ritam. Mnogi timovi krenu s radionicom, a ostalo izgrade sami."
         ],
         [
           "Dajete li popuste?",
@@ -168,6 +186,7 @@ export const form = {
     interestAny: "Not sure yet",
     interestOther: "Something else",
     engagements: "Ways to work with us",
+    upskill: "Upskill your team",
     systems: "Packaged systems",
     message: "Tell us about it",
     messageHint: "What you want to build or fix, and anything you already know about timing or budget.",
@@ -191,6 +210,7 @@ export const form = {
     interestAny: "Još ne znam",
     interestOther: "Nešto drugo",
     engagements: "Načini suradnje",
+    upskill: "Osposobite svoj tim",
     systems: "Gotovi sustavi",
     message: "Opišite nam",
     messageHint: "Što želite izgraditi ili popraviti te sve što već znate o rokovima ili budžetu.",

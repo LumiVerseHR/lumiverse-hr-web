@@ -300,3 +300,20 @@ Applied after a fairness review:
 - "Senior team" changed to "senior engineers".
 
 Still open: a page-count anchor for Archive Digitisation, and whether €400/month is enough for the AI Newsroom.
+
+## 8. Upskill track (2026-10-07)
+
+Added after reading Nick Saraev's "What I'd learn instead of AI automation in 2027" against this page:
+done-for-you builds are commoditising, and buyers increasingly want their own team made AI-capable
+(workshops, team training, a skill library for their admin). Eight of the nine packages above were
+"we build it for you", so a third group now sits between the engagements and the packaged systems:
+
+| Package | Floor | Proof |
+|---|---|---|
+| AI Team Workshop | from €1,900 per day | Air-Plasma study (one agent loop on Claude Code, bulk in 3 days) |
+| AI Team Rollout | from €4,900 setup, then from €900/month | MOJ KRAJ (newsroom built on a Claude Code skill, 1 operator) |
+
+Same single source (`packages.mjs`, group `upskill`, new `per: "day"` unit, `DAY` in the JSON-LD); it shows on
+`/pricing` (own section), the homepage "What We Do" block (a list above the systems), the contact form
+(own optgroup) and one new FAQ answer. **Both prices are strawmen to validate** with 2–3 Croatian buyers
+before merge; there is no local benchmark for AI team training in our data yet.

@@ -9,7 +9,7 @@
 // the prototype, which is a fixed fee.
 //
 //   price.from   the starting amount
-//   price.per    "once" (fixed fee) | "project" | "month" | "setup"
+//   price.per    "once" (fixed fee) | "project" | "month" | "day" | "setup"
 //   price.then   with per: "setup", the monthly fee that follows
 //   price.fullTime  with per: "month", the full-time rate; `from` is then
 //                   the part-time rate
@@ -20,12 +20,12 @@
 // it has to be something that page already states.
 
 // Last change to any price or package: the sitemap's <lastmod> for /pricing.
-export const updated = "2026-09-29";
+export const updated = "2026-10-07";
 
 // Every euro amount a package quotes, for the checks.
 export const amountsOf = (price) => [price.from, price.then, price.fullTime].filter(Boolean);
 
-export const groups = ["engagement", "system"];
+export const groups = ["engagement", "upskill", "system"];
 
 export const packages = [
   {
@@ -125,6 +125,72 @@ export const packages = [
       ],
       proof: "Bridj: više od godinu dana tech lead platforme od 17 servisa",
       cta: "Razgovarajmo o timu"
+    }
+  },
+  {
+    id: "ai-team-workshop",
+    group: "upskill",
+    icon: "fa-chalkboard-teacher",
+    price: { from: 1900, per: "day" },
+    proof: "air-laser",
+    en: {
+      name: "AI Team Workshop",
+      summary: "A day with your team on your own work: where AI pays off, how to use it well, and the first tools built for you.",
+      includes: [
+        "A hands-on day, on-site or remote, built around your team's real tasks",
+        "Claude and its team tools, used on your documents and workflows",
+        "3 to 5 reusable skills for your recurring work, left with your team",
+        "A 30-day plan for what to hand to AI first, and what not to"
+      ],
+      proof: "Air-Plasma study: one agent loop on Claude Code, the bulk of the work in 3 days",
+      cta: "Book a Workshop",
+      tag: "New"
+    },
+    hr: {
+      name: "AI radionica za tim",
+      summary: "Dan s Vašim timom na Vašem stvarnom poslu: gdje se AI isplati, kako ga dobro koristiti i prvi alati izrađeni za Vas.",
+      includes: [
+        "Praktičan dan, kod Vas ili na daljinu, oko stvarnih zadataka Vašeg tima",
+        "Claude i njegovi alati za timove, na Vašim dokumentima i procesima",
+        "3 do 5 vještina za posao koji se ponavlja, koje ostaju Vašem timu",
+        "Plan za 30 dana: što prvo prepustiti AI-ju, a što ne"
+      ],
+      proof: "Studija Air-Plasma: jedna petlja agenata na Claude Codeu, većina posla u 3 dana",
+      cta: "Rezervirajte radionicu",
+      tag: "Novo"
+    }
+  },
+  {
+    id: "ai-team-rollout",
+    group: "upskill",
+    icon: "fa-users-cog",
+    price: { from: 4900, per: "setup", then: 900 },
+    proof: "mojkraj",
+    en: {
+      name: "AI Team Rollout",
+      summary: "Your whole company working with AI: a shared skill library, trained people, and a monthly cadence that keeps everyone improving.",
+      includes: [
+        "Workshops for each team that needs one",
+        "A shared library of skills for your workflows, set up for your admin",
+        "Admin training, so you can run and extend it in-house",
+        "Every month: new skills, office hours and a review of what's being used"
+      ],
+      proof: "MOJ KRAJ: a newsroom built on a Claude Code skill, run by 1 operator",
+      cta: "Plan a Rollout",
+      priceNote: "AI tool licences are not included; you hold them in your own accounts."
+    },
+    hr: {
+      name: "Uvođenje AI-ja u tvrtku",
+      summary: "Cijela tvrtka radi s AI-jem: zajednička knjižnica vještina, osposobljeni ljudi i mjesečni ritam u kojem svi napreduju.",
+      includes: [
+        "Radionice za svaki tim kojem trebaju",
+        "Zajednička knjižnica vještina za Vaše procese, postavljena za Vašeg administratora",
+        "Obuka administratora, da sustav vodite i širite sami",
+        "Svaki mjesec: nove vještine, konzultacije i pregled onoga što se koristi"
+      ],
+      proof: "MOJ KRAJ: redakcija izgrađena na Claude Code vještini, uz 1 operatera",
+      cta: "Isplanirajte uvođenje",
+      priceNote: "Licence za AI alate nisu uključene; držite ih na svojim računima."
     }
   },
   {
@@ -362,11 +428,11 @@ export function formatEuro(amount, lang) {
 
 const unit = {
   en: {
-    once: "one-time", project: "per project", month: "per month", setup: "setup", from: "from", then: "then from", perMonth: "/month",
+    once: "one-time", project: "per project", month: "per month", day: "per day", setup: "setup", from: "from", then: "then from", perMonth: "/month",
     partTime: "per month, 2 days a week", fullTime: "full-time from"
   },
   hr: {
-    once: "jednokratno", project: "po projektu", month: "mjesečno", setup: "postavljanje", from: "od", then: "zatim od", perMonth: "/mj.",
+    once: "jednokratno", project: "po projektu", month: "mjesečno", day: "po danu", setup: "postavljanje", from: "od", then: "zatim od", perMonth: "/mj.",
     partTime: "mjesečno, 2 dana tjedno", fullTime: "puno radno vrijeme od"
   }
 };
@@ -374,7 +440,7 @@ const unit = {
 // The price as three short strings, so every surface lays it out the same:
 //   lead   "from" above the amount (empty for a fixed fee)
 //   amount "€6,900"
-//   unit   "per month" / "setup"
+//   unit   "per month" / "per day" / "setup"
 //   then   "then from €2,900/month" (setup packages), or
 //          "full-time from €8,000/month" (part-time/full-time packages)
 export function priceParts(price, lang) {

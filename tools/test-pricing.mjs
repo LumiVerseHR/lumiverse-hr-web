@@ -30,7 +30,7 @@ for (const pkg of packages) {
   if (pkg.price.fullTime !== undefined && (pkg.price.per !== "month" || pkg.price.fullTime <= pkg.price.from)) {
     fail("packages.mjs", `${pkg.id}: fullTime needs per: "month" and must exceed the part-time rate`);
   }
-  if (!["once", "project", "month", "setup"].includes(pkg.price.per)) fail("packages.mjs", `${pkg.id}: unknown per "${pkg.price.per}"`);
+  if (!["once", "project", "month", "day", "setup"].includes(pkg.price.per)) fail("packages.mjs", `${pkg.id}: unknown per "${pkg.price.per}"`);
   for (const lang of langs) {
     const c = pkg[lang];
     for (const key of ["name", "summary", "proof", "cta"]) if (!c?.[key]) fail("packages.mjs", `${pkg.id}.${lang}.${key} is empty`);

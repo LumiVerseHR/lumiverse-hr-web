@@ -55,12 +55,14 @@ export function priceCard(pkg, lang) {
           </article>`;
 }
 
-// The homepage version: the three engagements as cards, the systems as a
-// list, every entry linking to its full card on the pricing page.
+// The homepage version: the three engagements as cards, the upskill packages
+// and the systems as lists, every entry linking to its full card on the
+// pricing page.
 export function servicesBlock(lang) {
   const pricing = routes[lang].pricing;
   const more = { en: "Details", hr: "Detalji" }[lang];
   const systemsLabel = { en: "Packaged systems", hr: "Gotovi sustavi" }[lang];
+  const upskillLabel = form[lang].upskill;
   const cards = inGroup("engagement")
     .map((pkg) => {
       const c = pkg[lang];
@@ -73,25 +75,28 @@ export function servicesBlock(lang) {
           </a>`;
     })
     .join("\n          ");
-  const rows = inGroup("system")
-    .map((pkg) => {
-      const c = pkg[lang];
-      return `<li><a class="system-row" href="${pricing}#${pkg.id}">
+  const rowsOf = (group) =>
+    inGroup(group)
+      .map((pkg) => {
+        const c = pkg[lang];
+        return `<li><a class="system-row" href="${pricing}#${pkg.id}">
               <span class="system-row-icon"><i class="fas ${pkg.icon}"></i></span>
               <span class="system-row-text"><strong>${escape(c.name)}</strong><span>${escape(c.summary)}</span></span>
               <span class="system-row-price">${escape(priceLine(pkg.price, lang))}${c.priceNote ? `<small>${escape(c.priceNote)}</small>` : ""}</span>
             </a></li>`;
-    })
-    .join("\n            ");
+      })
+      .join("\n            ");
+  const list = (title, group) => `<div class="system-list">
+          <h3 class="system-list-title">${escape(title)}</h3>
+          <ul>
+            ${rowsOf(group)}
+          </ul>
+        </div>`;
   return `<div class="service-grid">
           ${cards}
         </div>
-        <div class="system-list">
-          <h3 class="system-list-title">${systemsLabel}</h3>
-          <ul>
-            ${rows}
-          </ul>
-        </div>`;
+        ${list(upskillLabel, "upskill")}
+        ${list(systemsLabel, "system")}`;
 }
 
 // The form. Posts JSON to /api/contact (contact/server.mjs) via contact.js;
@@ -103,7 +108,8 @@ export function contactForm(lang) {
       const options = inGroup(group)
         .map((pkg) => `<option value="${pkg.id}">${escape(pkg[lang].name)}</option>`)
         .join("");
-      return `<optgroup label="${escape(group === "engagement" ? f.engagements : f.systems)}">${options}</optgroup>`;
+      const label = { engagement: f.engagements, upskill: f.upskill, system: f.systems }[group];
+      return `<optgroup label="${escape(label)}">${options}</optgroup>`;
     })
     .join("\n              ");
   // data-clarity-mask keeps what people type out of Clarity session replays.
