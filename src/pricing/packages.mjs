@@ -175,7 +175,7 @@ export const packages = [
         "Admin training, so you can run and extend it in-house",
         "Every month: new skills, office hours and a review of what's being used"
       ],
-      proof: "MOJ KRAJ: a newsroom built on a Claude Code skill, run by 1 operator",
+      proof: "MOJ KRAJ: an AI newsroom run by 1 operator, minutes a day",
       cta: "Plan a Rollout",
       priceNote: "AI tool licences are not included; you hold them in your own accounts."
     },
@@ -188,7 +188,7 @@ export const packages = [
         "Obuka administratora, da sustav vodite i širite sami",
         "Svaki mjesec: nove vještine, konzultacije i pregled onoga što se koristi"
       ],
-      proof: "MOJ KRAJ: redakcija izgrađena na Claude Code vještini, uz 1 operatera",
+      proof: "MOJ KRAJ: AI redakcija koju vodi 1 operater, nekoliko minuta dnevno",
       cta: "Isplanirajte uvođenje",
       priceNote: "Licence za AI alate nisu uključene; držite ih na svojim računima."
     }
