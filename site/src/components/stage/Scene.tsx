@@ -21,7 +21,7 @@ const SCREENS: Record<string, string> = {
 };
 
 // The hero camera, framed to the approved comp: the whole plinth on the floor, seen from front-left.
-const CAMERA = { position: [-1.7, 2.9, 9.4] as const, target: [0.25, 0.75, 0] as const, focalLength: 42, filmOffset: -5.2 };
+const CAMERA = { position: [-1.8, 1.75, 9.6] as const, target: [0.25, 0.95, 0] as const, focalLength: 42, filmOffset: -5.2 };
 
 // Portrait screens give the model its own band, so it is framed centred there.
 const targetFor = (aspect: number): [number, number, number] =>
