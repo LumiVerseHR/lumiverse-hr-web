@@ -42,14 +42,27 @@
 .row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 20px;
 }
 
+/* Every control shares one geometry, so rows line up and nothing reflows on focus,
+   autofill or a password manager's badge. */
 .field {
+  --control-h: 52px;
   display: grid;
+  grid-template-rows: 20px auto;
   gap: 8px;
   font-size: 14px;
   font-weight: 500;
+  line-height: 20px;
+}
+
+.field > span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .field em {
@@ -61,25 +74,53 @@
 .field input,
 .field select,
 .field textarea {
+  display: block;
   width: 100%;
-  padding: 13px 14px;
+  margin: 0;
   border: 1px solid rgb(255 255 255 / 0.12);
   border-radius: 0;
-  background: #141417;
+  background-color: #141417;
   color: var(--text);
   font: inherit;
   font-size: 16px;
   font-weight: 400;
-  transition: border-color 160ms ease-out, background-color 160ms ease-out;
+  line-height: 24px;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  transition: border-color 160ms ease-out;
+}
+
+.field input,
+.field select {
+  height: var(--control-h);
+  padding: 0 14px;
+}
+
+.field select {
+  padding-right: 44px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 7.5l5 5 5-5' stroke='%23cacaca' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 14px;
+}
+
+.field select option,
+.field select optgroup {
+  background: #141417;
+  color: var(--text);
 }
 
 .field textarea {
+  min-height: 148px;
+  padding: 13px 14px;
   resize: vertical;
-  line-height: 1.5;
 }
 
 .field ::placeholder {
   color: #6f6e6b;
+  opacity: 1;
 }
 
 .field input:hover,
@@ -90,10 +131,21 @@
 
 .field input:focus-visible,
 .field select:focus-visible,
-.field textarea:focus-visible {
-  outline: none;
+.field textarea:focus-visible,
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
   border-color: var(--coral);
-  background: #18181b;
+}
+
+/* Browser autofill keeps the field's own colours instead of flashing a pale fill. */
+.field input:-webkit-autofill,
+.field input:-webkit-autofill:hover,
+.field input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text);
+  caret-color: var(--text);
+  box-shadow: 0 0 0 100px #141417 inset;
+  transition: background-color 9999s ease-out 0s, border-color 160ms ease-out;
 }
 
 .field [aria-invalid="true"] {
