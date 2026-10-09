@@ -62,7 +62,7 @@
   stroke-width: 4;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: stroke 500ms ease-out, stroke-width 500ms ease-out, opacity 400ms ease-out;
+  transition: stroke 500ms ease-out, opacity 400ms ease-out;
 }
 
 .fills rect {
