@@ -250,7 +250,8 @@
 
 .stats div {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  justify-content: flex-start;
   gap: 8px;
   padding: 28px 24px;
   background: #0b0b0c;
@@ -263,6 +264,7 @@
 }
 
 .stats dd {
+  order: -1;
   margin: 0;
   font-size: clamp(36px, 3.6vw, 56px);
   font-weight: 700;
@@ -762,7 +764,8 @@
 
 .siteStats div {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .siteStats dt {
@@ -771,6 +774,7 @@
 }
 
 .siteStats dd {
+  order: -1;
   margin: 0;
   font-size: 20px;
   font-weight: 700;
