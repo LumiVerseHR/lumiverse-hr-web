@@ -47,6 +47,25 @@ services:
       - traefik.http.routers.lumiverse-redir-http.middlewares=lumiverse-canonical
       - traefik.http.routers.lumiverse-redir-http.service=lumiverse-web
 
+  # The contact form backend. Internal only: nginx in lumiverse-web proxies
+  # /api/contact to it over the default network; Traefik never sees it.
+  # Set BREVO_API_KEY (and optionally CONTACT_TO / CONTACT_FROM) in Dokploy.
+  lumiverse-contact:
+    build:
+      context: .
+      dockerfile: contact/Dockerfile
+    restart: unless-stopped
+    networks: [default]
+    environment:
+      BREVO_API_KEY: ${BREVO_API_KEY:-}
+      CONTACT_TO: ${CONTACT_TO:-tihomir.jauk@lumiverse.hr}
+      CONTACT_FROM: ${CONTACT_FROM:-web@lumiverse.hr}
+      CONTACT_ORIGINS: https://www.lumiverse.hr
+    deploy:
+      resources:
+        limits:
+          memory: 96M
+
 networks:
   default:
   dokploy-network:

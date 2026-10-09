@@ -1,10 +1,11 @@
 import { defineConfig } from "astro/config";
 
 // The hand-written pages are copied into src/pages by the migrate step, which
-// empties that directory first. The blog is real Astro, so its routes live in
-// src/blog/routes and are injected here instead — out of reach of the reset.
-const blogRoutes = {
-  name: "lumiverse-blog",
+// empties that directory first. The blog and the pricing page are real Astro,
+// so their routes live in src/blog/routes and src/pricing/routes and are
+// injected here instead — out of reach of the reset.
+const astroRoutes = {
+  name: "lumiverse-routes",
   hooks: {
     "astro:config:setup": ({ injectRoute }) => {
       const routes = [
@@ -17,6 +18,9 @@ const blogRoutes = {
       for (const [pattern, file] of routes) {
         injectRoute({ pattern, entrypoint: `./src/blog/routes/${file}` });
       }
+      // Pricing renders from src/pricing/packages.mjs, like the blog from its posts.
+      injectRoute({ pattern: "/pricing", entrypoint: "./src/pricing/routes/pricing-en.astro" });
+      injectRoute({ pattern: "/hr/pricing", entrypoint: "./src/pricing/routes/pricing-hr.astro" });
     }
   }
 };
@@ -28,7 +32,7 @@ export default defineConfig({
     format: "file"
   },
   trailingSlash: "never",
-  integrations: [blogRoutes],
+  integrations: [astroRoutes],
   markdown: {
     // Zero client JS: highlighted at build time, coloured by the theme's own
     // inline styles so it needs nothing from styles.css.

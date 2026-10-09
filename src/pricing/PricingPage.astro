@@ -1,0 +1,189 @@
+---
+// /pricing and /hr/pricing. Every price and package comes from packages.mjs
+// through the same card and form renderers the homepage uses.
+import BlogLayout from "../blog/BlogLayout.astro";
+import { contactForm, priceCard } from "../../tools/pricing-embed.mjs";
+import { form, routes, t } from "./i18n.mjs";
+import { inGroup, packages, products } from "./packages.mjs";
+
+const { lang } = Astro.props;
+const s = t[lang];
+const f = form[lang];
+const route = routes[lang].pricing;
+const altRoute = routes[lang === "en" ? "hr" : "en"].pricing;
+const site = "https://www.lumiverse.hr";
+const home = { en: "Home", hr: "Početna" }[lang];
+const caseStudy = (slug) => (lang === "hr" ? `/hr/${slug}` : `/${slug}`);
+
+const engagements = inGroup("engagement");
+const upskill = inGroup("upskill");
+const systems = inGroup("system");
+
+// The price as schema.org sees it: a floor (minPrice) unless it's a fixed
+// fee, monthly where it recurs, and never VAT-inclusive.
+function priceSpecification(price) {
+  const base = { "@type": "UnitPriceSpecification", priceCurrency: "EUR", valueAddedTaxIncluded: false };
+  const amount = price.per === "once" ? { price: price.from } : { minPrice: price.from };
+  const first = { ...base, ...amount, ...(price.per === "month" ? { unitCode: "MON" } : price.per === "day" ? { unitCode: "DAY" } : {}) };
+  if (price.fullTime) {
+    return [
+      { ...first, name: "Part-time" },
+      { ...base, minPrice: price.fullTime, unitCode: "MON", name: "Full-time" }
+    ];
+  }
+  if (!price.then) return first;
+  return [first, { ...base, minPrice: price.then, unitCode: "MON" }];
+}
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: home, item: `${site}${routes[lang].home}` },
+      { "@type": "ListItem", position: 2, name: s.label, item: `${site}${route}` }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    name: s.title.replace(" | LumiVerse", ""),
+    url: `${site}${route}`,
+    provider: { "@type": "Organization", name: "LumiVerse d.o.o.", url: site },
+    itemListElement: packages.map((pkg) => ({
+      "@type": "Offer",
+      url: `${site}${route}#${pkg.id}`,
+      priceCurrency: "EUR",
+      priceSpecification: priceSpecification(pkg.price),
+      itemOffered: { "@type": "Service", name: pkg[lang].name, description: pkg[lang].summary }
+    }))
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: s.faq.items.map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: { "@type": "Answer", text: answer }
+    }))
+  }
+];
+---
+<BlogLayout
+  lang={lang}
+  title={s.title}
+  description={s.description}
+  route={route}
+  altRoute={altRoute}
+  translated={true}
+  jsonLd={jsonLd}
+  mainClass="pricing-main"
+  scripts={["contact.js"]}
+>
+  <section class="blog-hero pricing-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href={routes[lang].home}>{home}</a>
+        <span>/</span>
+        <span>{s.label}</span>
+      </div>
+      <span class="section-label">{s.label}</span>
+      <h1 class="display-lg blog-hero-title">{s.heading[0]} <span class="gradient-text">{s.heading[1]}</span> {s.heading[2]}</h1>
+      <p class="section-description">{s.intro}</p>
+      <div class="hero-ctas pricing-hero-ctas">
+        <a href="#contact" class="btn btn-primary">{s.heroCta} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        <a href={s.workRoute} class="btn btn-secondary">{s.heroSecondary}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pricing-section" id="engagements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">{s.engagements.label}</span>
+        <h2 class="display-md section-title">{s.engagements.heading}</h2>
+        <p class="section-description">{s.engagements.text}</p>
+      </div>
+      <div class="price-grid">
+        {engagements.map((pkg) => <Fragment set:html={priceCard(pkg, lang)} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section pricing-section" id="upskill">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">{s.upskill.label}</span>
+        <h2 class="display-md section-title">{s.upskill.heading}</h2>
+        <p class="section-description">{s.upskill.text}</p>
+      </div>
+      <div class="price-grid">
+        {upskill.map((pkg) => <Fragment set:html={priceCard(pkg, lang)} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark pricing-section" id="systems">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">{s.systems.label}</span>
+        <h2 class="display-md section-title">{s.systems.heading}</h2>
+        <p class="section-description">{s.systems.text}</p>
+      </div>
+      <div class="price-grid">
+        {systems.map((pkg) => <Fragment set:html={priceCard(pkg, lang)} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section pricing-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">{s.products.label}</span>
+        <h2 class="display-md section-title">{s.products.heading}</h2>
+        <p class="section-description">{s.products.text}</p>
+      </div>
+      <div class="product-row">
+        {products.map((product) => (
+          <a class="product-link" href={caseStudy(product.slug)}>
+            <strong>{product[lang].name}</strong>
+            <span>{product[lang].summary}</span>
+            <span class="product-link-more">{s.products.more} <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark pricing-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">{s.faq.label}</span>
+        <h2 class="display-md section-title">{s.faq.heading}</h2>
+      </div>
+      <div class="faq-list">
+        {s.faq.items.map(([question, answer]) => (
+          <details class="faq-item">
+            <summary>{question}</summary>
+            <p>{answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <span class="section-label">{f.label}</span>
+          <h2 class="display-md section-title">{f.heading}</h2>
+          <p class="section-description">{f.text}</p>
+        </div>
+        <div class="contact-cta">
+          <Fragment set:html={contactForm(lang)} />
+        </div>
+      </div>
+    </div>
+  </section>
+</BlogLayout>

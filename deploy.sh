@@ -18,6 +18,7 @@ npm run test:parity
 npm run test:i18n
 npm run test:seo
 npm run test:routes
+npm run test:pricing
 
 ssh "${HOST}" "mkdir -p '${DEST}/releases'"
 rsync -avz --delete dist/ "${HOST}:${RELEASE}/"

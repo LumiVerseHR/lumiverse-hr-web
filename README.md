@@ -29,6 +29,8 @@ npm run test:parity
 npm run test:i18n
 npm run test:seo
 npm run test:routes
+npm run test:pricing
+npm run test:contact
 npm run test:visual
 ```
 
@@ -239,6 +241,28 @@ Two layout gotchas worth knowing:
   source images need `object-position: top` (see the Lider Archive card) or the crop
   lands on a meaningless middle slice.
 
+### Changing a price or package
+
+Every package, its starting price and its copy (both languages) live in
+`src/pricing/packages.mjs`. That one file renders:
+
+- `/pricing` and `/hr/pricing` (`src/pricing/PricingPage.astro`, copy and FAQ in
+  `src/pricing/i18n.mjs`),
+- the homepage "What We Do" cards, filled in at the `<!-- pricing:services -->`
+  marker by the migrate step (`tools/pricing-embed.mjs`),
+- the contact form and its package list, at `<!-- pricing:contact-form -->`,
+- the `OfferCatalog` and `FAQPage` JSON-LD,
+- the list of package ids the contact server accepts.
+
+So a price change is one edit. `npm run test:pricing` fails if a built page
+shows a euro amount that isn't in `packages.mjs`, leaves a package out, or its
+JSON-LD disagrees. The footer's Services column is a hand-written partial; the
+test checks it still names the three engagements. Bump `updated` in
+`packages.mjs` so the sitemap's `<lastmod>` moves too.
+
+A package's `proof` is a case-study slug, and the claim beside it must be
+something that page already states.
+
 ## Languages
 
 English is the default and lives at the site root. Croatian is a full parallel
@@ -349,6 +373,25 @@ container. Watch it at [deploy.lumiverse.hr](https://deploy.lumiverse.hr) or:
 ```bash
 curl -sI https://www.lumiverse.hr/ | head -3
 ```
+
+**The contact form** posts to `/api/contact`, which the site's nginx proxies to
+a second container, `lumiverse-contact` (`contact/server.mjs`, no
+dependencies). It sends one email per submission through Brevo's transactional
+API, to our inbox, with the visitor as Reply-To only. Set in the Dokploy
+compose environment:
+
+| Variable | |
+|---|---|
+| `BREVO_API_KEY` | required; without it the form answers 503 and shows the email fallback |
+| `CONTACT_TO` | inbox (default `tihomir.jauk@lumiverse.hr`) |
+| `CONTACT_FROM` | sender, on a domain verified in Brevo (default `web@lumiverse.hr`) |
+
+The static site does not depend on it: nginx resolves the container per
+request, so if it is down only the form fails (502/504), never the pages.
+Spam handling is a honeypot field, a minimum fill time, an Origin check and a
+per-IP rate limit (5 per 10 minutes, from Traefik's `X-Real-Ip`).
+`npm run test:contact` runs the server against a stand-in for Brevo. The
+legacy rsync deploy has no equivalent, so the form only works on Dokploy.
 
 Dokploy only deploys the branch it is configured for (`main`). After a deploy
 that adds or changes pages, submit the canonical URLs for re-crawl:

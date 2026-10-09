@@ -4,6 +4,7 @@ import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "no
 import path from "node:path";
 import { chromium } from "playwright";
 import { latestStrip } from "./blog-embed.mjs";
+import { pricingStrip } from "./pricing-embed.mjs";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
@@ -83,10 +84,12 @@ if (!compare) {
   process.exit(2);
 }
 
-// The migrate step fills the homepage's <!-- blog:latest --> marker, so the
-// source tree only becomes comparable to the build once it gets the same strip.
-// Reusing latestStrip keeps the two in step when the card markup changes.
-const original = makeServer(root, true, (html, page) => latestStrip(page, html));
+// The migrate step fills the homepage's <!-- blog:latest --> and <!-- pricing:* -->
+// markers, so the source tree only becomes comparable to the build once it gets
+// the same content.
+// Reusing latestStrip and pricingStrip keeps the two in step when the card
+// or form markup changes.
+const original = makeServer(root, true, (html, page) => pricingStrip(page, latestStrip(page, html)));
 const migrated = makeServer(dist, true);
 const originalPort = await listen(original);
 const migratedPort = await listen(migrated);

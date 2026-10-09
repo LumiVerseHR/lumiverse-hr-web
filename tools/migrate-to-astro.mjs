@@ -2,6 +2,8 @@ import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statS
 import path from "node:path";
 import { assetVersions } from "./asset-version.mjs";
 import { latestStrip, sitemapEntries } from "./blog-embed.mjs";
+import { pricingSitemapEntries, pricingStrip } from "./pricing-embed.mjs";
+import { updated as pricingUpdated } from "../src/pricing/packages.mjs";
 
 const root = process.cwd();
 const pagesDir = path.join(root, "src", "pages");
@@ -108,7 +110,7 @@ for (const page of allPages) {
   const from = path.join(root, page);
   const to = path.join(pagesDir, page);
   mkdirSync(path.dirname(to), { recursive: true });
-  writeFileSync(to, latestStrip(page, normalizeHtml(readFileSync(from, "utf8"))));
+  writeFileSync(to, pricingStrip(page, latestStrip(page, normalizeHtml(readFileSync(from, "utf8")))));
 }
 
 for (const name of [
@@ -118,6 +120,7 @@ for (const name of [
   "showcase.js",
   "titlomat-wave.js",
   "consent.js",
+  "contact.js",
   "favicon.ico",
   "favicon.svg",
   "favicon-192.png",
@@ -142,7 +145,7 @@ for (const [name, versioned] of assetVersionMap) {
 
 const sitemap = path.join(publicDir, "sitemap.xml");
 if (existsSync(sitemap)) {
-  writeFileSync(sitemap, sitemapEntries(normalizeHtml(readFileSync(sitemap, "utf8"))));
+  writeFileSync(sitemap, pricingSitemapEntries(sitemapEntries(normalizeHtml(readFileSync(sitemap, "utf8"))), pricingUpdated));
 }
 
 const manifest = path.join(publicDir, "manifest.json");

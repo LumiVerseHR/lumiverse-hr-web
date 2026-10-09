@@ -12,7 +12,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 
-export const versionedAssets = ["styles.css", "showcase.js", "titlomat-wave.js", "consent.js"];
+export const versionedAssets = ["styles.css", "showcase.js", "titlomat-wave.js", "consent.js", "contact.js"];
 
 export function assetVersions(root = process.cwd()) {
   const versions = new Map();
