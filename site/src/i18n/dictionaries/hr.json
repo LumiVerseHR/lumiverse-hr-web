@@ -9,7 +9,9 @@
     "research": "Istraživanje",
     "studio": "Studio",
     "contact": "Kontakt",
-    "cta": "Pokrenite projekt"
+    "cta": "Pokrenite projekt",
+    "menu": "Izbornik",
+    "close": "Zatvori"
   },
   "hero": {
     "titleLines": [

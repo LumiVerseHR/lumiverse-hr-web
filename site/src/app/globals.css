@@ -13,6 +13,7 @@
   --text-muted: #8f8e8b;
 
   --font-body: var(--font-golos), ui-sans-serif, system-ui, sans-serif;
+  --font-caption: var(--font-caption), var(--font-golos), sans-serif;
 
   --gutter: clamp(16px, 2.6vw, 40px);
 }

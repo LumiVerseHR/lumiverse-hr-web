@@ -9,6 +9,7 @@ import { Services } from "@/components/sections/Services";
 import { Studio } from "@/components/sections/Studio";
 import { Thesis } from "@/components/sections/Thesis";
 import { WorkIndex } from "@/components/sections/WorkIndex";
+import { MobileMenu } from "@/components/nav/MobileMenu";
 import { ModelStage } from "@/components/stage/ModelStage";
 import { hasLocale, localePath } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -46,6 +47,17 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             {dict.nav.cta}
             <Icon name="arrow-right" size={14} />
           </a>
+          <MobileMenu
+            items={[
+              { href: "#work", label: dict.nav.work },
+              { href: "#services", label: dict.nav.services },
+              { href: "#research", label: dict.nav.research },
+              { href: "#studio", label: dict.nav.studio },
+              { href: "#contact", label: dict.nav.contact },
+            ]}
+            cta={{ href: "#contact", label: dict.nav.cta }}
+            labels={{ open: dict.nav.menu, close: dict.nav.close }}
+          />
         </div>
       </header>
 

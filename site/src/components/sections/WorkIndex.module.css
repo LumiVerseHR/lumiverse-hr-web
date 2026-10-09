@@ -78,7 +78,7 @@
 
 .shot {
   object-fit: cover;
-  object-position: top;
+  object-position: left top;
   opacity: 0;
   transform: scale(1.03);
   transition: opacity 360ms ease-out, transform 600ms cubic-bezier(0.22, 1, 0.36, 1);

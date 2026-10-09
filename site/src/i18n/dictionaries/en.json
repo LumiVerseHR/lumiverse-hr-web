@@ -9,7 +9,9 @@
     "research": "Research",
     "studio": "Studio",
     "contact": "Contact",
-    "cta": "Start a Project"
+    "cta": "Start a Project",
+    "menu": "Menu",
+    "close": "Close"
   },
   "hero": {
     "titleLines": [

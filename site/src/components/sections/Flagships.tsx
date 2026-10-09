@@ -21,9 +21,9 @@ export function Flagships({ lang, dict }: { lang: Locale; dict: Dictionary }) {
               <a href={localePath(lang, `/${f.slug}`)} className={styles.frame} aria-label={`${f.name}: ${dict.flagships.open}`}>
                 <Image src={f.image} alt={f.alt[lang]} fill sizes="(max-width: 900px) 92vw, 30vw" className={styles.shot} />
               </a>
-              <div className={styles.placard}>
-                <p className={s.caps}>{f.kind[lang]}</p>
+              <div className={styles.label}>
                 <h3 className={styles.name}>{f.name}</h3>
+                <p className={styles.kind}>{f.kind[lang]}</p>
                 <p className={styles.stat}>
                   <span className={styles.value}>{f.stat.value}</span>
                   <span className={styles.unit}>{f.stat.unit[lang]}</span>

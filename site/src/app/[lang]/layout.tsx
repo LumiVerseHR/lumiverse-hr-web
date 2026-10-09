@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Golos_Text } from "next/font/google";
+import { Barlow_Condensed, Golos_Text } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -9,6 +9,15 @@ const golos = Golos_Text({
   subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "700"],
   variable: "--font-golos",
+  display: "swap",
+});
+
+// The placard face: condensed italic captions, as on the plinth labels in the comp.
+const caption = Barlow_Condensed({
+  subsets: ["latin", "latin-ext"],
+  weight: ["500", "600"],
+  style: ["italic"],
+  variable: "--font-caption",
   display: "swap",
 });
 
@@ -32,7 +41,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
   return (
-    <html lang={lang} className={golos.variable}>
+    <html lang={lang} className={`${golos.variable} ${caption.variable}`}>
       <body>{children}</body>
     </html>
   );

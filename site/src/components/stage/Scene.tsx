@@ -2,9 +2,9 @@
 
 import { Suspense, useEffect, useLayoutEffect, useMemo, useRef, type ReactNode } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Environment, Html, Lightformer, MeshReflectorMaterial, OrbitControls, SoftShadows, SpotLight, useGLTF, useTexture } from "@react-three/drei";
+import { ContactShadows, Environment, Html, Lightformer, OrbitControls, SoftShadows, SpotLight, useGLTF, useTexture } from "@react-three/drei";
 import { Bloom, EffectComposer, N8AO, Vignette } from "@react-three/postprocessing";
-import { Color, MathUtils, MeshBasicMaterial, SRGBColorSpace, type Group, type Mesh, type Object3D, type PerspectiveCamera, type Texture } from "three";
+import { Color, MathUtils, MeshBasicMaterial, MeshStandardMaterial, SRGBColorSpace, type Group, type Mesh, type Object3D, type PerspectiveCamera, type Texture } from "three";
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 
 import styles from "./ModelStage.module.css";
@@ -47,12 +47,22 @@ function frame(camera: PerspectiveCamera, aspect: number, portrait: boolean) {
   camera.updateProjectionMatrix();
 }
 
+// The humans: true coral with a little self-light so shadow never turns them maroon.
+const FIGURE = new MeshStandardMaterial({ color: "#ff4d4d", emissive: "#ff4d4d", emissiveIntensity: 0.28, roughness: 0.5 });
+// The plinth body reads as near-black stone under the beam.
+const PLINTH = new MeshStandardMaterial({ color: "#0d0c0b", roughness: 0.92 });
+
 function prepare(root: Object3D, textures: Record<string, Texture>) {
   root.traverse((node) => {
     const mesh = node as Mesh;
     if (!mesh.isMesh) return;
     mesh.castShadow = true;
     mesh.receiveShadow = true;
+    if (mesh.name.startsWith("Figure_")) {
+      mesh.material = FIGURE;
+      mesh.scale.multiplyScalar(1.6);
+    }
+    if (mesh.name === "Plinth") mesh.material = PLINTH;
     const map = textures[mesh.name];
     if (map) {
       map.flipY = false; // glTF UV convention
@@ -146,9 +156,9 @@ function Maquette() {
   return <primitive object={model} />;
 }
 
-// Placards lie on the plinth in front of each model, tilted towards the visitor.
+// Placards hang on the plinth front like museum labels, keeping the top clear for the figures.
 // The camera sits front-left, so placards shift right of each model to read as in front of it.
-const PLACARD_X: Record<string, number> = { "moj-kolega": -0.9, bridj: 0.55, "air-laser": 1.95 };
+const PLACARD_X: Record<string, number> = { "moj-kolega": -1.1, bridj: 0.1, "air-laser": 1.5 };
 
 function Placards({ placards }: { placards: Placard[] }) {
   return (
@@ -157,9 +167,9 @@ function Placards({ placards }: { placards: Placard[] }) {
         <Html
           key={p.id}
           transform
-          distanceFactor={1.6}
-          position={[PLACARD_X[p.id] ?? 0, 0.09, 0.82]}
-          rotation={[-0.25, 0, 0]}
+          distanceFactor={1.45}
+          position={[PLACARD_X[p.id] ?? 0, -0.2, 1.065]}
+          rotation={[0, 0, 0]}
           zIndexRange={[1, 0]}
         >
           <div className={styles.placard}>
@@ -177,20 +187,9 @@ function Gallery() {
     <>
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.6, 0]} receiveShadow>
         <planeGeometry args={[40, 40]} />
-        <MeshReflectorMaterial
-          resolution={512}
-          blur={[400, 120]}
-          mixBlur={1}
-          mixStrength={1.2}
-          roughness={0.85}
-          depthScale={1}
-          minDepthThreshold={0.4}
-          maxDepthThreshold={1.4}
-          color="#0b0b0d"
-          metalness={0.4}
-          mirror={0}
-        />
+        <meshStandardMaterial color="#4a3c31" roughness={0.55} metalness={0.05} />
       </mesh>
+      <ContactShadows position={[0, -0.595, 0]} opacity={0.75} scale={9} blur={2.6} far={1.2} resolution={512} color="#000000" />
       <mesh position={[0, 3, -3.2]} receiveShadow>
         <planeGeometry args={[40, 10]} />
         <meshStandardMaterial color="#1e1b18" roughness={0.95} />
