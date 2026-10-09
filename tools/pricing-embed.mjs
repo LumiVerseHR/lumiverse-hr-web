@@ -47,10 +47,10 @@ export function priceCard(pkg, lang) {
             <ul class="feature-list price-card-list">
               ${items}
             </ul>
-            <a class="price-card-proof" href="${caseStudy(pkg.proof, lang)}">
+            ${pkg.proof ? `<a class="price-card-proof" href="${caseStudy(pkg.proof, lang)}">
               <i class="fas fa-chart-line" aria-hidden="true"></i>
               <span>${escape(c.proof)}</span>
-            </a>
+            </a>` : ""}
             <a class="btn btn-secondary price-card-cta" href="#contact" data-package="${pkg.id}">${escape(c.cta)}</a>
           </article>`;
 }

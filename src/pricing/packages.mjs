@@ -16,7 +16,8 @@
 //
 // `priceNote` (optional, per language) is a short caveat shown under the price.
 //
-// `proof` is a case-study slug: the page has to exist, and the claim next to
+// `proof` (optional; leave it out rather than stretch a case study to fit)
+// is a case-study slug: the page has to exist, and the claim next to
 // it has to be something that page already states.
 
 // Last change to any price or package: the sitemap's <lastmod> for /pricing.
@@ -165,7 +166,6 @@ export const packages = [
     group: "upskill",
     icon: "fa-users-cog",
     price: { from: 4900, per: "setup", then: 900 },
-    proof: "mojkraj",
     en: {
       name: "AI Team Rollout",
       summary: "Your whole company working with AI: a shared skill library, trained people, and a monthly cadence that keeps everyone improving.",
@@ -175,7 +175,6 @@ export const packages = [
         "Admin training, so you can run and extend it in-house",
         "Every month: new skills, office hours and a review of what's being used"
       ],
-      proof: "MOJ KRAJ: an AI newsroom run by 1 operator, minutes a day",
       cta: "Plan a Rollout",
       priceNote: "AI tool licences are not included; you hold them in your own accounts."
     },
@@ -188,7 +187,6 @@ export const packages = [
         "Obuka administratora, da sustav vodite i širite sami",
         "Svaki mjesec: nove vještine, konzultacije i pregled onoga što se koristi"
       ],
-      proof: "MOJ KRAJ: AI redakcija koju vodi 1 operater, nekoliko minuta dnevno",
       cta: "Isplanirajte uvođenje",
       priceNote: "Licence za AI alate nisu uključene; držite ih na svojim računima."
     }

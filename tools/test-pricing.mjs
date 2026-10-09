@@ -33,8 +33,11 @@ for (const pkg of packages) {
   if (!["once", "project", "month", "day", "setup"].includes(pkg.price.per)) fail("packages.mjs", `${pkg.id}: unknown per "${pkg.price.per}"`);
   for (const lang of langs) {
     const c = pkg[lang];
-    for (const key of ["name", "summary", "proof", "cta"]) if (!c?.[key]) fail("packages.mjs", `${pkg.id}.${lang}.${key} is empty`);
+    for (const key of ["name", "summary", "cta"]) if (!c?.[key]) fail("packages.mjs", `${pkg.id}.${lang}.${key} is empty`);
+    // A proof is optional, but it is a slug and a line in both languages, or nothing.
+    if (Boolean(pkg.proof) !== Boolean(c?.proof)) fail("packages.mjs", `${pkg.id}.${lang}: proof slug and proof line must come together`);
     if (!c?.includes?.length) fail("packages.mjs", `${pkg.id}.${lang}.includes is empty`);
+    if (!pkg.proof) continue;
     const page = lang === "en" ? `${pkg.proof}.html` : `hr/${pkg.proof}.html`;
     if (!existsSync(path.join(root, page))) fail("packages.mjs", `${pkg.id}: proof page ${page} does not exist`);
   }

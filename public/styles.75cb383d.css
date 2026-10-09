@@ -2256,6 +2256,11 @@ body.consent-visible .footer-bottom {
   justify-content: center;
 }
 
+/* Without a proof line, the button takes over pinning itself to the bottom. */
+.price-card-list + .price-card-cta {
+  margin-top: auto;
+}
+
 /* Homepage: three engagement cards, then the packaged systems as a list */
 .service-grid {
   display: grid;
