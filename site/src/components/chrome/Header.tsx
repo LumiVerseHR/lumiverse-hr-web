@@ -35,7 +35,7 @@ export function Header({
   return (
     <header className={`${styles.bar} ${overlay ? styles.overlay : styles.page}`}>
       <Link href={localePath(lang)} className={styles.wordmark} aria-label="LumiVerse">
-        LumiVerse<span className={styles.dot} aria-hidden />
+        LumiVerse<span className={styles.dot} data-laser-origin aria-hidden />
       </Link>
       <nav className={styles.nav} aria-label="Primary">
         {items.map((item) => (

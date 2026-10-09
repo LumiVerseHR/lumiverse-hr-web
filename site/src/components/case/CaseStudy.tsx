@@ -5,6 +5,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 import { flagships, workIndex } from "@/content/work";
 import { Icon } from "@/components/icons/Icon";
 import { BlockView } from "./Blocks";
+import { LaserTitle } from "./LaserTitle";
 import { Showcase } from "./Showcase";
 import styles from "./CaseStudy.module.css";
 
@@ -52,7 +53,7 @@ export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict
         <div className={styles.heroGrid}>
           <div className={styles.heroHead}>
             <h1 id="case-title" className={styles.title}>
-              {data.title}
+              <LaserTitle text={data.title} />
               {data.titleNote && <span className={styles.titleNote}> {data.titleNote}</span>}
             </h1>
             <p className={styles.kind}>{data.kind}</p>

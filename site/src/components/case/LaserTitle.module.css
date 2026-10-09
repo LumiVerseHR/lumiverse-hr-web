@@ -1,0 +1,50 @@
+.word {
+  white-space: nowrap;
+}
+
+.canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+/* Letters wait unlit only when script runs and motion is allowed. A failsafe reveals
+   them after 2.5s in case the script never starts. */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  .laser:not([data-done]) [data-c] {
+    opacity: 0;
+    animation: failsafe 0s 2.5s forwards;
+  }
+
+  .laser:not([data-done]) [data-c][data-lit] {
+    opacity: 1;
+    animation: burn var(--burn, 220ms) ease-out both;
+  }
+}
+
+/* Burned in: traced left to right, born coral-hot, cooling to the text colour. */
+@keyframes burn {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    color: #ffd2c4;
+    text-shadow: 0 0 18px rgb(255 77 77 / 0.95), 0 0 4px rgb(255 140 120 / 0.9);
+  }
+  45% {
+    clip-path: inset(0 0 0 0);
+    color: #ffb4a4;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    color: inherit;
+    text-shadow: 0 0 0 rgb(255 77 77 / 0);
+  }
+}
+
+@keyframes failsafe {
+  to {
+    opacity: 1;
+  }
+}
