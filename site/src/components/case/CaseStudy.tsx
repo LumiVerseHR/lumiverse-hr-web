@@ -58,7 +58,12 @@ export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict
             <p className={styles.kind}>{data.kind}</p>
           </div>
           <div className={styles.heroExhibit}>
-            <Showcase images={data.showcase} label={dict.case.showcase} show={dict.case.show} caption={data.showcaseCaption} />
+            <Showcase
+              images={data.showcase}
+              label={dict.case.showcase}
+              labels={{ show: dict.case.show, prev: dict.case.prevShot, next: dict.case.nextShot }}
+              caption={data.showcaseCaption}
+            />
           </div>
           <div className={styles.heroBody}>
             <p className={styles.subtitle}>{data.subtitle}</p>

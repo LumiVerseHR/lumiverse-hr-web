@@ -165,6 +165,8 @@
     "next": "Next",
     "prev": "Previous",
     "showcase": "Screens",
-    "show": "Show"
+    "show": "Show",
+    "prevShot": "Previous screen",
+    "nextShot": "Next screen"
   }
 }
