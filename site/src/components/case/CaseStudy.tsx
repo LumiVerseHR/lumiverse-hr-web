@@ -49,21 +49,29 @@ export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict
           <span aria-hidden>/</span>
           <span aria-current="page">{data.title.replace(/\n/g, " ")}</span>
         </nav>
-        <h1 id="case-title" className={styles.title}>
-          {data.title}
-          {data.titleNote && <span className={styles.titleNote}> {data.titleNote}</span>}
-        </h1>
-        <p className={styles.kind}>{data.kind}</p>
-        <p className={styles.subtitle}>{data.subtitle}</p>
-        {data.heroNote && <p className={styles.heroNote}>{data.heroNote}</p>}
-        {data.ctas.length > 0 && (
-          <div className={styles.ctas}>
-            {data.ctas.map((link, i) => (
-              <LinkButton key={link.href + i} link={link} primary={i === 0} />
-            ))}
+        <div className={styles.heroGrid}>
+          <div className={styles.heroHead}>
+            <h1 id="case-title" className={styles.title}>
+              {data.title}
+              {data.titleNote && <span className={styles.titleNote}> {data.titleNote}</span>}
+            </h1>
+            <p className={styles.kind}>{data.kind}</p>
           </div>
-        )}
-        <Showcase images={data.showcase} label={dict.case.showcase} show={dict.case.show} caption={data.showcaseCaption} />
+          <div className={styles.heroExhibit}>
+            <Showcase images={data.showcase} label={dict.case.showcase} show={dict.case.show} caption={data.showcaseCaption} />
+          </div>
+          <div className={styles.heroBody}>
+            <p className={styles.subtitle}>{data.subtitle}</p>
+            {data.heroNote && <p className={styles.heroNote}>{data.heroNote}</p>}
+            {data.ctas.length > 0 && (
+              <div className={styles.ctas}>
+                {data.ctas.map((link, i) => (
+                  <LinkButton key={link.href + i} link={link} primary={i === 0} />
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
       </section>
 
       {data.stats.length > 0 && (

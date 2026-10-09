@@ -28,7 +28,10 @@ export function Showcase({ images, label, show, caption }: { images: Img[]; labe
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
     >
-      <div className={styles.showFrame} style={{ aspectRatio: `${images[0].width} / ${images[0].height}` }}>
+      <div
+        className={styles.showFrame}
+        style={{ aspectRatio: `${images[0].width} / ${images[0].height}`, ["--ratio" as string]: images[0].width / images[0].height }}
+      >
         {images.map((img, i) => (
           <Image
             key={img.src}
@@ -36,7 +39,7 @@ export function Showcase({ images, label, show, caption }: { images: Img[]; labe
             alt={img.alt}
             fill
             priority={i === 0}
-            sizes="(max-width: 1100px) 94vw, 1100px"
+            sizes="(max-width: 960px) 94vw, 60vw"
             className={styles.showImage}
             data-active={i === index || undefined}
             aria-hidden={i !== index}

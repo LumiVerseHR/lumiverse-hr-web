@@ -75,7 +75,7 @@ export function BlockView({ block }: { block: Block }) {
         <div className={styles.images} data-count={block.items.length}>
           {block.items.map((img) => (
             <figure key={img.src} className={styles.imageFig}>
-              <div className={styles.imageFrame}>
+              <div className={styles.imageFrame} style={{ ["--ratio" as string]: img.width / img.height }}>
                 <Image src={img.src} alt={img.alt} width={img.width} height={img.height} sizes="(max-width: 900px) 94vw, 900px" />
               </div>
               {img.caption && <figcaption>{img.caption}</figcaption>}
