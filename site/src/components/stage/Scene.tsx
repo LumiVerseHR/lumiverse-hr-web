@@ -2,8 +2,9 @@
 
 import { Suspense, useLayoutEffect, useMemo } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { Html, MeshReflectorMaterial, OrbitControls, useGLTF, useTexture } from "@react-three/drei";
-import { MeshBasicMaterial, SRGBColorSpace, type Mesh, type Object3D, type PerspectiveCamera, type Texture } from "three";
+import { Environment, Html, Lightformer, MeshReflectorMaterial, OrbitControls, SoftShadows, SpotLight, useGLTF, useTexture } from "@react-three/drei";
+import { Bloom, EffectComposer, N8AO, Vignette } from "@react-three/postprocessing";
+import { Color, MeshBasicMaterial, SRGBColorSpace, type Mesh, type Object3D, type PerspectiveCamera, type Texture } from "three";
 
 import styles from "./ModelStage.module.css";
 
@@ -56,8 +57,8 @@ function prepare(root: Object3D, textures: Record<string, Texture>) {
       map.colorSpace = SRGBColorSpace;
       map.needsUpdate = true;
       map.anisotropy = 8;
-      // Lit screens: unlit and untoned so the screenshot reads true.
-      mesh.material = new MeshBasicMaterial({ map, toneMapped: false });
+      // Lit screens: unlit, untoned and pushed just past white so bloom gives them a glow.
+      mesh.material = new MeshBasicMaterial({ map, toneMapped: false, color: new Color(1.25, 1.25, 1.25) });
     }
   });
   return root;
@@ -137,7 +138,7 @@ function Gallery() {
       </mesh>
       <mesh position={[0, 3, -3.2]} receiveShadow>
         <planeGeometry args={[40, 10]} />
-        <meshStandardMaterial color="#2b2520" roughness={0.95} />
+        <meshStandardMaterial color="#1e1b18" roughness={0.95} />
       </mesh>
     </>
   );
@@ -148,19 +149,32 @@ export default function Scene({ placards }: { placards: Placard[] }) {
     <Canvas shadows dpr={[1, 2]} gl={{ antialias: true }} camera={{ near: 0.1, far: 60 }}>
       <color attach="background" args={["#0e0f12"]} />
       <Rig />
-      <ambientLight intensity={0.08} />
-      <hemisphereLight args={["#8a93b8", "#000000", 0.25]} />
-      <spotLight
+      <SoftShadows size={18} samples={12} focus={0.6} />
+      <ambientLight intensity={0.05} />
+      {/* The gallery key: a warm beam raking in from the upper right, visible in the air. */}
+      <SpotLight
         position={[4.5, 5.5, 2.5]}
-        angle={0.78}
+        angle={0.62}
         penumbra={0.8}
         intensity={420}
         decay={2}
-        color="#ffdcb8"
+        color="#ffd2a6"
         castShadow
         shadow-mapSize={[2048, 2048]}
         shadow-bias={-0.0004}
+        volumetric
+        distance={11}
+        attenuation={7}
+        anglePower={5}
+        radiusTop={0.1}
+        radiusBottom={2.2}
+        opacity={0.1}
       />
+      {/* Soft studio bounce from authored light panels; nothing is downloaded. */}
+      <Environment resolution={256} environmentIntensity={0.22}>
+        <Lightformer form="rect" intensity={2.2} color="#ffd9b0" position={[4, 4, 3]} scale={[4, 3, 1]} target={[0, 0, 0]} />
+        <Lightformer form="rect" intensity={0.5} color="#9aa6c8" position={[-5, 2, 2]} scale={[3, 3, 1]} target={[0, 0, 0]} />
+      </Environment>
       <Suspense fallback={null}>
         {/* The storefront glows from inside, like the lit shop in the comp. */}
         <pointLight position={[-1.45, 0.22, -0.15]} intensity={1.6} distance={1.4} color="#ffcf9a" />
@@ -168,6 +182,11 @@ export default function Scene({ placards }: { placards: Placard[] }) {
         <Gallery />
         <Placards placards={placards} />
       </Suspense>
+      <EffectComposer multisampling={0} enableNormalPass={false}>
+        <N8AO quality="medium" halfRes aoRadius={0.45} distanceFalloff={0.6} intensity={2.4} color="#000000" />
+        <Bloom mipmapBlur luminanceThreshold={1} luminanceSmoothing={0.2} intensity={0.55} />
+        <Vignette offset={0.32} darkness={0.55} />
+      </EffectComposer>
     </Canvas>
   );
 }
