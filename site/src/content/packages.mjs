@@ -111,7 +111,7 @@ export const packages = [
         "Hands-on development when it counts",
         "A flat monthly rate, no timesheets"
       ],
-      proof: "Bridj: tech lead on a 17-service platform for over a year",
+      proof: "Bridj: tech lead on a 17-service platform for over a year, and still today",
       cta: "Talk About Your Team"
     },
     hr: {
@@ -124,7 +124,7 @@ export const packages = [
         "Razvoj vlastitim rukama kad je najvažnije",
         "Fiksna mjesečna cijena, bez satnica"
       ],
-      proof: "Bridj: više od godinu dana tech lead platforme od 17 servisa",
+      proof: "Bridj: više od godinu dana tech lead platforme od 17 servisa, i danas",
       cta: "Razgovarajmo o timu"
     }
   },

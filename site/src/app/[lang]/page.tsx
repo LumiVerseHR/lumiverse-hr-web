@@ -8,6 +8,7 @@ import { Studio } from "@/components/sections/Studio";
 import { Thesis } from "@/components/sections/Thesis";
 import { WorkIndex } from "@/components/sections/WorkIndex";
 import { Header } from "@/components/chrome/Header";
+import { LogoBeam } from "@/components/stage/LogoBeam";
 import { ModelStage } from "@/components/stage/ModelStage";
 import { hasLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -23,6 +24,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     <main>
     <section className={styles.hero} aria-labelledby="hero-title">
       <ModelStage placards={dict.placards} />
+      <LogoBeam />
 
       <Header lang={lang} dict={dict} overlay />
 

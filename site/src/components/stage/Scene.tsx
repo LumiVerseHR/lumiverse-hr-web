@@ -1,10 +1,23 @@
 "use client";
 
-import { Suspense, useEffect, useLayoutEffect, useMemo, useRef, type ReactNode } from "react";
+import { Suspense, useEffect, useLayoutEffect, useMemo, useRef, type ReactNode, type RefObject } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { ContactShadows, Environment, Lightformer, OrbitControls, SoftShadows, SpotLight, Text, useGLTF, useTexture } from "@react-three/drei";
 import { Bloom, EffectComposer, N8AO, Vignette } from "@react-three/postprocessing";
-import { Color, MathUtils, MeshBasicMaterial, MeshStandardMaterial, SRGBColorSpace, type Group, type Mesh, type Object3D, type PerspectiveCamera, type Texture } from "three";
+import {
+  Color,
+  MathUtils,
+  MeshBasicMaterial,
+  MeshStandardMaterial,
+  SRGBColorSpace,
+  type Group,
+  type Mesh,
+  type Object3D,
+  type PerspectiveCamera,
+  type ShaderMaterial,
+  type SpotLight as SpotLightImpl,
+  type Texture,
+} from "three";
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 
 export type Placard = { id: string; title: string; caption: string };
@@ -131,6 +144,62 @@ function Dolly({ children }: { children: ReactNode }) {
   return <group ref={group}>{children}</group>;
 }
 
+// Cinema: the beams breathe like a projector lamp and the Air-laser sphere turns slowly.
+// Rendering stays on demand; a 24 fps tick (film rate) asks for frames only while the hero
+// is on screen and motion is allowed, so an idle tab costs a fraction of a full-speed loop.
+const FPS = 24;
+
+// Layered sines for the slow breathing, plus a short dip now and then like a lamp catching.
+function flicker(t: number) {
+  const breathe = 0.05 * Math.sin(t * 1.7) + 0.035 * Math.sin(t * 4.3 + 1.2) + 0.02 * Math.sin(t * 11.9 + 0.4);
+  const phase = (t * 0.37) % 1;
+  const dip = phase > 0.93 ? 0.16 * Math.sin(((phase - 0.93) / 0.07) * Math.PI) : 0;
+  return 1 + breathe - dip;
+}
+
+// Imperative per-frame work lives outside components (react-hooks/immutability).
+type CinemaState = { beam: ShaderMaterial | null; sphere: Object3D | null };
+
+function projectFrame(
+  light: SpotLightImpl | null,
+  scene: Object3D,
+  cache: CinemaState,
+  base: { intensity: number; beam: number },
+  t: number,
+  delta: number,
+) {
+  const k = flicker(t);
+  if (light) {
+    light.intensity = base.intensity * k;
+    if (!cache.beam) {
+      light.parent?.traverse((o) => {
+        const m = (o as Mesh).material as ShaderMaterial | undefined;
+        if (m?.uniforms?.opacity && m.uniforms.anglePower) cache.beam = m;
+      });
+    }
+    if (cache.beam) cache.beam.uniforms.opacity.value = base.beam * (0.7 + 0.3 * k * k);
+  }
+  cache.sphere ??= scene.getObjectByName("Laser_Sphere") ?? null;
+  if (cache.sphere) cache.sphere.rotation.y += Math.min(delta, 0.1) * 0.12;
+}
+
+function Cinema({ keyLight, base }: { keyLight: RefObject<SpotLightImpl | null>; base: { intensity: number; beam: number } }) {
+  const invalidate = useThree((st) => st.invalidate);
+  const scene = useThree((st) => st.scene);
+  const cache = useRef<CinemaState>({ beam: null, sphere: null });
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const id = window.setInterval(() => invalidate(), 1000 / FPS);
+    return () => window.clearInterval(id);
+  }, [invalidate]);
+
+  useFrame((state, delta) => {
+    if (!motion.reduced) projectFrame(keyLight.current, scene, cache.current, base, state.clock.elapsedTime, delta);
+  });
+  return null;
+}
+
 function Rig() {
   const camera = useThree((s) => s.camera) as PerspectiveCamera;
   const aspect = useThree((s) => s.size.width / s.size.height);
@@ -231,7 +300,10 @@ function Gallery() {
   );
 }
 
+const KEY = { intensity: 420, beam: 0.1 };
+
 export default function Scene({ placards, active }: { placards: Placard[]; active: boolean }) {
+  const keyLight = useRef<SpotLightImpl>(null);
   return (
     <Canvas frameloop={active ? "demand" : "never"} shadows dpr={[1, 1.5]} gl={{ antialias: true }} camera={{ near: 0.1, far: 60 }}>
       <color attach="background" args={["#0e0f12"]} />
@@ -240,10 +312,11 @@ export default function Scene({ placards, active }: { placards: Placard[]; activ
       <ambientLight intensity={0.05} />
       {/* The gallery key: a warm beam raking in from the upper right, visible in the air. */}
       <SpotLight
+        ref={keyLight}
         position={[4.5, 5.5, 2.5]}
         angle={0.62}
         penumbra={0.8}
-        intensity={420}
+        intensity={KEY.intensity}
         decay={2}
         color="#ffd2a6"
         castShadow
@@ -256,8 +329,11 @@ export default function Scene({ placards, active }: { placards: Placard[]; activ
         anglePower={5}
         radiusTop={0.1}
         radiusBottom={2.2}
-        opacity={0.1}
+        opacity={KEY.beam}
       />
+      {/* A second, softer lamp from the upper left (the logo's corner) rims the storefront. */}
+      <spotLight position={[-6, 6, 3]} angle={0.5} penumbra={1} intensity={90} decay={2} color="#ffd9b4" />
+      {active && <Cinema keyLight={keyLight} base={KEY} />}
       {/* Soft studio bounce from authored light panels; nothing is downloaded. */}
       <Environment resolution={256} environmentIntensity={0.22}>
         <Lightformer form="rect" intensity={2.2} color="#ffd9b0" position={[4, 4, 3]} scale={[4, 3, 1]} target={[0, 0, 0]} />
