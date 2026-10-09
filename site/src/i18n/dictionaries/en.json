@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "LumiVerse — AI product studio in Zagreb",
-    "description": "Senior AI studio in Zagreb. We build ambitious AI products, and the checks that make them safe to ship."
+    "description": "AI product studio in Zagreb. We build ambitious AI products, and the checks that make them safe to ship."
   },
   "nav": {
     "work": "Work",
@@ -19,7 +19,7 @@
       "Better",
       "Humans."
     ],
-    "subline": "Senior AI studio in Zagreb. Ambitious products, shipped and checked.",
+    "subline": "AI product studio in Zagreb. Ambitious products, shipped and checked.",
     "cta": "Start a Project",
     "secondary": "Explore the work",
     "scrollHint": "Scroll to enter the model",
