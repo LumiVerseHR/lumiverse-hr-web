@@ -83,7 +83,7 @@
    shaft shows in the dark above the frame and pools warm on the wall around it.
    Breathes out of step with the logo lamp. */
 .spot {
-  --origin-x: calc(100% - var(--gutter) - min(25vw, 48svh));
+  --origin-x: calc(100% - 1.5vw - min(30vw, 43svh * 1600 / 1100));
   --origin-y: -140px;
   --from: 148deg;
   z-index: 0;

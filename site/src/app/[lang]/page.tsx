@@ -10,7 +10,7 @@ import { WorkIndex } from "@/components/sections/WorkIndex";
 import { Header } from "@/components/chrome/Header";
 import { LaserTitle } from "@/components/effects/LaserTitle";
 import { Beams } from "@/components/hero/Beams";
-import { HeroBuild } from "@/components/hero/HeroBuild";
+import { HeroLaser } from "@/components/hero/HeroLaser";
 import { hasLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import styles from "./page.module.css";
@@ -25,7 +25,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     <main>
     <section className={styles.hero} aria-labelledby="hero-title">
       <Beams />
-      <HeroBuild lang={lang} copy={{ stages: dict.hero.stages }} />
+      <HeroLaser lang={lang} copy={dict.hero.laptop} />
 
       <Header lang={lang} dict={dict} overlay />
 
