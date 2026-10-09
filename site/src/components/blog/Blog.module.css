@@ -120,7 +120,7 @@
 
 .langNote {
   color: var(--basswood);
-  font-family: var(--font-caption);
+  font-family: var(--font-label);
   font-size: 15px;
   font-style: italic;
 }
@@ -132,7 +132,7 @@
   gap: 8px 18px;
   margin-top: 32px;
   color: var(--basswood);
-  font-family: var(--font-caption);
+  font-family: var(--font-label);
   font-size: 17px;
   font-style: italic;
   font-weight: 500;

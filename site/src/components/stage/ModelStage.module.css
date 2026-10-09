@@ -20,7 +20,7 @@
   background: #0b0b0c;
   color: var(--text);
   box-shadow: 0 6px 18px rgb(0 0 0 / 0.55);
-  font-family: var(--font-caption);
+  font-family: var(--font-label);
   font-style: italic;
   white-space: nowrap;
   user-select: none;

@@ -1,9 +1,7 @@
 :root {
   /* Gallery: the dark room the scale model stands in. */
   --gallery: #0e0f12;
-  --floor: #1c1d21;
   /* The model: white card and basswood. */
-  --card: #edebe7;
   --basswood: #c9a57a;
   /* Coral: the humans, the logo dot and the primary action. Nothing else. */
   --coral: #ff4d4d;
@@ -13,7 +11,7 @@
   --text-muted: #8f8e8b;
 
   --font-body: var(--font-golos), ui-sans-serif, system-ui, sans-serif;
-  --font-caption: var(--font-caption), var(--font-golos), sans-serif;
+  --font-label: var(--font-caption), var(--font-golos), sans-serif;
 
   --gutter: clamp(16px, 2.6vw, 40px);
 }

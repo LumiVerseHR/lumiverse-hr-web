@@ -37,9 +37,9 @@
 }
 
 .kind {
-  margin: clamp(28px, 3vw, 48px) 0 0;
+  margin: 14px 0 0;
   color: var(--text-soft);
-  font-family: var(--font-caption);
+  font-family: var(--font-label);
   font-size: 19px;
   font-style: italic;
   font-weight: 500;
@@ -47,7 +47,7 @@
 }
 
 .title {
-  margin: 8px 0 0;
+  margin: clamp(28px, 3vw, 48px) 0 0;
   max-width: 16ch;
   font-size: clamp(48px, 7vw, 116px);
   font-weight: 700;
@@ -299,7 +299,7 @@
 
 .cardMeta {
   color: var(--text-muted) !important;
-  font-family: var(--font-caption);
+  font-family: var(--font-label);
   font-size: 15px !important;
   font-style: italic;
 }
@@ -329,7 +329,7 @@
 
 .stepNo {
   color: var(--basswood);
-  font-family: var(--font-caption);
+  font-family: var(--font-label);
   font-size: 18px;
   font-style: italic;
   font-weight: 600;

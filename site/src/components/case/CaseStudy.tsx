@@ -36,11 +36,11 @@ export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict
           <span aria-hidden>/</span>
           <span aria-current="page">{data.title.replace(/\n/g, " ")}</span>
         </nav>
-        <p className={styles.kind}>{data.kind}</p>
         <h1 id="case-title" className={styles.title}>
           {data.title}
           {data.titleNote && <span className={styles.titleNote}> {data.titleNote}</span>}
         </h1>
+        <p className={styles.kind}>{data.kind}</p>
         <p className={styles.subtitle}>{data.subtitle}</p>
         {data.ctas.length > 0 && (
           <div className={styles.ctas}>

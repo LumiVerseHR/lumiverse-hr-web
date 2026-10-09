@@ -101,7 +101,7 @@
 .step {
   margin-bottom: 10px;
   color: var(--basswood);
-  font-family: var(--font-caption);
+  font-family: var(--font-label);
   font-size: 20px;
   font-style: italic;
   font-weight: 600;

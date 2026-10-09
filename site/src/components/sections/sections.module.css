@@ -56,11 +56,3 @@
   gap: 12px;
   color: var(--coral);
 }
-
-.caps {
-  color: var(--text-muted);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}

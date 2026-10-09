@@ -14,8 +14,8 @@ export function PriceCard({ pkg, lang }: { pkg: Pkg; lang: Locale }) {
   const p = priceParts(pkg.price, lang) as { lead: string; amount: string; unit: string; then: string };
   return (
     <article className={styles.card} id={pkg.id}>
-      {c.tag && <p className={styles.tag}>{c.tag}</p>}
       <h3 className={styles.name}>{c.name}</h3>
+      {c.tag && <p className={styles.tag}>{c.tag}</p>}
       <p className={styles.summary}>{c.summary}</p>
       <p className={styles.price}>
         {p.lead && <span className={styles.lead}>{p.lead}</span>}
