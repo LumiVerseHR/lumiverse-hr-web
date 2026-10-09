@@ -37,6 +37,10 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
     title: dict.meta.title,
     description: dict.meta.description,
     alternates: { canonical: lang === "en" ? "/" : "/hr", languages: { en: "/", hr: "/hr" } },
+    openGraph: { siteName: "LumiVerse", locale: lang === "hr" ? "hr_HR" : "en_US", images: ["/og/index.jpg"] },
+    twitter: { card: "summary_large_image" },
+    icons: { icon: [{ url: "/favicon.ico" }, { url: "/favicon.svg", type: "image/svg+xml" }], apple: "/apple-touch-icon.png" },
+    manifest: "/manifest.json",
   };
 }
 

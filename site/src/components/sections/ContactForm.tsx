@@ -1,11 +1,13 @@
 "use client";
 
-import { useRef, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
+import { PICK_EVENT } from "@/components/pricing/PickPackage";
 import type { Locale } from "@/i18n/config";
 import { Icon } from "@/components/icons/Icon";
 import styles from "./Contact.module.css";
 
 type Option = { id: string; name: string };
+type Group = { label: string; items: Option[] };
 type Copy = {
   name: string; email: string; company: string; optional: string; need: string; notSure: string; other: string;
   message: string; messageHint: string; send: string; sending: string; sent: string; errorField: string; errorSend: string;
@@ -16,9 +18,17 @@ type State = { kind: "idle" } | { kind: "sending" } | { kind: "sent" } | { kind:
 
 // Posts to the existing contact service (/api/contact), keeping its bot checks:
 // a hidden field people never fill, and how long the form was open.
-export function ContactForm({ lang, copy, options }: { lang: Locale; copy: Copy; options: Option[] }) {
+export function ContactForm({ lang, copy, groups, preset = "" }: { lang: Locale; copy: Copy; groups: Group[]; preset?: string }) {
   const openedAt = useRef<number | null>(null);
   const [state, setState] = useState<State>({ kind: "idle" });
+  const [pkg, setPkg] = useState(preset);
+
+  // A price card's call to action preselects its package.
+  useEffect(() => {
+    const pick = (e: Event) => setPkg((e as CustomEvent<string>).detail);
+    window.addEventListener(PICK_EVENT, pick);
+    return () => window.removeEventListener(PICK_EVENT, pick);
+  }, []);
 
   const markOpened = () => {
     openedAt.current ??= Date.now();
@@ -74,10 +84,14 @@ export function ContactForm({ lang, copy, options }: { lang: Locale; copy: Copy;
         </label>
         <label className={styles.field}>
           <span>{copy.need}</span>
-          <select name="package" defaultValue="" aria-invalid={invalid("package")}>
+          <select name="package" value={pkg} onChange={(e) => setPkg(e.target.value)} aria-invalid={invalid("package")}>
             <option value="">{copy.notSure}</option>
-            {options.map((o) => (
-              <option key={o.id} value={o.id}>{o.name}</option>
+            {groups.map((g) => (
+              <optgroup key={g.label} label={g.label}>
+                {g.items.map((o) => (
+                  <option key={o.id} value={o.id}>{o.name}</option>
+                ))}
+              </optgroup>
             ))}
             <option value="other">{copy.other}</option>
           </select>

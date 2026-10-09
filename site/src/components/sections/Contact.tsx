@@ -1,15 +1,21 @@
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
-import { packages } from "@/content/packages.mjs";
+import { inGroup } from "@/content/packages.mjs";
+import { form } from "@/content/pricing-i18n.mjs";
 import { ContactForm } from "./ContactForm";
 import s from "./sections.module.css";
 import styles from "./Contact.module.css";
 
 type Pkg = { id: string; en: { name: string }; hr: { name: string } };
+const GROUPS = [["engagement", "engagements"], ["upskill", "upskill"], ["system", "systems"]] as const;
 
-export function Contact({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+export function Contact({ lang, dict, preset }: { lang: Locale; dict: Dictionary; preset?: string }) {
   const c = dict.contact;
-  const options = (packages as Pkg[]).map((p) => ({ id: p.id, name: p[lang].name }));
+  const f = form[lang] as Record<string, string>;
+  const groups = GROUPS.map(([group, label]) => ({
+    label: f[label],
+    items: (inGroup(group) as Pkg[]).map((p) => ({ id: p.id, name: p[lang].name })),
+  }));
 
   return (
     <section id="contact" className={`${s.section} ${s.wallLight}`} aria-labelledby="contact-title">
@@ -44,7 +50,7 @@ export function Contact({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             </div>
           </dl>
         </div>
-        <ContactForm lang={lang} copy={c} options={options} />
+        <ContactForm lang={lang} copy={c} groups={groups} preset={preset} />
       </div>
     </section>
   );
