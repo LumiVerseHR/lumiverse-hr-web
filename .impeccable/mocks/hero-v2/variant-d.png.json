@@ -1,0 +1,11 @@
+{
+  "prompt": "Desktop website hero, first viewport, 1536x1024, flat front-on browser view. Keep EXACTLY the page chrome and world of the reference screenshot: near-black warm gallery background (#0e0f12), top bar with \"LumiVerse\" wordmark and coral dot at left, nav \"Work  Services  Research  Studio  Contact\" centred, \"EN / HR\" and a small square coral \"Start a Project\" button at right; left third holds the huge white heavy grotesk headline on three lines \"We build / Better / Humans.\" with the subline \"AI product studio in Zagreb. Ambitious products, shipped and checked.\" and a square coral \"Start a Project ->\" button plus underlined \"Explore the work\" link; a soft warm light cone falls diagonally from the logo dot across the headline; a warm volumetric spotlight beam rakes in from the upper right; \"Scroll to enter the model\" bottom left, \"Drag to orbit\" bottom right. Only the 3D centrepiece on the right two thirds changes, as described next. It must read as a real-time 3D scene built from simple, reproducible geometry and real product screenshots, lit by the warm spotlight, premium, not toy-like, not sci-fi. Coral #FF4D4D only on small human scale figures and the buttons. Text crisp and correctly spelled.\nCENTREPIECE \"Laser-printed\": the coral laser beam from the LumiVerse logo dot continues across the page into the 3D scene on the right, where it is actively printing a product on a black plinth like a 3D printer: a laptop being built bottom-up. Its lower half is finished and solid (brushed aluminium, a full-colour real webshop app with a chat assistant on the screen's lower part), the layer currently being printed glows coral-hot where the laser touches it, and above that the rest of the laptop exists only as a faint white wireframe outline waiting to be filled. Faint blueprint grid lines on the plinth top. A few tiny coral human figures watch from the plinth. A small black placard on the plinth front in condensed italic: \"FROM IDEA TO SHIPPED\".\n",
+  "createdAt": "2026-10-09T22:18:52.124Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "opaque",
+  "outputFormat": "png",
+  "refs": [
+    ".impeccable/mocks/hero-v2/ref-current-hero.png"
+  ]
+}
