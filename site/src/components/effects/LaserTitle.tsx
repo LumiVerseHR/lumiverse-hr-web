@@ -168,7 +168,13 @@ export function LaserTitle({ text }: { text: string }) {
                 {wi < words.length - 1 && " "}
               </span>
             ))}
-            {li < lines.length - 1 && <br />}
+            {/* The space keeps words apart in the heading's text; the break sets the line. */}
+            {li < lines.length - 1 && (
+              <>
+                {" "}
+                <br />
+              </>
+            )}
           </span>
         ))}
       </span>

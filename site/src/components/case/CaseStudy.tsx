@@ -5,7 +5,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 import { flagships, workIndex } from "@/content/work";
 import { Icon } from "@/components/icons/Icon";
 import { BlockView } from "./Blocks";
-import { LaserTitle } from "./LaserTitle";
+import { LaserTitle } from "@/components/effects/LaserTitle";
 import { Showcase } from "./Showcase";
 import styles from "./CaseStudy.module.css";
 

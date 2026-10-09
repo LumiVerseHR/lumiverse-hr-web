@@ -8,6 +8,7 @@ import { Studio } from "@/components/sections/Studio";
 import { Thesis } from "@/components/sections/Thesis";
 import { WorkIndex } from "@/components/sections/WorkIndex";
 import { Header } from "@/components/chrome/Header";
+import { LaserTitle } from "@/components/effects/LaserTitle";
 import { LogoBeam } from "@/components/stage/LogoBeam";
 import { ModelStage } from "@/components/stage/ModelStage";
 import { hasLocale } from "@/i18n/config";
@@ -30,9 +31,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
       <div className={styles.copy}>
         <h1 id="hero-title" className={styles.title}>
-          {dict.hero.titleLines.map((line) => (
-            <span key={line}>{line}</span>
-          ))}
+          <LaserTitle text={dict.hero.titleLines.join("\n")} />
         </h1>
         <p className={styles.subline}>{dict.hero.subline}</p>
         <div className={styles.actions}>
