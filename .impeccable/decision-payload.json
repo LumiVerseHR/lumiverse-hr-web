@@ -1,0 +1,150 @@
+{
+  "title": "LumiVerse v3 — choose the visual world",
+  "question": "Four directions, one per style you asked to explore (neumorphic, evolved dark, light, 3D). Each comp also tests a different headline. Keep one, combine, steer, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Machined Instrument",
+      "kicker": "THE ROLL · NEUMORPHIC",
+      "lineage": "precision lab hardware: soft-touch anodised panels, detented knobs, engraved legends",
+      "thesis": "The studio as a precision instrument: every control is tactile, and one coral button means go.",
+      "palette": ["#3A3D42", "#4A4E54", "#25272B", "#F2F2F0", "#9A9EA5", "#FF4D4D"],
+      "materials": ["soft-touch anodised slate", "milled recesses", "engraved legends", "one coral anodised key"],
+      "viewport": "A machined slate panel fills the screen. Headline 'Ambitious AI, checked before it ships.' sits in a milled recess on the left. On the right, three detented selector keys (Moj Kolega, Bridj, Air-laser) are pressed in and out like hardware buttons, showing each flagship's real screenshot in a recessed display. The coral 'Start a Project' key is the only colour.",
+      "risk": "Neumorphism goes soft and low-contrast fast; it has to read as machined hardware, not a 2020 Dribbble shot.",
+      "raised": [
+        {"from": "kinetic-sand-glyphs", "raise": "State is shown physically: the selected flagship key sits deeper in its recess and its legend lights coral, so selection is shape, not just colour."},
+        {"from": "games-toys-physics-play-brick-build-instructions", "raise": "Process and services read as numbered assembly steps on one strict module grid that every panel snaps to."},
+        {"from": "scientific-notation-oscilloscope-signal-bench", "raise": "Every number (prices, case-study stats) sits on an engraved scale or readout, measured, never floating."}
+      ],
+      "comp": ".impeccable/mocks/decision/assigned.png"
+    },
+    {
+      "id": "model-pick",
+      "label": "Calibration Lab",
+      "kicker": "IMPECCABLE’S PICK · EVOLVED DARK",
+      "lineage": "test-and-measurement labs and calibration certificates",
+      "thesis": "Generation is cheap, judgement isn't: the page is a calibration bench where every project comes with its own pass mark.",
+      "palette": ["#08090B", "#15171B", "#2A2D33", "#EDEDEA", "#7C8088", "#FF4D4D"],
+      "materials": ["the dot-grid rebuilt as a measurement field", "etched graticule rules", "certificate-style data plates"],
+      "viewport": "A near-black field where the dot-grid shader becomes an etched measurement graticule. Headline 'Generation is cheap. Judgement isn't.' at monumental scale, with 'Judgement isn't.' in coral. Below it, a row of three calibration-certificate plates for Moj Kolega, Bridj and Air-laser, each with a real number and a PASS mark. 'Start a Project' in coral.",
+      "risk": "Closest to today's site and to the dark-agency look; it lives or dies on the certificate system being real, not decoration.",
+      "comp": ".impeccable/mocks/decision/model-pick.png"
+    },
+    {
+      "id": "pinned-light",
+      "label": "Signed-off Proof",
+      "kicker": "YOUR LANE · LIGHT",
+      "lineage": "the printer's proof and the Swiss identity manual: a strict grid, one ink, sign-off marks",
+      "thesis": "Every page is a signed-off proof: bright paper, a ruthless grid, and coral as the reviewer's ink that approves the work.",
+      "palette": ["#F7F7F5", "#FFFFFF", "#111111", "#8A8A86", "#FF4D4D"],
+      "materials": ["bright cool-white stock", "crop and registration marks", "coral proof-ink annotations"],
+      "viewport": "Bright white page on a visible 12-column grid with crop marks at the corners. Huge black grotesk headline 'AI you can sign off on.' Coral proof-ink marks (a circled word, a margin tick, initials) annotate the flagship screenshots of Moj Kolega, Bridj and Air-laser laid out like proof pages. Black 'Start a Project' button with a coral tick.",
+      "risk": "Light editorial pages can tip into a cold, generic Swiss template; the coral sign-off marks must carry the warmth and the thesis.",
+      "comp": ".impeccable/mocks/decision/pinned-light.png"
+    },
+    {
+      "id": "pinned-3d",
+      "label": "Scale Model",
+      "kicker": "YOUR LANE · 3D + FX",
+      "lineage": "the architect's presentation maquette under gallery light",
+      "thesis": "We build Better Humans, literally: every shipped project is a white scale model, and tiny coral figures are the humans it amplifies.",
+      "palette": ["#0E0F12", "#1C1D21", "#EDEBE7", "#C9A57A", "#FF4D4D"],
+      "materials": ["white card and basswood models", "raking gallery light and soft shadow", "coral scale figures", "real-time 3D with depth of field"],
+      "viewport": "A dark gallery space with a raking spotlight on a white architectural-style maquette, a landscape of three models (Moj Kolega, Bridj, Air-laser) with tiny coral human scale figures. Headline 'We build Better Humans.' large in the upper left. A label beside each model names the project. 'Start a Project' in coral.",
+      "risk": "Heaviest to build and load (WebGL, models); it needs strong fallbacks and can bury the work under spectacle.",
+      "comp": ".impeccable/mocks/decision/pinned-3d.png"
+    },
+    {
+      "id": "challenger-oscilloscope",
+      "label": "Oscilloscope Bench",
+      "verdict": "declined",
+      "lineage": "CRT oscilloscope on a signal bench",
+      "thesis": "Projects as signals locked on a phosphor graticule.",
+      "palette": ["#050806", "#39FF7A", "#3A3F3C", "#FFB23F"],
+      "materials": ["phosphor trace", "etched graticule"],
+      "viewport": "A green trace sweeping a ten-division screen.",
+      "case": "Close to the Calibration Lab but colder and more retro; high-end clients won't see themselves in a test bench.",
+      "risk": "Retro-tech novelty, and phosphor green fights the coral.",
+      "kept": "Every number measured against a scale, given to the Machined Instrument."
+    },
+    {
+      "id": "challenger-brick",
+      "label": "Brick Instructions",
+      "verdict": "declined",
+      "lineage": "brick build-instruction booklets",
+      "thesis": "The studio's process as numbered exploded steps.",
+      "palette": ["#7FC8F8", "#111111", "#E3000B", "#FFD500"],
+      "materials": ["keyline ink", "stud grid"],
+      "viewport": "Numbered step spreads with 1:1 call-outs.",
+      "case": "Too playful for high-end buyers, but its numbered-step discipline is strong.",
+      "risk": "Toy-like, which you ruled out.",
+      "kept": "A strict module grid and numbered steps, given to the Machined Instrument."
+    },
+    {
+      "id": "challenger-sand",
+      "label": "Kinetic Sand Glyphs",
+      "verdict": "declined",
+      "lineage": "Afrofuturist raised-relief control surface",
+      "thesis": "Navigation by rotating rings of raised glyphs.",
+      "palette": ["#C8862F", "#3B2414", "#0D0B09", "#D9B45A"],
+      "materials": ["sand heightfield", "antique gold"],
+      "viewport": "A glyph ring raised out of black sand.",
+      "case": "Beautiful but foreign to the product; it hides the offer behind ritual.",
+      "risk": "Unclear offer, and a palette that drops the coral.",
+      "kept": "Selection shown as physical relief, given to the Machined Instrument."
+    },
+    {
+      "id": "challenger-woodblock",
+      "label": "Shell-ground Woodblock",
+      "verdict": "declined",
+      "lineage": "Dong Ho folk woodblock prints",
+      "thesis": "Each section printed as its own colour block.",
+      "palette": ["#EFE6D2", "#C8341F", "#E8B92E", "#2F3E6B", "#111111"],
+      "materials": ["crushed-shell paper", "flat mineral pigment"],
+      "viewport": "A centred printed subject on a shimmering ground.",
+      "case": "No link to an AI studio's buyers; folk-craft register.",
+      "risk": "Reads as craft, not high-impact tech.",
+      "kept": "Build in registration order: available to the light lane's reveal."
+    },
+    {
+      "id": "challenger-bbs",
+      "label": "ANSI Nightboard",
+      "verdict": "declined",
+      "lineage": "dial-up BBS title screens",
+      "thesis": "The studio as a textmode bulletin board.",
+      "palette": ["#000000", "#00FFFF", "#FF00FF", "#0000AA"],
+      "materials": ["CP437 block art"],
+      "viewport": "An 80x25 title screen pouring in.",
+      "case": "Nostalgic novelty; fails the too-playful test.",
+      "risk": "Gimmick.",
+      "kept": "Streamed line-by-line arrival as a possible loading moment."
+    },
+    {
+      "id": "challenger-coil",
+      "label": "Coiled Earth Tower",
+      "verdict": "declined",
+      "lineage": "hand-coiled clay towers",
+      "thesis": "Work rising course by course.",
+      "palette": ["#B5653A", "#5A3420", "#F1E6D6"],
+      "materials": ["terracotta coils", "slip seams"],
+      "viewport": "A tower of coils rising past the fold.",
+      "case": "Earthy craft register; product clarity is weak.",
+      "risk": "Wrong register for an AI studio.",
+      "kept": "Projects stacked as an ascending record over time, available to the 3D lane's timeline."
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "comp", "toggle": true },
+  "canon": true,
+  "canonCard": {
+    "label": "The premium-agency standard",
+    "thesis": "What top digital studios ship: showreel hero, giant type, a big case grid, executed impeccably.",
+    "palette": ["#0A0A0A", "#FFFFFF", "#9A9A9A", "#FF4D4D"],
+    "materials": ["full-bleed showreel video", "large case-study tiles"],
+    "viewport": "A full-bleed autoplay reel behind 'We build Better Humans.', then large case tiles.",
+    "risk": "Indistinguishable from the competition by design.",
+    "comp": ".impeccable/mocks/decision/canon.png"
+  },
+  "steer": true
+}

@@ -1,0 +1,16 @@
+{ "regions": [
+  { "id": "wordmark", "kind": "text", "grid": "A0:B0", "note": "LumiVerse wordmark in white heavy grotesk with a coral dot after it" },
+  { "id": "nav", "kind": "text", "grid": "D0:G0", "note": "nav links Work, Services, Research, Studio, Contact in small white sans" },
+  { "id": "locale", "kind": "text", "grid": "I0:I0", "note": "EN / HR switch in muted grey" },
+  { "id": "nav-cta", "kind": "control", "grid": "J0:J0", "note": "small solid coral Start a Project button with arrow" },
+  { "id": "headline", "kind": "text", "grid": "A1:D4", "note": "We build / Better / Humans. on three lines, very heavy tight white grotesk" },
+  { "id": "subline", "kind": "text", "grid": "A4:D5", "snap": true, "note": "one-line subline in light grey: Senior AI studio in Zagreb. Ambitious products, shipped and checked." },
+  { "id": "cta", "kind": "control", "grid": "A5:B5", "note": "solid coral Start a Project button with arrow" },
+  { "id": "secondary", "kind": "text", "grid": "B5:C5", "note": "Explore the work, white underlined link" },
+  { "id": "stage", "kind": "chrome", "grid": "D1:J8", "container": true, "codeDrawn": true, "note": "real-time WebGL canvas (React Three Fiber, user-chosen): the lit maquette on its plinth with screens, figures and placards; rendered by code, not a raster" },
+  { "id": "placard-mojkolega", "kind": "text", "grid": "D6:E6", "note": "black placard on the plinth: MOJ KOLEGA / AI employee for webshops" },
+  { "id": "placard-bridj", "kind": "text", "grid": "F6:G6", "note": "black placard on the plinth: BRIDJ / Embedded tech lead · 17 services" },
+  { "id": "placard-airlaser", "kind": "text", "grid": "H6:I6", "note": "black placard on the plinth: AIR-LASER / Physics design study · computed, not built" },
+  { "id": "scroll-hint", "kind": "text", "grid": "A9:B9", "note": "Scroll to enter the model with a down arrow, muted grey" },
+  { "id": "orbit-hint", "kind": "text", "grid": "J9:J9", "note": "drag to orbit with an orbit icon, muted grey" }
+] }

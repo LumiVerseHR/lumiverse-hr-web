@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "title": "LumiVerse — AI product studio in Zagreb",
+    "description": "Senior AI studio in Zagreb. We build ambitious AI products, and the checks that make them safe to ship."
+  },
+  "nav": {
+    "work": "Work",
+    "services": "Services",
+    "research": "Research",
+    "studio": "Studio",
+    "contact": "Contact",
+    "cta": "Start a Project"
+  },
+  "hero": {
+    "titleLines": [
+      "We build",
+      "Better",
+      "Humans."
+    ],
+    "subline": "Senior AI studio in Zagreb. Ambitious products, shipped and checked.",
+    "cta": "Start a Project",
+    "secondary": "Explore the work",
+    "scrollHint": "Scroll to enter the model",
+    "orbitHint": "Drag to orbit"
+  },
+  "placards": [
+    {
+      "id": "moj-kolega",
+      "title": "MOJ KOLEGA",
+      "caption": "AI employee for webshops"
+    },
+    {
+      "id": "bridj",
+      "title": "BRIDJ",
+      "caption": "Embedded tech lead · 17 services"
+    },
+    {
+      "id": "air-laser",
+      "title": "AIR-LASER",
+      "caption": "Physics design study · computed, not built"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "title": "LumiVerse — AI produktni studio u Zagrebu",
+    "description": "Senior AI studio u Zagrebu. Gradimo ambiciozne AI proizvode i provjere zbog kojih ih je sigurno pustiti u rad."
+  },
+  "nav": {
+    "work": "Radovi",
+    "services": "Usluge",
+    "research": "Istraživanje",
+    "studio": "Studio",
+    "contact": "Kontakt",
+    "cta": "Pokrenite projekt"
+  },
+  "hero": {
+    "titleLines": [
+      "Ljudska",
+      "mašta.",
+      "AI brzina."
+    ],
+    "subline": "Senior AI studio u Zagrebu. Ambiciozni proizvodi, isporučeni i provjereni.",
+    "cta": "Pokrenite projekt",
+    "secondary": "Pogledajte reference",
+    "scrollHint": "Skrolajte u maketu",
+    "orbitHint": "Povucite za okretanje"
+  },
+  "placards": [
+    {
+      "id": "moj-kolega",
+      "title": "MOJ KOLEGA",
+      "caption": "AI zaposlenik za webshopove"
+    },
+    {
+      "id": "bridj",
+      "title": "BRIDJ",
+      "caption": "Ugrađeni tech lead · 17 servisa"
+    },
+    {
+      "id": "air-laser",
+      "title": "AIR-LASER",
+      "caption": "Fizikalna studija dizajna · izračunato, ne izgrađeno"
+    }
+  ]
+}

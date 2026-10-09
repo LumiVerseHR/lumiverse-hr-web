@@ -1,0 +1,40 @@
+.stage {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Portrait: the copy takes the top, the model gets its own band below it. */
+@media (max-aspect-ratio: 1/1) {
+  .stage {
+    top: auto;
+    height: 46svh;
+    /* Fade the band into the page so the gallery has no hard top edge. */
+    mask-image: linear-gradient(to bottom, transparent, #000 22%);
+  }
+}
+
+.placard {
+  min-width: 190px;
+  padding: 10px 14px 11px;
+  background: #0b0b0c;
+  color: var(--text);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.55);
+  font-family: var(--font-body);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.placardTitle {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.placardCaption {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-soft);
+  font-size: 11px;
+}

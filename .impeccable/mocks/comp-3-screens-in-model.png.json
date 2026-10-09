@@ -1,0 +1,14 @@
+{
+  "prompt": "Desktop website homepage, first viewport, 1536x1024 landscape, flat front-on browser view. LumiVerse, a senior AI studio in Zagreb. Keep the exact world of the first reference image: dark gallery (#0E0F12), warm raking spotlight, an architect's maquette in white card and basswood, tiny coral #FF4D4D human scale figures, cinematic depth of field. Second reference image: three real product screenshots (Moj Kolega, Bridj, Air-laser), shown faithfully.\nSTRUCTURE: a wide panoramic composition where the maquette is the whole stage and the proof lives inside it.\n1. Top bar: \"LumiVerse\" with a coral dot left; nav \"Work  Services  Research  Studio  Contact\"; \"EN / HR\" and a small coral \"Start a Project\" button right.\n2. Left third: heavy white grotesk headline on three lines \"We build / Better / Humans.\" Below it: \"Senior AI studio in Zagreb. Ambitious products, shipped and checked.\" A coral button \"Start a Project →\" and a link \"Explore the work\".\n3. Right two thirds: a long plinth receding in perspective with three models. Each model carries its real product screenshot as an illuminated architectural screen or billboard mounted on its facade, like a presentation model with a projected image: the storefront model shows the Moj Kolega webshop screenshot on its glass front; the tall 17-slab tower carries the navy Bridj landing page on a vertical panel; the wire sphere hovers above a small glowing screen showing the Air-laser cyan voxel plots. Coral figures look up at the screens. Small placards in front of each model: \"MOJ KOLEGA · AI employee for webshops\", \"BRIDJ · Embedded tech lead · 17 services\", \"AIR-LASER · Physics design study · computed, not built\".\n4. Bottom left: a quiet hint \"Scroll to enter the model ↓\"; bottom right: \"drag to orbit\".\nCoral only on the logo dot, CTAs and figures. Text crisp and correctly spelled. Premium, cinematic, not toy-like.\n",
+  "createdAt": "2026-10-09T18:21:07.871Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "opaque",
+  "outputFormat": "png",
+  "refs": [
+    ".impeccable/mocks/decision/pinned-3d.png",
+    "/private/tmp/claude-501/-Users-tjauk-LumiVerseHR-lumiverse-hr-web/3ec18b06-fc75-4452-aa48-3acea422d8c5/scratchpad/refs.jpg"
+  ],
+  "approved": true,
+  "approvalNote": "Hero composition. Combined with comp-2 (framed case grid) as the section right after the hero, per user 2026-10-09."
+}
