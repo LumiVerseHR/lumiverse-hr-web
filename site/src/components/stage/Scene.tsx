@@ -200,27 +200,63 @@ function Cinema({ keyLight, base }: { keyLight: RefObject<SpotLightImpl | null>;
   return null;
 }
 
+// The idle orbit: the camera traces a slow closed loop (a side-to-side swing with a small
+// rise and fall, an ellipse in angle space), one lap every ORBIT.period seconds.
+const ORBIT = { period: 48, swing: 0.16, rise: 0.035, minAz: -Math.PI / 2.6, maxAz: Math.PI / 12 };
+
 function Rig() {
   const camera = useThree((s) => s.camera) as PerspectiveCamera;
   const aspect = useThree((s) => s.size.width / s.size.height);
   const controls = useRef<OrbitControlsImpl>(null);
+  const loop = useRef({ baseAz: Number.NaN, basePolar: 0, phase: 0, dragging: false });
   const portrait = isPortrait();
-  useLayoutEffect(() => frame(camera, aspect, portrait), [camera, aspect, portrait]);
+  useLayoutEffect(() => {
+    frame(camera, aspect, portrait);
+    loop.current.baseAz = Number.NaN; // re-read the resting angles after a reframe
+  }, [camera, aspect, portrait]);
+
   // Orbiting belongs to the resting hero; once the visitor scrolls, the scroll drives.
-  useFrame(() => {
-    if (controls.current) controls.current.enabled = motion.progress < 0.02;
+  useFrame((_, delta) => {
+    const c = controls.current;
+    if (!c) return;
+    c.enabled = motion.progress < 0.02;
+    const L = loop.current;
+    if (motion.reduced || !c.enabled || L.dragging) return;
+    if (Number.isNaN(L.baseAz)) {
+      L.baseAz = c.getAzimuthalAngle();
+      L.basePolar = c.getPolarAngle();
+    }
+    L.phase += Math.min(delta, 0.1) * ((2 * Math.PI) / ORBIT.period);
+    c.setAzimuthalAngle(L.baseAz + ORBIT.swing * Math.sin(L.phase));
+    c.setPolarAngle(L.basePolar + ORBIT.rise * (Math.cos(L.phase) - 1));
+    c.update();
   });
+
+  // A drag pauses the loop; letting go resumes it around wherever the visitor left the camera.
+  const onStart = () => (loop.current.dragging = true);
+  const onEnd = () => {
+    const c = controls.current;
+    const L = loop.current;
+    L.dragging = false;
+    if (!c) return;
+    const az = c.getAzimuthalAngle() - ORBIT.swing * Math.sin(L.phase);
+    L.baseAz = MathUtils.clamp(az, ORBIT.minAz + ORBIT.swing, ORBIT.maxAz - ORBIT.swing);
+    L.basePolar = c.getPolarAngle() - ORBIT.rise * (Math.cos(L.phase) - 1);
+  };
+
   return (
     <OrbitControls
       ref={controls}
+      onStart={onStart}
+      onEnd={onEnd}
       target={targetFor(portrait)}
       enablePan={false}
       enableZoom={false}
       enableDamping
       minPolarAngle={Math.PI / 3.4}
       maxPolarAngle={Math.PI / 2.3}
-      minAzimuthAngle={-Math.PI / 2.6}
-      maxAzimuthAngle={Math.PI / 12}
+      minAzimuthAngle={ORBIT.minAz}
+      maxAzimuthAngle={ORBIT.maxAz}
     />
   );
 }
