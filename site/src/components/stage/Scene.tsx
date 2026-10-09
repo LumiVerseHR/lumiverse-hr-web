@@ -1,10 +1,11 @@
 "use client";
 
-import { Suspense, useLayoutEffect, useMemo } from "react";
-import { Canvas, useThree } from "@react-three/fiber";
+import { Suspense, useEffect, useLayoutEffect, useMemo, useRef, type ReactNode } from "react";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Environment, Html, Lightformer, MeshReflectorMaterial, OrbitControls, SoftShadows, SpotLight, useGLTF, useTexture } from "@react-three/drei";
 import { Bloom, EffectComposer, N8AO, Vignette } from "@react-three/postprocessing";
-import { Color, MeshBasicMaterial, SRGBColorSpace, type Mesh, type Object3D, type PerspectiveCamera, type Texture } from "three";
+import { Color, MathUtils, MeshBasicMaterial, SRGBColorSpace, type Group, type Mesh, type Object3D, type PerspectiveCamera, type Texture } from "three";
+import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 
 import styles from "./ModelStage.module.css";
 
@@ -64,12 +65,64 @@ function prepare(root: Object3D, textures: Record<string, Texture>) {
   return root;
 }
 
+// Scroll progress through the hero, 0 at the top and 1 once it has scrolled away.
+const motion = { progress: 0, reduced: false };
+
+function useHeroScroll() {
+  useEffect(() => {
+    motion.reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const update = () => {
+      motion.progress = MathUtils.clamp(window.scrollY / window.innerHeight, 0, 1);
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
+}
+
+const easeOutCubic = (t: number) => 1 - (1 - t) ** 3;
+const smoothstep = (t: number) => t * t * (3 - 2 * t);
+
+function lean(group: Group, delta: number, elapsed: number) {
+  if (motion.reduced) return;
+  // Enter the model: as the hero scrolls away, the whole room leans in towards the visitor.
+  const e = smoothstep(motion.progress);
+  // Arrival: the model settles into place once, in the first 1.6s.
+  const intro = easeOutCubic(MathUtils.clamp(elapsed / 1.6, 0, 1));
+  const k = 1 - Math.exp(-delta * 6);
+  group.position.x = MathUtils.lerp(group.position.x, -0.45 * e, k);
+  group.position.y = MathUtils.lerp(group.position.y, -0.3 * e - 0.35 * (1 - intro), k);
+  group.position.z = MathUtils.lerp(group.position.z, 2.6 * e, k);
+  group.rotation.y = MathUtils.lerp(group.rotation.y, 0.14 * e, k);
+  const scale = 0.94 + 0.06 * intro;
+  group.scale.setScalar(MathUtils.lerp(group.scale.x, scale, k));
+}
+
+function Dolly({ children }: { children: ReactNode }) {
+  const group = useRef<Group>(null);
+  useHeroScroll();
+  useFrame((state, delta) => {
+    if (group.current) lean(group.current, delta, state.clock.elapsedTime);
+  });
+  return <group ref={group}>{children}</group>;
+}
+
 function Rig() {
   const camera = useThree((s) => s.camera) as PerspectiveCamera;
   const aspect = useThree((s) => s.size.width / s.size.height);
+  const controls = useRef<OrbitControlsImpl>(null);
   useLayoutEffect(() => frame(camera, aspect), [camera, aspect]);
+  // Orbiting belongs to the resting hero; once the visitor scrolls, the scroll drives.
+  useFrame(() => {
+    if (controls.current) controls.current.enabled = motion.progress < 0.02;
+  });
   return (
     <OrbitControls
+      ref={controls}
       target={targetFor(aspect)}
       enablePan={false}
       enableZoom={false}
@@ -144,9 +197,9 @@ function Gallery() {
   );
 }
 
-export default function Scene({ placards }: { placards: Placard[] }) {
+export default function Scene({ placards, active }: { placards: Placard[]; active: boolean }) {
   return (
-    <Canvas shadows dpr={[1, 2]} gl={{ antialias: true }} camera={{ near: 0.1, far: 60 }}>
+    <Canvas frameloop={active ? "always" : "never"} shadows dpr={[1, 2]} gl={{ antialias: true }} camera={{ near: 0.1, far: 60 }}>
       <color attach="background" args={["#0e0f12"]} />
       <Rig />
       <SoftShadows size={18} samples={12} focus={0.6} />
@@ -176,11 +229,13 @@ export default function Scene({ placards }: { placards: Placard[] }) {
         <Lightformer form="rect" intensity={0.5} color="#9aa6c8" position={[-5, 2, 2]} scale={[3, 3, 1]} target={[0, 0, 0]} />
       </Environment>
       <Suspense fallback={null}>
-        {/* The storefront glows from inside, like the lit shop in the comp. */}
-        <pointLight position={[-1.45, 0.22, -0.15]} intensity={1.6} distance={1.4} color="#ffcf9a" />
-        <Maquette />
-        <Gallery />
-        <Placards placards={placards} />
+        <Dolly>
+          {/* The storefront glows from inside, like the lit shop in the comp. */}
+          <pointLight position={[-1.45, 0.22, -0.15]} intensity={1.6} distance={1.4} color="#ffcf9a" />
+          <Maquette />
+          <Gallery />
+          <Placards placards={placards} />
+        </Dolly>
       </Suspense>
       <EffectComposer multisampling={0} enableNormalPass={false}>
         <N8AO quality="medium" halfRes aoRadius={0.45} distanceFalloff={0.6} intensity={2.4} color="#000000" />
