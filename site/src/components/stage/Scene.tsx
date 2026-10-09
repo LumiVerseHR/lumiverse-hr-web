@@ -24,25 +24,26 @@ const SCREENS: Record<string, string> = {
 // The hero camera, framed to the approved comp: the whole plinth on the floor, seen from front-left.
 const CAMERA = { position: [-1.8, 1.75, 9.6] as const, target: [0.25, 0.95, 0] as const, focalLength: 42, filmOffset: -5.2 };
 
-// Portrait screens give the model its own band, so it is framed centred there.
-const targetFor = (aspect: number): [number, number, number] =>
-  aspect >= 1 ? [...CAMERA.target] : [0.1, 0.6, -0.2];
+// Portrait viewports give the model its own band below the copy, framed centred there.
+const isPortrait = () => typeof window !== "undefined" && window.matchMedia("(max-aspect-ratio: 1/1)").matches;
+const targetFor = (portrait: boolean): [number, number, number] => (portrait ? [0.15, 0.55, -0.1] : [...CAMERA.target]);
 
 // three.js objects are imperative; framing and texture setup live outside components.
-function frame(camera: PerspectiveCamera, aspect: number) {
+function frame(camera: PerspectiveCamera, aspect: number, portrait: boolean) {
   camera.filmGauge = 36;
-  if (aspect >= 1) {
+  if (!portrait) {
     // Desktop: the model holds the right two thirds, leaving the left for the headline.
     camera.position.set(...CAMERA.position);
     camera.setFocalLength(CAMERA.focalLength);
     camera.filmOffset = CAMERA.filmOffset;
   } else {
     // Portrait: pull back and centre so the whole plinth fits its band below the copy.
-    camera.position.set(-4.2, 3.8, 8.6);
-    camera.setFocalLength(34);
+    // Wider bands (tablets) zoom in so the plinth still fills the width.
+    camera.position.set(-2.7, 2.7, 6.4);
+    camera.setFocalLength(30 * Math.max(1, aspect * 0.72));
     camera.filmOffset = 0;
   }
-  camera.lookAt(...targetFor(aspect));
+  camera.lookAt(...targetFor(portrait));
   camera.updateProjectionMatrix();
 }
 
@@ -115,7 +116,8 @@ function Rig() {
   const camera = useThree((s) => s.camera) as PerspectiveCamera;
   const aspect = useThree((s) => s.size.width / s.size.height);
   const controls = useRef<OrbitControlsImpl>(null);
-  useLayoutEffect(() => frame(camera, aspect), [camera, aspect]);
+  const portrait = isPortrait();
+  useLayoutEffect(() => frame(camera, aspect, portrait), [camera, aspect, portrait]);
   // Orbiting belongs to the resting hero; once the visitor scrolls, the scroll drives.
   useFrame(() => {
     if (controls.current) controls.current.enabled = motion.progress < 0.02;
@@ -123,7 +125,7 @@ function Rig() {
   return (
     <OrbitControls
       ref={controls}
-      target={targetFor(aspect)}
+      target={targetFor(portrait)}
       enablePan={false}
       enableZoom={false}
       enableDamping

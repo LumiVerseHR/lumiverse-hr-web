@@ -8,7 +8,7 @@
 @media (max-aspect-ratio: 1/1) {
   .stage {
     top: auto;
-    height: 46svh;
+    height: 56svh;
     /* Fade the band into the page so the gallery has no hard top edge. */
     mask-image: linear-gradient(to bottom, transparent, #000 22%);
   }
