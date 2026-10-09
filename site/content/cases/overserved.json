@@ -260,22 +260,19 @@
                 "body": "I made three overpowered towers. The bot didn't even notice."
               }
             ]
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Read all 22 entries",
+                "href": "https://overserved.lumiverse.hr/devlog/",
+                "external": true
+              }
+            ]
           }
         ]
       }
-    ],
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (showcase.js, data-interval=5200ms).",
-      "Section \"How Far Does It Actually Go?\": some card bodies are two paragraphs on the page, joined with a blank line (\"\\n\\n\").",
-      "Section \"Code, Art, Levels, Jokes\": bento grid, large cards: \"The Game Itself\", \"600+ Assets, One Pipeline\".",
-      "Section \"Code, Art, Levels, Jokes\": the list block of 3 items starting \"Game invariants written down as rules th...\" sits INSIDE the card \"The Game Itself\", under its body text.",
-      "Section \"Code, Art, Levels, Jokes\": the list block of 3 items starting \"The whole process is written as a reusab...\" sits INSIDE the card \"600+ Assets, One Pipeline\", under its body text.",
-      "Section \"A Bot That Plays the Game\": steps are numbered cards with labels 01, 02, 03 and icons.",
-      "Section \"Where It Still Needed a Human\": some card bodies are two paragraphs on the page, joined with a blank line (\"\\n\\n\").",
-      "Section \"Twenty-Two Entries, Failures Included\": the list is a devlog index (date in a narrow left column as item title, entry title as body), rows are not links.",
-      "Section \"Twenty-Two Entries, Failures Included\": centered ghost button after the list: \"Read all 22 entries\" -> https://overserved.lumiverse.hr/devlog/ (external).",
-      "The single card \"What That Actually Means for Client Work\" is full-width, below the two-card grid.",
-      "Hero buttons have icons (dropped); all section cards have Font Awesome icons (dropped)."
     ]
   },
   "hr": {
@@ -539,22 +536,19 @@
                 "body": "Napravio sam tri prejake kule. Bot ih nije ni primijetio."
               }
             ]
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Pročitajte sva 22 zapisa",
+                "href": "https://overserved.lumiverse.hr/devlog/",
+                "external": true
+              }
+            ]
           }
         ]
       }
-    ],
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (showcase.js, data-interval=5200ms).",
-      "Section \"Dokle zaista stiže?\": some card bodies are two paragraphs on the page, joined with a blank line (\"\\n\\n\").",
-      "Section \"Kod, grafika, razine, šale\": bento grid, large cards: \"Sama igra\", \"Više od 600 grafika, jedan pipeline\".",
-      "Section \"Kod, grafika, razine, šale\": the list block of 3 items starting \"Nepromjenjiva pravila igre zapisana kao ...\" sits INSIDE the card \"Sama igra\", under its body text.",
-      "Section \"Kod, grafika, razine, šale\": the list block of 3 items starting \"Cijeli je postupak zapisan kao ponovno u...\" sits INSIDE the card \"Više od 600 grafika, jedan pipeline\", under its body text.",
-      "Section \"Bot koji igra igru\": steps are numbered cards with labels 01, 02, 03 and icons.",
-      "Section \"Gdje je i dalje trebao čovjek\": some card bodies are two paragraphs on the page, joined with a blank line (\"\\n\\n\").",
-      "Section \"Dvadeset dva zapisa, s neuspjesima\": the list is a devlog index (date in a narrow left column as item title, entry title as body), rows are not links.",
-      "Section \"Dvadeset dva zapisa, s neuspjesima\": centered ghost button after the list: \"Pročitajte sva 22 zapisa\" -> https://overserved.lumiverse.hr/devlog/ (external).",
-      "The single card \"Što to zapravo znači za rad s klijentima\" is full-width, below the two-card grid.",
-      "Hero buttons have icons (dropped); all section cards have Font Awesome icons (dropped)."
     ]
   }
 }

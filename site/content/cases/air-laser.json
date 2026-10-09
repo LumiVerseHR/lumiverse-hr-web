@@ -230,16 +230,8 @@
         "href": "/#contact"
       }
     },
-    "notes": [
-      "Hero showcase is an auto-rotating image carousel (data-showcase, crossfading slides).",
-      "Hero honesty note (info-icon callout between the subtitle and the CTAs): Every number here is computed, not measured. No device has been built. The claim is not \"it works\" - it's that there's no remaining physics reason it shouldn't, and what's left is engineering and measurement.",
-      "Hero showcase caption under the image carousel (applies to all slides): Real output from the simulations - not renders. Left to right: a computed wireframe frame, the crossing-beam localization collapsing to a point, and the 2-D rad-hydro of a single spark.",
-      "Cards that contain a checkmark feature-list keep it inside the card: in card.body paragraphs are separated by a blank line (\\n\\n) and feature-list items by single newlines (\\n), list last.",
-      "Numbered role cards: card.meta holds the large card number (01, 02, ...).",
-      "Inline emphasis was flattened to plain text: the second half of the pull quote and one phrase in the 'The Detail That Mattered Most: The Figures Get Read Back' card were italic, and the opening phrase of the hero honesty note was bold.",
-      "The last content section ('The Method Is the Product') has no centred section header: the h2 and its two paragraphs (stored as the 'text' block) sit in the left column of a two-column grid, with the 'What Transfers to Your Domain' checklist card in the right column; the 'Open, and Checkable' card spans full width below.",
-      "Superscript exponents (10 to the 23rd, 10 to the 4th) are stored as Unicode superscripts (10²³, 10⁴) so the numbers stay correct as plain text."
-    ]
+    "heroNote": "Every number here is computed, not measured. No device has been built. The claim is not \"it works\" - it's that there's no remaining physics reason it shouldn't, and what's left is engineering and measurement.",
+    "showcaseCaption": "Real output from the simulations - not renders. Left to right: a computed wireframe frame, the crossing-beam localization collapsing to a point, and the 2-D rad-hydro of a single spark."
   },
   "hr": {
     "slug": "air-laser",
@@ -472,15 +464,7 @@
         "href": "/hr#contact"
       }
     },
-    "notes": [
-      "Hero showcase is an auto-rotating image carousel (data-showcase, crossfading slides).",
-      "Hero honesty note (info-icon callout between the subtitle and the CTAs): Svaki je broj ovdje izračunat, a ne izmjeren. Nijedan uređaj nije izgrađen. Tvrdnja nije „radi\" — nego da nije preostao nijedan fizikalni razlog zašto ne bi radilo, a ono što je ostalo jest inženjerstvo i mjerenje.",
-      "Hero showcase caption under the image carousel (applies to all slides): Stvarni ispis iz simulacija — nisu renderi. Slijeva nadesno: izračunata sličica žičanog modela, lokalizacija ukrštenih zraka koja se skuplja u točku i 2D radijacijska hidrodinamika jedne iskre.",
-      "Cards that contain a checkmark feature-list keep it inside the card: in card.body paragraphs are separated by a blank line (\\n\\n) and feature-list items by single newlines (\\n), list last.",
-      "Numbered role cards: card.meta holds the large card number (01, 02, ...).",
-      "Inline emphasis was flattened to plain text: the second half of the pull quote and one phrase in the 'Detalj koji je najviše značio: grafikoni se čitaju natrag' card were italic, and the opening phrase of the hero honesty note was bold.",
-      "The last content section ('Metoda je proizvod') has no centred section header: the h2 and its two paragraphs (stored as the 'text' block) sit in the left column of a two-column grid, with the 'Što se prenosi u Vaše područje' checklist card in the right column; the 'Otvoreno i provjerljivo' card spans full width below.",
-      "Superscript exponents (10 to the 23rd, 10 to the 4th) are stored as Unicode superscripts (10²³, 10⁴) so the numbers stay correct as plain text."
-    ]
+    "heroNote": "Svaki je broj ovdje izračunat, a ne izmjeren. Nijedan uređaj nije izgrađen. Tvrdnja nije „radi\" — nego da nije preostao nijedan fizikalni razlog zašto ne bi radilo, a ono što je ostalo jest inženjerstvo i mjerenje.",
+    "showcaseCaption": "Stvarni ispis iz simulacija — nisu renderi. Slijeva nadesno: izračunata sličica žičanog modela, lokalizacija ukrštenih zraka koja se skuplja u točku i 2D radijacijska hidrodinamika jedne iskre."
   }
 }

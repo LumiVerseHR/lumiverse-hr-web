@@ -266,18 +266,10 @@
       "secondary": {
         "label": "tell us what you're building",
         "href": "/#contact"
-      }
-    },
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (showcase.js, data-interval 5200 ms) cycling the showcase images in order.",
-      "Closing block has no buttons; instead a capacity note: a status badge reading \"Open for new projects\" followed by the sentence: \"See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too.\" The two inline links in that sentence are mapped to closing.cta and closing.secondary.",
-      "Cards that carry a bullet feature-list on the live page (check or minus icons) have those bullets appended to \"body\" as newline-separated lines, separated from the prose by a blank line, in page order. Affected cards: \"What Was Running\"; \"Domain Fluency, Not Guesswork\"; \"Analytics That Answer the Only Question That Matters\"; \"An Assistant That Speaks Croatian and SQL\". Render body with white-space: pre-line, or split on the blank line to restore the bullet list.",
-      "Bento grid layout: these cards span double width on the live page: \"Analytics That Answer the Only Question That Matters\"; \"An Assistant That Speaks Croatian and SQL\".",
-      "Section \"We Wrote the Original\" is a two-column layout: the text block (heading + paragraphs) on the left, the \"Domain Fluency, Not Guesswork\" card on the right. The first paragraph is large (body-lg), the second regular. No section-description on the live page, so there is no lede.",
-      "Section \"Parity First, Ideas Second\": the trailing single card is full-width under the six steps.",
-      "Section \"What Actually Changed\": the table renders as a \"stack table\" where the Legacy column is styled as old (muted) and the Rentalica column as new (accent).",
-      "Sections \"Parity First, Ideas Second\" and \"Letting AI Near a Real Database\" steps are numbered cards (01-06 and 01-03) with an icon each on the live page."
-    ]
+      },
+      "badge": "Open for new projects",
+      "note": "See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too."
+    }
   },
   "hr": {
     "slug": "rentalica",
@@ -546,17 +538,9 @@
       "secondary": {
         "label": "recite što gradite",
         "href": "/hr#contact"
-      }
-    },
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (showcase.js, data-interval 5200 ms) cycling the showcase images in order.",
-      "Closing block has no buttons; instead a capacity note: a status badge reading \"Primamo nove projekte\" followed by the sentence: \"Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni.\" The two inline links in that sentence are mapped to closing.cta and closing.secondary.",
-      "Cards that carry a bullet feature-list on the live page (check or minus icons) have those bullets appended to \"body\" as newline-separated lines, separated from the prose by a blank line, in page order. Affected cards: \"Što je radilo\"; \"Poznavanje domene, a ne nagađanje\"; \"Analitika koja odgovara na jedino pitanje koje je važno\"; \"Asistent koji govori hrvatski i SQL\". Render body with white-space: pre-line, or split on the blank line to restore the bullet list.",
-      "Bento grid layout: these cards span double width on the live page: \"Analitika koja odgovara na jedino pitanje koje je važno\"; \"Asistent koji govori hrvatski i SQL\".",
-      "Section \"Original smo napisali mi\" is a two-column layout: the text block (heading + paragraphs) on the left, the \"Poznavanje domene, a ne nagađanje\" card on the right. The first paragraph is large (body-lg), the second regular. No section-description on the live page, so there is no lede.",
-      "Section \"Prvo istovjetnost, pa ideje\": the trailing single card is full-width under the six steps.",
-      "Section \"Što se zapravo promijenilo\": the table renders as a \"stack table\" where the Legacy column is styled as old (muted) and the Rentalica column as new (accent).",
-      "Sections \"Prvo istovjetnost, pa ideje\" and \"Pustiti AI blizu stvarne baze\" steps are numbered cards (01-06 and 01-03) with an icon each on the live page."
-    ]
+      },
+      "badge": "Primamo nove projekte",
+      "note": "Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni."
+    }
   }
 }

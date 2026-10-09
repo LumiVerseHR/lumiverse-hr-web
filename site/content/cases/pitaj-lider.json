@@ -149,15 +149,10 @@
       "secondary": {
         "label": "See starting prices",
         "href": "/pricing"
-      }
-    },
-    "notes": [
-      "Hero shows a single screenshot with a bottom gradient fade overlay (not a slideshow).",
-      "Section \"What It Does\" is two alternating two-column feature rows (second row mirrored: text left, visual right). Each cards block is one row: item 1 is the visual card (title, meta = its subtitle, body = checklist lines), item 2 is the text column (its large heading as title, two paragraphs as body).",
-      "Card bodies use plain-text line breaks: paragraphs are separated by \"\\n\\n\" and checklist (feature-list, check-icon) lines by a single \"\\n\". Render with white-space: pre-line or split.",
-      "Section \"Technical Implementation\" is a bento grid; the card \"Continuous Learning\" is the large (double-width) card and its body is a paragraph followed by checklist lines.",
-      "Closing block also shows a capacity note: a pill badge \"Open for new projects\" followed by the paragraph \"See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too.\". closing.cta and closing.secondary are the two inline links inside that paragraph, not buttons."
-    ]
+      },
+      "badge": "Open for new projects",
+      "note": "See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too."
+    }
   },
   "hr": {
     "slug": "pitaj-lider",
@@ -309,14 +304,9 @@
       "secondary": {
         "label": "Pogledajte početne cijene",
         "href": "/hr/pricing"
-      }
-    },
-    "notes": [
-      "Hero shows a single screenshot with a bottom gradient fade overlay (not a slideshow).",
-      "Section \"Što radi\" is two alternating two-column feature rows (second row mirrored: text left, visual right). Each cards block is one row: item 1 is the visual card (title, meta = its subtitle, body = checklist lines), item 2 is the text column (its large heading as title, two paragraphs as body).",
-      "Card bodies use plain-text line breaks: paragraphs are separated by \"\\n\\n\" and checklist (feature-list, check-icon) lines by a single \"\\n\". Render with white-space: pre-line or split.",
-      "Section \"Tehnička izvedba\" is a bento grid; the card \"Stalno učenje\" is the large (double-width) card and its body is a paragraph followed by checklist lines.",
-      "Closing block also shows a capacity note: a pill badge \"Primamo nove projekte\" followed by the paragraph \"Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni.\". closing.cta and closing.secondary are the two inline links inside that paragraph, not buttons."
-    ]
+      },
+      "badge": "Primamo nove projekte",
+      "note": "Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni."
+    }
   }
 }

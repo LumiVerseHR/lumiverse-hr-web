@@ -230,18 +230,10 @@
       "secondary": {
         "label": "tell us what you're building",
         "href": "/#contact"
-      }
-    },
-    "notes": [
-      "Section \"Not Your Typical OCR Job\": the list block starting \"Multi-column text recognition\" (4 items) is the checklist inside \"Layout Detection & OCR\" on the page, under its text.",
-      "Section \"Not Your Typical OCR Job\": the list block starting \"Custom language model training\" (4 items) is the checklist inside \"Croatian Language AI\" on the page, under its text.",
-      "Section \"Processing Pipeline\": steps are numbered on the page as 1, 2, 3, 4.",
-      "Section \"What We Built\": the list block starting \"Automated quality scoring\" (3 items) is the checklist inside \"Post-Processing Pipeline\" on the page, under its text.",
-      "Section \"What We Built\": bento grid layout; the large/wide tiles are \"Post-Processing Pipeline\".",
-      "Section \"Results & Impact\": the list block starting \"Complete archive digitization\" (3 items) is the checklist inside \"Digital Preservation\" on the page, under its text.",
-      "Section \"Results & Impact\": the list block starting \"Powers AI assistants\" (3 items) is the checklist inside \"AI-Ready Data\" on the page, under its text.",
-      "Closing block has no buttons; instead it carries a \"capacity note\": a status badge reading \"Open for new projects\" and the sentence \"See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too.\", in which \"See starting prices\" links to /pricing and \"tell us what you're building\" links to /#contact. closing.cta and closing.secondary are those two inline links."
-    ]
+      },
+      "badge": "Open for new projects",
+      "note": "See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too."
+    }
   },
   "hr": {
     "slug": "lider-pdf-archive",
@@ -474,17 +466,9 @@
       "secondary": {
         "label": "recite što gradite",
         "href": "/hr#contact"
-      }
-    },
-    "notes": [
-      "Section \"Nije običan OCR posao\": the list block starting \"Prepoznavanje teksta u više stupaca\" (4 items) is the checklist inside \"Prepoznavanje prijeloma i OCR\" on the page, under its text.",
-      "Section \"Nije običan OCR posao\": the list block starting \"Treniranje vlastitog jezičnog modela\" (4 items) is the checklist inside \"AI za hrvatski jezik\" on the page, under its text.",
-      "Section \"Pipeline obrade\": steps are numbered on the page as 1, 2, 3, 4.",
-      "Section \"Što smo izgradili\": the list block starting \"Automatsko ocjenjivanje kvalitete\" (3 items) is the checklist inside \"Naknadna obrada\" on the page, under its text.",
-      "Section \"Što smo izgradili\": bento grid layout; the large/wide tiles are \"Naknadna obrada\".",
-      "Section \"Rezultati i učinak\": the list block starting \"Digitalizacija cijele arhive\" (3 items) is the checklist inside \"Digitalno očuvanje\" on the page, under its text.",
-      "Section \"Rezultati i učinak\": the list block starting \"Pogoni AI asistente\" (3 items) is the checklist inside \"Podaci spremni za AI\" on the page, under its text.",
-      "Closing block has no buttons; instead it carries a \"capacity note\": a status badge reading \"Primamo nove projekte\" and the sentence \"Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni.\", in which \"Pogledajte početne cijene\" links to /hr/pricing and \"recite što gradite\" links to /hr#contact. closing.cta and closing.secondary are those two inline links."
-    ]
+      },
+      "badge": "Primamo nove projekte",
+      "note": "Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni."
+    }
   }
 }

@@ -180,7 +180,8 @@
                 "period": "per month",
                 "features": [
                   "6,500 credits"
-                ]
+                ],
+                "featured": true
               },
               {
                 "name": "Pro",
@@ -201,9 +202,14 @@
             ]
           },
           {
-            "type": "text",
-            "paragraphs": [
-              "Current pricing at titlomat.com."
+            "type": "links",
+            "lead": "Current pricing at",
+            "items": [
+              {
+                "label": "titlomat.com",
+                "href": "https://titlomat.com/en",
+                "external": true
+              }
             ]
           }
         ]
@@ -221,18 +227,7 @@
         "label": "Talk to Us",
         "href": "/#contact"
       }
-    },
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (data-showcase, data-interval=\"5200\" ms) cycling the showcase images in order.",
-      "Section \"Connect Once, Forget It\": steps are numbered on the page as 01, 02, 03.",
-      "Section \"Connect Once, Forget It\": the list block starting \"30-second signup, no credit card\" (2 items) is the checklist inside \"Connect Your Channel\" on the page, under its text.",
-      "Section \"Connect Once, Forget It\": the list block starting \"95%+ accuracy on clean audio\" (2 items) is the checklist inside \"AI Transcribes & Translates\" on the page, under its text.",
-      "Section \"Connect Once, Forget It\": the list block starting \"Auto-published to YouTube\" (2 items) is the checklist inside \"Subtitles Go Live\" on the page, under its text.",
-      "Section \"Stop Losing Your Audience\": the list block starting \"Croatian-first speech recognition\" (3 items) is the checklist inside \"Built for the Croatian Creator Economy\" on the page, under its text.",
-      "Section \"Stop Losing Your Audience\": bento grid layout; the large/wide tiles are \"Built for the Croatian Creator Economy\".",
-      "Section \"Start Free, Scale When Ready\": the \"Creator\" plan card is visually highlighted (pricing-card-featured). Plans on the page show only name, price, period and a credits line (stored as the single feature); no plan has its own CTA button.",
-      "Section \"Start Free, Scale When Ready\": in the small centered muted footnote \"Current pricing at titlomat.com.\", the text \"titlomat.com\" is a link to https://titlomat.com/en (external, opens in new tab)."
-    ]
+    }
   },
   "hr": {
     "slug": "titlomat",
@@ -415,7 +410,8 @@
                 "period": "mjesečno",
                 "features": [
                   "6.500 kredita"
-                ]
+                ],
+                "featured": true
               },
               {
                 "name": "Pro",
@@ -436,9 +432,14 @@
             ]
           },
           {
-            "type": "text",
-            "paragraphs": [
-              "Aktualne cijene na titlomat.com."
+            "type": "links",
+            "lead": "Aktualne cijene na",
+            "items": [
+              {
+                "label": "titlomat.com",
+                "href": "https://titlomat.com",
+                "external": true
+              }
             ]
           }
         ]
@@ -456,17 +457,6 @@
         "label": "Razgovarajmo",
         "href": "/hr#contact"
       }
-    },
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (data-showcase, data-interval=\"5200\" ms) cycling the showcase images in order.",
-      "Section \"Povežite jednom i zaboravite\": steps are numbered on the page as 01, 02, 03.",
-      "Section \"Povežite jednom i zaboravite\": the list block starting \"Registracija u 30 sekundi, bez kartice\" (2 items) is the checklist inside \"Povežite svoj kanal\" on the page, under its text.",
-      "Section \"Povežite jednom i zaboravite\": the list block starting \"Preko 95% točnosti na čistom zvuku\" (2 items) is the checklist inside \"AI transkribira i prevodi\" on the page, under its text.",
-      "Section \"Povežite jednom i zaboravite\": the list block starting \"Automatska objava na YouTube\" (2 items) is the checklist inside \"Titlovi idu u objavu\" on the page, under its text.",
-      "Section \"Prestanite gubiti publiku\": the list block starting \"Prepoznavanje govora prvenstveno za hrvatski\" (3 items) is the checklist inside \"Napravljen za hrvatske kreatore\" on the page, under its text.",
-      "Section \"Prestanite gubiti publiku\": bento grid layout; the large/wide tiles are \"Napravljen za hrvatske kreatore\".",
-      "Section \"Krenite besplatno, rastite kad budete spremni\": the \"Creator\" plan card is visually highlighted (pricing-card-featured). Plans on the page show only name, price, period and a credits line (stored as the single feature); no plan has its own CTA button.",
-      "Section \"Krenite besplatno, rastite kad budete spremni\": in the small centered muted footnote \"Aktualne cijene na titlomat.com.\", the text \"titlomat.com\" is a link to https://titlomat.com (external, opens in new tab)."
-    ]
+    }
   }
 }

@@ -73,7 +73,9 @@
       "secondary": {
         "label": "tell us what you're building",
         "href": "/#contact"
-      }
+      },
+      "badge": "Open for new projects",
+      "note": "See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too."
     },
     "sections": [
       {
@@ -235,15 +237,6 @@
           }
         ]
       }
-    ],
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (showcase.js, data-interval=5200ms).",
-      "Section \"Her Love, Our AI Build Model\": some card bodies are two paragraphs on the page, joined with a blank line (\"\\n\\n\").",
-      "Section \"How Two Weeks Was Enough\": steps are numbered cards with labels 01, 02, 03 and icons.",
-      "Section \"How Two Weeks Was Enough\": the tech-stack list is rendered as pill tags inside the \"Under the Hood\" card.",
-      "Section \"The Barrier Was Never the Code\": the list block is a card headed \"The Takeaway\" (no slot for a list heading in the schema).",
-      "Closing block has no buttons: it shows a \"Open for new projects\" badge, and the cta/secondary links are inline links inside the body paragraph (\"See starting prices\", \"tell us what you're building\").",
-      "Hero buttons have icons (dropped); all section cards have Font Awesome icons (dropped)."
     ]
   },
   "hr": {
@@ -320,7 +313,9 @@
       "secondary": {
         "label": "recite što gradite",
         "href": "/hr#contact"
-      }
+      },
+      "badge": "Primamo nove projekte",
+      "note": "Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni."
     },
     "sections": [
       {
@@ -482,15 +477,6 @@
           }
         ]
       }
-    ],
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (showcase.js, data-interval=5200ms).",
-      "Section \"Njezina ljubav, naš AI model izrade\": some card bodies are two paragraphs on the page, joined with a blank line (\"\\n\\n\").",
-      "Section \"Kako su dva tjedna bila dovoljna\": steps are numbered cards with labels 01, 02, 03 and icons.",
-      "Section \"Kako su dva tjedna bila dovoljna\": the tech-stack list is rendered as pill tags inside the \"Ispod haube\" card.",
-      "Section \"Prepreka nikad nije bila kod\": the list block is a card headed \"Što odavde nosimo\" (no slot for a list heading in the schema).",
-      "Closing block has no buttons: it shows a \"Primamo nove projekte\" badge, and the cta/secondary links are inline links inside the body paragraph (\"Pogledajte početne cijene\", \"recite što gradite\").",
-      "Hero buttons have icons (dropped); all section cards have Font Awesome icons (dropped)."
     ]
   }
 }

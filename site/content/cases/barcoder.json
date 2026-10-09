@@ -131,19 +131,23 @@
             "items": [
               {
                 "title": "Research",
-                "body": "Each country starts as long-form research - central bank sources, scheme docs, regulator filings, read and written up."
+                "body": "Each country starts as long-form research - central bank sources, scheme docs, regulator filings, read and written up.",
+                "label": "reports/"
               },
               {
                 "title": "Extract",
-                "body": "Claude Code skills pull structured per-standard and per-country pages out of that research, consistently every time."
+                "body": "Claude Code skills pull structured per-standard and per-country pages out of that research, consistently every time.",
+                "label": ".claude/skills/"
               },
               {
                 "title": "Commit",
-                "body": "Pages land as markdown in the repo. Every published claim is traceable to the commit that introduced it."
+                "body": "Pages land as markdown in the repo. Every published claim is traceable to the commit that introduced it.",
+                "label": "docs/"
               },
               {
                 "title": "Render",
-                "body": "The backend reads those files, the frontend renders them. Boring on purpose - and reproducible from source."
+                "body": "The backend reads those files, the frontend renders them. Boring on purpose - and reproducible from source.",
+                "label": "web"
               }
             ]
           },
@@ -175,14 +179,7 @@
         "label": "Schedule a Call",
         "href": "/#contact"
       }
-    },
-    "notes": [
-      "Section \"The Content Is the Repo\": the steps are a pipeline whose cards each carry a monospace path label above the title, in order: reports/, .claude/skills/, docs/, web.",
-      "Cards that carry a bullet feature-list on the live page (check or minus icons) have those bullets appended to \"body\" as newline-separated lines, separated from the prose by a blank line, in page order. Affected cards: \"The Questions It Answers\"; \"Standards\"; \"Payments by Country\"; \"Wallets\"; \"Identification, Not Just Decoding\". Render body with white-space: pre-line, or split on the blank line to restore the bullet list.",
-      "Bento grid layout: these cards span double width on the live page: \"Identification, Not Just Decoding\".",
-      "Section \"Three Ways In\" uses numbered cards (01-03, kept in \"meta\") with an icon each; mapped to cards rather than steps because they are parallel entry points, not a sequence.",
-      "Inline emphasis: the word \"is\" in the first card of section \"Point It At a Code\" is italic on the live page."
-    ]
+    }
   },
   "hr": {
     "slug": "barcoder",
@@ -316,19 +313,23 @@
             "items": [
               {
                 "title": "Istraživanje",
-                "body": "Svaka zemlja počinje kao opsežno istraživanje — izvori središnje banke, dokumentacija shema, regulatorni podnesci, pročitano i zapisano."
+                "body": "Svaka zemlja počinje kao opsežno istraživanje — izvori središnje banke, dokumentacija shema, regulatorni podnesci, pročitano i zapisano.",
+                "label": "reports/"
               },
               {
                 "title": "Izdvajanje",
-                "body": "Claude Code vještine iz tog istraživanja izvlače strukturirane stranice po standardu i po zemlji, svaki put jednako."
+                "body": "Claude Code vještine iz tog istraživanja izvlače strukturirane stranice po standardu i po zemlji, svaki put jednako.",
+                "label": ".claude/skills/"
               },
               {
                 "title": "Commit",
-                "body": "Stranice slijeću u repozitorij kao markdown. Svaka objavljena tvrdnja može se pratiti do commita koji ju je uveo."
+                "body": "Stranice slijeću u repozitorij kao markdown. Svaka objavljena tvrdnja može se pratiti do commita koji ju je uveo.",
+                "label": "docs/"
               },
               {
                 "title": "Prikaz",
-                "body": "Backend čita te datoteke, frontend ih prikazuje. Dosadno namjerno — i ponovljivo iz izvora."
+                "body": "Backend čita te datoteke, frontend ih prikazuje. Dosadno namjerno — i ponovljivo iz izvora.",
+                "label": "web"
               }
             ]
           },
@@ -360,13 +361,6 @@
         "label": "Dogovorite razgovor",
         "href": "/hr#contact"
       }
-    },
-    "notes": [
-      "Section \"Sadržaj je repozitorij\": the steps are a pipeline whose cards each carry a monospace path label above the title, in order: reports/, .claude/skills/, docs/, web.",
-      "Cards that carry a bullet feature-list on the live page (check or minus icons) have those bullets appended to \"body\" as newline-separated lines, separated from the prose by a blank line, in page order. Affected cards: \"Pitanja na koja odgovara\"; \"Standardi\"; \"Plaćanja po zemljama\"; \"Novčanici\"; \"Prepoznavanje, ne samo dekodiranje\". Render body with white-space: pre-line, or split on the blank line to restore the bullet list.",
-      "Bento grid layout: these cards span double width on the live page: \"Prepoznavanje, ne samo dekodiranje\".",
-      "Section \"Tri ulaza\" uses numbered cards (01-03, kept in \"meta\") with an icon each; mapped to cards rather than steps because they are parallel entry points, not a sequence.",
-      "Inline emphasis: the word \"jest\" in the first card of section \"Uperite ga u kod\" is italic on the live page."
-    ]
+    }
   }
 }

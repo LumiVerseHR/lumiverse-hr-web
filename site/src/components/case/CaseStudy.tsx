@@ -23,6 +23,19 @@ function LinkButton({ link, primary }: { link: Case["ctas"][number]; primary?: b
   );
 }
 
+// The capacity note is one sentence with its links inline, as on the live pages.
+function linkify(sentence: string, links: (Case["ctas"][number] | undefined)[]) {
+  const parts: (string | Case["ctas"][number])[] = [sentence];
+  for (const link of links) {
+    if (!link) continue;
+    const i = parts.findIndex((p) => typeof p === "string" && p.includes(link.label));
+    if (i < 0) continue;
+    const [before, ...rest] = (parts[i] as string).split(link.label);
+    parts.splice(i, 1, before, link, rest.join(link.label));
+  }
+  return parts.map((p, i) => (typeof p === "string" ? p : <a key={i} href={p.href}>{p.label}</a>));
+}
+
 export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict: Dictionary }) {
   const at = ORDER.findIndex((o) => o.slug === data.slug);
   const next = ORDER[(at + 1) % ORDER.length];
@@ -42,6 +55,7 @@ export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict
         </h1>
         <p className={styles.kind}>{data.kind}</p>
         <p className={styles.subtitle}>{data.subtitle}</p>
+        {data.heroNote && <p className={styles.heroNote}>{data.heroNote}</p>}
         {data.ctas.length > 0 && (
           <div className={styles.ctas}>
             {data.ctas.map((link, i) => (
@@ -49,7 +63,7 @@ export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict
             ))}
           </div>
         )}
-        <Showcase images={data.showcase} label={dict.case.showcase} show={dict.case.show} />
+        <Showcase images={data.showcase} label={dict.case.showcase} show={dict.case.show} caption={data.showcaseCaption} />
       </section>
 
       {data.stats.length > 0 && (
@@ -81,10 +95,17 @@ export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict
         <section className={styles.closing} aria-labelledby="closing-title">
           <h2 id="closing-title">{data.closing.title}</h2>
           <p>{data.closing.body}</p>
-          <div className={styles.ctas}>
-            <LinkButton link={data.closing.cta} primary />
-            {data.closing.secondary && <LinkButton link={data.closing.secondary} />}
-          </div>
+          {data.closing.note ? (
+            <div className={styles.capacity}>
+              {data.closing.badge && <p className={styles.badge}>{data.closing.badge}</p>}
+              <p>{linkify(data.closing.note, [data.closing.cta, data.closing.secondary])}</p>
+            </div>
+          ) : (
+            <div className={styles.ctas}>
+              <LinkButton link={data.closing.cta} primary />
+              {data.closing.secondary && <LinkButton link={data.closing.secondary} />}
+            </div>
+          )}
         </section>
       )}
 

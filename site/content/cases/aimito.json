@@ -218,16 +218,7 @@
         "label": "Start a Project",
         "href": "/#contact"
       }
-    },
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (showcase.js, data-interval 5200 ms) cycling the showcase images in order.",
-      "Cards that carry a bullet feature-list on the live page (check or minus icons) have those bullets appended to \"body\" as newline-separated lines, separated from the prose by a blank line, in page order. Affected cards: \"What They're Offered Instead\"; \"Search That Takes a Feeling\"; \"Most of It Isn't Prompting\"; \"Built On\". Render body with white-space: pre-line, or split on the blank line to restore the bullet list.",
-      "Bento grid layout: these cards span double width on the live page: \"Search That Takes a Feeling\"; \"Most of It Isn't Prompting\".",
-      "Section \"Two Jokes in One Word\" has no cards: it is a centred \"name panel\". Paragraph 1 is a large display line (the line break is kept as \\n) with \"daj mi to.\" in italic accent; paragraph 2 is body text in which \"Gimme that\" is bold in primary text colour; paragraph 3 is a small muted footnote.",
-      "Section \"Where the Engineering Went\": the images block is a single framed screenshot (hero-showcase styling) placed after the bento grid.",
-      "Section \"Built, Stocked, Running\" is a two-column layout: the text block (heading + paragraphs) on the left, the \"Built On\" card on the right, then the \"Why This Is in Our Portfolio\" card full-width below. The first paragraph is large (body-lg), the second regular. No section-description on the live page, so there is no lede.",
-      "Section \"A Content Engine Wearing a Shop\" steps are numbered cards (01-06) with an icon each on the live page."
-    ]
+    }
   },
   "hr": {
     "slug": "aimito",
@@ -448,15 +439,6 @@
         "label": "Pokrenite projekt",
         "href": "/hr#contact"
       }
-    },
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (showcase.js, data-interval 5200 ms) cycling the showcase images in order.",
-      "Cards that carry a bullet feature-list on the live page (check or minus icons) have those bullets appended to \"body\" as newline-separated lines, separated from the prose by a blank line, in page order. Affected cards: \"Što im se nudi umjesto toga\"; \"Pretraga koja prima osjećaj\"; \"Većina toga nije pisanje promptova\"; \"Izgrađeno na\". Render body with white-space: pre-line, or split on the blank line to restore the bullet list.",
-      "Bento grid layout: these cards span double width on the live page: \"Pretraga koja prima osjećaj\"; \"Većina toga nije pisanje promptova\".",
-      "Section \"Dvije šale u jednoj riječi\" has no cards: it is a centred \"name panel\". Paragraph 1 is a large display line (the line break is kept as \\n) with \"daj mi to.\" in italic accent; paragraph 2 is body text in which \"Gimme that\" is bold in primary text colour; paragraph 3 is a small muted footnote.",
-      "Section \"Gdje je otišlo inženjerstvo\": the images block is a single framed screenshot (hero-showcase styling) placed after the bento grid.",
-      "Section \"Izgrađeno, napunjeno i u pogonu\" is a two-column layout: the text block (heading + paragraphs) on the left, the \"Izgrađeno na\" card on the right, then the \"Zašto je ovo u našim referencama\" card full-width below. The first paragraph is large (body-lg), the second regular. No section-description on the live page, so there is no lede.",
-      "Section \"Pogon za sadržaj prerušen u trgovinu\" steps are numbered cards (01-06) with an icon each on the live page."
-    ]
+    }
   }
 }

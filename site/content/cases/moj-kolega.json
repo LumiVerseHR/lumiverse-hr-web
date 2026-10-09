@@ -35,7 +35,7 @@
       },
       {
         "src": "/work/moj-kolega/mojkolega-3.jpg",
-        "alt": "The five jobs Moj Kolega does - grounded answers, recommendations, lead capture and nine languages, all from the shop's own data",
+        "alt": "The five jobs Moj Kolega does - grounded answers, recommendations, lead capture and five languages, all from the shop's own data",
         "width": 1440,
         "height": 900
       }
@@ -168,12 +168,7 @@
         "label": "Talk to Us",
         "href": "/#contact"
       }
-    },
-    "notes": [
-      "Hero showcase is an auto-rotating image carousel (data-showcase, crossfading slides).",
-      "Cards that contain a checkmark feature-list keep it inside the card: in card.body paragraphs are separated by a blank line (\\n\\n) and feature-list items by single newlines (\\n), list last.",
-      "Numbered role cards: card.meta holds the large card number (01, 02, ...)."
-    ]
+    }
   },
   "hr": {
     "slug": "moj-kolega",
@@ -210,7 +205,7 @@
       },
       {
         "src": "/work/moj-kolega/hr-mojkolega-3.jpg",
-        "alt": "Pet poslova koje Moj Kolega obavlja - utemeljeni odgovori, preporuke, prikupljanje upita i devet jezika, sve iz podataka same trgovine",
+        "alt": "Pet poslova koje Moj Kolega obavlja - utemeljeni odgovori, preporuke, prikupljanje upita i pet jezika, sve iz podataka same trgovine",
         "width": 1440,
         "height": 900
       }
@@ -343,11 +338,6 @@
         "label": "Razgovarajmo",
         "href": "/hr#contact"
       }
-    },
-    "notes": [
-      "Hero showcase is an auto-rotating image carousel (data-showcase, crossfading slides).",
-      "Cards that contain a checkmark feature-list keep it inside the card: in card.body paragraphs are separated by a blank line (\\n\\n) and feature-list items by single newlines (\\n), list last.",
-      "Numbered role cards: card.meta holds the large card number (01, 02, ...)."
-    ]
+    }
   }
 }

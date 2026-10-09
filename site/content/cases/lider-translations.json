@@ -190,62 +190,129 @@
         "lede": "Every number here is a live post count, pulled from each site today. The Croatian source feeds all ten - and because the translated sites carry Lider's full print back-catalogue too, each one runs even more articles than the live Croatian web mirror.",
         "blocks": [
           {
-            "type": "cards",
+            "type": "sites",
             "items": [
               {
-                "title": "Croatian",
-                "body": "hr.lider.media",
-                "meta": "34,644 Source articles (live)"
+                "name": "Croatian",
+                "domain": "hr.lider.media",
+                "href": "https://hr.lider.media",
+                "badge": "Source",
+                "stats": [
+                  {
+                    "value": "34,644",
+                    "label": "Source articles (live)"
+                  }
+                ]
               },
               {
-                "title": "English",
-                "body": "en.lider.media",
-                "meta": "141,865 Articles translated & live"
+                "name": "English",
+                "domain": "en.lider.media",
+                "href": "https://en.lider.media",
+                "stats": [
+                  {
+                    "value": "141,865",
+                    "label": "Articles translated & live"
+                  }
+                ]
               },
               {
-                "title": "German",
-                "body": "de.lider.media",
-                "meta": "141,718 Articles translated & live"
+                "name": "German",
+                "domain": "de.lider.media",
+                "href": "https://de.lider.media",
+                "stats": [
+                  {
+                    "value": "141,718",
+                    "label": "Articles translated & live"
+                  }
+                ]
               },
               {
-                "title": "French",
-                "body": "fr.lider.media",
-                "meta": "141,697 Articles translated & live"
+                "name": "French",
+                "domain": "fr.lider.media",
+                "href": "https://fr.lider.media",
+                "stats": [
+                  {
+                    "value": "141,697",
+                    "label": "Articles translated & live"
+                  }
+                ]
               },
               {
-                "title": "Italian",
-                "body": "it.lider.media",
-                "meta": "141,731 Articles translated & live"
+                "name": "Italian",
+                "domain": "it.lider.media",
+                "href": "https://it.lider.media",
+                "stats": [
+                  {
+                    "value": "141,731",
+                    "label": "Articles translated & live"
+                  }
+                ]
               },
               {
-                "title": "Spanish",
-                "body": "es.lider.media",
-                "meta": "141,704 Articles translated & live"
+                "name": "Spanish",
+                "domain": "es.lider.media",
+                "href": "https://es.lider.media",
+                "stats": [
+                  {
+                    "value": "141,704",
+                    "label": "Articles translated & live"
+                  }
+                ]
               },
               {
-                "title": "Japanese",
-                "body": "jp.lider.media",
-                "meta": "141,742 Articles translated & live"
+                "name": "Japanese",
+                "domain": "jp.lider.media",
+                "href": "https://jp.lider.media",
+                "stats": [
+                  {
+                    "value": "141,742",
+                    "label": "Articles translated & live"
+                  }
+                ]
               },
               {
-                "title": "Chinese",
-                "body": "zh.lider.media",
-                "meta": "141,759 Articles translated & live"
+                "name": "Chinese",
+                "domain": "zh.lider.media",
+                "href": "https://zh.lider.media",
+                "stats": [
+                  {
+                    "value": "141,759",
+                    "label": "Articles translated & live"
+                  }
+                ]
               },
               {
-                "title": "Russian",
-                "body": "ru.lider.media",
-                "meta": "141,641 Articles translated & live"
+                "name": "Russian",
+                "domain": "ru.lider.media",
+                "href": "https://ru.lider.media",
+                "stats": [
+                  {
+                    "value": "141,641",
+                    "label": "Articles translated & live"
+                  }
+                ]
               },
               {
-                "title": "Turkish",
-                "body": "tr.lider.media",
-                "meta": "141,724 Articles translated & live"
+                "name": "Turkish",
+                "domain": "tr.lider.media",
+                "href": "https://tr.lider.media",
+                "stats": [
+                  {
+                    "value": "141,724",
+                    "label": "Articles translated & live"
+                  }
+                ]
               },
               {
-                "title": "Hungarian",
-                "body": "hu.lider.media",
-                "meta": "141,710 Articles translated & live"
+                "name": "Hungarian",
+                "domain": "hu.lider.media",
+                "href": "https://hu.lider.media",
+                "stats": [
+                  {
+                    "value": "141,710",
+                    "label": "Articles translated & live"
+                  }
+                ]
               }
             ]
           }
@@ -262,20 +329,10 @@
       "secondary": {
         "label": "tell us what you're building",
         "href": "/#contact"
-      }
-    },
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (data-showcase, data-interval=\"5200\" ms) cycling the showcase images in order.",
-      "Section \"One Newsroom, Ten Languages\": the list block starting \"Title, subhead, body, tags, category, author and image all carried from the Croatian original\" (4 items) is the checklist inside \"The Same Story, Everywhere\" on the page, under its text.",
-      "Section \"One Newsroom, Ten Languages\": card \"The Same Story, Everywhere\" has no paragraph on the page, only its checklist, so its body is empty.",
-      "Section \"One Newsroom, Ten Languages\": \"Why Ten Direct Translations Don't Scale\" has 2 paragraphs on the page; its body joins them with a blank line.",
-      "Section \"Translate Once, Publish Everywhere\": steps are numbered on the page as 01, 02, 03, 04, 05, 06.",
-      "Section \"Translate Once, Publish Everywhere\": \"Cheap by Design\" is a single standalone full-width card below the grid above it.",
-      "Section \"Eleven Sites, One Pipeline\": the list block starting \"en, de, fr, it, es, ru, tr, zh, jp, hu . lider.media - plus the Croatian original\" (3 items) is the checklist inside \"A WordPress Instance Per Language\" on the page, under its text.",
-      "Section \"Eleven Sites, One Pipeline\": bento grid layout; the large/wide tiles are \"A WordPress Instance Per Language\", \"A Media Server in the Middle\".",
-      "Section \"Eleven Sites, Live Right Now\": each card in this sites grid is itself an external link (new tab) to its domain (https://hr.lider.media, https://en.lider.media, https://de.lider.media, https://fr.lider.media, https://it.lider.media, https://es.lider.media, https://jp.lider.media, https://zh.lider.media, https://ru.lider.media, https://tr.lider.media, https://hu.lider.media) and shows a country flag emoji (dropped). The first card (\"Croatian\") is visually featured and shows a \"Source\" badge after the language name. Card meta = the live post count (big number on the page) followed by its label.",
-      "Closing block has no buttons; instead it carries a \"capacity note\": a status badge reading \"Open for new projects\" and the sentence \"See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too.\", in which \"See starting prices\" links to /pricing and \"tell us what you're building\" links to /#contact. closing.cta and closing.secondary are those two inline links."
-    ]
+      },
+      "badge": "Open for new projects",
+      "note": "See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too."
+    }
   },
   "hr": {
     "slug": "lider-translations",
@@ -468,62 +525,129 @@
         "lede": "Svaka je brojka ovdje stvaran broj objava, povučen s pojedine stranice danas. Hrvatski izvor hrani svih deset — a budući da prevedene stranice nose i cijelu Liderovu tiskanu arhivu, svaka od njih ima čak i više članaka od živog hrvatskog weba.",
         "blocks": [
           {
-            "type": "cards",
+            "type": "sites",
             "items": [
               {
-                "title": "Hrvatski",
-                "body": "hr.lider.media",
-                "meta": "34,644 Izvornih članaka (uživo)"
+                "name": "Hrvatski",
+                "domain": "hr.lider.media",
+                "href": "https://hr.lider.media",
+                "badge": "Izvor",
+                "stats": [
+                  {
+                    "value": "34,644",
+                    "label": "Izvornih članaka (uživo)"
+                  }
+                ]
               },
               {
-                "title": "Engleski",
-                "body": "en.lider.media",
-                "meta": "141,865 Prevedenih članaka, objavljeno"
+                "name": "Engleski",
+                "domain": "en.lider.media",
+                "href": "https://en.lider.media",
+                "stats": [
+                  {
+                    "value": "141,865",
+                    "label": "Prevedenih članaka, objavljeno"
+                  }
+                ]
               },
               {
-                "title": "Njemački",
-                "body": "de.lider.media",
-                "meta": "141,718 Prevedenih članaka, objavljeno"
+                "name": "Njemački",
+                "domain": "de.lider.media",
+                "href": "https://de.lider.media",
+                "stats": [
+                  {
+                    "value": "141,718",
+                    "label": "Prevedenih članaka, objavljeno"
+                  }
+                ]
               },
               {
-                "title": "Francuski",
-                "body": "fr.lider.media",
-                "meta": "141,697 Prevedenih članaka, objavljeno"
+                "name": "Francuski",
+                "domain": "fr.lider.media",
+                "href": "https://fr.lider.media",
+                "stats": [
+                  {
+                    "value": "141,697",
+                    "label": "Prevedenih članaka, objavljeno"
+                  }
+                ]
               },
               {
-                "title": "Talijanski",
-                "body": "it.lider.media",
-                "meta": "141,731 Prevedenih članaka, objavljeno"
+                "name": "Talijanski",
+                "domain": "it.lider.media",
+                "href": "https://it.lider.media",
+                "stats": [
+                  {
+                    "value": "141,731",
+                    "label": "Prevedenih članaka, objavljeno"
+                  }
+                ]
               },
               {
-                "title": "Španjolski",
-                "body": "es.lider.media",
-                "meta": "141,704 Prevedenih članaka, objavljeno"
+                "name": "Španjolski",
+                "domain": "es.lider.media",
+                "href": "https://es.lider.media",
+                "stats": [
+                  {
+                    "value": "141,704",
+                    "label": "Prevedenih članaka, objavljeno"
+                  }
+                ]
               },
               {
-                "title": "Japanski",
-                "body": "jp.lider.media",
-                "meta": "141,742 Prevedenih članaka, objavljeno"
+                "name": "Japanski",
+                "domain": "jp.lider.media",
+                "href": "https://jp.lider.media",
+                "stats": [
+                  {
+                    "value": "141,742",
+                    "label": "Prevedenih članaka, objavljeno"
+                  }
+                ]
               },
               {
-                "title": "Kineski",
-                "body": "zh.lider.media",
-                "meta": "141,759 Prevedenih članaka, objavljeno"
+                "name": "Kineski",
+                "domain": "zh.lider.media",
+                "href": "https://zh.lider.media",
+                "stats": [
+                  {
+                    "value": "141,759",
+                    "label": "Prevedenih članaka, objavljeno"
+                  }
+                ]
               },
               {
-                "title": "Ruski",
-                "body": "ru.lider.media",
-                "meta": "141,641 Prevedenih članaka, objavljeno"
+                "name": "Ruski",
+                "domain": "ru.lider.media",
+                "href": "https://ru.lider.media",
+                "stats": [
+                  {
+                    "value": "141,641",
+                    "label": "Prevedenih članaka, objavljeno"
+                  }
+                ]
               },
               {
-                "title": "Turski",
-                "body": "tr.lider.media",
-                "meta": "141,724 Prevedenih članaka, objavljeno"
+                "name": "Turski",
+                "domain": "tr.lider.media",
+                "href": "https://tr.lider.media",
+                "stats": [
+                  {
+                    "value": "141,724",
+                    "label": "Prevedenih članaka, objavljeno"
+                  }
+                ]
               },
               {
-                "title": "Mađarski",
-                "body": "hu.lider.media",
-                "meta": "141,710 Prevedenih članaka, objavljeno"
+                "name": "Mađarski",
+                "domain": "hu.lider.media",
+                "href": "https://hu.lider.media",
+                "stats": [
+                  {
+                    "value": "141,710",
+                    "label": "Prevedenih članaka, objavljeno"
+                  }
+                ]
               }
             ]
           }
@@ -540,19 +664,9 @@
       "secondary": {
         "label": "recite što gradite",
         "href": "/hr#contact"
-      }
-    },
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (data-showcase, data-interval=\"5200\" ms) cycling the showcase images in order.",
-      "Section \"Jedna redakcija, deset jezika\": the list block starting \"Naslov, podnaslov, tekst, oznake, kategorija, autor i slika prenose se iz hrvatskog izvornika\" (4 items) is the checklist inside \"Ista priča, svugdje\" on the page, under its text.",
-      "Section \"Jedna redakcija, deset jezika\": card \"Ista priča, svugdje\" has no paragraph on the page, only its checklist, so its body is empty.",
-      "Section \"Jedna redakcija, deset jezika\": \"Zašto deset izravnih prijevoda ne skalira\" has 2 paragraphs on the page; its body joins them with a blank line.",
-      "Section \"Prevesti jednom, objaviti svugdje\": steps are numbered on the page as 01, 02, 03, 04, 05, 06.",
-      "Section \"Prevesti jednom, objaviti svugdje\": \"Jeftino s namjerom\" is a single standalone full-width card below the grid above it.",
-      "Section \"Jedanaest stranica, jedan pipeline\": the list block starting \"en, de, fr, it, es, ru, tr, zh, jp, hu . lider.media — uz hrvatski izvornik\" (3 items) is the checklist inside \"Jedna WordPress instanca po jeziku\" on the page, under its text.",
-      "Section \"Jedanaest stranica, jedan pipeline\": bento grid layout; the large/wide tiles are \"Jedna WordPress instanca po jeziku\", \"Medijski poslužitelj u sredini\".",
-      "Section \"Jedanaest stranica, u pogonu upravo sada\": each card in this sites grid is itself an external link (new tab) to its domain (https://hr.lider.media, https://en.lider.media, https://de.lider.media, https://fr.lider.media, https://it.lider.media, https://es.lider.media, https://jp.lider.media, https://zh.lider.media, https://ru.lider.media, https://tr.lider.media, https://hu.lider.media) and shows a country flag emoji (dropped). The first card (\"Hrvatski\") is visually featured and shows a \"Izvor\" badge after the language name. Card meta = the live post count (big number on the page) followed by its label.",
-      "Closing block has no buttons; instead it carries a \"capacity note\": a status badge reading \"Primamo nove projekte\" and the sentence \"Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni.\", in which \"Pogledajte početne cijene\" links to /hr/pricing and \"recite što gradite\" links to /hr#contact. closing.cta and closing.secondary are those two inline links."
-    ]
+      },
+      "badge": "Primamo nove projekte",
+      "note": "Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni."
+    }
   }
 }

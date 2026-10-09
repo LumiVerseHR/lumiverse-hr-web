@@ -81,11 +81,13 @@ function prepare(root: Object3D, textures: Record<string, Texture>) {
 // Scroll progress through the hero, 0 at the top and 1 once it has scrolled away.
 const motion = { progress: 0, reduced: false };
 
-function useHeroScroll() {
+// The canvas renders on demand, so scrolling asks for frames rather than a loop running all the time.
+function useHeroScroll(invalidate: () => void) {
   useEffect(() => {
     motion.reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const update = () => {
       motion.progress = MathUtils.clamp(window.scrollY / window.innerHeight, 0, 1);
+      invalidate();
     };
     update();
     window.addEventListener("scroll", update, { passive: true });
@@ -94,32 +96,39 @@ function useHeroScroll() {
       window.removeEventListener("scroll", update);
       window.removeEventListener("resize", update);
     };
-  }, []);
+  }, [invalidate]);
 }
 
 const easeOutCubic = (t: number) => 1 - (1 - t) ** 3;
 const smoothstep = (t: number) => t * t * (3 - 2 * t);
 
-function lean(group: Group, delta: number, elapsed: number) {
-  if (motion.reduced) return;
+// Returns true while the room is still moving, so the caller keeps requesting frames.
+function lean(group: Group, delta: number, elapsed: number): boolean {
+  if (motion.reduced) return false;
   // Enter the model: as the hero scrolls away, the whole room leans in towards the visitor.
   const e = smoothstep(motion.progress);
   // Arrival: the model settles into place once, in the first 1.6s.
   const intro = easeOutCubic(MathUtils.clamp(elapsed / 1.6, 0, 1));
-  const k = 1 - Math.exp(-delta * 6);
-  group.position.x = MathUtils.lerp(group.position.x, -0.45 * e, k);
-  group.position.y = MathUtils.lerp(group.position.y, -0.3 * e - 0.35 * (1 - intro), k);
-  group.position.z = MathUtils.lerp(group.position.z, 2.6 * e, k);
-  group.rotation.y = MathUtils.lerp(group.rotation.y, 0.14 * e, k);
-  const scale = 0.94 + 0.06 * intro;
-  group.scale.setScalar(MathUtils.lerp(group.scale.x, scale, k));
+  // Capped: after an idle stretch the first frame must ease, not jump.
+  const k = 1 - Math.exp(-Math.min(delta, 1 / 30) * 6);
+  const target = { x: -0.45 * e, y: -0.3 * e - 0.35 * (1 - intro), z: 2.6 * e, r: 0.14 * e, s: 0.94 + 0.06 * intro };
+  group.position.x = MathUtils.lerp(group.position.x, target.x, k);
+  group.position.y = MathUtils.lerp(group.position.y, target.y, k);
+  group.position.z = MathUtils.lerp(group.position.z, target.z, k);
+  group.rotation.y = MathUtils.lerp(group.rotation.y, target.r, k);
+  group.scale.setScalar(MathUtils.lerp(group.scale.x, target.s, k));
+  const off =
+    Math.abs(group.position.x - target.x) + Math.abs(group.position.y - target.y) + Math.abs(group.position.z - target.z) +
+    Math.abs(group.rotation.y - target.r) + Math.abs(group.scale.x - target.s);
+  return intro < 1 || off > 5e-4;
 }
 
 function Dolly({ children }: { children: ReactNode }) {
   const group = useRef<Group>(null);
-  useHeroScroll();
+  const invalidate = useThree((st) => st.invalidate);
+  useHeroScroll(invalidate);
   useFrame((state, delta) => {
-    if (group.current) lean(group.current, delta, state.clock.elapsedTime);
+    if (group.current && lean(group.current, delta, state.clock.elapsedTime)) state.invalidate();
   });
   return <group ref={group}>{children}</group>;
 }
@@ -202,7 +211,7 @@ function Gallery() {
 
 export default function Scene({ placards, active }: { placards: Placard[]; active: boolean }) {
   return (
-    <Canvas frameloop={active ? "always" : "never"} shadows dpr={[1, 2]} gl={{ antialias: true }} camera={{ near: 0.1, far: 60 }}>
+    <Canvas frameloop={active ? "demand" : "never"} shadows dpr={[1, 1.5]} gl={{ antialias: true }} camera={{ near: 0.1, far: 60 }}>
       <color attach="background" args={["#0e0f12"]} />
       <Rig />
       <SoftShadows size={18} samples={12} focus={0.6} />

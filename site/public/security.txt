@@ -1,5 +1,4 @@
 Contact: mailto:info@lumiverse.hr
-Contact: mailto:tihomir.jauk@lumiverse.hr
 Expires: 2027-10-09T00:00:00.000Z
 Preferred-Languages: en, hr
 Canonical: https://www.lumiverse.hr/.well-known/security.txt

@@ -16,6 +16,15 @@ export function BlockView({ block }: { block: Block }) {
         </div>
       );
     case "list":
+      if (block.variant === "pills") {
+        return (
+          <ul className={styles.pills}>
+            {block.items.map((item, i) => (
+              <li key={i}>{item.body}</li>
+            ))}
+          </ul>
+        );
+      }
       return (
         <ul className={styles.list}>
           {block.items.map((item, i) => (
@@ -49,6 +58,13 @@ export function BlockView({ block }: { block: Block }) {
               <div>
                 <h3>{item.title}</h3>
                 <Rich text={item.body} />
+                {item.chips && (
+                  <ul className={styles.chips}>
+                    {item.chips.map((chip) => (
+                      <li key={chip}>{chip}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </li>
           ))}
@@ -103,7 +119,7 @@ export function BlockView({ block }: { block: Block }) {
       return (
         <div className={styles.plans}>
           {block.items.map((plan, i) => (
-            <article key={i} className={styles.plan}>
+            <article key={i} className={styles.plan} data-featured={plan.featured || undefined}>
               <h3>{plan.name}</h3>
               <p className={styles.price}>
                 <span>{plan.price}</span>
@@ -124,6 +140,47 @@ export function BlockView({ block }: { block: Block }) {
             </article>
           ))}
         </div>
+      );
+    case "sites":
+      return (
+        <ul className={styles.sites}>
+          {block.items.map((site) => (
+            <li key={site.href}>
+              <a className={styles.site} href={site.href} target="_blank" rel="noopener">
+                <span className={styles.siteName}>
+                  {site.name}
+                  {site.badge && <span className={styles.siteBadge}>{site.badge}</span>}
+                </span>
+                <span className={styles.siteDomain}>
+                  {site.domain}
+                  <Icon name="arrow-right" size={14} />
+                </span>
+                {site.stats.length > 0 && (
+                  <dl className={styles.siteStats}>
+                    {site.stats.map((s) => (
+                      <div key={s.label}>
+                        <dt>{s.label}</dt>
+                        <dd>{s.value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+      );
+    case "links":
+      return (
+        <p className={styles.links}>
+          {block.lead && <span>{block.lead} </span>}
+          {block.items.map((link) => (
+            <a key={link.href} href={link.href} {...(link.external ? { target: "_blank", rel: "noopener" } : {})}>
+              {link.label}
+              <Icon name="arrow-right" size={14} />
+            </a>
+          ))}
+        </p>
       );
   }
 }

@@ -7,7 +7,7 @@ import styles from "./CaseStudy.module.css";
 
 // The hero exhibit: one framed screen at a time, advancing on its own like the live pages
 // (paused on hover or focus, and not at all under reduced motion).
-export function Showcase({ images, label, show }: { images: Img[]; label: string; show: string }) {
+export function Showcase({ images, label, show, caption }: { images: Img[]; label: string; show: string; caption?: string }) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
@@ -57,6 +57,7 @@ export function Showcase({ images, label, show }: { images: Img[]; label: string
           ))}
         </div>
       )}
+      {caption && <figcaption className={styles.showCaption}>{caption}</figcaption>}
     </figure>
   );
 }

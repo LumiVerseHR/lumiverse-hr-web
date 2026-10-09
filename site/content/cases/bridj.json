@@ -90,27 +90,61 @@
             "items": [
               {
                 "title": "Connect & Sync",
-                "body": "OAuth connectors pull data from seven external systems - major CRMs, meeting recorders and revenue-intelligence tools - on a schedule, into cloud storage. Stateless and independently scalable, so a slow sync never touches the app."
+                "body": "OAuth connectors pull data from seven external systems - major CRMs, meeting recorders and revenue-intelligence tools - on a schedule, into cloud storage. Stateless and independently scalable, so a slow sync never touches the app.",
+                "label": "01 · ingest",
+                "chips": [
+                  "OAuth",
+                  "7 sources",
+                  "GCS"
+                ]
               },
               {
                 "title": "Validate, Load & Clean",
-                "body": "A three-stage pipeline validates every incoming file, quarantines the failures, loads the good data to a raw store, then cleans it into a normalized shape - so downstream AI never sees malformed input."
+                "body": "A three-stage pipeline validates every incoming file, quarantines the failures, loads the good data to a raw store, then cleans it into a normalized shape - so downstream AI never sees malformed input.",
+                "label": "02 · refine",
+                "chips": [
+                  "Event-driven",
+                  "PostgreSQL"
+                ]
               },
               {
                 "title": "Summarize & Vectorize",
-                "body": "Transcripts are summarized and embedded into a vector store, isolated per organisation. This is the substrate that makes semantic search and retrieval possible."
+                "body": "Transcripts are summarized and embedded into a vector store, isolated per organisation. This is the substrate that makes semantic search and retrieval possible.",
+                "label": "03 · embed",
+                "chips": [
+                  "Embeddings",
+                  "pgvector",
+                  "Multi-tenant"
+                ]
               },
               {
                 "title": "Insight Engine",
-                "body": "A batch pipeline runs retrieval-augmented generation and clustering to turn the vectorized data into the insights, themes and signals that appear on the dashboard, persisted to an analytics database."
+                "body": "A batch pipeline runs retrieval-augmented generation and clustering to turn the vectorized data into the insights, themes and signals that appear on the dashboard, persisted to an analytics database.",
+                "label": "04 · reason",
+                "chips": [
+                  "RAG",
+                  "Clustering"
+                ]
               },
               {
                 "title": "Agent Layer",
-                "body": "Four purpose-built AI agents - insight Q&A, content generation, data analysis and executive briefings - stream answers to the app, and an MCP server exposes the same tools to external AI clients. Every query scoped to one organisation."
+                "body": "Four purpose-built AI agents - insight Q&A, content generation, data analysis and executive briefings - stream answers to the app, and an MCP server exposes the same tools to external AI clients. Every query scoped to one organisation.",
+                "label": "05 · converse",
+                "chips": [
+                  "Agno",
+                  "MCP",
+                  "SSE streaming"
+                ]
               },
               {
                 "title": "Multi-Tenant App",
-                "body": "The web application: organisation-level data isolation, a five-role permissions model, subscription billing, and a modern React front end - the surface everything else feeds."
+                "body": "The web application: organisation-level data isolation, a five-role permissions model, subscription billing, and a modern React front end - the surface everything else feeds.",
+                "label": "06 · deliver",
+                "chips": [
+                  "FastAPI",
+                  "Next.js",
+                  "Stripe"
+                ]
               }
             ]
           },
@@ -138,7 +172,8 @@
               {
                 "body": "Stripe billing"
               }
-            ]
+            ],
+            "variant": "pills"
           }
         ]
       },
@@ -210,17 +245,11 @@
       "secondary": {
         "label": "tell us what you're building",
         "href": "/#contact"
-      }
+      },
+      "badge": "Open for new projects",
+      "note": "See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too."
     },
-    "notes": [
-      "Hero showcase is an auto-rotating image carousel (data-showcase, crossfading slides).",
-      "Hero showcase caption under the image carousel (applies to all slides): Bridj's own product and public site. Dashboard shown with demo data.",
-      "Closing block has no buttons; instead a capacity note: a status badge and a paragraph with two inline links (mapped to closing.cta and closing.secondary). badge 'Open for new projects' + paragraph: See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too.",
-      "Architecture steps are rendered as an 'arch-flow' pipeline; each stage also carries a numbered stage label and tech chips not covered by the steps schema: 01 · ingest [OAuth, 7 sources, GCS]; 02 · refine [Event-driven, PostgreSQL]; 03 · embed [Embeddings, pgvector, Multi-tenant]; 04 · reason [RAG, Clustering]; 05 · converse [Agno, MCP, SSE streaming]; 06 · deliver [FastAPI, Next.js, Stripe]",
-      "Cards that contain a checkmark feature-list keep it inside the card: in card.body paragraphs are separated by a blank line (\\n\\n) and feature-list items by single newlines (\\n), list last.",
-      "Numbered role cards: card.meta holds the large card number (01, 02, ...).",
-      "The tech-stack 'list' after the architecture steps is rendered as a single row of pills (stack-line), not a bulleted list."
-    ]
+    "showcaseCaption": "Bridj's own product and public site. Dashboard shown with demo data."
   },
   "hr": {
     "slug": "bridj",
@@ -313,27 +342,61 @@
             "items": [
               {
                 "title": "Spajanje i sinkronizacija",
-                "body": "OAuth konektori po rasporedu povlače podatke iz sedam vanjskih sustava — vodećih CRM-ova, snimača sastanaka i alata za analizu prihoda — u pohranu u oblaku. Bez stanja i neovisno skalabilni, pa spora sinkronizacija nikad ne dotakne aplikaciju."
+                "body": "OAuth konektori po rasporedu povlače podatke iz sedam vanjskih sustava — vodećih CRM-ova, snimača sastanaka i alata za analizu prihoda — u pohranu u oblaku. Bez stanja i neovisno skalabilni, pa spora sinkronizacija nikad ne dotakne aplikaciju.",
+                "label": "01 · ingest",
+                "chips": [
+                  "OAuth",
+                  "7 izvora",
+                  "GCS"
+                ]
               },
               {
                 "title": "Provjera, učitavanje i čišćenje",
-                "body": "Pipeline u tri koraka provjerava svaku dolaznu datoteku, neispravne stavlja u karantenu, dobre podatke učitava u sirovu pohranu i zatim ih čisti u normaliziran oblik — da AI nizvodno nikad ne vidi neispravan ulaz."
+                "body": "Pipeline u tri koraka provjerava svaku dolaznu datoteku, neispravne stavlja u karantenu, dobre podatke učitava u sirovu pohranu i zatim ih čisti u normaliziran oblik — da AI nizvodno nikad ne vidi neispravan ulaz.",
+                "label": "02 · refine",
+                "chips": [
+                  "Vođeno događajima",
+                  "PostgreSQL"
+                ]
               },
               {
                 "title": "Sažimanje i vektorizacija",
-                "body": "Transkripti se sažimaju i upisuju u vektorsku pohranu, odvojenu po organizaciji. To je podloga koja omogućuje semantičku pretragu i dohvat."
+                "body": "Transkripti se sažimaju i upisuju u vektorsku pohranu, odvojenu po organizaciji. To je podloga koja omogućuje semantičku pretragu i dohvat.",
+                "label": "03 · embed",
+                "chips": [
+                  "Embeddings",
+                  "pgvector",
+                  "Multi-tenant"
+                ]
               },
               {
                 "title": "Pogon uvida",
-                "body": "Skupni pipeline pokreće RAG i grupiranje kako bi vektorizirane podatke pretvorio u uvide, teme i signale koji se pojavljuju na nadzornoj ploči i spremaju u analitičku bazu."
+                "body": "Skupni pipeline pokreće RAG i grupiranje kako bi vektorizirane podatke pretvorio u uvide, teme i signale koji se pojavljuju na nadzornoj ploči i spremaju u analitičku bazu.",
+                "label": "04 · reason",
+                "chips": [
+                  "RAG",
+                  "Grupiranje"
+                ]
               },
               {
                 "title": "Sloj agenata",
-                "body": "Četiri namjenska AI agenta — pitanja i odgovori nad uvidima, izrada sadržaja, analiza podataka i sažeci za upravu — odgovore prenose u aplikaciju, a MCP poslužitelj iste alate izlaže vanjskim AI klijentima. Svaki upit ograničen je na jednu organizaciju."
+                "body": "Četiri namjenska AI agenta — pitanja i odgovori nad uvidima, izrada sadržaja, analiza podataka i sažeci za upravu — odgovore prenose u aplikaciju, a MCP poslužitelj iste alate izlaže vanjskim AI klijentima. Svaki upit ograničen je na jednu organizaciju.",
+                "label": "05 · converse",
+                "chips": [
+                  "Agno",
+                  "MCP",
+                  "SSE streaming"
+                ]
               },
               {
                 "title": "Multi-tenant aplikacija",
-                "body": "Web aplikacija: odvajanje podataka na razini organizacije, model dopuštenja s pet uloga, naplata pretplata i moderan React frontend — sučelje koje sve ostalo hrani."
+                "body": "Web aplikacija: odvajanje podataka na razini organizacije, model dopuštenja s pet uloga, naplata pretplata i moderan React frontend — sučelje koje sve ostalo hrani.",
+                "label": "06 · deliver",
+                "chips": [
+                  "FastAPI",
+                  "Next.js",
+                  "Stripe"
+                ]
               }
             ]
           },
@@ -361,7 +424,8 @@
               {
                 "body": "Stripe naplata"
               }
-            ]
+            ],
+            "variant": "pills"
           }
         ]
       },
@@ -433,16 +497,10 @@
       "secondary": {
         "label": "recite što gradite",
         "href": "/hr#contact"
-      }
+      },
+      "badge": "Primamo nove projekte",
+      "note": "Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni."
     },
-    "notes": [
-      "Hero showcase is an auto-rotating image carousel (data-showcase, crossfading slides).",
-      "Hero showcase caption under the image carousel (applies to all slides): Bridjev vlastiti proizvod i javna stranica. Nadzorna ploča prikazana s demo podacima.",
-      "Closing block has no buttons; instead a capacity note: a status badge and a paragraph with two inline links (mapped to closing.cta and closing.secondary). badge 'Primamo nove projekte' + paragraph: Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni.",
-      "Architecture steps are rendered as an 'arch-flow' pipeline; each stage also carries a numbered stage label and tech chips not covered by the steps schema: 01 · ingest [OAuth, 7 izvora, GCS]; 02 · refine [Vođeno događajima, PostgreSQL]; 03 · embed [Embeddings, pgvector, Multi-tenant]; 04 · reason [RAG, Grupiranje]; 05 · converse [Agno, MCP, SSE streaming]; 06 · deliver [FastAPI, Next.js, Stripe]",
-      "Cards that contain a checkmark feature-list keep it inside the card: in card.body paragraphs are separated by a blank line (\\n\\n) and feature-list items by single newlines (\\n), list last.",
-      "Numbered role cards: card.meta holds the large card number (01, 02, ...).",
-      "The tech-stack 'list' after the architecture steps is rendered as a single row of pills (stack-line), not a bulleted list."
-    ]
+    "showcaseCaption": "Bridjev vlastiti proizvod i javna stranica. Nadzorna ploča prikazana s demo podacima."
   }
 }

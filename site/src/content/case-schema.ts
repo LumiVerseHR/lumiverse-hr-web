@@ -6,13 +6,15 @@ export type Img = { src: string; alt: string; caption?: string; width: number; h
 
 export type Block =
   | { type: "text"; paragraphs: string[] }
-  | { type: "list"; items: { title?: string; body: string }[] }
+  | { type: "list"; items: { title?: string; body: string }[]; variant?: "pills" }
   | { type: "cards"; items: { title: string; body: string; meta?: string }[] }
-  | { type: "steps"; items: { title: string; body: string; label?: string }[] }
+  | { type: "steps"; items: { title: string; body: string; label?: string; chips?: string[] }[] }
   | { type: "images"; items: Img[] }
   | { type: "quote"; text: string; cite?: string }
   | { type: "table"; head: string[]; rows: string[][]; caption?: string }
-  | { type: "plans"; items: { name: string; price: string; period?: string; features: string[]; note?: string; cta?: Link }[] };
+  | { type: "plans"; items: { name: string; price: string; period?: string; features: string[]; note?: string; cta?: Link; featured?: boolean }[] }
+  | { type: "sites"; items: { name: string; domain: string; href: string; badge?: string; stats: { value: string; label: string }[] }[] }
+  | { type: "links"; lead?: string; items: Link[] };
 
 export type Section = { id?: string; title: string; lede?: string; blocks: Block[] };
 
@@ -23,10 +25,12 @@ export type CaseStudy = {
   title: string;
   titleNote?: string; // e.g. "(My Colleague)"
   subtitle: string;
+  heroNote?: string; // an honesty note under the subtitle, e.g. "computed, not measured"
   ctas: Link[];
   showcase: Img[]; // hero screenshots, in order
+  showcaseCaption?: string;
   stats: { value: string; label: string }[];
   sections: Section[];
-  closing?: { title: string; body: string; cta: Link; secondary?: Link };
+  closing?: { title: string; body: string; cta: Link; secondary?: Link; badge?: string; note?: string };
   notes?: string[]; // anything on the live page that did not fit this schema, for the builder to handle
 };

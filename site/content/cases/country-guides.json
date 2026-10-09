@@ -211,128 +211,331 @@
         "lede": "Every number here is a page you can open. Each site runs the same platform on its own domain, with its own content.",
         "blocks": [
           {
-            "type": "table",
-            "head": [
-              "",
-              "",
-              "Destinations",
-              "Attractions",
-              "Articles",
-              "Blog posts"
-            ],
-            "rows": [
-              [
-                "Oregon",
-                "oregon-guide.com",
-                "20",
-                "139",
-                "58",
-                "59"
-              ],
-              [
-                "Croatia",
-                "croatian-guide.com",
-                "204",
-                "871",
-                "74",
-                "124"
-              ],
-              [
-                "France",
-                "french-guides.com",
-                "128",
-                "824",
-                "60",
-                "61"
-              ],
-              [
-                "Italy",
-                "italian-guides.com",
-                "136",
-                "779",
-                "60",
-                "61"
-              ],
-              [
-                "Netherlands",
-                "dutch-guide.com",
-                "146",
-                "630",
-                "62",
-                "105"
-              ],
-              [
-                "Slovenia",
-                "slovenia-guide.com",
-                "115",
-                "582",
-                "60",
-                "124"
-              ],
-              [
-                "Switzerland",
-                "switzerland-explorer.com",
-                "96",
-                "478",
-                "54",
-                "64"
-              ],
-              [
-                "Austria",
-                "discover-austria.com",
-                "104",
-                "444",
-                "63",
-                "61"
-              ],
-              [
-                "Portugal",
-                "portugal-guides.com",
-                "85",
-                "439",
-                "60",
-                "63"
-              ],
-              [
-                "Spain",
-                "spanish-guides.com",
-                "67",
-                "375",
-                "60",
-                "58"
-              ],
-              [
-                "Greece",
-                "greece-guides.com",
-                "47",
-                "297",
-                "60",
-                "60"
-              ],
-              [
-                "Canada",
-                "canadian-guide.com",
-                "50",
-                "289",
-                "80",
-                "58"
-              ],
-              [
-                "Morocco",
-                "moroccan-guides.com",
-                "47",
-                "219",
-                "60",
-                "61"
-              ],
-              [
-                "Colorado",
-                "colorado-guide.com",
-                "29",
-                "96",
-                "59",
-                "55"
-              ]
+            "type": "sites",
+            "items": [
+              {
+                "name": "Oregon",
+                "domain": "oregon-guide.com",
+                "href": "https://oregon-guide.com",
+                "badge": "Newest",
+                "stats": [
+                  {
+                    "value": "20",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "139",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "58",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "59",
+                    "label": "Blog posts"
+                  }
+                ]
+              },
+              {
+                "name": "Croatia",
+                "domain": "croatian-guide.com",
+                "href": "https://croatian-guide.com",
+                "stats": [
+                  {
+                    "value": "204",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "871",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "74",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "124",
+                    "label": "Blog posts"
+                  }
+                ]
+              },
+              {
+                "name": "France",
+                "domain": "french-guides.com",
+                "href": "https://french-guides.com",
+                "stats": [
+                  {
+                    "value": "128",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "824",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "61",
+                    "label": "Blog posts"
+                  }
+                ]
+              },
+              {
+                "name": "Italy",
+                "domain": "italian-guides.com",
+                "href": "https://italian-guides.com",
+                "stats": [
+                  {
+                    "value": "136",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "779",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "61",
+                    "label": "Blog posts"
+                  }
+                ]
+              },
+              {
+                "name": "Netherlands",
+                "domain": "dutch-guide.com",
+                "href": "https://dutch-guide.com",
+                "stats": [
+                  {
+                    "value": "146",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "630",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "62",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "105",
+                    "label": "Blog posts"
+                  }
+                ]
+              },
+              {
+                "name": "Slovenia",
+                "domain": "slovenia-guide.com",
+                "href": "https://slovenia-guide.com",
+                "stats": [
+                  {
+                    "value": "115",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "582",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "124",
+                    "label": "Blog posts"
+                  }
+                ]
+              },
+              {
+                "name": "Switzerland",
+                "domain": "switzerland-explorer.com",
+                "href": "https://switzerland-explorer.com",
+                "stats": [
+                  {
+                    "value": "96",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "478",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "54",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "64",
+                    "label": "Blog posts"
+                  }
+                ]
+              },
+              {
+                "name": "Austria",
+                "domain": "discover-austria.com",
+                "href": "https://discover-austria.com",
+                "stats": [
+                  {
+                    "value": "104",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "444",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "63",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "61",
+                    "label": "Blog posts"
+                  }
+                ]
+              },
+              {
+                "name": "Portugal",
+                "domain": "portugal-guides.com",
+                "href": "https://portugal-guides.com",
+                "stats": [
+                  {
+                    "value": "85",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "439",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "63",
+                    "label": "Blog posts"
+                  }
+                ]
+              },
+              {
+                "name": "Spain",
+                "domain": "spanish-guides.com",
+                "href": "https://spanish-guides.com",
+                "stats": [
+                  {
+                    "value": "67",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "375",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "58",
+                    "label": "Blog posts"
+                  }
+                ]
+              },
+              {
+                "name": "Greece",
+                "domain": "greece-guides.com",
+                "href": "https://greece-guides.com",
+                "stats": [
+                  {
+                    "value": "47",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "297",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Blog posts"
+                  }
+                ]
+              },
+              {
+                "name": "Canada",
+                "domain": "canadian-guide.com",
+                "href": "https://canadian-guide.com",
+                "stats": [
+                  {
+                    "value": "50",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "289",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "80",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "58",
+                    "label": "Blog posts"
+                  }
+                ]
+              },
+              {
+                "name": "Morocco",
+                "domain": "moroccan-guides.com",
+                "href": "https://moroccan-guides.com",
+                "stats": [
+                  {
+                    "value": "47",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "219",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "61",
+                    "label": "Blog posts"
+                  }
+                ]
+              },
+              {
+                "name": "Colorado",
+                "domain": "colorado-guide.com",
+                "href": "https://colorado-guide.com",
+                "stats": [
+                  {
+                    "value": "29",
+                    "label": "Destinations"
+                  },
+                  {
+                    "value": "96",
+                    "label": "Attractions"
+                  },
+                  {
+                    "value": "59",
+                    "label": "Articles"
+                  },
+                  {
+                    "value": "55",
+                    "label": "Blog posts"
+                  }
+                ]
+              }
             ]
           }
         ]
@@ -348,17 +551,10 @@
       "secondary": {
         "label": "See starting prices",
         "href": "/pricing"
-      }
-    },
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (data-showcase, 5200 ms interval) cycling the 5 showcase images in order.",
-      "Card bodies use plain-text line breaks: paragraphs are separated by \"\\n\\n\" and checklist (feature-list, check-icon) lines by a single \"\\n\". Render with white-space: pre-line or split. Cards with checklists: \"The Same Shape Everywhere\" (checklist only) and \"Identity Is a Config File\" (paragraph, then checklist).",
-      "Steps blocks come from numbered cards (01, 02, 03...); the number is the item order.",
-      "Section \"Every Page Is Researched, Then Written\": the single card after the steps is a full-width card below the 6-step grid.",
-      "Section \"Fourteen Domains, One Deploy Pipeline\" is a bento grid: cards 1 and 3 are the large (double-width) cards.",
-      "Section \"Fourteen Guides, Live Right Now\": the table is a grid of 14 site cards on the page, not a table. The first two columns (country, domain) have no header text on the page. Each card shows a flag emoji and is an external link (new tab): Oregon -> https://oregon-guide.com, Croatia -> https://croatian-guide.com, France -> https://french-guides.com, Italy -> https://italian-guides.com, Netherlands -> https://dutch-guide.com, Slovenia -> https://slovenia-guide.com, Switzerland -> https://switzerland-explorer.com, Austria -> https://discover-austria.com, Portugal -> https://portugal-guides.com, Spain -> https://spanish-guides.com, Greece -> https://greece-guides.com, Canada -> https://canadian-guide.com, Morocco -> https://moroccan-guides.com, Colorado -> https://colorado-guide.com. The first card (Oregon) is visually featured and carries a \"Newest\" badge.",
-      "Closing block also shows a capacity note: a pill badge \"Open for new projects\" followed by the paragraph \"See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too.\". closing.cta and closing.secondary are the two inline links inside that paragraph, not buttons."
-    ]
+      },
+      "badge": "Open for new projects",
+      "note": "See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too."
+    }
   },
   "hr": {
     "slug": "country-guides",
@@ -572,128 +768,331 @@
         "lede": "Svaka je brojka ovdje stranica koju možete otvoriti. Svaka stranica vrti istu platformu na vlastitoj domeni, s vlastitim sadržajem.",
         "blocks": [
           {
-            "type": "table",
-            "head": [
-              "",
-              "",
-              "Destinacija",
-              "Znamenitosti",
-              "Članaka",
-              "Blog objava"
-            ],
-            "rows": [
-              [
-                "Oregon",
-                "oregon-guide.com",
-                "20",
-                "139",
-                "58",
-                "59"
-              ],
-              [
-                "Hrvatska",
-                "croatian-guide.com",
-                "204",
-                "871",
-                "74",
-                "124"
-              ],
-              [
-                "Francuska",
-                "french-guides.com",
-                "128",
-                "824",
-                "60",
-                "61"
-              ],
-              [
-                "Italija",
-                "italian-guides.com",
-                "136",
-                "779",
-                "60",
-                "61"
-              ],
-              [
-                "Nizozemska",
-                "dutch-guide.com",
-                "146",
-                "630",
-                "62",
-                "105"
-              ],
-              [
-                "Slovenija",
-                "slovenia-guide.com",
-                "115",
-                "582",
-                "60",
-                "124"
-              ],
-              [
-                "Švicarska",
-                "switzerland-explorer.com",
-                "96",
-                "478",
-                "54",
-                "64"
-              ],
-              [
-                "Austrija",
-                "discover-austria.com",
-                "104",
-                "444",
-                "63",
-                "61"
-              ],
-              [
-                "Portugal",
-                "portugal-guides.com",
-                "85",
-                "439",
-                "60",
-                "63"
-              ],
-              [
-                "Španjolska",
-                "spanish-guides.com",
-                "67",
-                "375",
-                "60",
-                "58"
-              ],
-              [
-                "Grčka",
-                "greece-guides.com",
-                "47",
-                "297",
-                "60",
-                "60"
-              ],
-              [
-                "Kanada",
-                "canadian-guide.com",
-                "50",
-                "289",
-                "80",
-                "58"
-              ],
-              [
-                "Maroko",
-                "moroccan-guides.com",
-                "47",
-                "219",
-                "60",
-                "61"
-              ],
-              [
-                "Colorado",
-                "colorado-guide.com",
-                "29",
-                "96",
-                "59",
-                "55"
-              ]
+            "type": "sites",
+            "items": [
+              {
+                "name": "Oregon",
+                "domain": "oregon-guide.com",
+                "href": "https://oregon-guide.com",
+                "badge": "Najnovije",
+                "stats": [
+                  {
+                    "value": "20",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "139",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "58",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "59",
+                    "label": "Blog objava"
+                  }
+                ]
+              },
+              {
+                "name": "Hrvatska",
+                "domain": "croatian-guide.com",
+                "href": "https://croatian-guide.com",
+                "stats": [
+                  {
+                    "value": "204",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "871",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "74",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "124",
+                    "label": "Blog objava"
+                  }
+                ]
+              },
+              {
+                "name": "Francuska",
+                "domain": "french-guides.com",
+                "href": "https://french-guides.com",
+                "stats": [
+                  {
+                    "value": "128",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "824",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "61",
+                    "label": "Blog objava"
+                  }
+                ]
+              },
+              {
+                "name": "Italija",
+                "domain": "italian-guides.com",
+                "href": "https://italian-guides.com",
+                "stats": [
+                  {
+                    "value": "136",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "779",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "61",
+                    "label": "Blog objava"
+                  }
+                ]
+              },
+              {
+                "name": "Nizozemska",
+                "domain": "dutch-guide.com",
+                "href": "https://dutch-guide.com",
+                "stats": [
+                  {
+                    "value": "146",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "630",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "62",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "105",
+                    "label": "Blog objava"
+                  }
+                ]
+              },
+              {
+                "name": "Slovenija",
+                "domain": "slovenia-guide.com",
+                "href": "https://slovenia-guide.com",
+                "stats": [
+                  {
+                    "value": "115",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "582",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "124",
+                    "label": "Blog objava"
+                  }
+                ]
+              },
+              {
+                "name": "Švicarska",
+                "domain": "switzerland-explorer.com",
+                "href": "https://switzerland-explorer.com",
+                "stats": [
+                  {
+                    "value": "96",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "478",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "54",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "64",
+                    "label": "Blog objava"
+                  }
+                ]
+              },
+              {
+                "name": "Austrija",
+                "domain": "discover-austria.com",
+                "href": "https://discover-austria.com",
+                "stats": [
+                  {
+                    "value": "104",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "444",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "63",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "61",
+                    "label": "Blog objava"
+                  }
+                ]
+              },
+              {
+                "name": "Portugal",
+                "domain": "portugal-guides.com",
+                "href": "https://portugal-guides.com",
+                "stats": [
+                  {
+                    "value": "85",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "439",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "63",
+                    "label": "Blog objava"
+                  }
+                ]
+              },
+              {
+                "name": "Španjolska",
+                "domain": "spanish-guides.com",
+                "href": "https://spanish-guides.com",
+                "stats": [
+                  {
+                    "value": "67",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "375",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "58",
+                    "label": "Blog objava"
+                  }
+                ]
+              },
+              {
+                "name": "Grčka",
+                "domain": "greece-guides.com",
+                "href": "https://greece-guides.com",
+                "stats": [
+                  {
+                    "value": "47",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "297",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Blog objava"
+                  }
+                ]
+              },
+              {
+                "name": "Kanada",
+                "domain": "canadian-guide.com",
+                "href": "https://canadian-guide.com",
+                "stats": [
+                  {
+                    "value": "50",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "289",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "80",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "58",
+                    "label": "Blog objava"
+                  }
+                ]
+              },
+              {
+                "name": "Maroko",
+                "domain": "moroccan-guides.com",
+                "href": "https://moroccan-guides.com",
+                "stats": [
+                  {
+                    "value": "47",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "219",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "60",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "61",
+                    "label": "Blog objava"
+                  }
+                ]
+              },
+              {
+                "name": "Colorado",
+                "domain": "colorado-guide.com",
+                "href": "https://colorado-guide.com",
+                "stats": [
+                  {
+                    "value": "29",
+                    "label": "Destinacija"
+                  },
+                  {
+                    "value": "96",
+                    "label": "Znamenitosti"
+                  },
+                  {
+                    "value": "59",
+                    "label": "Članaka"
+                  },
+                  {
+                    "value": "55",
+                    "label": "Blog objava"
+                  }
+                ]
+              }
             ]
           }
         ]
@@ -709,16 +1108,9 @@
       "secondary": {
         "label": "Pogledajte početne cijene",
         "href": "/hr/pricing"
-      }
-    },
-    "notes": [
-      "Hero showcase is an auto-rotating slideshow (data-showcase, 5200 ms interval) cycling the 5 showcase images in order.",
-      "Card bodies use plain-text line breaks: paragraphs are separated by \"\\n\\n\" and checklist (feature-list, check-icon) lines by a single \"\\n\". Render with white-space: pre-line or split. Cards with checklists: \"Isti oblik svugdje\" (checklist only) and \"Identitet je konfiguracijska datoteka\" (paragraph, then checklist).",
-      "Steps blocks come from numbered cards (01, 02, 03...); the number is the item order.",
-      "Section \"Svaka se stranica prvo istraži, pa napiše\": the single card after the steps is a full-width card below the 6-step grid.",
-      "Section \"Četrnaest domena, jedan pipeline za deploy\" is a bento grid: cards 1 and 3 are the large (double-width) cards.",
-      "Section \"Četrnaest vodiča, u pogonu upravo sada\": the table is a grid of 14 site cards on the page, not a table. The first two columns (country, domain) have no header text on the page. Each card shows a flag emoji and is an external link (new tab): Oregon -> https://oregon-guide.com, Hrvatska -> https://croatian-guide.com, Francuska -> https://french-guides.com, Italija -> https://italian-guides.com, Nizozemska -> https://dutch-guide.com, Slovenija -> https://slovenia-guide.com, Švicarska -> https://switzerland-explorer.com, Austrija -> https://discover-austria.com, Portugal -> https://portugal-guides.com, Španjolska -> https://spanish-guides.com, Grčka -> https://greece-guides.com, Kanada -> https://canadian-guide.com, Maroko -> https://moroccan-guides.com, Colorado -> https://colorado-guide.com. The first card (Oregon) is visually featured and carries a \"Najnovije\" badge.",
-      "Closing block also shows a capacity note: a pill badge \"Primamo nove projekte\" followed by the paragraph \"Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni.\". closing.cta and closing.secondary are the two inline links inside that paragraph, not buttons."
-    ]
+      },
+      "badge": "Primamo nove projekte",
+      "note": "Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni."
+    }
   }
 }
