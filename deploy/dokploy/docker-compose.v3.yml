@@ -1,0 +1,71 @@
+# Dokploy compose for the v3 site (Next.js, site/). NOT wired yet: production
+# still deploys docker-compose.prod.yml (the legacy static site). To cut over,
+# point the Dokploy app at this file; Traefik labels and hosts match the
+# current setup, so the switch is one compose change and a redeploy.
+
+services:
+  lumiverse-web:
+    build:
+      context: ./site
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    networks: [default, dokploy-network]
+    environment:
+      CONTACT_API_URL: http://lumiverse-contact:3000
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=dokploy-network
+
+      - traefik.http.middlewares.lumiverse-hsts.headers.stsSeconds=31536000
+      - traefik.http.middlewares.lumiverse-hsts.headers.stsIncludeSubdomains=true
+
+      # www.lumiverse.hr: canonical, served by Next.js on :3000
+      - "traefik.http.routers.lumiverse-web.rule=Host(`www.lumiverse.hr`)"
+      - traefik.http.routers.lumiverse-web.entrypoints=websecure
+      - traefik.http.routers.lumiverse-web.tls.certresolver=letsencrypt
+      - traefik.http.routers.lumiverse-web.middlewares=lumiverse-hsts
+      - traefik.http.services.lumiverse-web.loadbalancer.server.port=3000
+      - "traefik.http.routers.lumiverse-web-http.rule=Host(`www.lumiverse.hr`)"
+      - traefik.http.routers.lumiverse-web-http.entrypoints=web
+      - traefik.http.routers.lumiverse-web-http.middlewares=redirect-to-https@file
+      - traefik.http.routers.lumiverse-web-http.service=lumiverse-web
+
+      # lumiverse.hr (apex) -> https://www.lumiverse.hr/... (permanent)
+      - "traefik.http.middlewares.lumiverse-canonical.redirectregex.regex=^https?://[^/]+/(.*)"
+      - "traefik.http.middlewares.lumiverse-canonical.redirectregex.replacement=https://www.lumiverse.hr/$${1}"
+      - traefik.http.middlewares.lumiverse-canonical.redirectregex.permanent=true
+      - "traefik.http.routers.lumiverse-redir.rule=Host(`lumiverse.hr`)"
+      - traefik.http.routers.lumiverse-redir.entrypoints=websecure
+      - traefik.http.routers.lumiverse-redir.tls.certresolver=letsencrypt
+      - traefik.http.routers.lumiverse-redir.middlewares=lumiverse-canonical
+      - traefik.http.routers.lumiverse-redir.service=lumiverse-web
+      - "traefik.http.routers.lumiverse-redir-http.rule=Host(`lumiverse.hr`)"
+      - traefik.http.routers.lumiverse-redir-http.entrypoints=web
+      - traefik.http.routers.lumiverse-redir-http.middlewares=lumiverse-canonical
+      - traefik.http.routers.lumiverse-redir-http.service=lumiverse-web
+
+  # The contact form backend, unchanged. Next.js rewrites /api/contact to it.
+  lumiverse-contact:
+    build:
+      context: .
+      dockerfile: contact/Dockerfile
+    restart: unless-stopped
+    networks: [default]
+    environment:
+      BREVO_API_KEY: ${BREVO_API_KEY:-}
+      CONTACT_TO: ${CONTACT_TO:-tihomir.jauk@lumiverse.hr}
+      CONTACT_FROM: ${CONTACT_FROM:-web@lumiverse.hr}
+      CONTACT_ORIGINS: https://www.lumiverse.hr
+    deploy:
+      resources:
+        limits:
+          memory: 96M
+
+networks:
+  default:
+  dokploy-network:
+    external: true

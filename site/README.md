@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# lumiverse.hr v3
 
-## Getting Started
+The Next.js rewrite of the LumiVerse site (branch `feat/design-v3`). The legacy
+static site at the repo root keeps serving production until cutover.
 
-First, run the development server:
+## Run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev            # http://localhost:3000
+npm run build          # standalone server in .next/standalone
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Docker: `docker build -t lumiverse-site .` then `docker run -p 3000:3000 lumiverse-site`.
+`docker-compose.dev.yml` runs the dev server in a container. Production compose for
+Dokploy: `../deploy/dokploy/docker-compose.v3.yml` (not wired yet).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+If `npm ci` fails in Docker with "Missing: @emnapi/... from lock file", the
+lockfile was written on macOS without Linux optional packages: delete
+`node_modules` and `package-lock.json`, run `npm install`, commit the lockfile.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Where things live
 
-## Learn More
+| Path | What |
+|---|---|
+| `src/app/[lang]/` | Every page; `en` is served at `/`, `hr` at `/hr` (see `src/proxy.ts`) |
+| `src/i18n/dictionaries/{en,hr}.json` | UI and homepage copy |
+| `content/cases/<slug>.json` | Case studies, `{ en, hr }`, shaped by `src/content/case-schema.ts` |
+| `content/blog/en/*.md` | Blog posts (front matter + Markdown) |
+| `src/content/packages.mjs` | Every package and price (pricing page, landing pages, contact form) |
+| `src/content/work.ts` | Homepage flagships and work index |
+| `src/components/stage/` | The real-time 3D hero (React Three Fiber) |
+| `models-src/maquette.blend` | Blender source of `public/models/maquette.glb` |
+| `public/` | Static files, including the deck, reel and brand guide served as-is |
 
-To learn more about Next.js, take a look at the following resources:
+## Contact form
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The form posts to `/api/contact`, which `next.config.ts` rewrites to the existing
+contact service (`../contact/server.mjs`). Set `CONTACT_API_URL` to reach it.
