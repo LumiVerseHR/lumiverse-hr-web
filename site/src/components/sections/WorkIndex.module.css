@@ -20,11 +20,18 @@
   padding: 20px 4px;
   border-bottom: 1px solid rgb(255 255 255 / 0.1);
   text-decoration: none;
-  transition: background-color 200ms ease-out, padding 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: background-color 200ms ease-out;
+}
+
+.row > span {
+  transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.row[data-active] > span {
+  transform: translateX(12px);
 }
 
 .row[data-active] {
-  padding-left: 16px;
   background: linear-gradient(90deg, rgb(255 210 166 / 0.06), transparent 70%);
 }
 
