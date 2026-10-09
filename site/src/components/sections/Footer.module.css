@@ -1,0 +1,96 @@
+.footer {
+  padding: clamp(64px, 7vw, 112px) var(--gutter) 32px;
+  border-top: 1px solid rgb(255 255 255 / 0.08);
+  background: #0a0a0c;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.wordmark {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.dot {
+  display: inline-block;
+  width: 0.34em;
+  height: 0.34em;
+  margin-left: 0.3em;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.tagline {
+  margin: 16px 0 0;
+  max-width: 30ch;
+  color: var(--text-soft);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 32px;
+}
+
+.columns ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+}
+
+.columns a {
+  color: var(--text-soft);
+  text-decoration: none;
+  transition: color 160ms ease-out;
+}
+
+.columns a:hover {
+  color: var(--text);
+}
+
+.workList {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+}
+
+.colTitle {
+  margin: 0 0 18px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.legal {
+  max-width: 1440px;
+  margin: 64px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgb(255 255 255 / 0.08);
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.legal p {
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .inner,
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}

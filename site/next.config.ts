@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
   partialPrefetching: true,
   // One canonical URL per English page: /en/x lives at /x. The proxy marks its own
   // rewrites to /en with x-lv-rewrite, so only visitor requests get redirected.
+  // The contact form keeps its own small, tested service (contact/server.mjs);
+  // in production CONTACT_API_URL points at it on the internal network.
+  async rewrites() {
+    return [{ source: "/api/contact", destination: `${process.env.CONTACT_API_URL ?? "http://lumiverse-contact:3000"}/api/contact` }];
+  },
   async redirects() {
     return [
       { source: "/en", destination: "/", permanent: true, missing: [{ type: "header", key: "x-lv-rewrite" }] },

@@ -39,5 +39,106 @@
       "title": "AIR-LASER",
       "caption": "Physics design study · computed, not built"
     }
-  ]
+  ],
+  "flagships": {
+    "title": "Humans, Amplified.",
+    "lede": "Three rooms of the model, opened up. Real products, a real platform, and real research, each with the number that proves it.",
+    "open": "Open the case study"
+  },
+  "thesis": {
+    "lines": [
+      "Generation is cheap.",
+      "Judgement isn’t."
+    ],
+    "body": "Every model can write the code, the article, the level. That part gets cheaper every quarter. What we bring is the part after the model: the checks, the cross-references and the human sign-off that decide whether its output is allowed to ship.",
+    "link": "Read: the moat is the verifier, not the generator",
+    "href": "/blog/verifier-not-generator"
+  },
+  "index": {
+    "title": "Everything else we’ve shipped",
+    "lede": "Newsrooms, legacy rebuilds, games, BI. Different domains, the same discipline.",
+    "open": "Open"
+  },
+  "services": {
+    "title": "Pick how we work together",
+    "lede": "Three ways in, each with a fixed price in writing before we start.",
+    "doorsTitle": "Looking for something specific?",
+    "doors": [
+      {
+        "label": "Croatian business? Fixed-price AI packages",
+        "href": "/pricing"
+      },
+      {
+        "label": "Need a senior tech lead inside your team",
+        "href": "/tech-lead"
+      },
+      {
+        "label": "Founder looking for a technical co-founder",
+        "href": "/technical-founder"
+      }
+    ],
+    "more": "See every package and price"
+  },
+  "notes": {
+    "title": "Notes from the workbench",
+    "all": "All posts",
+    "read": "min read"
+  },
+  "studio": {
+    "title": "Small studio, unreasonable range",
+    "body": "LumiVerse is a founder-led AI product studio in Zagreb. We build our own products and embed with teams to build theirs. The same hands that rebuilt a ten-year-old rent-a-car system also run an agentic simulation station that computes plasma-display physics. Range isn’t a lack of focus. It’s the focus.",
+    "principles": [
+      {
+        "title": "We eat our own cooking",
+        "body": "Titlomat, Tvrtko.ai and Country Guides are our products in production, with real users. We know what shipping costs because we pay it ourselves."
+      },
+      {
+        "title": "We embed, we don’t hover",
+        "body": "For a UK intelligence platform we’ve owned the architecture, a 17-service system and release sign-off for over a year."
+      },
+      {
+        "title": "Honest about the hard parts",
+        "body": "Every case study says what needed a human and what’s still rough."
+      }
+    ],
+    "founder": "LumiVerse d.o.o. · Zagreb, Croatia · founded and led by Tihomir Jauk"
+  },
+  "contact": {
+    "title": "Tell us what you’re building",
+    "lede": "Pick what you need, or describe it in your own words. We reply within 24 hours.",
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "optional": "optional",
+    "need": "What do you need?",
+    "notSure": "Not sure yet",
+    "other": "Something else",
+    "message": "Tell us about it",
+    "messageHint": "What you want to build or fix, and anything you already know about timing or budget.",
+    "send": "Send your brief",
+    "sending": "Sending…",
+    "sent": "Thanks. Your brief is with us, and we’ll reply within 24 hours.",
+    "errorField": "Check this field:",
+    "errorSend": "That didn’t send. Email us at info@lumiverse.hr and we’ll pick it up from there.",
+    "privacy": "We use these details only to reply to you. They reach our inbox through Brevo, our EU email provider, and go nowhere else.",
+    "office": "Office",
+    "phone": "Phone",
+    "emailLabel": "Email",
+    "vat": "VAT ID",
+    "fields": {
+      "name": "name",
+      "email": "email",
+      "company": "company",
+      "package": "what you need",
+      "message": "message (at least 10 characters)"
+    }
+  },
+  "footer": {
+    "tagline": "AI products, and the checks that make them safe to ship.",
+    "work": "Work",
+    "studio": "Studio",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "cookies": "Cookie preferences"
+  }
 }

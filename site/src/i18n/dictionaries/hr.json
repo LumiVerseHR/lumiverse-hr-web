@@ -39,5 +39,106 @@
       "title": "AIR-LASER",
       "caption": "Fizikalna studija dizajna · izračunato, ne izgrađeno"
     }
-  ]
+  ],
+  "flagships": {
+    "title": "Ljudi koji mogu više.",
+    "lede": "Tri prostorije makete, otvorene. Stvarni proizvodi, stvarna platforma i stvarno istraživanje, svaki s brojem koji to dokazuje.",
+    "open": "Otvorite referencu"
+  },
+  "thesis": {
+    "lines": [
+      "Generiranje je jeftino.",
+      "Prosudba nije."
+    ],
+    "body": "Svaki model napiše kod, članak ili razinu igre. Taj dio svaki kvartal postaje jeftiniji. Mi donosimo ono što dolazi nakon modela: provjere, unakrsne reference i ljudski potpis koji odlučuju smije li rezultat u produkciju.",
+    "link": "Pročitajte: prednost je u onome što provjerava",
+    "href": "/blog/verifier-not-generator"
+  },
+  "index": {
+    "title": "Sve ostalo što smo isporučili",
+    "lede": "Redakcije, obnove starih sustava, igre, poslovna inteligencija. Različita područja, ista disciplina.",
+    "open": "Otvorite"
+  },
+  "services": {
+    "title": "Odaberite kako surađujemo",
+    "lede": "Tri načina suradnje, svaki s fiksnom cijenom u pisanom obliku prije početka.",
+    "doorsTitle": "Tražite nešto određeno?",
+    "doors": [
+      {
+        "label": "Hrvatska tvrtka? AI paketi po fiksnoj cijeni",
+        "href": "/hr/pricing"
+      },
+      {
+        "label": "Trebate senior tech leada u svom timu",
+        "href": "/hr/tech-lead"
+      },
+      {
+        "label": "Osnivač ste i tražite tehničkog suosnivača",
+        "href": "/hr/technical-founder"
+      }
+    ],
+    "more": "Pogledajte sve pakete i cijene"
+  },
+  "notes": {
+    "title": "Bilješke iz radionice",
+    "all": "Svi članci",
+    "read": "min čitanja"
+  },
+  "studio": {
+    "title": "Mali studio, nerazumno širok raspon",
+    "body": "LumiVerse je AI produktni studio iz Zagreba koji vodi njegov osnivač. Gradimo vlastite proizvode i uključujemo se u timove da izgrade svoje. Iste ruke koje su rent-a-car sustav star deset godina prepisale na moderan stack vode i agentsku simulacijsku stanicu koja računa fiziku plazmenog zaslona. Širina nije nedostatak fokusa. Ona je fokus.",
+    "principles": [
+      {
+        "title": "Sami koristimo ono što gradimo",
+        "body": "Titlomat, Tvrtko.ai i Country Guides naši su proizvodi u produkciji, sa stvarnim korisnicima. Znamo koliko stoji isporuka jer je plaćamo iz svog džepa."
+      },
+      {
+        "title": "Uključujemo se, ne nadgledamo sa strane",
+        "body": "Britanskoj platformi za poslovnu inteligenciju više od godinu dana vodimo arhitekturu i sustav od 17 servisa, a svako izdanje nosi naš potpis."
+      },
+      {
+        "title": "Iskreni o onome što je teško",
+        "body": "Svaka referenca govori gdje je trebao čovjek i što je još sirovo."
+      }
+    ],
+    "founder": "LumiVerse d.o.o. · Zagreb, Hrvatska · osnovao i vodi Tihomir Jauk"
+  },
+  "contact": {
+    "title": "Recite nam što gradite",
+    "lede": "Odaberite što Vam treba ili to opišite svojim riječima. Odgovaramo u roku od 24 sata.",
+    "name": "Ime",
+    "email": "E-mail",
+    "company": "Tvrtka",
+    "optional": "neobavezno",
+    "need": "Što Vam treba?",
+    "notSure": "Još nisam siguran",
+    "other": "Nešto drugo",
+    "message": "Opišite nam",
+    "messageHint": "Što želite izgraditi ili popraviti, i sve što već znate o rokovima ili budžetu.",
+    "send": "Pošaljite upit",
+    "sending": "Šaljem…",
+    "sent": "Hvala. Vaš upit je kod nas i odgovorit ćemo u roku od 24 sata.",
+    "errorField": "Provjerite ovo polje:",
+    "errorSend": "Slanje nije uspjelo. Pišite nam na info@lumiverse.hr i nastavit ćemo odande.",
+    "privacy": "Ove podatke koristimo samo da Vam odgovorimo. Do nas stižu putem Brevoa, našeg EU pružatelja e-pošte, i ne idu nikamo drugdje.",
+    "office": "Ured",
+    "phone": "Telefon",
+    "emailLabel": "E-mail",
+    "vat": "PDV ID",
+    "fields": {
+      "name": "ime",
+      "email": "e-mail",
+      "company": "tvrtka",
+      "package": "što Vam treba",
+      "message": "poruka (najmanje 10 znakova)"
+    }
+  },
+  "footer": {
+    "tagline": "AI proizvodi i provjere zbog kojih ih je sigurno pustiti u rad.",
+    "work": "Radovi",
+    "studio": "Studio",
+    "contact": "Kontakt",
+    "rights": "Sva prava pridržana.",
+    "cookies": "Postavke kolačića"
+  }
 }

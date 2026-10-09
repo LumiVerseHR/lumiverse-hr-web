@@ -1,0 +1,55 @@
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 48px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post {
+  display: grid;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+  text-decoration: none;
+}
+
+.meta {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.title {
+  font-size: clamp(20px, 1.6vw, 25px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+  transition: color 160ms ease-out;
+}
+
+.post:hover .title {
+  color: var(--coral);
+}
+
+.description {
+  color: var(--text-soft);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+@media (max-width: 960px) {
+  .posts {
+    grid-template-columns: 1fr;
+  }
+}

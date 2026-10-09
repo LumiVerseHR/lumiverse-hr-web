@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/icons/Icon";
+import { Contact } from "@/components/sections/Contact";
+import { Flagships } from "@/components/sections/Flagships";
+import { Footer } from "@/components/sections/Footer";
+import { Notes } from "@/components/sections/Notes";
+import { Services } from "@/components/sections/Services";
+import { Studio } from "@/components/sections/Studio";
+import { Thesis } from "@/components/sections/Thesis";
+import { WorkIndex } from "@/components/sections/WorkIndex";
 import { ModelStage } from "@/components/stage/ModelStage";
 import { hasLocale, localePath } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -12,7 +20,9 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   const dict = await getDictionary(lang);
 
   return (
-    <main className={styles.hero}>
+    <>
+    <main>
+    <section className={styles.hero} aria-labelledby="hero-title">
       <ModelStage placards={dict.placards} />
 
       <header className={styles.bar}>
@@ -40,7 +50,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </header>
 
       <div className={styles.copy}>
-        <h1 className={styles.title}>
+        <h1 id="hero-title" className={styles.title}>
           {dict.hero.titleLines.map((line) => (
             <span key={line}>{line}</span>
           ))}
@@ -63,6 +73,16 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         {dict.hero.orbitHint}
         <Icon name="orbit" size={22} />
       </p>
+    </section>
+    <Flagships lang={lang} dict={dict} />
+    <Thesis lang={lang} dict={dict} />
+    <WorkIndex lang={lang} copy={dict.index} />
+    <Services lang={lang} dict={dict} />
+    <Notes lang={lang} dict={dict} />
+    <Studio dict={dict} />
+    <Contact lang={lang} dict={dict} />
     </main>
+    <Footer lang={lang} dict={dict} />
+    </>
   );
 }
