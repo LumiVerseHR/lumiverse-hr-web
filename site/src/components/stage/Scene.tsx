@@ -63,6 +63,8 @@ function prepare(root: Object3D, textures: Record<string, Texture>) {
       mesh.scale.multiplyScalar(1.6);
     }
     if (mesh.name === "Plinth") mesh.material = PLINTH;
+    // The plinth is grounded by the soft contact-shadow pool, not a hard cast shadow on the floor.
+    if (mesh.name === "Plinth" || mesh.name === "Plinth_Top") mesh.castShadow = false;
     const map = textures[mesh.name];
     if (map) {
       map.flipY = false; // glTF UV convention
@@ -158,7 +160,7 @@ function Maquette() {
 
 // Placards hang on the plinth front like museum labels, keeping the top clear for the figures.
 // The camera sits front-left, so placards shift right of each model to read as in front of it.
-const PLACARD_X: Record<string, number> = { "moj-kolega": -0.7, bridj: 0.35, "air-laser": 1.55 };
+const PLACARD_X: Record<string, number> = { "moj-kolega": -0.58, bridj: 0.35, "air-laser": 1.55 };
 
 function Placards({ placards }: { placards: Placard[] }) {
   return (
