@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
-import { localePath } from "@/i18n/config";
+import { homeAnchor, localePath } from "@/i18n/config";
+import { ConsentOpen } from "@/components/chrome/ConsentOpen";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { flagships, workIndex } from "@/content/work";
 import styles from "./Footer.module.css";
@@ -37,10 +38,10 @@ export async function Footer({ lang, dict }: { lang: Locale; dict: Dictionary })
           <div>
             <h2 className={styles.colTitle}>{dict.footer.studio}</h2>
             <ul>
-              <li><a href="#services">{dict.nav.services}</a></li>
+              <li><a href={homeAnchor(lang, "services")}>{dict.nav.services}</a></li>
               <li><a href={localePath(lang, "/pricing")}>{dict.services.more}</a></li>
               <li><Link href="/blog">{dict.notes.title}</Link></li>
-              <li><a href="#studio">{dict.nav.studio}</a></li>
+              <li><a href={homeAnchor(lang, "studio")}>{dict.nav.studio}</a></li>
             </ul>
           </div>
           <div>
@@ -58,6 +59,7 @@ export async function Footer({ lang, dict }: { lang: Locale; dict: Dictionary })
         <p>
           © {year} LumiVerse d.o.o. · OIB 88595646800 · Markuševečka cesta 20C, 10000 Zagreb · {dict.footer.rights}
         </p>
+        <ConsentOpen label={dict.footer.cookies} className={styles.cookies} />
       </div>
     </footer>
   );

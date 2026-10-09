@@ -1,0 +1,496 @@
+{
+  "en": {
+    "slug": "army-adria",
+    "meta": {
+      "title": "ARMY Adria - A Community Platform Built in Two Weeks | LumiVerse",
+      "description": "A BTS fan with no coding background built a full Croatian fan-community platform - magazine, archive, games, member accounts - in two weeks with AI."
+    },
+    "kind": "Community Platform · A Social Experiment",
+    "title": "ARMY Adria",
+    "subtitle": "A complete BTS fan-community platform for Croatia and the region - an editorial magazine, a deep video and discography archive, five games and full member accounts. One devoted fan, with no coding background, built it herself in two weeks: AI tools in her hands, LumiVerse's build model behind her. Her love; our AI.",
+    "ctas": [
+      {
+        "label": "Visit ARMY Adria",
+        "href": "https://www.bts-army-adria.com",
+        "external": true
+      },
+      {
+        "label": "Build Something Similar",
+        "href": "/#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/army-adria/armyadria-1.jpg",
+        "alt": "ARMY Adria homepage - a purple night-sky hero for BTS fans from Croatia and the region",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/army-adria/armyadria-2.jpg",
+        "alt": "The Magazin section - an editorial grid of original Croatian BTS articles with category filters",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/army-adria/armyadria-3.jpg",
+        "alt": "The Zajednica community hub with custom illustrated cards for games and regional meetups",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/army-adria/armyadria-4.jpg",
+        "alt": "A 'Which BTS member are you?' personality quiz with a progress bar and answer cards",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "1",
+        "label": "Builder, with no coding background"
+      },
+      {
+        "value": "2",
+        "label": "Weeks from idea to production"
+      },
+      {
+        "value": "90+",
+        "label": "Original Croatian articles & guides"
+      },
+      {
+        "value": "5",
+        "label": "Interactive games & quizzes"
+      }
+    ],
+    "closing": {
+      "title": "Have an Idea and the Dedication to Match?",
+      "body": "See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too.",
+      "cta": {
+        "label": "See starting prices",
+        "href": "/pricing"
+      },
+      "secondary": {
+        "label": "tell us what you're building",
+        "href": "/#contact"
+      }
+    },
+    "sections": [
+      {
+        "title": "Her Love, Our AI Build Model",
+        "lede": "We wanted to test the studio's whole thesis at its edge: give a motivated person with no engineering background the right AI tools and a little guidance, and see how far dedication carries them. So we handed the keys to a lifelong BTS fan who had never written a line of code - and got out of the way.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "The Part No Model Has",
+                "body": "She brought the ingredient AI can't supply: taste, obsession, and love for the subject. She knew exactly what her community wanted because she is that community - a BTS fan from Croatia who wished a place like this existed.\n\nEvery one of the 90-plus articles is hers. Every game, every category, every bit of Croatian copy comes from someone who actually cares."
+              },
+              {
+                "title": "What We Provided",
+                "body": "Not a development team. An AI build model, a production stack that could scale from a simple quiz to authenticated member accounts, and guidance whenever she hit a wall.\n\nThe engineering barrier came down. The person did the rest - and the person turned out to be more than enough."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Not a Landing Page - a Platform",
+        "lede": "Two weeks in, this isn't a fan page with a few links. It's a content-plus-community product with everything a real portal needs - editorial, media, games and accounts, all in one place.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Editorial Magazine",
+                "body": "90-plus original Croatian articles - BTS stories, news and guides - across their own categories."
+              },
+              {
+                "title": "Video Archive",
+                "body": "A curated library with a rich taxonomy: MVs, Run BTS, FESTA, Bangtan Bomb, dance practices, per-member solo videos and specials."
+              },
+              {
+                "title": "Full Discography",
+                "body": "Every release, with in-page listening - the whole catalogue in one browsable place."
+              },
+              {
+                "title": "Events Calendar",
+                "body": "Birthdays, anniversaries and releases - the dates the community lives by, in one calendar."
+              },
+              {
+                "title": "Newcomer Guide",
+                "body": "Who's who, a glossary, a timeline, eras & albums and membership how-tos - an on-ramp for new fans."
+              },
+              {
+                "title": "Five Games & Quizzes",
+                "body": "\"Which member are you?\", three-level trivia, emoji song-guessing, a word search and album match - with progress saved to your profile."
+              },
+              {
+                "title": "Member Accounts",
+                "body": "Registration, login, password reset and a personal profile - with full, GDPR-compliant account management."
+              },
+              {
+                "title": "Personalization",
+                "body": "Playlists, favorites, video playlists and article likes - the site remembers what each fan cares about."
+              },
+              {
+                "title": "Site-wide Search",
+                "body": "A quick command-style search across everything - articles, videos, discography and games."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "How Two Weeks Was Enough",
+        "lede": "Fast didn't mean flimsy. The AI build model let one person move like a small team - designing, writing and shipping in parallel - on a stack built for production from day one.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "One Person, Moving Like a Team",
+                "body": "With AI generating, refactoring and explaining alongside her, she designed the interface, wrote the content and built the features in parallel - the work of a small team, done by one."
+              },
+              {
+                "title": "Production From Day One",
+                "body": "Not a prototype. Real accounts with hashed passwords, a proper database and GDPR-compliant account management - the boring, essential parts done properly, not faked."
+              },
+              {
+                "title": "Cleared Before It Launched",
+                "body": "An unofficial fan project done right: the content was run through a BTS/HYBE legal review before going live, and the site states plainly that it isn't affiliated with BTS, HYBE or BIGHIT."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Under the Hood",
+                "body": "A modern, production-grade stack - the kind you'd expect behind a funded product, shipped by someone who'd never touched any of it two weeks earlier."
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "body": "Next.js 16 (App Router)"
+              },
+              {
+                "body": "React"
+              },
+              {
+                "body": "TypeScript"
+              },
+              {
+                "body": "Tailwind CSS"
+              },
+              {
+                "body": "NextAuth (email/password, bcrypt)"
+              },
+              {
+                "body": "Prisma ORM"
+              },
+              {
+                "body": "libSQL (SQLite-compatible)"
+              },
+              {
+                "body": "Docker"
+              },
+              {
+                "body": "Dokploy on Hetzner"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Barrier Was Never the Code",
+        "lede": "For years, an idea like this needed a budget and a developer. Now it needed a fan who wouldn't quit.",
+        "blocks": [
+          {
+            "type": "text",
+            "paragraphs": [
+              "AI didn't replace a team - it removed the reason she needed one. That's not a slogan for us; it's the experiment, run on a person instead of a client. \"AI tools that make humans unstoppable\" is exactly what a full community platform, built in two weeks by one devoted fan, looks like."
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "body": "Dedication and taste are the scarce inputs - AI supplies the rest"
+              },
+              {
+                "body": "A non-developer can now ship a real, authenticated product"
+              },
+              {
+                "body": "Guidance beats hand-holding: unblock, don't take over"
+              },
+              {
+                "body": "Done right means done properly - real auth, real legal clearance"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Hero showcase is an auto-rotating slideshow (showcase.js, data-interval=5200ms).",
+      "Section \"Her Love, Our AI Build Model\": some card bodies are two paragraphs on the page, joined with a blank line (\"\\n\\n\").",
+      "Section \"How Two Weeks Was Enough\": steps are numbered cards with labels 01, 02, 03 and icons.",
+      "Section \"How Two Weeks Was Enough\": the tech-stack list is rendered as pill tags inside the \"Under the Hood\" card.",
+      "Section \"The Barrier Was Never the Code\": the list block is a card headed \"The Takeaway\" (no slot for a list heading in the schema).",
+      "Closing block has no buttons: it shows a \"Open for new projects\" badge, and the cta/secondary links are inline links inside the body paragraph (\"See starting prices\", \"tell us what you're building\").",
+      "Hero buttons have icons (dropped); all section cards have Font Awesome icons (dropped)."
+    ]
+  },
+  "hr": {
+    "slug": "army-adria",
+    "meta": {
+      "title": "ARMY Adria - platforma zajednice u dva tjedna | LumiVerse",
+      "description": "BTS obožavateljica bez programerskog predznanja izgradila je cjelovitu platformu fan zajednice — magazin, arhiva, igre, računi — u dva tjedna, uz AI."
+    },
+    "kind": "Platforma zajednice · Društveni eksperiment",
+    "title": "ARMY Adria",
+    "subtitle": "Cjelovita platforma za BTS fan zajednicu Hrvatske i regije — uređivački magazin, opsežna videoarhiva i diskografija, pet igara i potpuni korisnički računi. Izradila ju je sama, u dva tjedna, jedna predana obožavateljica bez programerskog predznanja: AI alati u njezinim rukama, LumiVerseov model izrade iza nje. Njezina ljubav, naš AI.",
+    "ctas": [
+      {
+        "label": "Posjetite ARMY Adriju",
+        "href": "https://www.bts-army-adria.com",
+        "external": true
+      },
+      {
+        "label": "Napravite nešto slično",
+        "href": "/hr#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/army-adria/armyadria-1.jpg",
+        "alt": "Naslovnica ARMY Adrije - ljubičasti noćni prizor za BTS obožavatelje iz Hrvatske i regije",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/army-adria/armyadria-2.jpg",
+        "alt": "Rubrika Magazin - uređivačka mreža originalnih hrvatskih članaka o BTS-u, s filtrima po kategorijama",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/army-adria/armyadria-3.jpg",
+        "alt": "Središte Zajednice s vlastito ilustriranim karticama za igre i regionalna okupljanja",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/army-adria/armyadria-4.jpg",
+        "alt": "Kviz osobnosti 'Koji si član BTS-a?' s trakom napretka i karticama odgovora",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "1",
+        "label": "Graditeljica, bez programerskog predznanja"
+      },
+      {
+        "value": "2",
+        "label": "Tjedna od ideje do produkcije"
+      },
+      {
+        "value": "90+",
+        "label": "Originalnih hrvatskih članaka i vodiča"
+      },
+      {
+        "value": "5",
+        "label": "Interaktivnih igara i kvizova"
+      }
+    ],
+    "closing": {
+      "title": "Imate ideju i predanost koja ide uz nju?",
+      "body": "Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni.",
+      "cta": {
+        "label": "Pogledajte početne cijene",
+        "href": "/hr/pricing"
+      },
+      "secondary": {
+        "label": "recite što gradite",
+        "href": "/hr#contact"
+      }
+    },
+    "sections": [
+      {
+        "title": "Njezina ljubav, naš AI model izrade",
+        "lede": "Htjeli smo cijelu tezu studija provjeriti na njezinu rubu: dajte motiviranoj osobi bez inženjerskog predznanja prave AI alate i malo vodstva pa vidite dokle je predanost odnese. Zato smo ključeve predali dugogodišnjoj BTS obožavateljici koja nikad nije napisala redak koda — i maknuli se s puta.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Dio koji nijedan model nema",
+                "body": "Donijela je sastojak koji AI ne može dati: ukus, opsjednutost i ljubav prema temi. Točno je znala što njezina zajednica želi jer ona jest ta zajednica — BTS obožavateljica iz Hrvatske koja je priželjkivala da ovakvo mjesto postoji.\n\nSvaki od više od 90 članaka njezin je. Svaka igra, svaka kategorija i svaki redak hrvatskog teksta dolaze od nekoga kome je doista stalo."
+              },
+              {
+                "title": "Što smo mi dali",
+                "body": "Ne razvojni tim. AI model izrade, produkcijski stack koji se mogao protegnuti od jednostavnog kviza do korisničkih računa s prijavom, i vodstvo kad god bi zapela.\n\nInženjerska je prepreka pala. Ostalo je napravio čovjek — i pokazalo se da je čovjek više nego dovoljan."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Nije stranica, nego platforma",
+        "lede": "Nakon dva tjedna ovo nije fan stranica s nekoliko poveznica. To je proizvod koji spaja sadržaj i zajednicu, sa svime što pravi portal treba — uredništvom, medijima, igrama i računima, na jednom mjestu.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Uređivački magazin",
+                "body": "Više od 90 originalnih hrvatskih članaka — priče o BTS-u, vijesti i vodiči — razvrstanih u vlastite kategorije."
+              },
+              {
+                "title": "Videoarhiva",
+                "body": "Kurirana knjižnica s bogatom podjelom: spotovi, Run BTS, FESTA, Bangtan Bomb, plesne probe, solo videi po članovima i posebna izdanja."
+              },
+              {
+                "title": "Cijela diskografija",
+                "body": "Svako izdanje, uz slušanje na samoj stranici — cijeli katalog na jednom mjestu za prelistavanje."
+              },
+              {
+                "title": "Kalendar događanja",
+                "body": "Rođendani, obljetnice i izdanja — datumi po kojima zajednica živi, u jednom kalendaru."
+              },
+              {
+                "title": "Vodič za pridošlice",
+                "body": "Tko je tko, pojmovnik, vremenska crta, razdoblja i albumi te upute za pridruživanje — ulaz za nove obožavatelje."
+              },
+              {
+                "title": "Pet igara i kvizova",
+                "body": "„Koji si član?\", kviz znanja u tri razine, pogađanje pjesama iz emojija, traženje riječi i slaganje albuma — s napretkom spremljenim na Vaš profil."
+              },
+              {
+                "title": "Korisnički računi",
+                "body": "Registracija, prijava, promjena lozinke i osobni profil — uz potpuno upravljanje računom, usklađeno s GDPR-om."
+              },
+              {
+                "title": "Personalizacija",
+                "body": "Popisi za slušanje, favoriti, videopopisi i lajkovi na članke — stranica pamti do čega je svakom obožavatelju stalo."
+              },
+              {
+                "title": "Pretraga cijele stranice",
+                "body": "Brza pretraga u stilu naredbene trake, kroz sve — članke, videe, diskografiju i igre."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Kako su dva tjedna bila dovoljna",
+        "lede": "Brzo nije značilo krhko. AI model izrade omogućio je jednoj osobi da se kreće kao mali tim — da dizajnira, piše i objavljuje usporedno — na stacku građenom za produkciju od prvog dana.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Jedna osoba, brzinom tima",
+                "body": "Dok je AI uz nju generirao, preslagivao kod i objašnjavao, ona je dizajnirala sučelje, pisala sadržaj i gradila funkcionalnosti usporedno — posao malog tima, odrađen sam."
+              },
+              {
+                "title": "Produkcija od prvog dana",
+                "body": "Ne prototip. Stvarni računi s kriptiranim lozinkama, prava baza i upravljanje računom usklađeno s GDPR-om — dosadni, nužni dijelovi napravljeni kako treba, a ne odglumljeni."
+              },
+              {
+                "title": "Odobreno prije objave",
+                "body": "Neslužbeni obožavateljski projekt napravljen kako treba: sadržaj je prije objave prošao pravnu provjeru prema BTS-u i HYBE-u, a stranica jasno navodi da nije povezana s BTS-om, HYBE-om ni BIGHIT-om."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Ispod haube",
+                "body": "Moderan produkcijski stack — onakav kakav biste očekivali iza financiranog proizvoda, a objavila ga je osoba koja ga dva tjedna ranije nije ni dotaknula."
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "body": "Next.js 16 (App Router)"
+              },
+              {
+                "body": "React"
+              },
+              {
+                "body": "TypeScript"
+              },
+              {
+                "body": "Tailwind CSS"
+              },
+              {
+                "body": "NextAuth (e-mail i lozinka, bcrypt)"
+              },
+              {
+                "body": "Prisma ORM"
+              },
+              {
+                "body": "libSQL (kompatibilan sa SQLiteom)"
+              },
+              {
+                "body": "Docker"
+              },
+              {
+                "body": "Dokploy na Hetzneru"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Prepreka nikad nije bila kod",
+        "lede": "Godinama je ovakva ideja tražila proračun i programera. Sada je tražila obožavateljicu koja neće odustati.",
+        "blocks": [
+          {
+            "type": "text",
+            "paragraphs": [
+              "AI nije zamijenio tim — uklonio je razlog zbog kojeg joj je tim trebao. To nam nije slogan, nego eksperiment izveden na čovjeku umjesto na klijentu. „AI alati koji ljude čine nezaustavljivima\" izgledaju točno kao cjelovita platforma zajednice koju je u dva tjedna izgradila jedna predana obožavateljica."
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "body": "Predanost i ukus rijetki su sastojci — ostalo daje AI"
+              },
+              {
+                "body": "Osoba koja nije programer danas može objaviti pravi proizvod s prijavom korisnika"
+              },
+              {
+                "body": "Vodstvo je bolje od držanja za ruku: odblokiraj, ne preuzimaj"
+              },
+              {
+                "body": "Napravljeno dobro znači napravljeno kako treba — prava prijava, prava pravna provjera"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Hero showcase is an auto-rotating slideshow (showcase.js, data-interval=5200ms).",
+      "Section \"Njezina ljubav, naš AI model izrade\": some card bodies are two paragraphs on the page, joined with a blank line (\"\\n\\n\").",
+      "Section \"Kako su dva tjedna bila dovoljna\": steps are numbered cards with labels 01, 02, 03 and icons.",
+      "Section \"Kako su dva tjedna bila dovoljna\": the tech-stack list is rendered as pill tags inside the \"Ispod haube\" card.",
+      "Section \"Prepreka nikad nije bila kod\": the list block is a card headed \"Što odavde nosimo\" (no slot for a list heading in the schema).",
+      "Closing block has no buttons: it shows a \"Primamo nove projekte\" badge, and the cta/secondary links are inline links inside the body paragraph (\"Pogledajte početne cijene\", \"recite što gradite\").",
+      "Hero buttons have icons (dropped); all section cards have Font Awesome icons (dropped)."
+    ]
+  }
+}

@@ -1,0 +1,562 @@
+{
+  "en": {
+    "slug": "rentalica",
+    "meta": {
+      "title": "Rentalica - Rebuilding a Decade-Old System | LumiVerse",
+      "description": "Rebuilding a 10-year-old PHP 5.6 rent-a-car system as a modern multi-tenant SaaS: parity first, verified data migration, rehearsed cutover, then beyond."
+    },
+    "kind": "Our Product · Legacy Modernization",
+    "title": "Rentalica",
+    "subtitle": "A rent-a-car back-office that ran for over ten years on PHP 5.6, rebuilt as a modern multi-tenant SaaS - carrying a decade of bookings, contracts and documents across without asking a single user to reset their password. Then taken well past where the old system could go.",
+    "ctas": [
+      {
+        "label": "View Rentalica",
+        "href": "https://rentalica.lumiverse.hr",
+        "external": true
+      },
+      {
+        "label": "Modernize Your System",
+        "href": "/#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/rentalica/rentalica-1.jpg",
+        "alt": "Rentalica landing page - which vehicle earns and which quietly costs you",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/rentalica/rentalica-2.jpg",
+        "alt": "Rentalica capability overview for fleet operators",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/rentalica/rentalica-3.jpg",
+        "alt": "Rentalica AI assistant answering a fleet question in Croatian, with the verified read-only SQL shown",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "10+",
+        "label": "Years of production data migrated"
+      },
+      {
+        "value": "22",
+        "label": "Tables rebuilt on PostgreSQL"
+      },
+      {
+        "value": "0",
+        "label": "Password resets required"
+      },
+      {
+        "value": "102",
+        "label": "Automated tests guarding the rebuild"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Software That Still Worked",
+        "lede": "FlexiRent wasn't broken. It ran a real rent-a-car business every day for a decade. It was just standing on a stack the world had moved off - and that's a harder problem than a rewrite of something nobody uses.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "What Was Running",
+                "body": "PHP 5.6 on Ubuntu 14.04 - both long past end of life\nA bespoke in-house PHP MVC framework, ~55k lines\nMySQL 5.5 with no foreign keys - relations enforced in app code\nJSON hidden inside TEXT columns, permissions stored as CSV\n440 MB of contracts and scans on a single server's disk"
+              },
+              {
+                "title": "Why Rewrites Like This Fail",
+                "body": "The usual approach is to read the old code, guess at the business rules, and ship something that looks better but quietly gets the details wrong. The operator notices in week two, when a contract prints the wrong deposit.\n\nA decade of production behaviour is not in the codebase. It's in the edge cases, the workarounds and the numbers people check every morning. That's what a rewrite has to preserve first."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "We Wrote the Original",
+        "blocks": [
+          {
+            "type": "text",
+            "paragraphs": [
+              "FlexiRent wasn't inherited from a stranger. LumiVerse built it, then supported it in production for over ten years with a real fleet operator using it daily.",
+              "That's ten years of watching how the work actually happens: which screens get opened first thing in the morning, which fields are always left blank, what the operator does when a van comes back damaged on a Sunday. None of that is written down anywhere. It's the reason the rebuild could skip the discovery phase and go straight to building."
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Domain Fluency, Not Guesswork",
+                "body": "Croatian rental specifics - OIB checksums, AO and kasko insurance, registration and periodic inspection dates\nPricing rules that include partner splits and provisions\nContract PDFs that have to keep printing exactly as before\nWorkflows mirrored closely enough that switching needs no retraining"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Parity First, Ideas Second",
+        "lede": "The rule that made this safe: change the technology or change the product, never both at once. The new system had to be provably identical before it was allowed to be better.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Capture Everything, Change Nothing",
+                "body": "A complete read-only backup of production: 2,855 files, the full database, the web server config. The live server was never modified. Every later decision could be checked against a frozen, verified copy."
+              },
+              {
+                "title": "Boot the Old App Locally",
+                "body": "PHP 5.6, Apache and MySQL packaged into Docker so the legacy system ran on a laptop. Not to keep it alive - to have a reference implementation to compare against, screen by screen, number by number."
+              },
+              {
+                "title": "Write the Analysis First",
+                "body": "Every table mapped to a target entity, every implicit relationship documented, every risk listed before a line of new code: the JSON blobs, the invalid zero-dates, the CSV permissions, the PDF generator."
+              },
+              {
+                "title": "Rebuild to Parity",
+                "body": "A faithful replica on the new stack - same screens, same numbers, no new ideas - tagged and frozen as the rollback point. Improvements were not allowed until this version matched the old one."
+              },
+              {
+                "title": "Migrate, Then Prove It",
+                "body": "MySQL to PostgreSQL: JSON blobs normalized, real foreign keys added, invalid dates converted. Then automated cross-database integrity checks compared row counts and records against the source until they matched."
+              },
+              {
+                "title": "Rehearse the Cutover",
+                "body": "A written runbook with a rollback at every phase: freeze the old app, re-migrate fresh data, verify against pre-freeze numbers, then switch. Rehearsable in full without touching production."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "The Detail That Made Switching Painless",
+                "body": "The legacy system stored passwords as bcrypt hashes. Bcrypt is bcrypt - the new backend verifies those same hashes directly. So every user kept the exact username and password they already had. No reset emails, no support calls, no \"we've migrated, here are your new credentials\" message. The old system's file uploads were carried over the same way: same documents, same links, still downloadable."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "What Actually Changed",
+        "lede": "Same business rules. Entirely different foundation.",
+        "blocks": [
+          {
+            "type": "table",
+            "head": [
+              "Layer",
+              "Legacy",
+              "Rentalica"
+            ],
+            "rows": [
+              [
+                "Runtime",
+                "PHP 5.6 on Ubuntu 14.04, both end-of-life",
+                "Containerized Python and Node, current releases"
+              ],
+              [
+                "Backend",
+                "In-house PHP MVC framework, ~55k lines to maintain",
+                "FastAPI + SQLAlchemy 2.0, typed and auto-documented"
+              ],
+              [
+                "Database",
+                "MySQL 5.5, no foreign keys, JSON inside TEXT columns",
+                "PostgreSQL with real constraints and JSONB where it belongs"
+              ],
+              [
+                "Frontend",
+                "Server-rendered Bootstrap 3 admin theme",
+                "Next.js 15 and React 19 with a generated typed API client"
+              ],
+              [
+                "Auth",
+                "Custom session files, permissions as a comma-separated string",
+                "httpOnly cookie sessions, role checks enforced per request"
+              ],
+              [
+                "Tenancy",
+                "Single business, one installation",
+                "Multi-tenant, with isolation enforced at the query layer"
+              ],
+              [
+                "Tests",
+                "None",
+                "102 backend tests plus browser end-to-end coverage"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "title": "We Didn't Stop at a Copy",
+        "lede": "A faithful replica was the safety requirement, not the goal. Once the data was proven and the old system still sat there as a rollback, the new foundation started earning its keep - with capabilities a PHP 5.6 stack was never going to carry.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Analytics That Answer the Only Question That Matters",
+                "body": "Most fleet software reports revenue. Rentalica reports what's left. Every cost is entered once with a period - one-off, monthly or annual - then spread across the months it actually covers and charged to the vehicle that incurred it. Leasing, liability and comprehensive insurance, registration, tyres, servicing and fuel all land on the right van.\n\nNet result per vehicle - the number nobody had before\nBreak-even view: does this month's income cover the fleet?\nWeekly digest: vehicles in deficit, idle assets, expiring policies, unpaid rentals\nFleet composition on any past date, for capacity planning\nPartner splits and provisions handled inside the maths"
+              },
+              {
+                "title": "Receipts That Fill In Their Own Form",
+                "body": "Photograph an invoice or a fuel slip. The scan is read on-site, then the total, date, vendor, supplier tax ID, invoice number and registration plate are pulled out, the cost category is guessed and the vehicle matched. Croatian decimal formatting included. Nothing saves until a person confirms it."
+              },
+              {
+                "title": "An Assistant That Speaks Croatian and SQL",
+                "body": "Ask which passenger van does the fewest kilometres a month, in plain Croatian, and get three things back: the answer, the table it came from, and the exact query that produced it. Nothing is hidden behind a chat bubble - the operator can check the work before trusting it.\n\nQuestions in Croatian, answers with the query shown\nProfit questions routed to the real P&L engine, never approximated\nFuzzy vehicle matching, so a typo still finds the right van\nDurable instructions - tell it once that a car is private, it remembers"
+              },
+              {
+                "title": "Document Scanning, Kept In-House",
+                "body": "Driving licences, ID cards, passports and vehicle registrations are classified and read by a self-hosted OCR service, so the scans stay on your own infrastructure. Machine-readable zones are parsed with their ICAO check digits - a clean read validates itself."
+              },
+              {
+                "title": "A Document Archive Worth the Name",
+                "body": "Every upload lands in one place and is searchable by what's written inside it, because the extracted text is stored next to the file. A link table records what each document is attached to - so you can go from a document back to its vehicle, cost or contract, and find the ones attached to nothing."
+              },
+              {
+                "title": "Contacts, Grown Into a CRM",
+                "body": "One directory for customers, companies and partners, segmented with groups and tags. Each contact opens a full profile: every rental, every contract, what they still owe, plus linked tasks and documents. Licence numbers, categories and expiry dates sit on the record itself."
+              },
+              {
+                "title": "Work That Isn't Kept in Someone's Head",
+                "body": "To-do lists per person and shared across the team, each task pinned to the vehicle, booking or customer it concerns, with an owner, a priority and a due date. Registration, insurance and inspection expiries raise their own reminders without anyone remembering to look."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Letting AI Near a Real Database",
+        "lede": "An assistant that writes queries against a live business is only as trustworthy as the thing standing between it and the data. These limits are enforced in code and in PostgreSQL - not politely requested in a prompt.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Whitelisted, Not Trusted",
+                "body": "Every generated statement is parsed into a syntax tree and each table it touches is enumerated - including the ones buried in subqueries and comma joins. Anything outside the approved set is rejected before it reaches the database. Staff accounts and password hashes are permanently out of reach."
+              },
+              {
+                "title": "Isolation You Can't Talk Your Way Past",
+                "body": "Before execution, every referenced table is rewritten as a filtered view of that tenant's rows, so an unqualified query resolves to the right data by construction rather than by good behaviour. Common table expressions are refused outright - one could otherwise redefine that filter."
+              },
+              {
+                "title": "Read-Only at the Database",
+                "body": "Queries run inside a read-only transaction with a statement timeout and a hard row cap, and that transaction is always rolled back. A write isn't declined by the model's better judgement - it cannot happen on that connection."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Stuck With a System You Can't Retire?",
+      "body": "If the software running your business is old, undocumented and too important to break, that's the problem we solve. Parity first, your data proven intact, a cutover you can roll back.",
+      "cta": {
+        "label": "See starting prices",
+        "href": "/pricing"
+      },
+      "secondary": {
+        "label": "tell us what you're building",
+        "href": "/#contact"
+      }
+    },
+    "notes": [
+      "Hero showcase is an auto-rotating slideshow (showcase.js, data-interval 5200 ms) cycling the showcase images in order.",
+      "Closing block has no buttons; instead a capacity note: a status badge reading \"Open for new projects\" followed by the sentence: \"See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too.\" The two inline links in that sentence are mapped to closing.cta and closing.secondary.",
+      "Cards that carry a bullet feature-list on the live page (check or minus icons) have those bullets appended to \"body\" as newline-separated lines, separated from the prose by a blank line, in page order. Affected cards: \"What Was Running\"; \"Domain Fluency, Not Guesswork\"; \"Analytics That Answer the Only Question That Matters\"; \"An Assistant That Speaks Croatian and SQL\". Render body with white-space: pre-line, or split on the blank line to restore the bullet list.",
+      "Bento grid layout: these cards span double width on the live page: \"Analytics That Answer the Only Question That Matters\"; \"An Assistant That Speaks Croatian and SQL\".",
+      "Section \"We Wrote the Original\" is a two-column layout: the text block (heading + paragraphs) on the left, the \"Domain Fluency, Not Guesswork\" card on the right. The first paragraph is large (body-lg), the second regular. No section-description on the live page, so there is no lede.",
+      "Section \"Parity First, Ideas Second\": the trailing single card is full-width under the six steps.",
+      "Section \"What Actually Changed\": the table renders as a \"stack table\" where the Legacy column is styled as old (muted) and the Rentalica column as new (accent).",
+      "Sections \"Parity First, Ideas Second\" and \"Letting AI Near a Real Database\" steps are numbered cards (01-06 and 01-03) with an icon each on the live page."
+    ]
+  },
+  "hr": {
+    "slug": "rentalica",
+    "meta": {
+      "title": "Rentalica - prepisivanje sustava starog deset godina | LumiVerse",
+      "description": "Rent-a-car sustav star deset godina prepisan s PHP-a 5.6 u moderan multi-tenant SaaS: prvo istovjetnost, provjerena migracija, uvježbani prelazak."
+    },
+    "kind": "Naš proizvod · Modernizacija naslijeđenog sustava",
+    "title": "Rentalica",
+    "subtitle": "Rent-a-car back-office koji je više od deset godina radio na PHP-u 5.6, prepisan kao moderan multi-tenant SaaS — s desetljećem rezervacija, ugovora i dokumenata prenesenim bez ijednog zahtjeva korisniku da resetira lozinku. A onda odveden mnogo dalje nego što je stari sustav ikad mogao.",
+    "ctas": [
+      {
+        "label": "Pogledajte Rentalicu",
+        "href": "https://rentalica.lumiverse.hr",
+        "external": true
+      },
+      {
+        "label": "Modernizirajte svoj sustav",
+        "href": "/hr#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/rentalica/rentalica-1.jpg",
+        "alt": "Naslovnica Rentalice - koje vozilo zarađuje, a koje Vas potiho košta",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/rentalica/rentalica-2.jpg",
+        "alt": "Pregled mogućnosti Rentalice za upravitelje voznih parkova",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/rentalica/rentalica-3.jpg",
+        "alt": "AI asistent Rentalice odgovara na pitanje o voznom parku na hrvatskom, uz prikazan provjereni SQL upit samo za čitanje",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "10+",
+        "label": "Godina migriranih produkcijskih podataka"
+      },
+      {
+        "value": "22",
+        "label": "Tablica prepisanih na PostgreSQL"
+      },
+      {
+        "value": "0",
+        "label": "Potrebnih resetiranja lozinke"
+      },
+      {
+        "value": "102",
+        "label": "Automatiziranih testova koji čuvaju prepisani sustav"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Softver koji je i dalje radio",
+        "lede": "FlexiRent nije bio pokvaren. Desetljeće je svaki dan vodio stvarnu rent-a-car tvrtku. Samo je stajao na stacku s kojeg je svijet otišao — a to je teži problem od prepisivanja nečega što nitko ne koristi.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Što je radilo",
+                "body": "PHP 5.6 na Ubuntuu 14.04 — oboje davno bez podrške\nVlastiti PHP MVC framework, oko 55 tisuća redaka\nMySQL 5.5 bez stranih ključeva — veze se održavaju u kodu aplikacije\nJSON skriven u TEXT stupcima, dopuštenja spremljena kao CSV\n440 MB ugovora i skenova na disku jednog poslužitelja"
+              },
+              {
+                "title": "Zašto ovakva prepisivanja propadaju",
+                "body": "Uobičajen je pristup pročitati stari kod, pogađati poslovna pravila i isporučiti nešto što izgleda bolje, ali potiho griješi u detaljima. Korisnik to primijeti u drugom tjednu, kad ugovor ispiše krivi polog.\n\nDesetljeće ponašanja u produkciji ne nalazi se u kodu. Ono je u rubnim slučajevima, zaobilaznim rješenjima i brojkama koje ljudi provjeravaju svako jutro. To je ono što prepisivanje mora prvo sačuvati."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Original smo napisali mi",
+        "blocks": [
+          {
+            "type": "text",
+            "paragraphs": [
+              "FlexiRent nismo naslijedili od nekoga drugog. Izradio ga je LumiVerse, a zatim ga više od deset godina održavao u produkciji, dok ga je stvarni upravitelj voznog parka koristio svaki dan.",
+              "To je deset godina gledanja kako se posao stvarno odvija: koji se ekrani otvaraju prvi ujutro, koja polja uvijek ostaju prazna, što djelatnik radi kad se kombi u nedjelju vrati oštećen. Ništa od toga nigdje nije zapisano. Zato je prepisivanje moglo preskočiti fazu otkrivanja i krenuti ravno u izradu."
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Poznavanje domene, a ne nagađanje",
+                "body": "Specifičnosti hrvatskog najma — kontrolna znamenka OIB-a, AO i kasko osiguranje, datumi registracije i tehničkog pregleda\nPravila cijena koja uključuju podjelu s partnerima i provizije\nPDF ugovori koji se moraju ispisivati točno kao i prije\nTijekovi rada preslikani dovoljno vjerno da prelazak ne traži ponovnu edukaciju"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Prvo istovjetnost, pa ideje",
+        "lede": "Pravilo koje je ovo učinilo sigurnim: mijenjaj tehnologiju ili mijenjaj proizvod, nikad oboje odjednom. Novi je sustav morao biti dokazivo istovjetan prije nego što je smio biti bolji.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Snimiti sve, ne promijeniti ništa",
+                "body": "Potpuna sigurnosna kopija produkcije, samo za čitanje: 2.855 datoteka, cijela baza, konfiguracija web poslužitelja. Živi poslužitelj nikad nije mijenjan. Svaka se kasnija odluka mogla provjeriti na zamrznutoj, provjerenoj kopiji."
+              },
+              {
+                "title": "Pokrenuti staru aplikaciju lokalno",
+                "body": "PHP 5.6, Apache i MySQL zapakirani u Docker da naslijeđeni sustav radi na prijenosniku. Ne da ga se održi na životu — nego da postoji referentna izvedba za usporedbu, ekran po ekran, broj po broj."
+              },
+              {
+                "title": "Najprije napisati analizu",
+                "body": "Svaka tablica preslikana na ciljni entitet, svaka implicitna veza dokumentirana, svaki rizik popisan prije ijednog retka novog koda: JSON blobovi, neispravni nul-datumi, CSV dopuštenja, generator PDF-ova."
+              },
+              {
+                "title": "Prepisati do istovjetnosti",
+                "body": "Vjerna replika na novom stacku — isti ekrani, isti brojevi, nijedna nova ideja — označena i zamrznuta kao točka povratka. Poboljšanja nisu bila dopuštena dok se ta verzija nije poklopila sa starom."
+              },
+              {
+                "title": "Migrirati, pa dokazati",
+                "body": "Iz MySQL-a u PostgreSQL: JSON blobovi normalizirani, dodani pravi strani ključevi, neispravni datumi pretvoreni. Zatim su automatske provjere integriteta između baza uspoređivale broj redaka i zapise s izvorom dok se nisu poklopili."
+              },
+              {
+                "title": "Uvježbati prelazak",
+                "body": "Zapisani postupak s povratkom na staro u svakoj fazi: zamrzni staru aplikaciju, ponovno migriraj svježe podatke, provjeri s brojkama prije zamrzavanja, pa prebaci. Uvježbavanje u cijelosti, bez diranja produkcije."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Detalj zbog kojeg je prelazak prošao bezbolno",
+                "body": "Naslijeđeni je sustav lozinke spremao kao bcrypt sažetke. Bcrypt je bcrypt — novi backend te iste sažetke provjerava izravno. Svaki je korisnik zadržao točno ono korisničko ime i lozinku koje je već imao. Bez e-mailova za resetiranje, bez poziva podršci i bez poruke „migrirali smo, evo Vaših novih podataka za prijavu\". Datoteke iz starog sustava prenesene su na isti način: isti dokumenti, iste poveznice, i dalje se preuzimaju."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Što se zapravo promijenilo",
+        "lede": "Ista poslovna pravila. Posve drukčiji temelj.",
+        "blocks": [
+          {
+            "type": "table",
+            "head": [
+              "Sloj",
+              "Naslijeđeno",
+              "Rentalica"
+            ],
+            "rows": [
+              [
+                "Izvršno okruženje",
+                "PHP 5.6 na Ubuntuu 14.04, oboje bez podrške",
+                "Python i Node u kontejnerima, aktualna izdanja"
+              ],
+              [
+                "Backend",
+                "Vlastiti PHP MVC framework, oko 55 tisuća redaka za održavanje",
+                "FastAPI + SQLAlchemy 2.0, tipizirano i automatski dokumentirano"
+              ],
+              [
+                "Baza podataka",
+                "MySQL 5.5, bez stranih ključeva, JSON u TEXT stupcima",
+                "PostgreSQL sa stvarnim ograničenjima i JSONB-om ondje gdje mu je mjesto"
+              ],
+              [
+                "Frontend",
+                "Bootstrap 3 administratorska tema, generirana na poslužitelju",
+                "Next.js 15 i React 19 s generiranim tipiziranim API klijentom"
+              ],
+              [
+                "Prijava",
+                "Vlastite datoteke sesija, dopuštenja kao niz odvojen zarezima",
+                "Sesije u httpOnly kolačićima, provjera uloga na svakom zahtjevu"
+              ],
+              [
+                "Višekorisničkost",
+                "Jedna tvrtka, jedna instalacija",
+                "Multi-tenant, s odvajanjem koje se provodi na razini upita"
+              ],
+              [
+                "Testovi",
+                "Nema ih",
+                "102 backend testa i pokrivenost end-to-end testovima u pregledniku"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Nismo stali na kopiji",
+        "lede": "Vjerna je replika bila sigurnosni uvjet, a ne cilj. Kad su podaci bili dokazani, a stari sustav i dalje stajao kao točka povratka, novi se temelj počeo isplaćivati — mogućnostima koje PHP 5.6 nikad ne bi ponio.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Analitika koja odgovara na jedino pitanje koje je važno",
+                "body": "Većina softvera za vozne parkove prikazuje prihod. Rentalica prikazuje ono što ostane. Svaki se trošak unosi jednom, s razdobljem — jednokratno, mjesečno ili godišnje — pa se raspoređuje po mjesecima koje stvarno pokriva i tereti vozilo koje ga je izazvalo. Leasing, AO i kasko, registracija, gume, servis i gorivo slijeću na pravi kombi.\n\nNeto rezultat po vozilu — brojka koju prije nitko nije imao\nPrikaz praga isplativosti: pokriva li ovomjesečni prihod vozni park?\nTjedni sažetak: vozila u minusu, neiskorištena imovina, police koje ističu, nenaplaćeni najmovi\nSastav voznog parka na bilo koji datum u prošlosti, za planiranje kapaciteta\nPodjela s partnerima i provizije uračunate u samu matematiku"
+              },
+              {
+                "title": "Računi koji sami ispune svoj obrazac",
+                "body": "Fotografirajte račun ili potvrdu s benzinske. Snimka se čita na licu mjesta, a zatim se izvlače iznos, datum, izdavatelj, OIB dobavljača, broj računa i registracijska oznaka, predlaže se kategorija troška i pronalazi vozilo. Uključujući hrvatski zapis decimala. Ništa se ne sprema dok čovjek ne potvrdi."
+              },
+              {
+                "title": "Asistent koji govori hrvatski i SQL",
+                "body": "Pitajte na običnom hrvatskom koji putnički kombi mjesečno prijeđe najmanje kilometara i dobit ćete tri stvari: odgovor, tablicu iz koje je došao i točan upit koji ga je proizveo. Ništa nije skriveno iza oblačića za chat — korisnik može provjeriti rad prije nego što mu povjeruje.\n\nPitanja na hrvatskom, odgovori s prikazanim upitom\nPitanja o dobiti idu u pravi obračun dobiti i gubitka, nikad se ne procjenjuju\nPribližno pronalaženje vozila, pa i pogreška u tipkanju nađe pravi kombi\nTrajne upute — recite jednom da je auto privatan i zapamtit će to"
+              },
+              {
+                "title": "Skeniranje dokumenata, na vlastitoj infrastrukturi",
+                "body": "Vozačke dozvole, osobne iskaznice, putovnice i prometne dozvole razvrstava i čita OCR servis na vlastitim poslužiteljima, pa snimke ostaju na Vašoj infrastrukturi. Strojno čitljive zone obrađuju se s ICAO kontrolnim znamenkama — čisto očitanje samo sebe potvrđuje."
+              },
+              {
+                "title": "Arhiva dokumenata dostojna imena",
+                "body": "Svaka priložena datoteka slijeće na jedno mjesto i pretraživa je po onome što u njoj piše, jer se izdvojeni tekst sprema uz datoteku. Tablica poveznica bilježi uz što je svaki dokument vezan — pa možete iz dokumenta natrag do njegova vozila, troška ili ugovora, i pronaći one koji nisu vezani ni uz što."
+              },
+              {
+                "title": "Imenik koji je izrastao u CRM",
+                "body": "Jedan imenik za kupce, tvrtke i partnere, razvrstan grupama i oznakama. Svaki kontakt otvara cijeli profil: svaki najam, svaki ugovor, što još duguje, uz povezane zadatke i dokumente. Brojevi dozvola, kategorije i datumi isteka stoje na samom zapisu."
+              },
+              {
+                "title": "Posao koji se ne drži u nečijoj glavi",
+                "body": "Popisi zadataka po osobi i zajednički za tim, svaki zadatak prikvačen uz vozilo, rezervaciju ili kupca na koje se odnosi, s nositeljem, prioritetom i rokom. Istek registracije, osiguranja i tehničkog pregleda sam podiže podsjetnik, a da se itko ne mora sjetiti pogledati."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Pustiti AI blizu stvarne baze",
+        "lede": "Asistent koji piše upite nad živim poslovanjem vrijedan je povjerenja onoliko koliko i ono što stoji između njega i podataka. Ova se ograničenja provode u kodu i u PostgreSQL-u — a ne uljudno traže u promptu.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Na popisu dopuštenih, ne na povjerenje",
+                "body": "Svaka se generirana naredba raščlanjuje u sintaksno stablo i popisuje se svaka tablica koje se dotiče — uključujući one zakopane u podupitima i spojevima preko zareza. Sve izvan odobrenog skupa odbija se prije nego što dođe do baze. Računi djelatnika i sažeci lozinki trajno su izvan dosega."
+              },
+              {
+                "title": "Odvajanje koje se ne da nagovoriti",
+                "body": "Prije izvršavanja svaka se navedena tablica prepisuje u filtrirani pogled na retke tog korisnika, pa se neprecizan upit razrješava na prave podatke samom izvedbom, a ne dobrim ponašanjem. Zajednički tablični izrazi odbijaju se u startu — inače bi mogli redefinirati taj filtar."
+              },
+              {
+                "title": "Samo za čitanje, na razini baze",
+                "body": "Upiti se izvršavaju unutar transakcije samo za čitanje, s vremenskim ograničenjem naredbe i tvrdim ograničenjem broja redaka, a ta se transakcija uvijek poništava. Upis ne odbija modelova bolja prosudba — on se na toj vezi jednostavno ne može dogoditi."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Zaglavili ste sa sustavom koji ne možete ugasiti?",
+      "body": "Ako je softver koji vodi Vaše poslovanje star, nedokumentiran i prevažan da bi se smio pokvariti, to je problem koji rješavamo. Prvo istovjetnost, dokazano netaknuti podaci i prelazak koji se može poništiti.",
+      "cta": {
+        "label": "Pogledajte početne cijene",
+        "href": "/hr/pricing"
+      },
+      "secondary": {
+        "label": "recite što gradite",
+        "href": "/hr#contact"
+      }
+    },
+    "notes": [
+      "Hero showcase is an auto-rotating slideshow (showcase.js, data-interval 5200 ms) cycling the showcase images in order.",
+      "Closing block has no buttons; instead a capacity note: a status badge reading \"Primamo nove projekte\" followed by the sentence: \"Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni.\" The two inline links in that sentence are mapped to closing.cta and closing.secondary.",
+      "Cards that carry a bullet feature-list on the live page (check or minus icons) have those bullets appended to \"body\" as newline-separated lines, separated from the prose by a blank line, in page order. Affected cards: \"Što je radilo\"; \"Poznavanje domene, a ne nagađanje\"; \"Analitika koja odgovara na jedino pitanje koje je važno\"; \"Asistent koji govori hrvatski i SQL\". Render body with white-space: pre-line, or split on the blank line to restore the bullet list.",
+      "Bento grid layout: these cards span double width on the live page: \"Analitika koja odgovara na jedino pitanje koje je važno\"; \"Asistent koji govori hrvatski i SQL\".",
+      "Section \"Original smo napisali mi\" is a two-column layout: the text block (heading + paragraphs) on the left, the \"Poznavanje domene, a ne nagađanje\" card on the right. The first paragraph is large (body-lg), the second regular. No section-description on the live page, so there is no lede.",
+      "Section \"Prvo istovjetnost, pa ideje\": the trailing single card is full-width under the six steps.",
+      "Section \"Što se zapravo promijenilo\": the table renders as a \"stack table\" where the Legacy column is styled as old (muted) and the Rentalica column as new (accent).",
+      "Sections \"Prvo istovjetnost, pa ideje\" and \"Pustiti AI blizu stvarne baze\" steps are numbered cards (01-06 and 01-03) with an icon each on the live page."
+    ]
+  }
+}

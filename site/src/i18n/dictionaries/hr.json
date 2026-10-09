@@ -142,5 +142,29 @@
     "contact": "Kontakt",
     "rights": "Sva prava pridržana.",
     "cookies": "Postavke kolačića"
+  },
+  "consent": {
+    "text": "Koristimo analitičke kolačiće da vidimo što funkcionira.",
+    "deny": "Odbij",
+    "allow": "Dopusti",
+    "region": "Privola za kolačiće"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Izgubljeni u praznini",
+    "body": "Stranica koju tražite ne postoji ili je premještena. Vratimo Vas na pravi put.",
+    "home": "Natrag na početnu",
+    "services": "Usluge",
+    "work": "Reference",
+    "contact": "Kontakt",
+    "meta": "404 - stranica nije pronađena | LumiVerse"
+  },
+  "case": {
+    "work": "Radovi",
+    "more": "Još radova",
+    "next": "Sljedeće",
+    "prev": "Prethodno",
+    "showcase": "Zasloni",
+    "show": "Prikaži"
   }
 }

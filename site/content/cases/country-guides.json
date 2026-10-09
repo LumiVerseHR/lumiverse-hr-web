@@ -1,0 +1,724 @@
+{
+  "en": {
+    "slug": "country-guides",
+    "meta": {
+      "title": "Country Guides - Fourteen Travel Sites, One Codebase | LumiVerse",
+      "description": "Fourteen branded travel guides across Europe, North Africa and North America, running from one codebase with AI-written destinations, attractions and articles."
+    },
+    "kind": "Our Product · AI Content Platform",
+    "title": "Country Guides",
+    "subtitle": "Fourteen branded travel guides - from Croatia and Italy to Morocco, Canada and the US states of Colorado and Oregon - running on one codebase, with an AI pipeline that researches and writes every destination, attraction and article. A new market is a config file, not a fork.",
+    "ctas": [
+      {
+        "label": "View a Live Site",
+        "href": "https://croatian-guide.com",
+        "external": true
+      },
+      {
+        "label": "Build Something Similar",
+        "href": "/#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/country-guides/countryguides-1.jpg",
+        "alt": "croatian-guide.com after the redesign - an Explore Croatia hero over aerial Dubrovnik, with regions and their place counts below",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/country-guides/countryguides-2.jpg",
+        "alt": "The Dubrovnik destination page - a Croatia, Dalmatia, Dubrovnik trail bar across the top, section tabs and a Quick Facts panel",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/country-guides/countryguides-3.jpg",
+        "alt": "colorado-guide.com - the same platform running a US state, hero over Mt. Crested Butte",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/country-guides/countryguides-4.jpg",
+        "alt": "The Diocletian's Palace attraction page - where it is, a directions button, nearby attractions and quick facts",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/country-guides/countryguides-5.jpg",
+        "alt": "italian-guides.com - the platform rebranded for Italy, hero over the Trevi Fountain",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "14",
+        "label": "Live guide sites on one codebase"
+      },
+      {
+        "value": "6,000+",
+        "label": "Attractions researched and written"
+      },
+      {
+        "value": "1,200+",
+        "label": "Destinations across the network"
+      },
+      {
+        "value": "38",
+        "label": "Stages from research to published page"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Build It Once, Ship Every Country",
+        "lede": "A travel guide has the same shape everywhere: a country, its regions, the places worth visiting, the things to see in them. So the site gets built once. Country, branding, currency, copy and content become data - not a separate codebase per site.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "The Same Shape Everywhere",
+                "body": "Country → region → destination → attraction, the same hierarchy for every market\nInterest categories - castles, beaches, heritage - cut across destinations\nArticles, blog posts and multi-day itineraries layered on top\nEvery entity carries its own quality and workflow state"
+              },
+              {
+                "title": "Why Most Multi-Site Setups Rot",
+                "body": "The usual way to launch a second country is to copy the first and change some text. Then the two drift. A fix lands in one and not the other, and within a year you're maintaining four codebases that used to be one.\n\nHere there is exactly one application. What makes Croatia look like Croatia and Switzerland look like Switzerland lives in configuration and data, so a fix ships to every site at once and a new market adds nothing to maintain."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Every Page Is Researched, Then Written",
+        "lede": "No page is typed by hand, and none is invented from thin air. The pipeline finds real places on the open web, then writes them up against a fixed schema so every field lands exactly where the database expects it.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Discover",
+                "body": "Web search finds the real destinations and attractions for a country. A duplicate check compares each candidate against what's already stored, so the pipeline never re-adds a place it already knows."
+              },
+              {
+                "title": "Write to Schema",
+                "body": "A schema-bound model turns each place into a structured record, not free text. Every field is validated against the same Pydantic schema the database is shaped by - a malformed answer is retried, not published."
+              },
+              {
+                "title": "Enrich With Facts",
+                "body": "Opening hours, admission fees, how to get there. A separate research pass fills in the practical detail a traveller actually plans around, instead of leaving it to generic prose."
+              },
+              {
+                "title": "Sort by Interest",
+                "body": "Each attraction is tagged into interest categories - castles, beaches, history and heritage - so the same place surfaces in every way a visitor might go looking for it."
+              },
+              {
+                "title": "Link and Answer",
+                "body": "Articles, destinations and attractions are cross-linked automatically, and common questions get their own FAQ section - useful for a reader skimming, and legible to a search engine."
+              },
+              {
+                "title": "Readiness Gate",
+                "body": "Before a country goes live, an automated check audits content counts, SEO metadata, images and internal links. A site launches when it's actually complete, not when someone hopes it is."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Fast Models, Guarded Output",
+                "body": "Generation runs on a fast, low-cost model with an automatic fallback chain - if the primary provider stumbles, the next one picks up the same request rather than dropping the job. Because every response has to satisfy a strict schema before it's accepted, speed never comes at the cost of a broken record reaching the database. The schema definitions are treated as the contract between the AI and the app, and are deliberately hard to change by accident."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Fourteen Domains, One Deploy Pipeline",
+        "lede": "Each site looks like it was built for one country. Underneath, they share everything that matters and differ only in data.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Identity Is a Config File",
+                "body": "Domain, branding, SEO metadata, currency, timezone, analytics and the homepage and legal copy all live in one per-country config, next to that country's content tree. Launching a new market means adding a config and generating its content - not touching the application.\n\ncanadian-guide.com, colorado-guide.com, croatian-guide.com, discover-austria.com, dutch-guide.com, french-guides.com, greece-guides.com, italian-guides.com, moroccan-guides.com, oregon-guide.com, portugal-guides.com, slovenia-guide.com, spanish-guides.com, switzerland-explorer.com\nSame components, different data - no per-site forks to keep in sync\nMore markets already built and staged - Bosnia and Serbia are next, waiting on go-live"
+              },
+              {
+                "title": "A Database Per Site",
+                "body": "Each live site is seeded one country at a time and runs its own database and its own application process. Sites stay isolated, and any one of them is simple to reason about on its own."
+              },
+              {
+                "title": "Deploy Only What Changed",
+                "body": "Continuous deployment hashes the shared code and each country's data separately, then ships only the countries that actually changed. Editing Croatia's content never redeploys Switzerland, and a docs-only commit deploys nothing at all - the pipeline does the least work that's correct."
+              },
+              {
+                "title": "SSL That Survives Deploys",
+                "body": "The web server keeps its version-controlled base config separate from the live certificates, so an automated deploy can never overwrite an SSL renewal and knock a site offline."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Thousands of Pages, Each One Findable",
+        "lede": "Publishing programmatic pages at volume is where SEO usually falls apart: duplicate URLs, thin structured data, pages that render blank without JavaScript. This was hardened for exactly that.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Structured Data on Every Page",
+                "body": "Destinations, attractions, articles and FAQs each ship the right schema.org type - TouristAttraction, Place, FAQPage, BreadcrumbList - so a search engine reads them as places and answers, not just paragraphs of text."
+              },
+              {
+                "title": "One Canonical URL",
+                "body": "HTTPS, www and trailing slashes are normalized to a single canonical address, and filtered or paginated views are told not to index. No page ends up competing with itself for the same search."
+              },
+              {
+                "title": "Rendered on the Server",
+                "body": "React pages are server-rendered, so a crawler - or a visitor on a slow phone - gets full HTML immediately. Per-site sitemaps are generated and kept current as content grows."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Every Page Type, Rebuilt",
+        "lede": "The whole network was redesigned around one idea: a guide should read like a well-travelled friend who has actually been there. Calm, factual, photography first - and identical on all fourteen domains, because there is still only one codebase.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "You Always Know Where You Are",
+                "body": "Every page carries the path above it - country, region, destination - visible and clickable. Readers stop guessing how deep they have wandered, and a crawler gets the same hierarchy as real links instead of having to infer it."
+              },
+              {
+                "title": "Photography Carries the Feeling",
+                "body": "A warm off-white page, flat surfaces, hairline borders, and depth only where something answers to the cursor. What travel sites usually reach for - fake urgency, star-rating noise, ad walls - is deliberately absent."
+              },
+              {
+                "title": "Accessibility, Measured",
+                "body": "Contrast, focus order, link text, pagination and map markers were taken to WCAG 2.1 AA and checked with axe - 156 automated runs across three of the sites, rather than a claim on a slide."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Fourteen Guides, Live Right Now",
+        "lede": "Every number here is a page you can open. Each site runs the same platform on its own domain, with its own content.",
+        "blocks": [
+          {
+            "type": "table",
+            "head": [
+              "",
+              "",
+              "Destinations",
+              "Attractions",
+              "Articles",
+              "Blog posts"
+            ],
+            "rows": [
+              [
+                "Oregon",
+                "oregon-guide.com",
+                "20",
+                "139",
+                "58",
+                "59"
+              ],
+              [
+                "Croatia",
+                "croatian-guide.com",
+                "204",
+                "871",
+                "74",
+                "124"
+              ],
+              [
+                "France",
+                "french-guides.com",
+                "128",
+                "824",
+                "60",
+                "61"
+              ],
+              [
+                "Italy",
+                "italian-guides.com",
+                "136",
+                "779",
+                "60",
+                "61"
+              ],
+              [
+                "Netherlands",
+                "dutch-guide.com",
+                "146",
+                "630",
+                "62",
+                "105"
+              ],
+              [
+                "Slovenia",
+                "slovenia-guide.com",
+                "115",
+                "582",
+                "60",
+                "124"
+              ],
+              [
+                "Switzerland",
+                "switzerland-explorer.com",
+                "96",
+                "478",
+                "54",
+                "64"
+              ],
+              [
+                "Austria",
+                "discover-austria.com",
+                "104",
+                "444",
+                "63",
+                "61"
+              ],
+              [
+                "Portugal",
+                "portugal-guides.com",
+                "85",
+                "439",
+                "60",
+                "63"
+              ],
+              [
+                "Spain",
+                "spanish-guides.com",
+                "67",
+                "375",
+                "60",
+                "58"
+              ],
+              [
+                "Greece",
+                "greece-guides.com",
+                "47",
+                "297",
+                "60",
+                "60"
+              ],
+              [
+                "Canada",
+                "canadian-guide.com",
+                "50",
+                "289",
+                "80",
+                "58"
+              ],
+              [
+                "Morocco",
+                "moroccan-guides.com",
+                "47",
+                "219",
+                "60",
+                "61"
+              ],
+              [
+                "Colorado",
+                "colorado-guide.com",
+                "29",
+                "96",
+                "59",
+                "55"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Want a Content Platform That Scales?",
+      "body": "Country Guides is a platform play: build the engine once, launch a new market from a config file. If you publish content at volume - locations, listings, catalogues - that's the pattern we build.",
+      "cta": {
+        "label": "tell us what you're building",
+        "href": "/#contact"
+      },
+      "secondary": {
+        "label": "See starting prices",
+        "href": "/pricing"
+      }
+    },
+    "notes": [
+      "Hero showcase is an auto-rotating slideshow (data-showcase, 5200 ms interval) cycling the 5 showcase images in order.",
+      "Card bodies use plain-text line breaks: paragraphs are separated by \"\\n\\n\" and checklist (feature-list, check-icon) lines by a single \"\\n\". Render with white-space: pre-line or split. Cards with checklists: \"The Same Shape Everywhere\" (checklist only) and \"Identity Is a Config File\" (paragraph, then checklist).",
+      "Steps blocks come from numbered cards (01, 02, 03...); the number is the item order.",
+      "Section \"Every Page Is Researched, Then Written\": the single card after the steps is a full-width card below the 6-step grid.",
+      "Section \"Fourteen Domains, One Deploy Pipeline\" is a bento grid: cards 1 and 3 are the large (double-width) cards.",
+      "Section \"Fourteen Guides, Live Right Now\": the table is a grid of 14 site cards on the page, not a table. The first two columns (country, domain) have no header text on the page. Each card shows a flag emoji and is an external link (new tab): Oregon -> https://oregon-guide.com, Croatia -> https://croatian-guide.com, France -> https://french-guides.com, Italy -> https://italian-guides.com, Netherlands -> https://dutch-guide.com, Slovenia -> https://slovenia-guide.com, Switzerland -> https://switzerland-explorer.com, Austria -> https://discover-austria.com, Portugal -> https://portugal-guides.com, Spain -> https://spanish-guides.com, Greece -> https://greece-guides.com, Canada -> https://canadian-guide.com, Morocco -> https://moroccan-guides.com, Colorado -> https://colorado-guide.com. The first card (Oregon) is visually featured and carries a \"Newest\" badge.",
+      "Closing block also shows a capacity note: a pill badge \"Open for new projects\" followed by the paragraph \"See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too.\". closing.cta and closing.secondary are the two inline links inside that paragraph, not buttons."
+    ]
+  },
+  "hr": {
+    "slug": "country-guides",
+    "meta": {
+      "title": "Country Guides - četrnaest vodiča iz jedne baze koda | LumiVerse",
+      "description": "Četrnaest brendiranih turističkih vodiča po Europi, sjevernoj Africi i Sjevernoj Americi iz jedne baze koda, s destinacijama i člancima koje istražuje i piše AI."
+    },
+    "kind": "Naš proizvod · AI platforma za sadržaj",
+    "title": "Country Guides",
+    "subtitle": "Četrnaest brendiranih turističkih vodiča — od Hrvatske i Italije do Maroka, Kanade i američkih saveznih država Colorada i Oregona — na jednoj bazi koda, s AI pipelineom koji istražuje i piše svaku destinaciju, znamenitost i članak. Nova zemlja je konfiguracijska datoteka, a ne novi ogranak koda.",
+    "ctas": [
+      {
+        "label": "Pogledajte stranicu u pogonu",
+        "href": "https://croatian-guide.com",
+        "external": true
+      },
+      {
+        "label": "Napravite nešto slično",
+        "href": "/hr#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/country-guides/countryguides-1.jpg",
+        "alt": "croatian-guide.com nakon redizajna - naslovni prizor Explore Croatia nad Dubrovnikom iz zraka, s regijama i brojem mjesta ispod",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/country-guides/countryguides-2.jpg",
+        "alt": "Stranica destinacije Dubrovnik - traka puta Hrvatska, Dalmacija, Dubrovnik na vrhu, kartice sekcija i ploča s brzim činjenicama",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/country-guides/countryguides-3.jpg",
+        "alt": "colorado-guide.com - ista platforma na američkoj saveznoj državi, naslovni prizor nad Mt. Crested Butteom",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/country-guides/countryguides-4.jpg",
+        "alt": "Stranica znamenitosti Dioklecijanova palača - gdje je, gumb za upute, obližnje znamenitosti i brze činjenice",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/country-guides/countryguides-5.jpg",
+        "alt": "italian-guides.com - platforma prebrendirana za Italiju, naslovni prizor nad Fontanom di Trevi",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "14",
+        "label": "Živih vodiča na jednoj bazi koda"
+      },
+      {
+        "value": "6,000+",
+        "label": "Istraženih i napisanih znamenitosti"
+      },
+      {
+        "value": "1,200+",
+        "label": "Destinacija u cijeloj mreži"
+      },
+      {
+        "value": "38",
+        "label": "Koraka od istraživanja do objavljene stranice"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Napraviti jednom, objaviti svaku zemlju",
+        "lede": "Turistički vodič svugdje ima isti oblik: zemlja, njezine regije, mjesta koja se isplati posjetiti i ono što se u njima gleda. Zato se stranica gradi jednom. Zemlja, brendiranje, valuta, tekstovi i sadržaj postaju podaci — a ne zasebna baza koda po stranici.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Isti oblik svugdje",
+                "body": "Zemlja → regija → destinacija → znamenitost, ista hijerarhija za svako tržište\nKategorije interesa — dvorci, plaže, baština — presijecaju destinacije\nČlanci, blog objave i višednevni itinerari kao sloj iznad\nSvaki entitet nosi vlastito stanje kvalitete i tijeka rada"
+              },
+              {
+                "title": "Zašto većina takvih sustava trune",
+                "body": "Uobičajen način pokretanja druge zemlje jest kopirati prvu i promijeniti dio teksta. Onda se te dvije razilaze. Popravak slegne u jednu, a ne u drugu, i za godinu dana održavate četiri baze koda koje su nekoć bile jedna.\n\nOvdje postoji točno jedna aplikacija. Ono zbog čega Hrvatska izgleda kao Hrvatska, a Švicarska kao Švicarska, živi u konfiguraciji i podacima, pa popravak odlazi na sve stranice odjednom, a novo tržište ne dodaje ništa za održavanje."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Svaka se stranica prvo istraži, pa napiše",
+        "lede": "Nijedna se stranica ne tipka ručno i nijedna se ne izmišlja iz zraka. Pipeline na otvorenom webu pronalazi stvarna mjesta, pa ih zapisuje prema čvrstoj shemi, tako da svako polje slegne točno ondje gdje ga baza očekuje.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Otkrivanje",
+                "body": "Pretraga weba pronalazi stvarne destinacije i znamenitosti neke zemlje. Provjera duplikata uspoređuje svakog kandidata s onime što je već spremljeno, pa pipeline nikad ponovno ne dodaje mjesto koje već poznaje."
+              },
+              {
+                "title": "Pisanje prema shemi",
+                "body": "Model vezan uz shemu svako mjesto pretvara u strukturirani zapis, a ne u slobodan tekst. Svako se polje provjerava prema istoj Pydantic shemi po kojoj je oblikovana baza — neispravan se odgovor ponavlja, a ne objavljuje."
+              },
+              {
+                "title": "Obogaćivanje činjenicama",
+                "body": "Radno vrijeme, cijene ulaznica, kako doći. Zasebni istraživački prolaz popunjava praktične pojedinosti oko kojih putnik stvarno planira, umjesto da to prepusti općenitoj prozi."
+              },
+              {
+                "title": "Razvrstavanje po interesu",
+                "body": "Svaka se znamenitost označava kategorijama interesa — dvorci, plaže, povijest i baština — pa se isto mjesto pojavljuje na svaki način na koji ga posjetitelj može tražiti."
+              },
+              {
+                "title": "Povezivanje i odgovaranje",
+                "body": "Članci, destinacije i znamenitosti automatski se međusobno povezuju, a česta pitanja dobivaju vlastitu rubriku — korisno čitatelju koji preleti tekst i čitljivo tražilici."
+              },
+              {
+                "title": "Provjera spremnosti",
+                "body": "Prije nego što zemlja izađe u pogon, automatska provjera pregledava količinu sadržaja, SEO metapodatke, slike i unutarnje poveznice. Stranica se pokreće kad je doista potpuna, a ne kad se netko nada da jest."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Brzi modeli, rezultat pod nadzorom",
+                "body": "Generiranje radi na brzom i jeftinom modelu, uz automatski lanac zamjena — ako primarni pružatelj zapne, sljedeći preuzima isti zahtjev umjesto da posao propadne. Budući da svaki odgovor mora zadovoljiti strogu shemu prije nego što bude prihvaćen, brzina nikad ne dolazi po cijenu neispravnog zapisa u bazi. Definicije sheme tretiraju se kao ugovor između AI-ja i aplikacije i namjerno ih je teško slučajno promijeniti."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Četrnaest domena, jedan pipeline za deploy",
+        "lede": "Svaka stranica izgleda kao da je građena za jednu zemlju. Ispod dijele sve što je važno i razlikuju se samo u podacima.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Identitet je konfiguracijska datoteka",
+                "body": "Domena, brendiranje, SEO metapodaci, valuta, vremenska zona, analitika te tekstovi naslovnice i pravnih stranica žive u jednoj konfiguraciji po zemlji, uz stablo sadržaja te zemlje. Pokretanje novog tržišta znači dodati konfiguraciju i generirati sadržaj — a ne dirati aplikaciju.\n\ncanadian-guide.com, colorado-guide.com, croatian-guide.com, discover-austria.com, dutch-guide.com, french-guides.com, greece-guides.com, italian-guides.com, moroccan-guides.com, oregon-guide.com, portugal-guides.com, slovenia-guide.com, spanish-guides.com, switzerland-explorer.com\nIste komponente, drugi podaci — bez ogranaka po stranici koje treba usklađivati\nJoš je tržišta izgrađeno i pripremljeno — Bosna i Srbija su sljedeće, čekaju pokretanje"
+              },
+              {
+                "title": "Baza po stranici",
+                "body": "Svaka se živa stranica puni zemlju po zemlju te vrti vlastitu bazu i vlastiti proces aplikacije. Stranice ostaju odvojene i o svakoj se lako razmišlja zasebno."
+              },
+              {
+                "title": "Deploy samo onoga što se promijenilo",
+                "body": "Kontinuirani deploy zasebno hashira zajednički kod i podatke svake zemlje, pa šalje samo one zemlje koje su se stvarno promijenile. Uređivanje hrvatskog sadržaja nikad ne pokreće ponovni deploy Švicarske, a commit koji dira samo dokumentaciju ne pokreće ništa — pipeline radi najmanje posla koji je ispravan."
+              },
+              {
+                "title": "SSL koji preživi deploy",
+                "body": "Web poslužitelj svoju osnovnu konfiguraciju pod verzioniranjem drži odvojeno od živih certifikata, pa automatski deploy nikad ne može pregaziti obnovu SSL-a i srušiti stranicu."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tisuće stranica, svaka pronalaziva",
+        "lede": "Objavljivanje programski generiranih stranica u velikom obujmu mjesto je na kojem se SEO obično raspadne: duple adrese, tanki strukturirani podaci, stranice koje bez JavaScripta ostanu prazne. Ovo je učvršćeno upravo za to.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Strukturirani podaci na svakoj stranici",
+                "body": "Destinacije, znamenitosti, članci i česta pitanja nose odgovarajući schema.org tip — TouristAttraction, Place, FAQPage, BreadcrumbList — pa ih tražilica čita kao mjesta i odgovore, a ne samo kao odlomke teksta."
+              },
+              {
+                "title": "Jedna kanonska adresa",
+                "body": "HTTPS, www i kose crte na kraju svode se na jednu kanonsku adresu, a filtrirani i straničeni prikazi označeni su da se ne indeksiraju. Nijedna stranica ne završi natječući se sama sa sobom za isti upit."
+              },
+              {
+                "title": "Generirano na poslužitelju",
+                "body": "React stranice generiraju se na poslužitelju, pa robot tražilice — ili posjetitelj na sporom mobitelu — odmah dobiva potpun HTML. Za svaku se stranicu generira sitemap koji ostaje aktualan kako sadržaj raste."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Svaki tip stranice iznova",
+        "lede": "Cijela je mreža redizajnirana oko jedne ideje: vodič treba zvučati kao proputovao prijatelj koji je ondje doista bio. Smireno, činjenično, fotografija prva — i jednako na svih četrnaest domena, jer baza koda je i dalje samo jedna.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Uvijek znate gdje ste",
+                "body": "Svaka stranica nosi put iznad sebe — zemlja, regija, destinacija — vidljiv i klikabilan. Čitatelj više ne nagađa koliko je duboko zašao, a tražilica dobiva istu hijerarhiju kao prave poveznice umjesto da je naslućuje."
+              },
+              {
+                "title": "Fotografija nosi dojam",
+                "body": "Topla gotovo bijela podloga, plošne površine, tanke linije i dubina samo ondje gdje nešto odgovara na pokazivač. Onoga za čim turističke stranice obično posegnu — lažne hitnosti, buke sa zvjezdicama, zidova od oglasa — namjerno nema."
+              },
+              {
+                "title": "Pristupačnost, izmjerena",
+                "body": "Kontrast, redoslijed fokusa, tekst poveznica, straničenje i oznake na karti dovedeni su na WCAG 2.1 AA i provjereni alatom axe — 156 automatiziranih prolaza na tri stranice, a ne tvrdnja na slajdu."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Četrnaest vodiča, u pogonu upravo sada",
+        "lede": "Svaka je brojka ovdje stranica koju možete otvoriti. Svaka stranica vrti istu platformu na vlastitoj domeni, s vlastitim sadržajem.",
+        "blocks": [
+          {
+            "type": "table",
+            "head": [
+              "",
+              "",
+              "Destinacija",
+              "Znamenitosti",
+              "Članaka",
+              "Blog objava"
+            ],
+            "rows": [
+              [
+                "Oregon",
+                "oregon-guide.com",
+                "20",
+                "139",
+                "58",
+                "59"
+              ],
+              [
+                "Hrvatska",
+                "croatian-guide.com",
+                "204",
+                "871",
+                "74",
+                "124"
+              ],
+              [
+                "Francuska",
+                "french-guides.com",
+                "128",
+                "824",
+                "60",
+                "61"
+              ],
+              [
+                "Italija",
+                "italian-guides.com",
+                "136",
+                "779",
+                "60",
+                "61"
+              ],
+              [
+                "Nizozemska",
+                "dutch-guide.com",
+                "146",
+                "630",
+                "62",
+                "105"
+              ],
+              [
+                "Slovenija",
+                "slovenia-guide.com",
+                "115",
+                "582",
+                "60",
+                "124"
+              ],
+              [
+                "Švicarska",
+                "switzerland-explorer.com",
+                "96",
+                "478",
+                "54",
+                "64"
+              ],
+              [
+                "Austrija",
+                "discover-austria.com",
+                "104",
+                "444",
+                "63",
+                "61"
+              ],
+              [
+                "Portugal",
+                "portugal-guides.com",
+                "85",
+                "439",
+                "60",
+                "63"
+              ],
+              [
+                "Španjolska",
+                "spanish-guides.com",
+                "67",
+                "375",
+                "60",
+                "58"
+              ],
+              [
+                "Grčka",
+                "greece-guides.com",
+                "47",
+                "297",
+                "60",
+                "60"
+              ],
+              [
+                "Kanada",
+                "canadian-guide.com",
+                "50",
+                "289",
+                "80",
+                "58"
+              ],
+              [
+                "Maroko",
+                "moroccan-guides.com",
+                "47",
+                "219",
+                "60",
+                "61"
+              ],
+              [
+                "Colorado",
+                "colorado-guide.com",
+                "29",
+                "96",
+                "59",
+                "55"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Želite platformu za sadržaj koja se skalira?",
+      "body": "Country Guides je platformski potez: izgradi pogon jednom, novo tržište pokreni iz konfiguracijske datoteke. Ako objavljujete sadržaj u velikom obujmu — lokacije, oglase, kataloge — to je obrazac koji gradimo.",
+      "cta": {
+        "label": "recite što gradite",
+        "href": "/hr#contact"
+      },
+      "secondary": {
+        "label": "Pogledajte početne cijene",
+        "href": "/hr/pricing"
+      }
+    },
+    "notes": [
+      "Hero showcase is an auto-rotating slideshow (data-showcase, 5200 ms interval) cycling the 5 showcase images in order.",
+      "Card bodies use plain-text line breaks: paragraphs are separated by \"\\n\\n\" and checklist (feature-list, check-icon) lines by a single \"\\n\". Render with white-space: pre-line or split. Cards with checklists: \"Isti oblik svugdje\" (checklist only) and \"Identitet je konfiguracijska datoteka\" (paragraph, then checklist).",
+      "Steps blocks come from numbered cards (01, 02, 03...); the number is the item order.",
+      "Section \"Svaka se stranica prvo istraži, pa napiše\": the single card after the steps is a full-width card below the 6-step grid.",
+      "Section \"Četrnaest domena, jedan pipeline za deploy\" is a bento grid: cards 1 and 3 are the large (double-width) cards.",
+      "Section \"Četrnaest vodiča, u pogonu upravo sada\": the table is a grid of 14 site cards on the page, not a table. The first two columns (country, domain) have no header text on the page. Each card shows a flag emoji and is an external link (new tab): Oregon -> https://oregon-guide.com, Hrvatska -> https://croatian-guide.com, Francuska -> https://french-guides.com, Italija -> https://italian-guides.com, Nizozemska -> https://dutch-guide.com, Slovenija -> https://slovenia-guide.com, Švicarska -> https://switzerland-explorer.com, Austrija -> https://discover-austria.com, Portugal -> https://portugal-guides.com, Španjolska -> https://spanish-guides.com, Grčka -> https://greece-guides.com, Kanada -> https://canadian-guide.com, Maroko -> https://moroccan-guides.com, Colorado -> https://colorado-guide.com. The first card (Oregon) is visually featured and carries a \"Najnovije\" badge.",
+      "Closing block also shows a capacity note: a pill badge \"Primamo nove projekte\" followed by the paragraph \"Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni.\". closing.cta and closing.secondary are the two inline links inside that paragraph, not buttons."
+    ]
+  }
+}

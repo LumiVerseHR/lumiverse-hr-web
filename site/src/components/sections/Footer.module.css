@@ -84,8 +84,30 @@
   font-size: 13px;
 }
 
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
 .legal p {
   margin: 0;
+}
+
+.cookies {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--text-muted);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  cursor: pointer;
+}
+
+.cookies:hover {
+  color: var(--text);
 }
 
 @media (max-width: 960px) {

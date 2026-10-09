@@ -1,17 +1,15 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/icons/Icon";
 import { Contact } from "@/components/sections/Contact";
 import { Flagships } from "@/components/sections/Flagships";
-import { Footer } from "@/components/sections/Footer";
 import { Notes } from "@/components/sections/Notes";
 import { Services } from "@/components/sections/Services";
 import { Studio } from "@/components/sections/Studio";
 import { Thesis } from "@/components/sections/Thesis";
 import { WorkIndex } from "@/components/sections/WorkIndex";
-import { MobileMenu } from "@/components/nav/MobileMenu";
+import { Header } from "@/components/chrome/Header";
 import { ModelStage } from "@/components/stage/ModelStage";
-import { hasLocale, localePath } from "@/i18n/config";
+import { hasLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import styles from "./page.module.css";
 
@@ -26,40 +24,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     <section className={styles.hero} aria-labelledby="hero-title">
       <ModelStage placards={dict.placards} />
 
-      <header className={styles.bar}>
-        <Link href={localePath(lang)} className={styles.wordmark} aria-label="LumiVerse">
-          LumiVerse<span className={styles.dot} aria-hidden />
-        </Link>
-        <nav className={styles.nav} aria-label="Primary">
-          <a href="#work">{dict.nav.work}</a>
-          <a href="#services">{dict.nav.services}</a>
-          <a href="#research">{dict.nav.research}</a>
-          <a href="#studio">{dict.nav.studio}</a>
-          <a href="#contact">{dict.nav.contact}</a>
-        </nav>
-        <div className={styles.end}>
-          <div className={styles.locale}>
-            <Link href="/" hrefLang="en" aria-current={lang === "en" ? "true" : undefined}>EN</Link>
-            <span aria-hidden>/</span>
-            <Link href="/hr" hrefLang="hr" aria-current={lang === "hr" ? "true" : undefined}>HR</Link>
-          </div>
-          <a className={styles.barCta} href="#contact">
-            {dict.nav.cta}
-            <Icon name="arrow-right" size={14} />
-          </a>
-          <MobileMenu
-            items={[
-              { href: "#work", label: dict.nav.work },
-              { href: "#services", label: dict.nav.services },
-              { href: "#research", label: dict.nav.research },
-              { href: "#studio", label: dict.nav.studio },
-              { href: "#contact", label: dict.nav.contact },
-            ]}
-            cta={{ href: "#contact", label: dict.nav.cta }}
-            labels={{ open: dict.nav.menu, close: dict.nav.close }}
-          />
-        </div>
-      </header>
+      <Header lang={lang} dict={dict} overlay />
 
       <div className={styles.copy}>
         <h1 id="hero-title" className={styles.title}>
@@ -94,7 +59,6 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     <Studio dict={dict} />
     <Contact lang={lang} dict={dict} />
     </main>
-    <Footer lang={lang} dict={dict} />
     </>
   );
 }

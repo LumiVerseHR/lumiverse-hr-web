@@ -1,0 +1,322 @@
+{
+  "en": {
+    "slug": "pitaj-lider",
+    "meta": {
+      "title": "Pitaj Lider - AI Business Intelligence Assistant | LumiVerse",
+      "description": "Business intelligence assistant over 200,000+ articles and live company registry data. Ask in natural language, get answers with sources."
+    },
+    "kind": "AI Assistant",
+    "title": "Pitaj Lider",
+    "subtitle": "Business intelligence assistant that transforms how professionals access market data. Natural language queries against 200,000+ articles and real-time company registry information.",
+    "ctas": [
+      {
+        "label": "See It Live",
+        "href": "https://lidermedia.hr/lider-bi/",
+        "external": true
+      },
+      {
+        "label": "Build Something Similar",
+        "href": "/#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/pitaj-lider/pitaj-lider-ai-assistant.jpg",
+        "alt": "Pitaj Lider AI Assistant interface showing natural language query processing and business intelligence insights",
+        "width": 1348,
+        "height": 920
+      }
+    ],
+    "stats": [
+      {
+        "value": "200K+",
+        "label": "Articles Indexed"
+      },
+      {
+        "value": "Real-time",
+        "label": "Company Registry Data"
+      },
+      {
+        "value": "NLP",
+        "label": "Natural Language Queries"
+      },
+      {
+        "value": "24/7",
+        "label": "Always Available"
+      }
+    ],
+    "sections": [
+      {
+        "title": "What It Does",
+        "lede": "Two powerful data sources, unified through intelligent AI that understands context and intent.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Article Database",
+                "body": "Market trends & industry analysis\nBusiness intelligence reports\nEconomic indicators & forecasts\nCompetitive landscape insights",
+                "meta": "200,000+ curated business articles"
+              },
+              {
+                "title": "Decades of Business Intelligence",
+                "body": "Every article from Lider magazine's archive, structured and indexed for semantic search. Ask questions in natural language, get answers with sources.\n\nThe system understands context. Ask about a company's market position, and it pulls relevant articles, competitor mentions, industry trends - all in seconds."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Company Registry",
+                "body": "Company registration details\nFinancial status indicators\nLegal standings & compliance\nOwnership & key personnel",
+                "meta": "Real-time court registry data"
+              },
+              {
+                "title": "Real-time Company Information",
+                "body": "Direct access to official company registry data. Current status, financial health, ownership structure - verified information, not scraped guesses.\n\nCombined with article intelligence, you get the full picture: what a company says publicly, what the market says about them, and what the official records show."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Technical Implementation",
+        "lede": "Built for accuracy, speed, and continuous improvement.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Natural Language Processing",
+                "body": "Advanced NLP that understands Croatian business terminology, interprets complex queries, and extracts intent from conversational input."
+              },
+              {
+                "title": "Semantic Search",
+                "body": "Vector embeddings and RAG architecture for context-aware retrieval. Finds relevant information even when exact keywords don't match."
+              },
+              {
+                "title": "Real-time Analytics",
+                "body": "Live data processing for instant insights. Company lookups, trend analysis, and cross-referencing happen in milliseconds."
+              },
+              {
+                "title": "Continuous Learning",
+                "body": "The system improves with use. Query patterns inform model updates, user feedback refines responses, and new content is automatically indexed and integrated.\n\nFeedback loop integration\nAutomatic content updates\nQuery optimization over time"
+              },
+              {
+                "title": "API Integration",
+                "body": "Connects to external data sources, court registries, and content management systems through secure, maintained integrations."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Built For",
+        "lede": "Designed for professionals who need reliable business intelligence fast.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Business Analysts",
+                "body": "Market research and competitive analysis in minutes, not days"
+              },
+              {
+                "title": "Sales Teams",
+                "body": "Prospect research and lead qualification with verified data"
+              },
+              {
+                "title": "Investors",
+                "body": "Due diligence and opportunity analysis backed by sources"
+              },
+              {
+                "title": "Consultants",
+                "body": "Client industry insights and strategic recommendations"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Build Your Own AI Assistant",
+      "body": "Pitaj Lider is a custom implementation. We can build something similar for your industry, your data, your use case.",
+      "cta": {
+        "label": "tell us what you're building",
+        "href": "/#contact"
+      },
+      "secondary": {
+        "label": "See starting prices",
+        "href": "/pricing"
+      }
+    },
+    "notes": [
+      "Hero shows a single screenshot with a bottom gradient fade overlay (not a slideshow).",
+      "Section \"What It Does\" is two alternating two-column feature rows (second row mirrored: text left, visual right). Each cards block is one row: item 1 is the visual card (title, meta = its subtitle, body = checklist lines), item 2 is the text column (its large heading as title, two paragraphs as body).",
+      "Card bodies use plain-text line breaks: paragraphs are separated by \"\\n\\n\" and checklist (feature-list, check-icon) lines by a single \"\\n\". Render with white-space: pre-line or split.",
+      "Section \"Technical Implementation\" is a bento grid; the card \"Continuous Learning\" is the large (double-width) card and its body is a paragraph followed by checklist lines.",
+      "Closing block also shows a capacity note: a pill badge \"Open for new projects\" followed by the paragraph \"See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too.\". closing.cta and closing.secondary are the two inline links inside that paragraph, not buttons."
+    ]
+  },
+  "hr": {
+    "slug": "pitaj-lider",
+    "meta": {
+      "title": "Pitaj Lider - AI asistent poslovne inteligencije | LumiVerse",
+      "description": "Asistent poslovne inteligencije nad više od 200.000 članaka i živim podacima iz sudskog registra. Pitajte prirodnim jezikom, odgovor stiže s izvorima."
+    },
+    "kind": "AI asistent",
+    "title": "Pitaj Lider",
+    "subtitle": "Asistent poslovne inteligencije koji mijenja način na koji profesionalci dolaze do tržišnih podataka. Pitanja prirodnim jezikom nad više od 200.000 članaka i nad podacima iz sudskog registra u stvarnom vremenu.",
+    "ctas": [
+      {
+        "label": "Pogledajte uživo",
+        "href": "https://lidermedia.hr/lider-bi/",
+        "external": true
+      },
+      {
+        "label": "Napravite nešto slično",
+        "href": "/hr#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/pitaj-lider/pitaj-lider-ai-assistant.jpg",
+        "alt": "Sučelje AI asistenta Pitaj Lider s obradom pitanja na prirodnom jeziku i poslovnim uvidima",
+        "width": 1348,
+        "height": 920
+      }
+    ],
+    "stats": [
+      {
+        "value": "200K+",
+        "label": "Indeksiranih članaka"
+      },
+      {
+        "value": "U stvarnom vremenu",
+        "label": "Podaci iz sudskog registra"
+      },
+      {
+        "value": "NLP",
+        "label": "Pitanja prirodnim jezikom"
+      },
+      {
+        "value": "24/7",
+        "label": "Uvijek dostupno"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Što radi",
+        "lede": "Dva moćna izvora podataka, spojena kroz AI koji razumije kontekst i namjeru.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Baza članaka",
+                "body": "Tržišni trendovi i analiza djelatnosti\nIzvještaji poslovne inteligencije\nGospodarski pokazatelji i prognoze\nUvidi u konkurentsko okruženje",
+                "meta": "Više od 200.000 kuriranih poslovnih članaka"
+              },
+              {
+                "title": "Desetljeća poslovne inteligencije",
+                "body": "Svaki članak iz arhive magazina Lider, strukturiran i indeksiran za semantičku pretragu. Pitajte prirodnim jezikom, dobijte odgovore s izvorima.\n\nSustav razumije kontekst. Pitajte za tržišni položaj neke tvrtke i izvući će relevantne članke, spomene konkurenata i trendove u djelatnosti — sve u nekoliko sekundi."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Sudski registar",
+                "body": "Podaci o registraciji tvrtke\nPokazatelji financijskog stanja\nPravni status i usklađenost\nVlasništvo i ključne osobe",
+                "meta": "Podaci iz sudskog registra u stvarnom vremenu"
+              },
+              {
+                "title": "Podaci o tvrtkama u stvarnom vremenu",
+                "body": "Izravan pristup službenim podacima iz sudskog registra. Trenutni status, financijsko zdravlje, vlasnička struktura — provjereni podaci, a ne nagađanja pokupljena s weba.\n\nU kombinaciji s uvidima iz članaka dobivate cijelu sliku: što tvrtka govori javno, što tržište govori o njoj i što pokazuju službeni zapisi."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tehnička izvedba",
+        "lede": "Građeno za točnost, brzinu i stalno poboljšavanje.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Obrada prirodnog jezika",
+                "body": "Napredni NLP koji razumije hrvatsko poslovno nazivlje, tumači složena pitanja i iz razgovornog unosa izvlači namjeru."
+              },
+              {
+                "title": "Semantička pretraga",
+                "body": "Vektorski zapisi i RAG arhitektura za dohvat svjestan konteksta. Pronalazi relevantne podatke i kad se ključne riječi ne poklapaju točno."
+              },
+              {
+                "title": "Analitika u stvarnom vremenu",
+                "body": "Obrada živih podataka za trenutne uvide. Pretrage tvrtki, analiza trendova i unakrsno povezivanje odvijaju se u milisekundama."
+              },
+              {
+                "title": "Stalno učenje",
+                "body": "Sustav se popravlja korištenjem. Obrasci pitanja usmjeravaju nadogradnje modela, povratne informacije korisnika dorađuju odgovore, a novi se sadržaj automatski indeksira i uključuje.\n\nUgrađena povratna sprega\nAutomatsko osvježavanje sadržaja\nOptimizacija pitanja kroz vrijeme"
+              },
+              {
+                "title": "API integracije",
+                "body": "Spaja se na vanjske izvore podataka, sudske registre i sustave za upravljanje sadržajem preko sigurnih, održavanih integracija."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Namijenjeno",
+        "lede": "Osmišljeno za profesionalce kojima brzo treba pouzdana poslovna inteligencija.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Poslovni analitičari",
+                "body": "Istraživanje tržišta i analiza konkurencije u minutama, ne danima"
+              },
+              {
+                "title": "Prodajni timovi",
+                "body": "Istraživanje potencijalnih klijenata i kvalifikacija upita uz provjerene podatke"
+              },
+              {
+                "title": "Ulagači",
+                "body": "Dubinska analiza i procjena prilika, potkrijepljene izvorima"
+              },
+              {
+                "title": "Konzultanti",
+                "body": "Uvidi u klijentovu djelatnost i strateške preporuke"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Izgradite vlastitog AI asistenta",
+      "body": "Pitaj Lider je izvedba po mjeri. Možemo napraviti nešto slično za Vašu djelatnost, Vaše podatke i Vaš slučaj primjene.",
+      "cta": {
+        "label": "recite što gradite",
+        "href": "/hr#contact"
+      },
+      "secondary": {
+        "label": "Pogledajte početne cijene",
+        "href": "/hr/pricing"
+      }
+    },
+    "notes": [
+      "Hero shows a single screenshot with a bottom gradient fade overlay (not a slideshow).",
+      "Section \"Što radi\" is two alternating two-column feature rows (second row mirrored: text left, visual right). Each cards block is one row: item 1 is the visual card (title, meta = its subtitle, body = checklist lines), item 2 is the text column (its large heading as title, two paragraphs as body).",
+      "Card bodies use plain-text line breaks: paragraphs are separated by \"\\n\\n\" and checklist (feature-list, check-icon) lines by a single \"\\n\". Render with white-space: pre-line or split.",
+      "Section \"Tehnička izvedba\" is a bento grid; the card \"Stalno učenje\" is the large (double-width) card and its body is a paragraph followed by checklist lines.",
+      "Closing block also shows a capacity note: a pill badge \"Primamo nove projekte\" followed by the paragraph \"Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni.\". closing.cta and closing.secondary are the two inline links inside that paragraph, not buttons."
+    ]
+  }
+}

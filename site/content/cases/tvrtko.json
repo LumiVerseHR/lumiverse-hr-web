@@ -1,0 +1,322 @@
+{
+  "en": {
+    "slug": "tvrtko",
+    "meta": {
+      "title": "Tvrtko.ai - Croatian Business Intelligence Platform | LumiVerse",
+      "description": "Croatian business intelligence platform: 200,000+ companies, financial data from 2008-2024, credit ratings, and an AI assistant."
+    },
+    "kind": "Business Intelligence Platform",
+    "title": "Tvrtko.ai",
+    "subtitle": "Data-driven business decisions for the Croatian market. 200,000+ companies, financial reports from 2008-2024, credit ratings, and an AI assistant that speaks Croatian.",
+    "ctas": [
+      {
+        "label": "Try It Free",
+        "href": "https://tvrtko.ai",
+        "external": true
+      },
+      {
+        "label": "Build Something Similar",
+        "href": "/#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/tvrtko/tvrtko-ai-landing.jpg",
+        "alt": "Tvrtko.ai business intelligence platform showing company search and financial data analysis",
+        "width": 1200,
+        "height": 611
+      }
+    ],
+    "stats": [
+      {
+        "value": "200K+",
+        "label": "Companies"
+      },
+      {
+        "value": "1.68M+",
+        "label": "Financial Reports"
+      },
+      {
+        "value": "2008-2024",
+        "label": "Financial Data"
+      },
+      {
+        "value": "Daily",
+        "label": "Data Updates"
+      }
+    ],
+    "sections": [
+      {
+        "title": "What It Does",
+        "lede": "Two pillars of business intelligence: company data and financial analysis, unified through AI.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Company Intelligence",
+                "body": "Advanced search by name, OIB, or activity\nCourt registry data & legal status\nOwnership structure & key personnel\nBeneficial ownership registry",
+                "meta": "200,000+ Croatian companies"
+              },
+              {
+                "title": "Every Croatian Company, One Search",
+                "body": "Search by company name, OIB, or business activity. Get instant access to court registry data, ownership chains, and beneficial owners - all from official sources.\n\nNo more digging through multiple government portals. Tvrtko.ai aggregates data from the court register, FINA, and beneficial ownership registry into a single, searchable interface."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Financial Analysis",
+                "body": "Balance sheets & P&L statements\nRevenue trends & growth analysis\nCredit ratings A-D with methodology\nIndustry benchmarking & comparison",
+                "meta": "GFI data from 2008-2024"
+              },
+              {
+                "title": "16 Years of Financial History",
+                "body": "Complete GFI financial reports from 2008 to 2024. Balance sheets, profit & loss statements, revenue trends - all visualized and ready for analysis.\n\nOur credit rating system scores companies A through D based on financial health, payment history, and industry benchmarks. Know who you're doing business with before signing the contract."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Technical Implementation",
+        "lede": "Built for speed, accuracy, and the Croatian market.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "AI Search",
+                "body": "Semantic search that understands business descriptions in Croatian. Search by what a company does, not just its name. Find competitors, suppliers, or partners by activity."
+              },
+              {
+                "title": "Data Aggregation",
+                "body": "Unified data from the court register, FINA financial reports, and the beneficial ownership registry. Daily automated updates keep everything current."
+              },
+              {
+                "title": "Credit Scoring",
+                "body": "Proprietary risk assessment algorithm that rates companies A through D. Combines financial ratios, payment behavior, and industry comparison for reliable scoring."
+              },
+              {
+                "title": "AI Assistant \"Pitaj Tvrtka\"",
+                "body": "Natural language queries in Croatian. Ask questions about companies, compare financials, or request analysis - the AI understands context and delivers structured answers with sources.\n\nNatural language queries in Croatian\nCompany comparison & analysis\nStructured answers with data sources"
+              },
+              {
+                "title": "Data Export & Integration",
+                "body": "Export company and financial data to Excel. CRM-ready formats for sales teams. Bulk exports for research and analysis projects."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Built For",
+        "lede": "Professionals who need reliable Croatian business data fast.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Sales Teams",
+                "body": "Prospect research, lead qualification, and company verification in minutes"
+              },
+              {
+                "title": "Due Diligence",
+                "body": "Ownership chains, financial health, and credit risk assessment for M&A and partnerships"
+              },
+              {
+                "title": "Financial Analysis",
+                "body": "16 years of financial data, industry benchmarks, and trend analysis at your fingertips"
+              },
+              {
+                "title": "Accountants & Legal",
+                "body": "Client verification, company status checks, and regulatory compliance data"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Need a Business Intelligence Platform?",
+      "body": "Tvrtko.ai is our own product. We can build something similar for your market, your industry, your data sources.",
+      "cta": {
+        "label": "tell us what you're building",
+        "href": "/#contact"
+      },
+      "secondary": {
+        "label": "See starting prices",
+        "href": "/pricing"
+      }
+    },
+    "notes": [
+      "Hero shows a single screenshot with a bottom gradient fade overlay (not a slideshow).",
+      "Section \"What It Does\" is two alternating two-column feature rows (second row mirrored: text left, visual right). Each cards block is one row: item 1 is the visual card (title, meta = its subtitle, body = checklist lines), item 2 is the text column (its large heading as title, two paragraphs as body).",
+      "Card bodies use plain-text line breaks: paragraphs are separated by \"\\n\\n\" and checklist (feature-list, check-icon) lines by a single \"\\n\". Render with white-space: pre-line or split.",
+      "Section \"Technical Implementation\" is a bento grid; the card \"AI Assistant \"Pitaj Tvrtka\"\" is the large (double-width) card and its body is a paragraph followed by checklist lines.",
+      "Closing block also shows a capacity note: a pill badge \"Open for new projects\" followed by the paragraph \"See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too.\". closing.cta and closing.secondary are the two inline links inside that paragraph, not buttons."
+    ]
+  },
+  "hr": {
+    "slug": "tvrtko",
+    "meta": {
+      "title": "Tvrtko.ai - hrvatska platforma poslovne inteligencije | LumiVerse",
+      "description": "Hrvatska platforma poslovne inteligencije: više od 200.000 tvrtki, financijski podaci od 2008. do 2024., kreditni rejtinzi i AI asistent."
+    },
+    "kind": "Platforma poslovne inteligencije",
+    "title": "Tvrtko.ai",
+    "subtitle": "Poslovne odluke utemeljene na podacima, za hrvatsko tržište. Više od 200.000 tvrtki, financijska izvješća od 2008. do 2024., kreditni rejtinzi i AI asistent koji govori hrvatski.",
+    "ctas": [
+      {
+        "label": "Isprobajte besplatno",
+        "href": "https://tvrtko.ai",
+        "external": true
+      },
+      {
+        "label": "Napravite nešto slično",
+        "href": "/hr#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/tvrtko/tvrtko-ai-landing.jpg",
+        "alt": "Platforma poslovne inteligencije Tvrtko.ai s pretragom tvrtki i analizom financijskih podataka",
+        "width": 1200,
+        "height": 611
+      }
+    ],
+    "stats": [
+      {
+        "value": "200K+",
+        "label": "Tvrtki"
+      },
+      {
+        "value": "1.68M+",
+        "label": "Financijskih izvješća"
+      },
+      {
+        "value": "2008-2024",
+        "label": "Financijski podaci"
+      },
+      {
+        "value": "Dnevno",
+        "label": "Osvježavanje podataka"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Što radi",
+        "lede": "Dva stupa poslovne inteligencije: podaci o tvrtkama i financijska analiza, spojeni kroz AI.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Podaci o tvrtkama",
+                "body": "Napredna pretraga po nazivu, OIB-u ili djelatnosti\nPodaci iz sudskog registra i pravni status\nVlasnička struktura i ključne osobe\nRegistar stvarnih vlasnika",
+                "meta": "Više od 200.000 hrvatskih tvrtki"
+              },
+              {
+                "title": "Svaka hrvatska tvrtka, jedna pretraga",
+                "body": "Pretražujte po nazivu tvrtke, OIB-u ili djelatnosti. Odmah dobivate podatke iz sudskog registra, vlasničke lance i stvarne vlasnike — sve iz službenih izvora.\n\nNema više kopanja po više državnih portala. Tvrtko.ai objedinjuje podatke iz sudskog registra, FINA-e i registra stvarnih vlasnika u jedno pretraživo sučelje."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Financijska analiza",
+                "body": "Bilance i računi dobiti i gubitka\nKretanje prihoda i analiza rasta\nKreditni rejtinzi od A do D, s metodologijom\nUsporedba s djelatnošću i konkurencijom",
+                "meta": "GFI podaci od 2008. do 2024."
+              },
+              {
+                "title": "16 godina financijske povijesti",
+                "body": "Cjelovita GFI financijska izvješća od 2008. do 2024. Bilance, računi dobiti i gubitka, kretanje prihoda — sve prikazano i spremno za analizu.\n\nNaš sustav kreditnog rejtinga ocjenjuje tvrtke od A do D na temelju financijskog zdravlja, povijesti plaćanja i usporedbe s djelatnošću. Znajte s kime poslujete prije nego što potpišete ugovor."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tehnička izvedba",
+        "lede": "Građeno za brzinu, točnost i hrvatsko tržište.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "AI pretraživanje",
+                "body": "Semantička pretraga koja razumije opise djelatnosti na hrvatskom. Tražite po tome čime se tvrtka bavi, a ne samo po nazivu. Pronađite konkurente, dobavljače ili partnere po djelatnosti."
+              },
+              {
+                "title": "Objedinjavanje podataka",
+                "body": "Objedinjeni podaci iz sudskog registra, FINA-inih financijskih izvješća i registra stvarnih vlasnika. Dnevno automatsko osvježavanje drži sve aktualnim."
+              },
+              {
+                "title": "Kreditno ocjenjivanje",
+                "body": "Vlastiti algoritam za procjenu rizika koji tvrtke ocjenjuje od A do D. Kombinira financijske pokazatelje, ponašanje pri plaćanju i usporedbu s djelatnošću za pouzdanu ocjenu."
+              },
+              {
+                "title": "AI asistent „Pitaj Tvrtka\"",
+                "body": "Pitanja prirodnim jezikom, na hrvatskom. Pitajte o tvrtkama, usporedite financije ili zatražite analizu — AI razumije kontekst i vraća strukturirane odgovore s izvorima.\n\nPitanja prirodnim jezikom, na hrvatskom\nUsporedba i analiza tvrtki\nStrukturirani odgovori s izvorima podataka"
+              },
+              {
+                "title": "Izvoz podataka i integracija",
+                "body": "Izvezite podatke o tvrtkama i financije u Excel. Formati spremni za CRM, za prodajne timove. Skupni izvoz za istraživačke i analitičke projekte."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Namijenjeno",
+        "lede": "Profesionalcima kojima brzo trebaju pouzdani podaci o hrvatskim tvrtkama.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Prodajni timovi",
+                "body": "Istraživanje potencijalnih klijenata, kvalifikacija upita i provjera tvrtki u nekoliko minuta"
+              },
+              {
+                "title": "Dubinska analiza",
+                "body": "Vlasnički lanci, financijsko zdravlje i procjena kreditnog rizika za preuzimanja i partnerstva"
+              },
+              {
+                "title": "Financijska analiza",
+                "body": "16 godina financijskih podataka, usporedbe s djelatnošću i analiza trendova, nadohvat ruke"
+              },
+              {
+                "title": "Računovođe i pravnici",
+                "body": "Provjera klijenata, status tvrtke i podaci za regulatornu usklađenost"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Treba Vam platforma poslovne inteligencije?",
+      "body": "Tvrtko.ai naš je vlastiti proizvod. Možemo napraviti nešto slično za Vaše tržište, Vašu industriju i Vaše izvore podataka.",
+      "cta": {
+        "label": "recite što gradite",
+        "href": "/hr#contact"
+      },
+      "secondary": {
+        "label": "Pogledajte početne cijene",
+        "href": "/hr/pricing"
+      }
+    },
+    "notes": [
+      "Hero shows a single screenshot with a bottom gradient fade overlay (not a slideshow).",
+      "Section \"Što radi\" is two alternating two-column feature rows (second row mirrored: text left, visual right). Each cards block is one row: item 1 is the visual card (title, meta = its subtitle, body = checklist lines), item 2 is the text column (its large heading as title, two paragraphs as body).",
+      "Card bodies use plain-text line breaks: paragraphs are separated by \"\\n\\n\" and checklist (feature-list, check-icon) lines by a single \"\\n\". Render with white-space: pre-line or split.",
+      "Section \"Tehnička izvedba\" is a bento grid; the card \"AI asistent „Pitaj Tvrtka\"\" is the large (double-width) card and its body is a paragraph followed by checklist lines.",
+      "Closing block also shows a capacity note: a pill badge \"Primamo nove projekte\" followed by the paragraph \"Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni.\". closing.cta and closing.secondary are the two inline links inside that paragraph, not buttons."
+    ]
+  }
+}

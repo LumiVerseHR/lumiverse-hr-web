@@ -11,3 +11,6 @@ export function localePath(locale: Locale, path = "/"): string {
   if (locale === defaultLocale) return clean;
   return clean === "/" ? `/${locale}` : `/${locale}${clean}`;
 }
+
+// A section of the homepage, from anywhere: /#work or /hr#work.
+export const homeAnchor = (locale: Locale, id: string) => (locale === defaultLocale ? `/#${id}` : `/${locale}#${id}`);

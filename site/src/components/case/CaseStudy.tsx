@@ -1,0 +1,103 @@
+import type { CaseStudy as Case } from "@/content/case-schema";
+import type { Locale } from "@/i18n/config";
+import { homeAnchor, localePath } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/dictionaries";
+import { flagships, workIndex } from "@/content/work";
+import { Icon } from "@/components/icons/Icon";
+import { BlockView } from "./Blocks";
+import { Showcase } from "./Showcase";
+import styles from "./CaseStudy.module.css";
+
+const ORDER = [...flagships.map((f) => ({ slug: f.slug, name: f.name })), ...workIndex.map((w) => ({ slug: w.slug, name: w.name }))];
+
+function LinkButton({ link, primary }: { link: Case["ctas"][number]; primary?: boolean }) {
+  return (
+    <a
+      href={link.href}
+      className={primary ? styles.primary : styles.secondary}
+      {...(link.external ? { target: "_blank", rel: "noopener" } : {})}
+    >
+      {link.label}
+      <Icon name="arrow-right" size={16} />
+    </a>
+  );
+}
+
+export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict: Dictionary }) {
+  const at = ORDER.findIndex((o) => o.slug === data.slug);
+  const next = ORDER[(at + 1) % ORDER.length];
+  const prev = ORDER[(at - 1 + ORDER.length) % ORDER.length];
+
+  return (
+    <main className={styles.page}>
+      <section className={styles.hero} aria-labelledby="case-title">
+        <nav className={styles.crumbs} aria-label="Breadcrumb">
+          <a href={homeAnchor(lang, "work")}>{dict.case.work}</a>
+          <span aria-hidden>/</span>
+          <span aria-current="page">{data.title.replace(/\n/g, " ")}</span>
+        </nav>
+        <p className={styles.kind}>{data.kind}</p>
+        <h1 id="case-title" className={styles.title}>
+          {data.title}
+          {data.titleNote && <span className={styles.titleNote}> {data.titleNote}</span>}
+        </h1>
+        <p className={styles.subtitle}>{data.subtitle}</p>
+        {data.ctas.length > 0 && (
+          <div className={styles.ctas}>
+            {data.ctas.map((link, i) => (
+              <LinkButton key={link.href + i} link={link} primary={i === 0} />
+            ))}
+          </div>
+        )}
+        <Showcase images={data.showcase} label={dict.case.showcase} show={dict.case.show} />
+      </section>
+
+      {data.stats.length > 0 && (
+        <dl className={styles.stats}>
+          {data.stats.map((s) => (
+            <div key={s.label}>
+              <dt>{s.label}</dt>
+              <dd>{s.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
+
+      {data.sections.map((section, i) => (
+        <section key={i} id={section.id} className={styles.section} aria-labelledby={`s-${i}`}>
+          <header className={styles.sectionHead}>
+            <h2 id={`s-${i}`}>{section.title}</h2>
+            {section.lede && <p>{section.lede}</p>}
+          </header>
+          <div className={styles.blocks}>
+            {section.blocks.map((block, j) => (
+              <BlockView key={j} block={block} />
+            ))}
+          </div>
+        </section>
+      ))}
+
+      {data.closing && (
+        <section className={styles.closing} aria-labelledby="closing-title">
+          <h2 id="closing-title">{data.closing.title}</h2>
+          <p>{data.closing.body}</p>
+          <div className={styles.ctas}>
+            <LinkButton link={data.closing.cta} primary />
+            {data.closing.secondary && <LinkButton link={data.closing.secondary} />}
+          </div>
+        </section>
+      )}
+
+      <nav className={styles.more} aria-label={dict.case.more}>
+        <a href={localePath(lang, `/${prev.slug}`)} className={styles.moreLink}>
+          <span className={styles.moreDir}>{dict.case.prev}</span>
+          <span className={styles.moreName}>{prev.name}</span>
+        </a>
+        <a href={localePath(lang, `/${next.slug}`)} className={`${styles.moreLink} ${styles.moreNext}`}>
+          <span className={styles.moreDir}>{dict.case.next}</span>
+          <span className={styles.moreName}>{next.name}</span>
+        </a>
+      </nav>
+    </main>
+  );
+}

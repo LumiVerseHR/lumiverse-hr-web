@@ -1,0 +1,372 @@
+{
+  "en": {
+    "slug": "barcoder",
+    "meta": {
+      "title": "Barcoder - Encyclopedia of QR & Barcode Standards | LumiVerse",
+      "description": "Barcoder catalogues 463 QR, barcode and visual-code standards across 197 countries, cross-referenced with the 1,076 wallets that read them."
+    },
+    "kind": "Our Project · Reference Encyclopedia",
+    "title": "Barcoder",
+    "subtitle": "Scan a payment QR in Zagreb and one in Manila and you're looking at two unrelated standards. Barcoder catalogues all of them - 463 visual-code standards across 197 countries, cross-referenced with the 1,076 wallets that read them.",
+    "ctas": [
+      {
+        "label": "Open Barcoder",
+        "href": "https://barcoder.lumiverse.hr",
+        "external": true
+      },
+      {
+        "label": "Build Something Similar",
+        "href": "/#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/barcoder/barcoder-landing.jpg",
+        "alt": "Barcoder landing page showing the catalogue counts: 463 standards, 197 countries, 1,076 wallets and 112 sample codes",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "463",
+        "label": "Visual-code standards catalogued"
+      },
+      {
+        "value": "197",
+        "label": "Countries with payment-scheme reports"
+      },
+      {
+        "value": "1,076",
+        "label": "Wallets cross-referenced"
+      },
+      {
+        "value": "112",
+        "label": "Real sample codes to test against"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Nobody Wrote This Down",
+        "lede": "The answers live in central bank announcements, ISO/IEC specs, scheme documentation, vendor PDFs and regulator filings - in a dozen languages, none of them talking to each other. Barcoder pulls them into one cross-referenced place.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "The Questions It Answers",
+                "body": "Which QR standard does this country's instant-payment scheme use?\nWill this wallet scan a merchant code from that scheme?\nWhat's actually inside this payload I just decoded?\nHow do two national schemes interoperate at the counter?"
+              },
+              {
+                "title": "Who Reads It",
+                "body": "Payments engineers integrating a new market. Fintech teams sizing wallet coverage before launch. Wallet providers checking which rails they can ride. Researchers who need a citation, not a forum post.\n\nEvery page names its sources. Vol. I, Edition 2026 - and it grows with each commit."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Three Ways In",
+        "lede": "Every entry links to the others. Start from a standard, a country, or a wallet - you end up in the same graph.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Standards",
+                "body": "Every QR, barcode and visual-code specification we can find evidence for - EMV merchant-presented modes, national instant-payment QRs, retail GS1 codes, niche transit codes.\n\n463 entries, A to Z\nPIX, UPI, KHQR, Bharat QR, EAN-13, Code 128",
+                "meta": "01"
+              },
+              {
+                "title": "Payments by Country",
+                "body": "A page per country covering which schemes operate there, what visual codes those schemes use, and how interoperability works at the merchant counter.\n\n197 countries, no gaps\nScheme, code and rail on one page",
+                "meta": "02"
+              },
+              {
+                "title": "Wallets",
+                "body": "One page per wallet - GCash, Alipay, Revolut, M-Pesa and the rest - covering which standards each supports, in which markets, and against which underlying rails.\n\n1,076 wallet profiles\nMarket and rail coverage per wallet",
+                "meta": "03"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Point It At a Code",
+        "lede": "A reference book you can run. Scan a code, paste a payload, or generate one - and land on the standard that explains it.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Identification, Not Just Decoding",
+                "body": "Plenty of tools read a QR code. Barcoder tells you what it is. Decoded payloads are matched against all 463 standards and 1,076 wallets using URI schemes, TLV structures (EMVCo MPM), contact formats and payment-scheme identifiers.\n\nPayment QRs: PIX, UPI, PromptPay, SGQR, DuitNow\nBank transfers: HUB3, SEPA EPC, Swiss QR-bill\nCrypto URIs, vCard, MECARD, WiFi, calendar\nEvery match links to its reference page"
+              },
+              {
+                "title": "Camera Scan",
+                "body": "Point your phone at a code in the wild. Decode and identify in the browser - no app to install."
+              },
+              {
+                "title": "Paste & Decode",
+                "body": "Drop in a raw payload string. Get the matching standard and every field broken out and labelled."
+              },
+              {
+                "title": "Sample Gallery",
+                "body": "112 real codes from schemes around the world. Test your own parser against something authentic."
+              },
+              {
+                "title": "Encoder Playground",
+                "body": "40 encoders. Fill in the form, generate a valid code, then scan it back - all on one page."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Content Is the Repo",
+        "lede": "Every page on Barcoder is rendered from a single markdown file checked into the repository. No CMS. No admin backend. No production-only edits.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Research",
+                "body": "Each country starts as long-form research - central bank sources, scheme docs, regulator filings, read and written up."
+              },
+              {
+                "title": "Extract",
+                "body": "Claude Code skills pull structured per-standard and per-country pages out of that research, consistently every time."
+              },
+              {
+                "title": "Commit",
+                "body": "Pages land as markdown in the repo. Every published claim is traceable to the commit that introduced it."
+              },
+              {
+                "title": "Render",
+                "body": "The backend reads those files, the frontend renders them. Boring on purpose - and reproducible from source."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Auditable by Design",
+                "body": "A reference work is only worth as much as its sourcing. Because the content is the repo, any page can be traced back through git to the change that wrote it - and corrected the same way anyone corrects code."
+              },
+              {
+                "title": "One Person, Encyclopedic Scope",
+                "body": "197 country reports is a research-team-year of work. AI agents did the extraction and drafting; a human set the structure, checked the sources and shipped it. That's the whole LumiVerse thesis in one project."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Have a Domain Nobody Mapped?",
+      "body": "Barcoder is what happens when you point AI research pipelines at a scattered field and make every output auditable. The same approach works on your industry's mess.",
+      "cta": {
+        "label": "Open Barcoder",
+        "href": "https://barcoder.lumiverse.hr",
+        "external": true
+      },
+      "secondary": {
+        "label": "Schedule a Call",
+        "href": "/#contact"
+      }
+    },
+    "notes": [
+      "Section \"The Content Is the Repo\": the steps are a pipeline whose cards each carry a monospace path label above the title, in order: reports/, .claude/skills/, docs/, web.",
+      "Cards that carry a bullet feature-list on the live page (check or minus icons) have those bullets appended to \"body\" as newline-separated lines, separated from the prose by a blank line, in page order. Affected cards: \"The Questions It Answers\"; \"Standards\"; \"Payments by Country\"; \"Wallets\"; \"Identification, Not Just Decoding\". Render body with white-space: pre-line, or split on the blank line to restore the bullet list.",
+      "Bento grid layout: these cards span double width on the live page: \"Identification, Not Just Decoding\".",
+      "Section \"Three Ways In\" uses numbered cards (01-03, kept in \"meta\") with an icon each; mapped to cards rather than steps because they are parallel entry points, not a sequence.",
+      "Inline emphasis: the word \"is\" in the first card of section \"Point It At a Code\" is italic on the live page."
+    ]
+  },
+  "hr": {
+    "slug": "barcoder",
+    "meta": {
+      "title": "Barcoder - enciklopedija standarda za QR i barkodove | LumiVerse",
+      "description": "Barcoder katalogizira 463 standarda za QR, barkodove i vizualne kodove iz 197 zemalja, unakrsno povezana s 1.076 novčanika koji ih čitaju."
+    },
+    "kind": "Naš projekt · Referentna enciklopedija",
+    "title": "Barcoder",
+    "subtitle": "Skenirajte platni QR u Zagrebu i jedan u Manili i gledate dva nepovezana standarda. Barcoder ih katalogizira sve — 463 vizualna kodna standarda iz 197 zemalja, unakrsno povezana s 1.076 novčanika koji ih čitaju.",
+    "ctas": [
+      {
+        "label": "Otvorite Barcoder",
+        "href": "https://barcoder.lumiverse.hr",
+        "external": true
+      },
+      {
+        "label": "Napravite nešto slično",
+        "href": "/hr#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/barcoder/barcoder-landing.jpg",
+        "alt": "Naslovnica Barcodera s brojkama iz kataloga: 463 standarda, 197 zemalja, 1.076 novčanika i 112 primjera kodova",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "463",
+        "label": "Katalogiziranih vizualnih kodnih standarda"
+      },
+      {
+        "value": "197",
+        "label": "Zemalja s izvještajima o platnim shemama"
+      },
+      {
+        "value": "1,076",
+        "label": "Unakrsno povezanih novčanika"
+      },
+      {
+        "value": "112",
+        "label": "Stvarnih primjera kodova za testiranje"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Nitko ovo nije zapisao",
+        "lede": "Odgovori žive u objavama središnjih banaka, ISO/IEC specifikacijama, dokumentaciji shema, PDF-ovima dobavljača i regulatornim podnescima — na desetak jezika i međusobno nepovezani. Barcoder ih skuplja na jedno unakrsno povezano mjesto.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Pitanja na koja odgovara",
+                "body": "Koji QR standard koristi shema instantnih plaćanja u ovoj zemlji?\nHoće li ovaj novčanik skenirati trgovački kod iz te sheme?\nŠto se zapravo nalazi u ovom payloadu koji sam upravo dekodirao?\nKako dvije nacionalne sheme surađuju na blagajni?"
+              },
+              {
+                "title": "Tko ga čita",
+                "body": "Inženjeri plaćanja koji integriraju novo tržište. Fintech timovi koji prije lansiranja procjenjuju pokrivenost novčanicima. Pružatelji novčanika koji provjeravaju na koje se infrastrukture mogu osloniti. Istraživači kojima treba citat, a ne objava s foruma.\n\nSvaka stranica navodi svoje izvore. Svezak I., izdanje 2026. — i raste sa svakim commitom."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tri ulaza",
+        "lede": "Svaki unos vodi na ostale. Krenete od standarda, zemlje ili novčanika — završite u istom grafu.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Standardi",
+                "body": "Svaka QR, barkod i vizualna kodna specifikacija za koju možemo pronaći dokaz — EMV načini koje prikazuje trgovac, nacionalni QR-ovi za instantna plaćanja, maloprodajni GS1 kodovi, rijetki kodovi za javni prijevoz.\n\n463 unosa, od A do Ž\nPIX, UPI, KHQR, Bharat QR, EAN-13, Code 128",
+                "meta": "01"
+              },
+              {
+                "title": "Plaćanja po zemljama",
+                "body": "Stranica po zemlji: koje sheme ondje rade, koje vizualne kodove te sheme koriste i kako izgleda međusobna suradnja na blagajni.\n\n197 zemalja, bez rupa\nShema, kod i infrastruktura na jednoj stranici",
+                "meta": "02"
+              },
+              {
+                "title": "Novčanici",
+                "body": "Stranica po novčaniku — GCash, Alipay, Revolut, M-Pesa i ostali — koje standarde podržava, na kojim tržištima i preko koje infrastrukture.\n\n1.076 profila novčanika\nPokrivenost tržišta i infrastrukture po novčaniku",
+                "meta": "03"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Uperite ga u kod",
+        "lede": "Priručnik koji se može pokrenuti. Skenirajte kod, zalijepite payload ili ga generirajte — i završite na standardu koji ga objašnjava.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Prepoznavanje, ne samo dekodiranje",
+                "body": "Mnogi alati pročitaju QR kod. Barcoder Vam kaže što on jest. Dekodirani payloadi uspoređuju se sa svih 463 standarda i 1.076 novčanika pomoću URI shema, TLV struktura (EMVCo MPM), kontaktnih formata i identifikatora platnih shema.\n\nPlatni QR-ovi: PIX, UPI, PromptPay, SGQR, DuitNow\nBankovni prijenosi: HUB3, SEPA EPC, Swiss QR-bill\nKripto URI-ji, vCard, MECARD, WiFi, kalendar\nSvako podudaranje vodi na svoju referentnu stranicu"
+              },
+              {
+                "title": "Skeniranje kamerom",
+                "body": "Uperite mobitel u kod na terenu. Dekodiranje i prepoznavanje u pregledniku — bez instaliranja aplikacije."
+              },
+              {
+                "title": "Zalijepite i dekodirajte",
+                "body": "Ubacite sirovi payload. Dobijete standard koji mu odgovara i svako polje razloženo i označeno."
+              },
+              {
+                "title": "Galerija primjera",
+                "body": "112 stvarnih kodova iz shema diljem svijeta. Testirajte vlastiti parser na nečemu autentičnom."
+              },
+              {
+                "title": "Igralište za enkodere",
+                "body": "40 enkodera. Ispunite obrazac, generirajte valjan kod pa ga skenirajte natrag — sve na jednoj stranici."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Sadržaj je repozitorij",
+        "lede": "Svaka se stranica Barcodera prikazuje iz jedne markdown datoteke u repozitoriju. Bez CMS-a. Bez administratorskog sučelja. Bez izmjena koje postoje samo u produkciji.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Istraživanje",
+                "body": "Svaka zemlja počinje kao opsežno istraživanje — izvori središnje banke, dokumentacija shema, regulatorni podnesci, pročitano i zapisano."
+              },
+              {
+                "title": "Izdvajanje",
+                "body": "Claude Code vještine iz tog istraživanja izvlače strukturirane stranice po standardu i po zemlji, svaki put jednako."
+              },
+              {
+                "title": "Commit",
+                "body": "Stranice slijeću u repozitorij kao markdown. Svaka objavljena tvrdnja može se pratiti do commita koji ju je uveo."
+              },
+              {
+                "title": "Prikaz",
+                "body": "Backend čita te datoteke, frontend ih prikazuje. Dosadno namjerno — i ponovljivo iz izvora."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Provjerljivo od temelja",
+                "body": "Referentno djelo vrijedi onoliko koliko i njegovi izvori. Budući da je sadržaj repozitorij, svaka se stranica kroz git može pratiti do izmjene koja ju je napisala — i ispraviti isto onako kako se ispravlja kod."
+              },
+              {
+                "title": "Jedna osoba, enciklopedijski opseg",
+                "body": "197 izvještaja o zemljama godina je rada istraživačkog tima. AI agenti su izdvajali i pisali nacrte, čovjek je postavio strukturu, provjerio izvore i objavio. To je cijela teza LumiVersea u jednom projektu."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Imate područje koje nitko nije mapirao?",
+      "body": "Barcoder je ono što nastane kad AI istraživačke pipeline usmjerite na rasuto područje i svaki izlaz učinite provjerljivim. Isti pristup radi i na neredu u Vašoj industriji.",
+      "cta": {
+        "label": "Otvorite Barcoder",
+        "href": "https://barcoder.lumiverse.hr",
+        "external": true
+      },
+      "secondary": {
+        "label": "Dogovorite razgovor",
+        "href": "/hr#contact"
+      }
+    },
+    "notes": [
+      "Section \"Sadržaj je repozitorij\": the steps are a pipeline whose cards each carry a monospace path label above the title, in order: reports/, .claude/skills/, docs/, web.",
+      "Cards that carry a bullet feature-list on the live page (check or minus icons) have those bullets appended to \"body\" as newline-separated lines, separated from the prose by a blank line, in page order. Affected cards: \"Pitanja na koja odgovara\"; \"Standardi\"; \"Plaćanja po zemljama\"; \"Novčanici\"; \"Prepoznavanje, ne samo dekodiranje\". Render body with white-space: pre-line, or split on the blank line to restore the bullet list.",
+      "Bento grid layout: these cards span double width on the live page: \"Prepoznavanje, ne samo dekodiranje\".",
+      "Section \"Tri ulaza\" uses numbered cards (01-03, kept in \"meta\") with an icon each; mapped to cards rather than steps because they are parallel entry points, not a sequence.",
+      "Inline emphasis: the word \"jest\" in the first card of section \"Uperite ga u kod\" is italic on the live page."
+    ]
+  }
+}

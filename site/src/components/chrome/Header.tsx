@@ -1,0 +1,45 @@
+import Link from "next/link";
+import type { Locale } from "@/i18n/config";
+import { homeAnchor, localePath } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/dictionaries";
+import { Icon } from "@/components/icons/Icon";
+import { MobileMenu } from "@/components/nav/MobileMenu";
+import styles from "./Header.module.css";
+
+// One header for every page. `path` is the unprefixed path of the current page,
+// so the language switch lands on the same page in the other language.
+export function Header({ lang, dict, path = "/", overlay = false }: { lang: Locale; dict: Dictionary; path?: string; overlay?: boolean }) {
+  const items = [
+    { href: homeAnchor(lang, "work"), label: dict.nav.work },
+    { href: homeAnchor(lang, "services"), label: dict.nav.services },
+    { href: homeAnchor(lang, "research"), label: dict.nav.research },
+    { href: homeAnchor(lang, "studio"), label: dict.nav.studio },
+    { href: homeAnchor(lang, "contact"), label: dict.nav.contact },
+  ];
+  const cta = { href: homeAnchor(lang, "contact"), label: dict.nav.cta };
+
+  return (
+    <header className={`${styles.bar} ${overlay ? styles.overlay : styles.page}`}>
+      <Link href={localePath(lang)} className={styles.wordmark} aria-label="LumiVerse">
+        LumiVerse<span className={styles.dot} aria-hidden />
+      </Link>
+      <nav className={styles.nav} aria-label="Primary">
+        {items.map((item) => (
+          <a key={item.href} href={item.href}>{item.label}</a>
+        ))}
+      </nav>
+      <div className={styles.end}>
+        <div className={styles.locale}>
+          <Link href={localePath("en", path)} hrefLang="en" aria-current={lang === "en" ? "true" : undefined}>EN</Link>
+          <span aria-hidden>/</span>
+          <Link href={localePath("hr", path)} hrefLang="hr" aria-current={lang === "hr" ? "true" : undefined}>HR</Link>
+        </div>
+        <a className={styles.cta} href={cta.href}>
+          {cta.label}
+          <Icon name="arrow-right" size={14} />
+        </a>
+        <MobileMenu items={items} cta={cta} labels={{ open: dict.nav.menu, close: dict.nav.close }} />
+      </div>
+    </header>
+  );
+}

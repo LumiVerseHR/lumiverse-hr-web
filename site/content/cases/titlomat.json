@@ -1,0 +1,472 @@
+{
+  "en": {
+    "slug": "titlomat",
+    "meta": {
+      "title": "Titlomat - Automatic Subtitles for Croatian YouTube | LumiVerse",
+      "description": "Titlomat adds Croatian and English subtitles to YouTube videos automatically - no uploads, no editing. A 60-minute episode in about 5 minutes."
+    },
+    "kind": "Our Product · AI Subtitles",
+    "title": "Titlomat.com",
+    "subtitle": "YouTube doesn't auto-caption Croatian. We do. Titlomat adds Croatian and English subtitles to every new video automatically - while you're already working on the next episode.",
+    "ctas": [
+      {
+        "label": "Try Titlomat Free",
+        "href": "https://titlomat.com/en",
+        "external": true
+      },
+      {
+        "label": "Talk to Us",
+        "href": "/#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/titlomat/titlomat-1.jpg",
+        "alt": "Titlomat landing page - automatic Croatian and English subtitles for YouTube",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/titlomat/titlomat-2.jpg",
+        "alt": "Titlomat's three-step flow: connect the channel, publish a video, subtitles are added on YouTube",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/titlomat/titlomat-3.jpg",
+        "alt": "Titlomat pricing - Free, Creator, Pro and Studio credit plans",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "~5 min",
+        "label": "To subtitle a 60-minute episode"
+      },
+      {
+        "value": "95%+",
+        "label": "Accuracy on clean audio"
+      },
+      {
+        "value": "12×",
+        "label": "Faster than the audio itself"
+      },
+      {
+        "value": "2",
+        "label": "Languages - Croatian & English"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Connect Once, Forget It",
+        "lede": "No file uploads. No SRT exports. No timeline editing. Signup takes 30 seconds.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Connect Your Channel",
+                "body": "One-time YouTube authorization that asks for exactly one thing: permission to add subtitles. No access to comments, analytics, or private data."
+              },
+              {
+                "title": "AI Transcribes & Translates",
+                "body": "Speech recognition tuned for Croatian, then translation to English. Your custom vocabulary keeps names, brands, and industry terms spelled right."
+              },
+              {
+                "title": "Subtitles Go Live",
+                "body": "Croatian and English subtitles land directly on your YouTube video. Want a final say? Turn on preview mode and approve before publishing."
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "body": "30-second signup, no credit card"
+              },
+              {
+                "body": "Subtitle permission only"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "body": "95%+ accuracy on clean audio"
+              },
+              {
+                "body": "Custom dictionaries per channel"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "body": "Auto-published to YouTube"
+              },
+              {
+                "body": "Optional preview before going live"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Stop Losing Your Audience",
+        "lede": "A typical Croatian channel misses 15-30% of its potential audience without subtitles. That's viewers watching on mute, non-native speakers, and the entire English-speaking world.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Built for the Croatian Creator Economy",
+                "body": "Big platforms skip small languages - YouTube's auto-captions don't support Croatian. Titlomat fills that gap with speech AI built specifically for Croatian podcasts and YouTube channels, from solo creators to podcast networks and media agencies."
+              },
+              {
+                "title": "Mute Viewers",
+                "body": "Most social video plays silently. Subtitles keep those viewers watching instead of scrolling past."
+              },
+              {
+                "title": "Search & Discovery",
+                "body": "Subtitle text makes your videos searchable. YouTube understands what you said - and ranks you for it."
+              },
+              {
+                "title": "Privacy by Design",
+                "body": "Titlomat asks only for subtitle permission. Your comments, analytics, and private data stay yours."
+              },
+              {
+                "title": "Accessibility",
+                "body": "Deaf and hard-of-hearing viewers can't watch without captions. With Titlomat, every episode includes them by default."
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "body": "Croatian-first speech recognition"
+              },
+              {
+                "body": "English subtitles open global reach"
+              },
+              {
+                "body": "Works for channels of any size"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Start Free, Scale When Ready",
+        "lede": "Credits-based pricing. No credit card to start, no contracts to escape.",
+        "blocks": [
+          {
+            "type": "plans",
+            "items": [
+              {
+                "name": "Free",
+                "price": "€0",
+                "period": "per month",
+                "features": [
+                  "100 credits"
+                ]
+              },
+              {
+                "name": "Creator",
+                "price": "€19",
+                "period": "per month",
+                "features": [
+                  "6,500 credits"
+                ]
+              },
+              {
+                "name": "Pro",
+                "price": "€49",
+                "period": "per month",
+                "features": [
+                  "20,000 credits"
+                ]
+              },
+              {
+                "name": "Studio",
+                "price": "€149",
+                "period": "per month",
+                "features": [
+                  "85,000 credits"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "paragraphs": [
+              "Current pricing at titlomat.com."
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Your Next Video Deserves Subtitles",
+      "body": "Connect your channel in 30 seconds. Your first videos are on us - 100 free credits, no credit card.",
+      "cta": {
+        "label": "Try Titlomat Free",
+        "href": "https://titlomat.com/en",
+        "external": true
+      },
+      "secondary": {
+        "label": "Talk to Us",
+        "href": "/#contact"
+      }
+    },
+    "notes": [
+      "Hero showcase is an auto-rotating slideshow (data-showcase, data-interval=\"5200\" ms) cycling the showcase images in order.",
+      "Section \"Connect Once, Forget It\": steps are numbered on the page as 01, 02, 03.",
+      "Section \"Connect Once, Forget It\": the list block starting \"30-second signup, no credit card\" (2 items) is the checklist inside \"Connect Your Channel\" on the page, under its text.",
+      "Section \"Connect Once, Forget It\": the list block starting \"95%+ accuracy on clean audio\" (2 items) is the checklist inside \"AI Transcribes & Translates\" on the page, under its text.",
+      "Section \"Connect Once, Forget It\": the list block starting \"Auto-published to YouTube\" (2 items) is the checklist inside \"Subtitles Go Live\" on the page, under its text.",
+      "Section \"Stop Losing Your Audience\": the list block starting \"Croatian-first speech recognition\" (3 items) is the checklist inside \"Built for the Croatian Creator Economy\" on the page, under its text.",
+      "Section \"Stop Losing Your Audience\": bento grid layout; the large/wide tiles are \"Built for the Croatian Creator Economy\".",
+      "Section \"Start Free, Scale When Ready\": the \"Creator\" plan card is visually highlighted (pricing-card-featured). Plans on the page show only name, price, period and a credits line (stored as the single feature); no plan has its own CTA button.",
+      "Section \"Start Free, Scale When Ready\": in the small centered muted footnote \"Current pricing at titlomat.com.\", the text \"titlomat.com\" is a link to https://titlomat.com/en (external, opens in new tab)."
+    ]
+  },
+  "hr": {
+    "slug": "titlomat",
+    "meta": {
+      "title": "Titlomat.com - Automatski titlovi za hrvatski YouTube | LumiVerse",
+      "description": "Titlomat automatski dodaje hrvatske i engleske titlove na YouTube videe — bez uploada i bez montaže. Epizoda od 60 minuta gotova je za pet minuta."
+    },
+    "kind": "Naš proizvod · AI titlovi",
+    "title": "Titlomat.com",
+    "subtitle": "YouTube ne radi automatske titlove na hrvatskom. Mi radimo. Titlomat sam dodaje hrvatske i engleske titlove na svaki novi video — dok Vi već radite na sljedećoj epizodi.",
+    "ctas": [
+      {
+        "label": "Isprobajte Titlomat besplatno",
+        "href": "https://titlomat.com",
+        "external": true
+      },
+      {
+        "label": "Razgovarajmo",
+        "href": "/hr#contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/titlomat/titlomat-1.jpg",
+        "alt": "Naslovnica Titlomata - automatski hrvatski i engleski titlovi za YouTube",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/titlomat/titlomat-2.jpg",
+        "alt": "Titlomat u tri koraka: povežite kanal, objavite video, titlovi se dodaju na YouTubeu",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/titlomat/titlomat-3.jpg",
+        "alt": "Cjenik Titlomata - kreditni paketi Free, Creator, Pro i Studio",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "~5 min",
+        "label": "Za titlovanje epizode od 60 minuta"
+      },
+      {
+        "value": "95%+",
+        "label": "Točnost na čistom zvuku"
+      },
+      {
+        "value": "12×",
+        "label": "Brže od samog zvuka"
+      },
+      {
+        "value": "2",
+        "label": "Jezika — hrvatski i engleski"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Povežite jednom i zaboravite",
+        "lede": "Bez uploada datoteka. Bez SRT exporta. Bez namještanja na vremenskoj traci. Registracija traje 30 sekundi.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Povežite svoj kanal",
+                "body": "Jednokratna YouTube autorizacija koja traži točno jednu stvar: dopuštenje za dodavanje titlova. Bez pristupa komentarima, analitici i privatnim podacima."
+              },
+              {
+                "title": "AI transkribira i prevodi",
+                "body": "Prepoznavanje govora podešeno za hrvatski, pa prijevod na engleski. Vaš vlastiti rječnik čuva imena, brendove i stručne pojmove ispravno napisane."
+              },
+              {
+                "title": "Titlovi idu u objavu",
+                "body": "Hrvatski i engleski titlovi slijeću izravno na Vaš YouTube video. Želite zadnju riječ? Uključite način pregleda i odobrite prije objave."
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "body": "Registracija u 30 sekundi, bez kartice"
+              },
+              {
+                "body": "Samo dopuštenje za titlove"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "body": "Preko 95% točnosti na čistom zvuku"
+              },
+              {
+                "body": "Vlastiti rječnik za svaki kanal"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "body": "Automatska objava na YouTube"
+              },
+              {
+                "body": "Neobavezan pregled prije objave"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Prestanite gubiti publiku",
+        "lede": "Tipičan hrvatski kanal bez titlova ne dosegne 15-30% potencijalne publike. To su gledatelji koji gledaju bez zvuka, oni kojima hrvatski nije materinski i cijeli svijet koji govori engleski.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Napravljen za hrvatske kreatore",
+                "body": "Velike platforme preskaču male jezike — YouTubeovi automatski titlovi ne podržavaju hrvatski. Titlomat popunjava tu rupu govornim AI-jem napravljenim baš za hrvatske podcaste i YouTube kanale, od samostalnih kreatora do podcast mreža i medijskih agencija."
+              },
+              {
+                "title": "Gledatelji bez zvuka",
+                "body": "Većina videa na društvenim mrežama vrti se bez zvuka. Titlovi te gledatelje zadržavaju umjesto da odskrolaju dalje."
+              },
+              {
+                "title": "Pretraga i otkrivanje",
+                "body": "Tekst titlova čini Vaše videe pretraživima. YouTube razumije što ste rekli — i po tome Vas rangira."
+              },
+              {
+                "title": "Privatnost od temelja",
+                "body": "Titlomat traži samo dopuštenje za titlove. Vaši komentari, analitika i privatni podaci ostaju Vaši."
+              },
+              {
+                "title": "Pristupačnost",
+                "body": "Gluhi i nagluhi gledatelji ne mogu gledati bez titlova. Uz Titlomat ih svaka epizoda ima automatski."
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "body": "Prepoznavanje govora prvenstveno za hrvatski"
+              },
+              {
+                "body": "Engleski titlovi otvaraju svjetsku publiku"
+              },
+              {
+                "body": "Radi za kanale svake veličine"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Krenite besplatno, rastite kad budete spremni",
+        "lede": "Naplata po kreditima. Bez kartice na početku i bez ugovora iz kojeg se treba izvlačiti.",
+        "blocks": [
+          {
+            "type": "plans",
+            "items": [
+              {
+                "name": "Free",
+                "price": "€0",
+                "period": "mjesečno",
+                "features": [
+                  "100 kredita"
+                ]
+              },
+              {
+                "name": "Creator",
+                "price": "€19",
+                "period": "mjesečno",
+                "features": [
+                  "6.500 kredita"
+                ]
+              },
+              {
+                "name": "Pro",
+                "price": "€49",
+                "period": "mjesečno",
+                "features": [
+                  "20.000 kredita"
+                ]
+              },
+              {
+                "name": "Studio",
+                "price": "€149",
+                "period": "mjesečno",
+                "features": [
+                  "85.000 kredita"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "paragraphs": [
+              "Aktualne cijene na titlomat.com."
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Vaš sljedeći video zaslužuje titlove",
+      "body": "Povežite kanal u 30 sekundi. Prve videe častimo mi — 100 besplatnih kredita, bez kartice.",
+      "cta": {
+        "label": "Isprobajte Titlomat besplatno",
+        "href": "https://titlomat.com",
+        "external": true
+      },
+      "secondary": {
+        "label": "Razgovarajmo",
+        "href": "/hr#contact"
+      }
+    },
+    "notes": [
+      "Hero showcase is an auto-rotating slideshow (data-showcase, data-interval=\"5200\" ms) cycling the showcase images in order.",
+      "Section \"Povežite jednom i zaboravite\": steps are numbered on the page as 01, 02, 03.",
+      "Section \"Povežite jednom i zaboravite\": the list block starting \"Registracija u 30 sekundi, bez kartice\" (2 items) is the checklist inside \"Povežite svoj kanal\" on the page, under its text.",
+      "Section \"Povežite jednom i zaboravite\": the list block starting \"Preko 95% točnosti na čistom zvuku\" (2 items) is the checklist inside \"AI transkribira i prevodi\" on the page, under its text.",
+      "Section \"Povežite jednom i zaboravite\": the list block starting \"Automatska objava na YouTube\" (2 items) is the checklist inside \"Titlovi idu u objavu\" on the page, under its text.",
+      "Section \"Prestanite gubiti publiku\": the list block starting \"Prepoznavanje govora prvenstveno za hrvatski\" (3 items) is the checklist inside \"Napravljen za hrvatske kreatore\" on the page, under its text.",
+      "Section \"Prestanite gubiti publiku\": bento grid layout; the large/wide tiles are \"Napravljen za hrvatske kreatore\".",
+      "Section \"Krenite besplatno, rastite kad budete spremni\": the \"Creator\" plan card is visually highlighted (pricing-card-featured). Plans on the page show only name, price, period and a credits line (stored as the single feature); no plan has its own CTA button.",
+      "Section \"Krenite besplatno, rastite kad budete spremni\": in the small centered muted footnote \"Aktualne cijene na titlomat.com.\", the text \"titlomat.com\" is a link to https://titlomat.com (external, opens in new tab)."
+    ]
+  }
+}

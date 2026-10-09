@@ -1,0 +1,486 @@
+{
+  "en": {
+    "slug": "air-laser",
+    "meta": {
+      "title": "Air-Plasma Aerial Displays - Research | LumiVerse",
+      "description": "A 49-page physics design study computed end-to-end by an AI-agentic simulation station: ~12 open-source simulators, one agent loop, every number checked."
+    },
+    "kind": "Independent Research · Physics × AI Agents",
+    "title": "A Hologram, Without Touching a Laser",
+    "subtitle": "A 49-page design study for a glowing image that floats in open air - its physics, optics, control loops and bill of materials - computed end to end by a stack of open-source physics simulators driven by an AI agent. No optical bench. No laser ever switched on.",
+    "ctas": [
+      {
+        "label": "Read the 49-Page Study",
+        "href": "https://github.com/LumiVerseHR/air-laser-physics/releases/tag/paper-v1.0",
+        "external": true
+      },
+      {
+        "label": "View the Repository",
+        "href": "https://github.com/LumiVerseHR/air-laser-physics",
+        "external": true
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/air-laser/airlaser-wire.jpg",
+        "alt": "Computed voxel image - a cube-plus-sphere wireframe drawn in plasma sparks, front and side projection",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/air-laser/airlaser-localize.jpg",
+        "alt": "Computed voxel localization - as the two beams cross at a wider angle, the glowing core collapses from a streak into an addressable point",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/air-laser/airlaser-spark.jpg",
+        "alt": "Computed 2-D radiation-hydrodynamics of the laser-air spark - temperature, emissivity and the blast wave",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "~12",
+        "label": "Open-source simulators, one agent loop"
+      },
+      {
+        "value": "40+",
+        "label": "Simulations across nine physics regimes"
+      },
+      {
+        "value": "22",
+        "label": "DOI-verified references, every number checked"
+      },
+      {
+        "value": "3 days",
+        "label": "For the bulk of the work (66 of 88 commits)"
+      }
+    ],
+    "sections": [
+      {
+        "title": "You Can Automate What You Can Verify",
+        "lede": "Coding got automated first because you can run the test - the verifier was already there. So the real question is which other fields are already past that gate. Physics is one of them, and almost nobody had built the harness to exploit it.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "The Answer Key Was Already Written",
+                "body": "The constants are measured. The cross-sections are tabulated in HITRAN, LXCat and NIST. Most regimes have a closed-form limit you can check a number against. That isn't a benchmark someone still has to build - it's two centuries of physics, sitting in the open, ready to grade an answer.\n\nPhysics has always had the verifiability. What it lacked was an agent that could call the tools and check its own work against that record."
+              },
+              {
+                "title": "So We Built the Harness",
+                "body": "A dozen open-source physics simulators, each in its own container, each wrapped so a single agent can call all of them. The loop proposes a configuration, runs the container, reads the resulting figure back, checks it against the literature, and decides what to run next.\n\nThen we pointed it at one hard, cross-disciplinary question - can you draw a glowing image in mid-air? - to see how far it would get."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "An Agent That Runs a Lab",
+        "lede": "The physics is the subject. The deliverable is the method: a verifiable, reproducible agentic system that spans a dozen tools which barely share a vocabulary, let alone a data format. This is the part that transfers to any domain with an answer key.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "One Container Per Simulator",
+                "body": "No scientific dependency ever touches the host. Quantum chemistry in one container, particle-in-cell plasma codes in another, line-by-line radiative transfer in a third, custom radiation-hydrodynamics in a fourth - each with its own pinned toolchain.",
+                "meta": "01"
+              },
+              {
+                "title": "One Tool Surface",
+                "body": "Each simulator is wrapped as an MCP server, so the same agent calls all of them regardless of the language or runtime inside. A dozen incompatible codes become one uniform set of tools.",
+                "meta": "02"
+              },
+              {
+                "title": "Five Explicit Roles",
+                "body": "A planner proposes the next configuration, a coder writes the simulator input deck, a runner executes the container, an analyst loads results and plots them, and a critic checks units, convergence and physical plausibility before anything is trusted.",
+                "meta": "03"
+              },
+              {
+                "title": "A Data Contract Across Regimes",
+                "body": "Every quantity is unit-typed, so an energy can't be silently misread three containers downstream. Results serialize to typed datasets that become the explicit input to the next stage - every cross-regime hand-off auditable rather than assumed.",
+                "meta": "04"
+              },
+              {
+                "title": "Provenance on Every Figure",
+                "body": "Every run is tracked and keyed by configuration hash and container pin, so any figure in the 49 pages traces back to the exact parameters and code version that produced it. Reproducible by construction.",
+                "meta": "05"
+              },
+              {
+                "title": "No Vendor Lock-In",
+                "body": "The main loop runs on Claude Code. The repository also ships a fully local variant - the same planner, tools and analyst driven by a model on the workstation, no API key - to prove the architecture doesn't depend on any one provider.",
+                "meta": "06"
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "The Detail That Mattered Most: The Figures Get Read Back",
+                "body": "Generated plots aren't treated as finished artifacts - they're inspected as part of analysis. Several discrepancies between what was expected and what the physics actually produced were caught by looking at a light curve and thinking that shape is wrong. The agent writes the input deck, runs the container and reads the plot; the human's job becomes choosing which question is worth asking next, and refusing any answer that hasn't been checked against something real."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Device the Numbers Describe",
+        "lede": "Focus a laser hard enough and it rips electrons off the air at the focal point - a microscopic spark, a pixel with a real address in space. Move ten thousand of them sixty times a second and the eye sees a picture. Here is what the physics says about building one.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Two Beams, Harmless Until They Meet",
+                "body": "A single beam strong enough to ionize air is strong enough to hurt an eye anywhere along its path. So the design crosses two beams, each individually too weak to spark anything - only their intersection lights up. Air breakdown scales as intensity to the eleventh power, so the crossing point ignites about 10²³ times faster than anywhere along either beam. That isn't a preference; it's a switch that pins the glowing dot to one point in space.\n\nThe beams stay eye-safe along their paths; only the voxel ignites\nA resonant two-colour scheme drops the required intensity ~18×\nThe obvious nitrogen channel turns out two-photon-dark - you only learn that by computing it"
+              },
+              {
+                "title": "Bright Enough to See",
+                "body": "A dark-adapted eye needs about 100 photons at the cornea. The computed voxel delivers around 184 - a conservative margin. And brightness climbs with plasma temperature at almost fixed energy: hotter plasma, not more power, is the cheap knob."
+              },
+              {
+                "title": "The Laser Is 3-8× Too Expensive",
+                "body": "A prototype priced from real vendor catalogues comes to ~$378,000, more than half of it one femtosecond laser. But the physics only needs ~50 nJ per flash at sub-watt average power - a compact fibre source at $15k-$60k, not an industrial amplifier."
+              },
+              {
+                "title": "The Wavelengths Fell Out of the Chemistry",
+                "body": "Tuning the two colours onto real quantum energy levels in oxygen and nitrogen is what buys the 18× efficiency. The recipe wasn't guessed - it came out of the quantum-chemistry calculation, dark channels and all."
+              },
+              {
+                "title": "Safe to Touch, Within Air Limits",
+                "body": "The image is lit-up air - you can pass your hand through it. The ozone and nitrogen oxides a spark produces stay well inside health limits with modest ventilation. The delivery beams are still Class-4 and need boxing - a known engineering job."
+              },
+              {
+                "title": "A Wireframe, Not a Solid",
+                "body": "At ~10⁴ voxels the display draws line-and-point art - cubes, text, outlines - and the bottleneck is the scanner, not the voxel. A solid volume would need a hundred times the addressing rate. The sparse look is a consequence of the physics, not a style choice."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Part That Matters Most",
+        "lede": "At one point a radiation-hydrodynamics run reproduced a real air-spark's light curve beautifully - exactly the figure you build a section around. It was wrong.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "The Match Was an Artifact of a Bug",
+                "body": "The solver wasn't conserving energy. Rebuilt properly, a spurious amplification factor collapsed from 1407× to 1.4×, and the beautiful agreement collapsed with it. The real glow had to be reassigned to entirely different physics.\n\nThe conclusion was withdrawn rather than defended. It sits in the paper described as what it was."
+              },
+              {
+                "title": "A Dead End, Published on Purpose",
+                "body": "There's a tempting shortcut - skip the plasma, use cheap laser pointers, let dust scatter the light into a point. It was computed, and it cannot work: scattering is linear, so the beam glows along its whole path instead of at a point.\n\nThat failure is informative - it's exactly why the nonlinear plasma approach is the right one. Better to publish the dead end than quietly omit it."
+              }
+            ]
+          },
+          {
+            "type": "quote",
+            "text": "A simulation campaign that never retracts anything isn't careful - it's unfalsifiable."
+          }
+        ]
+      },
+      {
+        "title": "The Method Is the Product",
+        "blocks": [
+          {
+            "type": "text",
+            "paragraphs": [
+              "The whole point isn't the hologram. It's that a Tech Lead who is not a plasma physicist built a system that produced a rigorous, cross-checked physics study - because the verifier carried the domain knowledge, not the builder.",
+              "That's the same discipline we bring to client work: generation is cheap, so the edge lives in the scaffolding around it - the data contract, the provenance, the vendor independence, and a verifier that measures the thing you actually care about. Across everything we build, the moat is the verifier, not the generator. This is that thesis proven in the hardest possible place."
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "What Transfers to Your Domain",
+                "body": "A repeatable agent loop over many tools, not a one-off prompt\nA verifier gate, so the system checks its own work before you trust it\nFull provenance - every output traces to its exact inputs and code\nVendor-independent by design, with a local fallback\nThe honesty to retract what doesn't survive the check"
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Open, and Checkable",
+                "body": "The full manuscript, the LaTeX source, the simulation station and every container definition are public - code under the MIT license, paper and figures under CC BY 4.0. Every quantitative result is cross-checked against published literature or an analytic limit, with its uncertainty stated inline. Where a closed form exists, the computed number is checked against it: a nitrogen polarizability within 1.7% of reference, a breakdown field that recovers the textbook value, a maser threshold matched to machine precision. You don't have to take any of it on trust."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Have a Field With an Answer Key?",
+      "body": "If your domain has measurements to check against - a simulator, a spec, a ground truth - it can be put behind a verifying agent loop. That's what we build. Read the study first, then let's talk about yours.",
+      "cta": {
+        "label": "Explore the Repository",
+        "href": "https://github.com/LumiVerseHR/air-laser-physics",
+        "external": true
+      },
+      "secondary": {
+        "label": "Start a Project",
+        "href": "/#contact"
+      }
+    },
+    "notes": [
+      "Hero showcase is an auto-rotating image carousel (data-showcase, crossfading slides).",
+      "Hero honesty note (info-icon callout between the subtitle and the CTAs): Every number here is computed, not measured. No device has been built. The claim is not \"it works\" - it's that there's no remaining physics reason it shouldn't, and what's left is engineering and measurement.",
+      "Hero showcase caption under the image carousel (applies to all slides): Real output from the simulations - not renders. Left to right: a computed wireframe frame, the crossing-beam localization collapsing to a point, and the 2-D rad-hydro of a single spark.",
+      "Cards that contain a checkmark feature-list keep it inside the card: in card.body paragraphs are separated by a blank line (\\n\\n) and feature-list items by single newlines (\\n), list last.",
+      "Numbered role cards: card.meta holds the large card number (01, 02, ...).",
+      "Inline emphasis was flattened to plain text: the second half of the pull quote and one phrase in the 'The Detail That Mattered Most: The Figures Get Read Back' card were italic, and the opening phrase of the hero honesty note was bold.",
+      "The last content section ('The Method Is the Product') has no centred section header: the h2 and its two paragraphs (stored as the 'text' block) sit in the left column of a two-column grid, with the 'What Transfers to Your Domain' checklist card in the right column; the 'Open, and Checkable' card spans full width below.",
+      "Superscript exponents (10 to the 23rd, 10 to the 4th) are stored as Unicode superscripts (10²³, 10⁴) so the numbers stay correct as plain text."
+    ]
+  },
+  "hr": {
+    "slug": "air-laser",
+    "meta": {
+      "title": "Zračni plazmeni zasloni - istraživanje | LumiVerse",
+      "description": "Studija fizike na 49 stranica, izračunata na agentskoj simulacijskoj stanici: dvanaestak open-source simulatora, svaki broj provjeren s literaturom."
+    },
+    "kind": "Neovisno istraživanje · Fizika × AI agenti",
+    "title": "Hologram, bez ijednog upaljenog lasera",
+    "subtitle": "Projektna studija na 49 stranica za svjetleću sliku koja lebdi u otvorenom zraku — njezina fizika, optika, upravljačke petlje i popis materijala — izračunata od početka do kraja nizom open-source fizikalnih simulatora koje vodi AI agent. Bez optičkog stola. Nijedan laser nikad nije upaljen.",
+    "ctas": [
+      {
+        "label": "Pročitajte studiju na 49 stranica",
+        "href": "https://github.com/LumiVerseHR/air-laser-physics/releases/tag/paper-v1.0",
+        "external": true
+      },
+      {
+        "label": "Pogledajte repozitorij",
+        "href": "https://github.com/LumiVerseHR/air-laser-physics",
+        "external": true
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/air-laser/airlaser-wire.jpg",
+        "alt": "Izračunata voxel slika - žičani model kocke i kugle iscrtan plazmenim iskrama, prednja i bočna projekcija",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/air-laser/airlaser-localize.jpg",
+        "alt": "Izračunata lokalizacija voxela - kako se dvije zrake sijeku pod širim kutom, svjetleća se jezgra iz crte skuplja u adresibilnu točku",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/air-laser/airlaser-spark.jpg",
+        "alt": "Izračunata 2D radijacijska hidrodinamika laserske iskre u zraku - temperatura, emisivnost i udarni val",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "~12",
+        "label": "Open-source simulatora, jedna petlja agenata"
+      },
+      {
+        "value": "40+",
+        "label": "Simulacija kroz devet fizikalnih režima"
+      },
+      {
+        "value": "22",
+        "label": "Referenci provjerenih preko DOI-ja, svaki broj provjeren"
+      },
+      {
+        "value": "3 dana",
+        "label": "Za najveći dio posla (66 od 88 commitova)"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Automatizirati se može ono što se može provjeriti",
+        "lede": "Programiranje je prvo automatizirano jer se test može pokrenuti — provjeravač je već postojao. Pravo je pitanje, dakle, koja su još područja već prošla tu granicu. Fizika je jedno od njih, a gotovo nitko nije izgradio okvir koji bi to iskoristio.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Rješenja su već bila napisana",
+                "body": "Konstante su izmjerene. Udarni presjeci tablično su zapisani u HITRAN-u, LXCat-u i NIST-u. Većina režima ima zatvoreni granični izraz s kojim se broj može usporediti. To nije mjerilo koje netko tek treba izgraditi — to su dva stoljeća fizike, javno dostupna i spremna ocijeniti odgovor.\n\nFizika je oduvijek imala provjerljivost. Nedostajao joj je agent koji može pozvati alate i vlastiti rad usporediti s tim zapisom."
+              },
+              {
+                "title": "Zato smo izgradili okvir",
+                "body": "Dvanaestak open-source fizikalnih simulatora, svaki u vlastitom kontejneru i svaki omotan tako da ih jedan agent može sve pozvati. Petlja predlaže konfiguraciju, pokreće kontejner, čita dobiveni grafikon, uspoređuje ga s literaturom i odlučuje što pokrenuti sljedeće.\n\nZatim smo je usmjerili na jedno teško, međudisciplinarno pitanje — može li se svjetleća slika iscrtati u zraku? — da vidimo dokle će stići."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Agent koji vodi laboratorij",
+        "lede": "Fizika je tema. Rezultat je metoda: provjerljiv, ponovljiv agentski sustav koji obuhvaća dvanaestak alata koji jedva dijele nazivlje, a kamoli format podataka. To je dio koji se prenosi na svako područje koje ima rješenja za provjeru.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Jedan kontejner po simulatoru",
+                "body": "Nijedna znanstvena ovisnost nikad ne dotakne domaćina. Kvantna kemija u jednom kontejneru, particle-in-cell plazmeni kodovi u drugom, prijenos zračenja liniju po liniju u trećem, vlastita radijacijska hidrodinamika u četvrtom — svaki s vlastitim, fiksiranim alatima.",
+                "meta": "01"
+              },
+              {
+                "title": "Jedno sučelje alata",
+                "body": "Svaki je simulator omotan kao MCP poslužitelj, pa ih isti agent poziva bez obzira na jezik ili okruženje unutra. Dvanaestak nekompatibilnih kodova postaje jedan ujednačen skup alata.",
+                "meta": "02"
+              },
+              {
+                "title": "Pet izričitih uloga",
+                "body": "Planer predlaže sljedeću konfiguraciju, koder piše ulazne podatke za simulator, izvršitelj pokreće kontejner, analitičar učitava rezultate i crta ih, a kritičar provjerava mjerne jedinice, konvergenciju i fizikalnu uvjerljivost prije nego što se ičemu povjeruje.",
+                "meta": "03"
+              },
+              {
+                "title": "Podatkovni ugovor kroz sve režime",
+                "body": "Svaka veličina nosi tip mjerne jedinice, pa se energija ne može potiho krivo pročitati tri kontejnera dalje. Rezultati se zapisuju kao tipizirani skupovi podataka koji postaju izričit ulaz sljedeće faze — svaka predaja između režima provjerljiva je, a ne pretpostavljena.",
+                "meta": "04"
+              },
+              {
+                "title": "Podrijetlo na svakom grafikonu",
+                "body": "Svako se pokretanje bilježi i ključem veže uz hash konfiguracije i verziju kontejnera, pa se svaki grafikon na 49 stranica može pratiti do točnih parametara i verzije koda koji su ga proizveli. Ponovljivo od temelja.",
+                "meta": "05"
+              },
+              {
+                "title": "Bez vezanja uz dobavljača",
+                "body": "Glavna petlja radi na Claude Codeu. Repozitorij donosi i posve lokalnu inačicu — isti planer, alate i analitičara koje vodi model na radnoj stanici, bez API ključa — da dokaže kako arhitektura ne ovisi ni o jednom pružatelju.",
+                "meta": "06"
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Detalj koji je najviše značio: grafikoni se čitaju natrag",
+                "body": "Generirani se grafikoni ne tretiraju kao gotov proizvod — pregledavaju se kao dio analize. Nekoliko je neslaganja između očekivanog i onoga što je fizika stvarno dala uhvaćeno gledanjem krivulje svjetlosti i mišlju taj oblik nije dobar. Agent piše ulazne podatke, pokreće kontejner i čita grafikon; čovjekov posao postaje odabir pitanja koje se sljedeće isplati postaviti i odbijanje svakog odgovora koji nije provjeren s nečim stvarnim."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Uređaj koji brojke opisuju",
+        "lede": "Fokusirajte laser dovoljno jako i on u žarištu otkine elektrone sa zraka — mikroskopska iskra, piksel sa stvarnom adresom u prostoru. Pomaknite deset tisuća takvih iskri šezdeset puta u sekundi i oko vidi sliku. Evo što fizika kaže o izradi takvog uređaja.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Dvije zrake, bezopasne dok se ne sretnu",
+                "body": "Jedna zraka dovoljno jaka da ionizira zrak dovoljno je jaka i da ozlijedi oko bilo gdje na svom putu. Zato izvedba križa dvije zrake, od kojih je svaka zasebno preslaba da bi išta zapalila — svijetli samo njihovo sjecište. Proboj zraka raste s jedanaestom potencijom intenziteta, pa se sjecište pali otprilike 10²³ puta brže nego bilo gdje uzduž ijedne zrake. To nije stvar izbora, nego prekidač koji svjetleću točku prikiva na jedno mjesto u prostoru.\n\nZrake su na svom putu sigurne za oko; pali se samo voxel\nRezonantna dvobojna shema smanjuje potreban intenzitet oko 18×\nOčiti dušikov kanal ispada dvofotonski taman — to se sazna samo računanjem"
+              },
+              {
+                "title": "Dovoljno svijetlo da se vidi",
+                "body": "Oku prilagođenom na mrak treba stotinjak fotona na rožnici. Izračunati voxel isporučuje oko 184 — konzervativna zaliha. A svjetlina raste s temperaturom plazme uz gotovo nepromijenjenu energiju: jeftina ručica je vrelija plazma, a ne veća snaga."
+              },
+              {
+                "title": "Laser je 3 do 8× preskup",
+                "body": "Prototip izračunat po stvarnim katalozima dobavljača dolazi na oko 378.000 dolara, od čega je više od polovice jedan femtosekundni laser. Ali fizici treba tek oko 50 nJ po bljesku uz prosječnu snagu ispod vata — kompaktan vlaknasti izvor od 15 do 60 tisuća dolara, a ne industrijsko pojačalo."
+              },
+              {
+                "title": "Valne duljine ispale su iz kemije",
+                "body": "Ugađanje dviju boja na stvarne kvantne energijske razine kisika i dušika donosi onih 18× učinkovitosti. Recept nije pogođen — izašao je iz kvantnokemijskog računa, zajedno s tamnim kanalima."
+              },
+              {
+                "title": "Sigurno na dodir, unutar granica za zrak",
+                "body": "Slika je osvijetljeni zrak — kroz nju možete provući ruku. Ozon i dušikovi oksidi koje iskra stvara ostaju znatno ispod zdravstvenih granica uz skromnu ventilaciju. Dovodne su zrake i dalje 4. klase i treba ih zatvoriti u kućište — poznat inženjerski posao."
+              },
+              {
+                "title": "Žičani model, a ne puno tijelo",
+                "body": "Pri otprilike 10⁴ voxela zaslon crta linije i točke — kocke, tekst, obrise — a usko grlo je skener, ne voxel. Puni bi volumen tražio sto puta veću brzinu adresiranja. Rijetki izgled posljedica je fizike, a ne stilski izbor."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Dio koji najviše znači",
+        "lede": "U jednom je trenutku radijacijsko-hidrodinamički proračun prekrasno reproducirao krivulju svjetlosti stvarne iskre u zraku — točno onakav grafikon oko kojeg se gradi cijelo poglavlje. Bio je pogrešan.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Poklapanje je bilo posljedica greške",
+                "body": "Rješavač nije čuvao energiju. Nakon ispravne izrade lažni je faktor pojačanja pao s 1407× na 1,4×, a s njim se srušilo i ono prekrasno slaganje. Stvarni je sjaj trebalo pripisati posve drugoj fizici.\n\nZaključak je povučen, a ne branjen. U radu stoji opisan onakvim kakav je bio."
+              },
+              {
+                "title": "Slijepa ulica, objavljena namjerno",
+                "body": "Postoji primamljiv prečac — preskočiti plazmu, uzeti jeftine laserske pokazivače i pustiti da prašina rasprši svjetlost u točku. Izračunato je i ne može raditi: raspršenje je linearno, pa zraka svijetli cijelim svojim putem umjesto u jednoj točki.\n\nTaj je neuspjeh poučan — upravo je zato nelinearni plazmeni pristup ispravan. Bolje je slijepu ulicu objaviti nego je potiho izostaviti."
+              }
+            ]
+          },
+          {
+            "type": "quote",
+            "text": "Simulacijska kampanja koja nikad ništa ne povuče nije pažljiva — ona je neoboriva."
+          }
+        ]
+      },
+      {
+        "title": "Metoda je proizvod",
+        "blocks": [
+          {
+            "type": "text",
+            "paragraphs": [
+              "Poanta nije hologram. Poanta je da je tech lead koji nije fizičar plazme izgradio sustav koji je proizveo strogu, unakrsno provjerenu fizikalnu studiju — jer je znanje o području nosio provjeravač, a ne graditelj.",
+              "To je ista disciplina koju donosimo u rad s klijentima: generiranje je jeftino, pa prednost živi u skeli oko njega — podatkovnom ugovoru, podrijetlu rezultata, neovisnosti o dobavljaču i provjeravaču koji mjeri ono do čega Vam je stvarno stalo. U svemu što gradimo prednost je u onome što provjerava, a ne u onome što generira. Ovo je ta teza dokazana na najtežem mogućem mjestu."
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Što se prenosi u Vaše područje",
+                "body": "Ponovljiva petlja agenata nad mnogo alata, a ne jednokratan prompt\nProvjera na izlazu, da sustav sam provjeri svoj rad prije nego što mu povjerujete\nPotpuno podrijetlo — svaki se rezultat prati do točnih ulaza i koda\nNeovisan o dobavljaču od prvog dana, uz lokalnu zamjenu\nPoštenje da se povuče ono što ne preživi provjeru"
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Otvoreno i provjerljivo",
+                "body": "Cijeli rukopis, LaTeX izvor, simulacijska stanica i svaka definicija kontejnera javni su — kod pod licencom MIT, rad i grafike pod CC BY 4.0. Svaki je kvantitativni rezultat unakrsno provjeren s objavljenom literaturom ili analitičkim graničnim izrazom, uz navedenu nesigurnost. Ondje gdje postoji zatvoreni oblik, izračunati se broj s njim uspoređuje: polarizabilnost dušika unutar 1,7% od referentne, polje proboja koje vraća udžbeničku vrijednost, maserski prag pogođen do strojne preciznosti. Ništa od toga ne morate uzeti na vjeru."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Imate područje s gotovim rješenjima za provjeru?",
+      "body": "Ako Vaše područje ima mjerenja s kojima se rezultat može usporediti — simulator, specifikaciju, provjerenu istinu — može se staviti iza petlje agenata koja provjerava. To je ono što gradimo. Prvo pročitajte studiju, pa razgovarajmo o Vašem.",
+      "cta": {
+        "label": "Istražite repozitorij",
+        "href": "https://github.com/LumiVerseHR/air-laser-physics",
+        "external": true
+      },
+      "secondary": {
+        "label": "Pokrenite projekt",
+        "href": "/hr#contact"
+      }
+    },
+    "notes": [
+      "Hero showcase is an auto-rotating image carousel (data-showcase, crossfading slides).",
+      "Hero honesty note (info-icon callout between the subtitle and the CTAs): Svaki je broj ovdje izračunat, a ne izmjeren. Nijedan uređaj nije izgrađen. Tvrdnja nije „radi\" — nego da nije preostao nijedan fizikalni razlog zašto ne bi radilo, a ono što je ostalo jest inženjerstvo i mjerenje.",
+      "Hero showcase caption under the image carousel (applies to all slides): Stvarni ispis iz simulacija — nisu renderi. Slijeva nadesno: izračunata sličica žičanog modela, lokalizacija ukrštenih zraka koja se skuplja u točku i 2D radijacijska hidrodinamika jedne iskre.",
+      "Cards that contain a checkmark feature-list keep it inside the card: in card.body paragraphs are separated by a blank line (\\n\\n) and feature-list items by single newlines (\\n), list last.",
+      "Numbered role cards: card.meta holds the large card number (01, 02, ...).",
+      "Inline emphasis was flattened to plain text: the second half of the pull quote and one phrase in the 'Detalj koji je najviše značio: grafikoni se čitaju natrag' card were italic, and the opening phrase of the hero honesty note was bold.",
+      "The last content section ('Metoda je proizvod') has no centred section header: the h2 and its two paragraphs (stored as the 'text' block) sit in the left column of a two-column grid, with the 'Što se prenosi u Vaše područje' checklist card in the right column; the 'Otvoreno i provjerljivo' card spans full width below.",
+      "Superscript exponents (10 to the 23rd, 10 to the 4th) are stored as Unicode superscripts (10²³, 10⁴) so the numbers stay correct as plain text."
+    ]
+  }
+}

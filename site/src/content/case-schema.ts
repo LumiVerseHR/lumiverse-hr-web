@@ -8,7 +8,7 @@ export type Block =
   | { type: "text"; paragraphs: string[] }
   | { type: "list"; items: { title?: string; body: string }[] }
   | { type: "cards"; items: { title: string; body: string; meta?: string }[] }
-  | { type: "steps"; items: { title: string; body: string }[] }
+  | { type: "steps"; items: { title: string; body: string; label?: string }[] }
   | { type: "images"; items: Img[] }
   | { type: "quote"; text: string; cite?: string }
   | { type: "table"; head: string[]; rows: string[][]; caption?: string }

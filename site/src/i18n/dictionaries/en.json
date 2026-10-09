@@ -142,5 +142,29 @@
     "contact": "Contact",
     "rights": "All rights reserved.",
     "cookies": "Cookie preferences"
+  },
+  "consent": {
+    "text": "We use analytics cookies to see what’s working.",
+    "deny": "Deny",
+    "allow": "Allow",
+    "region": "Cookie consent"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Lost in the void",
+    "body": "The page you’re looking for doesn’t exist or has been moved. Let’s get you back on track.",
+    "home": "Back to Home",
+    "services": "Services",
+    "work": "Our Work",
+    "contact": "Contact",
+    "meta": "404 - Page Not Found | LumiVerse"
+  },
+  "case": {
+    "work": "Work",
+    "more": "More work",
+    "next": "Next",
+    "prev": "Previous",
+    "showcase": "Screens",
+    "show": "Show"
   }
 }
