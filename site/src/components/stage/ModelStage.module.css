@@ -14,30 +14,3 @@
   }
 }
 
-.placard {
-  min-width: 210px;
-  padding: 10px 16px 12px;
-  background: #0b0b0c;
-  color: var(--text);
-  box-shadow: 0 6px 18px rgb(0 0 0 / 0.55);
-  font-family: var(--font-label);
-  font-style: italic;
-  white-space: nowrap;
-  user-select: none;
-}
-
-.placardTitle {
-  display: block;
-  font-size: 19px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.placardCaption {
-  display: block;
-  margin-top: 2px;
-  color: var(--text-soft);
-  font-size: 15px;
-  font-weight: 500;
-}

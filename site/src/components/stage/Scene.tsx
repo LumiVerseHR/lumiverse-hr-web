@@ -2,12 +2,10 @@
 
 import { Suspense, useEffect, useLayoutEffect, useMemo, useRef, type ReactNode } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { ContactShadows, Environment, Html, Lightformer, OrbitControls, SoftShadows, SpotLight, useGLTF, useTexture } from "@react-three/drei";
+import { ContactShadows, Environment, Lightformer, OrbitControls, SoftShadows, SpotLight, Text, useGLTF, useTexture } from "@react-three/drei";
 import { Bloom, EffectComposer, N8AO, Vignette } from "@react-three/postprocessing";
 import { Color, MathUtils, MeshBasicMaterial, MeshStandardMaterial, SRGBColorSpace, type Group, type Mesh, type Object3D, type PerspectiveCamera, type Texture } from "three";
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
-
-import styles from "./ModelStage.module.css";
 
 export type Placard = { id: string; title: string; caption: string };
 
@@ -167,27 +165,51 @@ function Maquette() {
   return <primitive object={model} />;
 }
 
-// Placards hang on the plinth front like museum labels, keeping the top clear for the figures.
-// The camera sits front-left, so placards shift right of each model to read as in front of it.
-const PLACARD_X: Record<string, number> = { "moj-kolega": -0.58, bridj: 0.35, "air-laser": 1.55 };
+// Placards are real objects in the room: black label plates standing at the front edge of
+// the basswood top, leaning back like museum label stands, one in front of each model.
+// (They used to be DOM overlays, which ignored the camera's film offset and depth.)
+const PLACARD_X: Record<string, number> = { "moj-kolega": -1.45, bridj: 0, "air-laser": 1.5 };
+const PLATE = { width: 1.0, height: 0.2, depth: 0.014, tilt: -0.85, z: 0.93 };
+const CAPTION_FONT = "/fonts/BarlowCondensed-MediumItalic.ttf";
+const TITLE_FONT = "/fonts/BarlowCondensed-SemiBoldItalic.ttf";
 
 function Placards({ placards }: { placards: Placard[] }) {
+  const left = -PLATE.width / 2 + 0.06;
+  const face = PLATE.depth / 2 + 0.002;
   return (
     <>
       {placards.map((p) => (
-        <Html
-          key={p.id}
-          transform
-          distanceFactor={1.45}
-          position={[PLACARD_X[p.id] ?? 0, -0.2, 1.065]}
-          rotation={[0, 0, 0]}
-          zIndexRange={[1, 0]}
-        >
-          <div className={styles.placard}>
-            <span className={styles.placardTitle}>{p.title}</span>
-            <span className={styles.placardCaption}>{p.caption}</span>
-          </div>
-        </Html>
+        <group key={p.id} position={[PLACARD_X[p.id] ?? 0, 0.02, PLATE.z]} rotation={[PLATE.tilt, 0, 0]}>
+          {/* Pivot at the bottom edge, so the plate rests on the top surface. */}
+          <group position={[0, PLATE.height / 2, 0]}>
+            <mesh castShadow receiveShadow>
+              <boxGeometry args={[PLATE.width, PLATE.height, PLATE.depth]} />
+              <meshStandardMaterial color="#050506" roughness={0.8} />
+            </mesh>
+            <Text
+              font={TITLE_FONT}
+              fontSize={0.06}
+              letterSpacing={0.04}
+              color="#f7f7f6"
+              anchorX="left"
+              anchorY="middle"
+              position={[left, 0.038, face]}
+            >
+              {p.title}
+            </Text>
+            <Text
+              font={CAPTION_FONT}
+              fontSize={0.044}
+              maxWidth={PLATE.width - 0.12}
+              color="#cacaca"
+              anchorX="left"
+              anchorY="middle"
+              position={[left, -0.042, face]}
+            >
+              {p.caption}
+            </Text>
+          </group>
+        </group>
       ))}
     </>
   );
