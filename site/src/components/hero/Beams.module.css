@@ -3,6 +3,7 @@
 .beam {
   --origin-x: calc(var(--gutter) + clamp(128px, 10.6vw, 166px));
   --origin-y: clamp(30px, 3.2vw, 46px);
+  --from: 75deg;
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -11,14 +12,14 @@
      90deg right, 180deg down). Its centre is 135deg; both edges taper over ~30deg. */
   background:
     repeating-conic-gradient(
-      from 75deg at var(--origin-x) var(--origin-y),
+      from var(--from) at var(--origin-x) var(--origin-y),
       rgb(255 220 180 / 0) 0deg,
       rgb(255 220 180 / 0.06) 2.4deg,
       rgb(255 220 180 / 0) 5.5deg,
       rgb(255 220 180 / 0) 8deg
     ),
     conic-gradient(
-      from 75deg at var(--origin-x) var(--origin-y),
+      from var(--from) at var(--origin-x) var(--origin-y),
       transparent 0deg,
       rgb(255 214 170 / 0.05) 14deg,
       rgb(255 214 170 / 0.22) 34deg,
@@ -30,7 +31,7 @@
     );
   mask-image:
     conic-gradient(
-      from 75deg at var(--origin-x) var(--origin-y),
+      from var(--from) at var(--origin-x) var(--origin-y),
       transparent 0deg,
       rgb(0 0 0 / 0.6) 22deg,
       #000 42deg,
@@ -75,5 +76,53 @@
 @media (prefers-reduced-motion: reduce) {
   .beam {
     animation: none;
+  }
+}
+
+/* The stage spotlight: a gallery lamp above the exhibit, pointing down onto it, so the
+   shaft shows in the dark above the frame and pools warm on the wall around it.
+   Breathes out of step with the logo lamp. */
+.spot {
+  --origin-x: calc(100% - var(--gutter) - min(25vw, 48svh));
+  --origin-y: -140px;
+  --from: 148deg;
+  z-index: 0;
+  background:
+    conic-gradient(
+      from var(--from) at var(--origin-x) var(--origin-y),
+      transparent 0deg,
+      rgb(255 214 170 / 0.07) 10deg,
+      rgb(255 214 170 / 0.22) 22deg,
+      rgb(255 222 184 / 0.34) 32deg,
+      rgb(255 214 170 / 0.22) 42deg,
+      rgb(255 214 170 / 0.07) 54deg,
+      transparent 64deg,
+      transparent 360deg
+    );
+  mask-image:
+    conic-gradient(from var(--from) at var(--origin-x) var(--origin-y), transparent 0deg, #000 16deg, #000 48deg, transparent 64deg, transparent 360deg),
+    linear-gradient(to bottom, #000 0%, #000 55%, transparent 95%);
+  animation-duration: 11.7s;
+  animation-delay: -4s;
+}
+
+/* The lamp housing's glow at the top edge. */
+.spot::after {
+  left: var(--origin-x);
+  top: 0;
+  width: 360px;
+  height: 120px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(closest-side, rgb(255 214 170 / 0.28), transparent);
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .spot {
+    --origin-x: 50%;
+    --origin-y: 40svh;
+  }
+
+  .spot::after {
+    display: none;
   }
 }

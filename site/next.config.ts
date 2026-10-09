@@ -60,8 +60,6 @@ const nextConfig: NextConfig = {
       ...STATIC_PAGES.map((page) => ({ source: page, headers: noindex })),
       // A <meta> robots tag can't reach a video file, so the header does.
       { source: "/assets/reel/:path*", headers: [...noindex, ...longCache] },
-      { source: "/models/:path*", headers: longCache },
-      { source: "/draco/:path*", headers: longCache },
     ];
   },
 };

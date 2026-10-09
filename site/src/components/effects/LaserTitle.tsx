@@ -113,6 +113,7 @@ function run(root: HTMLElement, canvas: HTMLCanvasElement) {
       ctx.clearRect(0, 0, innerWidth, innerHeight);
       origin?.removeAttribute("data-firing");
       root.dataset.done = "";
+      window.dispatchEvent(new Event("lv:title-written"));
       return;
     }
     raf = requestAnimationFrame(tick);
@@ -136,6 +137,7 @@ export function LaserTitle({ text }: { text: string }) {
     if (!el || !cv) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       el.dataset.done = "";
+      window.dispatchEvent(new Event("lv:title-written"));
       return;
     }
     let stop = () => {};

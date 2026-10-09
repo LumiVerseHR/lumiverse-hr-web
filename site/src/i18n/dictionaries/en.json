@@ -22,26 +22,14 @@
     "subline": "AI product studio in Zagreb. Ambitious products, shipped and checked.",
     "cta": "Start a Project",
     "secondary": "Explore the work",
-    "scrollHint": "Scroll to enter the model",
-    "orbitHint": "Drag to orbit"
-  },
-  "placards": [
-    {
-      "id": "moj-kolega",
-      "title": "MOJ KOLEGA",
-      "caption": "AI employee for webshops"
-    },
-    {
-      "id": "bridj",
-      "title": "BRIDJ",
-      "caption": "Embedded tech lead · 17 services"
-    },
-    {
-      "id": "air-laser",
-      "title": "AIR-LASER",
-      "caption": "Physics design study · computed, not built"
+    "scrollHint": "Scroll to the work",
+    "stages": {
+      "sketch": "Sketch",
+      "blueprint": "Blueprint",
+      "wireframe": "Wireframe",
+      "shipped": "Shipped"
     }
-  ],
+  },
   "flagships": {
     "title": "Humans, Amplified.",
     "lede": "Three rooms of the model, opened up. Real products, a real platform, and real research, each with the number that proves it.",

@@ -22,26 +22,14 @@
     "subline": "AI produktni studio u Zagrebu. Ambiciozni proizvodi, isporučeni i provjereni.",
     "cta": "Pokrenite projekt",
     "secondary": "Pogledajte reference",
-    "scrollHint": "Skrolajte u maketu",
-    "orbitHint": "Povucite za okretanje"
-  },
-  "placards": [
-    {
-      "id": "moj-kolega",
-      "title": "MOJ KOLEGA",
-      "caption": "AI zaposlenik za webshopove"
-    },
-    {
-      "id": "bridj",
-      "title": "BRIDJ",
-      "caption": "Ugrađeni tech lead · 17 servisa"
-    },
-    {
-      "id": "air-laser",
-      "title": "AIR-LASER",
-      "caption": "Fizikalna studija dizajna · izračunato, ne izgrađeno"
+    "scrollHint": "Skrolajte do radova",
+    "stages": {
+      "sketch": "Skica",
+      "blueprint": "Nacrt",
+      "wireframe": "Wireframe",
+      "shipped": "Isporučeno"
     }
-  ],
+  },
   "flagships": {
     "title": "Ljudi koji mogu više.",
     "lede": "Tri prostorije makete, otvorene. Stvarni proizvodi, stvarna platforma i stvarno istraživanje, svaki s brojem koji to dokazuje.",

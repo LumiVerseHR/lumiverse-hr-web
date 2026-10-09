@@ -9,8 +9,8 @@ import { Thesis } from "@/components/sections/Thesis";
 import { WorkIndex } from "@/components/sections/WorkIndex";
 import { Header } from "@/components/chrome/Header";
 import { LaserTitle } from "@/components/effects/LaserTitle";
-import { LogoBeam } from "@/components/stage/LogoBeam";
-import { ModelStage } from "@/components/stage/ModelStage";
+import { Beams } from "@/components/hero/Beams";
+import { HeroBuild } from "@/components/hero/HeroBuild";
 import { hasLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import styles from "./page.module.css";
@@ -24,8 +24,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     <>
     <main>
     <section className={styles.hero} aria-labelledby="hero-title">
-      <ModelStage placards={dict.placards} />
-      <LogoBeam />
+      <Beams />
+      <HeroBuild lang={lang} copy={{ stages: dict.hero.stages }} />
 
       <Header lang={lang} dict={dict} overlay />
 
@@ -47,10 +47,6 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         {dict.hero.scrollHint}
         <Icon name="arrow-down" size={16} />
       </a>
-      <p className={styles.orbitHint} aria-hidden>
-        {dict.hero.orbitHint}
-        <Icon name="orbit" size={22} />
-      </p>
     </section>
     <Flagships lang={lang} dict={dict} />
     <Thesis lang={lang} dict={dict} />
