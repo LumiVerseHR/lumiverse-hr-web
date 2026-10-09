@@ -17,7 +17,7 @@ const DRACO = "/draco/";
 // Each screen on the model shows the real product it stands for.
 const SCREENS: Record<string, string> = {
   Screen_MojKolega: "/work/mojkolega-card.jpg",
-  Screen_Bridj: "/work/bridj-stack.jpg",
+  Screen_Bridj: "/work/bridj-panel.jpg",
   Screen_AirLaser: "/work/airlaser-wire.jpg",
 };
 
@@ -158,7 +158,7 @@ function Maquette() {
 
 // Placards hang on the plinth front like museum labels, keeping the top clear for the figures.
 // The camera sits front-left, so placards shift right of each model to read as in front of it.
-const PLACARD_X: Record<string, number> = { "moj-kolega": -1.1, bridj: 0.1, "air-laser": 1.5 };
+const PLACARD_X: Record<string, number> = { "moj-kolega": -0.7, bridj: 0.35, "air-laser": 1.55 };
 
 function Placards({ placards }: { placards: Placard[] }) {
   return (
@@ -187,7 +187,7 @@ function Gallery() {
     <>
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.6, 0]} receiveShadow>
         <planeGeometry args={[40, 40]} />
-        <meshStandardMaterial color="#4a3c31" roughness={0.55} metalness={0.05} />
+        <meshStandardMaterial color="#6a5240" roughness={0.6} metalness={0.04} />
       </mesh>
       <ContactShadows position={[0, -0.595, 0]} opacity={0.75} scale={9} blur={2.6} far={1.2} resolution={512} color="#000000" />
       <mesh position={[0, 3, -3.2]} receiveShadow>
@@ -216,6 +216,7 @@ export default function Scene({ placards, active }: { placards: Placard[]; activ
         castShadow
         shadow-mapSize={[2048, 2048]}
         shadow-bias={-0.0004}
+        shadow-intensity={0.55}
         volumetric
         distance={11}
         attenuation={7}
@@ -231,6 +232,8 @@ export default function Scene({ placards, active }: { placards: Placard[]; activ
       </Environment>
       <Suspense fallback={null}>
         <Dolly>
+          {/* The beam lands as a warm pool on the floor in front of the plinth. */}
+          <pointLight position={[0.6, 0.9, 2.7]} intensity={5.5} distance={5.5} decay={2} color="#ffcf9e" />
           {/* The storefront glows from inside, like the lit shop in the comp. */}
           <pointLight position={[-1.45, 0.22, -0.15]} intensity={1.6} distance={1.4} color="#ffcf9a" />
           <Maquette />

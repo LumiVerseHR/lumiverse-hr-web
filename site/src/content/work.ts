@@ -78,14 +78,14 @@ export const workIndex: WorkItem[] = [
   {
     slug: "lider-translations",
     name: "Lider Translations",
-    image: "/work/lidertranslations-card.jpg",
+    image: "/work/lidertranslations-1.jpg",
     kind: { en: "AI translation", hr: "AI prevođenje" },
     fact: { en: "1 newsroom, 10 languages, ~1.4M articles", hr: "1 redakcija, 10 jezika, ~1,4 mil. članaka" },
   },
   {
     slug: "country-guides",
     name: "Country Guides",
-    image: "/work/countryguides-card.jpg",
+    image: "/work/countryguides-1.jpg",
     kind: { en: "AI content platform · our product", hr: "AI platforma za sadržaj · naš proizvod" },
     fact: { en: "14 branded guide sites, one codebase", hr: "14 brendiranih vodiča, jedna baza koda" },
   },
@@ -155,7 +155,7 @@ export const workIndex: WorkItem[] = [
   {
     slug: "army-adria",
     name: "ARMY Adria",
-    image: "/work/armyadria-card.jpg",
+    image: "/work/armyadria-1.jpg",
     kind: { en: "Community platform", hr: "Platforma zajednice" },
     fact: { en: "Built by one fan with no code background, in two weeks", hr: "Izradila jedna obožavateljica bez programiranja, u dva tjedna" },
   },
