@@ -73,7 +73,8 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
 
   return (
     <>
-      <Header lang={lang} dict={dict} path={`/blog/${slug}`} />
+      {/* Posts are English only: the Croatian switch goes to the Croatian blog index, as before. */}
+      <Header lang={lang} dict={dict} switchTo={{ en: `/blog/${slug}`, hr: "/hr/blog" }} />
       <main className={styles.page}>
         <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdHtml(jsonLd)} />
         <article className={styles.column}>

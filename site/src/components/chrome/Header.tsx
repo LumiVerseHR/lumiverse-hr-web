@@ -7,8 +7,22 @@ import { MobileMenu } from "@/components/nav/MobileMenu";
 import styles from "./Header.module.css";
 
 // One header for every page. `path` is the unprefixed path of the current page,
-// so the language switch lands on the same page in the other language.
-export function Header({ lang, dict, path = "/", overlay = false }: { lang: Locale; dict: Dictionary; path?: string; overlay?: boolean }) {
+// so the language switch lands on the same page in the other language. Pages with
+// no translation (English-only posts) pass `switchTo` to name where each language goes.
+export function Header({
+  lang,
+  dict,
+  path = "/",
+  overlay = false,
+  switchTo,
+}: {
+  lang: Locale;
+  dict: Dictionary;
+  path?: string;
+  overlay?: boolean;
+  switchTo?: Record<Locale, string>;
+}) {
+  const target = switchTo ?? { en: localePath("en", path), hr: localePath("hr", path) };
   const items = [
     { href: homeAnchor(lang, "work"), label: dict.nav.work },
     { href: homeAnchor(lang, "services"), label: dict.nav.services },
@@ -30,9 +44,9 @@ export function Header({ lang, dict, path = "/", overlay = false }: { lang: Loca
       </nav>
       <div className={styles.end}>
         <div className={styles.locale}>
-          <Link href={localePath("en", path)} hrefLang="en" aria-current={lang === "en" ? "true" : undefined}>EN</Link>
+          <Link href={target.en} hrefLang="en" aria-current={lang === "en" ? "true" : undefined}>EN</Link>
           <span aria-hidden>/</span>
-          <Link href={localePath("hr", path)} hrefLang="hr" aria-current={lang === "hr" ? "true" : undefined}>HR</Link>
+          <Link href={target.hr} hrefLang="hr" aria-current={lang === "hr" ? "true" : undefined}>HR</Link>
         </div>
         <a className={styles.cta} href={cta.href}>
           {cta.label}
