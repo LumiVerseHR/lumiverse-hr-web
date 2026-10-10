@@ -1,3 +1,4 @@
+import { Dust } from "./Dust";
 import styles from "./Beams.module.css";
 
 // Two lamps in the gallery: one from the LumiVerse logo over the headline, one from the
@@ -7,6 +8,7 @@ export function Beams() {
     <>
       <div className={styles.beam} aria-hidden />
       <div className={`${styles.beam} ${styles.spot}`} aria-hidden />
+      <Dust />
     </>
   );
 }
