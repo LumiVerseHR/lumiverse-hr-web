@@ -72,10 +72,14 @@ export function Showcase({ images, label, labels, caption }: { images: Img[]; la
         {count > 1 && (
           <>
             <button type="button" className={`${styles.arrow} ${styles.arrowPrev}`} aria-label={labels.prev} onClick={() => go(-1)}>
-              <Icon name="chevron-left" size={22} />
+              <span className={styles.arrowIcon}>
+                <Icon name="chevron-left" size={22} />
+              </span>
             </button>
             <button type="button" className={`${styles.arrow} ${styles.arrowNext}`} aria-label={labels.next} onClick={() => go(1)}>
-              <Icon name="chevron-right" size={22} />
+              <span className={styles.arrowIcon}>
+                <Icon name="chevron-right" size={22} />
+              </span>
             </button>
           </>
         )}

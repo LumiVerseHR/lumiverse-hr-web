@@ -192,51 +192,71 @@
   outline-offset: 3px;
 }
 
-/* Slide arrows: black placards at the frame's edges, shown on hover or focus. */
+/* Slide controls: each half of the screen is a click target; the black placard arrow
+   at its edge shows where it goes (on hover, keyboard focus, and always on touch). */
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 0;
+  bottom: 0;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 0 12px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.arrowPrev {
+  left: 0;
+  justify-content: flex-start;
+}
+
+.arrowNext {
+  right: 0;
+  justify-content: flex-end;
+}
+
+.arrow:focus-visible {
+  outline: none;
+}
+
+.arrowIcon {
   display: grid;
   place-items: center;
   width: 44px;
   height: 44px;
-  padding: 0;
-  border: 0;
   background: rgb(11 11 12 / 0.82);
-  color: var(--text);
-  cursor: pointer;
   opacity: 0;
-  transform: translateY(-50%);
   transition: opacity 200ms ease-out, background-color 160ms ease-out, color 160ms ease-out;
 }
 
-.arrowPrev {
-  left: 12px;
+.showFrame:hover .arrowIcon {
+  opacity: 0.55;
 }
 
-.arrowNext {
-  right: 12px;
-}
-
-.showFrame:hover .arrow,
-.arrow:focus-visible {
+.arrow:hover .arrowIcon,
+.arrow:focus-visible .arrowIcon {
   opacity: 1;
-}
-
-.arrow:hover {
   background: #0b0b0c;
   color: var(--coral);
 }
 
-/* Touch screens have no hover: keep the arrows visible. */
+.arrow:focus-visible .arrowIcon {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
+
 @media (hover: none) {
-  .arrow {
-    opacity: 0.9;
+  .arrowIcon {
     width: 38px;
     height: 38px;
+    opacity: 0.9;
   }
 }
+
 
 /* The numbers that prove it, on one black placard band. */
 .stats {
