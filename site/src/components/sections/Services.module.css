@@ -96,7 +96,7 @@
   font-weight: 600;
   line-height: 1.35;
   text-decoration: none;
-  transition: color 160ms ease-out, padding 0s;
+  transition: color 160ms ease-out;
 }
 
 .door:hover {
