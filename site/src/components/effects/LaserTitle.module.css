@@ -43,6 +43,36 @@
   }
 }
 
+/* Rewriting the cycled word: new letters wait unlit for the beam; old ones burn out right to left. */
+.laser[data-rewrite] [data-slot] [data-c]:not([data-lit]) {
+  opacity: 0;
+}
+
+.laser[data-rewrite] [data-slot] [data-c][data-lit]:not([data-out]) {
+  animation: burn var(--burn, 220ms) ease-out both;
+}
+
+.laser[data-done] [data-slot] [data-c][data-out] {
+  opacity: 1;
+  animation: burnout var(--burn, 220ms) ease-in forwards;
+}
+
+@keyframes burnout {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  35% {
+    color: #ffd2c4;
+    text-shadow: 0 0 18px rgb(255 77 77 / 0.95), 0 0 4px rgb(255 140 120 / 0.9);
+  }
+  100% {
+    clip-path: inset(0 100% 0 0);
+    color: #ffb4a4;
+    text-shadow: 0 0 0 rgb(255 77 77 / 0);
+    opacity: 0;
+  }
+}
+
 @keyframes failsafe {
   to {
     opacity: 1;

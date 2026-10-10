@@ -71,6 +71,11 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
     }
   }, [phase]);
 
+  // Tell the headline an exhibit has settled, so it can swap its word while the laser is idle.
+  useEffect(() => {
+    if (phase === "hold") window.dispatchEvent(new CustomEvent("lv:exhibit-hold", { detail: product }));
+  }, [phase, product]);
+
   // The cuts. Wire: four beams from the logo dot trace the device's real edges at once and
   // the wireframe appears where they pass. Solid: a cut line sweeps down with three beams
   // scanning along it, the finished device appearing above the line.

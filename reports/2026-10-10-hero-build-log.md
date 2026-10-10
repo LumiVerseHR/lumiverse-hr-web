@@ -122,3 +122,21 @@ Each attempt traded away the approved look to chase physical correctness.
 - The shader clips it at radius 2.71, so the man's shadow drops off the plinth edge like a real one.
 - The contact shadows were reweighted, curve first and then a 55% peak. Before, the curve was applied after
   scaling and capped them at 13%.
+
+## Round 4: "they look like they lean back too much" + a cycling headline word
+### Figures
+- Cause: Qwen shot both figurines from a low camera (long legs, head about 1/10 of the height), but the scene camera
+  looks down at 23°. A low-angle photo inside a high-angle scene reads as leaning back.
+- Tilting the cards was tested and rejected. At 23° the view ray already foreshortens a vertical card, so tilting it
+  forward (8 to 23°) only squashed the figures, and tilting it back (−12 to −23°) stretched them.
+- Fix: regenerated both with the same prompts plus "photographed from a high camera angle, looking down at about
+  25 degrees, standing perfectly upright, weight slightly forward". The figures used are the man from seed 1203 and
+  the woman from seed 77. The new heads sit over the feet and the shoulder tops show. The cards stay vertical, refit
+  to the new aspect, and the planar shadows are rebuilt from the new silhouettes.
+### Headline
+- "Human Imagination. AI Speed." The second line cycles Imagination / Judgement / Taste, one word per exhibit.
+  900ms after an exhibit settles, the laser erases the word right to left (letters flare and burn out) and writes the
+  next one in place. Swaps happen only during the hold, so the title laser and the exhibit laser never fire together.
+- Bug on the way: the rewrite's burn rule outranked the burn-out rule, because old letters keep `data-lit`, so the
+  erase did nothing visible. Fixed by scoping the burn rule to `:not([data-out])` and setting `data-rewrite` only
+  after the erase.
