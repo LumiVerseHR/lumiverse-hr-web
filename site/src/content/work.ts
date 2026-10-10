@@ -37,8 +37,8 @@ export const flagships: Flagship[] = [
     name: "Bridj",
     image: "/work/bridj-card.jpg",
     alt: {
-      en: "Bridj landing page: the intelligence layer between conversations and what the business does next",
-      hr: "Naslovnica Bridja: sloj inteligencije između razgovora i onoga što tvrtka radi sljedeće",
+      en: "Bridj's homepage: what your customers are saying, before anyone thinks to ask",
+      hr: "Naslovnica Bridja: što Vaši klijenti govore, prije nego što itko pomisli pitati",
     },
     kind: { en: "Embedded tech lead · UK", hr: "Tech lead u timu klijenta · UK" },
     stat: { value: "17", unit: { en: "services, every release signed off", hr: "servisa, svako izdanje s našim potpisom" } },
