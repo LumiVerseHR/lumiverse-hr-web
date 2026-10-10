@@ -7,7 +7,7 @@ import s from "./sections.module.css";
 import styles from "./Contact.module.css";
 
 type Pkg = { id: string; en: { name: string }; hr: { name: string } };
-const GROUPS = [["engagement", "engagements"], ["upskill", "upskill"], ["system", "systems"]] as const;
+const GROUPS = [["engagement", "engagements"], ["upskill", "upskill"], ["package", "packages"], ["system", "systems"]] as const;
 
 // `bare`: on the contact page the h1 carries the title and lede.
 export function Contact({ lang, dict, preset, bare = false }: { lang: Locale; dict: Dictionary; preset?: string; bare?: boolean }) {

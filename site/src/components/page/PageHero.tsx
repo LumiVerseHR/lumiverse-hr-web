@@ -14,6 +14,7 @@ export function PageHero({
   label,
   title,
   intro,
+  parent,
   children,
 }: {
   lang: Locale;
@@ -22,15 +23,17 @@ export function PageHero({
   label: string;
   title: string;
   intro?: string;
+  parent?: { label: string; path: string };
   children?: ReactNode;
 }) {
   const crumbs = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: home, item: `${SITE}${localePath(lang)}` },
-      { "@type": "ListItem", position: 2, name: label, item: `${SITE}${localePath(lang, path)}` },
-    ],
+      { name: home, item: `${SITE}${localePath(lang)}` },
+      ...(parent ? [{ name: parent.label, item: `${SITE}${localePath(lang, parent.path)}` }] : []),
+      { name: label, item: `${SITE}${localePath(lang, path)}` },
+    ].map((crumb, i) => ({ "@type": "ListItem", position: i + 1, ...crumb })),
   };
   return (
     <section className={styles.hero} aria-labelledby="page-title">
@@ -38,6 +41,12 @@ export function PageHero({
       <nav className={styles.crumbs} aria-label="Breadcrumb">
         <a href={localePath(lang)}>{home}</a>
         <span aria-hidden>/</span>
+        {parent && (
+          <>
+            <a href={localePath(lang, parent.path)}>{parent.label}</a>
+            <span aria-hidden>/</span>
+          </>
+        )}
         <span aria-current="page">{label}</span>
       </nav>
       <h1 id="page-title" className={styles.title}>{title}</h1>

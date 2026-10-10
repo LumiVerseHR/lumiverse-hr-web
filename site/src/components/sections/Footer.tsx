@@ -40,6 +40,7 @@ export async function Footer({ lang, dict }: { lang: Locale; dict: Dictionary })
             <ul>
               <li><a href={localePath(lang, "/work")}>{dict.nav.work}</a></li>
               <li><a href={localePath(lang, "/services")}>{dict.nav.services}</a></li>
+              <li><a href={localePath(lang, "/packages")}>{dict.footer.packages}</a></li>
               <li><a href={localePath(lang, "/pricing")}>{dict.footer.pricing}</a></li>
               <li><a href={localePath(lang, "/research")}>{dict.footer.research}</a></li>
               <li><a href={localePath(lang, "/studio")}>{dict.nav.studio}</a></li>

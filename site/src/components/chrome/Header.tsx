@@ -28,6 +28,7 @@ export function Header({
     [
       ["/work", dict.nav.work],
       ["/services", dict.nav.services],
+      ["/packages", dict.nav.packages],
       ["/pricing", dict.nav.pricing],
       ["/research", dict.nav.research],
       ["/studio", dict.nav.studio],

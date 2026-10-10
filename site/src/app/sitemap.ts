@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { packaged } from "@/content/packages.mjs";
 import { flagships, workIndex } from "@/content/work";
 import { localePath } from "@/i18n/config";
 import { allPosts } from "@/lib/posts";
@@ -24,6 +25,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...work.flatMap((slug, i) => pair(`/${slug}`, Math.max(0.5, 0.9 - i * 0.03))),
     ...pair("/work", 0.9),
     ...pair("/services", 0.9),
+    ...pair("/packages", 0.9),
+    ...(packaged as { id: string }[]).flatMap((pkg) => pair(`/packages/${pkg.id}`, 0.7)),
     ...pair("/pricing", 0.8),
     ...pair("/research", 0.7),
     ...pair("/studio", 0.6),

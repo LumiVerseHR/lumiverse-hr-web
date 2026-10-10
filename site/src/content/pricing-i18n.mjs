@@ -34,8 +34,9 @@ export const t = {
     },
     systems: {
       label: "Packaged Systems",
-      heading: "Built once, ready for yours",
-      text: "Each one is built on a system we've already shipped. Setup builds it on your data; a small monthly fee keeps it running. AI usage and hosting are billed at cost."
+      heading: "Custom AI systems",
+      text: "Newsrooms, translation, assistants on your documents, archives, internal tools and rebuilds. Each one starts from a system we've already shipped: setup builds it on your data, and a small monthly fee keeps it running. AI usage and hosting are billed at cost.",
+      cta: "Describe your system"
     },
     products: {
       label: "Ready-Made Products",
@@ -114,8 +115,9 @@ export const t = {
     },
     systems: {
       label: "Gotovi sustavi",
-      heading: "Izgrađeno jednom, spremno za Vas",
-      text: "Svaki se temelji na sustavu koji smo već isporučili. Postavljanje ga gradi na Vašim podacima; mala mjesečna naknada održava ga u radu. AI potrošnja i hosting naplaćuju se po stvarnom trošku."
+      heading: "AI sustavi po mjeri",
+      text: "Redakcije, prijevodi, asistenti nad Vašim dokumentima, arhive, interni alati i obnove sustava. Svaki kreće od sustava koji smo već isporučili: postavljanje ga gradi na Vašim podacima, a mala mjesečna naknada održava ga u radu. AI potrošnja i hosting naplaćuju se po stvarnom trošku.",
+      cta: "Opišite svoj sustav"
     },
     products: {
       label: "Gotovi proizvodi",
@@ -188,6 +190,7 @@ export const form = {
     engagements: "Ways to work with us",
     upskill: "Upskill your team",
     systems: "Packaged systems",
+    packages: "Packages",
     message: "Tell us about it",
     messageHint: "What you want to build or fix, and anything you already know about timing or budget.",
     submit: "Send Your Brief",
@@ -212,6 +215,7 @@ export const form = {
     engagements: "Načini suradnje",
     upskill: "Osposobite svoj tim",
     systems: "Gotovi sustavi",
+    packages: "Paketi",
     message: "Opišite nam",
     messageHint: "Što želite izgraditi ili popraviti te sve što već znate o rokovima ili budžetu.",
     submit: "Pošaljite upit",
@@ -225,3 +229,61 @@ export const form = {
 };
 
 export const contactEmail = "tihomir.jauk@lumiverse.hr";
+
+// The packages index and each package's own page. Package copy and prices live in packages.mjs.
+export const packagesCopy = {
+  en: {
+    title: `Packages - Fixed-Price AI and Web Services From ${from("web-to-video", "en")} | LumiVerse`,
+    description:
+      "Fixed scope, fixed price, ordered in one message: a TikTok video from your web page, an AI prototype, a business website, an animated 3D hero and more. Prices in EUR, excluding VAT.",
+    label: "Packages",
+    heading: "One thing, one price",
+    intro:
+      "Each package is a defined deliverable we've already built for ourselves or a client. The scope and the price are on the card. Order it, and you get a confirmation and an invoice within 24 hours. Prices in EUR, excluding VAT.",
+    custom: "Need something bigger or less defined?",
+    customLink: "See ballpark pricing for custom work",
+    details: "What's included",
+    order: "Order",
+    more: "Details",
+    delivery: "Delivery",
+    includes: "What you get",
+    brief: "What to send us",
+    proof: "Proof",
+    how: "How ordering works",
+    steps: [
+      ["Send the brief", "Pick the package and send what's listed above. Two minutes."],
+      ["Get it confirmed", "Within 24 hours we confirm the scope and the date, and send the invoice."],
+      ["Receive it", "Delivered in the time on the card, with the revisions it includes."]
+    ],
+    all: "All packages",
+    teaserTitle: "Or order one defined thing",
+    teaserLink: "See all packages"
+  },
+  hr: {
+    title: `Paketi - AI i web usluge po fiksnoj cijeni od ${from("web-to-video", "hr")} | LumiVerse`,
+    description:
+      "Fiksni opseg, fiksna cijena, narudžba u jednoj poruci: TikTok video od Vaše web stranice, AI prototip, poslovna web stranica, animirani 3D hero i više. Cijene u eurima, bez PDV-a.",
+    label: "Paketi",
+    heading: "Jedna stvar, jedna cijena",
+    intro:
+      "Svaki paket je definirana isporuka koju smo već izradili za sebe ili za klijenta. Opseg i cijena pišu na kartici. Naručite ga i u roku od 24 sata dobivate potvrdu i račun. Cijene su u eurima, bez PDV-a.",
+    custom: "Trebate nešto veće ili manje određeno?",
+    customLink: "Pogledajte okvirne cijene za rad po mjeri",
+    details: "Što je uključeno",
+    order: "Naručite",
+    more: "Detalji",
+    delivery: "Isporuka",
+    includes: "Što dobivate",
+    brief: "Što nam pošaljite",
+    proof: "Dokaz",
+    how: "Kako funkcionira narudžba",
+    steps: [
+      ["Pošaljite upit", "Odaberite paket i pošaljite ono što je navedeno gore. Dvije minute."],
+      ["Dobijte potvrdu", "U roku od 24 sata potvrđujemo opseg i termin te šaljemo račun."],
+      ["Primite isporuku", "Isporučeno u roku s kartice, s uključenim izmjenama."]
+    ],
+    all: "Svi paketi",
+    teaserTitle: "Ili naručite jednu određenu stvar",
+    teaserLink: "Pogledajte sve pakete"
+  }
+};

@@ -354,3 +354,42 @@
 .jump a:hover {
   color: var(--coral);
 }
+
+/* Custom systems as one ballpark line and a list of what they've been built as. */
+.range {
+  margin: clamp(28px, 3vw, 44px) 0 0;
+  font-size: clamp(26px, 2.6vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.systems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 0 40px;
+  margin: 28px 0 0;
+  padding: 0;
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+  list-style: none;
+}
+
+.systems li {
+  display: grid;
+  gap: 4px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.systems strong {
+  font-size: 18px;
+}
+
+.systems a {
+  color: var(--text-muted);
+  font-size: 14px;
+  text-underline-offset: 0.3em;
+}
+
+.systems a:hover {
+  color: var(--text);
+}

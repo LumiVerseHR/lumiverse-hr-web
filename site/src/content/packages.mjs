@@ -13,6 +13,14 @@
 //   price.then   with per: "setup", the monthly fee that follows
 //   price.fullTime  with per: "month", the full-time rate; `from` is then
 //                   the part-time rate
+//   price.fixed     true when `from` is the price, not a floor (e.g. €1,900 per day)
+//
+// `pack` (optional) makes a service a package: one defined deliverable at one
+// price, listed on /packages with its own page and ordered through the brief.
+//   pack.delivery   {en, hr} how long it takes
+//   pack.preview    optional {video, poster} or {image}, shown on its page
+//   pack.proofHref  optional link for the proof line when it isn't a case study
+// Packages also carry `brief` per language: what to send us with the order.
 //
 // `priceNote` (optional, per language) is a short caveat shown under the price.
 //
@@ -21,12 +29,12 @@
 // it has to be something that page already states.
 
 // Last change to any price or package: the sitemap's <lastmod> for /pricing.
-export const updated = "2026-10-07";
+export const updated = "2026-10-10";
 
 // Every euro amount a package quotes, for the checks.
 export const amountsOf = (price) => [price.from, price.then, price.fullTime].filter(Boolean);
 
-export const groups = ["engagement", "upskill", "system"];
+export const groups = ["engagement", "upskill", "system", "package"];
 
 export const packages = [
   {
@@ -35,6 +43,7 @@ export const packages = [
     icon: "fa-pencil-ruler",
     price: { from: 490, per: "once" },
     proof: "overserved",
+    pack: { delivery: { en: "1 week", hr: "1 tjedan" } },
     en: {
       name: "AI Prototype",
       summary: "For testing an idea on real people before you commit to a full build.",
@@ -46,7 +55,8 @@ export const packages = [
       ],
       proof: "Overserved: an empty repo to a playable game in 3 weeks",
       cta: "Start with a prototype",
-      tag: "Start Here"
+      tag: "Start Here",
+      brief: ["The idea, in a few lines", "Who it's for", "The one flow that has to work"]
     },
     hr: {
       name: "AI prototip",
@@ -59,7 +69,8 @@ export const packages = [
       ],
       proof: "Overserved: od praznog repozitorija do igre u 3 tjedna",
       cta: "Krenite s prototipom",
-      tag: "Prvi korak"
+      tag: "Prvi korak",
+      brief: ["Ideja, u nekoliko rečenica", "Kome je namijenjena", "Jedan tok koji mora raditi"]
     }
   },
   {
@@ -132,8 +143,9 @@ export const packages = [
     id: "ai-team-workshop",
     group: "upskill",
     icon: "fa-chalkboard-teacher",
-    price: { from: 1900, per: "day" },
+    price: { from: 1900, per: "day", fixed: true },
     proof: "air-laser",
+    pack: { delivery: { en: "1 day, booked within 2 weeks", hr: "1 dan, termin unutar 2 tjedna" } },
     en: {
       name: "AI Team Workshop",
       summary: "A day with your team on your own work: where AI pays off, how to use it well, and the first tools built for you.",
@@ -145,7 +157,9 @@ export const packages = [
       ],
       proof: "Air-laser study: one agent loop on Claude Code, the bulk of the work in 3 days",
       cta: "Book a workshop",
-      tag: "New"
+      tag: "New",
+      priceNote: "Up to 12 people. Travel outside Zagreb is billed at cost.",
+      brief: ["Your team: roles and size", "Two or three tasks they repeat every week", "The AI tools you already pay for"]
     },
     hr: {
       name: "AI radionica za tim",
@@ -158,7 +172,9 @@ export const packages = [
       ],
       proof: "Studija Air-laser: jedna petlja agenata na Claude Codeu, većina posla u 3 dana",
       cta: "Rezervirajte radionicu",
-      tag: "Novo"
+      tag: "Novo",
+      priceNote: "Do 12 osoba. Putni troškovi izvan Zagreba naplaćuju se po stvarnom trošku.",
+      brief: ["Vaš tim: uloge i veličina", "Dva ili tri zadatka koja ponavljaju svaki tjedan", "AI alati koje već plaćate"]
     }
   },
   {
@@ -386,6 +402,156 @@ export const packages = [
       proof: "Rentalica: preneseno 10+ godina podataka, 0 resetiranja lozinki",
       cta: "Pitajte za obnovu"
     }
+  },
+  // Packages: one deliverable, one price, ordered through the brief. Each rests on
+  // something we've already shipped, named in its proof line.
+  {
+    id: "web-to-video",
+    group: "package",
+    icon: "fa-video",
+    price: { from: 390, per: "once" },
+    pack: {
+      delivery: { en: "5 working days", hr: "5 radnih dana" },
+      preview: { video: "/assets/reel/38bf03/lumiverse-reel.mp4", poster: "/assets/reel/38bf03/poster.jpg" }
+    },
+    en: {
+      name: "Your Web Page as a TikTok Video",
+      summary: "A 20-second vertical video for TikTok, Reels and Shorts, made from your live page, not from stock footage.",
+      includes: [
+        "20 to 25 seconds, vertical 1080×1920",
+        "Real screenshots of your page, animated",
+        "Captions burned in, so it works without sound",
+        "Music cut to the beat",
+        "One round of revisions"
+      ],
+      proof: "Our 22-second launch reel, made with the same pipeline",
+      cta: "Order a video",
+      brief: ["The URL of the page", "Who the video is for, in one line", "Your logo, if it isn't on the page"]
+    },
+    hr: {
+      name: "Vaša web stranica kao TikTok video",
+      summary: "Okomiti video od 20 sekundi za TikTok, Reels i Shorts, napravljen od Vaše stvarne stranice, a ne od stock snimaka.",
+      includes: [
+        "20 do 25 sekundi, okomito 1080×1920",
+        "Stvarne snimke Vaše stranice, animirane",
+        "Ugrađeni titlovi, da radi i bez zvuka",
+        "Glazba montirana u ritmu",
+        "Jedan krug izmjena"
+      ],
+      proof: "Naš reel od 22 sekunde, napravljen istim postupkom",
+      cta: "Naručite video",
+      brief: ["Adresa stranice", "Kome je video namijenjen, u jednoj rečenici", "Vaš logo, ako ga nema na stranici"]
+    }
+  },
+  {
+    id: "moj-kolega-setup",
+    group: "package",
+    icon: "fa-robot",
+    price: { from: 490, per: "setup", fixed: true },
+    proof: "moj-kolega",
+    pack: { delivery: { en: "2 weeks", hr: "2 tjedna" } },
+    en: {
+      name: "Moj Kolega, Set Up for You",
+      summary: "Our AI employee on your webshop, trained on your catalogue and tested on real questions before it goes live.",
+      includes: [
+        "Installed on your WooCommerce or Shopify shop, or any website",
+        "Trained on your catalogue, pages and FAQs",
+        "Tested against real customer questions before launch",
+        "Two weeks of tuning after it goes live"
+      ],
+      proof: "Moj Kolega: on shift 24/7, improved every month",
+      cta: "Order the setup",
+      priceNote: "The monthly Moj Kolega plan is billed separately.",
+      brief: ["Your webshop's URL and platform", "The role you want: sales, support or reception", "Your FAQs or support emails, if you have them"]
+    },
+    hr: {
+      name: "Moj Kolega, postavljen za Vas",
+      summary: "Naš AI zaposlenik na Vašem webshopu, naučen na Vašem katalogu i testiran na stvarnim pitanjima prije nego što krene s radom.",
+      includes: [
+        "Postavljen na Vaš WooCommerce ili Shopify webshop, ili bilo koju web stranicu",
+        "Naučen na Vašem katalogu, stranicama i čestim pitanjima",
+        "Testiran na stvarnim pitanjima kupaca prije pokretanja",
+        "Dva tjedna podešavanja nakon pokretanja"
+      ],
+      proof: "Moj Kolega: na smjeni 24/7, poboljšan svaki mjesec",
+      cta: "Naručite postavljanje",
+      priceNote: "Mjesečni Moj Kolega paket naplaćuje se zasebno.",
+      brief: ["Adresa i platforma Vašeg webshopa", "Uloga koju želite: prodaja, podrška ili recepcija", "Vaša česta pitanja ili e-poruke podrške, ako ih imate"]
+    }
+  },
+  {
+    id: "animated-hero",
+    group: "package",
+    icon: "fa-cube",
+    price: { from: 2400, per: "once" },
+    pack: {
+      delivery: { en: "3 weeks", hr: "3 tjedna" },
+      preview: { image: "/blog/laser-cut-hero/cover.webp" },
+      proofHref: "/blog/laser-cut-hero"
+    },
+    en: {
+      name: "Animated 3D Hero for Your Homepage",
+      summary: "Your product rendered in Blender and cut into being on your homepage, without WebGL or a heavy page.",
+      includes: [
+        "Your product modelled and lit in Blender, from photos or CAD files",
+        "Up to 3 variants, like the three devices on our homepage",
+        "A laser-style reveal as a drop-in web component",
+        "A still fallback for slow connections and reduced motion",
+        "The code for your site, plus a 1080p video cut"
+      ],
+      proof: "Our homepage: three exhibits in about 290 KB of images",
+      cta: "Order a hero",
+      brief: ["Your product: photos, CAD files or a link", "Your homepage's URL", "The headline it should sit under"]
+    },
+    hr: {
+      name: "Animirani 3D hero za Vašu naslovnicu",
+      summary: "Vaš proizvod, renderiran u Blenderu i izrezan laserom na Vašoj naslovnici, bez WebGL-a i teške stranice.",
+      includes: [
+        "Vaš proizvod modeliran i osvijetljen u Blenderu, iz fotografija ili CAD datoteka",
+        "Do 3 varijante, poput tri uređaja na našoj naslovnici",
+        "Otkrivanje laserom kao gotova web komponenta",
+        "Statična slika za spore veze i smanjeno kretanje",
+        "Kod za Vašu stranicu, uz video od 1080p"
+      ],
+      proof: "Naša naslovnica: tri eksponata u oko 290 KB slika",
+      cta: "Naručite hero",
+      brief: ["Vaš proizvod: fotografije, CAD datoteke ili poveznica", "Adresa Vaše naslovnice", "Naslov ispod kojeg će stajati"]
+    }
+  },
+  {
+    id: "business-website",
+    group: "package",
+    icon: "fa-globe",
+    price: { from: 3900, per: "once" },
+    pack: { delivery: { en: "4 weeks", hr: "4 tjedna" }, proofHref: "/" },
+    en: {
+      name: "Business Website, Up to 20 Pages",
+      summary: "A fast, bilingual company website, designed and built by the team behind this one.",
+      includes: [
+        "Up to 20 pages, designed for your brand",
+        "Two languages, with SEO basics in both",
+        "A contact form that lands in your inbox",
+        "Hosting set up on your own account",
+        "Two rounds of revisions, and 30 days of content edits after launch"
+      ],
+      proof: "lumiverse.hr: this site, built on the same stack",
+      cta: "Order a website",
+      brief: ["Your current website, if you have one", "The pages and languages you need", "Two or three websites you like, and why"]
+    },
+    hr: {
+      name: "Poslovna web stranica, do 20 stranica",
+      summary: "Brza dvojezična stranica tvrtke, koju dizajnira i gradi tim koji je izradio i ovu.",
+      includes: [
+        "Do 20 stranica, dizajniranih za Vaš brend",
+        "Dva jezika, uz osnovni SEO na oba",
+        "Kontakt obrazac koji stiže u Vaš sandučić",
+        "Hosting postavljen na Vašem računu",
+        "Dva kruga izmjena i 30 dana izmjena sadržaja nakon objave"
+      ],
+      proof: "lumiverse.hr: ova stranica, na istoj tehnologiji",
+      cta: "Naručite stranicu",
+      brief: ["Vaša trenutna stranica, ako je imate", "Koje stranice i jezike trebate", "Dvije ili tri stranice koje Vam se sviđaju i zašto"]
+    }
   }
 ];
 
@@ -397,6 +563,9 @@ export function inGroup(group) {
   const members = packages.filter((pkg) => pkg.group === group);
   return group === "system" ? members.sort((a, b) => a.price.from - b.price.from) : members;
 }
+
+// Everything orderable as a package, cheapest first.
+export const packaged = packages.filter((pkg) => pkg.pack).sort((a, b) => a.price.from - b.price.from);
 
 // Ready-made products: linked from the pricing page, priced on their own sites.
 export const products = [
@@ -449,7 +618,7 @@ export function priceParts(price, lang) {
       ? `${u.fullTime} ${formatEuro(price.fullTime, lang)}${u.perMonth}`
       : "";
   return {
-    lead: price.per === "once" ? "" : u.from,
+    lead: price.per === "once" || price.fixed ? "" : u.from,
     amount: formatEuro(price.from, lang),
     unit: price.fullTime ? u.partTime : u[price.per],
     then

@@ -5,11 +5,14 @@ import { Icon } from "@/components/icons/Icon";
 import { PriceCard, type Pkg } from "@/components/pricing/PriceCard";
 import styles from "@/components/pricing/Pricing.module.css";
 import { Contact } from "@/components/sections/Contact";
-import { inGroup, packages, products } from "@/content/packages.mjs";
-import { t } from "@/content/pricing-i18n.mjs";
+import { PackagesTeaser } from "@/components/packages/PackagesTeaser";
+import { inGroup, packages, priceLine, products } from "@/content/packages.mjs";
+import { packagesCopy, t } from "@/content/pricing-i18n.mjs";
+import { PickPackage } from "@/components/pricing/PickPackage";
 import { hasLocale, localePath, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { jsonLdHtml } from "@/lib/jsonld";
+import { priceSpecification, type Price } from "@/lib/offer";
 
 const SITE = "https://www.lumiverse.hr";
 
@@ -23,11 +26,10 @@ type Copy = {
   heroSecondary: string;
   engagements: { heading: string; text: string };
   upskill: { heading: string; text: string };
-  systems: { heading: string; text: string };
+  systems: { heading: string; text: string; cta: string };
   products: { heading: string; text: string; more: string };
   faq: { heading: string; items: string[][] };
 };
-type Price = { from: number; per: string; then?: number; fullTime?: number };
 type Product = { slug: string; en: { name: string; summary: string }; hr: { name: string; summary: string } };
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/pricing">): Promise<Metadata> {
@@ -39,17 +41,6 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/pricing">)
     description: s.description,
     alternates: { canonical: localePath(lang, "/pricing"), languages: { en: "/pricing", hr: "/hr/pricing" } },
   };
-}
-
-// The price as schema.org sees it (ported from the legacy page): a floor unless it's a fixed fee, never VAT-inclusive.
-function priceSpecification(price: Price) {
-  const base = { "@type": "UnitPriceSpecification", priceCurrency: "EUR", valueAddedTaxIncluded: false };
-  const amount = price.per === "once" ? { price: price.from } : { minPrice: price.from };
-  const unit = price.per === "month" ? { unitCode: "MON" } : price.per === "day" ? { unitCode: "DAY" } : {};
-  const first = { ...base, ...amount, ...unit };
-  if (price.fullTime) return [{ ...first, name: "Part-time" }, { ...base, minPrice: price.fullTime, unitCode: "MON", name: "Full-time" }];
-  if (!price.then) return first;
-  return [first, { ...base, minPrice: price.then, unitCode: "MON" }];
 }
 
 function jsonLd(lang: Locale, s: Copy) {
@@ -69,9 +60,9 @@ function jsonLd(lang: Locale, s: Copy) {
       name: s.title.replace(" | LumiVerse", ""),
       url: route,
       provider: { "@type": "Organization", name: "LumiVerse d.o.o.", url: SITE },
-      itemListElement: (packages as (Pkg & { price: Price })[]).map((pkg) => ({
+      itemListElement: (packages as (Pkg & { price: Price })[]).filter((pkg) => pkg.group !== "package").map((pkg) => ({
         "@type": "Offer",
-        url: `${route}#${pkg.id}`,
+        url: `${route}#${pkg.group === "system" ? "systems" : pkg.id}`,
         priceCurrency: "EUR",
         priceSpecification: priceSpecification(pkg.price),
         itemOffered: { "@type": "Service", name: pkg[lang].name, description: pkg[lang].summary },
@@ -93,8 +84,18 @@ export default async function PricingPage({ params }: PageProps<"/[lang]/pricing
   const groups = [
     { id: "engagements", copy: s.engagements, items: inGroup("engagement") as Pkg[] },
     { id: "upskill", copy: s.upskill, items: inGroup("upskill") as Pkg[] },
-    { id: "systems", copy: s.systems, items: inGroup("system") as Pkg[] },
   ];
+  // Custom systems as one ballpark: the lowest setup and running fees, and what they've been built as.
+  const systems = inGroup("system") as (Pkg & { price: Price })[];
+  const systemsFrom = priceLine(
+    {
+      from: Math.min(...systems.filter((p) => p.price.per === "setup").map((p) => p.price.from)),
+      per: "setup",
+      then: Math.min(...systems.map((p) => p.price.then ?? Infinity)),
+    },
+    lang,
+  );
+  const jump = [...groups.map((g) => ({ id: g.id, label: g.copy.heading })), { id: "systems", label: s.systems.heading }, { id: "packages", label: packagesCopy[lang].teaserTitle }];
 
   return (
     <>
@@ -117,9 +118,9 @@ export default async function PricingPage({ params }: PageProps<"/[lang]/pricing
             <a className={styles.secondary} href={localePath(lang, "/work")}>{s.heroSecondary}</a>
           </div>
           <ul className={styles.jump}>
-            {groups.map((g) => (
+            {jump.map((g) => (
               <li key={g.id}>
-                <a href={`#${g.id}`}>{g.copy.heading}</a>
+                <a href={`#${g.id}`}>{g.label}</a>
               </li>
             ))}
           </ul>
@@ -138,6 +139,28 @@ export default async function PricingPage({ params }: PageProps<"/[lang]/pricing
             </div>
           </section>
         ))}
+
+        <section id="systems" className={styles.group} aria-labelledby="systems-title">
+          <header className={styles.groupHead}>
+            <h2 id="systems-title">{s.systems.heading}</h2>
+            <p>{s.systems.text}</p>
+          </header>
+          <p className={styles.range}>{systemsFrom}</p>
+          <ul className={styles.systems}>
+            {systems.map((pkg) => (
+              <li key={pkg.id}>
+                <strong>{pkg[lang].name}</strong>
+                {pkg.proof && pkg[lang].proof && <a href={localePath(lang, `/${pkg.proof}`)}>{pkg[lang].proof}</a>}
+              </li>
+            ))}
+          </ul>
+          <PickPackage id="other" className={styles.cta}>
+            {s.systems.cta}
+            <Icon name="arrow-right" size={16} />
+          </PickPackage>
+        </section>
+
+        <PackagesTeaser lang={lang} ids={["web-to-video", "animated-hero", "business-website"]} pricingPage />
 
         <section id="products" className={styles.group} aria-labelledby="products-title">
           <header className={styles.groupHead}>

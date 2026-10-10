@@ -10,6 +10,7 @@ import { HashForward } from "@/components/chrome/HashForward";
 import { LaserTitle } from "@/components/effects/LaserTitle";
 import { Beams } from "@/components/hero/Beams";
 import { HeroLaser } from "@/components/hero/HeroLaser";
+import { PackagesTeaser } from "@/components/packages/PackagesTeaser";
 import { hasLocale, localePath } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import styles from "./page.module.css";
@@ -46,6 +47,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     <Flagships lang={lang} dict={dict} more />
     <Thesis lang={lang} dict={dict} />
     <Services lang={lang} dict={dict} doors={false} more={{ href: localePath(lang, "/services"), label: dict.services.how }} />
+    <PackagesTeaser lang={lang} ids={["web-to-video", "ai-prototype", "animated-hero"]} />
     <Notes lang={lang} dict={dict} />
     <ContactBand lang={lang} dict={dict} />
     <HashForward to={{ studio: localePath(lang, "/studio") }} />
