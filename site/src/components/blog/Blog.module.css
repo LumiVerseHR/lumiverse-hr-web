@@ -230,6 +230,24 @@
   color: var(--text);
 }
 
+/* A figure is an image followed by an italic caption in the same paragraph. */
+.prose img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.6em;
+  background: #0c0c10;
+}
+
+.prose img + em {
+  display: block;
+  margin-top: 12px;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.55;
+}
+
 .prose ol {
   padding-left: 1.3em;
 }
