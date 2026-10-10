@@ -69,7 +69,8 @@ export async function getPost(slug: string): Promise<{ meta: PostMeta; html: str
   try {
     const post = await load(`${slug}.md`);
     if (!post) return null;
-    return { meta: post.meta, html: await marked.parse(post.body, { gfm: true }) };
+    const html = (await marked.parse(post.body, { gfm: true })).replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, "</table></div>");
+    return { meta: post.meta, html };
   } catch {
     return null;
   }

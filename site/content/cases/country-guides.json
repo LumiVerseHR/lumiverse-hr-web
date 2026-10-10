@@ -2,12 +2,12 @@
   "en": {
     "slug": "country-guides",
     "meta": {
-      "title": "Country Guides - Fourteen Travel Sites, One Codebase | LumiVerse",
+      "title": "Country Guides – Fourteen Travel Sites, One Codebase | LumiVerse",
       "description": "Fourteen branded travel guides across Europe, North Africa and North America, running from one codebase with AI-written destinations, attractions and articles."
     },
     "kind": "Our Product · AI Content Platform",
     "title": "Country Guides",
-    "subtitle": "Fourteen branded travel guides - from Croatia and Italy to Morocco, Canada and the US states of Colorado and Oregon - running on one codebase, with an AI pipeline that researches and writes every destination, attraction and article. A new market is a config file, not a fork.",
+    "subtitle": "Fourteen branded travel guides – from Croatia and Italy to Morocco, Canada and the US states of Colorado and Oregon – running on one codebase, with an AI pipeline that researches and writes every destination, attraction and article. A new market is a config file, not a fork.",
     "ctas": [
       {
         "label": "View a Live Site",
@@ -72,14 +72,14 @@
     "sections": [
       {
         "title": "Build It Once, Ship Every Country",
-        "lede": "A travel guide has the same shape everywhere: a country, its regions, the places worth visiting, the things to see in them. So the site gets built once. Country, branding, currency, copy and content become data - not a separate codebase per site.",
+        "lede": "A travel guide has the same shape everywhere: a country, its regions, the places worth visiting, the things to see in them. So the site gets built once. Country, branding, currency, copy and content become data – not a separate codebase per site.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "The Same Shape Everywhere",
-                "body": "Country → region → destination → attraction, the same hierarchy for every market\nInterest categories - castles, beaches, heritage - cut across destinations\nArticles, blog posts and multi-day itineraries layered on top\nEvery entity carries its own quality and workflow state"
+                "body": "Country → region → destination → attraction, the same hierarchy for every market\nInterest categories – castles, beaches, heritage – cut across destinations\nArticles, blog posts and multi-day itineraries layered on top\nEvery entity carries its own quality and workflow state"
               },
               {
                 "title": "Why Most Multi-Site Setups Rot",
@@ -102,7 +102,7 @@
               },
               {
                 "title": "Write to Schema",
-                "body": "A schema-bound model turns each place into a structured record, not free text. Every field is validated against the same Pydantic schema the database is shaped by - a malformed answer is retried, not published."
+                "body": "A schema-bound model turns each place into a structured record, not free text. Every field is validated against the same Pydantic schema the database is shaped by – a malformed answer is retried, not published."
               },
               {
                 "title": "Enrich With Facts",
@@ -110,11 +110,11 @@
               },
               {
                 "title": "Sort by Interest",
-                "body": "Each attraction is tagged into interest categories - castles, beaches, history and heritage - so the same place surfaces in every way a visitor might go looking for it."
+                "body": "Each attraction is tagged into interest categories – castles, beaches, history and heritage – so the same place surfaces in every way a visitor might go looking for it."
               },
               {
                 "title": "Link and Answer",
-                "body": "Articles, destinations and attractions are cross-linked automatically, and common questions get their own FAQ section - useful for a reader skimming, and legible to a search engine."
+                "body": "Articles, destinations and attractions are cross-linked automatically, and common questions get their own FAQ section – useful for a reader skimming, and legible to a search engine."
               },
               {
                 "title": "Readiness Gate",
@@ -127,7 +127,7 @@
             "items": [
               {
                 "title": "Fast Models, Guarded Output",
-                "body": "Generation runs on a fast, low-cost model with an automatic fallback chain - if the primary provider stumbles, the next one picks up the same request rather than dropping the job. Because every response has to satisfy a strict schema before it's accepted, speed never comes at the cost of a broken record reaching the database. The schema definitions are treated as the contract between the AI and the app, and are deliberately hard to change by accident."
+                "body": "Generation runs on a fast, low-cost model with an automatic fallback chain – if the primary provider stumbles, the next one picks up the same request rather than dropping the job. Because every response has to satisfy a strict schema before it's accepted, speed never comes at the cost of a broken record reaching the database. The schema definitions are treated as the contract between the AI and the app, and are deliberately hard to change by accident."
               }
             ]
           }
@@ -142,7 +142,7 @@
             "items": [
               {
                 "title": "Identity Is a Config File",
-                "body": "Domain, branding, SEO metadata, currency, timezone, analytics and the homepage and legal copy all live in one per-country config, next to that country's content tree. Launching a new market means adding a config and generating its content - not touching the application.\n\ncanadian-guide.com, colorado-guide.com, croatian-guide.com, discover-austria.com, dutch-guide.com, french-guides.com, greece-guides.com, italian-guides.com, moroccan-guides.com, oregon-guide.com, portugal-guides.com, slovenia-guide.com, spanish-guides.com, switzerland-explorer.com\nSame components, different data - no per-site forks to keep in sync\nMore markets already built and staged - Bosnia and Serbia are next, waiting on go-live"
+                "body": "Domain, branding, SEO metadata, currency, timezone, analytics and the homepage and legal copy all live in one per-country config, next to that country's content tree. Launching a new market means adding a config and generating its content – not touching the application.\n\ncanadian-guide.com, colorado-guide.com, croatian-guide.com, discover-austria.com, dutch-guide.com, french-guides.com, greece-guides.com, italian-guides.com, moroccan-guides.com, oregon-guide.com, portugal-guides.com, slovenia-guide.com, spanish-guides.com, switzerland-explorer.com\nSame components, different data – no per-site forks to keep in sync\nMore markets already built and staged – Bosnia and Serbia are next, waiting on go-live"
               },
               {
                 "title": "A Database Per Site",
@@ -150,7 +150,7 @@
               },
               {
                 "title": "Deploy Only What Changed",
-                "body": "Continuous deployment hashes the shared code and each country's data separately, then ships only the countries that actually changed. Editing Croatia's content never redeploys Switzerland, and a docs-only commit deploys nothing at all - the pipeline does the least work that's correct."
+                "body": "Continuous deployment hashes the shared code and each country's data separately, then ships only the countries that actually changed. Editing Croatia's content never redeploys Switzerland, and a docs-only commit deploys nothing at all – the pipeline does the least work that's correct."
               },
               {
                 "title": "SSL That Survives Deploys",
@@ -169,7 +169,7 @@
             "items": [
               {
                 "title": "Structured Data on Every Page",
-                "body": "Destinations, attractions, articles and FAQs each ship the right schema.org type - TouristAttraction, Place, FAQPage, BreadcrumbList - so a search engine reads them as places and answers, not just paragraphs of text."
+                "body": "Destinations, attractions, articles and FAQs each ship the right schema.org type – TouristAttraction, Place, FAQPage, BreadcrumbList – so a search engine reads them as places and answers, not just paragraphs of text."
               },
               {
                 "title": "One Canonical URL",
@@ -177,7 +177,7 @@
               },
               {
                 "title": "Rendered on the Server",
-                "body": "React pages are server-rendered, so a crawler - or a visitor on a slow phone - gets full HTML immediately. Per-site sitemaps are generated and kept current as content grows."
+                "body": "React pages are server-rendered, so a crawler – or a visitor on a slow phone – gets full HTML immediately. Per-site sitemaps are generated and kept current as content grows."
               }
             ]
           }
@@ -185,22 +185,22 @@
       },
       {
         "title": "Every Page Type, Rebuilt",
-        "lede": "The whole network was redesigned around one idea: a guide should read like a well-travelled friend who has actually been there. Calm, factual, photography first - and identical on all fourteen domains, because there is still only one codebase.",
+        "lede": "The whole network was redesigned around one idea: a guide should read like a well-travelled friend who has actually been there. Calm, factual, photography first – and identical on all fourteen domains, because there is still only one codebase.",
         "blocks": [
           {
             "type": "steps",
             "items": [
               {
                 "title": "You Always Know Where You Are",
-                "body": "Every page carries the path above it - country, region, destination - visible and clickable. Readers stop guessing how deep they have wandered, and a crawler gets the same hierarchy as real links instead of having to infer it."
+                "body": "Every page carries the path above it – country, region, destination – visible and clickable. Readers stop guessing how deep they have wandered, and a crawler gets the same hierarchy as real links instead of having to infer it."
               },
               {
                 "title": "Photography Carries the Feeling",
-                "body": "A warm off-white page, flat surfaces, hairline borders, and depth only where something answers to the cursor. What travel sites usually reach for - fake urgency, star-rating noise, ad walls - is deliberately absent."
+                "body": "A warm off-white page, flat surfaces, hairline borders, and depth only where something answers to the cursor. What travel sites usually reach for – fake urgency, star-rating noise, ad walls – is deliberately absent."
               },
               {
                 "title": "Accessibility, Measured",
-                "body": "Contrast, focus order, link text, pagination and map markers were taken to WCAG 2.1 AA and checked with axe - 156 automated runs across three of the sites, rather than a claim on a slide."
+                "body": "Contrast, focus order, link text, pagination and map markers were taken to WCAG 2.1 AA and checked with axe – 156 automated runs across three of the sites, rather than a claim on a slide."
               }
             ]
           }
@@ -543,7 +543,7 @@
     ],
     "closing": {
       "title": "Want a Content Platform That Scales?",
-      "body": "Country Guides is a platform play: build the engine once, launch a new market from a config file. If you publish content at volume - locations, listings, catalogues - that's the pattern we build.",
+      "body": "Country Guides is a platform play: build the engine once, launch a new market from a config file. If you publish content at volume – locations, listings, catalogues – that's the pattern we build.",
       "cta": {
         "label": "tell us what you're building",
         "href": "/#contact"
@@ -614,11 +614,11 @@
         "label": "Živih vodiča na jednoj bazi koda"
       },
       {
-        "value": "6,000+",
+        "value": "6.000+",
         "label": "Istraženih i napisanih znamenitosti"
       },
       {
-        "value": "1,200+",
+        "value": "1.200+",
         "label": "Destinacija u cijeloj mreži"
       },
       {

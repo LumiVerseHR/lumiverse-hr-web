@@ -14,9 +14,12 @@ export function Thesis({ lang, dict }: { lang: Locale; dict: Dictionary }) {
         <h2 id="thesis-title" className={styles.statement}>
           <span className={styles.muted}>{first}</span>
           <span className={styles.line}>
-            {second}
-            <span className={styles.figure}>
-              <Figure height={64} pointing />
+            {second.split(" ").slice(0, -1).join(" ")}{second.includes(" ") ? " " : ""}
+            <span className={styles.tail}>
+              {second.split(" ").slice(-1)[0]}
+              <span className={styles.figure}>
+                <Figure height={64} pointing />
+              </span>
             </span>
           </span>
         </h2>

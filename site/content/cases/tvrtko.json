@@ -2,7 +2,7 @@
   "en": {
     "slug": "tvrtko",
     "meta": {
-      "title": "Tvrtko.ai - Croatian Business Intelligence Platform | LumiVerse",
+      "title": "Tvrtko.ai – Croatian Business Intelligence Platform | LumiVerse",
       "description": "Croatian business intelligence platform: 200,000+ companies, financial data from 2008-2024, credit ratings, and an AI assistant."
     },
     "kind": "Business Intelligence Platform",
@@ -54,27 +54,14 @@
             "type": "cards",
             "items": [
               {
-                "title": "Company Intelligence",
-                "body": "Advanced search by name, OIB, or activity\nCourt registry data & legal status\nOwnership structure & key personnel\nBeneficial ownership registry",
-                "meta": "200,000+ Croatian companies"
-              },
-              {
                 "title": "Every Croatian Company, One Search",
-                "body": "Search by company name, OIB, or business activity. Get instant access to court registry data, ownership chains, and beneficial owners - all from official sources.\n\nNo more digging through multiple government portals. Tvrtko.ai aggregates data from the court register, FINA, and beneficial ownership registry into a single, searchable interface."
-              }
-            ]
-          },
-          {
-            "type": "cards",
-            "items": [
-              {
-                "title": "Financial Analysis",
-                "body": "Balance sheets & P&L statements\nRevenue trends & growth analysis\nCredit ratings A-D with methodology\nIndustry benchmarking & comparison",
-                "meta": "GFI data from 2008-2024"
+                "meta": "Company Intelligence",
+                "body": "Search by company name, OIB, or business activity. Get instant access to court registry data, ownership chains, and beneficial owners – all from official sources.\n\nNo more digging through multiple government portals. Tvrtko.ai aggregates data from the court register, FINA, and beneficial ownership registry into a single, searchable interface.\n\nAdvanced search by name, OIB, or activity\nCourt registry data & legal status\nOwnership structure & key personnel\nBeneficial ownership registry"
               },
               {
                 "title": "16 Years of Financial History",
-                "body": "Complete GFI financial reports from 2008 to 2024. Balance sheets, profit & loss statements, revenue trends - all visualized and ready for analysis.\n\nOur credit rating system scores companies A through D based on financial health, payment history, and industry benchmarks. Know who you're doing business with before signing the contract."
+                "meta": "Financial Analysis",
+                "body": "Complete GFI financial reports from 2008 to 2024. Balance sheets, profit & loss statements, revenue trends – all visualized and ready for analysis.\n\nOur credit rating system scores companies A through D based on financial health, payment history, and industry benchmarks. Know who you're doing business with before signing the contract.\n\nBalance sheets & P&L statements\nRevenue trends & growth analysis\nCredit ratings A-D with methodology\nIndustry benchmarking & comparison"
               }
             ]
           }
@@ -101,7 +88,7 @@
               },
               {
                 "title": "AI Assistant \"Pitaj Tvrtka\"",
-                "body": "Natural language queries in Croatian. Ask questions about companies, compare financials, or request analysis - the AI understands context and delivers structured answers with sources.\n\nNatural language queries in Croatian\nCompany comparison & analysis\nStructured answers with data sources"
+                "body": "Natural language queries in Croatian. Ask questions about companies, compare financials, or request analysis – the AI understands context and delivers structured answers with sources.\n\nNatural language queries in Croatian\nCompany comparison & analysis\nStructured answers with data sources"
               },
               {
                 "title": "Data Export & Integration",
@@ -188,7 +175,7 @@
         "label": "Tvrtki"
       },
       {
-        "value": "1.68M+",
+        "value": "1.68 mil.+",
         "label": "Financijskih izvješća"
       },
       {
@@ -209,27 +196,14 @@
             "type": "cards",
             "items": [
               {
-                "title": "Podaci o tvrtkama",
-                "body": "Napredna pretraga po nazivu, OIB-u ili djelatnosti\nPodaci iz sudskog registra i pravni status\nVlasnička struktura i ključne osobe\nRegistar stvarnih vlasnika",
-                "meta": "Više od 200.000 hrvatskih tvrtki"
-              },
-              {
                 "title": "Svaka hrvatska tvrtka, jedna pretraga",
-                "body": "Pretražujte po nazivu tvrtke, OIB-u ili djelatnosti. Odmah dobivate podatke iz sudskog registra, vlasničke lance i stvarne vlasnike — sve iz službenih izvora.\n\nNema više kopanja po više državnih portala. Tvrtko.ai objedinjuje podatke iz sudskog registra, FINA-e i registra stvarnih vlasnika u jedno pretraživo sučelje."
-              }
-            ]
-          },
-          {
-            "type": "cards",
-            "items": [
-              {
-                "title": "Financijska analiza",
-                "body": "Bilance i računi dobiti i gubitka\nKretanje prihoda i analiza rasta\nKreditni rejtinzi od A do D, s metodologijom\nUsporedba s djelatnošću i konkurencijom",
-                "meta": "GFI podaci od 2008. do 2024."
+                "meta": "Podaci o tvrtkama",
+                "body": "Pretražujte po nazivu tvrtke, OIB-u ili djelatnosti. Odmah dobivate podatke iz sudskog registra, vlasničke lance i stvarne vlasnike — sve iz službenih izvora.\n\nNema više kopanja po više državnih portala. Tvrtko.ai objedinjuje podatke iz sudskog registra, FINA-e i registra stvarnih vlasnika u jedno pretraživo sučelje.\n\nNapredna pretraga po nazivu, OIB-u ili djelatnosti\nPodaci iz sudskog registra i pravni status\nVlasnička struktura i ključne osobe\nRegistar stvarnih vlasnika"
               },
               {
                 "title": "16 godina financijske povijesti",
-                "body": "Cjelovita GFI financijska izvješća od 2008. do 2024. Bilance, računi dobiti i gubitka, kretanje prihoda — sve prikazano i spremno za analizu.\n\nNaš sustav kreditnog rejtinga ocjenjuje tvrtke od A do D na temelju financijskog zdravlja, povijesti plaćanja i usporedbe s djelatnošću. Znajte s kime poslujete prije nego što potpišete ugovor."
+                "meta": "Financijska analiza",
+                "body": "Cjelovita GFI financijska izvješća od 2008. do 2024. Bilance, računi dobiti i gubitka, kretanje prihoda — sve prikazano i spremno za analizu.\n\nNaš sustav kreditnog rejtinga ocjenjuje tvrtke od A do D na temelju financijskog zdravlja, povijesti plaćanja i usporedbe s djelatnošću. Znajte s kime poslujete prije nego što potpišete ugovor.\n\nBilance i računi dobiti i gubitka\nKretanje prihoda i analiza rasta\nKreditni rejtinzi od A do D, s metodologijom\nUsporedba s djelatnošću i konkurencijom"
               }
             ]
           }

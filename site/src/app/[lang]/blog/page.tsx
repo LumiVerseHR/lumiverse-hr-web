@@ -52,9 +52,14 @@ export default async function BlogIndex({ params }: PageProps<"/[lang]/blog">) {
                       <time dateTime={post.date}>{date.format(new Date(post.date))}</time>
                       <br />
                       {post.minutes} {s.min}
+                      {s.langNote && (
+                        <>
+                          <br />
+                          <span className={styles.langNote}>{s.langNote}</span>
+                        </>
+                      )}
                     </span>
                     <span className={styles.itemBody} lang="en">
-                      {s.langNote && <span className={styles.langNote} lang={lang}>{s.langNote}</span>}
                       <span className={styles.itemTitle}>{post.title}</span>
                       <span className={styles.itemDesc}>{post.description}</span>
                     </span>

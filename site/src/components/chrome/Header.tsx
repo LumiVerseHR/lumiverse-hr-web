@@ -26,6 +26,7 @@ export function Header({
   const items = [
     { href: homeAnchor(lang, "work"), label: dict.nav.work },
     { href: homeAnchor(lang, "services"), label: dict.nav.services },
+    { href: localePath(lang, "/pricing"), label: dict.nav.pricing },
     { href: homeAnchor(lang, "research"), label: dict.nav.research },
     { href: homeAnchor(lang, "studio"), label: dict.nav.studio },
     { href: homeAnchor(lang, "contact"), label: dict.nav.contact },

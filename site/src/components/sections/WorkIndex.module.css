@@ -27,11 +27,13 @@
   transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.row[data-active] > span {
+.row:hover > span,
+.row:focus-visible > span {
   transform: translateX(12px);
 }
 
-.row[data-active] {
+.row:hover,
+.row:focus-visible {
   background: linear-gradient(90deg, rgb(255 210 166 / 0.06), transparent 70%);
 }
 

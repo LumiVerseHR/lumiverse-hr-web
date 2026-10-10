@@ -129,7 +129,7 @@
 }
 
 .secondary {
-  padding: 14px 4px;
+  padding: 14px 0;
   text-decoration: underline;
   text-underline-offset: 0.3em;
 }
@@ -241,7 +241,7 @@
 /* The numbers that prove it, on one black placard band. */
 .stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
   gap: 1px;
   max-width: 1440px;
   margin: clamp(48px, 5vw, 80px) auto 0;
@@ -336,6 +336,7 @@
 .list li {
   position: relative;
   display: grid;
+  align-content: start;
   gap: 6px;
   padding-left: 22px;
 }
@@ -395,7 +396,7 @@
   border-top: 1px solid rgb(255 255 255 / 0.12);
 }
 
-.steps li {
+.steps > li {
   display: grid;
   grid-template-columns: minmax(80px, 160px) 1fr;
   gap: 24px;
@@ -403,7 +404,7 @@
   border-bottom: 1px solid rgb(255 255 255 / 0.08);
 }
 
-.steps li > div {
+.steps > li > div {
   display: grid;
   gap: 8px;
   max-width: var(--measure);
@@ -698,7 +699,7 @@
 }
 
 .plan[data-featured] {
-  outline: 1px solid var(--coral);
+  outline: 1px solid var(--basswood);
 }
 
 /* Live sites: each one a black placard that opens the real domain. */
@@ -816,7 +817,7 @@
 
 .capacity a {
   color: var(--text);
-  text-decoration-color: var(--coral);
+  text-decoration-color: rgb(255 255 255 / 0.35);
   text-underline-offset: 0.25em;
 }
 
@@ -838,8 +839,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #4fd18b;
-  box-shadow: 0 0 0 4px rgb(79 209 139 / 0.15);
+  background: var(--basswood);
 }
 
 @media (max-width: 960px) {
@@ -856,5 +856,122 @@
   .showFrame {
     width: min(100%, calc(48svh * var(--ratio, 1.6)));
     border-width: 8px;
+  }
+}
+
+/* Checklists inside cards and steps: basswood dashes, like every list on the site. */
+.checks {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-soft);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.checks li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.checks li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 10px;
+  height: 1px;
+  background: var(--basswood);
+}
+
+/* Columns follow the count, so no row ends with an orphan. */
+.cards[data-count="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cards[data-count="3"],
+.cards[data-count="5"],
+.cards[data-count="6"],
+.cards[data-count="9"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cards[data-count="4"],
+.cards[data-count="7"],
+.cards[data-count="8"] { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+/* A lone card is a note: reading measure, a basswood rule, no hairline box. */
+.cards[data-count="1"] {
+  max-width: var(--measure);
+  border-top: 0;
+}
+
+.cards[data-count="1"] .card {
+  padding: 4px 0 4px 22px;
+  border-bottom: 0;
+  border-left: 1px solid var(--basswood);
+}
+
+:is(.steps, .cards) + .cards {
+  border-top: 0;
+}
+
+/* A section with no lede doesn't need the full gap under its heading. */
+.section[data-lede="none"] .blocks {
+  margin-top: clamp(20px, 2vw, 32px);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 2.5vw, 40px);
+  max-width: 1440px;
+  margin: clamp(64px, 7vw, 112px) auto 0;
+  padding: 0 var(--gutter);
+}
+
+.gallery[data-count="1"] {
+  grid-template-columns: minmax(0, 960px);
+}
+
+.gallery[data-count="3"] {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Wide screens: the heading holds a sticky column, the content fills the rest. */
+@media (min-width: 1100px) {
+  .section {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: clamp(40px, 5vw, 96px);
+    align-items: start;
+  }
+
+  .sectionHead {
+    position: sticky;
+    top: 96px;
+  }
+
+  .sectionHead h2 {
+    font-size: clamp(30px, 2.8vw, 46px);
+  }
+
+  .blocks,
+  .section[data-lede="none"] .blocks {
+    margin-top: 0;
+  }
+
+  .cards[data-count="4"],
+  .cards[data-count="7"],
+  .cards[data-count="8"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cards[data-count="3"],
+  .cards[data-count="5"],
+  .cards[data-count="6"],
+  .cards[data-count="9"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 960px) {
+  .cards[data-count] {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
   }
 }

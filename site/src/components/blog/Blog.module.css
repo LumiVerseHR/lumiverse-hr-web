@@ -127,10 +127,8 @@
 
 /* A post. */
 .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 18px;
-  margin-top: 32px;
+  display: block;
+  margin-top: 4px;
   color: var(--basswood);
   font-family: var(--font-label);
   font-size: 17px;
@@ -220,7 +218,7 @@
 
 .prose a {
   color: var(--text);
-  text-decoration-color: var(--coral);
+  text-decoration-color: rgb(255 255 255 / 0.35);
   text-underline-offset: 0.25em;
 }
 
@@ -232,9 +230,32 @@
   color: var(--text);
 }
 
-.prose ul,
 .prose ol {
   padding-left: 1.3em;
+}
+
+.prose ul {
+  padding: 0;
+  list-style: none;
+}
+
+.prose ul > li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.prose ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.85em;
+  width: 11px;
+  height: 1px;
+  background: var(--basswood);
+}
+
+.prose li + li {
+  margin-top: 0.5em;
 }
 
 .prose blockquote {
@@ -246,7 +267,7 @@
 }
 
 .prose code {
-  padding: 0.12em 0.36em;
+  padding: 0.08em 0.28em;
   background: #16161a;
   font-size: 0.88em;
 }
@@ -264,9 +285,12 @@
   background: none;
 }
 
-.prose table {
-  display: block;
+.prose :global(.table-wrap) {
   overflow-x: auto;
+}
+
+.prose table {
+  display: table;
   width: 100%;
   border-collapse: collapse;
   font-size: 15px;
@@ -356,4 +380,9 @@
   .relatedCard {
     grid-template-columns: 1fr;
   }
+}
+
+.prose td:not(:first-child),
+.prose th:not(:first-child) {
+  font-variant-numeric: tabular-nums;
 }

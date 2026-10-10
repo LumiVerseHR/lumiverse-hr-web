@@ -19,8 +19,8 @@ export const t = {
     heading: ["Ballpark", "numbers", "before we talk"],
     intro:
       "Every engagement starts from a real floor. The final price depends on scope, and you get it fixed in writing before any work starts. Prices in EUR, excluding VAT.",
-    heroCta: "Tell Us What You Need",
-    heroSecondary: "See Our Work",
+    heroCta: "Tell us what you need",
+    heroSecondary: "See our work",
     workRoute: "/#work",
     engagements: {
       label: "Ways to Work With Us",
@@ -29,7 +29,7 @@ export const t = {
     },
     upskill: {
       label: "Upskill Your Team",
-      heading: "Make your own team AI-native",
+      heading: "Make your own team AI‑native",
       text: "Rather do it yourselves? We train your people on their own work and leave them the tools, so the next system gets built in-house."
     },
     systems: {
@@ -48,7 +48,7 @@ export const t = {
       heading: "Before you ask",
       items: [
         [
-          "Why do you show prices as \"from\"?",
+          "Why do you show prices as “from”?",
           "Each price is where that kind of work starts, so you know the floor before we talk. The final number depends on scope and what's at stake, and you get it in writing, fixed, before we start."
         ],
         [
@@ -109,7 +109,7 @@ export const t = {
     },
     upskill: {
       label: "Osposobite svoj tim",
-      heading: "Vaš tim, spreman za rad s AI-jem",
+      heading: "Vaš tim, spreman za rad s AI‑jem",
       text: "Radije biste sami? Osposobljavamo Vaše ljude na njihovom stvarnom poslu i ostavljamo im alate, da sljedeći sustav izgradite u kući."
     },
     systems: {
@@ -128,7 +128,7 @@ export const t = {
       heading: "Prije nego što pitate",
       items: [
         [
-          "Zašto su cijene navedene kao \"od\"?",
+          "Zašto su cijene navedene kao „od“?",
           "Svaka cijena je mjesto gdje takav posao počinje, pa znate donju granicu prije razgovora. Konačni iznos ovisi o opsegu i o tome što je na kocki, a dobivate ga fiksnog i u pisanom obliku prije početka."
         ],
         [

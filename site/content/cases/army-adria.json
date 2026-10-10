@@ -2,12 +2,12 @@
   "en": {
     "slug": "army-adria",
     "meta": {
-      "title": "ARMY Adria - A Community Platform Built in Two Weeks | LumiVerse",
-      "description": "A BTS fan with no coding background built a full Croatian fan-community platform - magazine, archive, games, member accounts - in two weeks with AI."
+      "title": "ARMY Adria – A Community Platform Built in Two Weeks | LumiVerse",
+      "description": "A BTS fan with no coding background built a full Croatian fan-community platform – magazine, archive, games, member accounts – in two weeks with AI."
     },
     "kind": "Community Platform · A Social Experiment",
     "title": "ARMY Adria",
-    "subtitle": "A complete BTS fan-community platform for Croatia and the region - an editorial magazine, a deep video and discography archive, five games and full member accounts. One devoted fan, with no coding background, built it herself in two weeks: AI tools in her hands, LumiVerse's build model behind her. Her love; our AI.",
+    "subtitle": "A complete BTS fan-community platform for Croatia and the region – an editorial magazine, a deep video and discography archive, five games and full member accounts. One devoted fan, with no coding background, built it herself in two weeks: AI tools in her hands, LumiVerse's build model behind her. Her love; our AI.",
     "ctas": [
       {
         "label": "Visit ARMY Adria",
@@ -80,33 +80,33 @@
     "sections": [
       {
         "title": "Her Love, Our AI Build Model",
-        "lede": "We wanted to test the studio's whole thesis at its edge: give a motivated person with no engineering background the right AI tools and a little guidance, and see how far dedication carries them. So we handed the keys to a lifelong BTS fan who had never written a line of code - and got out of the way.",
+        "lede": "We wanted to test the studio's whole thesis at its edge: give a motivated person with no engineering background the right AI tools and a little guidance, and see how far dedication carries them. So we handed the keys to a lifelong BTS fan who had never written a line of code – and got out of the way.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "The Part No Model Has",
-                "body": "She brought the ingredient AI can't supply: taste, obsession, and love for the subject. She knew exactly what her community wanted because she is that community - a BTS fan from Croatia who wished a place like this existed.\n\nEvery one of the 90-plus articles is hers. Every game, every category, every bit of Croatian copy comes from someone who actually cares."
+                "body": "She brought the ingredient AI can't supply: taste, obsession, and love for the subject. She knew exactly what her community wanted because she is that community – a BTS fan from Croatia who wished a place like this existed.\n\nEvery one of the 90-plus articles is hers. Every game, every category, every bit of Croatian copy comes from someone who actually cares."
               },
               {
                 "title": "What We Provided",
-                "body": "Not a development team. An AI build model, a production stack that could scale from a simple quiz to authenticated member accounts, and guidance whenever she hit a wall.\n\nThe engineering barrier came down. The person did the rest - and the person turned out to be more than enough."
+                "body": "Not a development team. An AI build model, a production stack that could scale from a simple quiz to authenticated member accounts, and guidance whenever she hit a wall.\n\nThe engineering barrier came down. The person did the rest – and the person turned out to be more than enough."
               }
             ]
           }
         ]
       },
       {
-        "title": "Not a Landing Page - a Platform",
-        "lede": "Two weeks in, this isn't a fan page with a few links. It's a content-plus-community product with everything a real portal needs - editorial, media, games and accounts, all in one place.",
+        "title": "Not a Landing Page – a Platform",
+        "lede": "Two weeks in, this isn't a fan page with a few links. It's a content-plus-community product with everything a real portal needs – editorial, media, games and accounts, all in one place.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "Editorial Magazine",
-                "body": "90-plus original Croatian articles - BTS stories, news and guides - across their own categories."
+                "body": "90-plus original Croatian articles – BTS stories, news and guides – across their own categories."
               },
               {
                 "title": "Video Archive",
@@ -114,31 +114,31 @@
               },
               {
                 "title": "Full Discography",
-                "body": "Every release, with in-page listening - the whole catalogue in one browsable place."
+                "body": "Every release, with in-page listening – the whole catalogue in one browsable place."
               },
               {
                 "title": "Events Calendar",
-                "body": "Birthdays, anniversaries and releases - the dates the community lives by, in one calendar."
+                "body": "Birthdays, anniversaries and releases – the dates the community lives by, in one calendar."
               },
               {
                 "title": "Newcomer Guide",
-                "body": "Who's who, a glossary, a timeline, eras & albums and membership how-tos - an on-ramp for new fans."
+                "body": "Who's who, a glossary, a timeline, eras & albums and membership how-tos – an on-ramp for new fans."
               },
               {
                 "title": "Five Games & Quizzes",
-                "body": "\"Which member are you?\", three-level trivia, emoji song-guessing, a word search and album match - with progress saved to your profile."
+                "body": "\"Which member are you?\", three-level trivia, emoji song-guessing, a word search and album match – with progress saved to your profile."
               },
               {
                 "title": "Member Accounts",
-                "body": "Registration, login, password reset and a personal profile - with full, GDPR-compliant account management."
+                "body": "Registration, login, password reset and a personal profile – with full, GDPR-compliant account management."
               },
               {
                 "title": "Personalization",
-                "body": "Playlists, favorites, video playlists and article likes - the site remembers what each fan cares about."
+                "body": "Playlists, favorites, video playlists and article likes – the site remembers what each fan cares about."
               },
               {
                 "title": "Site-wide Search",
-                "body": "A quick command-style search across everything - articles, videos, discography and games."
+                "body": "A quick command-style search across everything – articles, videos, discography and games."
               }
             ]
           }
@@ -146,18 +146,18 @@
       },
       {
         "title": "How Two Weeks Was Enough",
-        "lede": "Fast didn't mean flimsy. The AI build model let one person move like a small team - designing, writing and shipping in parallel - on a stack built for production from day one.",
+        "lede": "Fast didn't mean flimsy. The AI build model let one person move like a small team – designing, writing and shipping in parallel – on a stack built for production from day one.",
         "blocks": [
           {
             "type": "steps",
             "items": [
               {
                 "title": "One Person, Moving Like a Team",
-                "body": "With AI generating, refactoring and explaining alongside her, she designed the interface, wrote the content and built the features in parallel - the work of a small team, done by one."
+                "body": "With AI generating, refactoring and explaining alongside her, she designed the interface, wrote the content and built the features in parallel – the work of a small team, done by one."
               },
               {
                 "title": "Production From Day One",
-                "body": "Not a prototype. Real accounts with hashed passwords, a proper database and GDPR-compliant account management - the boring, essential parts done properly, not faked."
+                "body": "Not a prototype. Real accounts with hashed passwords, a proper database and GDPR-compliant account management – the boring, essential parts done properly, not faked."
               },
               {
                 "title": "Cleared Before It Launched",
@@ -170,7 +170,7 @@
             "items": [
               {
                 "title": "Under the Hood",
-                "body": "A modern, production-grade stack - the kind you'd expect behind a funded product, shipped by someone who'd never touched any of it two weeks earlier."
+                "body": "A modern, production-grade stack – the kind you'd expect behind a funded product, shipped by someone who'd never touched any of it two weeks earlier."
               }
             ]
           },
@@ -215,14 +215,14 @@
           {
             "type": "text",
             "paragraphs": [
-              "AI didn't replace a team - it removed the reason she needed one. That's not a slogan for us; it's the experiment, run on a person instead of a client. \"AI tools that make humans unstoppable\" is exactly what a full community platform, built in two weeks by one devoted fan, looks like."
+              "AI didn't replace a team – it removed the reason she needed one. That's not a slogan for us; it's the experiment, run on a person instead of a client. \"AI tools that make humans unstoppable\" is exactly what a full community platform, built in two weeks by one devoted fan, looks like."
             ]
           },
           {
             "type": "list",
             "items": [
               {
-                "body": "Dedication and taste are the scarce inputs - AI supplies the rest"
+                "body": "Dedication and taste are the scarce inputs – AI supplies the rest"
               },
               {
                 "body": "A non-developer can now ship a real, authenticated product"
@@ -231,7 +231,7 @@
                 "body": "Guidance beats hand-holding: unblock, don't take over"
               },
               {
-                "body": "Done right means done properly - real auth, real legal clearance"
+                "body": "Done right means done properly – real auth, real legal clearance"
               }
             ]
           }

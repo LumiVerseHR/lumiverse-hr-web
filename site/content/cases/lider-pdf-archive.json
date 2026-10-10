@@ -2,12 +2,12 @@
   "en": {
     "slug": "lider-pdf-archive",
     "meta": {
-      "title": "Lider Digital Archive - AI Document Digitization | LumiVerse",
+      "title": "Lider Digital Archive – AI Document Digitization | LumiVerse",
       "description": "AI-powered digitization of 50,000+ magazine articles: custom OCR, layout detection and Croatian NLP turning decades of print into structured data."
     },
     "kind": "Document AI",
     "title": "Lider Digital Archive",
-    "subtitle": "Decades of business journalism, locked in PDFs. We built an AI pipeline that extracted, structured, and indexed 50,000+ articles - making them searchable and ready for the age of AI.",
+    "subtitle": "Decades of business journalism, locked in PDFs. We built an AI pipeline that extracted, structured, and indexed 50,000+ articles – making them searchable and ready for the age of AI.",
     "ctas": [
       {
         "label": "Digitize Your Archive",
@@ -48,52 +48,18 @@
     "sections": [
       {
         "title": "Not Your Typical OCR Job",
-        "lede": "Magazine layouts break standard document processing. Multi-column text, images that split articles, content that spans pages - this required custom AI.",
+        "lede": "Magazine layouts break standard document processing. Multi-column text, images that split articles, content that spans pages – this required custom AI.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "Layout Detection & OCR",
-                "body": "Magazine pages aren't documents. Articles wrap around images, jump across pages, and share space with ads. Standard OCR gives you garbled soup."
+                "body": "Magazine pages aren't documents. Articles wrap around images, jump across pages, and share space with ads. Standard OCR gives you garbled soup.\n\nMulti-column text recognition\nArticle boundary detection\nImage and caption identification\nMulti-page article tracking"
               },
               {
                 "title": "Croatian Language AI",
-                "body": "Most AI models struggle with Croatian. Diacritical marks get mangled, context is lost, and business terminology comes out wrong."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Multi-column text recognition"
-              },
-              {
-                "body": "Article boundary detection"
-              },
-              {
-                "body": "Image and caption identification"
-              },
-              {
-                "body": "Multi-page article tracking"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Custom language model training"
-              },
-              {
-                "body": "Diacritical mark preservation"
-              },
-              {
-                "body": "Context-aware text correction"
-              },
-              {
-                "body": "Author and title extraction"
+                "body": "Most AI models struggle with Croatian. Diacritical marks get mangled, context is lost, and business terminology comes out wrong.\n\nCustom language model training\nDiacritical mark preservation\nContext-aware text correction\nAuthor and title extraction"
               }
             ]
           }
@@ -144,29 +110,15 @@
               },
               {
                 "title": "Auto-categorization",
-                "body": "Machine learning classifies articles by topic, industry, and content type - making the archive instantly navigable by subject."
+                "body": "Machine learning classifies articles by topic, industry, and content type – making the archive instantly navigable by subject."
               },
               {
                 "title": "Post-Processing Pipeline",
-                "body": "Every extracted article runs through validation and quality control. Spell checking, format normalization, metadata enrichment, and deduplication happen automatically."
+                "body": "Every extracted article runs through validation and quality control. Spell checking, format normalization, metadata enrichment, and deduplication happen automatically.\n\nAutomated quality scoring\nCross-reference validation\nHuman review queuing for edge cases"
               },
               {
                 "title": "Full-text Indexing",
                 "body": "Every word, every article, instantly searchable. The archive becomes a queryable database, ready for AI applications."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Automated quality scoring"
-              },
-              {
-                "body": "Cross-reference validation"
-              },
-              {
-                "body": "Human review queuing for edge cases"
               }
             ]
           }
@@ -181,39 +133,11 @@
             "items": [
               {
                 "title": "Digital Preservation",
-                "body": "Decades of Croatian business journalism preserved in structured, future-proof format. Full-text search across the entire archive."
+                "body": "Decades of Croatian business journalism preserved in structured, future-proof format. Full-text search across the entire archive.\n\nComplete archive digitization\nRich metadata for every article\nFull-text search capability"
               },
               {
                 "title": "AI-Ready Data",
-                "body": "The structured archive now powers Pitaj Lider - the AI assistant. What was locked in PDFs is now training data for business intelligence."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Complete archive digitization"
-              },
-              {
-                "body": "Rich metadata for every article"
-              },
-              {
-                "body": "Full-text search capability"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Powers AI assistants"
-              },
-              {
-                "body": "Semantic search ready"
-              },
-              {
-                "body": "RAG-compatible format"
+                "body": "The structured archive now powers Pitaj Lider – the AI assistant. What was locked in PDFs is now training data for business intelligence.\n\nPowers AI assistants\nSemantic search ready\nRAG-compatible format"
               }
             ]
           }
@@ -291,45 +215,11 @@
             "items": [
               {
                 "title": "Prepoznavanje prijeloma i OCR",
-                "body": "Stranice magazina nisu dokumenti. Članci se ovijaju oko slika, preskaču na druge stranice i dijele prostor s oglasima. Standardni OCR daje nerazumljivu kašu."
+                "body": "Stranice magazina nisu dokumenti. Članci se ovijaju oko slika, preskaču na druge stranice i dijele prostor s oglasima. Standardni OCR daje nerazumljivu kašu.\n\nPrepoznavanje teksta u više stupaca\nOtkrivanje granica članka\nPrepoznavanje slika i potpisa\nPraćenje članaka kroz više stranica"
               },
               {
                 "title": "AI za hrvatski jezik",
-                "body": "Većina AI modela muči se s hrvatskim. Dijakritički se znakovi izobliče, kontekst se izgubi, a poslovno nazivlje ispadne krivo."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Prepoznavanje teksta u više stupaca"
-              },
-              {
-                "body": "Otkrivanje granica članka"
-              },
-              {
-                "body": "Prepoznavanje slika i potpisa"
-              },
-              {
-                "body": "Praćenje članaka kroz više stranica"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Treniranje vlastitog jezičnog modela"
-              },
-              {
-                "body": "Očuvanje dijakritičkih znakova"
-              },
-              {
-                "body": "Ispravak teksta uz razumijevanje konteksta"
-              },
-              {
-                "body": "Izdvajanje autora i naslova"
+                "body": "Većina AI modela muči se s hrvatskim. Dijakritički se znakovi izobliče, kontekst se izgubi, a poslovno nazivlje ispadne krivo.\n\nTreniranje vlastitog jezičnog modela\nOčuvanje dijakritičkih znakova\nIspravak teksta uz razumijevanje konteksta\nIzdvajanje autora i naslova"
               }
             ]
           }
@@ -384,25 +274,11 @@
               },
               {
                 "title": "Naknadna obrada",
-                "body": "Svaki izdvojeni članak prolazi provjeru i kontrolu kvalitete. Provjera pravopisa, ujednačavanje formata, obogaćivanje metapodacima i uklanjanje duplikata odvijaju se automatski."
+                "body": "Svaki izdvojeni članak prolazi provjeru i kontrolu kvalitete. Provjera pravopisa, ujednačavanje formata, obogaćivanje metapodacima i uklanjanje duplikata odvijaju se automatski.\n\nAutomatsko ocjenjivanje kvalitete\nProvjera unakrsnih poveznica\nRubni slučajevi idu u red za ljudski pregled"
               },
               {
                 "title": "Indeksiranje cijelog teksta",
                 "body": "Svaka riječ, svaki članak, odmah pretraživi. Arhiva postaje baza nad kojom se postavljaju upiti, spremna za AI primjene."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Automatsko ocjenjivanje kvalitete"
-              },
-              {
-                "body": "Provjera unakrsnih poveznica"
-              },
-              {
-                "body": "Rubni slučajevi idu u red za ljudski pregled"
               }
             ]
           }
@@ -417,39 +293,11 @@
             "items": [
               {
                 "title": "Digitalno očuvanje",
-                "body": "Desetljeća hrvatskog poslovnog novinarstva sačuvana u strukturiranom obliku otpornom na vrijeme. Pretraga cijelog teksta kroz cijelu arhivu."
+                "body": "Desetljeća hrvatskog poslovnog novinarstva sačuvana u strukturiranom obliku otpornom na vrijeme. Pretraga cijelog teksta kroz cijelu arhivu.\n\nDigitalizacija cijele arhive\nBogati metapodaci za svaki članak\nMogućnost pretrage cijelog teksta"
               },
               {
                 "title": "Podaci spremni za AI",
-                "body": "Strukturirana arhiva danas pogoni AI asistenta Pitaj Lider. Ono što je bilo zaključano u PDF-ovima sada je podloga za poslovnu inteligenciju."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Digitalizacija cijele arhive"
-              },
-              {
-                "body": "Bogati metapodaci za svaki članak"
-              },
-              {
-                "body": "Mogućnost pretrage cijelog teksta"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Pogoni AI asistente"
-              },
-              {
-                "body": "Spremno za semantičku pretragu"
-              },
-              {
-                "body": "Oblik kompatibilan s RAG-om"
+                "body": "Strukturirana arhiva danas pogoni AI asistenta Pitaj Lider. Ono što je bilo zaključano u PDF-ovima sada je podloga za poslovnu inteligenciju.\n\nPogoni AI asistente\nSpremno za semantičku pretragu\nOblik kompatibilan s RAG-om"
               }
             ]
           }

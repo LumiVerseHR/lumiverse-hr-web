@@ -41,6 +41,7 @@
 
 .intro {
   margin: 24px 0 0;
+  text-wrap: pretty;
   max-width: 60ch;
   color: var(--text-soft);
   font-size: clamp(17px, 1.35vw, 21px);
@@ -87,6 +88,7 @@
 
 .groupHead h2 {
   margin: 0;
+  text-wrap: balance;
   max-width: 20ch;
   font-size: clamp(34px, 4.2vw, 64px);
   font-weight: 700;
@@ -96,6 +98,7 @@
 
 .groupHead p {
   margin: 18px 0 0;
+  text-wrap: pretty;
   max-width: 60ch;
   color: var(--text-soft);
   font-size: clamp(17px, 1.3vw, 20px);
@@ -104,7 +107,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 16px;
   margin-top: clamp(32px, 3.5vw, 56px);
 }
@@ -153,6 +156,10 @@
   align-items: baseline;
   gap: 6px 10px;
   margin-top: 22px !important;
+}
+
+.unit {
+  white-space: nowrap;
 }
 
 .lead,
@@ -319,4 +326,31 @@
   color: var(--text-soft);
   font-size: 16px;
   line-height: 1.6;
+}
+
+/* Three columns on wide screens, so every row fills: 3, 2 (stretched) and 3 + 3. */
+@media (min-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Jump links under the pricing hero. */
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 36px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+}
+
+.jump a {
+  color: var(--text-soft);
+  text-underline-offset: 0.3em;
+}
+
+.jump a:hover {
+  color: var(--coral);
 }

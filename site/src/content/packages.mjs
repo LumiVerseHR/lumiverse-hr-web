@@ -45,7 +45,7 @@ export const packages = [
         "The fee is credited into the build"
       ],
       proof: "Overserved: an empty repo to a playable game in 3 weeks",
-      cta: "Start With a Prototype",
+      cta: "Start with a prototype",
       tag: "Start Here"
     },
     hr: {
@@ -79,7 +79,7 @@ export const packages = [
         "100% of the code and IP in your repository"
       ],
       proof: "Titlomat, our own product: a 60-minute episode subtitled in about 5 minutes",
-      cta: "Build Your Product"
+      cta: "Build your product"
     },
     hr: {
       name: "Razvoj AI proizvoda po mjeri",
@@ -112,7 +112,7 @@ export const packages = [
         "A flat monthly rate, no timesheets"
       ],
       proof: "Bridj: tech lead on a 17-service platform for over a year, and still today",
-      cta: "Talk About Your Team"
+      cta: "Talk about your team"
     },
     hr: {
       name: "Tech lead u Vašem timu",
@@ -143,8 +143,8 @@ export const packages = [
         "3 to 5 reusable skills for your recurring work, left with your team",
         "A 30-day plan for what to hand to AI first, and what not to"
       ],
-      proof: "Air-Plasma study: one agent loop on Claude Code, the bulk of the work in 3 days",
-      cta: "Book a Workshop",
+      proof: "Air-laser study: one agent loop on Claude Code, the bulk of the work in 3 days",
+      cta: "Book a workshop",
       tag: "New"
     },
     hr: {
@@ -156,7 +156,7 @@ export const packages = [
         "3 do 5 vještina za posao koji se ponavlja, koje ostaju Vašem timu",
         "Plan za 30 dana: što prvo prepustiti AI-ju, a što ne"
       ],
-      proof: "Studija Air-Plasma: jedna petlja agenata na Claude Codeu, većina posla u 3 dana",
+      proof: "Studija Air-laser: jedna petlja agenata na Claude Codeu, većina posla u 3 dana",
       cta: "Rezervirajte radionicu",
       tag: "Novo"
     }
@@ -175,7 +175,7 @@ export const packages = [
         "Admin training, so you can run and extend it in-house",
         "Every month: new skills, office hours and a review of what's being used"
       ],
-      cta: "Plan a Rollout",
+      cta: "Plan a rollout",
       priceNote: "AI tool licences are not included; you hold them in your own accounts."
     },
     hr: {
@@ -207,7 +207,7 @@ export const packages = [
         "A human signs off before anything goes live"
       ],
       proof: "MOJ KRAJ: 9 automated checks on every article, 1 operator",
-      cta: "Ask About a Newsroom",
+      cta: "Ask about a newsroom",
       priceNote: "AI token and hosting usage billed separately, at cost."
     },
     hr: {
@@ -240,7 +240,7 @@ export const packages = [
         "Sitemaps per language site, so each one gets found"
       ],
       proof: "Lider Translations: ~1.4M articles in 10 languages",
-      cta: "Ask About Translation",
+      cta: "Ask about translation",
       priceNote: "AI token and hosting usage billed separately, at cost."
     },
     hr: {
@@ -273,7 +273,7 @@ export const packages = [
         "An API or a chat widget for your team"
       ],
       proof: "Pitaj Lider: 200K+ articles and live company registry data",
-      cta: "Ask About an Assistant",
+      cta: "Ask about an assistant",
       priceNote: "AI token and hosting usage billed separately, at cost."
     },
     hr: {
@@ -306,7 +306,7 @@ export const packages = [
         "A full-text index and an AI-ready export"
       ],
       proof: "Lider Archive: 50K+ magazine articles processed",
-      cta: "Digitise Your Archive",
+      cta: "Digitise your archive",
       priceNote: "AI token and pipeline usage billed separately, at cost."
     },
     hr: {
@@ -339,7 +339,7 @@ export const packages = [
         "Document scanning and archive, kept in-house"
       ],
       proof: "Rentalica: analytics, a CRM and a read-only AI assistant, built into a rent-a-car system",
-      cta: "Ask About a Tool",
+      cta: "Ask about a tool",
       priceNote: "AI token and hosting usage billed separately, at cost."
     },
     hr: {
@@ -372,7 +372,7 @@ export const packages = [
         "A rehearsed cutover you can roll back"
       ],
       proof: "Rentalica: 10+ years of data migrated, 0 password resets",
-      cta: "Ask About a Rebuild"
+      cta: "Ask about a rebuild"
     },
     hr: {
       name: "Obnova zastarjelog sustava",

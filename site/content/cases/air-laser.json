@@ -2,12 +2,12 @@
   "en": {
     "slug": "air-laser",
     "meta": {
-      "title": "Air-Plasma Aerial Displays - Research | LumiVerse",
+      "title": "Air-Plasma Aerial Displays – Research | LumiVerse",
       "description": "A 49-page physics design study computed end-to-end by an AI-agentic simulation station: ~12 open-source simulators, one agent loop, every number checked."
     },
     "kind": "Independent Research · Physics × AI Agents",
     "title": "A Hologram, Without Touching a Laser",
-    "subtitle": "A 49-page design study for a glowing image that floats in open air - its physics, optics, control loops and bill of materials - computed end to end by a stack of open-source physics simulators driven by an AI agent. No optical bench. No laser ever switched on.",
+    "subtitle": "A 49-page design study for a glowing image that floats in open air – its physics, optics, control loops and bill of materials – computed end to end by a stack of open-source physics simulators driven by an AI agent. No optical bench. No laser ever switched on.",
     "ctas": [
       {
         "label": "Read the 49-Page Study",
@@ -61,18 +61,18 @@
     "sections": [
       {
         "title": "You Can Automate What You Can Verify",
-        "lede": "Coding got automated first because you can run the test - the verifier was already there. So the real question is which other fields are already past that gate. Physics is one of them, and almost nobody had built the harness to exploit it.",
+        "lede": "Coding got automated first because you can run the test – the verifier was already there. So the real question is which other fields are already past that gate. Physics is one of them, and almost nobody had built the harness to exploit it.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "The Answer Key Was Already Written",
-                "body": "The constants are measured. The cross-sections are tabulated in HITRAN, LXCat and NIST. Most regimes have a closed-form limit you can check a number against. That isn't a benchmark someone still has to build - it's two centuries of physics, sitting in the open, ready to grade an answer.\n\nPhysics has always had the verifiability. What it lacked was an agent that could call the tools and check its own work against that record."
+                "body": "The constants are measured. The cross-sections are tabulated in HITRAN, LXCat and NIST. Most regimes have a closed-form limit you can check a number against. That isn't a benchmark someone still has to build – it's two centuries of physics, sitting in the open, ready to grade an answer.\n\nPhysics has always had the verifiability. What it lacked was an agent that could call the tools and check its own work against that record."
               },
               {
                 "title": "So We Built the Harness",
-                "body": "A dozen open-source physics simulators, each in its own container, each wrapped so a single agent can call all of them. The loop proposes a configuration, runs the container, reads the resulting figure back, checks it against the literature, and decides what to run next.\n\nThen we pointed it at one hard, cross-disciplinary question - can you draw a glowing image in mid-air? - to see how far it would get."
+                "body": "A dozen open-source physics simulators, each in its own container, each wrapped so a single agent can call all of them. The loop proposes a configuration, runs the container, reads the resulting figure back, checks it against the literature, and decides what to run next.\n\nThen we pointed it at one hard, cross-disciplinary question – can you draw a glowing image in mid-air? – to see how far it would get."
               }
             ]
           }
@@ -87,7 +87,7 @@
             "items": [
               {
                 "title": "One Container Per Simulator",
-                "body": "No scientific dependency ever touches the host. Quantum chemistry in one container, particle-in-cell plasma codes in another, line-by-line radiative transfer in a third, custom radiation-hydrodynamics in a fourth - each with its own pinned toolchain.",
+                "body": "No scientific dependency ever touches the host. Quantum chemistry in one container, particle-in-cell plasma codes in another, line-by-line radiative transfer in a third, custom radiation-hydrodynamics in a fourth – each with its own pinned toolchain.",
                 "meta": "01"
               },
               {
@@ -102,7 +102,7 @@
               },
               {
                 "title": "A Data Contract Across Regimes",
-                "body": "Every quantity is unit-typed, so an energy can't be silently misread three containers downstream. Results serialize to typed datasets that become the explicit input to the next stage - every cross-regime hand-off auditable rather than assumed.",
+                "body": "Every quantity is unit-typed, so an energy can't be silently misread three containers downstream. Results serialize to typed datasets that become the explicit input to the next stage – every cross-regime hand-off auditable rather than assumed.",
                 "meta": "04"
               },
               {
@@ -112,7 +112,7 @@
               },
               {
                 "title": "No Vendor Lock-In",
-                "body": "The main loop runs on Claude Code. The repository also ships a fully local variant - the same planner, tools and analyst driven by a model on the workstation, no API key - to prove the architecture doesn't depend on any one provider.",
+                "body": "The main loop runs on Claude Code. The repository also ships a fully local variant – the same planner, tools and analyst driven by a model on the workstation, no API key – to prove the architecture doesn't depend on any one provider.",
                 "meta": "06"
               }
             ]
@@ -122,7 +122,7 @@
             "items": [
               {
                 "title": "The Detail That Mattered Most: The Figures Get Read Back",
-                "body": "Generated plots aren't treated as finished artifacts - they're inspected as part of analysis. Several discrepancies between what was expected and what the physics actually produced were caught by looking at a light curve and thinking that shape is wrong. The agent writes the input deck, runs the container and reads the plot; the human's job becomes choosing which question is worth asking next, and refusing any answer that hasn't been checked against something real."
+                "body": "Generated plots aren't treated as finished artifacts – they're inspected as part of analysis. Several discrepancies between what was expected and what the physics actually produced were caught by looking at a light curve and thinking that shape is wrong. The agent writes the input deck, runs the container and reads the plot; the human's job becomes choosing which question is worth asking next, and refusing any answer that hasn't been checked against something real."
               }
             ]
           }
@@ -130,34 +130,34 @@
       },
       {
         "title": "The Device the Numbers Describe",
-        "lede": "Focus a laser hard enough and it rips electrons off the air at the focal point - a microscopic spark, a pixel with a real address in space. Move ten thousand of them sixty times a second and the eye sees a picture. Here is what the physics says about building one.",
+        "lede": "Focus a laser hard enough and it rips electrons off the air at the focal point – a microscopic spark, a pixel with a real address in space. Move ten thousand of them sixty times a second and the eye sees a picture. Here is what the physics says about building one.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "Two Beams, Harmless Until They Meet",
-                "body": "A single beam strong enough to ionize air is strong enough to hurt an eye anywhere along its path. So the design crosses two beams, each individually too weak to spark anything - only their intersection lights up. Air breakdown scales as intensity to the eleventh power, so the crossing point ignites about 10²³ times faster than anywhere along either beam. That isn't a preference; it's a switch that pins the glowing dot to one point in space.\n\nThe beams stay eye-safe along their paths; only the voxel ignites\nA resonant two-colour scheme drops the required intensity ~18×\nThe obvious nitrogen channel turns out two-photon-dark - you only learn that by computing it"
+                "body": "A single beam strong enough to ionize air is strong enough to hurt an eye anywhere along its path. So the design crosses two beams, each individually too weak to spark anything – only their intersection lights up. Air breakdown scales as intensity to the eleventh power, so the crossing point ignites about 10²³ times faster than anywhere along either beam. That isn't a preference; it's a switch that pins the glowing dot to one point in space.\n\nThe beams stay eye-safe along their paths; only the voxel ignites\nA resonant two-colour scheme drops the required intensity ~18×\nThe obvious nitrogen channel turns out two-photon-dark – you only learn that by computing it"
               },
               {
                 "title": "Bright Enough to See",
-                "body": "A dark-adapted eye needs about 100 photons at the cornea. The computed voxel delivers around 184 - a conservative margin. And brightness climbs with plasma temperature at almost fixed energy: hotter plasma, not more power, is the cheap knob."
+                "body": "A dark-adapted eye needs about 100 photons at the cornea. The computed voxel delivers around 184 – a conservative margin. And brightness climbs with plasma temperature at almost fixed energy: hotter plasma, not more power, is the cheap knob."
               },
               {
                 "title": "The Laser Is 3-8× Too Expensive",
-                "body": "A prototype priced from real vendor catalogues comes to ~$378,000, more than half of it one femtosecond laser. But the physics only needs ~50 nJ per flash at sub-watt average power - a compact fibre source at $15k-$60k, not an industrial amplifier."
+                "body": "A prototype priced from real vendor catalogues comes to ~$378,000, more than half of it one femtosecond laser. But the physics only needs ~50 nJ per flash at sub-watt average power – a compact fibre source at $15k-$60k, not an industrial amplifier."
               },
               {
                 "title": "The Wavelengths Fell Out of the Chemistry",
-                "body": "Tuning the two colours onto real quantum energy levels in oxygen and nitrogen is what buys the 18× efficiency. The recipe wasn't guessed - it came out of the quantum-chemistry calculation, dark channels and all."
+                "body": "Tuning the two colours onto real quantum energy levels in oxygen and nitrogen is what buys the 18× efficiency. The recipe wasn't guessed – it came out of the quantum-chemistry calculation, dark channels and all."
               },
               {
                 "title": "Safe to Touch, Within Air Limits",
-                "body": "The image is lit-up air - you can pass your hand through it. The ozone and nitrogen oxides a spark produces stay well inside health limits with modest ventilation. The delivery beams are still Class-4 and need boxing - a known engineering job."
+                "body": "The image is lit-up air – you can pass your hand through it. The ozone and nitrogen oxides a spark produces stay well inside health limits with modest ventilation. The delivery beams are still Class-4 and need boxing – a known engineering job."
               },
               {
                 "title": "A Wireframe, Not a Solid",
-                "body": "At ~10⁴ voxels the display draws line-and-point art - cubes, text, outlines - and the bottleneck is the scanner, not the voxel. A solid volume would need a hundred times the addressing rate. The sparse look is a consequence of the physics, not a style choice."
+                "body": "At ~10⁴ voxels the display draws line-and-point art – cubes, text, outlines – and the bottleneck is the scanner, not the voxel. A solid volume would need a hundred times the addressing rate. The sparse look is a consequence of the physics, not a style choice."
               }
             ]
           }
@@ -165,7 +165,7 @@
       },
       {
         "title": "The Part That Matters Most",
-        "lede": "At one point a radiation-hydrodynamics run reproduced a real air-spark's light curve beautifully - exactly the figure you build a section around. It was wrong.",
+        "lede": "At one point a radiation-hydrodynamics run reproduced a real air-spark's light curve beautifully – exactly the figure you build a section around. It was wrong.",
         "blocks": [
           {
             "type": "cards",
@@ -176,13 +176,13 @@
               },
               {
                 "title": "A Dead End, Published on Purpose",
-                "body": "There's a tempting shortcut - skip the plasma, use cheap laser pointers, let dust scatter the light into a point. It was computed, and it cannot work: scattering is linear, so the beam glows along its whole path instead of at a point.\n\nThat failure is informative - it's exactly why the nonlinear plasma approach is the right one. Better to publish the dead end than quietly omit it."
+                "body": "There's a tempting shortcut – skip the plasma, use cheap laser pointers, let dust scatter the light into a point. It was computed, and it cannot work: scattering is linear, so the beam glows along its whole path instead of at a point.\n\nThat failure is informative – it's exactly why the nonlinear plasma approach is the right one. Better to publish the dead end than quietly omit it."
               }
             ]
           },
           {
             "type": "quote",
-            "text": "A simulation campaign that never retracts anything isn't careful - it's unfalsifiable."
+            "text": "A simulation campaign that never retracts anything isn't careful – it's unfalsifiable."
           }
         ]
       },
@@ -192,8 +192,8 @@
           {
             "type": "text",
             "paragraphs": [
-              "The whole point isn't the hologram. It's that a Tech Lead who is not a plasma physicist built a system that produced a rigorous, cross-checked physics study - because the verifier carried the domain knowledge, not the builder.",
-              "That's the same discipline we bring to client work: generation is cheap, so the edge lives in the scaffolding around it - the data contract, the provenance, the vendor independence, and a verifier that measures the thing you actually care about. Across everything we build, the moat is the verifier, not the generator. This is that thesis proven in the hardest possible place."
+              "The whole point isn't the hologram. It's that a Tech Lead who is not a plasma physicist built a system that produced a rigorous, cross-checked physics study – because the verifier carried the domain knowledge, not the builder.",
+              "That's the same discipline we bring to client work: generation is cheap, so the edge lives in the scaffolding around it – the data contract, the provenance, the vendor independence, and a verifier that measures the thing you actually care about. Across everything we build, the moat is the verifier, not the generator. This is that thesis proven in the hardest possible place."
             ]
           },
           {
@@ -201,7 +201,7 @@
             "items": [
               {
                 "title": "What Transfers to Your Domain",
-                "body": "A repeatable agent loop over many tools, not a one-off prompt\nA verifier gate, so the system checks its own work before you trust it\nFull provenance - every output traces to its exact inputs and code\nVendor-independent by design, with a local fallback\nThe honesty to retract what doesn't survive the check"
+                "body": "A repeatable agent loop over many tools, not a one-off prompt\nA verifier gate, so the system checks its own work before you trust it\nFull provenance – every output traces to its exact inputs and code\nVendor-independent by design, with a local fallback\nThe honesty to retract what doesn't survive the check"
               }
             ]
           },
@@ -210,7 +210,7 @@
             "items": [
               {
                 "title": "Open, and Checkable",
-                "body": "The full manuscript, the LaTeX source, the simulation station and every container definition are public - code under the MIT license, paper and figures under CC BY 4.0. Every quantitative result is cross-checked against published literature or an analytic limit, with its uncertainty stated inline. Where a closed form exists, the computed number is checked against it: a nitrogen polarizability within 1.7% of reference, a breakdown field that recovers the textbook value, a maser threshold matched to machine precision. You don't have to take any of it on trust."
+                "body": "The full manuscript, the LaTeX source, the simulation station and every container definition are public – code under the MIT license, paper and figures under CC BY 4.0. Every quantitative result is cross-checked against published literature or an analytic limit, with its uncertainty stated inline. Where a closed form exists, the computed number is checked against it: a nitrogen polarizability within 1.7% of reference, a breakdown field that recovers the textbook value, a maser threshold matched to machine precision. You don't have to take any of it on trust."
               }
             ]
           }
@@ -219,7 +219,7 @@
     ],
     "closing": {
       "title": "Have a Field With an Answer Key?",
-      "body": "If your domain has measurements to check against - a simulator, a spec, a ground truth - it can be put behind a verifying agent loop. That's what we build. Read the study first, then let's talk about yours.",
+      "body": "If your domain has measurements to check against – a simulator, a spec, a ground truth – it can be put behind a verifying agent loop. That's what we build. Read the study first, then let's talk about yours.",
       "cta": {
         "label": "Explore the Repository",
         "href": "https://github.com/LumiVerseHR/air-laser-physics",
@@ -230,8 +230,8 @@
         "href": "/#contact"
       }
     },
-    "heroNote": "Every number here is computed, not measured. No device has been built. The claim is not \"it works\" - it's that there's no remaining physics reason it shouldn't, and what's left is engineering and measurement.",
-    "showcaseCaption": "Real output from the simulations - not renders. Left to right: a computed wireframe frame, the crossing-beam localization collapsing to a point, and the 2-D rad-hydro of a single spark."
+    "heroNote": "Every number here is computed, not measured. No device has been built. The claim is not \"it works\" – it's that there's no remaining physics reason it shouldn't, and what's left is engineering and measurement.",
+    "showcaseCaption": "Real output from the simulations – not renders. Left to right: a computed wireframe frame, the crossing-beam localization collapsing to a point, and the 2-D rad-hydro of a single spark."
   },
   "hr": {
     "slug": "air-laser",

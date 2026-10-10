@@ -37,12 +37,12 @@ export function BlockView({ block }: { block: Block }) {
       );
     case "cards":
       return (
-        <div className={styles.cards}>
+        <div className={styles.cards} data-count={block.items.length}>
           {block.items.map((item, i) => (
             <article key={i} className={styles.card}>
-              {item.meta && <p className={styles.cardMeta}>{item.meta}</p>}
               <h3>{item.title}</h3>
-              <Rich text={item.body} />
+              {item.meta && <p className={styles.cardMeta}>{item.meta}</p>}
+              {item.body && <Rich text={item.body} />}
             </article>
           ))}
         </div>

@@ -2,7 +2,7 @@
   "en": {
     "slug": "pitaj-lider",
     "meta": {
-      "title": "Pitaj Lider - AI Business Intelligence Assistant | LumiVerse",
+      "title": "Pitaj Lider – AI Business Intelligence Assistant | LumiVerse",
       "description": "Business intelligence assistant over 200,000+ articles and live company registry data. Ask in natural language, get answers with sources."
     },
     "kind": "AI Assistant",
@@ -54,27 +54,14 @@
             "type": "cards",
             "items": [
               {
-                "title": "Article Database",
-                "body": "Market trends & industry analysis\nBusiness intelligence reports\nEconomic indicators & forecasts\nCompetitive landscape insights",
-                "meta": "200,000+ curated business articles"
-              },
-              {
                 "title": "Decades of Business Intelligence",
-                "body": "Every article from Lider magazine's archive, structured and indexed for semantic search. Ask questions in natural language, get answers with sources.\n\nThe system understands context. Ask about a company's market position, and it pulls relevant articles, competitor mentions, industry trends - all in seconds."
-              }
-            ]
-          },
-          {
-            "type": "cards",
-            "items": [
-              {
-                "title": "Company Registry",
-                "body": "Company registration details\nFinancial status indicators\nLegal standings & compliance\nOwnership & key personnel",
-                "meta": "Real-time court registry data"
+                "meta": "Article Database",
+                "body": "Every article from Lider magazine's archive, structured and indexed for semantic search. Ask questions in natural language, get answers with sources.\n\nThe system understands context. Ask about a company's market position, and it pulls relevant articles, competitor mentions, industry trends – all in seconds.\n\nMarket trends & industry analysis\nBusiness intelligence reports\nEconomic indicators & forecasts\nCompetitive landscape insights"
               },
               {
                 "title": "Real-time Company Information",
-                "body": "Direct access to official company registry data. Current status, financial health, ownership structure - verified information, not scraped guesses.\n\nCombined with article intelligence, you get the full picture: what a company says publicly, what the market says about them, and what the official records show."
+                "meta": "Company Registry",
+                "body": "Direct access to official company registry data. Current status, financial health, ownership structure – verified information, not scraped guesses.\n\nCombined with article intelligence, you get the full picture: what a company says publicly, what the market says about them, and what the official records show.\n\nCompany registration details\nFinancial status indicators\nLegal standings & compliance\nOwnership & key personnel"
               }
             ]
           }
@@ -209,27 +196,14 @@
             "type": "cards",
             "items": [
               {
-                "title": "Baza članaka",
-                "body": "Tržišni trendovi i analiza djelatnosti\nIzvještaji poslovne inteligencije\nGospodarski pokazatelji i prognoze\nUvidi u konkurentsko okruženje",
-                "meta": "Više od 200.000 kuriranih poslovnih članaka"
-              },
-              {
                 "title": "Desetljeća poslovne inteligencije",
-                "body": "Svaki članak iz arhive magazina Lider, strukturiran i indeksiran za semantičku pretragu. Pitajte prirodnim jezikom, dobijte odgovore s izvorima.\n\nSustav razumije kontekst. Pitajte za tržišni položaj neke tvrtke i izvući će relevantne članke, spomene konkurenata i trendove u djelatnosti — sve u nekoliko sekundi."
-              }
-            ]
-          },
-          {
-            "type": "cards",
-            "items": [
-              {
-                "title": "Sudski registar",
-                "body": "Podaci o registraciji tvrtke\nPokazatelji financijskog stanja\nPravni status i usklađenost\nVlasništvo i ključne osobe",
-                "meta": "Podaci iz sudskog registra u stvarnom vremenu"
+                "meta": "Baza članaka",
+                "body": "Svaki članak iz arhive magazina Lider, strukturiran i indeksiran za semantičku pretragu. Pitajte prirodnim jezikom, dobijte odgovore s izvorima.\n\nSustav razumije kontekst. Pitajte za tržišni položaj neke tvrtke i izvući će relevantne članke, spomene konkurenata i trendove u djelatnosti — sve u nekoliko sekundi.\n\nTržišni trendovi i analiza djelatnosti\nIzvještaji poslovne inteligencije\nGospodarski pokazatelji i prognoze\nUvidi u konkurentsko okruženje"
               },
               {
                 "title": "Podaci o tvrtkama u stvarnom vremenu",
-                "body": "Izravan pristup službenim podacima iz sudskog registra. Trenutni status, financijsko zdravlje, vlasnička struktura — provjereni podaci, a ne nagađanja pokupljena s weba.\n\nU kombinaciji s uvidima iz članaka dobivate cijelu sliku: što tvrtka govori javno, što tržište govori o njoj i što pokazuju službeni zapisi."
+                "meta": "Sudski registar",
+                "body": "Izravan pristup službenim podacima iz sudskog registra. Trenutni status, financijsko zdravlje, vlasnička struktura — provjereni podaci, a ne nagađanja pokupljena s weba.\n\nU kombinaciji s uvidima iz članaka dobivate cijelu sliku: što tvrtka govori javno, što tržište govori o njoj i što pokazuju službeni zapisi.\n\nPodaci o registraciji tvrtke\nPokazatelji financijskog stanja\nPravni status i usklađenost\nVlasništvo i ključne osobe"
               }
             ]
           }

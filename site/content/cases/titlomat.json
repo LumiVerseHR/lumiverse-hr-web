@@ -2,12 +2,12 @@
   "en": {
     "slug": "titlomat",
     "meta": {
-      "title": "Titlomat - Automatic Subtitles for Croatian YouTube | LumiVerse",
-      "description": "Titlomat adds Croatian and English subtitles to YouTube videos automatically - no uploads, no editing. A 60-minute episode in about 5 minutes."
+      "title": "Titlomat – Automatic Subtitles for Croatian YouTube | LumiVerse",
+      "description": "Titlomat adds Croatian and English subtitles to YouTube videos automatically – no uploads, no editing. A 60-minute episode in about 5 minutes."
     },
     "kind": "Our Product · AI Subtitles",
     "title": "Titlomat.com",
-    "subtitle": "YouTube doesn't auto-caption Croatian. We do. Titlomat adds Croatian and English subtitles to every new video automatically - while you're already working on the next episode.",
+    "subtitle": "YouTube doesn't auto-caption Croatian. We do. Titlomat adds Croatian and English subtitles to every new video automatically – while you're already working on the next episode.",
     "ctas": [
       {
         "label": "Try Titlomat Free",
@@ -54,7 +54,7 @@
       },
       {
         "value": "2",
-        "label": "Languages - Croatian & English"
+        "label": "Languages – Croatian & English"
       }
     ],
     "sections": [
@@ -67,48 +67,15 @@
             "items": [
               {
                 "title": "Connect Your Channel",
-                "body": "One-time YouTube authorization that asks for exactly one thing: permission to add subtitles. No access to comments, analytics, or private data."
+                "body": "One-time YouTube authorization that asks for exactly one thing: permission to add subtitles. No access to comments, analytics, or private data.\n\n30-second signup, no credit card\nSubtitle permission only"
               },
               {
                 "title": "AI Transcribes & Translates",
-                "body": "Speech recognition tuned for Croatian, then translation to English. Your custom vocabulary keeps names, brands, and industry terms spelled right."
+                "body": "Speech recognition tuned for Croatian, then translation to English. Your custom vocabulary keeps names, brands, and industry terms spelled right.\n\n95%+ accuracy on clean audio\nCustom dictionaries per channel"
               },
               {
                 "title": "Subtitles Go Live",
-                "body": "Croatian and English subtitles land directly on your YouTube video. Want a final say? Turn on preview mode and approve before publishing."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "30-second signup, no credit card"
-              },
-              {
-                "body": "Subtitle permission only"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "95%+ accuracy on clean audio"
-              },
-              {
-                "body": "Custom dictionaries per channel"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Auto-published to YouTube"
-              },
-              {
-                "body": "Optional preview before going live"
+                "body": "Croatian and English subtitles land directly on your YouTube video. Want a final say? Turn on preview mode and approve before publishing.\n\nAuto-published to YouTube\nOptional preview before going live"
               }
             ]
           }
@@ -123,7 +90,7 @@
             "items": [
               {
                 "title": "Built for the Croatian Creator Economy",
-                "body": "Big platforms skip small languages - YouTube's auto-captions don't support Croatian. Titlomat fills that gap with speech AI built specifically for Croatian podcasts and YouTube channels, from solo creators to podcast networks and media agencies."
+                "body": "Big platforms skip small languages – YouTube's auto-captions don't support Croatian. Titlomat fills that gap with speech AI built specifically for Croatian podcasts and YouTube channels, from solo creators to podcast networks and media agencies.\n\nCroatian-first speech recognition\nEnglish subtitles open global reach\nWorks for channels of any size"
               },
               {
                 "title": "Mute Viewers",
@@ -131,7 +98,7 @@
               },
               {
                 "title": "Search & Discovery",
-                "body": "Subtitle text makes your videos searchable. YouTube understands what you said - and ranks you for it."
+                "body": "Subtitle text makes your videos searchable. YouTube understands what you said – and ranks you for it."
               },
               {
                 "title": "Privacy by Design",
@@ -140,20 +107,6 @@
               {
                 "title": "Accessibility",
                 "body": "Deaf and hard-of-hearing viewers can't watch without captions. With Titlomat, every episode includes them by default."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Croatian-first speech recognition"
-              },
-              {
-                "body": "English subtitles open global reach"
-              },
-              {
-                "body": "Works for channels of any size"
               }
             ]
           }
@@ -217,7 +170,7 @@
     ],
     "closing": {
       "title": "Your Next Video Deserves Subtitles",
-      "body": "Connect your channel in 30 seconds. Your first videos are on us - 100 free credits, no credit card.",
+      "body": "Connect your channel in 30 seconds. Your first videos are on us – 100 free credits, no credit card.",
       "cta": {
         "label": "Try Titlomat Free",
         "href": "https://titlomat.com/en",
@@ -297,48 +250,15 @@
             "items": [
               {
                 "title": "Povežite svoj kanal",
-                "body": "Jednokratna YouTube autorizacija koja traži točno jednu stvar: dopuštenje za dodavanje titlova. Bez pristupa komentarima, analitici i privatnim podacima."
+                "body": "Jednokratna YouTube autorizacija koja traži točno jednu stvar: dopuštenje za dodavanje titlova. Bez pristupa komentarima, analitici i privatnim podacima.\n\nRegistracija u 30 sekundi, bez kartice\nSamo dopuštenje za titlove"
               },
               {
                 "title": "AI transkribira i prevodi",
-                "body": "Prepoznavanje govora podešeno za hrvatski, pa prijevod na engleski. Vaš vlastiti rječnik čuva imena, brendove i stručne pojmove ispravno napisane."
+                "body": "Prepoznavanje govora podešeno za hrvatski, pa prijevod na engleski. Vaš vlastiti rječnik čuva imena, brendove i stručne pojmove ispravno napisane.\n\nPreko 95% točnosti na čistom zvuku\nVlastiti rječnik za svaki kanal"
               },
               {
                 "title": "Titlovi idu u objavu",
-                "body": "Hrvatski i engleski titlovi slijeću izravno na Vaš YouTube video. Želite zadnju riječ? Uključite način pregleda i odobrite prije objave."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Registracija u 30 sekundi, bez kartice"
-              },
-              {
-                "body": "Samo dopuštenje za titlove"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Preko 95% točnosti na čistom zvuku"
-              },
-              {
-                "body": "Vlastiti rječnik za svaki kanal"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Automatska objava na YouTube"
-              },
-              {
-                "body": "Neobavezan pregled prije objave"
+                "body": "Hrvatski i engleski titlovi slijeću izravno na Vaš YouTube video. Želite zadnju riječ? Uključite način pregleda i odobrite prije objave.\n\nAutomatska objava na YouTube\nNeobavezan pregled prije objave"
               }
             ]
           }
@@ -353,7 +273,7 @@
             "items": [
               {
                 "title": "Napravljen za hrvatske kreatore",
-                "body": "Velike platforme preskaču male jezike — YouTubeovi automatski titlovi ne podržavaju hrvatski. Titlomat popunjava tu rupu govornim AI-jem napravljenim baš za hrvatske podcaste i YouTube kanale, od samostalnih kreatora do podcast mreža i medijskih agencija."
+                "body": "Velike platforme preskaču male jezike — YouTubeovi automatski titlovi ne podržavaju hrvatski. Titlomat popunjava tu rupu govornim AI-jem napravljenim baš za hrvatske podcaste i YouTube kanale, od samostalnih kreatora do podcast mreža i medijskih agencija.\n\nPrepoznavanje govora prvenstveno za hrvatski\nEngleski titlovi otvaraju svjetsku publiku\nRadi za kanale svake veličine"
               },
               {
                 "title": "Gledatelji bez zvuka",
@@ -370,20 +290,6 @@
               {
                 "title": "Pristupačnost",
                 "body": "Gluhi i nagluhi gledatelji ne mogu gledati bez titlova. Uz Titlomat ih svaka epizoda ima automatski."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Prepoznavanje govora prvenstveno za hrvatski"
-              },
-              {
-                "body": "Engleski titlovi otvaraju svjetsku publiku"
-              },
-              {
-                "body": "Radi za kanale svake veličine"
               }
             ]
           }

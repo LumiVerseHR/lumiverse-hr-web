@@ -78,6 +78,7 @@
 }
 
 .link {
+  white-space: nowrap;
   font-size: clamp(15px, 1.1vw, 17px);
   text-decoration: underline;
 }

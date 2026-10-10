@@ -2,12 +2,12 @@
   "en": {
     "slug": "overserved",
     "meta": {
-      "title": "Overserved - How Far AI-Assisted Development Goes | LumiVerse",
-      "description": "A satirical AI tower-defense game - 7 worlds, 140 levels, 600+ generated art assets, built in three weeks - an honest test of how far AI dev goes."
+      "title": "Overserved – How Far AI-Assisted Development Goes | LumiVerse",
+      "description": "A satirical AI tower-defense game – 7 worlds, 140 levels, 600+ generated art assets, built in three weeks – an honest test of how far AI dev goes."
     },
     "kind": "Our Project · AI-Built Game",
     "title": "Overserved",
-    "subtitle": "A satirical AI-themed tower defense: you don't shoot users, you serve them. Seven markets, 140 levels, 600+ generated art assets, built in about three weeks - as an honest test of how far AI-assisted development actually goes.",
+    "subtitle": "A satirical AI-themed tower defense: you don't shoot users, you serve them. Seven markets, 140 levels, 600+ generated art assets, built in about three weeks – as an honest test of how far AI-assisted development actually goes.",
     "ctas": [
       {
         "label": "Play in Your Browser",
@@ -60,7 +60,7 @@
     ],
     "closing": {
       "title": "Want This Pointed at Your Backlog?",
-      "body": "The pipelines behind Overserved - reproducible generation, written-down invariants, bots that measure what matters - are the same ones we bring to client work. Go and play the result first.",
+      "body": "The pipelines behind Overserved – reproducible generation, written-down invariants, bots that measure what matters – are the same ones we bring to client work. Go and play the result first.",
       "cta": {
         "label": "Play Overserved",
         "href": "https://overserved.lumiverse.hr/play/",
@@ -81,11 +81,11 @@
             "items": [
               {
                 "title": "The Setup",
-                "body": "One person, three weeks, 580 commits. A real game shipped to a real URL - not a prototype, not a demo reel. Campaign mode, endless survival, a meta-progression tree, a knowledge base, saved progress, and an Android build.\n\nEvery decision, dead end and revert written up publicly while it happened."
+                "body": "One person, three weeks, 580 commits. A real game shipped to a real URL – not a prototype, not a demo reel. Campaign mode, endless survival, a meta-progression tree, a knowledge base, saved progress, and an Android build.\n\nEvery decision, dead end and revert written up publicly while it happened."
               },
               {
                 "title": "The Honest Answer",
-                "body": "Further than expected on volume - code, art and levels came fast enough that scope stopped being the constraint. Not as far on taste. The AI could tell whether a level was survivable; it could not tell whether it was boring.\n\nThe interesting work turned out to be building the tools that let a human judge quickly, then judging."
+                "body": "Further than expected on volume – code, art and levels came fast enough that scope stopped being the constraint. Not as far on taste. The AI could tell whether a level was survivable; it could not tell whether it was boring.\n\nThe interesting work turned out to be building the tools that let a human judge quickly, then judging."
               }
             ]
           }
@@ -93,14 +93,14 @@
       },
       {
         "title": "Code, Art, Levels, Jokes",
-        "lede": "Four different kinds of output, four different pipelines - each one turned into a repeatable process rather than a lucky prompt.",
+        "lede": "Four different kinds of output, four different pipelines – each one turned into a repeatable process rather than a lucky prompt.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "The Game Itself",
-                "body": "Phaser 3 and TypeScript, around 17,000 lines across 54 modules: two-camera HUD, isometric projection maths, projectile ballistics with tile-ring blast falloff, wave generation, boss abilities, save system, procedural audio. A type-check gate has to pass before every single commit."
+                "body": "Phaser 3 and TypeScript, around 17,000 lines across 54 modules: two-camera HUD, isometric projection maths, projectile ballistics with tile-ring blast falloff, wave generation, boss abilities, save system, procedural audio. A type-check gate has to pass before every single commit.\n\nGame invariants written down as rules the AI must not break\nBalance lives in data files, never in ad-hoc scene logic\nEvery hard-won gotcha recorded so it isn't relearned"
               },
               {
                 "title": "140 Unique Paths",
@@ -108,11 +108,11 @@
               },
               {
                 "title": "600+ Assets, One Pipeline",
-                "body": "Towers, users, bosses, decor, tiles, UI icons and comic panels - all generated, then background-removed by a segmentation model, trimmed to content, logged and installed. The prompt, seed, resolution and model for every generation sit in a JSON file in the repo, so any asset can be reproduced or reverted."
+                "body": "Towers, users, bosses, decor, tiles, UI icons and comic panels – all generated, then background-removed by a segmentation model, trimmed to content, logged and installed. The prompt, seed, resolution and model for every generation sit in a JSON file in the repo, so any asset can be reproduced or reverted.\n\nThe whole process is written as a reusable skill, not a habit\nColour-keying dropped for AI segmentation – it stopped eating teal furniture\nFour-directional characters derived from one flat image, for cents"
               },
               {
                 "title": "Seven Worlds, Seven Rulesets",
-                "body": "USA, Europe, China, Africa, Earth, Space and Rogue. Each market applies a lens that rewrites what a good answer is worth - Europe makes privacy king with a red-tape floor, China's firewall censors cheap answers. Same towers, completely different puzzle."
+                "body": "USA, Europe, China, Africa, Earth, Space and Rogue. Each market applies a lens that rewrites what a good answer is worth – Europe makes privacy king with a red-tape floor, China's firewall censors cheap answers. Same towers, completely different puzzle."
               },
               {
                 "title": "The Jokes",
@@ -120,39 +120,11 @@
               },
               {
                 "title": "Sound Without a Sound Library",
-                "body": "Music and effects are synthesized in code rather than sampled - menu theme, UI clicks, serve hits, explosions. Nothing to license, nothing to download, and it tunes like any other data file."
+                "body": "Music and effects are synthesized in code rather than sampled – menu theme, UI clicks, serve hits, explosions. Nothing to license, nothing to download, and it tunes like any other data file."
               },
               {
                 "title": "Runs on a Phone",
-                "body": "Wrapped for Android with orientation locking and a splash screen, after a performance pass that found the frame budget going to a HUD redrawing itself sixty times a second - not to the game."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Game invariants written down as rules the AI must not break"
-              },
-              {
-                "body": "Balance lives in data files, never in ad-hoc scene logic"
-              },
-              {
-                "body": "Every hard-won gotcha recorded so it isn't relearned"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "The whole process is written as a reusable skill, not a habit"
-              },
-              {
-                "body": "Colour-keying dropped for AI segmentation - it stopped eating teal furniture"
-              },
-              {
-                "body": "Four-directional characters derived from one flat image, for cents"
+                "body": "Wrapped for Android with orientation locking and a splash screen, after a performance pass that found the frame budget going to a HUD redrawing itself sixty times a second – not to the game."
               }
             ]
           },
@@ -178,7 +150,7 @@
             "items": [
               {
                 "title": "It Plays Properly",
-                "body": "Not a dumb script. It places towers by marginal coverage using each tower's actual range, weights tiles toward the exit where leaks really happen, reads the market lens when choosing what to buy, banks currency, builds labs and spends on upgrades - because a real player does all of that, and a bot that doesn't will fail levels that are actually fine."
+                "body": "Not a dumb script. It places towers by marginal coverage using each tower's actual range, weights tiles toward the exit where leaks really happen, reads the market lens when choosing what to buy, banks currency, builds labs and spends on upgrades – because a real player does all of that, and a bot that doesn't will fail levels that are actually fine."
               },
               {
                 "title": "It Found Real Bugs",
@@ -201,11 +173,11 @@
             "items": [
               {
                 "title": "Balanced Isn't the Same as Fun",
-                "body": "The bot proved every level was winnable. It could not tell that some of them were dull. Three deliberately overpowered towers went in and it never even noticed - the economy absorbed them. \"Survivable\" is measurable; \"worth twenty minutes of your evening\" is not.\n\nA whole feature - per-stat tower upgrades - shipped and was deleted the same day. It worked perfectly and made the game worse to play."
+                "body": "The bot proved every level was winnable. It could not tell that some of them were dull. Three deliberately overpowered towers went in and it never even noticed – the economy absorbed them. \"Survivable\" is measurable; \"worth twenty minutes of your evening\" is not.\n\nA whole feature – per-stat tower upgrades – shipped and was deleted the same day. It worked perfectly and made the game worse to play."
               },
               {
                 "title": "Reverting Beats Re-Rolling",
-                "body": "Regenerating a cohesive set one asset at a time quietly destroys it - each render drifts in scale, perspective and framing until the collection stops matching itself. The tower set got measurably worse that way and was restored from git.\n\nA whole world shipped as another world with a red filter over it. Flat colour isn't art direction, and only a person looking at it said so."
+                "body": "Regenerating a cohesive set one asset at a time quietly destroys it – each render drifts in scale, perspective and framing until the collection stops matching itself. The tower set got measurably worse that way and was restored from git.\n\nA whole world shipped as another world with a red filter over it. Flat colour isn't art direction, and only a person looking at it said so."
               }
             ]
           },
@@ -214,7 +186,7 @@
             "items": [
               {
                 "title": "What That Actually Means for Client Work",
-                "body": "The lesson isn't \"AI builds games now.\" It's that generation is cheap and judgement is not, so the edge sits in the scaffolding around the generation: a logged, reproducible asset pipeline; invariants written down where they can't be forgotten; a bot that measures the thing you actually care about; and a human whose whole job is deciding what's good. Overserved is where we built and stress-tested that scaffolding - on our own time, on a project where a bad call costs nothing."
+                "body": "The lesson isn't \"AI builds games now.\" It's that generation is cheap and judgement is not, so the edge sits in the scaffolding around the generation: a logged, reproducible asset pipeline; invariants written down where they can't be forgotten; a bot that measures the thing you actually care about; and a human whose whole job is deciding what's good. Overserved is where we built and stress-tested that scaffolding – on our own time, on a project where a bad call costs nothing."
               }
             ]
           }
@@ -222,34 +194,18 @@
       },
       {
         "title": "Twenty-Two Entries, Failures Included",
-        "lede": "Notes from building it - what was tried, what broke, what it taught. A sample:",
+        "lede": "Notes from building it – what was tried, what broke, what it taught. A sample:",
         "blocks": [
           {
             "type": "list",
             "items": [
               {
-                "title": "Jul 2",
-                "body": "The bottleneck wasn't the game. It was the scoreboard."
-              },
-              {
                 "title": "Jul 4",
                 "body": "I stopped tuning the levels. I let the bot design them."
               },
               {
-                "title": "Jun 17",
-                "body": "I built per-stat tower upgrades, then deleted them by dinner."
-              },
-              {
-                "title": "Jun 19",
-                "body": "I got 4-direction characters out of a flat AI image for two cents each."
-              },
-              {
-                "title": "Jun 23",
-                "body": "I built a bot to play my game 140 times. It found a wall I couldn't see."
-              },
-              {
-                "title": "Jun 24",
-                "body": "One prompt line fixed 96 of my buildings."
+                "title": "Jul 2",
+                "body": "The bottleneck wasn't the game. It was the scoreboard."
               },
               {
                 "title": "Jun 25",
@@ -258,6 +214,22 @@
               {
                 "title": "Jun 25",
                 "body": "I made three overpowered towers. The bot didn't even notice."
+              },
+              {
+                "title": "Jun 24",
+                "body": "One prompt line fixed 96 of my buildings."
+              },
+              {
+                "title": "Jun 23",
+                "body": "I built a bot to play my game 140 times. It found a wall I couldn't see."
+              },
+              {
+                "title": "Jun 19",
+                "body": "I got 4-direction characters out of a flat AI image for two cents each."
+              },
+              {
+                "title": "Jun 17",
+                "body": "I built per-stat tower upgrades, then deleted them by dinner."
               }
             ]
           },
@@ -376,7 +348,7 @@
             "items": [
               {
                 "title": "Sama igra",
-                "body": "Phaser 3 i TypeScript, oko 17.000 redaka u 54 modula: HUD s dvjema kamerama, matematika izometrijske projekcije, balistika projektila s opadanjem eksplozije po prstenovima polja, generiranje valova, sposobnosti bossova, sustav spremanja, proceduralni zvuk. Provjera tipova mora proći prije svakog pojedinog commita."
+                "body": "Phaser 3 i TypeScript, oko 17.000 redaka u 54 modula: HUD s dvjema kamerama, matematika izometrijske projekcije, balistika projektila s opadanjem eksplozije po prstenovima polja, generiranje valova, sposobnosti bossova, sustav spremanja, proceduralni zvuk. Provjera tipova mora proći prije svakog pojedinog commita.\n\nNepromjenjiva pravila igre zapisana kao granice koje AI ne smije prijeći\nRavnoteža živi u podatkovnim datotekama, nikad u improviziranoj logici scene\nSvaka mukotrpno naučena zamka zabilježena da se ne uči dvaput"
               },
               {
                 "title": "140 jedinstvenih putanja",
@@ -384,7 +356,7 @@
               },
               {
                 "title": "Više od 600 grafika, jedan pipeline",
-                "body": "Kule, korisnici, bossovi, ukrasi, polja, ikone sučelja i strip-kadrovi — sve generirano, pa im je pozadinu uklonio segmentacijski model, obrezano na sadržaj, zabilježeno i ugrađeno. Prompt, sjeme, rezolucija i model za svako generiranje stoje u JSON datoteci u repozitoriju, pa se svaka grafika može ponoviti ili vratiti."
+                "body": "Kule, korisnici, bossovi, ukrasi, polja, ikone sučelja i strip-kadrovi — sve generirano, pa im je pozadinu uklonio segmentacijski model, obrezano na sadržaj, zabilježeno i ugrađeno. Prompt, sjeme, rezolucija i model za svako generiranje stoje u JSON datoteci u repozitoriju, pa se svaka grafika može ponoviti ili vratiti.\n\nCijeli je postupak zapisan kao ponovno upotrebljiva vještina, a ne kao navika\nUklanjanje po boji zamijenjeno AI segmentacijom — prestalo je jesti tirkizni namještaj\nLikovi u četiri smjera izvedeni iz jedne plošne slike, za nekoliko centi"
               },
               {
                 "title": "Sedam svjetova, sedam skupova pravila",
@@ -401,34 +373,6 @@
               {
                 "title": "Radi na mobitelu",
                 "body": "Zapakirano za Android, sa zaključanom orijentacijom i uvodnim zaslonom, nakon prolaza za performanse koji je otkrio da vrijeme po sličici troši HUD koji se iscrtava šezdeset puta u sekundi — a ne sama igra."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Nepromjenjiva pravila igre zapisana kao granice koje AI ne smije prijeći"
-              },
-              {
-                "body": "Ravnoteža živi u podatkovnim datotekama, nikad u improviziranoj logici scene"
-              },
-              {
-                "body": "Svaka mukotrpno naučena zamka zabilježena da se ne uči dvaput"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Cijeli je postupak zapisan kao ponovno upotrebljiva vještina, a ne kao navika"
-              },
-              {
-                "body": "Uklanjanje po boji zamijenjeno AI segmentacijom — prestalo je jesti tirkizni namještaj"
-              },
-              {
-                "body": "Likovi u četiri smjera izvedeni iz jedne plošne slike, za nekoliko centi"
               }
             ]
           },
@@ -504,28 +448,12 @@
             "type": "list",
             "items": [
               {
-                "title": "2. srp",
-                "body": "Usko grlo nije bila igra. Bila je to ploča s rezultatima."
-              },
-              {
                 "title": "4. srp",
                 "body": "Prestao sam podešavati razine. Pustio sam bota da ih osmisli."
               },
               {
-                "title": "17. lip",
-                "body": "Napravio sam nadogradnje kula po svojstvima i izbrisao ih do večere."
-              },
-              {
-                "title": "19. lip",
-                "body": "Iz plošne AI slike izvukao sam likove u 4 smjera, po dva centa komad."
-              },
-              {
-                "title": "23. lip",
-                "body": "Napravio sam bota da odigra moju igru 140 puta. Našao je zid koji ja nisam vidio."
-              },
-              {
-                "title": "24. lip",
-                "body": "Jedan redak prompta popravio je 96 mojih zgrada."
+                "title": "2. srp",
+                "body": "Usko grlo nije bila igra. Bila je to ploča s rezultatima."
               },
               {
                 "title": "25. lip",
@@ -534,6 +462,22 @@
               {
                 "title": "25. lip",
                 "body": "Napravio sam tri prejake kule. Bot ih nije ni primijetio."
+              },
+              {
+                "title": "24. lip",
+                "body": "Jedan redak prompta popravio je 96 mojih zgrada."
+              },
+              {
+                "title": "23. lip",
+                "body": "Napravio sam bota da odigra moju igru 140 puta. Našao je zid koji ja nisam vidio."
+              },
+              {
+                "title": "19. lip",
+                "body": "Iz plošne AI slike izvukao sam likove u 4 smjera, po dva centa komad."
+              },
+              {
+                "title": "17. lip",
+                "body": "Napravio sam nadogradnje kula po svojstvima i izbrisao ih do večere."
               }
             ]
           },

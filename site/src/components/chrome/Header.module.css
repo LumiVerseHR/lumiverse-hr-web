@@ -46,7 +46,7 @@
 
 .nav {
   display: flex;
-  gap: clamp(28px, 3.2vw, 50px);
+  gap: clamp(22px, 2.7vw, 44px);
   font-size: 15px;
   font-weight: 500;
 }

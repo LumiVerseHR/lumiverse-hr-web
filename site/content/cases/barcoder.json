@@ -2,12 +2,12 @@
   "en": {
     "slug": "barcoder",
     "meta": {
-      "title": "Barcoder - Encyclopedia of QR & Barcode Standards | LumiVerse",
+      "title": "Barcoder – Encyclopedia of QR & Barcode Standards | LumiVerse",
       "description": "Barcoder catalogues 463 QR, barcode and visual-code standards across 197 countries, cross-referenced with the 1,076 wallets that read them."
     },
     "kind": "Our Project · Reference Encyclopedia",
     "title": "Barcoder",
-    "subtitle": "Scan a payment QR in Zagreb and one in Manila and you're looking at two unrelated standards. Barcoder catalogues all of them - 463 visual-code standards across 197 countries, cross-referenced with the 1,076 wallets that read them.",
+    "subtitle": "Scan a payment QR in Zagreb and one in Manila and you're looking at two unrelated standards. Barcoder catalogues all of them – 463 visual-code standards across 197 countries, cross-referenced with the 1,076 wallets that read them.",
     "ctas": [
       {
         "label": "Open Barcoder",
@@ -48,7 +48,7 @@
     "sections": [
       {
         "title": "Nobody Wrote This Down",
-        "lede": "The answers live in central bank announcements, ISO/IEC specs, scheme documentation, vendor PDFs and regulator filings - in a dozen languages, none of them talking to each other. Barcoder pulls them into one cross-referenced place.",
+        "lede": "The answers live in central bank announcements, ISO/IEC specs, scheme documentation, vendor PDFs and regulator filings – in a dozen languages, none of them talking to each other. Barcoder pulls them into one cross-referenced place.",
         "blocks": [
           {
             "type": "cards",
@@ -59,7 +59,7 @@
               },
               {
                 "title": "Who Reads It",
-                "body": "Payments engineers integrating a new market. Fintech teams sizing wallet coverage before launch. Wallet providers checking which rails they can ride. Researchers who need a citation, not a forum post.\n\nEvery page names its sources. Vol. I, Edition 2026 - and it grows with each commit."
+                "body": "Payments engineers integrating a new market. Fintech teams sizing wallet coverage before launch. Wallet providers checking which rails they can ride. Researchers who need a citation, not a forum post.\n\nEvery page names its sources. Vol. I, Edition 2026 – and it grows with each commit."
               }
             ]
           }
@@ -67,14 +67,14 @@
       },
       {
         "title": "Three Ways In",
-        "lede": "Every entry links to the others. Start from a standard, a country, or a wallet - you end up in the same graph.",
+        "lede": "Every entry links to the others. Start from a standard, a country, or a wallet – you end up in the same graph.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "Standards",
-                "body": "Every QR, barcode and visual-code specification we can find evidence for - EMV merchant-presented modes, national instant-payment QRs, retail GS1 codes, niche transit codes.\n\n463 entries, A to Z\nPIX, UPI, KHQR, Bharat QR, EAN-13, Code 128",
+                "body": "Every QR, barcode and visual-code specification we can find evidence for – EMV merchant-presented modes, national instant-payment QRs, retail GS1 codes, niche transit codes.\n\n463 entries, A to Z\nPIX, UPI, KHQR, Bharat QR, EAN-13, Code 128",
                 "meta": "01"
               },
               {
@@ -84,7 +84,7 @@
               },
               {
                 "title": "Wallets",
-                "body": "One page per wallet - GCash, Alipay, Revolut, M-Pesa and the rest - covering which standards each supports, in which markets, and against which underlying rails.\n\n1,076 wallet profiles\nMarket and rail coverage per wallet",
+                "body": "One page per wallet – GCash, Alipay, Revolut, M-Pesa and the rest – covering which standards each supports, in which markets, and against which underlying rails.\n\n1,076 wallet profiles\nMarket and rail coverage per wallet",
                 "meta": "03"
               }
             ]
@@ -93,7 +93,7 @@
       },
       {
         "title": "Point It At a Code",
-        "lede": "A reference book you can run. Scan a code, paste a payload, or generate one - and land on the standard that explains it.",
+        "lede": "A reference book you can run. Scan a code, paste a payload, or generate one – and land on the standard that explains it.",
         "blocks": [
           {
             "type": "cards",
@@ -104,7 +104,7 @@
               },
               {
                 "title": "Camera Scan",
-                "body": "Point your phone at a code in the wild. Decode and identify in the browser - no app to install."
+                "body": "Point your phone at a code in the wild. Decode and identify in the browser – no app to install."
               },
               {
                 "title": "Paste & Decode",
@@ -116,7 +116,7 @@
               },
               {
                 "title": "Encoder Playground",
-                "body": "40 encoders. Fill in the form, generate a valid code, then scan it back - all on one page."
+                "body": "40 encoders. Fill in the form, generate a valid code, then scan it back – all on one page."
               }
             ]
           }
@@ -131,7 +131,7 @@
             "items": [
               {
                 "title": "Research",
-                "body": "Each country starts as long-form research - central bank sources, scheme docs, regulator filings, read and written up.",
+                "body": "Each country starts as long-form research – central bank sources, scheme docs, regulator filings, read and written up.",
                 "label": "reports/"
               },
               {
@@ -146,7 +146,7 @@
               },
               {
                 "title": "Render",
-                "body": "The backend reads those files, the frontend renders them. Boring on purpose - and reproducible from source.",
+                "body": "The backend reads those files, the frontend renders them. Boring on purpose – and reproducible from source.",
                 "label": "web"
               }
             ]
@@ -156,7 +156,7 @@
             "items": [
               {
                 "title": "Auditable by Design",
-                "body": "A reference work is only worth as much as its sourcing. Because the content is the repo, any page can be traced back through git to the change that wrote it - and corrected the same way anyone corrects code."
+                "body": "A reference work is only worth as much as its sourcing. Because the content is the repo, any page can be traced back through git to the change that wrote it – and corrected the same way anyone corrects code."
               },
               {
                 "title": "One Person, Encyclopedic Scope",
@@ -219,7 +219,7 @@
         "label": "Zemalja s izvještajima o platnim shemama"
       },
       {
-        "value": "1,076",
+        "value": "1.076",
         "label": "Unakrsno povezanih novčanika"
       },
       {

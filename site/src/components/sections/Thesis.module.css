@@ -21,15 +21,19 @@
 }
 
 .line {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 0.18em;
+  display: block;
+}
+
+/* The figure travels with the last word, so a wrap never strands it. */
+.tail {
+  white-space: nowrap;
 }
 
 /* One coral human stands on the baseline of the line that matters. */
 .figure {
-  display: inline-flex;
-  padding-bottom: 0.06em;
+  display: inline-block;
+  margin-left: 0.18em;
+  vertical-align: baseline;
 }
 
 .body {

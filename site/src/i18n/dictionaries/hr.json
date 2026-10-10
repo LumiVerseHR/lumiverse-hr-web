@@ -11,7 +11,8 @@
     "contact": "Kontakt",
     "cta": "Pokrenite projekt",
     "menu": "Izbornik",
-    "close": "Zatvori"
+    "close": "Zatvori",
+    "pricing": "Cijene"
   },
   "hero": {
     "titleLines": [
@@ -35,7 +36,7 @@
   },
   "flagships": {
     "title": "Ljudi koji mogu više.",
-    "lede": "Tri prostorije makete, otvorene. Stvarni proizvodi, stvarna platforma i stvarno istraživanje, svaki s brojem koji to dokazuje.",
+    "lede": "Naš proizvod, platforma koju vodimo i naše istraživanje. Svaki s brojem koji to dokazuje.",
     "open": "Otvorite referencu"
   },
   "thesis": {
@@ -44,7 +45,7 @@
       "Prosudba nije."
     ],
     "body": "Svaki model napiše kod, članak ili razinu igre. Taj dio svaki kvartal postaje jeftiniji. Mi donosimo ono što dolazi nakon modela: provjere, unakrsne reference i ljudski potpis koji odlučuju smije li rezultat u produkciju.",
-    "link": "Pročitajte: prednost je u onome što provjerava",
+    "link": "Prednost je u onome što provjerava, a ne u onome što generira",
     "href": "/blog/verifier-not-generator"
   },
   "index": {
@@ -54,13 +55,9 @@
   },
   "services": {
     "title": "Odaberite kako surađujemo",
-    "lede": "Tri načina suradnje, svaki s fiksnom cijenom u pisanom obliku prije početka.",
+    "lede": "Tri načina suradnje, svaki s cijenom u pisanom obliku prije početka.",
     "doorsTitle": "Tražite nešto određeno?",
     "doors": [
-      {
-        "label": "Hrvatska tvrtka? AI paketi po fiksnoj cijeni",
-        "href": "/hr/pricing"
-      },
       {
         "label": "Trebate senior tech leada u svom timu",
         "href": "/hr/tech-lead"
@@ -75,7 +72,8 @@
   "notes": {
     "title": "Bilješke iz radionice",
     "all": "Svi članci",
-    "read": "min čitanja"
+    "read": "min čitanja",
+    "langNote": "Na engleskom"
   },
   "studio": {
     "title": "Mali studio, nerazumno širok raspon",
@@ -104,7 +102,7 @@
     "company": "Tvrtka",
     "optional": "neobavezno",
     "need": "Što Vam treba?",
-    "notSure": "Još nisam siguran",
+    "notSure": "Još ne znam",
     "other": "Nešto drugo",
     "message": "Opišite nam",
     "messageHint": "Što želite izgraditi ili popraviti, i sve što već znate o rokovima ili budžetu.",
@@ -132,7 +130,9 @@
     "studio": "Studio",
     "contact": "Kontakt",
     "rights": "Sva prava pridržana.",
-    "cookies": "Postavke kolačića"
+    "cookies": "Postavke kolačića",
+    "pricing": "Cijene",
+    "blog": "Blog"
   },
   "consent": {
     "text": "Koristimo analitičke kolačiće da vidimo što funkcionira.",
@@ -142,8 +142,8 @@
   },
   "notFound": {
     "code": "404",
-    "title": "Izgubljeni u praznini",
-    "body": "Stranica koju tražite ne postoji ili je premještena. Vratimo Vas na pravi put.",
+    "title": "Ovdje ništa ne visi",
+    "body": "Ova stranica je premještena ili nikad nije postojala. Radovi su i dalje na zidu.",
     "home": "Natrag na početnu",
     "services": "Usluge",
     "work": "Reference",
@@ -158,6 +158,7 @@
     "showcase": "Zasloni",
     "show": "Prikaži",
     "prevShot": "Prethodni zaslon",
-    "nextShot": "Sljedeći zaslon"
+    "nextShot": "Sljedeći zaslon",
+    "closingCta": "Recite nam što gradite"
   }
 }

@@ -86,3 +86,41 @@
   background: var(--coral-press);
   color: #fff !important;
 }
+
+.flagships {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 32px;
+  width: 100%;
+  max-width: 900px;
+  margin: 56px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flagships a {
+  display: grid;
+  gap: 4px;
+  padding: 18px 0;
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+  text-decoration: none;
+}
+
+.flagships strong {
+  font-size: 20px;
+}
+
+.flagships span {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.flagships a:hover strong {
+  color: var(--coral);
+}
+
+@media (max-width: 760px) {
+  .flagships {
+    grid-template-columns: 1fr;
+  }
+}

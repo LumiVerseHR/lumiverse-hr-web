@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+import Image from "next/image";
 import type { CaseStudy as Case } from "@/content/case-schema";
 import type { Locale } from "@/i18n/config";
 import { homeAnchor, localePath } from "@/i18n/config";
@@ -38,6 +40,7 @@ function linkify(sentence: string, links: (Case["ctas"][number] | undefined)[]) 
 }
 
 export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict: Dictionary }) {
+  const extra = data.showcase.slice(1);
   const at = ORDER.findIndex((o) => o.slug === data.slug);
   const next = ORDER[(at + 1) % ORDER.length];
   const prev = ORDER[(at - 1 + ORDER.length) % ORDER.length];
@@ -92,32 +95,45 @@ export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict
       )}
 
       {data.sections.map((section, i) => (
-        <section key={i} id={section.id} className={styles.section} aria-labelledby={`s-${i}`}>
-          <header className={styles.sectionHead}>
-            <h2 id={`s-${i}`}>{section.title}</h2>
-            {section.lede && <p>{section.lede}</p>}
-          </header>
-          <div className={styles.blocks}>
-            {section.blocks.map((block, j) => (
-              <BlockView key={j} block={block} />
-            ))}
-          </div>
-        </section>
+        <Fragment key={i}>
+          <section id={section.id} className={styles.section} aria-labelledby={`s-${i}`} data-lede={section.lede ? undefined : "none"}>
+            <header className={styles.sectionHead}>
+              <h2 id={`s-${i}`}>{section.title}</h2>
+              {section.lede && <p>{section.lede}</p>}
+            </header>
+            <div className={styles.blocks}>
+              {section.blocks.map((block, j) => (
+                <BlockView key={j} block={block} />
+              ))}
+            </div>
+          </section>
+          {/* The screens beyond the hero hang after the first section, so they are not carousel-only. */}
+          {i === 0 && extra.length > 0 && (
+            <div className={styles.gallery} data-count={extra.length}>
+              {extra.map((img) => (
+                <figure key={img.src} className={styles.imageFig}>
+                  <div className={styles.imageFrame} style={{ ["--ratio" as string]: img.width / img.height }}>
+                    <Image src={img.src} alt={img.alt} width={img.width} height={img.height} sizes="(max-width: 960px) 94vw, 45vw" />
+                  </div>
+                </figure>
+              ))}
+            </div>
+          )}
+        </Fragment>
       ))}
 
       {data.closing && (
         <section className={styles.closing} aria-labelledby="closing-title">
           <h2 id="closing-title">{data.closing.title}</h2>
           <p>{data.closing.body}</p>
-          {data.closing.note ? (
+          <div className={styles.ctas}>
+            <LinkButton link={data.closing.note ? { label: dict.case.closingCta, href: homeAnchor(lang, "contact") } : data.closing.cta} primary />
+            {data.closing.secondary && !data.closing.note && <LinkButton link={data.closing.secondary} />}
+          </div>
+          {data.closing.note && (
             <div className={styles.capacity}>
               {data.closing.badge && <p className={styles.badge}>{data.closing.badge}</p>}
               <p>{linkify(data.closing.note, [data.closing.cta, data.closing.secondary])}</p>
-            </div>
-          ) : (
-            <div className={styles.ctas}>
-              <LinkButton link={data.closing.cta} primary />
-              {data.closing.secondary && <LinkButton link={data.closing.secondary} />}
             </div>
           )}
         </section>

@@ -2,12 +2,12 @@
   "en": {
     "slug": "bridj",
     "meta": {
-      "title": "Bridj - Embedded Tech Lead for a B2B Platform | LumiVerse",
+      "title": "Bridj – Embedded Tech Lead for a B2B Platform | LumiVerse",
       "description": "Over a year, and ongoing, as embedded tech lead for Bridj, a UK conversational-and-operational-intelligence platform: architecture, a 17-service system, release sign-off."
     },
     "kind": "Tech Lead Consulting · Embedded, Ongoing",
     "title": "Bridj",
-    "subtitle": "A year and counting as embedded tech lead for a UK conversational-and-operational-intelligence platform - the layer that connects what customers actually say to what a business does next. Architecture, hands-on engineering across a 17-service system, and the final sign-off on every release.",
+    "subtitle": "A year and counting as embedded tech lead for a UK conversational-and-operational-intelligence platform – the layer that connects what customers actually say to what a business does next. Architecture, hands-on engineering across a 17-service system, and the final sign-off on every release.",
     "ctas": [
       {
         "label": "Visit Bridj",
@@ -60,22 +60,22 @@
     "sections": [
       {
         "title": "An Intelligence Layer for the Whole Business",
-        "lede": "Every company generates thousands of conversations, calls and customer interactions. Bridj connects to the tools where those live and turns them into a single source of truth - surfacing the trends, opportunities, risks and issues that would otherwise slip through the cracks, for marketing, sales, product and leadership alike.",
+        "lede": "Every company generates thousands of conversations, calls and customer interactions. Bridj connects to the tools where those live and turns them into a single source of truth – surfacing the trends, opportunities, risks and issues that would otherwise slip through the cracks, for marketing, sales, product and leadership alike.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "Insights, Not Transcripts",
-                "body": "Raw conversation data becomes tagged themes, emerging risks and opportunities, and the topics shaping the pipeline - refreshed on a schedule, not dug out by hand."
+                "body": "Raw conversation data becomes tagged themes, emerging risks and opportunities, and the topics shaping the pipeline – refreshed on a schedule, not dug out by hand."
               },
               {
                 "title": "Ask Bridj",
-                "body": "A conversational AI layer that answers questions over an organisation's own insights and data, drafts content from what's resonating, and writes executive briefings - in natural language."
+                "body": "A conversational AI layer that answers questions over an organisation's own insights and data, drafts content from what's resonating, and writes executive briefings – in natural language."
               },
               {
                 "title": "Content That Lands",
-                "body": "Campaign and content generation grounded in what customers actually said - built from real conversations rather than guesswork, and refined interactively."
+                "body": "Campaign and content generation grounded in what customers actually said – built from real conversations rather than guesswork, and refined interactively."
               }
             ]
           }
@@ -83,14 +83,14 @@
       },
       {
         "title": "What We Built Underneath",
-        "lede": "The product is one screen. Behind it is a pipeline that carries messy, multi-source conversation data all the way to answers - designed, built and owned as tech lead, stage by stage.",
+        "lede": "The product is one screen. Behind it is a pipeline that carries messy, multi-source conversation data all the way to answers – designed, built and owned as tech lead, stage by stage.",
         "blocks": [
           {
             "type": "steps",
             "items": [
               {
                 "title": "Connect & Sync",
-                "body": "OAuth connectors pull data from seven external systems - major CRMs, meeting recorders and revenue-intelligence tools - on a schedule, into cloud storage. Stateless and independently scalable, so a slow sync never touches the app.",
+                "body": "OAuth connectors pull data from seven external systems – major CRMs, meeting recorders and revenue-intelligence tools – on a schedule, into cloud storage. Stateless and independently scalable, so a slow sync never touches the app.",
                 "label": "01 · ingest",
                 "chips": [
                   "OAuth",
@@ -100,7 +100,7 @@
               },
               {
                 "title": "Validate, Load & Clean",
-                "body": "A three-stage pipeline validates every incoming file, quarantines the failures, loads the good data to a raw store, then cleans it into a normalized shape - so downstream AI never sees malformed input.",
+                "body": "A three-stage pipeline validates every incoming file, quarantines the failures, loads the good data to a raw store, then cleans it into a normalized shape – so downstream AI never sees malformed input.",
                 "label": "02 · refine",
                 "chips": [
                   "Event-driven",
@@ -128,7 +128,7 @@
               },
               {
                 "title": "Agent Layer",
-                "body": "Four purpose-built AI agents - insight Q&A, content generation, data analysis and executive briefings - stream answers to the app, and an MCP server exposes the same tools to external AI clients. Every query scoped to one organisation.",
+                "body": "Four purpose-built AI agents – insight Q&A, content generation, data analysis and executive briefings – stream answers to the app, and an MCP server exposes the same tools to external AI clients. Every query scoped to one organisation.",
                 "label": "05 · converse",
                 "chips": [
                   "Agno",
@@ -138,7 +138,7 @@
               },
               {
                 "title": "Multi-Tenant App",
-                "body": "The web application: organisation-level data isolation, a five-role permissions model, subscription billing, and a modern React front end - the surface everything else feeds.",
+                "body": "The web application: organisation-level data isolation, a five-role permissions model, subscription billing, and a modern React front end – the surface everything else feeds.",
                 "label": "06 · deliver",
                 "chips": [
                   "FastAPI",
@@ -179,7 +179,7 @@
       },
       {
         "title": "More Than Hands on a Keyboard",
-        "lede": "Embedded tech lead isn't a title on a slide - it's the person the release can't ship without. Three jobs at once: architect, builder, and the technical gate before production.",
+        "lede": "Embedded tech lead isn't a title on a slide – it's the person the release can't ship without. Three jobs at once: architect, builder, and the technical gate before production.",
         "blocks": [
           {
             "type": "cards",
@@ -191,12 +191,12 @@
               },
               {
                 "title": "Builder",
-                "body": "Hands on the keyboard across the whole stack - AI pipeline, backend, infrastructure, front end - and the reviewer who sets the quality bar for everyone else's. Plus the un-glamorous wins, like consolidating three drifting data repos into one clean ingestion monorepo.",
+                "body": "Hands on the keyboard across the whole stack – AI pipeline, backend, infrastructure, front end – and the reviewer who sets the quality bar for everyone else's. Plus the un-glamorous wins, like consolidating three drifting data repos into one clean ingestion monorepo.",
                 "meta": "02"
               },
               {
                 "title": "Release Authority",
-                "body": "Formal technical sign-off: nothing reaches production without it. Dependency and risk analysis across a release, migration and rollout planning, and the final go / no-go call - the safety valve between \"done\" and \"deployed\".",
+                "body": "Formal technical sign-off: nothing reaches production without it. Dependency and risk analysis across a release, migration and rollout planning, and the final go / no-go call – the safety valve between \"done\" and \"deployed\".",
                 "meta": "03"
               }
             ]
@@ -212,7 +212,7 @@
             "items": [
               {
                 "title": "Infrastructure as Code, Multi-Cloud",
-                "body": "The whole estate is defined in Terraform across production and a parity sandbox, spanning two cloud providers, with disaster recovery in its own region. Environments are reproducible, not hand-tended - and a new one is a config change, not a weekend.\n\nProduction + sandbox parity from the same modules\nCross-region disaster recovery"
+                "body": "The whole estate is defined in Terraform across production and a parity sandbox, spanning two cloud providers, with disaster recovery in its own region. Environments are reproducible, not hand-tended – and a new one is a config change, not a weekend.\n\nProduction + sandbox parity from the same modules\nCross-region disaster recovery"
               },
               {
                 "title": "Tested End to End",
@@ -224,11 +224,11 @@
               },
               {
                 "title": "Multi-Tenant by Construction",
-                "body": "Organisation isolation runs through every layer - storage, embeddings, agents, app - with role-based access control, so one customer's data can never surface in another's."
+                "body": "Organisation isolation runs through every layer – storage, embeddings, agents, app – with role-based access control, so one customer's data can never surface in another's."
               },
               {
                 "title": "A Real Process",
-                "body": "Definition of Done, a QA stage, and release management with formal technical sign-off - lightweight governance that lets a team move fast without breaking production."
+                "body": "Definition of Done, a QA stage, and release management with formal technical sign-off – lightweight governance that lets a team move fast without breaking production."
               }
             ]
           }
@@ -257,7 +257,7 @@
       "title": "Bridj - ugrađeni tech lead za B2B platformu | LumiVerse",
       "description": "Više od godinu dana, i dalje, ugrađeni tech lead za Bridj, britansku platformu za analizu razgovora: arhitektura, 17 servisa, potpis na izdanjima."
     },
-    "kind": "Tech lead savjetovanje · Ugrađeno i u tijeku",
+    "kind": "Tech lead savjetovanje · u timu, i dalje",
     "title": "Bridj",
     "subtitle": "Više od godinu dana kao ugrađeni tech lead britanske platforme za analizu razgovora i poslovanja — sloja koji povezuje ono što kupci stvarno kažu s idućim potezom tvrtke. Arhitektura, razvoj vlastitim rukama kroz sustav od 17 servisa i završni potpis na svakom izdanju.",
     "ctas": [
@@ -294,7 +294,7 @@
     "stats": [
       {
         "value": "1+ god.",
-        "label": "Ugrađeni kao tech lead, i dalje traje"
+        "label": "Tech lead u timu, više od godinu dana"
       },
       {
         "value": "17",

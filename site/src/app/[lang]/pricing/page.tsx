@@ -116,6 +116,13 @@ export default async function PricingPage({ params }: PageProps<"/[lang]/pricing
             </a>
             <a className={styles.secondary} href={homeAnchor(lang, "work")}>{s.heroSecondary}</a>
           </div>
+          <ul className={styles.jump}>
+            {groups.map((g) => (
+              <li key={g.id}>
+                <a href={`#${g.id}`}>{g.copy.heading}</a>
+              </li>
+            ))}
+          </ul>
         </section>
 
         {groups.map((g) => (

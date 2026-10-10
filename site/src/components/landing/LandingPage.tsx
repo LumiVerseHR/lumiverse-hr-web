@@ -18,6 +18,29 @@ export async function LandingPage({ slug, lang, dict }: { slug: Landing["slug"];
   const pkgs = page.packages.map((id) => packageById.get(id) as Pkg);
   const proof = (await Promise.all(page.proof.map(async (s) => ({ slug: s, data: await getCase(s, lang) })))).filter((p) => p.data);
   const faq = (t[lang] as { faq: { items: string[][] } }).faq.items;
+  const single = pkgs.length === 1;
+  // Proof exhibits use each case study's own first screenshot (crisp, real), not the OG card.
+  const exhibits = (
+    <div className={styles.exhibits} data-count={proof.length}>
+      {proof.map(({ slug: s, data }) => {
+        const shot = data!.showcase[0];
+        return (
+          <a key={s} className={styles.exhibit} href={localePath(lang, `/${s}`)}>
+            <span className={styles.frame}>
+              <Image src={shot.src} alt="" fill sizes="(max-width: 900px) 92vw, 40vw" />
+            </span>
+            <span className={styles.exName}>{data!.title.replace(/\n/g, " ").replace(/\.com$/, "")}</span>
+            <span className={styles.exKind}>{data!.kind}</span>
+            {data!.stats[0] && (
+              <span className={styles.exStat}>
+                <strong>{data!.stats[0].value}</strong> {data!.stats[0].label}
+              </span>
+            )}
+          </a>
+        );
+      })}
+    </div>
+  );
 
   return (
     <>
@@ -27,50 +50,55 @@ export async function LandingPage({ slug, lang, dict }: { slug: Landing["slug"];
           <h1 id="landing-title" className={styles.title}>{page.title[lang]}</h1>
           <p className={styles.subtitle}>{page.subtitle[lang]}</p>
           <a className={styles.primary} href="#contact">
-            {dict.nav.cta}
+            {page.cta[lang]}
             <Icon name="arrow-right" size={16} />
           </a>
         </section>
 
-        <section className={styles.section} aria-labelledby="path-title">
-          <header className={styles.head}>
-            <h2 id="path-title">{page.pathTitle[lang]}</h2>
-            <p>{page.pathLede[lang]}</p>
-          </header>
-          <ol className={styles.path} data-count={pkgs.length}>
-            {pkgs.map((pkg, i) => (
-              <li key={pkg.id}>
-                {pkgs.length > 1 && <span className={styles.step}>{String(i + 1).padStart(2, "0")}</span>}
-                <PriceCard pkg={pkg} lang={lang} />
-              </li>
-            ))}
-          </ol>
-          <a className={pricing.proof} href={localePath(lang, "/pricing")}>
-            {dict.services.more}
-          </a>
-        </section>
-
-        <section className={styles.section} aria-labelledby="proof-title">
-          <header className={styles.head}>
-            <h2 id="proof-title">{page.proofTitle[lang]}</h2>
-          </header>
-          <div className={styles.exhibits}>
-            {proof.map(({ slug: s, data }) => (
-              <a key={s} className={styles.exhibit} href={localePath(lang, `/${s}`)}>
-                <span className={styles.frame}>
-                  <Image src={`/og/${s}.jpg`} alt="" fill sizes="(max-width: 900px) 92vw, 30vw" />
-                </span>
-                <span className={styles.exName}>{data!.title.replace(/\n/g, " ")}</span>
-                <span className={styles.exKind}>{data!.kind}</span>
-                {data!.stats[0] && (
-                  <span className={styles.exStat}>
-                    <strong>{data!.stats[0].value}</strong> {data!.stats[0].label}
-                  </span>
-                )}
+        {single ? (
+          <section className={styles.section} aria-labelledby="path-title">
+            <header className={styles.head}>
+              <h2 id="path-title">{page.pathTitle[lang]}</h2>
+              <p>{page.pathLede[lang]}</p>
+            </header>
+            <div className={styles.pair}>
+              <PriceCard pkg={pkgs[0]} lang={lang} />
+              <div>
+                <h3 className={styles.pairTitle}>{page.proofTitle[lang]}</h3>
+                {exhibits}
+              </div>
+            </div>
+            <a className={pricing.proof} href={localePath(lang, "/pricing")}>
+              {dict.services.more}
+            </a>
+          </section>
+        ) : (
+          <>
+            <section className={styles.section} aria-labelledby="path-title">
+              <header className={styles.head}>
+                <h2 id="path-title">{page.pathTitle[lang]}</h2>
+                <p>{page.pathLede[lang]}</p>
+              </header>
+              <ol className={styles.path} data-count={pkgs.length}>
+                {pkgs.map((pkg, i) => (
+                  <li key={pkg.id}>
+                    <span className={styles.step}>{String(i + 1).padStart(2, "0")}</span>
+                    <PriceCard pkg={pkg} lang={lang} />
+                  </li>
+                ))}
+              </ol>
+              <a className={pricing.proof} href={localePath(lang, "/pricing")}>
+                {dict.services.more}
               </a>
-            ))}
-          </div>
-        </section>
+            </section>
+            <section className={styles.section} aria-labelledby="proof-title">
+              <header className={styles.head}>
+                <h2 id="proof-title">{page.proofTitle[lang]}</h2>
+              </header>
+              {exhibits}
+            </section>
+          </>
+        )}
 
         <section className={styles.section} aria-labelledby="faq-title">
           <header className={styles.head}>

@@ -2,12 +2,12 @@
   "en": {
     "slug": "rentalica",
     "meta": {
-      "title": "Rentalica - Rebuilding a Decade-Old System | LumiVerse",
+      "title": "Rentalica – Rebuilding a Decade-Old System | LumiVerse",
       "description": "Rebuilding a 10-year-old PHP 5.6 rent-a-car system as a modern multi-tenant SaaS: parity first, verified data migration, rehearsed cutover, then beyond."
     },
     "kind": "Our Product · Legacy Modernization",
     "title": "Rentalica",
-    "subtitle": "A rent-a-car back-office that ran for over ten years on PHP 5.6, rebuilt as a modern multi-tenant SaaS - carrying a decade of bookings, contracts and documents across without asking a single user to reset their password. Then taken well past where the old system could go.",
+    "subtitle": "A rent-a-car back-office that ran for over ten years on PHP 5.6, rebuilt as a modern multi-tenant SaaS – carrying a decade of bookings, contracts and documents across without asking a single user to reset their password. Then taken well past where the old system could go.",
     "ctas": [
       {
         "label": "View Rentalica",
@@ -60,14 +60,14 @@
     "sections": [
       {
         "title": "Software That Still Worked",
-        "lede": "FlexiRent wasn't broken. It ran a real rent-a-car business every day for a decade. It was just standing on a stack the world had moved off - and that's a harder problem than a rewrite of something nobody uses.",
+        "lede": "FlexiRent wasn't broken. It ran a real rent-a-car business every day for a decade. It was just standing on a stack the world had moved off – and that's a harder problem than a rewrite of something nobody uses.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "What Was Running",
-                "body": "PHP 5.6 on Ubuntu 14.04 - both long past end of life\nA bespoke in-house PHP MVC framework, ~55k lines\nMySQL 5.5 with no foreign keys - relations enforced in app code\nJSON hidden inside TEXT columns, permissions stored as CSV\n440 MB of contracts and scans on a single server's disk"
+                "body": "PHP 5.6 on Ubuntu 14.04 – both long past end of life\nA bespoke in-house PHP MVC framework, ~55k lines\nMySQL 5.5 with no foreign keys – relations enforced in app code\nJSON hidden inside TEXT columns, permissions stored as CSV\n440 MB of contracts and scans on a single server's disk"
               },
               {
                 "title": "Why Rewrites Like This Fail",
@@ -92,7 +92,7 @@
             "items": [
               {
                 "title": "Domain Fluency, Not Guesswork",
-                "body": "Croatian rental specifics - OIB checksums, AO and kasko insurance, registration and periodic inspection dates\nPricing rules that include partner splits and provisions\nContract PDFs that have to keep printing exactly as before\nWorkflows mirrored closely enough that switching needs no retraining"
+                "body": "Croatian rental specifics – OIB checksums, AO and kasko insurance, registration and periodic inspection dates\nPricing rules that include partner splits and provisions\nContract PDFs that have to keep printing exactly as before\nWorkflows mirrored closely enough that switching needs no retraining"
               }
             ]
           }
@@ -111,7 +111,7 @@
               },
               {
                 "title": "Boot the Old App Locally",
-                "body": "PHP 5.6, Apache and MySQL packaged into Docker so the legacy system ran on a laptop. Not to keep it alive - to have a reference implementation to compare against, screen by screen, number by number."
+                "body": "PHP 5.6, Apache and MySQL packaged into Docker so the legacy system ran on a laptop. Not to keep it alive – to have a reference implementation to compare against, screen by screen, number by number."
               },
               {
                 "title": "Write the Analysis First",
@@ -119,7 +119,7 @@
               },
               {
                 "title": "Rebuild to Parity",
-                "body": "A faithful replica on the new stack - same screens, same numbers, no new ideas - tagged and frozen as the rollback point. Improvements were not allowed until this version matched the old one."
+                "body": "A faithful replica on the new stack – same screens, same numbers, no new ideas – tagged and frozen as the rollback point. Improvements were not allowed until this version matched the old one."
               },
               {
                 "title": "Migrate, Then Prove It",
@@ -136,7 +136,7 @@
             "items": [
               {
                 "title": "The Detail That Made Switching Painless",
-                "body": "The legacy system stored passwords as bcrypt hashes. Bcrypt is bcrypt - the new backend verifies those same hashes directly. So every user kept the exact username and password they already had. No reset emails, no support calls, no \"we've migrated, here are your new credentials\" message. The old system's file uploads were carried over the same way: same documents, same links, still downloadable."
+                "body": "The legacy system stored passwords as bcrypt hashes. Bcrypt is bcrypt – the new backend verifies those same hashes directly. So every user kept the exact username and password they already had. No reset emails, no support calls, no \"we've migrated, here are your new credentials\" message. The old system's file uploads were carried over the same way: same documents, same links, still downloadable."
               }
             ]
           }
@@ -195,14 +195,14 @@
       },
       {
         "title": "We Didn't Stop at a Copy",
-        "lede": "A faithful replica was the safety requirement, not the goal. Once the data was proven and the old system still sat there as a rollback, the new foundation started earning its keep - with capabilities a PHP 5.6 stack was never going to carry.",
+        "lede": "A faithful replica was the safety requirement, not the goal. Once the data was proven and the old system still sat there as a rollback, the new foundation started earning its keep – with capabilities a PHP 5.6 stack was never going to carry.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "Analytics That Answer the Only Question That Matters",
-                "body": "Most fleet software reports revenue. Rentalica reports what's left. Every cost is entered once with a period - one-off, monthly or annual - then spread across the months it actually covers and charged to the vehicle that incurred it. Leasing, liability and comprehensive insurance, registration, tyres, servicing and fuel all land on the right van.\n\nNet result per vehicle - the number nobody had before\nBreak-even view: does this month's income cover the fleet?\nWeekly digest: vehicles in deficit, idle assets, expiring policies, unpaid rentals\nFleet composition on any past date, for capacity planning\nPartner splits and provisions handled inside the maths"
+                "body": "Most fleet software reports revenue. Rentalica reports what's left. Every cost is entered once with a period – one-off, monthly or annual – then spread across the months it actually covers and charged to the vehicle that incurred it. Leasing, liability and comprehensive insurance, registration, tyres, servicing and fuel all land on the right van.\n\nNet result per vehicle – the number nobody had before\nBreak-even view: does this month's income cover the fleet?\nWeekly digest: vehicles in deficit, idle assets, expiring policies, unpaid rentals\nFleet composition on any past date, for capacity planning\nPartner splits and provisions handled inside the maths"
               },
               {
                 "title": "Receipts That Fill In Their Own Form",
@@ -210,15 +210,15 @@
               },
               {
                 "title": "An Assistant That Speaks Croatian and SQL",
-                "body": "Ask which passenger van does the fewest kilometres a month, in plain Croatian, and get three things back: the answer, the table it came from, and the exact query that produced it. Nothing is hidden behind a chat bubble - the operator can check the work before trusting it.\n\nQuestions in Croatian, answers with the query shown\nProfit questions routed to the real P&L engine, never approximated\nFuzzy vehicle matching, so a typo still finds the right van\nDurable instructions - tell it once that a car is private, it remembers"
+                "body": "Ask which passenger van does the fewest kilometres a month, in plain Croatian, and get three things back: the answer, the table it came from, and the exact query that produced it. Nothing is hidden behind a chat bubble – the operator can check the work before trusting it.\n\nQuestions in Croatian, answers with the query shown\nProfit questions routed to the real P&L engine, never approximated\nFuzzy vehicle matching, so a typo still finds the right van\nDurable instructions – tell it once that a car is private, it remembers"
               },
               {
                 "title": "Document Scanning, Kept In-House",
-                "body": "Driving licences, ID cards, passports and vehicle registrations are classified and read by a self-hosted OCR service, so the scans stay on your own infrastructure. Machine-readable zones are parsed with their ICAO check digits - a clean read validates itself."
+                "body": "Driving licences, ID cards, passports and vehicle registrations are classified and read by a self-hosted OCR service, so the scans stay on your own infrastructure. Machine-readable zones are parsed with their ICAO check digits – a clean read validates itself."
               },
               {
                 "title": "A Document Archive Worth the Name",
-                "body": "Every upload lands in one place and is searchable by what's written inside it, because the extracted text is stored next to the file. A link table records what each document is attached to - so you can go from a document back to its vehicle, cost or contract, and find the ones attached to nothing."
+                "body": "Every upload lands in one place and is searchable by what's written inside it, because the extracted text is stored next to the file. A link table records what each document is attached to – so you can go from a document back to its vehicle, cost or contract, and find the ones attached to nothing."
               },
               {
                 "title": "Contacts, Grown Into a CRM",
@@ -234,22 +234,22 @@
       },
       {
         "title": "Letting AI Near a Real Database",
-        "lede": "An assistant that writes queries against a live business is only as trustworthy as the thing standing between it and the data. These limits are enforced in code and in PostgreSQL - not politely requested in a prompt.",
+        "lede": "An assistant that writes queries against a live business is only as trustworthy as the thing standing between it and the data. These limits are enforced in code and in PostgreSQL – not politely requested in a prompt.",
         "blocks": [
           {
             "type": "steps",
             "items": [
               {
                 "title": "Whitelisted, Not Trusted",
-                "body": "Every generated statement is parsed into a syntax tree and each table it touches is enumerated - including the ones buried in subqueries and comma joins. Anything outside the approved set is rejected before it reaches the database. Staff accounts and password hashes are permanently out of reach."
+                "body": "Every generated statement is parsed into a syntax tree and each table it touches is enumerated – including the ones buried in subqueries and comma joins. Anything outside the approved set is rejected before it reaches the database. Staff accounts and password hashes are permanently out of reach."
               },
               {
                 "title": "Isolation You Can't Talk Your Way Past",
-                "body": "Before execution, every referenced table is rewritten as a filtered view of that tenant's rows, so an unqualified query resolves to the right data by construction rather than by good behaviour. Common table expressions are refused outright - one could otherwise redefine that filter."
+                "body": "Before execution, every referenced table is rewritten as a filtered view of that tenant's rows, so an unqualified query resolves to the right data by construction rather than by good behaviour. Common table expressions are refused outright – one could otherwise redefine that filter."
               },
               {
                 "title": "Read-Only at the Database",
-                "body": "Queries run inside a read-only transaction with a statement timeout and a hard row cap, and that transaction is always rolled back. A write isn't declined by the model's better judgement - it cannot happen on that connection."
+                "body": "Queries run inside a read-only transaction with a statement timeout and a hard row cap, and that transaction is always rolled back. A write isn't declined by the model's better judgement – it cannot happen on that connection."
               }
             ]
           }

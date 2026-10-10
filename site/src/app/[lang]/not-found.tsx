@@ -1,6 +1,7 @@
 import { lang as rootLang } from "next/root-params";
 import { Header } from "@/components/chrome/Header";
 import { Figure } from "@/components/icons/Figure";
+import { flagships } from "@/content/work";
 import { hasLocale, homeAnchor, localePath, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import styles from "./not-found.module.css";
@@ -31,6 +32,16 @@ export default async function NotFound() {
           <a href={homeAnchor(lang, "work")}>{t.work}</a>
           <a href={homeAnchor(lang, "contact")}>{t.contact}</a>
         </nav>
+        <ul className={styles.flagships}>
+          {flagships.map((f) => (
+            <li key={f.id}>
+              <a href={localePath(lang, `/${f.slug}`)}>
+                <strong>{f.name}</strong>
+                <span>{f.kind[lang]}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </main>
     </>
   );

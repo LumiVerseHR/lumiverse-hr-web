@@ -2,13 +2,13 @@
   "en": {
     "slug": "moj-kolega",
     "meta": {
-      "title": "Moj Kolega - An AI Employee for Your Webshop | LumiVerse",
+      "title": "Moj Kolega – An AI Employee for Your Webshop | LumiVerse",
       "description": "A managed AI employee for your webshop: it answers customers, recommends from your catalogue, captures leads and escalates to your team, 24/7."
     },
     "kind": "Our Product · AI Employee",
     "title": "Moj Kolega",
     "titleNote": "(My Colleague)",
-    "subtitle": "An AI employee for your webshop. It answers customers, recommends from your catalogue, captures the leads you'd lose after hours, and hands off to your team when it should - 24/7. We set it up, watch it, and improve it every month. You see results, not another chatbot.",
+    "subtitle": "An AI employee for your webshop. It answers customers, recommends from your catalogue, captures the leads you'd lose after hours, and hands off to your team when it should – 24/7. We set it up, watch it, and improve it every month. You see results, not another chatbot.",
     "ctas": [
       {
         "label": "Visit Moj Kolega",
@@ -68,11 +68,11 @@
             "items": [
               {
                 "title": "Grounded, Never Invented",
-                "body": "Answers only from your catalogue and policies\nWhen the data isn't there, it says so and escalates - it doesn't guess\nProduct picks come with a reason to buy, from your catalogue only\nEvery answer is traceable to the source it came from"
+                "body": "Answers only from your catalogue and policies\nWhen the data isn't there, it says so and escalates – it doesn't guess\nProduct picks come with a reason to buy, from your catalogue only\nEvery answer is traceable to the source it came from"
               },
               {
                 "title": "Managed, Not DIY",
-                "body": "You don't get a prompt editor and a model picker. You hire a role - Sales, Support or Reception - and we do the rest: set it up, connect your catalogue, and test it against real questions before it goes live.\n\nThen every month we send a report of what your customers asked, what the agent handled alone, what it missed, and what we changed. The improvement is the product, not a dashboard you have to babysit."
+                "body": "You don't get a prompt editor and a model picker. You hire a role – Sales, Support or Reception – and we do the rest: set it up, connect your catalogue, and test it against real questions before it goes live.\n\nThen every month we send a report of what your customers asked, what the agent handled alone, what it missed, and what we changed. The improvement is the product, not a dashboard you have to babysit."
               }
             ]
           }
@@ -87,32 +87,32 @@
             "items": [
               {
                 "title": "Answers, Grounded",
-                "body": "From your catalogue and policies. When it doesn't know, it says so and hands off - it never guesses and costs you a sale.",
+                "body": "From your catalogue and policies. When it doesn't know, it says so and hands off – it never guesses and costs you a sale.",
                 "meta": "01"
               },
               {
                 "title": "Recommends the Right Product",
-                "body": "Two or three picks for the need and the budget, each with a reason to buy - drawn from your catalogue, never invented.",
+                "body": "Two or three picks for the need and the budget, each with a reason to buy – drawn from your catalogue, never invented.",
                 "meta": "02"
               },
               {
                 "title": "Captures Leads You'd Lose",
-                "body": "Wholesale, B2B and undecided buyers - qualified, with the full conversation, on your desk by morning instead of gone by dawn.",
+                "body": "Wholesale, B2B and undecided buyers – qualified, with the full conversation, on your desk by morning instead of gone by dawn.",
                 "meta": "03"
               },
               {
                 "title": "Escalates Safely",
-                "body": "When it's out of its depth, it hands off to your team with the full context - a clean handoff, not a bluff.",
+                "body": "When it's out of its depth, it hands off to your team with the full context – a clean handoff, not a bluff.",
                 "meta": "04"
               },
               {
                 "title": "Speaks Your Customers' Language",
-                "body": "Detects the visitor's language on every message and replies in it - Croatian, English, Slovenian, Serbian and German.",
+                "body": "Detects the visitor's language on every message and replies in it – Croatian, English, Slovenian, Serbian and German.",
                 "meta": "05"
               },
               {
                 "title": "Works the Night Shift",
-                "body": "The hours your team is offline are when leads slip away. Moj Kolega covers them - and hands you the night's conversations in the morning.",
+                "body": "The hours your team is offline are when leads slip away. Moj Kolega covers them – and hands you the night's conversations in the morning.",
                 "meta": "06"
               }
             ]
@@ -121,14 +121,14 @@
       },
       {
         "title": "One Script, Grounded in Your Shop",
-        "lede": "Moj Kolega drops onto any site as a single widget - but the work behind it is what makes it trustworthy.",
+        "lede": "Moj Kolega drops onto any site as a single widget – but the work behind it is what makes it trustworthy.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "An Embeddable Widget",
-                "body": "One script tag on any site. It streams answers token by token, knows which page the visitor is on, matches their language on every message, and can be switched on or off remotely - no redeploy.\n\nStreaming chat over SSE, page-context aware\nPer-message language matching and configurable appearance\nRemote on/off and roll-out without touching the host site"
+                "body": "One script tag on any site. It streams answers token by token, knows which page the visitor is on, matches their language on every message, and can be switched on or off remotely – no redeploy.\n\nStreaming chat over SSE, page-context aware\nPer-message language matching and configurable appearance\nRemote on/off and roll-out without touching the host site"
               },
               {
                 "title": "Knowledge From Your Catalogue",
@@ -136,7 +136,7 @@
               },
               {
                 "title": "Duties: Work in the Background",
-                "body": "Beyond the chat, the agent runs scheduled duties for the shop - catalogue audits, monitors, a weekly commerce analysis, even write-backs to your store - each one drafted for review before anything actually changes."
+                "body": "Beyond the chat, the agent runs scheduled duties for the shop – catalogue audits, monitors, a weekly commerce analysis, even write-backs to your store – each one drafted for review before anything actually changes."
               },
               {
                 "title": "Hard to Trick",
@@ -149,7 +149,7 @@
             "items": [
               {
                 "title": "Built On",
-                "body": "Next.js 16 and React 19 on the front end; FastAPI with async SQLAlchemy on the backend and agent runtime; Celery and Redis for crawls and scheduled duties; PostgreSQL 17 with pgvector for storage and hybrid search - all in Docker, bilingual in Croatian and English. The interesting engineering isn't the model; it's everything that keeps the model honest."
+                "body": "Next.js 16 and React 19 on the front end; FastAPI with async SQLAlchemy on the backend and agent runtime; Celery and Redis for crawls and scheduled duties; PostgreSQL 17 with pgvector for storage and hybrid search – all in Docker, bilingual in Croatian and English. The interesting engineering isn't the model; it's everything that keeps the model honest."
               }
             ]
           }

@@ -9,6 +9,8 @@ export type Landing = {
   meta: { title: Text; description: Text };
   title: Text;
   subtitle: Text;
+  /** The hero action, named for this audience. */
+  cta: Text;
   /** Packages shown as the offer, in order; the first one is preselected in the brief. */
   packages: string[];
   pathTitle: Text;
@@ -33,8 +35,9 @@ export const landings: Record<Landing["slug"], Landing> = {
     title: { en: "A senior tech lead, inside your team", hr: "Senior tech lead, unutar Vašeg tima" },
     subtitle: {
       en: "Architecture, reviews and release sign-off from someone who ships with your team, not from a deck.",
-      hr: "Arhitektura, code review i odobravanje izdanja od nekoga tko isporučuje s Vašim timom, a ne iz prezentacije.",
+      hr: "Arhitektura, code review i odobravanje izdanja od nekoga tko radi s Vašim timom, a ne iz prezentacija.",
     },
+    cta: { en: "Talk about your team", hr: "Razgovarajmo o timu" },
     packages: ["embedded-tech-lead"],
     pathTitle: { en: "What you get", hr: "Što dobivate" },
     pathLede: {
@@ -59,11 +62,12 @@ export const landings: Record<Landing["slug"], Landing> = {
       en: "You have the idea and the market. We bring senior engineering: test it on real people, build the product, then stay on as your tech lead.",
       hr: "Vi imate ideju i tržište. Mi donosimo senior inženjerstvo: provjerimo ideju na stvarnim ljudima, izgradimo proizvod, a zatim ostajemo kao Vaš tech lead.",
     },
+    cta: { en: "Start with a prototype", hr: "Krenite s prototipom" },
     packages: ["ai-prototype", "custom-ai-build", "embedded-tech-lead"],
     pathTitle: { en: "One path, three steps", hr: "Jedan put, tri koraka" },
     pathLede: {
-      en: "Each step has a fixed price in writing before it starts, and each one feeds the next.",
-      hr: "Svaki korak ima fiksnu cijenu u pisanom obliku prije početka, i svaki se nastavlja u sljedeći.",
+      en: "Each step is priced in writing before it starts, and each one feeds the next.",
+      hr: "Svaki korak ima cijenu u pisanom obliku prije početka, i svaki se nastavlja u sljedeći.",
     },
     proofTitle: { en: "We do it for ourselves first", hr: "Prvo to radimo za sebe" },
     proof: ["titlomat", "tvrtko", "moj-kolega"],

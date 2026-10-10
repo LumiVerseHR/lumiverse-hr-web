@@ -11,7 +11,8 @@
     "contact": "Contact",
     "cta": "Start a Project",
     "menu": "Menu",
-    "close": "Close"
+    "close": "Close",
+    "pricing": "Pricing"
   },
   "hero": {
     "titleLines": [
@@ -35,7 +36,7 @@
   },
   "flagships": {
     "title": "Humans, Amplified.",
-    "lede": "Three rooms of the model, opened up. Real products, a real platform, and real research, each with the number that proves it.",
+    "lede": "Our own product, a platform we run, and our research. Each one with the number that proves it.",
     "open": "Open the case study"
   },
   "thesis": {
@@ -44,7 +45,7 @@
       "Judgement isn’t."
     ],
     "body": "Every model can write the code, the article, the level. That part gets cheaper every quarter. What we bring is the part after the model: the checks, the cross-references and the human sign-off that decide whether its output is allowed to ship.",
-    "link": "Read: the moat is the verifier, not the generator",
+    "link": "The moat is the verifier, not the generator",
     "href": "/blog/verifier-not-generator"
   },
   "index": {
@@ -54,13 +55,9 @@
   },
   "services": {
     "title": "Pick how we work together",
-    "lede": "Three ways in, each with a fixed price in writing before we start.",
+    "lede": "Three ways in, each priced in writing before we start.",
     "doorsTitle": "Looking for something specific?",
     "doors": [
-      {
-        "label": "Croatian business? Fixed-price AI packages",
-        "href": "/pricing"
-      },
       {
         "label": "Need a senior tech lead inside your team",
         "href": "/tech-lead"
@@ -75,7 +72,8 @@
   "notes": {
     "title": "Notes from the workbench",
     "all": "All posts",
-    "read": "min read"
+    "read": "min read",
+    "langNote": ""
   },
   "studio": {
     "title": "Small studio, unreasonable range",
@@ -132,7 +130,9 @@
     "studio": "Studio",
     "contact": "Contact",
     "rights": "All rights reserved.",
-    "cookies": "Cookie preferences"
+    "cookies": "Cookie preferences",
+    "pricing": "Pricing",
+    "blog": "Blog"
   },
   "consent": {
     "text": "We use analytics cookies to see what’s working.",
@@ -142,11 +142,11 @@
   },
   "notFound": {
     "code": "404",
-    "title": "Lost in the void",
-    "body": "The page you’re looking for doesn’t exist or has been moved. Let’s get you back on track.",
-    "home": "Back to Home",
+    "title": "Nothing hangs here",
+    "body": "This page moved or never existed. The work is still on the wall.",
+    "home": "Back to home",
     "services": "Services",
-    "work": "Our Work",
+    "work": "Our work",
     "contact": "Contact",
     "meta": "404 - Page Not Found | LumiVerse"
   },
@@ -158,6 +158,7 @@
     "showcase": "Screens",
     "show": "Show",
     "prevShot": "Previous screen",
-    "nextShot": "Next screen"
+    "nextShot": "Next screen",
+    "closingCta": "Tell us what you're building"
   }
 }

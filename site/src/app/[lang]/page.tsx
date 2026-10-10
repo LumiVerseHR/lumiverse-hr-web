@@ -42,11 +42,6 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           <a className={styles.link} href="#work">{dict.hero.secondary}</a>
         </div>
       </div>
-
-      <a className={styles.scrollHint} href="#work">
-        {dict.hero.scrollHint}
-        <Icon name="arrow-down" size={16} />
-      </a>
     </section>
     <Flagships lang={lang} dict={dict} />
     <Thesis lang={lang} dict={dict} />

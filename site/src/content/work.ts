@@ -28,7 +28,7 @@ export const flagships: Flagship[] = [
     stat: { value: "24/7", unit: { en: "on shift", hr: "na smjeni" } },
     summary: {
       en: "A managed AI employee for your webshop. It answers customers, recommends from your catalogue, captures leads and escalates to your team. We set it up and improve it every month.",
-      hr: "Vođeni AI zaposlenik za Vaš webshop. Odgovara kupcima, preporučuje iz Vašeg kataloga, prikuplja upite i prosljeđuje ih Vašem timu. Mi ga postavljamo i svaki mjesec poboljšavamo.",
+      hr: "AI zaposlenik za Vaš webshop. Odgovara kupcima, preporučuje iz Vašeg kataloga, prikuplja upite i prosljeđuje ih Vašem timu. Mi ga postavljamo i svaki mjesec poboljšavamo.",
     },
   },
   {
@@ -40,8 +40,8 @@ export const flagships: Flagship[] = [
       en: "Bridj landing page: the intelligence layer between conversations and what the business does next",
       hr: "Naslovnica Bridja: sloj inteligencije između razgovora i onoga što tvrtka radi sljedeće",
     },
-    kind: { en: "Embedded tech lead · UK", hr: "Ugrađeni tech lead · UK" },
-    stat: { value: "17", unit: { en: "services, signed off", hr: "servisa, s potpisom" } },
+    kind: { en: "Embedded tech lead · UK", hr: "Tech lead u timu klijenta · UK" },
+    stat: { value: "17", unit: { en: "services, every release signed off", hr: "servisa, svako izdanje s našim potpisom" } },
     summary: {
       en: "A year and counting as embedded tech lead for a UK intelligence platform: a 17-service system with an AI agent layer, multi-cloud infrastructure, and the final sign-off on every release.",
       hr: "Više od godinu dana kao ugrađeni tech lead britanske platforme za poslovnu inteligenciju: sustav od 17 servisa sa slojem AI agenata, multi-cloud infrastrukturom i završnom riječju na svakom izdanju.",

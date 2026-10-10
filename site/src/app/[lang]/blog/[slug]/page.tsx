@@ -83,13 +83,6 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
             <span aria-hidden>/</span>
             <Link href="/blog">{s.blog}</Link>
           </nav>
-          {m.tags.length > 0 && (
-            <p className={styles.tags}>
-              {m.tags.map((tag) => (
-                <span key={tag}>{tag}</span>
-              ))}
-            </p>
-          )}
           <h1 className={styles.postTitle}>{m.title}</h1>
           <p className={styles.lede}>{m.description}</p>
           <div className={styles.byline}>
@@ -99,6 +92,7 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
               <span className={styles.bylineMeta}>
                 {author.role[lang]} · <time dateTime={m.date}>{date.format(new Date(m.date))}</time> · {m.minutes} {s.min}
               </span>
+              {m.tags.length > 0 && <span className={styles.tags}>{m.tags.join(" · ")}</span>}
             </div>
           </div>
           {/* Posts are our own Markdown, rendered at build time. */}

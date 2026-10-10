@@ -39,8 +39,8 @@ export async function Footer({ lang, dict }: { lang: Locale; dict: Dictionary })
             <h2 className={styles.colTitle}>{dict.footer.studio}</h2>
             <ul>
               <li><a href={homeAnchor(lang, "services")}>{dict.nav.services}</a></li>
-              <li><a href={localePath(lang, "/pricing")}>{dict.services.more}</a></li>
-              <li><Link href="/blog">{dict.notes.title}</Link></li>
+              <li><a href={localePath(lang, "/pricing")}>{dict.footer.pricing}</a></li>
+              <li><Link href={lang === "hr" ? "/hr/blog" : "/blog"}>{dict.footer.blog}</Link></li>
               <li><a href={homeAnchor(lang, "studio")}>{dict.nav.studio}</a></li>
             </ul>
           </div>

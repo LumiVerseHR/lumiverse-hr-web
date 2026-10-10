@@ -28,6 +28,7 @@ export async function Notes({ lang, dict }: { lang: Locale; dict: Dictionary }) 
                   <time dateTime={post.date}>{date.format(new Date(post.date))}</time>
                   <span aria-hidden> · </span>
                   {post.minutes} {dict.notes.read}
+                  {dict.notes.langNote && <span className={styles.lang} lang={lang}> · {dict.notes.langNote}</span>}
                 </span>
                 <span className={styles.title}>{post.title}</span>
                 <span className={styles.description}>{post.description}</span>

@@ -2,12 +2,12 @@
   "en": {
     "slug": "aimito",
     "meta": {
-      "title": "The Aimito - A Store With a Content Engine Inside It | LumiVerse",
+      "title": "The Aimito – A Store With a Content Engine Inside It | LumiVerse",
       "description": "A comic-book apparel brand for developers: 889 original designs, cross-modal vibe search over CLIP embeddings, and artwork generated as a build step."
     },
     "kind": "Our Product · Commerce & Content Engine",
     "title": "The Aimito",
-    "subtitle": "A comic-book apparel brand for developers - 889 original designs, a search that takes a feeling instead of a keyword, and a pipeline that makes new artwork a build step rather than a budget line.",
+    "subtitle": "A comic-book apparel brand for developers – 889 original designs, a search that takes a feeling instead of a keyword, and a pipeline that makes new artwork a build step rather than a budget line.",
     "ctas": [
       {
         "label": "Visit The Aimito",
@@ -65,7 +65,7 @@
             "type": "text",
             "paragraphs": [
               "The Aimito.\nSay it out loud: daj mi to.",
-              "In English it reads \"the AI-mito.\" In Croatian it's \"gimme that\" - the exact sound an impulse buy makes. The AI angle and the purchase intent, hiding in the same four syllables. The buy button on every product just says Gimme that.",
+              "In English it reads \"the AI-mito.\" In Croatian it's \"gimme that\" – the exact sound an impulse buy makes. The AI angle and the purchase intent, hiding in the same four syllables. The buy button on every product just says Gimme that.",
               "The site is English-only. The Croatian is saved as a reveal on the About page, not sprinkled through the UI."
             ]
           }
@@ -73,18 +73,18 @@
       },
       {
         "title": "A Tribe With Nothing Good to Wear",
-        "lede": "Developers are one of the most identity-driven, meme-fluent and well-paid groups on the internet. They already buy clothing to signal who they are - conference tees, company swag, \"it's always DNS\" mugs. The trigger is humour plus belonging, and it repeats.",
+        "lede": "Developers are one of the most identity-driven, meme-fluent and well-paid groups on the internet. They already buy clothing to signal who they are – conference tees, company swag, \"it's always DNS\" mugs. The trigger is humour plus belonging, and it repeats.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "What They're Offered Instead",
-                "body": "Enormous unmoderated marketplaces - vast selection, thin quality, trademark landmines, no brand to belong to\nOne-joke shops with a dozen shirts and no reason to ever come back\nCompany swag stores, which have a world but aren't funny and aren't for sale to the tribe\n\nNobody owns the curated lane: original art, a brand world, and a way to find the thing you meant."
+                "body": "Enormous unmoderated marketplaces – vast selection, thin quality, trademark landmines, no brand to belong to\nOne-joke shops with a dozen shirts and no reason to ever come back\nCompany swag stores, which have a world but aren't funny and aren't for sale to the tribe\n\nNobody owns the curated lane: original art, a brand world, and a way to find the thing you meant."
               },
               {
                 "title": "Why Now",
-                "body": "\"AI slop.\" Vibe coding. The confidently wrong model. An entire comedic seam opened up in the last two years and nobody had mined it properly - which is why two of the ten squads are AI Slop and AI Voices.\n\nEvery design is original artwork, which turns the marketplaces' structural weakness - takedowns and trademark risk - into a moat instead of a threat."
+                "body": "\"AI slop.\" Vibe coding. The confidently wrong model. An entire comedic seam opened up in the last two years and nobody had mined it properly – which is why two of the ten squads are AI Slop and AI Voices.\n\nEvery design is original artwork, which turns the marketplaces' structural weakness – takedowns and trademark risk – into a moat instead of a threat."
               }
             ]
           }
@@ -99,11 +99,11 @@
             "items": [
               {
                 "title": "Generate",
-                "body": "A local generation stack produces artwork in batches - no per-image API bill, no external rights questions, and the freedom to throw most of it away."
+                "body": "A local generation stack produces artwork in batches – no per-image API bill, no external rights questions, and the freedom to throw most of it away."
               },
               {
                 "title": "Curate",
-                "body": "A quality and diversity pass prunes hard. Generation is cheap, so the catalogue is defined by what gets cut - the same lesson the game taught us about taste being the scarce input."
+                "body": "A quality and diversity pass prunes hard. Generation is cheap, so the catalogue is defined by what gets cut – the same lesson the game taught us about taste being the scarce input."
               },
               {
                 "title": "Produce",
@@ -134,11 +134,11 @@
             "items": [
               {
                 "title": "Search That Takes a Feeling",
-                "body": "Type \"3am on-call despair\" or \"npm chaos\" and get the shirt you meant. The query and the artwork live in one shared embedding space, so text finds images directly - no keyword tagging, no manual taxonomy across 889 designs. Product pages use the same vectors in reverse for visually similar neighbours.\n\nCLIP embeddings served by a dedicated microservice\nPostgreSQL with pgvector, HNSW-indexed for fast nearest-neighbour\nTrigram fallback, so the search box is never useless\nThe killer feature for gift buyers: \"shirt for my programmer boyfriend\""
+                "body": "Type \"3am on-call despair\" or \"npm chaos\" and get the shirt you meant. The query and the artwork live in one shared embedding space, so text finds images directly – no keyword tagging, no manual taxonomy across 889 designs. Product pages use the same vectors in reverse for visually similar neighbours.\n\nCLIP embeddings served by a dedicated microservice\nPostgreSQL with pgvector, HNSW-indexed for fast nearest-neighbour\nTrigram fallback, so the search box is never useless\nThe killer feature for gift buyers: \"shirt for my programmer boyfriend\""
               },
               {
                 "title": "A Model That Checks the Art",
-                "body": "A multimodal model running on local hardware reviews designs at publish time - reading back the text, catching botched background removal, and flagging anything not print-worthy. No cloud call, no per-image cost."
+                "body": "A multimodal model running on local hardware reviews designs at publish time – reading back the text, catching botched background removal, and flagging anything not print-worthy. No cloud call, no per-image cost."
               },
               {
                 "title": "Most of It Isn't Prompting",
@@ -146,11 +146,11 @@
               },
               {
                 "title": "A Measured Print Box",
-                "body": "The exact printable area of each garment was measured by printing a calibration pattern through the fulfiller's own mockup generator and reading the result back - not estimated."
+                "body": "The exact printable area of each garment was measured by printing a calibration pattern through the fulfiller's own mockup generator and reading the result back – not estimated."
               },
               {
                 "title": "The Audit That Caught 65",
-                "body": "A pre-launch sweep of all 889 designs found 65 with no print-resolution file - every one of which would have handed the printer a dead link on a real order. All 65 were regenerated and upscaled before anyone could buy them."
+                "body": "A pre-launch sweep of all 889 designs found 65 with no print-resolution file – every one of which would have handed the printer a dead link on a real order. All 65 were regenerated and upscaled before anyone could buy them."
               },
               {
                 "title": "No Mockup Slop",
@@ -181,7 +181,7 @@
           {
             "type": "text",
             "paragraphs": [
-              "The storefront is live, the catalogue is full, and the purchase path - checkout, tax, fulfilment, confirmation email - is wired end to end against real providers.",
+              "The storefront is live, the catalogue is full, and the purchase path – checkout, tax, fulfilment, confirmation email – is wired end to end against real providers.",
               "What's left is the part no pipeline can automate: distribution. Getting the first hundred people to find it, wear it, and tell someone. That's the honest state of it, and it's the phase the whole engine was built to make survivable on a bootstrapped budget."
             ]
           },
@@ -199,7 +199,7 @@
             "items": [
               {
                 "title": "Why This Is in Our Portfolio",
-                "body": "The Aimito is the commercial version of a thesis we keep testing: when generation gets cheap, the advantage moves to whoever built the machinery around it - the curation pass, the deterministic composition, the automated quality check, the loop that feeds sales data back into what gets made next. A brand that manufactures its own catalogue and its own marketing is just the clearest way to demonstrate that. The same engine works for anyone whose growth is throttled by how much content they can afford to produce."
+                "body": "The Aimito is the commercial version of a thesis we keep testing: when generation gets cheap, the advantage moves to whoever built the machinery around it – the curation pass, the deterministic composition, the automated quality check, the loop that feeds sales data back into what gets made next. A brand that manufactures its own catalogue and its own marketing is just the clearest way to demonstrate that. The same engine works for anyone whose growth is throttled by how much content they can afford to produce."
               }
             ]
           }
@@ -208,7 +208,7 @@
     ],
     "closing": {
       "title": "Content as a Build Step",
-      "body": "If your growth is limited by how much content you can afford to make, that's a pipeline problem, not a budget problem. Go look at the store first - then let's talk about yours.",
+      "body": "If your growth is limited by how much content you can afford to make, that's a pipeline problem, not a budget problem. Go look at the store first – then let's talk about yours.",
       "cta": {
         "label": "Visit The Aimito",
         "href": "https://theaimito.com",

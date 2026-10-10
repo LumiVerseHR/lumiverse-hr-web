@@ -2,12 +2,12 @@
   "en": {
     "slug": "lider-translations",
     "meta": {
-      "title": "Lider Translations - One Newsroom, Ten Languages | LumiVerse",
+      "title": "Lider Translations – One Newsroom, Ten Languages | LumiVerse",
       "description": "One Croatian newsroom translated into ten languages: around 1.4 million articles across eleven WordPress sites, refreshed daily by an AI pipeline."
     },
     "kind": "Client Work · AI Translation",
     "title": "Lider Translations",
-    "subtitle": "One Croatian newsroom, translated into ten languages and published as ten more live news sites - around 1.4 million articles in all, kept current every day by a pipeline that runs itself.",
+    "subtitle": "One Croatian newsroom, translated into ten languages and published as ten more live news sites – around 1.4 million articles in all, kept current every day by a pipeline that runs itself.",
     "ctas": [
       {
         "label": "View a Live Site",
@@ -66,35 +66,18 @@
     "sections": [
       {
         "title": "One Newsroom, Ten Languages",
-        "lede": "Lider publishes Croatian business news. The job was to make that same journalism readable to the rest of the world - not a handful of hand-picked pieces, but the whole archive, every day, in ten languages, each on its own real news site.",
+        "lede": "Lider publishes Croatian business news. The job was to make that same journalism readable to the rest of the world – not a handful of hand-picked pieces, but the whole archive, every day, in ten languages, each on its own real news site.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "The Same Story, Everywhere",
-                "body": ""
+                "body": "Title, subhead, body, tags, category, author and image all carried from the Croatian original\nEach language is its own live site on its own subdomain, not a toggle on one install\nThe full archive – print and web – not a curated sample\nEach day's new articles fan out to all ten languages automatically"
               },
               {
                 "title": "Why Ten Direct Translations Don't Scale",
-                "body": "Translating Croatian straight into ten languages means ten independent, expensive paths - and for a smaller source language the quality wobbles most on the rarer pairs. Getting Croatian to Japanese well is harder, and costs more, than getting English to Japanese.\n\nSo English does the heavy lifting in the middle. Croatian is translated once into clean English, and every other language is translated from that. One good pivot instead of ten brittle ones - better output, a fraction of the cost."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Title, subhead, body, tags, category, author and image all carried from the Croatian original"
-              },
-              {
-                "body": "Each language is its own live site on its own subdomain, not a toggle on one install"
-              },
-              {
-                "body": "The full archive - print and web - not a curated sample"
-              },
-              {
-                "body": "Each day's new articles fan out to all ten languages automatically"
+                "body": "Translating Croatian straight into ten languages means ten independent, expensive paths – and for a smaller source language the quality wobbles most on the rarer pairs. Getting Croatian to Japanese well is harder, and costs more, than getting English to Japanese.\n\nSo English does the heavy lifting in the middle. Croatian is translated once into clean English, and every other language is translated from that. One good pivot instead of ten brittle ones – better output, a fraction of the cost."
               }
             ]
           }
@@ -109,15 +92,15 @@
             "items": [
               {
                 "title": "Pull From Source",
-                "body": "New Croatian articles are read straight from Lider's database - web stories every day, the full print-and-web archive for the initial backfill - ordered newest first."
+                "body": "New Croatian articles are read straight from Lider's database – web stories every day, the full print-and-web archive for the initial backfill – ordered newest first."
               },
               {
                 "title": "Croatian → English",
-                "body": "A fast, low-cost model translates each article into English first - title, subhead, body HTML, tags and category - validated against the same schema the database is shaped by."
+                "body": "A fast, low-cost model translates each article into English first – title, subhead, body HTML, tags and category – validated against the same schema the database is shaped by."
               },
               {
                 "title": "English → Nine Languages",
-                "body": "From that clean English, the same model fans out to German, French, Italian, Spanish, Russian, Turkish, Chinese, Japanese and Hungarian - one strong pivot instead of nine brittle direct pairs."
+                "body": "From that clean English, the same model fans out to German, French, Italian, Spanish, Russian, Turkish, Chinese, Japanese and Hungarian – one strong pivot instead of nine brittle direct pairs."
               },
               {
                 "title": "Carry the Metadata",
@@ -125,11 +108,11 @@
               },
               {
                 "title": "Publish to WordPress",
-                "body": "A batch WordPress API pushes finished articles to each language's site - tens to hundreds a minute - with images and categories in place. Correcting tags alone re-runs 10-20x cheaper than a full retranslation."
+                "body": "A batch WordPress API pushes finished articles to each language's site – tens to hundreds a minute – with images and categories in place. Correcting tags alone re-runs 10-20x cheaper than a full retranslation."
               },
               {
                 "title": "Run It Every Day",
-                "body": "A daily job translates the day's new stories, syncs all ten sites, clears caches and reports back - throttled to match the newsroom's real publishing rate so it never burns tokens on noise."
+                "body": "A daily job translates the day's new stories, syncs all ten sites, clears caches and reports back – throttled to match the newsroom's real publishing rate so it never burns tokens on noise."
               }
             ]
           },
@@ -138,7 +121,7 @@
             "items": [
               {
                 "title": "Cheap by Design",
-                "body": "Volume like this only works if each article costs almost nothing. A fast, low-cost model; one English pivot instead of ten direct paths; tag-only re-runs for small fixes; and a batch publish API instead of one-at-a-time posting - together they turn \"translate a whole newsroom into ten languages, forever\" from a budget line into a background process."
+                "body": "Volume like this only works if each article costs almost nothing. A fast, low-cost model; one English pivot instead of ten direct paths; tag-only re-runs for small fixes; and a batch publish API instead of one-at-a-time posting – together they turn \"translate a whole newsroom into ten languages, forever\" from a budget line into a background process."
               }
             ]
           }
@@ -146,14 +129,14 @@
       },
       {
         "title": "Eleven Sites, One Pipeline",
-        "lede": "Each language is a full, standalone news site - not a language switch on a single install. They share the pipeline and the design, and stay isolated everywhere it counts.",
+        "lede": "Each language is a full, standalone news site – not a language switch on a single install. They share the pipeline and the design, and stay isolated everywhere it counts.",
         "blocks": [
           {
             "type": "cards",
             "items": [
               {
                 "title": "A WordPress Instance Per Language",
-                "body": "Every language runs its own WordPress on its own subdomain, with the Croatian source at hr.lider.media. Separate installs mean one site's problem never becomes another's."
+                "body": "Every language runs its own WordPress on its own subdomain, with the Croatian source at hr.lider.media. Separate installs mean one site's problem never becomes another's.\n\nen, de, fr, it, es, ru, tr, zh, jp, hu · lider.media – plus the Croatian original\nCustom fields carry Lider's original author, image and caption onto every post\nCroatian keeps its own premium magazine theme; the ten others share one"
               },
               {
                 "title": "One Theme, Copied Out",
@@ -161,25 +144,11 @@
               },
               {
                 "title": "A Media Server in the Middle",
-                "body": "Images aren't re-uploaded ten times. A small dedicated media service stores each article's imagery once and serves it to every language site behind nginx - so a photo published in Croatian shows up identically in Japanese, with none of the duplication."
+                "body": "Images aren't re-uploaded ten times. A small dedicated media service stores each article's imagery once and serves it to every language site behind nginx – so a photo published in Croatian shows up identically in Japanese, with none of the duplication."
               },
               {
                 "title": "Findable, Not Just Live",
-                "body": "Every site is server-rendered WordPress with its own sitemaps, analytics and Search Console - real pages a search engine can index in each language, not a client-side translation widget bolted onto one site."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "en, de, fr, it, es, ru, tr, zh, jp, hu . lider.media - plus the Croatian original"
-              },
-              {
-                "body": "Custom fields carry Lider's original author, image and caption onto every post"
-              },
-              {
-                "body": "Croatian keeps its own premium magazine theme; the ten others share one"
+                "body": "Every site is server-rendered WordPress with its own sitemaps, analytics and Search Console – real pages a search engine can index in each language, not a client-side translation widget bolted onto one site."
               }
             ]
           }
@@ -187,7 +156,7 @@
       },
       {
         "title": "Eleven Sites, Live Right Now",
-        "lede": "Every number here is a live post count, pulled from each site today. The Croatian source feeds all ten - and because the translated sites carry Lider's full print back-catalogue too, each one runs even more articles than the live Croatian web mirror.",
+        "lede": "Every number here is a live post count, pulled from each site today. The Croatian source feeds all ten – and because the translated sites carry Lider's full print back-catalogue too, each one runs even more articles than the live Croatian web mirror.",
         "blocks": [
           {
             "type": "sites",
@@ -321,7 +290,7 @@
     ],
     "closing": {
       "title": "Want to Reach a Global Audience?",
-      "body": "Lider Translations turns one newsroom's daily output into ten more live sites, automatically. If you publish content that deserves a wider audience - news, catalogues, documentation - that's the kind of pipeline we build.",
+      "body": "Lider Translations turns one newsroom's daily output into ten more live sites, automatically. If you publish content that deserves a wider audience – news, catalogues, documentation – that's the kind of pipeline we build.",
       "cta": {
         "label": "See starting prices",
         "href": "/pricing"
@@ -390,7 +359,7 @@
         "label": "Jezika na koje se redakcija prevodi"
       },
       {
-        "value": "~1.4M",
+        "value": "~1,4 mil.",
         "label": "Prevedenih i objavljenih članaka"
       },
       {
@@ -408,28 +377,11 @@
             "items": [
               {
                 "title": "Ista priča, svugdje",
-                "body": ""
+                "body": "Naslov, podnaslov, tekst, oznake, kategorija, autor i slika prenose se iz hrvatskog izvornika\nSvaki je jezik zasebna živa stranica na vlastitoj poddomeni, a ne prekidač na jednoj instalaciji\nCijela arhiva — tiskana i web — a ne odabrani uzorak\nNovi članci svakog dana automatski se granaju na svih deset jezika"
               },
               {
                 "title": "Zašto deset izravnih prijevoda ne skalira",
                 "body": "Prevoditi hrvatski izravno na deset jezika znači deset neovisnih i skupih putova — a kod manjeg izvornog jezika kvaliteta najviše titra na rjeđim parovima. Dobro prevesti hrvatski na japanski teže je, i skuplje, nego engleski na japanski.\n\nZato engleski nosi teret u sredini. Hrvatski se jednom prevede na čist engleski, a svi se ostali jezici prevode iz njega. Jedan dobar oslonac umjesto deset krhkih — bolji rezultat, uz djelić troška."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "Naslov, podnaslov, tekst, oznake, kategorija, autor i slika prenose se iz hrvatskog izvornika"
-              },
-              {
-                "body": "Svaki je jezik zasebna živa stranica na vlastitoj poddomeni, a ne prekidač na jednoj instalaciji"
-              },
-              {
-                "body": "Cijela arhiva — tiskana i web — a ne odabrani uzorak"
-              },
-              {
-                "body": "Novi članci svakog dana automatski se granaju na svih deset jezika"
               }
             ]
           }
@@ -488,7 +440,7 @@
             "items": [
               {
                 "title": "Jedna WordPress instanca po jeziku",
-                "body": "Svaki jezik vrti vlastiti WordPress na vlastitoj poddomeni, a hrvatski je izvor na hr.lider.media. Odvojene instalacije znače da problem jedne stranice nikad ne postane problem druge."
+                "body": "Svaki jezik vrti vlastiti WordPress na vlastitoj poddomeni, a hrvatski je izvor na hr.lider.media. Odvojene instalacije znače da problem jedne stranice nikad ne postane problem druge.\n\nen, de, fr, it, es, ru, tr, zh, jp, hu · lider.media — uz hrvatski izvornik\nVlastita polja prenose Liderova izvornog autora, sliku i potpis na svaku objavu\nHrvatski zadržava vlastitu premium temu magazina, ostalih deset dijeli jednu"
               },
               {
                 "title": "Jedna tema za sve stranice",
@@ -501,20 +453,6 @@
               {
                 "title": "Pronalazivo, ne samo objavljeno",
                 "body": "Svaka je stranica WordPress generiran na poslužitelju, s vlastitim sitemapovima, analitikom i Search Consoleom — prave stranice koje tražilica može indeksirati na svakom jeziku, a ne widget za prijevod prikvačen na jednu stranicu."
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              {
-                "body": "en, de, fr, it, es, ru, tr, zh, jp, hu . lider.media — uz hrvatski izvornik"
-              },
-              {
-                "body": "Vlastita polja prenose Liderova izvornog autora, sliku i potpis na svaku objavu"
-              },
-              {
-                "body": "Hrvatski zadržava vlastitu premium temu magazina, ostalih deset dijeli jednu"
               }
             ]
           }
@@ -534,7 +472,7 @@
                 "badge": "Izvor",
                 "stats": [
                   {
-                    "value": "34,644",
+                    "value": "34.644",
                     "label": "Izvornih članaka (uživo)"
                   }
                 ]
@@ -545,7 +483,7 @@
                 "href": "https://en.lider.media",
                 "stats": [
                   {
-                    "value": "141,865",
+                    "value": "141.865",
                     "label": "Prevedenih članaka, objavljeno"
                   }
                 ]
@@ -556,7 +494,7 @@
                 "href": "https://de.lider.media",
                 "stats": [
                   {
-                    "value": "141,718",
+                    "value": "141.718",
                     "label": "Prevedenih članaka, objavljeno"
                   }
                 ]
@@ -567,7 +505,7 @@
                 "href": "https://fr.lider.media",
                 "stats": [
                   {
-                    "value": "141,697",
+                    "value": "141.697",
                     "label": "Prevedenih članaka, objavljeno"
                   }
                 ]
@@ -578,7 +516,7 @@
                 "href": "https://it.lider.media",
                 "stats": [
                   {
-                    "value": "141,731",
+                    "value": "141.731",
                     "label": "Prevedenih članaka, objavljeno"
                   }
                 ]
@@ -589,7 +527,7 @@
                 "href": "https://es.lider.media",
                 "stats": [
                   {
-                    "value": "141,704",
+                    "value": "141.704",
                     "label": "Prevedenih članaka, objavljeno"
                   }
                 ]
@@ -600,7 +538,7 @@
                 "href": "https://jp.lider.media",
                 "stats": [
                   {
-                    "value": "141,742",
+                    "value": "141.742",
                     "label": "Prevedenih članaka, objavljeno"
                   }
                 ]
@@ -611,7 +549,7 @@
                 "href": "https://zh.lider.media",
                 "stats": [
                   {
-                    "value": "141,759",
+                    "value": "141.759",
                     "label": "Prevedenih članaka, objavljeno"
                   }
                 ]
@@ -622,7 +560,7 @@
                 "href": "https://ru.lider.media",
                 "stats": [
                   {
-                    "value": "141,641",
+                    "value": "141.641",
                     "label": "Prevedenih članaka, objavljeno"
                   }
                 ]
@@ -633,7 +571,7 @@
                 "href": "https://tr.lider.media",
                 "stats": [
                   {
-                    "value": "141,724",
+                    "value": "141.724",
                     "label": "Prevedenih članaka, objavljeno"
                   }
                 ]
@@ -644,7 +582,7 @@
                 "href": "https://hu.lider.media",
                 "stats": [
                   {
-                    "value": "141,710",
+                    "value": "141.710",
                     "label": "Prevedenih članaka, objavljeno"
                   }
                 ]

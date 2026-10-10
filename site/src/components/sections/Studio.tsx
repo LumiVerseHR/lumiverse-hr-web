@@ -1,5 +1,4 @@
 import type { Dictionary } from "@/i18n/dictionaries";
-import { Figure } from "@/components/icons/Figure";
 import s from "./sections.module.css";
 import styles from "./Studio.module.css";
 
@@ -17,9 +16,9 @@ export function Studio({ dict }: { dict: Dictionary }) {
           </p>
         </div>
         <ul className={styles.principles}>
-          {dict.studio.principles.map((p, i) => (
+          {dict.studio.principles.map((p) => (
             <li key={p.title} className={styles.principle}>
-              <Figure height={34} pointing={i === 1} />
+              <span className={styles.dash} aria-hidden />
               <div>
                 <h3 className={styles.pTitle}>{p.title}</h3>
                 <p className={styles.pBody}>{p.body}</p>
