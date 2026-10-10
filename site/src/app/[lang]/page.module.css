@@ -50,8 +50,10 @@
 
 .actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: clamp(20px, 1.7vw, 28px);
+  /* The Croatian pair is wider than a 390px phone; the link drops under the button instead. */
+  gap: 14px clamp(20px, 1.7vw, 28px);
   margin-top: clamp(16px, 1vw, 16px);
 }
 

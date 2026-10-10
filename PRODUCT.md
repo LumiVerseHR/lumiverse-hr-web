@@ -31,7 +31,7 @@ Three claims, layered and ranked:
 2. **Senior range, shipped (the proof).** A small senior team that has shipped across very different domains: newsrooms, SaaS rebuilds, physics R&D, games, BI, commerce.
 3. **Builders who own products (the credibility).** Titlomat, Tvrtko.ai and Moj Kolega run in production with real users, so client work is built the way owners build.
 
-Primary slogan: **"We build Better Humans."** Alternative slogans are being explored; none is confirmed yet.
+Primary slogan: **"Human Imagination. AI Speed."** (HR: **"Ljudska mašta. AI brzina."**), chosen 2026-10-10. It replaces "We build Better Humans.", which is retired.
 
 ## Operating Context
 

@@ -97,3 +97,28 @@ Running notes for a possible blog post. Every number here comes from the code or
   `transparent_max_bounces = 64` brought it to 0.
 - Both steps now live in versioned scripts, `design-src/render_layers.py` and `design-src/export_paths.py`, so every
   render resets every flag (shadow catcher, holdout, visibility) instead of inheriting the last pass.
+
+## Round 3: "shadows are missing or incorrect below the figurines"
+### Diagnosis (measured, not guessed)
+- The key is a spot at (6, -3, 8), so it throws both shadows to the left. The man stands 0.27 units from the left
+  rim, and his shadow tip lands at radius 3.6 when the plinth's radius is 2.75. Almost all of it falls off the plinth.
+- The plinth is near-black (albedo 0.006) and glossy. The bright patch the man stands in is not light falling on
+  the surface. It is the mirror image of the 5x5 m fill panel. A figure cannot visibly shadow a reflection of a
+  light that large.
+- The stand-in meshes were blocky, so any sharp shadow showed the wrong shape.
+
+### What did not work (kept here for honesty)
+1. Crossed shadow cards facing the key plus a grey plinth: this killed the black-gallery look, and the man was still unshadowed.
+2. Moving the key to the front right, then high front: the shadows went back toward the centre, but the man's spot
+   is lit by the fill's reflection, so nothing showed.
+3. Cycles light linking to stop the fill reaching the plinth: this fixed the reflection but turned the plinth grey.
+Each attempt traded away the approved look to chase physical correctness.
+
+### What shipped: planar shadows
+- The lighting is exactly as approved. Each figure gets a planar shadow: its own alpha silhouette laid on the plinth
+  along the real key-light direction, with length from similar triangles (man 1.29, woman 0.75).
+- The silhouette is pre-blurred in four steps (3, 10, 22 and 36 px). It is sharp at the soles and soft toward the head, the way a
+  penumbra widens with distance from the occluder, and fades from 95% to 30% opacity.
+- The shader clips it at radius 2.71, so the man's shadow drops off the plinth edge like a real one.
+- The contact shadows were reweighted, curve first and then a 55% peak. Before, the curve was applied after
+  scaling and capped them at 13%.

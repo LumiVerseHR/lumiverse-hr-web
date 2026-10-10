@@ -1,7 +1,7 @@
 """Render the hero layers from hero-exhibits.blend (run inside Blender).
 
 Every layer comes from the same camera, so the browser can stack them pixel-perfectly:
-  stage.png             plinth, figures, their shadows, contacts and reflections
+  stage.png             plinth, figures, their cast and contact shadows
   solid-<product>.png   one device with its screen; plinth catches its shadow, figures cut holes
   wire-<device>.png     Freestyle edges of one device only, gold, everything else transparent
 
@@ -30,9 +30,10 @@ def _reset(show=None, stage=False):
         o.hide_render = False
     figs = bpy.data.collections["Figures"].objects
     for o in figs:
-        # Shadow stand-ins and contact shadows belong to the stage layer only, or they would
+        # Planar shadows (each figure's blurred silhouette laid on the plinth along the key light,
+        # clipped at the rim) and contact shadows belong to the stage layer only, or they would
         # darken the plinth twice once the layers are stacked.
-        if o.name.startswith(("Figure_", "Contact_")):
+        if o.name.startswith(("ShadowDecal_", "Contact_")):
             o.hide_render = not stage
     bpy.data.objects["Floor"].is_shadow_catcher = True
     sc.render.film_transparent = True
