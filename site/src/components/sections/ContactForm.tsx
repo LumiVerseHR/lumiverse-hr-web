@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import { PICK_EVENT } from "@/components/pricing/PickPackage";
 import type { Locale } from "@/i18n/config";
 import { Icon } from "@/components/icons/Icon";
+import { PackageSelect } from "./PackageSelect";
 import styles from "./Contact.module.css";
 
 type Option = { id: string; name: string };
@@ -82,20 +83,17 @@ export function ContactForm({ lang, copy, groups, preset = "" }: { lang: Locale;
           </span>
           <input name="company" autoComplete="organization" maxLength={150} aria-invalid={invalid("company")} />
         </label>
-        <label className={styles.field}>
+        <div className={styles.field}>
           <span>{copy.need}</span>
-          <select name="package" value={pkg} onChange={(e) => setPkg(e.target.value)} aria-invalid={invalid("package")}>
-            <option value="">{copy.notSure}</option>
-            {groups.map((g) => (
-              <optgroup key={g.label} label={g.label}>
-                {g.items.map((o) => (
-                  <option key={o.id} value={o.id}>{o.name}</option>
-                ))}
-              </optgroup>
-            ))}
-            <option value="other">{copy.other}</option>
-          </select>
-        </label>
+          <PackageSelect
+            value={pkg}
+            onChange={setPkg}
+            groups={groups}
+            none={copy.notSure}
+            other={copy.other}
+            invalid={invalid("package")}
+          />
+        </div>
       </div>
       <label className={styles.field}>
         <span>{copy.message}</span>
