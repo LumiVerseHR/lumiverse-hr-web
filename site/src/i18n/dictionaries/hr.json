@@ -12,7 +12,8 @@
     "cta": "Pokrenite projekt",
     "menu": "Izbornik",
     "close": "Zatvori",
-    "pricing": "Cijene"
+    "pricing": "Cijene",
+    "packages": "Paketi"
   },
   "hero": {
     "titleLines": [
@@ -20,7 +21,11 @@
       "mašta.",
       "AI brzina."
     ],
-    "titleCycle": ["Ljudska\nmašta.\nAI brzina.", "Ljudska\nprosudba.\nAI brzina.", "Ljudski\nukus.\nAI brzina."],
+    "titleCycle": [
+      "Ljudska\nmašta.\nAI brzina.",
+      "Ljudska\nprosudba.\nAI brzina.",
+      "Ljudski\nukus.\nAI brzina."
+    ],
     "subline": "AI produktni studio u Zagrebu. Ambiciozni proizvodi, isporučeni i provjereni.",
     "cta": "Pokrenite projekt",
     "secondary": "Pogledajte reference",
@@ -38,7 +43,8 @@
   "flagships": {
     "title": "Ljudi koji mogu više.",
     "lede": "Naš proizvod, platforma koju vodimo i naše istraživanje. Svaki s brojem koji to dokazuje.",
-    "open": "Otvorite referencu"
+    "open": "Otvorite referencu",
+    "all": "Svi radovi"
   },
   "thesis": {
     "lines": [
@@ -68,7 +74,9 @@
         "href": "/hr/technical-founder"
       }
     ],
-    "more": "Pogledajte sve pakete i cijene"
+    "more": "Pogledajte sve pakete i cijene",
+    "how": "Kako radimo",
+    "upskillTitle": "Ili osposobite vlastiti tim za rad s AI‑jem"
   },
   "notes": {
     "title": "Bilješke iz radionice",
@@ -133,7 +141,9 @@
     "rights": "Sva prava pridržana.",
     "cookies": "Postavke kolačića",
     "pricing": "Cijene",
-    "blog": "Blog"
+    "blog": "Blog",
+    "research": "Istraživanje",
+    "packages": "Paketi"
   },
   "consent": {
     "text": "Koristimo analitičke kolačiće da vidimo što funkcionira.",
@@ -161,5 +171,45 @@
     "prevShot": "Prethodni zaslon",
     "nextShot": "Sljedeći zaslon",
     "closingCta": "Recite nam što gradite"
+  },
+  "contactBand": {
+    "title": "Imate nešto za izgraditi?",
+    "lede": "Opišite nam to u nekoliko redaka. Odgovaramo u roku od 24 sata, s iskrenim mišljenjem o opsegu i cijeni."
+  },
+  "pages": {
+    "work": {
+      "label": "Radovi",
+      "title": "Radovi - AI proizvodi, platforme i istraživanje | LumiVerse",
+      "description": "{count} studija slučaja: naši AI proizvodi, rad tech leada u timovima klijenata i neovisno istraživanje, svaka s brojem koji to dokazuje."
+    },
+    "services": {
+      "label": "Usluge",
+      "title": "Usluge - kako s Vama gradimo AI proizvode | LumiVerse",
+      "description": "Tri načina suradnje: AI prototip u tjedan dana, razvoj cijelog proizvoda ili senior tech lead u Vašem timu. Uz radionice koje Vaš tim osposobljavaju za rad s AI-jem."
+    },
+    "research": {
+      "label": "Istraživanje",
+      "title": "Istraživanje - agentno inženjerstvo i provjera AI-ja | LumiVerse",
+      "description": "Neovisno istraživanje LumiVersea: studija fizike od 49 stranica koju je izračunala jedna petlja AI agenata i bilješke o provjeri AI rezultata prije objave.",
+      "heading": "Teški problemi, provjereni dvaput",
+      "intro": "Prije nego što metoda uđe u rad za klijente, isprobavamo je ondje gdje su greške skupe i lako se vide. Fizika, evaluacija, petlje agenata: svaki rezultat provjeravamo unakrsno, a onaj koji ne prođe provjeru povlačimo.",
+      "notesTitle": "Bilješke iz istraživanja"
+    },
+    "studio": {
+      "label": "Studio",
+      "title": "Studio - AI produktni studio iz Zagreba | LumiVerse",
+      "description": "LumiVerse d.o.o. je AI produktni studio iz Zagreba koji vodi osnivač. Gradimo vlastite proizvode i ulazimo u timove da izgradimo njihove.",
+      "company": "Podaci o tvrtki",
+      "name": "Tvrtka",
+      "address": "Adresa",
+      "oib": "OIB",
+      "court": "Sudski registar (MBS)"
+    },
+    "contact": {
+      "label": "Kontakt",
+      "title": "Kontakt - pokrenite projekt s LumiVerseom | LumiVerse",
+      "description": "Recite nam što gradite. Odgovaramo u roku od 24 sata, iz Zagreba."
+    },
+    "home": "Početna"
   }
 }

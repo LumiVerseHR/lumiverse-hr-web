@@ -2,21 +2,42 @@ import Image from "next/image";
 import type { Locale } from "@/i18n/config";
 import { localePath } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
-import { flagships } from "@/content/work";
+import { flagships, type Flagship } from "@/content/work";
 import { Icon } from "@/components/icons/Icon";
 import s from "./sections.module.css";
 import styles from "./Flagships.module.css";
 
-export function Flagships({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+// `bare` drops the heading when the page's own h1 already says it; `only` narrows the exhibits;
+// `more` adds the link to the full work page (the homepage teaser).
+export function Flagships({
+  lang,
+  dict,
+  bare = false,
+  only,
+  more = false,
+}: {
+  lang: Locale;
+  dict: Dictionary;
+  bare?: boolean;
+  only?: Flagship["id"][];
+  more?: boolean;
+}) {
+  const shown = only ? flagships.filter((f) => only.includes(f.id)) : flagships;
   return (
-    <section id="work" className={`${s.section} ${s.wallLight}`} aria-labelledby="work-title">
+    <section
+      id={bare ? undefined : "work"}
+      className={`${s.section} ${s.wallLight} ${bare ? s.tight : ""}`}
+      aria-labelledby={bare ? "page-title" : "work-title"}
+    >
       <div className={s.inner}>
-        <header className={s.head}>
-          <h2 id="work-title" className={s.title}>{dict.flagships.title}</h2>
-          <p className={s.lede}>{dict.flagships.lede}</p>
-        </header>
-        <div className={styles.exhibits}>
-          {flagships.map((f) => (
+        {!bare && (
+          <header className={s.head}>
+            <h2 id="work-title" className={s.title}>{dict.flagships.title}</h2>
+            <p className={s.lede}>{dict.flagships.lede}</p>
+          </header>
+        )}
+        <div className={styles.exhibits} data-count={shown.length}>
+          {shown.map((f) => (
             <article key={f.id} id={f.id === "air-laser" ? "research" : undefined} className={styles.exhibit}>
               <a href={localePath(lang, `/${f.slug}`)} className={styles.frame} aria-label={`${f.name}: ${dict.flagships.open}`}>
                 <Image src={f.image} alt={f.alt[lang]} fill sizes="(max-width: 900px) 92vw, 30vw" className={styles.shot} />
@@ -37,6 +58,12 @@ export function Flagships({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             </article>
           ))}
         </div>
+        {more && (
+          <a href={localePath(lang, "/work")} className={`${s.arrowLink} ${styles.more}`}>
+            {dict.flagships.all}
+            <Icon name="arrow-right" size={16} />
+          </a>
+        )}
       </div>
     </section>
   );

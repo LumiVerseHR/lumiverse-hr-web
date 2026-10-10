@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
-import { homeAnchor, localePath } from "@/i18n/config";
+import { localePath } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { Icon } from "@/components/icons/Icon";
 import { MobileMenu } from "@/components/nav/MobileMenu";
@@ -23,15 +23,17 @@ export function Header({
   switchTo?: Record<Locale, string>;
 }) {
   const target = switchTo ?? { en: localePath("en", path), hr: localePath("hr", path) };
-  const items = [
-    { href: homeAnchor(lang, "work"), label: dict.nav.work },
-    { href: homeAnchor(lang, "services"), label: dict.nav.services },
-    { href: localePath(lang, "/pricing"), label: dict.nav.pricing },
-    { href: homeAnchor(lang, "research"), label: dict.nav.research },
-    { href: homeAnchor(lang, "studio"), label: dict.nav.studio },
-    { href: homeAnchor(lang, "contact"), label: dict.nav.contact },
-  ];
-  const cta = { href: homeAnchor(lang, "contact"), label: dict.nav.cta };
+  // Every item is its own page; the one you're on is marked.
+  const items = (
+    [
+      ["/work", dict.nav.work],
+      ["/services", dict.nav.services],
+      ["/pricing", dict.nav.pricing],
+      ["/research", dict.nav.research],
+      ["/studio", dict.nav.studio],
+    ] as const
+  ).map(([to, label]) => ({ href: localePath(lang, to), label, current: path === to || path.startsWith(`${to}/`) }));
+  const cta = { href: localePath(lang, "/contact"), label: dict.nav.cta };
 
   return (
     <header className={`${styles.bar} ${overlay ? styles.overlay : styles.page}`}>
@@ -40,7 +42,9 @@ export function Header({
       </Link>
       <nav className={styles.nav} aria-label="Primary">
         {items.map((item) => (
-          <a key={item.href} href={item.href}>{item.label}</a>
+          <a key={item.href} href={item.href} aria-current={item.current ? "page" : undefined}>
+            {item.label}
+          </a>
         ))}
       </nav>
       <div className={styles.end}>

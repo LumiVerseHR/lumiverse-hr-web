@@ -2,13 +2,18 @@ import type { Dictionary } from "@/i18n/dictionaries";
 import s from "./sections.module.css";
 import styles from "./Studio.module.css";
 
-export function Studio({ dict }: { dict: Dictionary }) {
+// `bare`: on the studio page the h1 carries the title, so only the body and principles remain.
+export function Studio({ dict, bare = false }: { dict: Dictionary; bare?: boolean }) {
   return (
-    <section id="studio" className={`${s.section} ${s.wallLight}`} aria-labelledby="studio-title">
+    <section
+      id={bare ? undefined : "studio"}
+      className={`${s.section} ${s.wallLight} ${bare ? s.tight : ""}`}
+      aria-labelledby={bare ? "page-title" : "studio-title"}
+    >
       <div className={`${s.inner} ${styles.layout}`}>
         <div>
-          <h2 id="studio-title" className={s.title}>{dict.studio.title}</h2>
-          <p className={s.lede}>{dict.studio.body}</p>
+          {!bare && <h2 id="studio-title" className={s.title}>{dict.studio.title}</h2>}
+          <p className={bare ? styles.body : s.lede}>{dict.studio.body}</p>
           <p className={styles.founder}>{dict.studio.founder}</p>
           <p className={styles.links}>
             <a href="https://github.com/LumiVerseHR" rel="me noopener" target="_blank">GitHub</a>

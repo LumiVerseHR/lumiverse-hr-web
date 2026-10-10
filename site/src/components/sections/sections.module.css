@@ -56,3 +56,8 @@
   gap: 12px;
   color: var(--coral);
 }
+
+/* The first section under an inner page's own heading: the heading already made the space. */
+.tight {
+  padding-top: clamp(40px, 4.5vw, 72px);
+}

@@ -17,7 +17,7 @@
       },
       {
         "label": "Build Something Similar",
-        "href": "/#contact"
+        "href": "/contact"
       }
     ],
     "showcase": [
@@ -166,7 +166,7 @@
       },
       "secondary": {
         "label": "Talk to Us",
-        "href": "/#contact"
+        "href": "/contact"
       }
     }
   },
@@ -187,7 +187,7 @@
       },
       {
         "label": "Napravite nešto slično",
-        "href": "/hr#contact"
+        "href": "/hr/contact"
       }
     ],
     "showcase": [
@@ -336,7 +336,7 @@
       },
       "secondary": {
         "label": "Razgovarajmo",
-        "href": "/hr#contact"
+        "href": "/hr/contact"
       }
     }
   }

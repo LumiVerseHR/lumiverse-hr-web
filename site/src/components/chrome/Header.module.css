@@ -56,6 +56,13 @@
   transition: color 160ms ease-out;
 }
 
+.nav a[aria-current="page"] {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-underline-offset: 0.45em;
+}
+
 .nav a:hover {
   color: var(--coral);
 }

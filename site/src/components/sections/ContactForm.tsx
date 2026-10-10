@@ -24,12 +24,17 @@ export function ContactForm({ lang, copy, groups, preset = "" }: { lang: Locale;
   const [state, setState] = useState<State>({ kind: "idle" });
   const [pkg, setPkg] = useState(preset);
 
-  // A price card's call to action preselects its package.
+  // A price card's call to action preselects its package, and so does ?package=<id> in the URL
+  // (a package page's order button), read in the browser so the page stays static.
   useEffect(() => {
     const pick = (e: Event) => setPkg((e as CustomEvent<string>).detail);
     window.addEventListener(PICK_EVENT, pick);
+    const fromUrl = new URLSearchParams(window.location.search).get("package");
+    if (fromUrl && groups.some((g) => g.items.some((item) => item.id === fromUrl))) {
+      window.dispatchEvent(new CustomEvent(PICK_EVENT, { detail: fromUrl }));
+    }
     return () => window.removeEventListener(PICK_EVENT, pick);
-  }, []);
+  }, [groups]);
 
   const markOpened = () => {
     openedAt.current ??= Date.now();

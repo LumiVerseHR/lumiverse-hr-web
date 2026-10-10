@@ -16,7 +16,7 @@
       },
       {
         "label": "Build One For Your Brand",
-        "href": "/#contact"
+        "href": "/contact"
       }
     ],
     "showcase": [
@@ -216,7 +216,7 @@
       },
       "secondary": {
         "label": "Start a Project",
-        "href": "/#contact"
+        "href": "/contact"
       }
     }
   },
@@ -237,7 +237,7 @@
       },
       {
         "label": "Napravite ovakvo nešto za svoj brend",
-        "href": "/hr#contact"
+        "href": "/hr/contact"
       }
     ],
     "showcase": [
@@ -437,7 +437,7 @@
       },
       "secondary": {
         "label": "Pokrenite projekt",
-        "href": "/hr#contact"
+        "href": "/hr/contact"
       }
     }
   }

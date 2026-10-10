@@ -7,7 +7,7 @@ import styles from "@/components/pricing/Pricing.module.css";
 import { Contact } from "@/components/sections/Contact";
 import { inGroup, packages, products } from "@/content/packages.mjs";
 import { t } from "@/content/pricing-i18n.mjs";
-import { hasLocale, homeAnchor, localePath, type Locale } from "@/i18n/config";
+import { hasLocale, localePath, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { jsonLdHtml } from "@/lib/jsonld";
 
@@ -114,7 +114,7 @@ export default async function PricingPage({ params }: PageProps<"/[lang]/pricing
               {s.heroCta}
               <Icon name="arrow-right" size={16} />
             </a>
-            <a className={styles.secondary} href={homeAnchor(lang, "work")}>{s.heroSecondary}</a>
+            <a className={styles.secondary} href={localePath(lang, "/work")}>{s.heroSecondary}</a>
           </div>
           <ul className={styles.jump}>
             {groups.map((g) => (

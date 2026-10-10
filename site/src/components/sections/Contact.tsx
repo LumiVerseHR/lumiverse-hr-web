@@ -9,7 +9,8 @@ import styles from "./Contact.module.css";
 type Pkg = { id: string; en: { name: string }; hr: { name: string } };
 const GROUPS = [["engagement", "engagements"], ["upskill", "upskill"], ["system", "systems"]] as const;
 
-export function Contact({ lang, dict, preset }: { lang: Locale; dict: Dictionary; preset?: string }) {
+// `bare`: on the contact page the h1 carries the title and lede.
+export function Contact({ lang, dict, preset, bare = false }: { lang: Locale; dict: Dictionary; preset?: string; bare?: boolean }) {
   const c = dict.contact;
   const f = form[lang] as Record<string, string>;
   const groups = GROUPS.map(([group, label]) => ({
@@ -18,11 +19,19 @@ export function Contact({ lang, dict, preset }: { lang: Locale; dict: Dictionary
   }));
 
   return (
-    <section id="contact" className={`${s.section} ${s.wallLight}`} aria-labelledby="contact-title">
+    <section
+      id="contact"
+      className={`${s.section} ${s.wallLight} ${bare ? s.tight : ""}`}
+      aria-labelledby={bare ? "page-title" : "contact-title"}
+    >
       <div className={`${s.inner} ${styles.layout}`}>
         <div>
-          <h2 id="contact-title" className={s.title}>{c.title}</h2>
-          <p className={s.lede}>{c.lede}</p>
+          {!bare && (
+            <>
+              <h2 id="contact-title" className={s.title}>{c.title}</h2>
+              <p className={s.lede}>{c.lede}</p>
+            </>
+          )}
           <dl className={styles.details}>
             <div>
               <dt>{c.office}</dt>

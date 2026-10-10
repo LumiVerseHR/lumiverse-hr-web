@@ -227,7 +227,7 @@
       },
       "secondary": {
         "label": "Start a Project",
-        "href": "/#contact"
+        "href": "/contact"
       }
     },
     "heroNote": "Every number here is computed, not measured. No device has been built. The claim is not \"it works\" – it's that there's no remaining physics reason it shouldn't, and what's left is engineering and measurement.",
@@ -461,7 +461,7 @@
       },
       "secondary": {
         "label": "Pokrenite projekt",
-        "href": "/hr#contact"
+        "href": "/hr/contact"
       }
     },
     "heroNote": "Svaki je broj ovdje izračunat, a ne izmjeren. Nijedan uređaj nije izgrađen. Tvrdnja nije „radi\" — nego da nije preostao nijedan fizikalni razlog zašto ne bi radilo, a ono što je ostalo jest inženjerstvo i mjerenje.",

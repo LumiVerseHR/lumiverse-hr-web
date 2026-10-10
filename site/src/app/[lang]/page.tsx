@@ -1,17 +1,16 @@
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/icons/Icon";
-import { Contact } from "@/components/sections/Contact";
+import { ContactBand } from "@/components/sections/ContactBand";
 import { Flagships } from "@/components/sections/Flagships";
 import { Notes } from "@/components/sections/Notes";
 import { Services } from "@/components/sections/Services";
-import { Studio } from "@/components/sections/Studio";
 import { Thesis } from "@/components/sections/Thesis";
-import { WorkIndex } from "@/components/sections/WorkIndex";
 import { Header } from "@/components/chrome/Header";
+import { HashForward } from "@/components/chrome/HashForward";
 import { LaserTitle } from "@/components/effects/LaserTitle";
 import { Beams } from "@/components/hero/Beams";
 import { HeroLaser } from "@/components/hero/HeroLaser";
-import { hasLocale } from "@/i18n/config";
+import { hasLocale, localePath } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import styles from "./page.module.css";
 
@@ -35,7 +34,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         </h1>
         <p className={styles.subline}>{dict.hero.subline}</p>
         <div className={styles.actions}>
-          <a className={styles.cta} href="#contact">
+          <a className={styles.cta} href={localePath(lang, "/contact")}>
             {dict.hero.cta}
             <Icon name="arrow-right" size={16} />
           </a>
@@ -43,13 +42,13 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         </div>
       </div>
     </section>
-    <Flagships lang={lang} dict={dict} />
+    {/* A short tour: one teaser per area, each ending in a link to its own page. */}
+    <Flagships lang={lang} dict={dict} more />
     <Thesis lang={lang} dict={dict} />
-    <WorkIndex lang={lang} copy={dict.index} />
-    <Services lang={lang} dict={dict} />
+    <Services lang={lang} dict={dict} doors={false} more={{ href: localePath(lang, "/services"), label: dict.services.how }} />
     <Notes lang={lang} dict={dict} />
-    <Studio dict={dict} />
-    <Contact lang={lang} dict={dict} />
+    <ContactBand lang={lang} dict={dict} />
+    <HashForward to={{ studio: localePath(lang, "/studio") }} />
     </main>
     </>
   );

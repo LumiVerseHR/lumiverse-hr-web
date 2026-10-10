@@ -22,7 +22,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...pair("/", 1),
     ...work.flatMap((slug, i) => pair(`/${slug}`, Math.max(0.5, 0.9 - i * 0.03))),
+    ...pair("/work", 0.9),
+    ...pair("/services", 0.9),
     ...pair("/pricing", 0.8),
+    ...pair("/research", 0.7),
+    ...pair("/studio", 0.6),
+    ...pair("/contact", 0.6),
     ...pair("/tech-lead", 0.7),
     ...pair("/technical-founder", 0.7),
     ...pair("/blog", 0.6),

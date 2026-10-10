@@ -114,3 +114,30 @@
     max-width: 640px;
   }
 }
+
+.more {
+  margin-top: clamp(40px, 4vw, 64px);
+}
+
+/* A single exhibit (the research page): the frame beside its label, not alone in a third. */
+@media (min-width: 961px) {
+  .exhibits[data-count="1"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .exhibits[data-count="1"] .exhibit {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: clamp(32px, 4vw, 72px);
+    align-items: start;
+  }
+
+  .exhibits[data-count="1"] .label {
+    margin-top: 0;
+  }
+
+  .exhibits[data-count="1"] .summary {
+    flex: none;
+    font-size: 17px;
+  }
+}

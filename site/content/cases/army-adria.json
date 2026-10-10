@@ -16,7 +16,7 @@
       },
       {
         "label": "Build Something Similar",
-        "href": "/#contact"
+        "href": "/contact"
       }
     ],
     "showcase": [
@@ -72,7 +72,7 @@
       },
       "secondary": {
         "label": "tell us what you're building",
-        "href": "/#contact"
+        "href": "/contact"
       },
       "badge": "Open for new projects",
       "note": "See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too."
@@ -256,7 +256,7 @@
       },
       {
         "label": "Napravite nešto slično",
-        "href": "/hr#contact"
+        "href": "/hr/contact"
       }
     ],
     "showcase": [
@@ -312,7 +312,7 @@
       },
       "secondary": {
         "label": "recite što gradite",
-        "href": "/hr#contact"
+        "href": "/hr/contact"
       },
       "badge": "Primamo nove projekte",
       "note": "Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni."

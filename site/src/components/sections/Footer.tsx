@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
-import { homeAnchor, localePath } from "@/i18n/config";
+import { localePath } from "@/i18n/config";
 import { ConsentOpen } from "@/components/chrome/ConsentOpen";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { flagships, workIndex } from "@/content/work";
@@ -38,15 +38,18 @@ export async function Footer({ lang, dict }: { lang: Locale; dict: Dictionary })
           <div>
             <h2 className={styles.colTitle}>{dict.footer.studio}</h2>
             <ul>
-              <li><a href={homeAnchor(lang, "services")}>{dict.nav.services}</a></li>
+              <li><a href={localePath(lang, "/work")}>{dict.nav.work}</a></li>
+              <li><a href={localePath(lang, "/services")}>{dict.nav.services}</a></li>
               <li><a href={localePath(lang, "/pricing")}>{dict.footer.pricing}</a></li>
+              <li><a href={localePath(lang, "/research")}>{dict.footer.research}</a></li>
+              <li><a href={localePath(lang, "/studio")}>{dict.nav.studio}</a></li>
               <li><Link href={lang === "hr" ? "/hr/blog" : "/blog"}>{dict.footer.blog}</Link></li>
-              <li><a href={homeAnchor(lang, "studio")}>{dict.nav.studio}</a></li>
             </ul>
           </div>
           <div>
             <h2 className={styles.colTitle}>{dict.footer.contact}</h2>
             <ul>
+              <li><a href={localePath(lang, "/contact")}>{dict.nav.contact}</a></li>
               <li><a href="mailto:info@lumiverse.hr">info@lumiverse.hr</a></li>
               <li><a href="https://www.linkedin.com/company/lumiversehr" rel="noopener" target="_blank">LinkedIn</a></li>
               <li><a href="https://github.com/LumiVerseHR" rel="noopener" target="_blank">GitHub</a></li>

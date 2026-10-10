@@ -12,7 +12,8 @@
     "cta": "Start a Project",
     "menu": "Menu",
     "close": "Close",
-    "pricing": "Pricing"
+    "pricing": "Pricing",
+    "packages": "Packages"
   },
   "hero": {
     "titleLines": [
@@ -20,7 +21,11 @@
       "Imagination.",
       "AI Speed."
     ],
-    "titleCycle": ["Human\nImagination.\nAI Speed.", "Human\nJudgement.\nAI Speed.", "Human\nTaste.\nAI Speed."],
+    "titleCycle": [
+      "Human\nImagination.\nAI Speed.",
+      "Human\nJudgement.\nAI Speed.",
+      "Human\nTaste.\nAI Speed."
+    ],
     "subline": "AI product studio in Zagreb. Ambitious products, shipped and checked.",
     "cta": "Start a Project",
     "secondary": "Explore the work",
@@ -38,7 +43,8 @@
   "flagships": {
     "title": "Humans, Amplified.",
     "lede": "Our own product, a platform we run, and our research. Each one with the number that proves it.",
-    "open": "Open the case study"
+    "open": "Open the case study",
+    "all": "All work"
   },
   "thesis": {
     "lines": [
@@ -68,7 +74,9 @@
         "href": "/technical-founder"
       }
     ],
-    "more": "See every package and price"
+    "more": "See every package and price",
+    "how": "How we work",
+    "upskillTitle": "Or make your own team AI‑native"
   },
   "notes": {
     "title": "Notes from the workbench",
@@ -133,7 +141,9 @@
     "rights": "All rights reserved.",
     "cookies": "Cookie preferences",
     "pricing": "Pricing",
-    "blog": "Blog"
+    "blog": "Blog",
+    "research": "Research",
+    "packages": "Packages"
   },
   "consent": {
     "text": "We use analytics cookies to see what’s working.",
@@ -161,5 +171,45 @@
     "prevShot": "Previous screen",
     "nextShot": "Next screen",
     "closingCta": "Tell us what you're building"
+  },
+  "contactBand": {
+    "title": "Have something to build?",
+    "lede": "Tell us in a few lines. We reply within 24 hours with an honest view on scope and price."
+  },
+  "pages": {
+    "work": {
+      "label": "Work",
+      "title": "Work - AI Products, Platforms and Research | LumiVerse",
+      "description": "{count} case studies: our own AI products, embedded tech-lead work and independent research, each with the number that proves it."
+    },
+    "services": {
+      "label": "Services",
+      "title": "Services - How We Build AI Products With You | LumiVerse",
+      "description": "Three ways to work with us: a one-week AI prototype, a full product build, or a senior tech lead inside your team. Plus workshops that make your own team AI-native."
+    },
+    "research": {
+      "label": "Research",
+      "title": "Research - Agentic Engineering and AI Verification | LumiVerse",
+      "description": "Independent research from LumiVerse: a 49-page physics study computed by one AI agent loop, and notes on judging AI output before it ships.",
+      "heading": "Hard problems, checked twice",
+      "intro": "Before a method goes into client work, we run it where mistakes are expensive and easy to spot. Physics, evaluation, agent loops: every result is cross-checked, and the ones that fail are retracted.",
+      "notesTitle": "Research notes"
+    },
+    "studio": {
+      "label": "Studio",
+      "title": "Studio - A Founder-Led AI Product Studio in Zagreb | LumiVerse",
+      "description": "LumiVerse d.o.o. is a founder-led AI product studio in Zagreb. We build our own products and embed with teams to build theirs.",
+      "company": "Company details",
+      "name": "Company",
+      "address": "Address",
+      "oib": "OIB",
+      "court": "Court register (MBS)"
+    },
+    "contact": {
+      "label": "Contact",
+      "title": "Contact - Start a Project With LumiVerse | LumiVerse",
+      "description": "Tell us what you're building. We reply within 24 hours, from Zagreb."
+    },
+    "home": "Home"
   }
 }

@@ -68,7 +68,7 @@
       },
       "secondary": {
         "label": "Start a Project",
-        "href": "/#contact"
+        "href": "/contact"
       }
     },
     "sections": [
@@ -316,7 +316,7 @@
       },
       "secondary": {
         "label": "Pokrenite projekt",
-        "href": "/hr#contact"
+        "href": "/hr/contact"
       }
     },
     "sections": [

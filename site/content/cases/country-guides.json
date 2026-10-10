@@ -16,7 +16,7 @@
       },
       {
         "label": "Build Something Similar",
-        "href": "/#contact"
+        "href": "/contact"
       }
     ],
     "showcase": [
@@ -546,7 +546,7 @@
       "body": "Country Guides is a platform play: build the engine once, launch a new market from a config file. If you publish content at volume – locations, listings, catalogues – that's the pattern we build.",
       "cta": {
         "label": "tell us what you're building",
-        "href": "/#contact"
+        "href": "/contact"
       },
       "secondary": {
         "label": "See starting prices",
@@ -573,7 +573,7 @@
       },
       {
         "label": "Napravite nešto slično",
-        "href": "/hr#contact"
+        "href": "/hr/contact"
       }
     ],
     "showcase": [
@@ -1103,7 +1103,7 @@
       "body": "Country Guides je platformski potez: izgradi pogon jednom, novo tržište pokreni iz konfiguracijske datoteke. Ako objavljujete sadržaj u velikom obujmu — lokacije, oglase, kataloge — to je obrazac koji gradimo.",
       "cta": {
         "label": "recite što gradite",
-        "href": "/hr#contact"
+        "href": "/hr/contact"
       },
       "secondary": {
         "label": "Pogledajte početne cijene",

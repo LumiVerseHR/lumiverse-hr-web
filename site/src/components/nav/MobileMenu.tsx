@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Icon } from "@/components/icons/Icon";
 import styles from "./MobileMenu.module.css";
 
-type Item = { href: string; label: string };
+type Item = { href: string; label: string; current?: boolean };
 
 // Narrow screens: the nav and the primary action move into one full-screen panel.
 export function MobileMenu({ items, cta, labels }: { items: Item[]; cta: Item; labels: { open: string; close: string } }) {
@@ -46,7 +46,9 @@ export function MobileMenu({ items, cta, labels }: { items: Item[]; cta: Item; l
           <ul className={styles.list}>
             {items.map((item) => (
               <li key={item.href}>
-                <a href={item.href} onClick={() => setOpen(false)}>{item.label}</a>
+                <a href={item.href} aria-current={item.current ? "page" : undefined} onClick={() => setOpen(false)}>
+                  {item.label}
+                </a>
               </li>
             ))}
           </ul>

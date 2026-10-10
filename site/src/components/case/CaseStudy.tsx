@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Image from "next/image";
 import type { CaseStudy as Case } from "@/content/case-schema";
 import type { Locale } from "@/i18n/config";
-import { homeAnchor, localePath } from "@/i18n/config";
+import { localePath } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { flagships, workIndex } from "@/content/work";
 import { Icon } from "@/components/icons/Icon";
@@ -50,7 +50,7 @@ export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict
       <section className={styles.hero} aria-labelledby="case-title">
         <div className={styles.topbar}>
           <nav className={styles.crumbs} aria-label="Breadcrumb">
-            <a href={homeAnchor(lang, "work")}>{dict.case.work}</a>
+            <a href={localePath(lang, "/work")}>{dict.case.work}</a>
             <span aria-hidden>/</span>
             <span aria-current="page">{data.title.replace(/\n/g, " ")}</span>
           </nav>
@@ -141,7 +141,7 @@ export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict
           <h2 id="closing-title">{data.closing.title}</h2>
           <p>{data.closing.body}</p>
           <div className={styles.ctas}>
-            <LinkButton link={data.closing.note ? { label: dict.case.closingCta, href: homeAnchor(lang, "contact") } : data.closing.cta} primary />
+            <LinkButton link={data.closing.note ? { label: dict.case.closingCta, href: localePath(lang, "/contact") } : data.closing.cta} primary />
             {data.closing.secondary && !data.closing.note && <LinkButton link={data.closing.secondary} />}
           </div>
           {data.closing.note && (

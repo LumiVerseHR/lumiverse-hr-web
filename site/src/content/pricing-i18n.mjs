@@ -5,8 +5,8 @@ import { formatEuro, packageById } from "./packages.mjs";
 const from = (id, lang) => formatEuro(packageById.get(id).price.from, lang);
 
 export const routes = {
-  en: { pricing: "/pricing", home: "/", contact: "/#contact" },
-  hr: { pricing: "/hr/pricing", home: "/hr/", contact: "/hr/#contact" }
+  en: { pricing: "/pricing", home: "/", contact: "/contact" },
+  hr: { pricing: "/hr/pricing", home: "/hr/", contact: "/hr/contact" }
 };
 
 export const t = {
@@ -21,7 +21,7 @@ export const t = {
       "Every engagement starts from a real floor. The final price depends on scope, and you get it fixed in writing before any work starts. Prices in EUR, excluding VAT.",
     heroCta: "Tell us what you need",
     heroSecondary: "See our work",
-    workRoute: "/#work",
+    workRoute: "/work",
     engagements: {
       label: "Ways to Work With Us",
       heading: "Start small or go all in",
@@ -101,7 +101,7 @@ export const t = {
       "Svaki angažman ima stvarnu početnu cijenu. Konačna ovisi o opsegu, a dobivate je fiksnu i u pisanom obliku prije početka rada. Cijene su u eurima, bez PDV-a.",
     heroCta: "Recite nam što trebate",
     heroSecondary: "Pogledajte reference",
-    workRoute: "/hr/#work",
+    workRoute: "/hr/work",
     engagements: {
       label: "Načini suradnje",
       heading: "Krenite malo ili odmah punom snagom",

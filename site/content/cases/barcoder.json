@@ -16,7 +16,7 @@
       },
       {
         "label": "Build Something Similar",
-        "href": "/#contact"
+        "href": "/contact"
       }
     ],
     "showcase": [
@@ -177,7 +177,7 @@
       },
       "secondary": {
         "label": "Schedule a Call",
-        "href": "/#contact"
+        "href": "/contact"
       }
     }
   },
@@ -198,7 +198,7 @@
       },
       {
         "label": "Napravite nešto slično",
-        "href": "/hr#contact"
+        "href": "/hr/contact"
       }
     ],
     "showcase": [
@@ -359,7 +359,7 @@
       },
       "secondary": {
         "label": "Dogovorite razgovor",
-        "href": "/hr#contact"
+        "href": "/hr/contact"
       }
     }
   }

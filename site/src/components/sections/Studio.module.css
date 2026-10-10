@@ -63,3 +63,12 @@
     grid-template-columns: 1fr;
   }
 }
+
+.body {
+  margin: 0;
+  max-width: 54ch;
+  color: var(--text-soft);
+  font-size: clamp(17px, 1.25vw, 20px);
+  line-height: 1.5;
+  text-wrap: pretty;
+}

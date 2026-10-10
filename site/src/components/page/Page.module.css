@@ -1,0 +1,89 @@
+/* Inner pages share the pricing page's opening: the same wall-light, crumbs and display heading. */
+.page {
+  position: relative;
+  isolation: isolate;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 900px;
+  z-index: -1;
+  background: radial-gradient(ellipse 55% 45% at 65% 0%, rgb(255 210 166 / 0.11), transparent 72%);
+}
+
+.hero {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(32px, 4vw, 64px) var(--gutter) 0;
+}
+
+.crumbs {
+  display: flex;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.crumbs a {
+  text-decoration: none;
+}
+
+.crumbs a:hover {
+  color: var(--text);
+}
+
+.title {
+  margin: clamp(28px, 3vw, 48px) 0 0;
+  max-width: 16ch;
+  font-size: clamp(48px, 7vw, 116px);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.intro {
+  margin: 24px 0 0;
+  max-width: 60ch;
+  color: var(--text-soft);
+  font-size: clamp(17px, 1.35vw, 21px);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 24px;
+  margin-top: 32px;
+}
+
+/* Company details on the studio page. */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px 40px;
+  margin: 0;
+  padding-top: 32px;
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+}
+
+.facts dt {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.facts dd {
+  margin: 6px 0 0;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.factsTitle {
+  margin: 0 0 24px;
+  font-size: clamp(24px, 2.2vw, 32px);
+  letter-spacing: -0.02em;
+}

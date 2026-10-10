@@ -1,20 +1,21 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
-import { latestPosts } from "@/lib/posts";
+import { allPosts, latestPosts } from "@/lib/posts";
 import { Icon } from "@/components/icons/Icon";
 import s from "./sections.module.css";
 import styles from "./Notes.module.css";
 
-export async function Notes({ lang, dict }: { lang: Locale; dict: Dictionary }) {
-  const posts = await latestPosts(3);
+// The latest three posts; with `tags`, every post carrying one of them, under its own `title`.
+export async function Notes({ lang, dict, tags, title }: { lang: Locale; dict: Dictionary; tags?: string[]; title?: string }) {
+  const posts = tags ? (await allPosts()).filter((post) => post.tags.some((tag) => tags.includes(tag))) : await latestPosts(3);
   const date = new Intl.DateTimeFormat(lang === "hr" ? "hr-HR" : "en-GB", { day: "numeric", month: "long", year: "numeric" });
 
   return (
-    <section id="blog" className={s.section} aria-labelledby="notes-title">
+    <section id={tags ? undefined : "blog"} className={s.section} aria-labelledby="notes-title">
       <div className={s.inner}>
         <header className={`${s.head} ${styles.head}`}>
-          <h2 id="notes-title" className={s.title}>{dict.notes.title}</h2>
+          <h2 id="notes-title" className={s.title}>{title ?? dict.notes.title}</h2>
           <Link href="/blog" className={s.arrowLink}>
             {dict.notes.all}
             <Icon name="arrow-right" size={16} />
