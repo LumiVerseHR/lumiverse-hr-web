@@ -24,13 +24,13 @@
     "cta": "Pokrenite projekt",
     "secondary": "Pogledajte reference",
     "scrollHint": "Skrolajte do radova",
-    "laptop": {
+    "exhibit": {
       "idea": "Ideja",
       "shipped": "Isporučeno",
       "alt": {
         "moj-kolega": "Laptop na okretnom postolju prikazuje Moj Kolegu, AI zaposlenika koji odgovara kupcu webshopa",
-        "titlomat": "Laptop na okretnom postolju prikazuje Titlomat, automatske hrvatske titlove za YouTube",
-        "bridj": "Laptop na okretnom postolju prikazuje naslovnicu Bridja"
+        "titlomat": "Monitor na okretnom postolju prikazuje naslovnicu Titlomata, automatske hrvatske titlove za YouTube",
+        "bridj": "Zakrivljeni ultraširoki monitor s tipkovnicom na okretnom postolju prikazuje nadzornu ploču Bridja s rizicima iz razgovora s kupcima"
       }
     }
   },

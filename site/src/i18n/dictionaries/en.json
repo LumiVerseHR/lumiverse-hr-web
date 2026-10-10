@@ -24,13 +24,13 @@
     "cta": "Start a Project",
     "secondary": "Explore the work",
     "scrollHint": "Scroll to the work",
-    "laptop": {
+    "exhibit": {
       "idea": "Idea",
       "shipped": "Shipped",
       "alt": {
         "moj-kolega": "A laptop on a turntable showing Moj Kolega, the AI employee answering a webshop customer",
-        "titlomat": "A laptop on a turntable showing Titlomat, automatic Croatian subtitles for YouTube",
-        "bridj": "A laptop on a turntable showing Bridj's homepage"
+        "titlomat": "A monitor on a turntable showing Titlomat's homepage: automatic Croatian subtitles for YouTube",
+        "bridj": "A curved ultrawide workstation on a turntable showing the Bridj dashboard, with emerging risks from customer conversations"
       }
     }
   },

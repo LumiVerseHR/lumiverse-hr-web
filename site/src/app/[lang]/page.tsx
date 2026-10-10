@@ -25,7 +25,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     <main>
     <section className={styles.hero} aria-labelledby="hero-title">
       <Beams />
-      <HeroLaser lang={lang} copy={dict.hero.laptop} />
+      <HeroLaser lang={lang} copy={dict.hero.exhibit} />
 
       <Header lang={lang} dict={dict} overlay />
 

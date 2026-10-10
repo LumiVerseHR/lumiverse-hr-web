@@ -39,26 +39,30 @@
   clip-path: none;
 }
 
-/* The wireframe glows like the laser that drew it, and fades as the solid takes over. */
+/* The wireframe glows gold, hot from the laser that drew it, and fades as the solid takes over. */
 .wire {
-  filter: drop-shadow(0 0 3px rgb(255 140 120 / 0.7)) drop-shadow(0 0 14px rgb(255 77 77 / 0.35));
-  transition: opacity 600ms ease-out;
+  filter: drop-shadow(0 0 2px rgb(255 214 140 / 0.85)) drop-shadow(0 0 10px rgb(255 176 72 / 0.5))
+    drop-shadow(0 0 26px rgb(255 140 40 / 0.22));
 }
 
+/* Fades out under the solid, but is back at full strength the moment the next trace starts. */
 .stage[data-phase="hold"] .wire,
 .stage[data-phase="vanish"] .wire {
   opacity: 0;
+  transition: opacity 600ms ease-out;
 }
 
+.wire img,
 .solid img {
   opacity: 0;
 }
 
+.wire img[data-active],
 .solid img[data-active] {
   opacity: 1;
 }
 
-/* Vanish: the laptop dissolves back into the air before the next one is cut. */
+/* Vanish: the device dissolves back into the air before the next one is cut. */
 .stage[data-phase="vanish"] .solid {
   opacity: 0;
   filter: blur(6px);
@@ -133,7 +137,7 @@
   }
 }
 
-/* A single soft sheen across the laptop as it lands, masked to its own silhouette. */
+/* A single soft sheen across the device as it lands, masked to its own silhouette. */
 .solid::after {
   content: "";
   position: absolute;
@@ -141,7 +145,7 @@
   background: linear-gradient(105deg, transparent 42%, rgb(255 240 225 / 0.2) 50%, transparent 58%) no-repeat;
   background-size: 300% 100%;
   background-position: 120% 0;
-  mask-image: url("/hero/solid-moj-kolega.webp");
+  mask-image: var(--sheen-mask);
   mask-size: 100% 100%;
   pointer-events: none;
   opacity: 0;

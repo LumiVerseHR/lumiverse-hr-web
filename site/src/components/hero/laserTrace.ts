@@ -1,22 +1,13 @@
-import data from "@/content/laptop-paths.json";
+import data from "@/content/hero-paths.json";
 
-// The laptop's edges, projected from the Blender scene through the render camera
-// (content/laptop-paths.json, render-pixel coordinates), split between several beams.
-// Each beam walks its own paths at its own speed so they all finish together.
+// Each exhibit's hard edges, projected from the Blender scene through the render camera
+// (content/hero-paths.json, render-pixel coordinates) and split between four beams.
+// Each beam walks its own polylines at its own speed so they all finish together.
 
 type Pt = [number, number];
 type Seg = { a: Pt; b: Pt; len: number };
 type Beam = { segs: Seg[]; total: number };
-
-const P = data.paths as unknown as Record<string, Pt[] | Pt[][]>;
-const path = (k: string) => P[k] as Pt[];
-
-const GROUPS: Pt[][][] = [
-  [path("lid_back"), path("lid_front")],
-  [path("screen")],
-  [path("base_top"), path("base_bottom")],
-  [path("keywell"), path("trackpad"), ...(P.key_rows as Pt[][])],
-];
+export type Device = keyof typeof data.devices;
 
 function plan(polylines: Pt[][]): Beam {
   const segs: Seg[] = [];
@@ -30,13 +21,22 @@ function plan(polylines: Pt[][]): Beam {
   return { segs, total: segs.reduce((s, x) => s + x.len, 0) };
 }
 
-export const BEAMS: Beam[] = GROUPS.map(plan);
+const devices = data.devices as unknown as Record<Device, { box: [number, number, number, number]; beams: Pt[][][] }>;
+const BEAMS = Object.fromEntries(
+  Object.entries(devices).map(([id, d]) => [id, d.beams.filter((b) => b.length).map(plan)]),
+) as Record<Device, Beam[]>;
+
+/** The exhibit's box in the render, padded around its edges. */
+export function boxOf(device: Device) {
+  const [x, y, w, h] = devices[device].box;
+  return { x, y, w, h };
+}
 
 /** Strokes every beam's progress up to t (0..1) into ctx; returns each beam's head. */
-export function trace(ctx: CanvasRenderingContext2D, t: number): Pt[] {
+export function trace(ctx: CanvasRenderingContext2D, device: Device, t: number): Pt[] {
   const heads: Pt[] = [];
   ctx.beginPath();
-  for (const beam of BEAMS) {
+  for (const beam of BEAMS[device]) {
     let left = beam.total * t;
     let head: Pt = beam.segs[0].a;
     for (const s of beam.segs) {

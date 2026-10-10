@@ -1,26 +1,25 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import type { Locale } from "@/i18n/config";
 import styles from "./HeroLaser.module.css";
-import { trace } from "./laserTrace";
+import { boxOf, trace, type Device } from "./laserTrace";
 
-// A rendered laptop on a turntable (Blender, design-src/hero-laptop.blend), cut into being by the
-// LumiVerse laser: one sweep conjures the wireframe out of thin air, a second sweep cuts it into
-// the solid laptop showing one of our products. Then the next product. The layers are stills
+// Rendered exhibits on a turntable (Blender, design-src/hero-exhibits.blend), cut into being by the
+// LumiVerse laser: one sweep conjures the gold wireframe out of thin air, a second sweep cuts it into
+// the solid device showing one of our products. Then the next exhibit. The layers are stills
 // rendered from one camera, so wireframe and solid line up exactly; only the reveal is animated.
 
 const FRAME = { w: 1600, h: 1100 };
-// The laptop's box in the render, measured from the alpha channel.
-const LAPTOP = { x: 384, y: 224, w: 746, h: 576 };
 // One round trip: up drawing the wireframe, straight back down making it solid.
 const T = { wire: 1150, cut: 850, hold: 4800, vanish: 520 };
 
+// Each product on the device it is used on: a webshop laptop, a creator's monitor, an analyst's desk.
 const PRODUCTS = [
-  { id: "moj-kolega", name: "Moj Kolega" },
-  { id: "titlomat", name: "Titlomat" },
-  { id: "bridj", name: "Bridj" },
-] as const;
+  { id: "moj-kolega", name: "Moj Kolega", device: "laptop" },
+  { id: "titlomat", name: "Titlomat", device: "monitor" },
+  { id: "bridj", name: "Bridj", device: "workstation" },
+] as const satisfies readonly { id: string; name: string; device: Device }[];
 
 type Phase = "idle" | "wire" | "solid" | "hold" | "vanish";
 type Copy = { idea: string; shipped: string; alt: Record<(typeof PRODUCTS)[number]["id"], string> };
@@ -32,7 +31,7 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
   const [phase, setPhase] = useState<Phase>("idle");
   const [reduced, setReduced] = useState(false);
   const stage = useRef<HTMLDivElement>(null);
-  const wire = useRef<HTMLImageElement>(null);
+  const wire = useRef<HTMLDivElement>(null);
   const solid = useRef<HTMLDivElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
   const reveal = useRef<HTMLCanvasElement>(null);
@@ -72,19 +71,21 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
     }
   }, [phase]);
 
-  // The cuts. Wire: four beams from the logo dot trace the laptop's real edges at once and
+  // The cuts. Wire: four beams from the logo dot trace the device's real edges at once and
   // the wireframe appears where they pass. Solid: a cut line sweeps down with three beams
-  // scanning along it, the finished laptop appearing above the line.
+  // scanning along it, the finished device appearing above the line.
   useEffect(() => {
     if (phase !== "wire" && phase !== "solid") return;
     const box = stage.current;
     const cv = canvas.current;
     const ctx = cv?.getContext("2d");
-    const wireImg = wire.current;
+    const wireEl = wire.current;
+    const device = PRODUCTS[product].device;
+    const wireImg = wireEl?.querySelector<HTMLImageElement>("img[data-active]");
     const solidEl = solid.current;
     const rv = reveal.current;
     const rctx = rv?.getContext("2d");
-    if (!box || !cv || !ctx || !wireImg || !solidEl || !rv || !rctx) return;
+    if (!box || !cv || !ctx || !wireEl || !wireImg || !solidEl || !rv || !rctx) return;
     const origin = document.querySelector<HTMLElement>("[data-laser-origin]");
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     cv.width = innerWidth * dpr;
@@ -94,8 +95,9 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
 
     const isWire = phase === "wire";
     const duration = isWire ? T.wire : T.cut;
-    const top = LAPTOP.y;
-    const bottom = LAPTOP.y + LAPTOP.h;
+    const area = boxOf(device);
+    const top = area.y;
+    const bottom = area.y + area.h;
     const sparks: Spark[] = [];
     let raf = 0;
     let start = 0;
@@ -121,14 +123,14 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
         rctx.globalCompositeOperation = "source-over";
         rctx.strokeStyle = "#fff";
         rctx.lineWidth = 26;
-        const frameHeads = trace(rctx, k);
+        const frameHeads = trace(rctx, device, k);
         rctx.stroke();
         rctx.globalCompositeOperation = "source-in";
         rctx.drawImage(wireImg, 0, 0, FRAME.w, FRAME.h);
         rctx.globalCompositeOperation = "lighter";
-        trace(rctx, k);
-        rctx.strokeStyle = `rgba(255, 120, 100, ${0.55 * (1 - t)})`;
-        rctx.lineWidth = 3;
+        trace(rctx, device, k);
+        rctx.strokeStyle = `rgba(255, 214, 140, ${0.6 * (1 - t)})`;
+        rctx.lineWidth = 2.5;
         rctx.stroke();
         rctx.globalCompositeOperation = "source-over";
         heads = t < 1 ? frameHeads.map(([x, y]) => toScreen(x, y)) : [];
@@ -136,8 +138,8 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
         const k = 1 - (1 - t) * (1 - t);
         const y = top + (bottom - top) * k;
         solidEl.style.clipPath = t >= 1 ? "inset(0 0 0 0)" : `inset(0 0 ${100 - (y / FRAME.h) * 100}% 0)`;
-        const [x0, ly] = toScreen(LAPTOP.x, y);
-        const [x1] = toScreen(LAPTOP.x + LAPTOP.w, y);
+        const [x0, ly] = toScreen(area.x, y);
+        const [x1] = toScreen(area.x + area.w, y);
         lineY = ly;
         if (t < 1) {
           heads = [0, 0.33, 0.66].map((off) => {
@@ -148,13 +150,13 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
           ctx.globalCompositeOperation = "lighter";
           const line = ctx.createLinearGradient(x0, 0, x1, 0);
           line.addColorStop(0, "rgba(255,77,77,0)");
-          line.addColorStop(0.08, "rgba(255,120,100,0.9)");
-          line.addColorStop(0.92, "rgba(255,120,100,0.9)");
+          line.addColorStop(0.08, "rgba(255,130,110,0.6)");
+          line.addColorStop(0.92, "rgba(255,130,110,0.6)");
           line.addColorStop(1, "rgba(255,77,77,0)");
           ctx.fillStyle = line;
-          ctx.fillRect(x0, lineY - 1, x1 - x0, 2);
-          ctx.fillStyle = "rgba(255,77,77,0.16)";
-          ctx.fillRect(x0, lineY - 6, x1 - x0, 12);
+          ctx.fillRect(x0, lineY - 0.6, x1 - x0, 1.2);
+          ctx.fillStyle = "rgba(255,77,77,0.08)";
+          ctx.fillRect(x0, lineY - 4, x1 - x0, 8);
         }
       }
 
@@ -167,20 +169,21 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
           ctx.beginPath();
           ctx.moveTo(o.left + o.width / 2, o.top + o.height / 2);
           ctx.lineTo(hx, hy);
-          ctx.strokeStyle = "rgba(255,77,77,0.2)";
-          ctx.lineWidth = 5;
+          ctx.strokeStyle = "rgba(255,77,77,0.1)";
+          ctx.lineWidth = 3;
           ctx.stroke();
-          ctx.strokeStyle = "rgba(255,190,170,0.8)";
-          ctx.lineWidth = 1.1;
+          ctx.strokeStyle = "rgba(255,190,170,0.5)";
+          ctx.lineWidth = 0.75;
           ctx.stroke();
         }
-        const glow = ctx.createRadialGradient(hx, hy, 0, hx, hy, 20);
-        glow.addColorStop(0, "rgba(255,240,225,1)");
-        glow.addColorStop(0.3, "rgba(255,110,90,0.75)");
-        glow.addColorStop(1, "rgba(255,77,77,0)");
+        // Where the beam meets the work it burns gold, like the lines it leaves behind.
+        const glow = ctx.createRadialGradient(hx, hy, 0, hx, hy, 15);
+        glow.addColorStop(0, "rgba(255,246,228,0.95)");
+        glow.addColorStop(0.3, "rgba(255,190,110,0.6)");
+        glow.addColorStop(1, "rgba(255,150,80,0)");
         ctx.fillStyle = glow;
         ctx.beginPath();
-        ctx.arc(hx, hy, 20, 0, Math.PI * 2);
+        ctx.arc(hx, hy, 15, 0, Math.PI * 2);
         ctx.fill();
         for (let n = 0; n < 2; n++) {
           const a = -Math.PI / 2 + (Math.random() - 0.5) * 2.4;
@@ -208,7 +211,7 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
         origin?.removeAttribute("data-firing");
         if (isWire) {
           // Hand over from the traced reveal to the finished wireframe still.
-          wireImg.style.clipPath = "inset(0 0 0 0)";
+          wireEl.style.clipPath = "inset(0 0 0 0)";
           rctx.clearRect(0, 0, FRAME.w, FRAME.h);
         }
         setPhase(isWire ? "solid" : "hold");
@@ -222,9 +225,9 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
       ctx.clearRect(0, 0, innerWidth, innerHeight);
       origin?.removeAttribute("data-firing");
     };
-  }, [phase]);
+  }, [phase, product]);
 
-  // Before each wire cut, both laptop layers start fully hidden again.
+  // Before each wire cut, both device layers start fully hidden again.
   useEffect(() => {
     if (phase === "wire") {
       if (wire.current) wire.current.style.clipPath = "inset(100% 0 0 0)";
@@ -243,10 +246,26 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
         <div ref={stage} className={styles.stage} data-phase={phase} data-reduced={reduced || undefined}>
           {/* eslint-disable-next-line @next/next/no-img-element -- layered stills, sized by the frame */}
           <img className={styles.layer} src="/hero/stage.webp" alt="" width={FRAME.w} height={FRAME.h} />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img ref={wire} className={`${styles.layer} ${styles.wire}`} src="/hero/wire.webp" alt="" width={FRAME.w} height={FRAME.h} />
+          <div ref={wire} className={`${styles.layer} ${styles.wire}`}>
+            {PRODUCTS.map((item, i) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={item.device}
+                className={styles.layer}
+                src={`/hero/wire-${item.device}.webp`}
+                alt=""
+                width={FRAME.w}
+                height={FRAME.h}
+                data-active={i === product || undefined}
+              />
+            ))}
+          </div>
           <canvas ref={reveal} className={`${styles.layer} ${styles.wire} ${styles.reveal}`} width={FRAME.w} height={FRAME.h} aria-hidden />
-          <div ref={solid} className={`${styles.layer} ${styles.solid}`}>
+          <div
+            ref={solid}
+            className={`${styles.layer} ${styles.solid}`}
+            style={{ "--sheen-mask": `url(/hero/solid-${p.id}.webp)` } as CSSProperties}
+          >
             {PRODUCTS.map((item, i) => (
               // eslint-disable-next-line @next/next/no-img-element
               <img
