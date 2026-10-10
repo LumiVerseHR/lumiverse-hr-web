@@ -5,7 +5,9 @@
   --basswood: #c9a57a;
   /* Coral: the humans, the logo dot and the primary action. Nothing else. */
   --coral: #ff4d4d;
-  --coral-press: #f03a3a;
+  /* Buttons with white labels sit on a deeper coral so the label passes WCAG AA (4.5:1). */
+  --action: #e03131;
+  --coral-press: #c42b2b;
   --text: #f7f7f6;
   --text-soft: #cacaca;
   --text-muted: #8f8e8b;
@@ -30,6 +32,8 @@ body {
 
 html {
   color-scheme: dark;
+  /* Decorative glows may reach past the edge; they never create a sideways scroll. */
+  overflow-x: clip;
   scrollbar-color: #3a3833 var(--gallery);
 }
 
@@ -42,7 +46,7 @@ body {
 }
 
 ::selection {
-  background: var(--coral);
+  background: var(--action);
   color: #fff;
 }
 
