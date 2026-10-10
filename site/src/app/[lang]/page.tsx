@@ -31,7 +31,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
       <div className={styles.copy}>
         <h1 id="hero-title" className={styles.title}>
-          <LaserTitle text={dict.hero.titleLines.join("\n")} cycle={{ line: 1, words: dict.hero.cycle }} />
+          <LaserTitle text={dict.hero.titleLines.join("\n")} variants={dict.hero.titleCycle} />
         </h1>
         <p className={styles.subline}>{dict.hero.subline}</p>
         <div className={styles.actions}>

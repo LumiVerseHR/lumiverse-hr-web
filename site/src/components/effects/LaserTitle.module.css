@@ -43,18 +43,17 @@
   }
 }
 
-/* Rewriting the cycled word: new letters wait unlit for the beam; old ones burn out right to left. */
-.laser[data-rewrite] [data-slot] [data-c]:not([data-lit]) {
+/* Changing titles: the old letters burn out right to left, the new ones wait unlit for the beam. */
+.laser[data-done] [data-c][data-out] {
+  animation: burnout var(--burn, 220ms) ease-in forwards;
+}
+
+.laser[data-done] [data-fresh]:not([data-lit]) {
   opacity: 0;
 }
 
-.laser[data-rewrite] [data-slot] [data-c][data-lit]:not([data-out]) {
+.laser[data-done] [data-fresh][data-lit] {
   animation: burn var(--burn, 220ms) ease-out both;
-}
-
-.laser[data-done] [data-slot] [data-c][data-out] {
-  opacity: 1;
-  animation: burnout var(--burn, 220ms) ease-in forwards;
 }
 
 @keyframes burnout {

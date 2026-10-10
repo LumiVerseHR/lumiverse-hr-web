@@ -15,7 +15,7 @@ const MIN_MS = 700;
 const MAX_MS = 1800;
 const ERASE_PER_CHAR_MS = 32;
 const ERASE_MIN_MS = 420;
-// The cycled word changes this long after an exhibit settles, so the two lasers never fire at once.
+// The title changes this long after an exhibit settles, so the two lasers never fire at once.
 const SWAP_DELAY_MS = 900;
 
 type Pass = { erase?: boolean; onDone: () => void };
@@ -137,16 +137,22 @@ function run(chars: HTMLElement[], canvas: HTMLCanvasElement, { erase, onDone }:
   };
 }
 
-type Cycle = { line: number; words: string[] };
+// How much of a line two titles share from the start; only the rest is erased and rewritten.
+const keepOf = (a: string, b: string) => {
+  let i = 0;
+  while (i < a.length && i < b.length && a[i] === b[i]) i++;
+  return i;
+};
+const glyphs = (line: string) => line.replace(/ /g, "");
 
-// `cycle` swaps one line of the title, words[0] being the line as written: each time an exhibit
-// settles (lv:exhibit-hold, detail = exhibit index), the laser erases the word and writes the
-// exhibit's word in its place.
-export function LaserTitle({ text, cycle }: { text: string; cycle?: Cycle }) {
+// `variants` are alternative titles, variants[0] being `text`. Each time an exhibit settles
+// (lv:exhibit-hold, detail = exhibit index) the laser erases only what differs from that
+// exhibit's title, line by line from the first changed letter, and writes the new letters in place.
+export function LaserTitle({ text, variants }: { text: string; variants?: string[] }) {
   const root = useRef<HTMLSpanElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
-  const [slot, setSlot] = useState(0);
-  const rewriting = useRef(false);
+  // keep[li]: letters of line li carried over from the previous title; fresh: new letters await the beam.
+  const [shown, setShown] = useState({ v: 0, keep: [] as number[], fresh: false });
   const stopPass = useRef<() => void>(() => {});
 
   useEffect(() => {
@@ -172,25 +178,32 @@ export function LaserTitle({ text, cycle }: { text: string; cycle?: Cycle }) {
     };
   }, [text]);
 
-  // Erase the current word, then let React mount the next one unlit.
+  // Erase what the next title does not share, then let React mount the new letters unlit.
   useEffect(() => {
     const el = root.current;
     const cv = canvas.current;
-    if (!cycle || !el || !cv || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!variants || !el || !cv || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     let timer = 0;
     let current = 0;
+    let busy = false;
     const onHold = (e: Event) => {
-      const next = (e as CustomEvent<number>).detail % cycle.words.length;
-      if (next === current || !("done" in el.dataset) || rewriting.current) return;
+      const next = (e as CustomEvent<number>).detail % variants.length;
+      if (next === current || busy || !("done" in el.dataset)) return;
       window.clearTimeout(timer);
       timer = window.setTimeout(() => {
-        rewriting.current = true;
-        stopPass.current = run([...el.querySelectorAll<HTMLElement>("[data-slot] [data-c]")], cv, {
+        busy = true;
+        const from = variants[current].split("\n").map(glyphs);
+        const to = variants[next].split("\n").map(glyphs);
+        const keep = to.map((line, li) => keepOf(from[li] ?? "", line));
+        const doomed = [...el.querySelectorAll<HTMLElement>("[data-line]")].flatMap((line, li) =>
+          [...line.querySelectorAll<HTMLElement>("[data-c]")].slice(keep[li] ?? 0),
+        );
+        stopPass.current = run(doomed, cv, {
           erase: true,
           onDone: () => {
-            el.dataset.rewrite = "";
             current = next;
-            setSlot(next);
+            busy = false;
+            setShown({ v: next, keep, fresh: true });
           },
         });
       }, SWAP_DELAY_MS);
@@ -200,56 +213,55 @@ export function LaserTitle({ text, cycle }: { text: string; cycle?: Cycle }) {
       window.removeEventListener("lv:exhibit-hold", onHold);
       window.clearTimeout(timer);
     };
-  }, [cycle]);
+  }, [variants]);
 
-  // The new word is in the DOM: write it.
+  // The new letters are in the DOM: write them.
   useEffect(() => {
     const el = root.current;
     const cv = canvas.current;
-    if (!rewriting.current || !el || !cv) return;
-    stopPass.current = run([...el.querySelectorAll<HTMLElement>("[data-slot] [data-c]")], cv, {
-      onDone: () => {
-        rewriting.current = false;
-        delete el.dataset.rewrite;
-      },
+    if (!shown.fresh || !el || !cv) return;
+    stopPass.current = run([...el.querySelectorAll<HTMLElement>("[data-fresh]")], cv, {
+      onDone: () => setShown((s) => ({ ...s, fresh: false })),
     });
     return () => stopPass.current();
-  }, [slot]);
+  }, [shown]);
 
-  const letters = (word: string) =>
-    [...word].map((ch, ci) => (
-      <span key={ci} data-c>
-        {ch}
-      </span>
-    ));
-  const lines = text.split("\n");
+  const lines = (variants?.[shown.v] ?? text).split("\n");
   return (
     <>
       <span ref={root} className={styles.laser}>
-        {lines.map((line, li) => (
-          <span key={li}>
-            {cycle && li === cycle.line ? (
-              // Keyed by the word, so every swap mounts fresh, unlit letters.
-              <span key={cycle.words[slot]} className={styles.word} data-slot>
-                {letters(cycle.words[slot])}
-              </span>
-            ) : (
-              line.split(" ").map((word, wi, words) => (
+        {lines.map((line, li) => {
+          const keep = shown.keep[li] ?? Infinity;
+          let ci = 0;
+          return (
+            <span key={li} data-line>
+              {line.split(" ").map((word, wi, words) => (
                 <span key={wi}>
-                  <span className={styles.word}>{letters(word)}</span>
+                  <span className={styles.word}>
+                    {[...word].map((ch) => {
+                      const i = ci++;
+                      const isNew = i >= keep;
+                      // New letters get new keys, so they mount fresh instead of reusing an erased span.
+                      return (
+                        <span key={isNew ? `${shown.v}-${i}` : i} data-c data-fresh={(shown.fresh && isNew) || undefined}>
+                          {ch}
+                        </span>
+                      );
+                    })}
+                  </span>
                   {wi < words.length - 1 && " "}
                 </span>
-              ))
-            )}
-            {/* The space keeps words apart in the heading's text; the break sets the line. */}
-            {li < lines.length - 1 && (
-              <>
-                {" "}
-                <br />
-              </>
-            )}
-          </span>
-        ))}
+              ))}
+              {/* The space keeps words apart in the heading's text; the break sets the line. */}
+              {li < lines.length - 1 && (
+                <>
+                  {" "}
+                  <br />
+                </>
+              )}
+            </span>
+          );
+        })}
       </span>
       <canvas ref={canvas} className={styles.canvas} aria-hidden />
     </>

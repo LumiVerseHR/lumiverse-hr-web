@@ -20,7 +20,7 @@
       "mašta.",
       "AI brzina."
     ],
-    "cycle": ["mašta.", "prosudba.", "estetika."],
+    "titleCycle": ["Ljudska\nmašta.\nAI brzina.", "Ljudska\nprosudba.\nAI brzina.", "Ljudski\nukus.\nAI brzina."],
     "subline": "AI produktni studio u Zagrebu. Ambiciozni proizvodi, isporučeni i provjereni.",
     "cta": "Pokrenite projekt",
     "secondary": "Pogledajte reference",
