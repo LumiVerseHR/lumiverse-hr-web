@@ -975,3 +975,46 @@
     grid-template-columns: 1fr;
   }
 }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  flex-wrap: wrap;
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+}
+
+.pager a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-soft);
+  text-decoration: none;
+  transition: color 160ms ease-out;
+}
+
+.pager a:hover {
+  color: var(--coral);
+}
+
+.pagerSep {
+  width: 1px;
+  height: 14px;
+  background: rgb(255 255 255 / 0.18);
+}
+
+@media (max-width: 560px) {
+  .pager span:not(.pagerSep) {
+    max-width: 9ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

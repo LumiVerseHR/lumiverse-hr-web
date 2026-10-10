@@ -48,11 +48,25 @@ export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict
   return (
     <main className={styles.page}>
       <section className={styles.hero} aria-labelledby="case-title">
-        <nav className={styles.crumbs} aria-label="Breadcrumb">
-          <a href={homeAnchor(lang, "work")}>{dict.case.work}</a>
-          <span aria-hidden>/</span>
-          <span aria-current="page">{data.title.replace(/\n/g, " ")}</span>
-        </nav>
+        <div className={styles.topbar}>
+          <nav className={styles.crumbs} aria-label="Breadcrumb">
+            <a href={homeAnchor(lang, "work")}>{dict.case.work}</a>
+            <span aria-hidden>/</span>
+            <span aria-current="page">{data.title.replace(/\n/g, " ")}</span>
+          </nav>
+          {/* A compact pager up top; the large one closes the page. */}
+          <nav className={styles.pager} aria-label={dict.case.more}>
+            <a href={localePath(lang, `/${prev.slug}`)} aria-label={`${dict.case.prev}: ${prev.name}`}>
+              <Icon name="chevron-left" size={16} />
+              <span>{prev.name}</span>
+            </a>
+            <span className={styles.pagerSep} aria-hidden />
+            <a href={localePath(lang, `/${next.slug}`)} aria-label={`${dict.case.next}: ${next.name}`}>
+              <span>{next.name}</span>
+              <Icon name="chevron-right" size={16} />
+            </a>
+          </nav>
+        </div>
         <div className={styles.heroGrid}>
           <div className={styles.heroHead}>
             <h1 id="case-title" className={styles.title}>
