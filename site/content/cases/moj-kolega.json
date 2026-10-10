@@ -12,7 +12,7 @@
     "ctas": [
       {
         "label": "Visit Moj Kolega",
-        "href": "https://mojkolega.hr/en",
+        "href": "https://www.mojkolega.hr/en",
         "external": true
       },
       {
@@ -61,7 +61,7 @@
     "sections": [
       {
         "title": "Hire a Role, Not a Chatbot",
-        "lede": "Most shops bolt on a chatbot, watch it guess wrong, and switch it off. Moj Kolega is the opposite: a managed AI employee that answers only from your catalogue and policies, says \"I don't know\" instead of inventing, and gets better every month because someone is actually watching it.",
+        "lede": "A managed AI employee that answers only from your catalogue and policies – and says \"I don't know\" instead of inventing.",
         "blocks": [
           {
             "type": "cards",
@@ -161,7 +161,7 @@
       "body": "Moj Kolega is live and taking on shops now. See it answer real questions in your language, then get one set up for your own catalogue.",
       "cta": {
         "label": "Visit mojkolega.hr",
-        "href": "https://mojkolega.hr/en",
+        "href": "https://www.mojkolega.hr/en",
         "external": true
       },
       "secondary": {
@@ -182,7 +182,7 @@
     "ctas": [
       {
         "label": "Posjetite Mog Kolegu",
-        "href": "https://mojkolega.hr",
+        "href": "https://www.mojkolega.hr",
         "external": true
       },
       {
@@ -231,7 +231,7 @@
     "sections": [
       {
         "title": "Zaposlite ulogu, a ne chatbot",
-        "lede": "Većina trgovina prikvači chatbot, gleda kako pogađa krivo i ugasi ga. Moj Kolega je suprotno: vođeni AI zaposlenik koji odgovara isključivo iz Vašeg kataloga i pravila, kaže „ne znam\" umjesto da izmišlja i svaki je mjesec bolji jer ga netko doista prati.",
+        "lede": "Vođeni AI zaposlenik koji odgovara isključivo iz Vašeg kataloga i pravila — i kaže „ne znam\" umjesto da izmišlja.",
         "blocks": [
           {
             "type": "cards",
@@ -331,7 +331,7 @@
       "body": "Moj Kolega je u pogonu i prima nove trgovine. Pogledajte kako odgovara na stvarna pitanja na Vašem jeziku, pa ga postavimo i za Vaš katalog.",
       "cta": {
         "label": "Posjetite mojkolega.hr",
-        "href": "https://mojkolega.hr",
+        "href": "https://www.mojkolega.hr",
         "external": true
       },
       "secondary": {

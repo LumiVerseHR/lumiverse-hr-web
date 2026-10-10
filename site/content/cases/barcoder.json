@@ -48,7 +48,7 @@
     "sections": [
       {
         "title": "Nobody Wrote This Down",
-        "lede": "The answers live in central bank announcements, ISO/IEC specs, scheme documentation, vendor PDFs and regulator filings – in a dozen languages, none of them talking to each other. Barcoder pulls them into one cross-referenced place.",
+        "lede": "Answers are scattered across central banks, ISO/IEC specs, vendor PDFs and regulators, in a dozen languages. Barcoder cross-references them.",
         "blocks": [
           {
             "type": "cards",
@@ -124,7 +124,7 @@
       },
       {
         "title": "The Content Is the Repo",
-        "lede": "Every page on Barcoder is rendered from a single markdown file checked into the repository. No CMS. No admin backend. No production-only edits.",
+        "lede": "Every Barcoder page renders from one markdown file in the repo. No CMS, no admin backend, no production-only edits.",
         "blocks": [
           {
             "type": "steps",
@@ -230,7 +230,7 @@
     "sections": [
       {
         "title": "Nitko ovo nije zapisao",
-        "lede": "Odgovori žive u objavama središnjih banaka, ISO/IEC specifikacijama, dokumentaciji shema, PDF-ovima dobavljača i regulatornim podnescima — na desetak jezika i međusobno nepovezani. Barcoder ih skuplja na jedno unakrsno povezano mjesto.",
+        "lede": "Odgovori su raštrkani po središnjim bankama, ISO/IEC specifikacijama, PDF-ovima dobavljača i regulatorima, na desetak jezika. Barcoder ih povezuje.",
         "blocks": [
           {
             "type": "cards",
@@ -306,7 +306,7 @@
       },
       {
         "title": "Sadržaj je repozitorij",
-        "lede": "Svaka se stranica Barcodera prikazuje iz jedne markdown datoteke u repozitoriju. Bez CMS-a. Bez administratorskog sučelja. Bez izmjena koje postoje samo u produkciji.",
+        "lede": "Svaka stranica Barcodera nastaje iz jedne markdown datoteke u repozitoriju. Bez CMS-a, bez administracije, bez izmjena samo u produkciji.",
         "blocks": [
           {
             "type": "steps",

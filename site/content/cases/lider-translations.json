@@ -66,7 +66,7 @@
     "sections": [
       {
         "title": "One Newsroom, Ten Languages",
-        "lede": "Lider publishes Croatian business news. The job was to make that same journalism readable to the rest of the world – not a handful of hand-picked pieces, but the whole archive, every day, in ten languages, each on its own real news site.",
+        "lede": "Lider's Croatian business journalism – the whole archive, every day, in ten languages, each on its own real news site.",
         "blocks": [
           {
             "type": "cards",
@@ -85,7 +85,7 @@
       },
       {
         "title": "Translate Once, Publish Everywhere",
-        "lede": "Every article runs the same path from the source database to ten live sites. English carries the load in the middle, and the whole thing runs on a schedule.",
+        "lede": "Every article runs the same path from the source database to ten live sites, on a schedule, with English carrying the load in the middle.",
         "blocks": [
           {
             "type": "steps",
@@ -129,7 +129,7 @@
       },
       {
         "title": "Eleven Sites, One Pipeline",
-        "lede": "Each language is a full, standalone news site – not a language switch on a single install. They share the pipeline and the design, and stay isolated everywhere it counts.",
+        "lede": "Each language is a full, standalone news site, not a language switch – sharing the pipeline and design, isolated where it counts.",
         "blocks": [
           {
             "type": "cards",
@@ -156,7 +156,7 @@
       },
       {
         "title": "Eleven Sites, Live Right Now",
-        "lede": "Every number here is a live post count, pulled from each site today. The Croatian source feeds all ten – and because the translated sites carry Lider's full print back-catalogue too, each one runs even more articles than the live Croatian web mirror.",
+        "lede": "Live post counts, pulled today. With Lider's print back-catalogue, each translated site runs more articles than the Croatian web mirror.",
         "blocks": [
           {
             "type": "sites",
@@ -370,7 +370,7 @@
     "sections": [
       {
         "title": "Jedna redakcija, deset jezika",
-        "lede": "Lider objavljuje hrvatske poslovne vijesti. Posao je bio to isto novinarstvo učiniti čitljivim ostatku svijeta — ne šačicu ručno odabranih tekstova, nego cijelu arhivu, svaki dan, na deset jezika, svaki na vlastitom pravom news portalu.",
+        "lede": "Liderovo hrvatsko poslovno novinarstvo — cijela arhiva, svaki dan, na deset jezika, svaki na vlastitom pravom news portalu.",
         "blocks": [
           {
             "type": "cards",
@@ -433,7 +433,7 @@
       },
       {
         "title": "Jedanaest stranica, jedan pipeline",
-        "lede": "Svaki je jezik cjelovit, samostalan news portal — a ne prekidač jezika na jednoj instalaciji. Dijele pipeline i dizajn, a ostaju odvojeni ondje gdje je to važno.",
+        "lede": "Svaki je jezik cjelovit, samostalan news portal, a ne prekidač jezika — dijele pipeline i dizajn, a odvojeni su ondje gdje je važno.",
         "blocks": [
           {
             "type": "cards",
@@ -460,7 +460,7 @@
       },
       {
         "title": "Jedanaest stranica, u pogonu upravo sada",
-        "lede": "Svaka je brojka ovdje stvaran broj objava, povučen s pojedine stranice danas. Hrvatski izvor hrani svih deset — a budući da prevedene stranice nose i cijelu Liderovu tiskanu arhivu, svaka od njih ima čak i više članaka od živog hrvatskog weba.",
+        "lede": "Stvarni brojevi objava, povučeni danas. Uz Liderovu tiskanu arhivu svaka prevedena stranica ima više članaka od živog hrvatskog weba.",
         "blocks": [
           {
             "type": "sites",

@@ -80,7 +80,7 @@
     "sections": [
       {
         "title": "Her Love, Our AI Build Model",
-        "lede": "We wanted to test the studio's whole thesis at its edge: give a motivated person with no engineering background the right AI tools and a little guidance, and see how far dedication carries them. So we handed the keys to a lifelong BTS fan who had never written a line of code – and got out of the way.",
+        "lede": "We gave a lifelong BTS fan with no coding background the right AI tools and a little guidance – then got out of the way.",
         "blocks": [
           {
             "type": "cards",
@@ -99,7 +99,7 @@
       },
       {
         "title": "Not a Landing Page – a Platform",
-        "lede": "Two weeks in, this isn't a fan page with a few links. It's a content-plus-community product with everything a real portal needs – editorial, media, games and accounts, all in one place.",
+        "lede": "Two weeks in, it's a content-and-community portal – editorial, media, games and accounts in one place, not a fan page with a few links.",
         "blocks": [
           {
             "type": "cards",
@@ -146,7 +146,7 @@
       },
       {
         "title": "How Two Weeks Was Enough",
-        "lede": "Fast didn't mean flimsy. The AI build model let one person move like a small team – designing, writing and shipping in parallel – on a stack built for production from day one.",
+        "lede": "Fast didn't mean flimsy: one person moved like a small team, on a stack built for production from day one.",
         "blocks": [
           {
             "type": "steps",
@@ -320,7 +320,7 @@
     "sections": [
       {
         "title": "Njezina ljubav, naš AI model izrade",
-        "lede": "Htjeli smo cijelu tezu studija provjeriti na njezinu rubu: dajte motiviranoj osobi bez inženjerskog predznanja prave AI alate i malo vodstva pa vidite dokle je predanost odnese. Zato smo ključeve predali dugogodišnjoj BTS obožavateljici koja nikad nije napisala redak koda — i maknuli se s puta.",
+        "lede": "Dugogodišnjoj BTS obožavateljici bez znanja programiranja dali smo prave AI alate i malo vodstva — i maknuli se s puta.",
         "blocks": [
           {
             "type": "cards",
@@ -339,7 +339,7 @@
       },
       {
         "title": "Nije stranica, nego platforma",
-        "lede": "Nakon dva tjedna ovo nije fan stranica s nekoliko poveznica. To je proizvod koji spaja sadržaj i zajednicu, sa svime što pravi portal treba — uredništvom, medijima, igrama i računima, na jednom mjestu.",
+        "lede": "Nakon dva tjedna to je portal za sadržaj i zajednicu — uredništvo, mediji, igre i računi na jednom mjestu, a ne fan stranica s poveznicama.",
         "blocks": [
           {
             "type": "cards",
@@ -386,7 +386,7 @@
       },
       {
         "title": "Kako su dva tjedna bila dovoljna",
-        "lede": "Brzo nije značilo krhko. AI model izrade omogućio je jednoj osobi da se kreće kao mali tim — da dizajnira, piše i objavljuje usporedno — na stacku građenom za produkciju od prvog dana.",
+        "lede": "Brzo nije značilo krhko: jedna se osoba kretala kao mali tim, na stacku građenom za produkciju od prvog dana.",
         "blocks": [
           {
             "type": "steps",

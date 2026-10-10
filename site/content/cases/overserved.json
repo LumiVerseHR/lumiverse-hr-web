@@ -74,7 +74,7 @@
     "sections": [
       {
         "title": "How Far Does It Actually Go?",
-        "lede": "A game is a brutal test case. It needs working code, hundreds of coherent art assets, level design that stays fun for twenty hours, and jokes that land. Miss on any one and the whole thing falls over. So we built one and wrote down what happened.",
+        "lede": "A game is a brutal test: working code, hundreds of art assets, twenty hours of fun levels and jokes that land. So we built one.",
         "blocks": [
           {
             "type": "cards",
@@ -143,7 +143,7 @@
       },
       {
         "title": "A Bot That Plays the Game",
-        "lede": "Difficulty tuning is the slowest loop in game development: change a number, replay the level, guess. So the loop got handed to a headless autoplayer that drives the real game engine in a tight loop and reports how close it came to losing.",
+        "lede": "Difficulty tuning is game dev's slowest loop, so a headless autoplayer drives the real engine and reports how close it came to losing.",
         "blocks": [
           {
             "type": "steps",
@@ -166,7 +166,7 @@
       },
       {
         "title": "Where It Still Needed a Human",
-        "lede": "The failures are the useful part of this experiment. Every one of these is in the devlog, because a case study that only lists wins isn't worth reading.",
+        "lede": "The failures are the useful part – every one is in the devlog, because a case study that lists only wins isn't worth reading.",
         "blocks": [
           {
             "type": "cards",
@@ -322,7 +322,7 @@
     "sections": [
       {
         "title": "Dokle zaista stiže?",
-        "lede": "Igra je brutalan testni slučaj. Treba joj kod koji radi, stotine usklađenih grafika, dizajn razina koji ostaje zabavan dvadeset sati i šale koje pogađaju. Promašite u bilo čemu i sve se ruši. Zato smo je napravili i zapisali što se dogodilo.",
+        "lede": "Igra je brutalan test: kod koji radi, stotine grafika, razine zabavne dvadeset sati i šale koje pogađaju. Zato smo je napravili.",
         "blocks": [
           {
             "type": "cards",
@@ -391,7 +391,7 @@
       },
       {
         "title": "Bot koji igra igru",
-        "lede": "Podešavanje težine najsporija je petlja u razvoju igara: promijeni broj, odigraj razinu ponovno, pogađaj. Zato je petlja predana automatskom igraču bez sučelja, koji stvarni pogon igre vrti u tijesnoj petlji i javlja koliko je blizu bio porazu.",
+        "lede": "Podešavanje težine najsporija je petlja u razvoju igara, pa automatski igrač vrti stvarni pogon igre i javlja koliko je bio blizu porazu.",
         "blocks": [
           {
             "type": "steps",

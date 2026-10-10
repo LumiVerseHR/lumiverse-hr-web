@@ -48,7 +48,7 @@
     "sections": [
       {
         "title": "Not Your Typical OCR Job",
-        "lede": "Magazine layouts break standard document processing. Multi-column text, images that split articles, content that spans pages – this required custom AI.",
+        "lede": "Magazine layouts break standard document processing – multi-column text, images that split articles, stories that span pages.",
         "blocks": [
           {
             "type": "cards",
@@ -208,7 +208,7 @@
     "sections": [
       {
         "title": "Nije običan OCR posao",
-        "lede": "Prijelom magazina lomi standardnu obradu dokumenata. Tekst u više stupaca, slike koje presijecaju članke, sadržaj koji se proteže preko stranica — za ovo je trebao AI po mjeri.",
+        "lede": "Prijelom magazina lomi standardnu obradu dokumenata — tekst u više stupaca, slike koje presijecaju članke, priče preko više stranica.",
         "blocks": [
           {
             "type": "cards",

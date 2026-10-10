@@ -11,7 +11,7 @@
     "ctas": [
       {
         "label": "View a Live Site",
-        "href": "https://croatian-guide.com",
+        "href": "https://www.croatian-guide.com",
         "external": true
       },
       {
@@ -72,7 +72,7 @@
     "sections": [
       {
         "title": "Build It Once, Ship Every Country",
-        "lede": "A travel guide has the same shape everywhere: a country, its regions, the places worth visiting, the things to see in them. So the site gets built once. Country, branding, currency, copy and content become data – not a separate codebase per site.",
+        "lede": "A travel guide has the same shape everywhere, so the site is built once – country, branding, currency and content become data.",
         "blocks": [
           {
             "type": "cards",
@@ -90,8 +90,8 @@
         ]
       },
       {
-        "title": "Every Page Is Researched, Then Written",
-        "lede": "No page is typed by hand, and none is invented from thin air. The pipeline finds real places on the open web, then writes them up against a fixed schema so every field lands exactly where the database expects it.",
+        "title": "Researched, Then Written",
+        "lede": "Nothing is typed by hand or invented. The pipeline finds real places on the open web, then writes them up against a fixed schema.",
         "blocks": [
           {
             "type": "steps",
@@ -162,7 +162,7 @@
       },
       {
         "title": "Thousands of Pages, Each One Findable",
-        "lede": "Publishing programmatic pages at volume is where SEO usually falls apart: duplicate URLs, thin structured data, pages that render blank without JavaScript. This was hardened for exactly that.",
+        "lede": "Programmatic pages at volume are where SEO usually falls apart – duplicate URLs, thin structured data, blank pages without JavaScript.",
         "blocks": [
           {
             "type": "steps",
@@ -185,7 +185,7 @@
       },
       {
         "title": "Every Page Type, Rebuilt",
-        "lede": "The whole network was redesigned around one idea: a guide should read like a well-travelled friend who has actually been there. Calm, factual, photography first – and identical on all fourteen domains, because there is still only one codebase.",
+        "lede": "Redesigned so a guide reads like a well-travelled friend who has been there – calm, factual, photography first, on all fourteen domains.",
         "blocks": [
           {
             "type": "steps",
@@ -216,7 +216,7 @@
               {
                 "name": "Oregon",
                 "domain": "oregon-guide.com",
-                "href": "https://oregon-guide.com",
+                "href": "https://www.oregon-guide.com",
                 "badge": "Newest",
                 "stats": [
                   {
@@ -240,7 +240,7 @@
               {
                 "name": "Croatia",
                 "domain": "croatian-guide.com",
-                "href": "https://croatian-guide.com",
+                "href": "https://www.croatian-guide.com",
                 "stats": [
                   {
                     "value": "204",
@@ -263,7 +263,7 @@
               {
                 "name": "France",
                 "domain": "french-guides.com",
-                "href": "https://french-guides.com",
+                "href": "https://www.french-guides.com",
                 "stats": [
                   {
                     "value": "128",
@@ -286,7 +286,7 @@
               {
                 "name": "Italy",
                 "domain": "italian-guides.com",
-                "href": "https://italian-guides.com",
+                "href": "https://www.italian-guides.com",
                 "stats": [
                   {
                     "value": "136",
@@ -309,7 +309,7 @@
               {
                 "name": "Netherlands",
                 "domain": "dutch-guide.com",
-                "href": "https://dutch-guide.com",
+                "href": "https://www.dutch-guide.com",
                 "stats": [
                   {
                     "value": "146",
@@ -332,7 +332,7 @@
               {
                 "name": "Slovenia",
                 "domain": "slovenia-guide.com",
-                "href": "https://slovenia-guide.com",
+                "href": "https://www.slovenia-guide.com",
                 "stats": [
                   {
                     "value": "115",
@@ -355,7 +355,7 @@
               {
                 "name": "Switzerland",
                 "domain": "switzerland-explorer.com",
-                "href": "https://switzerland-explorer.com",
+                "href": "https://www.switzerland-explorer.com",
                 "stats": [
                   {
                     "value": "96",
@@ -378,7 +378,7 @@
               {
                 "name": "Austria",
                 "domain": "discover-austria.com",
-                "href": "https://discover-austria.com",
+                "href": "https://www.discover-austria.com",
                 "stats": [
                   {
                     "value": "104",
@@ -401,7 +401,7 @@
               {
                 "name": "Portugal",
                 "domain": "portugal-guides.com",
-                "href": "https://portugal-guides.com",
+                "href": "https://www.portugal-guides.com",
                 "stats": [
                   {
                     "value": "85",
@@ -424,7 +424,7 @@
               {
                 "name": "Spain",
                 "domain": "spanish-guides.com",
-                "href": "https://spanish-guides.com",
+                "href": "https://www.spanish-guides.com",
                 "stats": [
                   {
                     "value": "67",
@@ -447,7 +447,7 @@
               {
                 "name": "Greece",
                 "domain": "greece-guides.com",
-                "href": "https://greece-guides.com",
+                "href": "https://www.greece-guides.com",
                 "stats": [
                   {
                     "value": "47",
@@ -470,7 +470,7 @@
               {
                 "name": "Canada",
                 "domain": "canadian-guide.com",
-                "href": "https://canadian-guide.com",
+                "href": "https://www.canadian-guide.com",
                 "stats": [
                   {
                     "value": "50",
@@ -493,7 +493,7 @@
               {
                 "name": "Morocco",
                 "domain": "moroccan-guides.com",
-                "href": "https://moroccan-guides.com",
+                "href": "https://www.moroccan-guides.com",
                 "stats": [
                   {
                     "value": "47",
@@ -516,7 +516,7 @@
               {
                 "name": "Colorado",
                 "domain": "colorado-guide.com",
-                "href": "https://colorado-guide.com",
+                "href": "https://www.colorado-guide.com",
                 "stats": [
                   {
                     "value": "29",
@@ -568,7 +568,7 @@
     "ctas": [
       {
         "label": "Pogledajte stranicu u pogonu",
-        "href": "https://croatian-guide.com",
+        "href": "https://www.croatian-guide.com",
         "external": true
       },
       {
@@ -629,7 +629,7 @@
     "sections": [
       {
         "title": "Napraviti jednom, objaviti svaku zemlju",
-        "lede": "Turistički vodič svugdje ima isti oblik: zemlja, njezine regije, mjesta koja se isplati posjetiti i ono što se u njima gleda. Zato se stranica gradi jednom. Zemlja, brendiranje, valuta, tekstovi i sadržaj postaju podaci — a ne zasebna baza koda po stranici.",
+        "lede": "Turistički vodič svugdje ima isti oblik, pa se stranica gradi jednom — zemlja, brendiranje, valuta i sadržaj postaju podaci.",
         "blocks": [
           {
             "type": "cards",
@@ -647,8 +647,8 @@
         ]
       },
       {
-        "title": "Svaka se stranica prvo istraži, pa napiše",
-        "lede": "Nijedna se stranica ne tipka ručno i nijedna se ne izmišlja iz zraka. Pipeline na otvorenom webu pronalazi stvarna mjesta, pa ih zapisuje prema čvrstoj shemi, tako da svako polje slegne točno ondje gdje ga baza očekuje.",
+        "title": "Prvo istraženo, pa napisano",
+        "lede": "Ništa se ne tipka ručno niti izmišlja. Pipeline na otvorenom webu pronalazi stvarna mjesta, pa ih zapisuje prema čvrstoj shemi.",
         "blocks": [
           {
             "type": "steps",
@@ -719,7 +719,7 @@
       },
       {
         "title": "Tisuće stranica, svaka pronalaziva",
-        "lede": "Objavljivanje programski generiranih stranica u velikom obujmu mjesto je na kojem se SEO obično raspadne: duple adrese, tanki strukturirani podaci, stranice koje bez JavaScripta ostanu prazne. Ovo je učvršćeno upravo za to.",
+        "lede": "Na programskim stranicama u velikom obujmu SEO se obično raspadne — duple adrese, tanki strukturirani podaci, prazne stranice bez JavaScripta.",
         "blocks": [
           {
             "type": "steps",
@@ -742,7 +742,7 @@
       },
       {
         "title": "Svaki tip stranice iznova",
-        "lede": "Cijela je mreža redizajnirana oko jedne ideje: vodič treba zvučati kao proputovao prijatelj koji je ondje doista bio. Smireno, činjenično, fotografija prva — i jednako na svih četrnaest domena, jer baza koda je i dalje samo jedna.",
+        "lede": "Redizajnirano da vodič zvuči kao proputovao prijatelj koji je ondje bio — smireno, činjenično, fotografija prva, na svih četrnaest domena.",
         "blocks": [
           {
             "type": "steps",
@@ -773,7 +773,7 @@
               {
                 "name": "Oregon",
                 "domain": "oregon-guide.com",
-                "href": "https://oregon-guide.com",
+                "href": "https://www.oregon-guide.com",
                 "badge": "Najnovije",
                 "stats": [
                   {
@@ -797,7 +797,7 @@
               {
                 "name": "Hrvatska",
                 "domain": "croatian-guide.com",
-                "href": "https://croatian-guide.com",
+                "href": "https://www.croatian-guide.com",
                 "stats": [
                   {
                     "value": "204",
@@ -820,7 +820,7 @@
               {
                 "name": "Francuska",
                 "domain": "french-guides.com",
-                "href": "https://french-guides.com",
+                "href": "https://www.french-guides.com",
                 "stats": [
                   {
                     "value": "128",
@@ -843,7 +843,7 @@
               {
                 "name": "Italija",
                 "domain": "italian-guides.com",
-                "href": "https://italian-guides.com",
+                "href": "https://www.italian-guides.com",
                 "stats": [
                   {
                     "value": "136",
@@ -866,7 +866,7 @@
               {
                 "name": "Nizozemska",
                 "domain": "dutch-guide.com",
-                "href": "https://dutch-guide.com",
+                "href": "https://www.dutch-guide.com",
                 "stats": [
                   {
                     "value": "146",
@@ -889,7 +889,7 @@
               {
                 "name": "Slovenija",
                 "domain": "slovenia-guide.com",
-                "href": "https://slovenia-guide.com",
+                "href": "https://www.slovenia-guide.com",
                 "stats": [
                   {
                     "value": "115",
@@ -912,7 +912,7 @@
               {
                 "name": "Švicarska",
                 "domain": "switzerland-explorer.com",
-                "href": "https://switzerland-explorer.com",
+                "href": "https://www.switzerland-explorer.com",
                 "stats": [
                   {
                     "value": "96",
@@ -935,7 +935,7 @@
               {
                 "name": "Austrija",
                 "domain": "discover-austria.com",
-                "href": "https://discover-austria.com",
+                "href": "https://www.discover-austria.com",
                 "stats": [
                   {
                     "value": "104",
@@ -958,7 +958,7 @@
               {
                 "name": "Portugal",
                 "domain": "portugal-guides.com",
-                "href": "https://portugal-guides.com",
+                "href": "https://www.portugal-guides.com",
                 "stats": [
                   {
                     "value": "85",
@@ -981,7 +981,7 @@
               {
                 "name": "Španjolska",
                 "domain": "spanish-guides.com",
-                "href": "https://spanish-guides.com",
+                "href": "https://www.spanish-guides.com",
                 "stats": [
                   {
                     "value": "67",
@@ -1004,7 +1004,7 @@
               {
                 "name": "Grčka",
                 "domain": "greece-guides.com",
-                "href": "https://greece-guides.com",
+                "href": "https://www.greece-guides.com",
                 "stats": [
                   {
                     "value": "47",
@@ -1027,7 +1027,7 @@
               {
                 "name": "Kanada",
                 "domain": "canadian-guide.com",
-                "href": "https://canadian-guide.com",
+                "href": "https://www.canadian-guide.com",
                 "stats": [
                   {
                     "value": "50",
@@ -1050,7 +1050,7 @@
               {
                 "name": "Maroko",
                 "domain": "moroccan-guides.com",
-                "href": "https://moroccan-guides.com",
+                "href": "https://www.moroccan-guides.com",
                 "stats": [
                   {
                     "value": "47",
@@ -1073,7 +1073,7 @@
               {
                 "name": "Colorado",
                 "domain": "colorado-guide.com",
-                "href": "https://colorado-guide.com",
+                "href": "https://www.colorado-guide.com",
                 "stats": [
                   {
                     "value": "29",

@@ -11,7 +11,7 @@
     "ctas": [
       {
         "label": "Visit MOJ KRAJ.",
-        "href": "https://mojkraj.hr/en",
+        "href": "https://www.mojkraj.hr/en",
         "external": true
       },
       {
@@ -62,7 +62,7 @@
       "body": "A pipeline that generates at scale but checks itself, cites its sources and labels its outputs – in your domain, your language, your standard. Read MOJ KRAJ. first, then let's talk about yours.",
       "cta": {
         "label": "Read MOJ KRAJ.",
-        "href": "https://mojkraj.hr/en",
+        "href": "https://www.mojkraj.hr/en",
         "external": true
       },
       "secondary": {
@@ -73,7 +73,7 @@
     "sections": [
       {
         "title": "Two Frustrations, One Portal",
-        "lede": "MOJ KRAJ. came from two very different urges – one as readers tired of the noise, one as a studio curious how far AI goes when the bar is set deliberately high.",
+        "lede": "Two urges: readers tired of the noise, and a studio curious how far AI goes when the bar is set deliberately high.",
         "blocks": [
           {
             "type": "cards",
@@ -92,7 +92,7 @@
       },
       {
         "title": "A Front Page for Every Town",
-        "lede": "Big media chase big topics, and most places in Croatia have nobody covering them. But a machine, unlike a newsroom, doesn't have to pick only the profitable cities.",
+        "lede": "Most places in Croatia have nobody covering them. A machine, unlike a newsroom, doesn't have to pick only the profitable cities.",
         "blocks": [
           {
             "type": "text",
@@ -120,8 +120,8 @@
         ]
       },
       {
-        "title": "From Wire Item to Published, Checked",
-        "lede": "Nothing reaches a reader without passing every stage. Generation is the easy part; the pipeline around it is what makes the output trustworthy.",
+        "title": "From Wire Item to Checked Story",
+        "lede": "Nothing reaches a reader without passing every stage. The pipeline, not the generation, is what makes the output trustworthy.",
         "blocks": [
           {
             "type": "steps",
@@ -242,7 +242,7 @@
     "ctas": [
       {
         "label": "Posjetite MOJ KRAJ.",
-        "href": "https://mojkraj.hr",
+        "href": "https://www.mojkraj.hr",
         "external": true
       },
       {
@@ -293,7 +293,7 @@
       "body": "Pipeline koji generira u velikom obujmu, ali sam sebe provjerava, navodi izvore i označava što je proizveo — u Vašoj domeni, na Vašem jeziku, po Vašem standardu. Prvo pročitajte MOJ KRAJ., pa razgovarajmo o Vašem.",
       "cta": {
         "label": "Pročitajte MOJ KRAJ.",
-        "href": "https://mojkraj.hr",
+        "href": "https://www.mojkraj.hr",
         "external": true
       },
       "secondary": {
@@ -304,7 +304,7 @@
     "sections": [
       {
         "title": "Dvije frustracije, jedan portal",
-        "lede": "MOJ KRAJ. nastao je iz dvaju vrlo različitih poriva — prvi iz pozicije čitatelja umornih od buke, drugi iz pozicije studija znatiželjnog dokle AI stiže kad se ljestvica namjerno postavi visoko.",
+        "lede": "Dva poriva: čitatelji umorni od buke i studio znatiželjan dokle AI stiže kad se ljestvica namjerno postavi visoko.",
         "blocks": [
           {
             "type": "cards",
@@ -323,7 +323,7 @@
       },
       {
         "title": "Naslovnica za svako mjesto",
-        "lede": "Veliki mediji jure velike teme, a većinu mjesta u Hrvatskoj nitko ne pokriva. Ali stroj, za razliku od redakcije, ne mora birati samo isplative gradove.",
+        "lede": "Većinu mjesta u Hrvatskoj nitko ne pokriva. Stroj, za razliku od redakcije, ne mora birati samo isplative gradove.",
         "blocks": [
           {
             "type": "text",
@@ -351,8 +351,8 @@
         ]
       },
       {
-        "title": "Od agencijske vijesti do objavljenog i provjerenog teksta",
-        "lede": "Ništa ne dolazi do čitatelja bez prolaska kroz svaku fazu. Generiranje je lakši dio; pouzdanim rezultat čini pipeline oko njega.",
+        "title": "Od agencijske vijesti do provjerene priče",
+        "lede": "Ništa ne dolazi do čitatelja bez prolaska kroz svaku fazu. Pouzdanim rezultat čini pipeline, a ne samo generiranje.",
         "blocks": [
           {
             "type": "steps",

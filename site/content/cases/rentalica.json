@@ -60,7 +60,7 @@
     "sections": [
       {
         "title": "Software That Still Worked",
-        "lede": "FlexiRent wasn't broken. It ran a real rent-a-car business every day for a decade. It was just standing on a stack the world had moved off – and that's a harder problem than a rewrite of something nobody uses.",
+        "lede": "FlexiRent wasn't broken – it ran a real rent-a-car business every day for a decade. It just stood on a stack the world had left.",
         "blocks": [
           {
             "type": "cards",
@@ -100,7 +100,7 @@
       },
       {
         "title": "Parity First, Ideas Second",
-        "lede": "The rule that made this safe: change the technology or change the product, never both at once. The new system had to be provably identical before it was allowed to be better.",
+        "lede": "Change the technology or the product, never both at once. The new system had to be provably identical before it could be better.",
         "blocks": [
           {
             "type": "steps",
@@ -195,7 +195,7 @@
       },
       {
         "title": "We Didn't Stop at a Copy",
-        "lede": "A faithful replica was the safety requirement, not the goal. Once the data was proven and the old system still sat there as a rollback, the new foundation started earning its keep – with capabilities a PHP 5.6 stack was never going to carry.",
+        "lede": "A faithful replica was the safety requirement, not the goal. Once the data was proven, the new foundation added what PHP 5.6 never could.",
         "blocks": [
           {
             "type": "cards",
@@ -234,7 +234,7 @@
       },
       {
         "title": "Letting AI Near a Real Database",
-        "lede": "An assistant that writes queries against a live business is only as trustworthy as the thing standing between it and the data. These limits are enforced in code and in PostgreSQL – not politely requested in a prompt.",
+        "lede": "An assistant querying a live business is only as trustworthy as its limits. Ours are enforced in code and PostgreSQL – not in a prompt.",
         "blocks": [
           {
             "type": "steps",
@@ -332,7 +332,7 @@
     "sections": [
       {
         "title": "Softver koji je i dalje radio",
-        "lede": "FlexiRent nije bio pokvaren. Desetljeće je svaki dan vodio stvarnu rent-a-car tvrtku. Samo je stajao na stacku s kojeg je svijet otišao — a to je teži problem od prepisivanja nečega što nitko ne koristi.",
+        "lede": "FlexiRent nije bio pokvaren: desetljeće je svaki dan vodio stvarnu rent-a-car tvrtku. Samo je stajao na stacku koji je svijet napustio.",
         "blocks": [
           {
             "type": "cards",
@@ -372,7 +372,7 @@
       },
       {
         "title": "Prvo istovjetnost, pa ideje",
-        "lede": "Pravilo koje je ovo učinilo sigurnim: mijenjaj tehnologiju ili mijenjaj proizvod, nikad oboje odjednom. Novi je sustav morao biti dokazivo istovjetan prije nego što je smio biti bolji.",
+        "lede": "Mijenjaj tehnologiju ili proizvod, nikad oboje odjednom. Novi je sustav morao biti dokazivo istovjetan prije nego što je smio biti bolji.",
         "blocks": [
           {
             "type": "steps",
@@ -467,7 +467,7 @@
       },
       {
         "title": "Nismo stali na kopiji",
-        "lede": "Vjerna je replika bila sigurnosni uvjet, a ne cilj. Kad su podaci bili dokazani, a stari sustav i dalje stajao kao točka povratka, novi se temelj počeo isplaćivati — mogućnostima koje PHP 5.6 nikad ne bi ponio.",
+        "lede": "Vjerna replika bila je sigurnosni uvjet, a ne cilj. Kad su podaci bili dokazani, novi je temelj donio ono što PHP 5.6 nikad ne bi ponio.",
         "blocks": [
           {
             "type": "cards",
@@ -506,7 +506,7 @@
       },
       {
         "title": "Pustiti AI blizu stvarne baze",
-        "lede": "Asistent koji piše upite nad živim poslovanjem vrijedan je povjerenja onoliko koliko i ono što stoji između njega i podataka. Ova se ograničenja provode u kodu i u PostgreSQL-u — a ne uljudno traže u promptu.",
+        "lede": "Asistent nad živim poslovanjem vrijedan je povjerenja koliko i njegova ograničenja. Naša se provode u kodu i PostgreSQL-u, a ne u promptu.",
         "blocks": [
           {
             "type": "steps",

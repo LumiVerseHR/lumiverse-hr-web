@@ -73,7 +73,7 @@
       },
       {
         "title": "A Tribe With Nothing Good to Wear",
-        "lede": "Developers are one of the most identity-driven, meme-fluent and well-paid groups on the internet. They already buy clothing to signal who they are – conference tees, company swag, \"it's always DNS\" mugs. The trigger is humour plus belonging, and it repeats.",
+        "lede": "Developers buy clothing to signal who they are – conference tees, swag, \"it's always DNS\" mugs. Trigger: humour plus belonging, on repeat.",
         "blocks": [
           {
             "type": "cards",
@@ -92,7 +92,7 @@
       },
       {
         "title": "A Content Engine Wearing a Shop",
-        "lede": "Anyone can put a joke on a shirt. The defensible part is the loop underneath: the marginal cost of a new design is compute, and so is the marginal cost of a new advert. Competitors buy content as a line item. Here it's a build step.",
+        "lede": "The defensible part is the loop, not the joke: the marginal cost of a new design or advert is compute. Content is a build step.",
         "blocks": [
           {
             "type": "steps",
@@ -127,7 +127,7 @@
       },
       {
         "title": "Where the Engineering Went",
-        "lede": "The interesting problems weren't \"make an image.\" They were everything that has to be true before a generated picture becomes a garment somebody is happy to receive.",
+        "lede": "The hard part wasn't making an image – it was everything that turns a generated picture into a garment someone is happy to receive.",
         "blocks": [
           {
             "type": "cards",
@@ -294,7 +294,7 @@
       },
       {
         "title": "Pleme koje nema što dobro obući",
-        "lede": "Programeri su jedna od skupina na internetu koje najviše drže do identiteta, tečno govore jezik memeova i dobro su plaćene. Odjeću već kupuju da bi pokazali tko su — majice s konferencija, firmin swag, šalice s natpisom „it's always DNS\". Okidač je humor plus pripadnost, i ponavlja se.",
+        "lede": "Programeri odjeću kupuju da pokažu tko su — majice s konferencija, swag, šalice „it's always DNS\". Okidač: humor plus pripadnost, uvijek iznova.",
         "blocks": [
           {
             "type": "cards",
@@ -313,7 +313,7 @@
       },
       {
         "title": "Pogon za sadržaj prerušen u trgovinu",
-        "lede": "Šalu na majicu može staviti svatko. Ono što se da obraniti jest petlja ispod: granični trošak novog dizajna je procesorsko vrijeme, jednako kao i granični trošak nove reklame. Konkurenti sadržaj kupuju kao stavku u proračunu. Ovdje je to korak u buildu.",
+        "lede": "Obranjiva je petlja, a ne šala: granični trošak novog dizajna ili reklame je procesorsko vrijeme. Sadržaj je korak u buildu.",
         "blocks": [
           {
             "type": "steps",
@@ -348,7 +348,7 @@
       },
       {
         "title": "Gdje je otišlo inženjerstvo",
-        "lede": "Zanimljivi problemi nisu bili „napravi sliku\". Bili su sve ono što mora biti točno prije nego što generirana slika postane odjevni predmet kojem će se netko obradovati.",
+        "lede": "Teško nije bilo napraviti sliku, nego sve što generiranu sliku pretvara u odjevni predmet kojem će se netko obradovati.",
         "blocks": [
           {
             "type": "cards",

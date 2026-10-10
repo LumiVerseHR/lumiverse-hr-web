@@ -11,7 +11,7 @@
     "ctas": [
       {
         "label": "Try Titlomat Free",
-        "href": "https://titlomat.com/en",
+        "href": "https://www.titlomat.com/en",
         "external": true
       },
       {
@@ -83,7 +83,7 @@
       },
       {
         "title": "Stop Losing Your Audience",
-        "lede": "A typical Croatian channel misses 15-30% of its potential audience without subtitles. That's viewers watching on mute, non-native speakers, and the entire English-speaking world.",
+        "lede": "Without subtitles, a typical Croatian channel misses 15-30% of its audience: muted viewers, non-native speakers, the English-speaking world.",
         "blocks": [
           {
             "type": "cards",
@@ -160,7 +160,7 @@
             "items": [
               {
                 "label": "titlomat.com",
-                "href": "https://titlomat.com/en",
+                "href": "https://www.titlomat.com/en",
                 "external": true
               }
             ]
@@ -173,7 +173,7 @@
       "body": "Connect your channel in 30 seconds. Your first videos are on us – 100 free credits, no credit card.",
       "cta": {
         "label": "Try Titlomat Free",
-        "href": "https://titlomat.com/en",
+        "href": "https://www.titlomat.com/en",
         "external": true
       },
       "secondary": {
@@ -194,7 +194,7 @@
     "ctas": [
       {
         "label": "Isprobajte Titlomat besplatno",
-        "href": "https://titlomat.com",
+        "href": "https://www.titlomat.com",
         "external": true
       },
       {
@@ -266,7 +266,7 @@
       },
       {
         "title": "Prestanite gubiti publiku",
-        "lede": "Tipičan hrvatski kanal bez titlova ne dosegne 15-30% potencijalne publike. To su gledatelji koji gledaju bez zvuka, oni kojima hrvatski nije materinski i cijeli svijet koji govori engleski.",
+        "lede": "Bez titlova tipičan hrvatski kanal ne dosegne 15-30% publike: gledatelje bez zvuka, one kojima hrvatski nije materinski i engleski govorni svijet.",
         "blocks": [
           {
             "type": "cards",
@@ -343,7 +343,7 @@
             "items": [
               {
                 "label": "titlomat.com",
-                "href": "https://titlomat.com",
+                "href": "https://www.titlomat.com",
                 "external": true
               }
             ]
@@ -356,7 +356,7 @@
       "body": "Povežite kanal u 30 sekundi. Prve videe častimo mi — 100 besplatnih kredita, bez kartice.",
       "cta": {
         "label": "Isprobajte Titlomat besplatno",
-        "href": "https://titlomat.com",
+        "href": "https://www.titlomat.com",
         "external": true
       },
       "secondary": {

@@ -11,7 +11,7 @@
     "ctas": [
       {
         "label": "Visit Bridj",
-        "href": "https://bridj.ai",
+        "href": "https://www.bridj.ai",
         "external": true
       },
       {
@@ -59,8 +59,8 @@
     ],
     "sections": [
       {
-        "title": "An Intelligence Layer for the Whole Business",
-        "lede": "Every company generates thousands of conversations, calls and customer interactions. Bridj connects to the tools where those live and turns them into a single source of truth – surfacing the trends, opportunities, risks and issues that would otherwise slip through the cracks, for marketing, sales, product and leadership alike.",
+        "title": "Intelligence for the Whole Business",
+        "lede": "Bridj turns conversations, calls and customer interactions into one source of truth – surfacing what would otherwise slip through.",
         "blocks": [
           {
             "type": "cards",
@@ -83,7 +83,7 @@
       },
       {
         "title": "What We Built Underneath",
-        "lede": "The product is one screen. Behind it is a pipeline that carries messy, multi-source conversation data all the way to answers – designed, built and owned as tech lead, stage by stage.",
+        "lede": "The product is one screen. Behind it, a pipeline carries messy, multi-source conversation data all the way to answers.",
         "blocks": [
           {
             "type": "steps",
@@ -179,7 +179,7 @@
       },
       {
         "title": "More Than Hands on a Keyboard",
-        "lede": "Embedded tech lead isn't a title on a slide – it's the person the release can't ship without. Three jobs at once: architect, builder, and the technical gate before production.",
+        "lede": "Embedded tech lead means three jobs at once: architect, builder, and the technical gate before production.",
         "blocks": [
           {
             "type": "cards",
@@ -263,7 +263,7 @@
     "ctas": [
       {
         "label": "Posjetite Bridj",
-        "href": "https://bridj.ai",
+        "href": "https://www.bridj.ai",
         "external": true
       },
       {
@@ -311,8 +311,8 @@
     ],
     "sections": [
       {
-        "title": "Sloj inteligencije za cijelu tvrtku",
-        "lede": "Svaka tvrtka proizvodi tisuće razgovora, poziva i interakcija s kupcima. Bridj se spaja na alate u kojima oni žive i pretvara ih u jedan izvor istine — iznosi trendove, prilike, rizike i probleme koji bi inače promakli, jednako za marketing, prodaju, proizvod i upravu.",
+        "title": "Inteligencija za cijelu tvrtku",
+        "lede": "Bridj pretvara razgovore, pozive i interakcije s kupcima u jedan izvor istine — i iznosi ono što bi inače promaklo.",
         "blocks": [
           {
             "type": "cards",
@@ -335,7 +335,7 @@
       },
       {
         "title": "Što smo izgradili ispod",
-        "lede": "Proizvod je jedan ekran. Iza njega je pipeline koji neuredne podatke iz razgovora, iz više izvora, nosi sve do odgovora — osmišljen, izgrađen i vođen iz uloge tech leada, korak po korak.",
+        "lede": "Proizvod je jedan ekran. Iza njega pipeline neuredne podatke iz razgovora, iz više izvora, nosi sve do odgovora.",
         "blocks": [
           {
             "type": "steps",
@@ -431,7 +431,7 @@
       },
       {
         "title": "Više od ruku na tipkovnici",
-        "lede": "Ugrađeni tech lead nije titula na slajdu — to je osoba bez koje izdanje ne izlazi. Tri posla odjednom: arhitekt, graditelj i tehnička brana pred produkcijom.",
+        "lede": "Ugrađeni tech lead znači tri posla odjednom: arhitekt, graditelj i tehnička brana pred produkcijom.",
         "blocks": [
           {
             "type": "cards",

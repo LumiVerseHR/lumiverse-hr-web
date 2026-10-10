@@ -60,8 +60,8 @@
     ],
     "sections": [
       {
-        "title": "You Can Automate What You Can Verify",
-        "lede": "Coding got automated first because you can run the test – the verifier was already there. So the real question is which other fields are already past that gate. Physics is one of them, and almost nobody had built the harness to exploit it.",
+        "title": "Automate What You Can Verify",
+        "lede": "Coding was automated first because the verifier already existed. Physics has one too – and almost nobody had built the harness for it.",
         "blocks": [
           {
             "type": "cards",
@@ -80,7 +80,7 @@
       },
       {
         "title": "An Agent That Runs a Lab",
-        "lede": "The physics is the subject. The deliverable is the method: a verifiable, reproducible agentic system that spans a dozen tools which barely share a vocabulary, let alone a data format. This is the part that transfers to any domain with an answer key.",
+        "lede": "The deliverable is the method: a reproducible agentic system spanning a dozen tools, transferable to any domain with an answer key.",
         "blocks": [
           {
             "type": "cards",
@@ -130,7 +130,7 @@
       },
       {
         "title": "The Device the Numbers Describe",
-        "lede": "Focus a laser hard enough and it rips electrons off the air at the focal point – a microscopic spark, a pixel with a real address in space. Move ten thousand of them sixty times a second and the eye sees a picture. Here is what the physics says about building one.",
+        "lede": "A focused laser makes the air spark – a pixel with a real address in space. Move 10,000 of them 60 times a second and the eye sees a picture.",
         "blocks": [
           {
             "type": "cards",
@@ -165,7 +165,7 @@
       },
       {
         "title": "The Part That Matters Most",
-        "lede": "At one point a radiation-hydrodynamics run reproduced a real air-spark's light curve beautifully – exactly the figure you build a section around. It was wrong.",
+        "lede": "A radiation-hydrodynamics run reproduced a real air-spark's light curve beautifully. It was wrong.",
         "blocks": [
           {
             "type": "cards",
@@ -294,8 +294,8 @@
     ],
     "sections": [
       {
-        "title": "Automatizirati se može ono što se može provjeriti",
-        "lede": "Programiranje je prvo automatizirano jer se test može pokrenuti — provjeravač je već postojao. Pravo je pitanje, dakle, koja su još područja već prošla tu granicu. Fizika je jedno od njih, a gotovo nitko nije izgradio okvir koji bi to iskoristio.",
+        "title": "Automatizirajte ono što možete provjeriti",
+        "lede": "Programiranje je prvo automatizirano jer je provjeravač već postojao. Fizika ga također ima — a gotovo nitko nije izgradio okvir za to.",
         "blocks": [
           {
             "type": "cards",
@@ -314,7 +314,7 @@
       },
       {
         "title": "Agent koji vodi laboratorij",
-        "lede": "Fizika je tema. Rezultat je metoda: provjerljiv, ponovljiv agentski sustav koji obuhvaća dvanaestak alata koji jedva dijele nazivlje, a kamoli format podataka. To je dio koji se prenosi na svako područje koje ima rješenja za provjeru.",
+        "lede": "Rezultat je metoda: ponovljiv agentski sustav koji obuhvaća dvanaestak alata i prenosi se na svako područje koje ima rješenja za provjeru.",
         "blocks": [
           {
             "type": "cards",
@@ -364,7 +364,7 @@
       },
       {
         "title": "Uređaj koji brojke opisuju",
-        "lede": "Fokusirajte laser dovoljno jako i on u žarištu otkine elektrone sa zraka — mikroskopska iskra, piksel sa stvarnom adresom u prostoru. Pomaknite deset tisuća takvih iskri šezdeset puta u sekundi i oko vidi sliku. Evo što fizika kaže o izradi takvog uređaja.",
+        "lede": "Fokusirani laser zapali iskru u zraku — piksel sa stvarnom adresom u prostoru. Pomaknite 10.000 takvih iskri 60 puta u sekundi i oko vidi sliku.",
         "blocks": [
           {
             "type": "cards",
@@ -399,7 +399,7 @@
       },
       {
         "title": "Dio koji najviše znači",
-        "lede": "U jednom je trenutku radijacijsko-hidrodinamički proračun prekrasno reproducirao krivulju svjetlosti stvarne iskre u zraku — točno onakav grafikon oko kojeg se gradi cijelo poglavlje. Bio je pogrešan.",
+        "lede": "Radijacijsko-hidrodinamički proračun prekrasno je reproducirao krivulju svjetlosti stvarne iskre u zraku. Bio je pogrešan.",
         "blocks": [
           {
             "type": "cards",
