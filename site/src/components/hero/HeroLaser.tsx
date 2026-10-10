@@ -12,7 +12,8 @@ import styles from "./HeroLaser.module.css";
 const FRAME = { w: 1600, h: 1100 };
 // The laptop's box in the render, measured from the alpha channel.
 const LAPTOP = { x: 384, y: 224, w: 746, h: 576 };
-const T = { cut: 1300, between: 450, hold: 4600, vanish: 520 };
+// One round trip: up drawing the wireframe, straight back down making it solid.
+const T = { cut: 900, hold: 4800, vanish: 520 };
 
 const PRODUCTS = [
   { id: "moj-kolega", name: "Moj Kolega" },
@@ -24,7 +25,6 @@ type Phase = "idle" | "wire" | "solid" | "hold" | "vanish";
 type Copy = { idea: string; shipped: string; alt: Record<(typeof PRODUCTS)[number]["id"], string> };
 type Spark = { x: number; y: number; vx: number; vy: number; life: number };
 
-const ease = (t: number) => (t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2);
 
 export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
   const [product, setProduct] = useState(0);
@@ -38,9 +38,17 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
   // Start when the headline has been laser-written (or after a fallback delay).
   useEffect(() => {
     const isReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const go = () => (isReduced ? setReduced(true) : setPhase("wire"));
+    // Whichever comes first, the title event or the fallback, starts it; the other is ignored.
+    let started = false;
+    const go = () => {
+      if (started) return;
+      started = true;
+      window.clearTimeout(fallback);
+      if (isReduced) setReduced(true);
+      else setPhase("wire");
+    };
     window.addEventListener("lv:title-written", go, { once: true });
-    const fallback = window.setTimeout(go, 2600);
+    const fallback: number = window.setTimeout(() => go(), 2600);
     return () => {
       window.removeEventListener("lv:title-written", go);
       window.clearTimeout(fallback);
@@ -91,8 +99,12 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
       const dt = Math.min(40, now - (last || now));
       last = now;
       const t = Math.min(1, (now - start) / T.cut);
-      const cutPct = bottom - (bottom - top) * ease(t);
-      target.style.clipPath = `inset(${t >= 1 ? 0 : cutPct}% 0 0 0)`;
+      // Up for the wireframe (revealed below the line), down for the solid (revealed above it).
+      // Ease in on the way up and out on the way down, so the turn at the top is one motion.
+      const up = phase === "wire";
+      const k = up ? t * t : 1 - (1 - t) * (1 - t);
+      const cutPct = up ? bottom - (bottom - top) * k : top + (bottom - top) * k;
+      target.style.clipPath = t >= 1 ? "inset(0 0 0 0)" : up ? `inset(${cutPct}% 0 0 0)` : `inset(0 0 ${100 - cutPct}% 0)`;
 
       const r = box.getBoundingClientRect();
       const sx = r.width / FRAME.w;
@@ -162,7 +174,7 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
       if (t >= 1 && !finished) {
         finished = true;
         origin?.removeAttribute("data-firing");
-        window.setTimeout(() => setPhase(phase === "wire" ? "solid" : "hold"), phase === "wire" ? T.between : 0);
+        setPhase(phase === "wire" ? "solid" : "hold");
       }
       if (t < 1 || sparks.length) raf = requestAnimationFrame(tick);
       else ctx.clearRect(0, 0, innerWidth, innerHeight);
