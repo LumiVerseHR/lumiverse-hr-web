@@ -63,3 +63,37 @@ Running notes for a possible blog post. Every number here comes from the code or
 
 ## Cost
 - 7 WebP layers, 328 KB in total. Still no WebGL, and nothing animates between cuts.
+
+## Round 2: feedback on figures and orientation
+- "The left figure overlaps the ultrawide, hovers over the plinth, and its shadow is weird."
+- "Turn the screens toward the middle of the page, toward the viewer. People should look at the objects, not away."
+
+### What was actually wrong
+- **Mirrored cards.** The card's yaw was computed as `atan2(dy, dx) - 90°`, which faced its back to the camera.
+  Emission shades both sides, so it still rendered, but mirrored, and the man looked away from the device.
+  Fixed with `atan2(dx, -dy)`, so local -Y points at the camera and image-right is screen-right.
+- **Hovering.** In the generated photo the camera looks down at the figure, so the back shoe sits 40px
+  (3% of the figure height, about 3.4cm in scene units) above the front shoe. On a flat vertical card that becomes a gap
+  under the back foot.
+- **Weird shadow.** A flat card casts a flat cut-out shadow, and its reflection in the glossy plinth showed as dark
+  mirrored legs.
+
+### Fixes
+- The cards no longer cast shadows or show in reflections. Each figure has an invisible stand-in mesh (the old
+  low-poly figure, scaled to the card height) that only casts the shadow, so the shadow is a real 3D shadow
+  attached at the feet.
+- A soft elliptical contact shadow (black, radial falloff, 40% peak) sits under each pair of feet,
+  pushed 3.5cm away from the camera so it lands under the soles rather than in front of them.
+- The devices turn as one, through a root empty per device, by -28° toward the camera: 8.6° past facing it
+  head-on, so the screens lean toward the headline. The keyboard moved 0.3 to the right to make room for the man.
+- Placement is checked numerically: each figure's projected head must sit below the lowest projected point of
+  every device it stands in front of. The man stands at (-2.2, -1.2) and the woman at (1.2, -2.28), symmetric in the frame.
+
+### Pipeline lessons
+- `matrix_world` is stale for objects in a viewport-hidden collection. The path exporter read the keyboard's old
+  position until it learned to unhide every device before reading.
+- Cycles turns a pixel black once a ray passes more than 8 transparent surfaces. With the wireframe's
+  transparent material override, the monitor neck crossed bezel, panel, housing and neck, giving 1,431 black pixels.
+  `transparent_max_bounces = 64` brought it to 0.
+- Both steps now live in versioned scripts, `design-src/render_layers.py` and `design-src/export_paths.py`, so every
+  render resets every flag (shadow catcher, holdout, visibility) instead of inheriting the last pass.
