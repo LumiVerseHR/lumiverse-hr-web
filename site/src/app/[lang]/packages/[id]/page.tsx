@@ -25,6 +25,9 @@ type Pkg = Packaged & {
   hr: Copy;
 };
 
+// Unknown ids must wait for the full render so notFound() can answer with a real 404.
+export const ensureStatic = "navigation";
+
 const find = (id: string) => (packaged as Pkg[]).find((pkg) => pkg.id === id);
 
 export function generateStaticParams() {

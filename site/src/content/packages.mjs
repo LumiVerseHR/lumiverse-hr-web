@@ -29,7 +29,7 @@
 // it has to be something that page already states.
 
 // Last change to any price or package: the sitemap's <lastmod> for /pricing.
-export const updated = "2026-10-10";
+export const updated = "2026-10-11";
 
 // Every euro amount a package quotes, for the checks.
 export const amountsOf = (price) => [price.from, price.then, price.fullTime].filter(Boolean);
@@ -143,9 +143,8 @@ export const packages = [
     id: "ai-team-workshop",
     group: "upskill",
     icon: "fa-chalkboard-teacher",
-    price: { from: 1900, per: "day", fixed: true },
+    price: { from: 1900, per: "day" },
     proof: "air-laser",
-    pack: { delivery: { en: "1 day, booked within 2 weeks", hr: "1 dan, termin unutar 2 tjedna" } },
     en: {
       name: "AI Team Workshop",
       summary: "A day with your team on your own work: where AI pays off, how to use it well, and the first tools built for you.",
@@ -157,9 +156,7 @@ export const packages = [
       ],
       proof: "Air-laser study: one agent loop on Claude Code, the bulk of the work in 3 days",
       cta: "Book a workshop",
-      tag: "New",
-      priceNote: "Up to 12 people. Travel outside Zagreb is billed at cost.",
-      brief: ["Your team: roles and size", "Two or three tasks they repeat every week", "The AI tools you already pay for"]
+      tag: "New"
     },
     hr: {
       name: "AI radionica za tim",
@@ -172,9 +169,7 @@ export const packages = [
       ],
       proof: "Studija Air-laser: jedna petlja agenata na Claude Codeu, većina posla u 3 dana",
       cta: "Rezervirajte radionicu",
-      tag: "Novo",
-      priceNote: "Do 12 osoba. Putni troškovi izvan Zagreba naplaćuju se po stvarnom trošku.",
-      brief: ["Vaš tim: uloge i veličina", "Dva ili tri zadatka koja ponavljaju svaki tjedan", "AI alati koje već plaćate"]
+      tag: "Novo"
     }
   },
   {
@@ -409,9 +404,9 @@ export const packages = [
     id: "web-to-video",
     group: "package",
     icon: "fa-video",
-    price: { from: 390, per: "once" },
+    price: { from: 250, per: "once" },
     pack: {
-      delivery: { en: "5 working days", hr: "5 radnih dana" },
+      delivery: { en: "2 working days", hr: "2 radna dana" },
       preview: { video: "/assets/reel/38bf03/lumiverse-reel.mp4", poster: "/assets/reel/38bf03/poster.jpg" }
     },
     en: {
@@ -422,7 +417,7 @@ export const packages = [
         "Real screenshots of your page, animated",
         "Captions burned in, so it works without sound",
         "Music cut to the beat",
-        "One round of revisions"
+        "Two rounds of revisions"
       ],
       proof: "Our 22-second launch reel, made with the same pipeline",
       cta: "Order a video",
@@ -436,7 +431,7 @@ export const packages = [
         "Stvarne snimke Vaše stranice, animirane",
         "Ugrađeni titlovi, da radi i bez zvuka",
         "Glazba montirana u ritmu",
-        "Jedan krug izmjena"
+        "Dva kruga izmjena"
       ],
       proof: "Naš reel od 22 sekunde, napravljen istim postupkom",
       cta: "Naručite video",
@@ -483,9 +478,9 @@ export const packages = [
     id: "animated-hero",
     group: "package",
     icon: "fa-cube",
-    price: { from: 2400, per: "once" },
+    price: { from: 999, per: "once" },
     pack: {
-      delivery: { en: "3 weeks", hr: "3 tjedna" },
+      delivery: { en: "4 working days", hr: "4 radna dana" },
       preview: { image: "/blog/laser-cut-hero/cover.webp" },
       proofHref: "/blog/laser-cut-hero"
     },
@@ -497,7 +492,8 @@ export const packages = [
         "Up to 3 variants, like the three devices on our homepage",
         "A laser-style reveal as a drop-in web component",
         "A still fallback for slow connections and reduced motion",
-        "The code for your site, plus a 1080p video cut"
+        "The code for your site, plus a 1080p video cut",
+        "Four rounds of revisions"
       ],
       proof: "Our homepage: three exhibits in about 290 KB of images",
       cta: "Order a hero",
@@ -511,7 +507,8 @@ export const packages = [
         "Do 3 varijante, poput tri uređaja na našoj naslovnici",
         "Otkrivanje laserom kao gotova web komponenta",
         "Statična slika za spore veze i smanjeno kretanje",
-        "Kod za Vašu stranicu, uz video od 1080p"
+        "Kod za Vašu stranicu, uz video od 1080p",
+        "Četiri kruga izmjena"
       ],
       proof: "Naša naslovnica: tri eksponata u oko 290 KB slika",
       cta: "Naručite hero",
@@ -523,7 +520,7 @@ export const packages = [
     group: "package",
     icon: "fa-globe",
     price: { from: 3900, per: "once" },
-    pack: { delivery: { en: "4 weeks", hr: "4 tjedna" }, proofHref: "/" },
+    pack: { delivery: { en: "2 weeks", hr: "2 tjedna" }, proofHref: "/" },
     en: {
       name: "Business Website, Up to 20 Pages",
       summary: "A fast, bilingual company website, designed and built by the team behind this one.",
@@ -551,6 +548,45 @@ export const packages = [
       proof: "lumiverse.hr: ova stranica, na istoj tehnologiji",
       cta: "Naručite stranicu",
       brief: ["Vaša trenutna stranica, ako je imate", "Koje stranice i jezike trebate", "Dvije ili tri stranice koje Vam se sviđaju i zašto"]
+    }
+  },
+  {
+    id: "premium-website",
+    group: "package",
+    icon: "fa-film",
+    price: { from: 4900, per: "once" },
+    pack: {
+      delivery: { en: "3 weeks", hr: "3 tjedna" },
+      preview: { image: "/blog/laser-cut-hero/exhibits.webp" },
+      proofHref: "/"
+    },
+    en: {
+      name: "Premium Website With Video or 3D",
+      summary: "Everything in the business website, plus the motion that makes people stop scrolling: a 3D hero or a video, built in.",
+      includes: [
+        "Everything in the business website package",
+        "An animated 3D hero or a short video, made for your brand",
+        "Motion on the pages that matter, without a heavy page",
+        "Up to 20 pages in two languages, with SEO basics in both",
+        "Two rounds of revisions, and 30 days of content edits after launch"
+      ],
+      proof: "lumiverse.hr: the laser-cut hero on this homepage",
+      cta: "Order a premium website",
+      brief: ["Your current website, if you have one", "The pages and languages you need", "Your product or brand, and whether you'd like 3D or video"]
+    },
+    hr: {
+      name: "Premium web stranica s videom ili 3D-om",
+      summary: "Sve iz poslovne web stranice, uz pokret zbog kojeg ljudi prestanu skrolati: 3D hero ili video, ugrađen u stranicu.",
+      includes: [
+        "Sve iz paketa poslovne web stranice",
+        "Animirani 3D hero ili kratki video, izrađen za Vaš brend",
+        "Pokret na stranicama koje su važne, bez teške stranice",
+        "Do 20 stranica na dva jezika, uz osnovni SEO na oba",
+        "Dva kruga izmjena i 30 dana izmjena sadržaja nakon objave"
+      ],
+      proof: "lumiverse.hr: laserom izrezan hero na ovoj naslovnici",
+      cta: "Naručite premium stranicu",
+      brief: ["Vaša trenutna stranica, ako je imate", "Koje stranice i jezike trebate", "Vaš proizvod ili brend te želite li 3D ili video"]
     }
   }
 ];
