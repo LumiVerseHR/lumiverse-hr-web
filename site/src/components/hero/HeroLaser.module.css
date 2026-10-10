@@ -34,6 +34,11 @@
   clip-path: inset(100% 0 0 0);
 }
 
+/* The traced reveal is drawn by script, never clipped. */
+.wire.reveal {
+  clip-path: none;
+}
+
 /* The wireframe glows like the laser that drew it, and fades as the solid takes over. */
 .wire {
   filter: drop-shadow(0 0 3px rgb(255 140 120 / 0.7)) drop-shadow(0 0 14px rgb(255 77 77 / 0.35));
