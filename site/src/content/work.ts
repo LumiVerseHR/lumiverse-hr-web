@@ -4,7 +4,7 @@ import type { Locale } from "@/i18n/config";
 type Text = Record<Locale, string>;
 
 export type Flagship = {
-  id: "moj-kolega" | "bridj" | "air-laser";
+  id: "moj-kolega" | "bridj" | "air-laser" | "lider-translations" | "mojkraj" | "overserved";
   slug: string;
   name: string;
   image: string;
@@ -63,6 +63,54 @@ export const flagships: Flagship[] = [
       hr: "Studija fizike za sliku koja lebdi u zraku, izračunata od početka do kraja s desetak open-source simulatora koje vodi jedna petlja AI agenata. Jedini rezultat koji nije prošao provjeru povučen je.",
     },
   },
+  {
+    id: "lider-translations",
+    slug: "lider-translations",
+    name: "Lider Translations",
+    image: "/work/lidertranslations-1.jpg",
+    alt: {
+      en: "One of the Lider translation sites: the Croatian business newsroom published in another language",
+      hr: "Jedna od prevedenih stranica Lidera: hrvatska poslovna redakcija objavljena na drugom jeziku",
+    },
+    kind: { en: "AI translation · client work", hr: "AI prevođenje · rad za klijenta" },
+    stat: { value: "10", unit: { en: "languages, ~1.4M articles published", hr: "jezika, ~1,4 mil. objavljenih članaka" } },
+    summary: {
+      en: "One Croatian newsroom translated into ten languages and published as ten more live news sites, kept current every day by a pipeline that runs itself.",
+      hr: "Jedna hrvatska redakcija prevedena na deset jezika i objavljena kao deset novih news portala, koje svaki dan ažurira pipeline koji radi sam.",
+    },
+  },
+  {
+    id: "mojkraj",
+    slug: "mojkraj",
+    name: "MOJ KRAJ.",
+    image: "/work/mojkraj-home.jpg",
+    alt: {
+      en: "MOJ KRAJ.'s national front page: a calm, content-first news layout",
+      hr: "Naslovnica MOJ KRAJ.-a: miran raspored vijesti u kojem je sadržaj na prvom mjestu",
+    },
+    kind: { en: "AI newsroom · our product", hr: "AI redakcija · naš proizvod" },
+    stat: { value: "9", unit: { en: "automated checks on every article", hr: "automatskih provjera na svakom članku" } },
+    summary: {
+      en: "A Croatian news portal run as a public experiment: every article written fresh from cited sources, every claim checked before it publishes, and news from the towns big media left behind.",
+      hr: "Hrvatski news portal vođen kao javni eksperiment: svaki članak napisan iznova iz citiranih izvora, svaka tvrdnja provjerena prije objave, uz vijesti iz mjesta koja su veliki mediji napustili.",
+    },
+  },
+  {
+    id: "overserved",
+    slug: "overserved",
+    name: "Overserved",
+    image: "/work/overserved-landing.jpg",
+    alt: {
+      en: "Overserved's title screen: a satirical tower defence game about serving users",
+      hr: "Naslovni ekran Overserveda: satirična tower defense igra o usluživanju korisnika",
+    },
+    kind: { en: "AI-built game · our project", hr: "Igra izrađena uz AI · naš projekt" },
+    stat: { value: "140", unit: { en: "levels, built in about three weeks", hr: "razina, izrađeno u otprilike tri tjedna" } },
+    summary: {
+      en: "A satirical AI-themed tower defence where you serve users instead of shooting them: seven markets and 600+ generated art assets, as an honest test of how far AI-assisted development goes.",
+      hr: "Satirični tower defense na temu AI-ja u kojem korisnike uslužujete, a ne gađate: sedam tržišta i više od 600 generiranih grafika, kao iskren test dokle razvoj uz AI zaista stiže.",
+    },
+  },
 ];
 
 export type WorkItem = {
@@ -75,13 +123,6 @@ export type WorkItem = {
 
 // The rest of the work, newest strengths first; one hard fact each.
 export const workIndex: WorkItem[] = [
-  {
-    slug: "lider-translations",
-    name: "Lider Translations",
-    image: "/work/lidertranslations-1.jpg",
-    kind: { en: "AI translation", hr: "AI prevođenje" },
-    fact: { en: "1 newsroom, 10 languages, ~1.4M articles", hr: "1 redakcija, 10 jezika, ~1,4 mil. članaka" },
-  },
   {
     slug: "country-guides",
     name: "Country Guides",
@@ -104,13 +145,6 @@ export const workIndex: WorkItem[] = [
     fact: { en: "Croatian and English subtitles, automatically", hr: "Hrvatski i engleski titlovi, automatski" },
   },
   {
-    slug: "mojkraj",
-    name: "MOJ KRAJ.",
-    image: "/work/mojkraj-home.jpg",
-    kind: { en: "AI newsroom", hr: "AI redakcija" },
-    fact: { en: "3 automated checks before anything publishes", hr: "3 automatske provjere prije objave" },
-  },
-  {
     slug: "barcoder",
     name: "Barcoder",
     image: "/work/barcoder-landing.jpg",
@@ -130,13 +164,6 @@ export const workIndex: WorkItem[] = [
     image: "/work/aimito-landing.jpg",
     kind: { en: "Commerce & content engine", hr: "Trgovina i pogon za sadržaj" },
     fact: { en: "889 original designs, searchable by feeling", hr: "889 originalnih dizajna, pretraživih po dojmu" },
-  },
-  {
-    slug: "overserved",
-    name: "Overserved",
-    image: "/work/overserved-landing.jpg",
-    kind: { en: "AI-built game", hr: "Igra izrađena uz AI" },
-    fact: { en: "140 levels in three weeks", hr: "140 razina u tri tjedna" },
   },
   {
     slug: "pitaj-lider",
