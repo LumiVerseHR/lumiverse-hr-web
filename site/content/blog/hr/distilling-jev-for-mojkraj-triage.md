@@ -1,7 +1,7 @@
 ---
 title: Kako smo za 0,10 $ destilirali Jev za trijažu MOJ KRAJ.-a
 description: Model od 322M na našem GPU-u sad donosi većinu trijažnih odluka MOJ KRAJ.-a. Naučio je iz Jevovih odgovora vrijednih 0,10 $ i izjednačen je s LLM-om.
-date: 2026-10-11
+date: 2026-09-22
 tags: [Build Log, AI Evaluation]
 related: [mojkraj]
 image: /images/og/mojkraj.jpg

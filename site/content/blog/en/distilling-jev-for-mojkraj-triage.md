@@ -1,7 +1,7 @@
 ---
 title: How We Distilled Jev for MOJ KRAJ. Triage for $0.10
 description: A 322M model on our own GPU now makes most of MOJ KRAJ.'s triage calls. It learned from $0.10 of a commercial model's answers and ties the production LLM.
-date: 2026-10-11
+date: 2026-09-22
 tags: [Build Log, AI Evaluation]
 related: [mojkraj]
 image: /images/og/mojkraj.jpg
