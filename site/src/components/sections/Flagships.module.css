@@ -73,6 +73,17 @@
   letter-spacing: -0.02em;
 }
 
+.name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.name a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
 .kind {
   margin-top: 4px !important;
   color: var(--text-muted);

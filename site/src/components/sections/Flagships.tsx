@@ -52,7 +52,9 @@ export function Flagships({
                 />
               </a>
               <div className={styles.label}>
-                <Name className={styles.name}>{f.name}</Name>
+                <Name className={styles.name}>
+                  <a href={localePath(lang, `/${f.slug}`)}>{f.name}</a>
+                </Name>
                 <p className={styles.kind}>{f.kind[lang]}</p>
                 <p className={styles.stat}>
                   <span className={styles.value}>{f.stat.value}</span>
