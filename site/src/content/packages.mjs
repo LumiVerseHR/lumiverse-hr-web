@@ -520,7 +520,7 @@ export const packages = [
     group: "package",
     icon: "fa-globe",
     price: { from: 3900, per: "once" },
-    pack: { delivery: { en: "2 weeks", hr: "2 tjedna" }, proofHref: "/" },
+    pack: { delivery: { en: "1.5 weeks", hr: "1,5 tjedana" }, proofHref: "/" },
     en: {
       name: "Business Website, Up to 20 Pages",
       summary: "A fast, bilingual company website, designed and built by the team behind this one.",
