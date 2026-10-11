@@ -164,3 +164,7 @@ Not packaged (stay custom): the AI newsroom (mojkraj), custom internal tools (re
   - premium-website: homepage hero, overserved.lumiverse.hr, launch reel
 - Open: the ARMY Adria teaser uses BANGTANTV photos (credited in frame); the launch reel still ends on
   the retired "We build Better Humans" slogan.
+- Architectural visualisation package added: €1,290 one-time, 1 week (price and delivery are a first
+  proposal). Up to 5 stills at 2400×1600 plus an interactive web model, two revision rounds. Evidence:
+  a 12 s reel of the blueprint-house finals (public/packages/evidence/blueprint-house.mp4), linked to
+  /blog/blueprint-to-archviz. Caveat: that house was built from a watermarked Alamy stock blueprint.

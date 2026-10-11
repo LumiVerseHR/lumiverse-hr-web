@@ -62,6 +62,9 @@ export const work = {
   hero: clip("hero", "screen", { href: "/", site: "lumiverse.hr" },
     { title: "lumiverse.hr", caption: "The laser-cut hero on our homepage: three devices, no WebGL" },
     { title: "lumiverse.hr", caption: "Laserom izrezan hero na našoj naslovnici: tri uređaja, bez WebGL-a" }),
+  blueprintHouse: clip("blueprint-house", "wide", { href: "/blog/blueprint-to-archviz" },
+    { title: "House from a blueprint", caption: "Six of the seven final renders: golden and blue hour, interiors and two cutaways" },
+    { title: "Kuća iz nacrta", caption: "Šest od sedam završnih rendera: zlatni i plavi sat, interijeri i dva presjeka" }),
   overservedPlay: clip("overserved-play", "screen", { case: "overserved", site: "overserved.lumiverse.hr/play" },
     { title: "Overserved", caption: "A playable game, from an empty repo in about three weeks" },
     { title: "Overserved", caption: "Igra koja se igra, od praznog repozitorija u otprilike tri tjedna" }),
@@ -565,6 +568,45 @@ export const packages = [
       proof: "Naša naslovnica: tri eksponata u oko 290 KB slika",
       cta: "Naručite hero",
       brief: ["Vaš proizvod: fotografije, CAD datoteke ili poveznica", "Adresa Vaše naslovnice", "Naslov ispod kojeg će stajati"]
+    }
+  },
+  {
+    id: "architectural-visualisation",
+    group: "package",
+    icon: "fa-building",
+    price: { from: 1290, per: "once" },
+    pack: {
+      delivery: { en: "1 week", hr: "1 tjedan" },
+      work: [work.blueprintHouse],
+      proofHref: "/blog/blueprint-to-archviz"
+    },
+    en: {
+      name: "Architectural Visualisation from Your Plans",
+      summary: "Your building rendered from its plans before it is built: magazine-style stills, plus a 3D model buyers can walk through on your website.",
+      includes: [
+        "A 3D model built from your floor plans and elevations, as PDF or CAD",
+        "Up to 5 stills at 2400×1600: exterior by day and at blue hour, interiors, a cutaway",
+        "Furnished rooms and a planted setting",
+        "An interactive 3D model for your website: orbit, walk through, slice floor by floor",
+        "Two rounds of revisions"
+      ],
+      proof: "One blueprint, seven renders and a walkable web model",
+      cta: "Order a visualisation",
+      brief: ["Your plans: floor plans and elevations, as PDF or CAD", "Materials and finishes, if they are decided", "Where the images will be used: a sales site, a brochure, a listing"]
+    },
+    hr: {
+      name: "Arhitektonska vizualizacija iz Vaših nacrta",
+      summary: "Vaša zgrada, renderirana iz nacrta prije nego što je izgrađena: fotografije kao iz časopisa i 3D model kroz koji kupci šeću na Vašoj stranici.",
+      includes: [
+        "3D model izrađen iz Vaših tlocrta i pročelja, u PDF-u ili CAD-u",
+        "Do 5 slika u 2400×1600: eksterijer danju i u plavom satu, interijeri, presjek",
+        "Opremljene prostorije i uređen okoliš",
+        "Interaktivni 3D model za Vašu stranicu: okretanje, šetnja, rezanje kat po kat",
+        "Dva kruga izmjena"
+      ],
+      proof: "Jedan nacrt, sedam rendera i web model kroz koji se šeće",
+      cta: "Naručite vizualizaciju",
+      brief: ["Vaši nacrti: tlocrti i pročelja, u PDF-u ili CAD-u", "Materijali i završne obrade, ako su odabrani", "Gdje će se slike koristiti: prodajna stranica, brošura, oglas"]
     }
   },
   {
