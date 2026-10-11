@@ -11,21 +11,21 @@
   <link rel="alternate" hreflang="hr" href="https://www.lumiverse.hr/hr/mojkraj">
   <link rel="alternate" hreflang="x-default" href="https://www.lumiverse.hr/mojkraj.html">
   <title>MOJ KRAJ. - A Disciplined AI Newsroom | LumiVerse</title>
-  <meta name="description" content="A Croatian AI-operated news portal: original articles written from cited sources, nine automated pre-publish checks, and human oversight.">
+  <meta name="description" content="A Croatian AI-operated news portal: original articles written from cited sources, eight checks every draft must pass, and human oversight.">
   <!-- Open Graph / social sharing -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="LumiVerse">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="hr_HR">
   <meta property="og:title" content="MOJ KRAJ. - A Disciplined AI Newsroom | LumiVerse">
-  <meta property="og:description" content="A Croatian AI-operated news portal: original articles written from cited sources, nine automated pre-publish checks, and human oversight.">
+  <meta property="og:description" content="A Croatian AI-operated news portal: original articles written from cited sources, eight checks every draft must pass, and human oversight.">
   <meta property="og:url" content="https://www.lumiverse.hr/mojkraj.html">
   <meta property="og:image" content="https://www.lumiverse.hr/images/og/mojkraj.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MOJ KRAJ. - A Disciplined AI Newsroom | LumiVerse">
-  <meta name="twitter:description" content="A Croatian AI-operated news portal: original articles written from cited sources, nine automated pre-publish checks, and human oversight.">
+  <meta name="twitter:description" content="A Croatian AI-operated news portal: original articles written from cited sources, eight checks every draft must pass, and human oversight.">
   <meta name="twitter:image" content="https://www.lumiverse.hr/images/og/mojkraj.jpg">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -452,12 +452,12 @@
     <div class="container">
       <div class="stats-container">
         <div class="stat-block">
-          <div class="stat-value">9</div>
-          <div class="stat-label">Automated checks run on every article</div>
+          <div class="stat-value">8</div>
+          <div class="stat-label">Checks every draft must pass to publish</div>
         </div>
         <div class="stat-block">
           <div class="stat-value">0</div>
-          <div class="stat-label">Sentences copied from a source</div>
+          <div class="stat-label">Lines of source text the writer sees: it works from extracted facts</div>
         </div>
         <div class="stat-block">
           <div class="stat-value">HR&nbsp;+&nbsp;EN</div>
@@ -590,9 +590,9 @@
 
         <div class="pipeline-step">
           <div class="pipeline-num">04 &middot; check</div>
-          <h3 class="pipeline-title">Nine Automated Checks</h3>
+          <h3 class="pipeline-title">Eight Checks on Every Draft</h3>
           <p class="pipeline-text">
-            Before it can publish, every article runs a battery of automated screens - groundedness (each claim compared back to its source), neutrality (tone toward actors, balance of sources), specificity, fabricated-name detection, legal over-generalisation, spelling, vocabulary and grammatical agreement, plus a check that no generated image shows a real person's face. Five are deterministic, four are LLM graders; anything below threshold is held for a human.
+            Every draft must pass eight checks: guardrails, specificity, legal over-generalisation, invented names, a quality score, groundedness (up to ten claims judged against the source, quotes re-verified, numbers and dates audited), neutrality and a minimum length. Six are code, two are LLM judges. A draft that fails gets one rewrite; if it fails again, it is discarded.
           </p>
         </div>
 
@@ -600,7 +600,7 @@
           <div class="pipeline-num">05 &middot; review</div>
           <h3 class="pipeline-title">Human Oversight</h3>
           <p class="pipeline-text">
-            An editor approves from a dense, operator-grade admin - or, per category, low-risk articles auto-publish. Either way a person owns the standard, and the whole thing runs in minutes a day.
+            Before an article goes out on its own, a final gate recomputes the scores on the finished text, checks the archive for duplicates and requires a lead image. Anything that fails waits for an editor, who approves or rejects it with one click from an email digest. Sponsored articles always wait for a person.
           </p>
         </div>
 

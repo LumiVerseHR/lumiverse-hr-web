@@ -272,7 +272,7 @@ export const packages = [
         "Automated checks on every article before it publishes",
         "A human signs off before anything goes live"
       ],
-      proof: "MOJ KRAJ: 9 automated checks on every article, 1 operator",
+      proof: "MOJ KRAJ.: 8 checks every draft must pass, 1 operator",
       cta: "Ask about a newsroom",
       priceNote: "AI token and hosting usage billed separately, at cost."
     },
@@ -285,7 +285,7 @@ export const packages = [
         "Automatske provjere svakog članka prije objave",
         "Čovjek odobrava prije nego što išta izađe"
       ],
-      proof: "MOJ KRAJ: 9 automatskih provjera svakog članka, 1 operater",
+      proof: "MOJ KRAJ.: 8 provjera koje svaki nacrt mora proći, 1 operater",
       cta: "Pitajte za redakciju",
       priceNote: "Potrošnja AI tokena i hosting naplaćuju se zasebno, po stvarnom trošku."
     }

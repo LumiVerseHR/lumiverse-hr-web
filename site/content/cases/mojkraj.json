@@ -3,11 +3,11 @@
     "slug": "mojkraj",
     "meta": {
       "title": "MOJ KRAJ. – A Disciplined AI Newsroom | LumiVerse",
-      "description": "A Croatian AI-operated news portal: original articles written from cited sources, nine automated pre-publish checks, and human oversight."
+      "description": "A Croatian AI-operated news portal: original articles written from cited sources, eight checks every draft must pass, and human oversight."
     },
     "kind": "Our Product · AI Newsroom",
     "title": "Disciplined AI News, Down to Your Town",
-    "subtitle": "MOJ KRAJ. is a Croatian news portal run as a public experiment: can AI hold a newsroom to a higher bar than the average – every article written fresh from cited sources, every claim checked before it publishes – while also covering the towns big media abandoned? A machine doesn't have to pick only the profitable cities.",
+    "subtitle": "MOJ KRAJ. is a Croatian news portal run as a public experiment: can AI hold a newsroom to a higher bar than the average – every article written fresh from cited sources, its claims checked against the source before it publishes – while also covering the towns big media abandoned? A machine doesn't have to pick only the profitable cities.",
     "ctas": [
       {
         "label": "Visit MOJ KRAJ.",
@@ -41,12 +41,12 @@
     ],
     "stats": [
       {
-        "value": "9",
-        "label": "Automated checks run on every article"
+        "value": "8",
+        "label": "Checks every draft must pass to publish"
       },
       {
         "value": "0",
-        "label": "Sentences copied from a source"
+        "label": "Lines of source text the writer sees: it works from extracted facts"
       },
       {
         "value": "HR + EN",
@@ -84,7 +84,7 @@
               },
               {
                 "title": "A Public Experiment",
-                "body": "We work with applied AI every day, so the real question was how far it goes with the bar set high: can it run a newsroom more disciplined than average – one that writes each article fresh from the facts, checks every claim against its source, and grades itself before publishing?\n\nThe answer in progress: technology used not to cut costs at the reader's expense, but to raise the standard – with clear rules and human oversight."
+                "body": "We work with applied AI every day, so the real question was how far it goes with the bar set high: can it run a newsroom more disciplined than average – one that writes each article fresh from the facts, checks its claims against the source, and grades itself before publishing?\n\nThe answer in progress: technology used not to cut costs at the reader's expense, but to raise the standard – with clear rules and human oversight."
               }
             ]
           }
@@ -133,22 +133,22 @@
               },
               {
                 "title": "Write It Fresh",
-                "body": "A purpose-built newsroom agent writes an original Croatian article from the facts – inverted pyramid, house style, source attributed. Facts may come only from the cited source; quotes are never invented; sentences are never copied.",
+                "body": "A purpose-built newsroom agent writes an original Croatian article in house style, with the source attributed. It never sees the source text, only a closed list of facts extracted from it, so it has nothing to copy from, and quotes are checked word for word against the source.",
                 "label": "02 · write"
               },
               {
-                "title": "The License Gate",
-                "body": "Every image passes a copyright check. If a permissive licence can't be positively verified, the portal generates its own illustration and labels it \"Ilustracija: AI\". No photoreal depictions of real people.",
+                "title": "Image Gates",
+                "body": "The portal draws its own illustrations and labels them \"Ilustracija: AI\". Each passes three gates: no real person in the prompt, nothing explicit in the result, no portrait-sized face. A photo from Wikimedia Commons is used only with a free licence (public domain, CC0, CC BY or BY-SA), and an unverified image never appears.",
                 "label": "03 · image"
               },
               {
-                "title": "Nine Automated Checks",
-                "body": "Before it can publish, every article runs a battery of automated screens – groundedness (each claim compared back to its source), neutrality (tone toward actors, balance of sources), specificity, fabricated-name detection, legal over-generalisation, spelling, vocabulary and grammatical agreement, plus a check that no generated image shows a real person's face. Five are deterministic, four are LLM graders; anything below threshold is held for a human.",
+                "title": "Eight Checks on Every Draft",
+                "body": "Every draft must pass eight checks: guardrails, specificity, legal over-generalisation, invented names, a quality score, groundedness (up to ten claims judged against the source, quotes re-verified, numbers and dates audited), neutrality and a minimum length. Six are code, two are LLM judges. A draft that fails gets one rewrite; if it fails again, it is discarded.",
                 "label": "04 · check"
               },
               {
                 "title": "Human Oversight",
-                "body": "An editor approves from a dense, operator-grade admin – or, per category, low-risk articles auto-publish. Either way a person owns the standard, and the whole thing runs in minutes a day.",
+                "body": "Before an article goes out on its own, a final gate recomputes the scores on the finished text, checks the archive for duplicates and requires a lead image. Anything that fails waits for an editor, who approves or rejects it with one click from an email digest. Sponsored articles always wait for a person.",
                 "label": "05 · review"
               },
               {
@@ -184,6 +184,185 @@
               }
             ],
             "variant": "pills"
+          }
+        ]
+      },
+      {
+        "title": "Every Check, in Order",
+        "lede": "Everything an item goes through between the wire and the front page, as the code runs it today. \"Blocks\" means the article cannot go out until it passes.",
+        "blocks": [
+          {
+            "type": "table",
+            "head": [
+              "Stage",
+              "Check",
+              "What it does",
+              "Done by",
+              "If it fails"
+            ],
+            "rows": [
+              [
+                "Intake",
+                "Duplicate items",
+                "The same content is taken in once; feed items older than 60 days are dropped",
+                "Code",
+                "Dropped"
+              ],
+              [
+                "Intake",
+                "Same story, several outlets",
+                "Items are grouped only when similarity is at least 0.72 and they share a name or a number; at most 4 sources per article",
+                "Code + embeddings",
+                "Kept apart"
+              ],
+              [
+                "Triage",
+                "News, notice, section, local",
+                "Four questions on the title and summary",
+                "Local model, LLM when unsure",
+                "Not news, or a service notice: skipped"
+              ],
+              [
+                "Facts",
+                "Source page",
+                "The fetched page must contain the headline's words and at least 80 characters of text",
+                "Code",
+                "Not used"
+              ],
+              [
+                "Facts",
+                "Fact extraction",
+                "A closed list of facts; a long source that yields under 5 is retried, and under 2 means no article",
+                "LLM",
+                "No article"
+              ],
+              [
+                "Writing",
+                "Facts only",
+                "The writer works from the fact list and never sees the source text",
+                "By design",
+                "–"
+              ],
+              [
+                "Draft",
+                "Guardrails",
+                "Placeholders, filler, \"as an AI model\" phrases, secrets, fewer than 100 words",
+                "Code",
+                "Blocks"
+              ],
+              [
+                "Draft",
+                "Specificity",
+                "At least 35% of the names, places and numbers in the facts must reach the text",
+                "Code",
+                "Blocks"
+              ],
+              [
+                "Draft",
+                "Legal over-generalisation",
+                "\"The law prescribes…\" next to a figure, when the source never mentions the law",
+                "Code",
+                "Blocks"
+              ],
+              [
+                "Draft",
+                "Invented names",
+                "A capitalised name that is neither in the dictionary nor in the source",
+                "Code + dictionary",
+                "Blocks"
+              ],
+              [
+                "Draft",
+                "Quality score",
+                "SEO, readability, flow and house style, combined score of at least 75",
+                "Code",
+                "Blocks"
+              ],
+              [
+                "Draft",
+                "Groundedness",
+                "Up to 10 claims judged against the source, quotes re-verified word for word, numbers and dates audited; score of at least 65",
+                "LLM + code",
+                "Blocks"
+              ],
+              [
+                "Draft",
+                "Neutrality",
+                "Loaded framing, one-sided sourcing, a tone gap between the people involved; score of at least 65",
+                "LLM",
+                "Blocks"
+              ],
+              [
+                "Draft",
+                "Length",
+                "At least 170 words, or 90 when the source has few facts",
+                "Code",
+                "Blocks"
+              ],
+              [
+                "Proofreading",
+                "Spelling, agreement, vocabulary",
+                "Hints for a proofreading pass, whose result is kept only if the length stays within 0.8–1.25×",
+                "Code + LLM",
+                "Original kept"
+              ],
+              [
+                "Archive",
+                "Duplicate article",
+                "Close to an article from the last 72 hours and sharing names or numbers with it",
+                "Code + embeddings",
+                "Dropped"
+              ],
+              [
+                "Image",
+                "Person in the prompt",
+                "A prompt that names or shows a person is rewritten; if the checker is down, flagged prompts are refused",
+                "LLM, fails closed",
+                "Rewritten or refused"
+              ],
+              [
+                "Image",
+                "Explicit content",
+                "The generated image itself is checked",
+                "Vision LLM, fails closed",
+                "Blocks"
+              ],
+              [
+                "Image",
+                "Portrait size",
+                "A large human face in frame triggers one retry with a brief that has no people",
+                "Vision LLM",
+                "Retried"
+              ],
+              [
+                "Image",
+                "Licence",
+                "A Wikimedia Commons photo must be public domain, CC0, CC BY or BY-SA; unverified images never appear",
+                "Code",
+                "Not used"
+              ],
+              [
+                "Publish",
+                "Final gate",
+                "Scores recomputed on the final text, duplicates checked again, a lead image required",
+                "Code",
+                "Held for an editor"
+              ],
+              [
+                "Review",
+                "Editor",
+                "One-click approve or reject from an email digest; sponsored articles always wait for a person",
+                "Human",
+                "Rejected"
+              ],
+              [
+                "Daily",
+                "Self-test",
+                "Each screen gets a test case it must catch, and the result goes into the daily report",
+                "Code + LLM",
+                "Flagged in the report"
+              ]
+            ]
           }
         ]
       },
@@ -234,11 +413,11 @@
     "slug": "mojkraj",
     "meta": {
       "title": "MOJ KRAJ. - disciplinirana AI redakcija | LumiVerse",
-      "description": "Hrvatski news portal koji vodi AI: originalni članci pisani iz citiranih izvora, devet automatskih provjera prije objave i ljudski nadzor."
+      "description": "Hrvatski news portal koji vodi AI: originalni članci pisani iz citiranih izvora, osam provjera koje svaki nacrt mora proći i ljudski nadzor."
     },
     "kind": "Naš proizvod · AI redakcija",
     "title": "Disciplinirane AI vijesti, sve do Vašeg mjesta",
-    "subtitle": "MOJ KRAJ. hrvatski je news portal vođen kao javni eksperiment: može li AI redakciju držati na višoj razini od prosjeka — svaki članak napisan iznova iz citiranih izvora, svaka tvrdnja provjerena prije objave — i pritom pokrivati mjesta koja su veliki mediji napustili? Stroj ne mora birati samo isplative gradove.",
+    "subtitle": "MOJ KRAJ. hrvatski je news portal vođen kao javni eksperiment: može li AI redakciju držati na višoj razini od prosjeka — svaki članak napisan iznova iz citiranih izvora, tvrdnje provjerene prema izvoru prije objave — i pritom pokrivati mjesta koja su veliki mediji napustili? Stroj ne mora birati samo isplative gradove.",
     "ctas": [
       {
         "label": "Posjetite MOJ KRAJ.",
@@ -272,12 +451,12 @@
     ],
     "stats": [
       {
-        "value": "9",
-        "label": "Automatskih provjera na svakom članku"
+        "value": "8",
+        "label": "Provjera koje svaki nacrt mora proći"
       },
       {
         "value": "0",
-        "label": "Rečenica prepisanih iz izvora"
+        "label": "Redaka izvornog teksta pred piscem: piše iz izvučenih činjenica"
       },
       {
         "value": "HR + EN",
@@ -315,7 +494,7 @@
               },
               {
                 "title": "Javni eksperiment",
-                "body": "S primijenjenim AI-jem radimo svaki dan, pa je pravo pitanje bilo dokle stiže kad se ljestvica postavi visoko: može li voditi redakciju discipliniraniju od prosječne — onu koja svaki članak piše iznova iz činjenica, svaku tvrdnju provjerava s izvorom i sama sebe ocjenjuje prije objave?\n\nOdgovor koji nastaje: tehnologija upotrijebljena ne da bi se rezali troškovi na štetu čitatelja, nego da bi se podigao standard — uz jasna pravila i ljudski nadzor."
+                "body": "S primijenjenim AI-jem radimo svaki dan, pa je pravo pitanje bilo dokle stiže kad se ljestvica postavi visoko: može li voditi redakciju discipliniraniju od prosječne — onu koja svaki članak piše iznova iz činjenica, tvrdnje provjerava prema izvoru i sama sebe ocjenjuje prije objave?\n\nOdgovor koji nastaje: tehnologija upotrijebljena ne da bi se rezali troškovi na štetu čitatelja, nego da bi se podigao standard — uz jasna pravila i ljudski nadzor."
               }
             ]
           }
@@ -364,23 +543,23 @@
               },
               {
                 "title": "Pisanje iznova",
-                "body": "Namjenski redakcijski agent iz činjenica piše originalan hrvatski članak — obrnuta piramida, kućni stil, naveden izvor. Činjenice smiju doći samo iz citiranog izvora, citati se nikad ne izmišljaju, rečenice se nikad ne prepisuju.",
+                "body": "Namjenski agent redakcije piše originalan hrvatski članak u kućnom stilu, s navedenim izvorom. Izvorni tekst nikad ne vidi, nego samo zatvoren popis činjenica izvučenih iz njega, pa nema odakle prepisivati, a citati se riječ po riječ provjeravaju prema izvoru.",
                 "label": "02 · write"
               },
               {
-                "title": "Provjera licence",
-                "body": "Svaka slika prolazi provjeru autorskih prava. Ako se ne može pouzdano potvrditi da je licenca slobodna, portal generira vlastitu ilustraciju i označi je s „Ilustracija: AI\". Bez fotorealističnih prikaza stvarnih osoba.",
-                "label": "03 · image"
+                "title": "Provjere slika",
+                "body": "Portal sam crta ilustracije i označava ih s „Ilustracija: AI”. Svaka prolazi tri provjere: nijedna stvarna osoba u opisu slike, ništa eksplicitno u rezultatu i nijedno lice u veličini portreta. Fotografija s Wikimedia Commonsa koristi se samo uz slobodnu licencu (javno dobro, CC0, CC BY ili BY-SA), a neprovjerena slika nikad se ne prikazuje.",
+                "label": "03 · slika"
               },
               {
-                "title": "Devet automatskih provjera",
-                "body": "Prije objave svaki članak prolazi niz automatskih provjera — utemeljenost (svaka tvrdnja uspoređena s izvorom), neutralnost (ton prema akterima, uravnoteženost izvora), konkretnost, otkrivanje izmišljenih imena, pretjerana pravna uopćavanja, pravopis, rječnik i gramatička sročnost, uz provjeru da nijedna generirana slika ne prikazuje lice stvarne osobe. Pet je determinističkih, četiri ocjenjuje jezični model; sve ispod praga čeka na čovjeka.",
-                "label": "04 · check"
+                "title": "Osam provjera svakog nacrta",
+                "body": "Svaki nacrt mora proći osam provjera: zaštitna pravila, konkretnost, pravna poopćavanja, izmišljena imena, ocjenu kvalitete, utemeljenost (do deset tvrdnji uspoređenih s izvorom, ponovno provjereni citati, provjereni brojevi i datumi), neutralnost i minimalnu duljinu. Šest provjera izvodi kod, a dvije LLM. Nacrt koji ne prođe dobiva jedno prepravljanje, a ako ni tada ne prođe, odbacuje se.",
+                "label": "04 · provjera"
               },
               {
                 "title": "Ljudski nadzor",
-                "body": "Urednik odobrava iz gustog administratorskog sučelja za operatere — ili se, po kategorijama, članci niskog rizika objavljuju sami. U svakom slučaju za standard odgovara čovjek, a cijela stvar radi u nekoliko minuta dnevno.",
-                "label": "05 · review"
+                "body": "Prije nego što članak izađe sam, završna provjera ponovno izračuna ocjene na gotovom tekstu, provjeri ima li duplikata u arhivi i traži naslovnu sliku. Sve što ne prođe čeka urednika, koji ga jednim klikom iz e-mail pregleda odobri ili odbije. Sponzorirani članci uvijek čekaju čovjeka.",
+                "label": "05 · pregled"
               },
               {
                 "title": "Objava i razvrstavanje",
@@ -415,6 +594,185 @@
               }
             ],
             "variant": "pills"
+          }
+        ]
+      },
+      {
+        "title": "Sve provjere, redom",
+        "lede": "Sve kroz što stavka prolazi od agencijske vijesti do naslovnice, onako kako to kod danas radi. „Blokira” znači da članak ne može izaći dok provjeru ne prođe.",
+        "blocks": [
+          {
+            "type": "table",
+            "head": [
+              "Faza",
+              "Provjera",
+              "Što radi",
+              "Tko provjerava",
+              "Ako ne prođe"
+            ],
+            "rows": [
+              [
+                "Prijem",
+                "Dvostruke stavke",
+                "Isti sadržaj preuzima se samo jednom; stavke iz feeda starije od 60 dana odbacuju se",
+                "Kod",
+                "Odbačeno"
+              ],
+              [
+                "Prijem",
+                "Ista vijest iz više medija",
+                "Stavke se spajaju samo uz sličnost od barem 0,72 i zajedničko ime ili broj; najviše 4 izvora po članku",
+                "Kod + embeddingi",
+                "Ostaju odvojene"
+              ],
+              [
+                "Trijaža",
+                "Vijest, obavijest, rubrika, lokalno",
+                "Četiri pitanja o naslovu i sažetku",
+                "Lokalni model, LLM kad nije siguran",
+                "Nije vijest ili je servisna obavijest: preskočeno"
+              ],
+              [
+                "Činjenice",
+                "Stranica izvora",
+                "Preuzeta stranica mora sadržavati riječi iz naslova i barem 80 znakova teksta",
+                "Kod",
+                "Ne koristi se"
+              ],
+              [
+                "Činjenice",
+                "Izvlačenje činjenica",
+                "Zatvoren popis činjenica; dug izvor s manje od 5 činjenica obrađuje se ponovno, a manje od 2 znači da članka nema",
+                "LLM",
+                "Nema članka"
+              ],
+              [
+                "Pisanje",
+                "Samo činjenice",
+                "Pisac radi iz popisa činjenica i nikad ne vidi izvorni tekst",
+                "Po konstrukciji",
+                "–"
+              ],
+              [
+                "Nacrt",
+                "Zaštitna pravila",
+                "Neispunjeni predlošci, prazne fraze, „kao AI model”, tajni podaci, manje od 100 riječi",
+                "Kod",
+                "Blokira"
+              ],
+              [
+                "Nacrt",
+                "Konkretnost",
+                "Barem 35 % imena, mjesta i brojeva iz činjenica mora stići u tekst",
+                "Kod",
+                "Blokira"
+              ],
+              [
+                "Nacrt",
+                "Pravna poopćavanja",
+                "„Zakon propisuje…” uz neki iznos, a izvor zakon uopće ne spominje",
+                "Kod",
+                "Blokira"
+              ],
+              [
+                "Nacrt",
+                "Izmišljena imena",
+                "Ime velikim slovom kojeg nema ni u rječniku ni u izvoru",
+                "Kod + rječnik",
+                "Blokira"
+              ],
+              [
+                "Nacrt",
+                "Ocjena kvalitete",
+                "SEO, čitljivost, tok teksta i kućni stil, ukupna ocjena barem 75",
+                "Kod",
+                "Blokira"
+              ],
+              [
+                "Nacrt",
+                "Utemeljenost",
+                "Do 10 tvrdnji uspoređenih s izvorom, citati ponovno provjereni riječ po riječ, provjereni brojevi i datumi; ocjena barem 65",
+                "LLM + kod",
+                "Blokira"
+              ],
+              [
+                "Nacrt",
+                "Neutralnost",
+                "Pristrano uokvirivanje, jednostrani izvori, različit ton prema akterima; ocjena barem 65",
+                "LLM",
+                "Blokira"
+              ],
+              [
+                "Nacrt",
+                "Duljina",
+                "Barem 170 riječi, ili 90 kad izvor ima malo činjenica",
+                "Kod",
+                "Blokira"
+              ],
+              [
+                "Lektura",
+                "Pravopis, sročnost, rječnik",
+                "Natuknice za lekturu, čiji se rezultat zadržava samo ako duljina ostane unutar 0,8–1,25×",
+                "Kod + LLM",
+                "Ostaje izvornik"
+              ],
+              [
+                "Arhiva",
+                "Dvostruki članak",
+                "Blizak članku iz zadnja 72 sata i s njim dijeli imena ili brojeve",
+                "Kod + embeddingi",
+                "Odbačeno"
+              ],
+              [
+                "Slika",
+                "Osoba u opisu slike",
+                "Opis koji imenuje ili prikazuje osobu prepisuje se; ako provjera ne radi, sumnjivi opisi odbijaju se",
+                "LLM, u sumnji odbija",
+                "Prepisano ili odbijeno"
+              ],
+              [
+                "Slika",
+                "Eksplicitan sadržaj",
+                "Provjerava se sama generirana slika",
+                "Vizualni LLM, u sumnji odbija",
+                "Blokira"
+              ],
+              [
+                "Slika",
+                "Veličina lica",
+                "Veliko ljudsko lice u kadru znači jedan novi pokušaj, s opisom bez ljudi",
+                "Vizualni LLM",
+                "Novi pokušaj"
+              ],
+              [
+                "Slika",
+                "Licenca",
+                "Fotografija s Wikimedia Commonsa mora biti javno dobro, CC0, CC BY ili BY-SA; neprovjerene slike nikad se ne prikazuju",
+                "Kod",
+                "Ne koristi se"
+              ],
+              [
+                "Objava",
+                "Završna provjera",
+                "Ocjene se ponovno računaju na gotovom tekstu, duplikati se ponovno provjeravaju, naslovna slika je obavezna",
+                "Kod",
+                "Čeka urednika"
+              ],
+              [
+                "Pregled",
+                "Urednik",
+                "Odobrenje ili odbijanje jednim klikom iz e-mail pregleda; sponzorirani članci uvijek čekaju čovjeka",
+                "Čovjek",
+                "Odbijeno"
+              ],
+              [
+                "Svaki dan",
+                "Samotest",
+                "Svaka provjera dobiva testni primjer koji mora uhvatiti, a rezultat ide u dnevni izvještaj",
+                "Kod + LLM",
+                "Istaknuto u izvještaju"
+              ]
+            ]
           }
         ]
       },
