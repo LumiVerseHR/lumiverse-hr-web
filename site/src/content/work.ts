@@ -72,7 +72,7 @@ export const flagships: Flagship[] = [
       en: "Air-laser voxel images, front and side views of the computed display volume",
       hr: "Air-laser voksel slike, prednji i bočni pogled na izračunati volumen prikaza",
     },
-    kind: { en: "Independent research", hr: "Neovisno istraživanje" },
+    kind: { en: "Independent physics research", hr: "Neovisno istraživanje iz fizike" },
     stat: { value: "49", unit: { en: "pages, computed not built", hr: "stranica, izračunato, ne izgrađeno" } },
     summary: {
       en: "A physics design study for an image that floats in mid-air, computed end to end by a dozen open-source simulators driven by one AI agent loop. The one result that failed its cross-check was retracted.",
