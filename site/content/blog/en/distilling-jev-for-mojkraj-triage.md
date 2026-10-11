@@ -1,5 +1,5 @@
 ---
-title: Ten Cents of Labels Took Over Most of Our Triage
+title: How We Distilled Jev for MOJ KRAJ. Triage for $0.10
 description: A 322M model on our own GPU now makes most of MOJ KRAJ.'s triage calls. It learned from $0.10 of a commercial model's answers and ties the production LLM.
 date: 2026-10-11
 tags: [Build Log, AI Evaluation]
