@@ -363,6 +363,20 @@
                 "Flagged in the report"
               ]
             ]
+          },
+          {
+            "type": "links",
+            "lead": "More on two of these checks:",
+            "items": [
+              {
+                "label": "How the local triage model was trained",
+                "href": "/blog/distilling-jev-for-mojkraj-triage"
+              },
+              {
+                "label": "Why groundedness stays on the big model",
+                "href": "/blog/a-judge-that-mostly-agrees"
+              }
+            ]
           }
         ]
       },
@@ -800,6 +814,20 @@
                 "Kod + LLM",
                 "Istaknuto u izvještaju"
               ]
+            ]
+          },
+          {
+            "type": "links",
+            "lead": "Više o dvjema od ovih provjera:",
+            "items": [
+              {
+                "label": "Kako je treniran lokalni model za trijažu",
+                "href": "/hr/blog/distilling-jev-for-mojkraj-triage"
+              },
+              {
+                "label": "Zašto utemeljenost ostaje na velikom modelu",
+                "href": "/hr/blog/a-judge-that-mostly-agrees"
+              }
             ]
           }
         ]
