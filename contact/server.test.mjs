@@ -119,6 +119,13 @@ test("unknown package ids are rejected but 'other' and blank are fine", async ()
   assert.match(sent[1].body.subject, /Not sure yet/);
 });
 
+test("a package that only the v3 site lists is accepted and named", async () => {
+  // architectural-visualisation exists in site/src/content/packages.mjs, not in the legacy list.
+  assert.equal((await post({ ...good(), package: "architectural-visualisation" })).status, 200);
+  assert.equal(sent.length, 1);
+  assert.match(sent[0].body.subject, /Architectural Visualisation/);
+});
+
 test("a foreign or missing Origin is refused", async () => {
   assert.equal((await post(good(), { origin: "https://evil.example" })).status, 403);
   assert.equal((await post(good(), { origin: null })).status, 403);
