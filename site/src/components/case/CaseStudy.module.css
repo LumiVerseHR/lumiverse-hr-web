@@ -663,6 +663,11 @@
   color: var(--coral);
 }
 
+.moreKind {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
 @media (max-width: 640px) {
   .steps li {
     grid-template-columns: 1fr;

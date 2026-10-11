@@ -11,7 +11,10 @@ import { LaserTitle } from "@/components/effects/LaserTitle";
 import { Showcase } from "./Showcase";
 import styles from "./CaseStudy.module.css";
 
-const ORDER = [...flagships.map((f) => ({ slug: f.slug, name: f.name })), ...workIndex.map((w) => ({ slug: w.slug, name: w.name }))];
+const ORDER = [
+  ...flagships.map((f) => ({ slug: f.slug, name: f.name, kind: f.kind })),
+  ...workIndex.map((w) => ({ slug: w.slug, name: w.name, kind: w.kind })),
+];
 
 function LinkButton({ link, primary }: { link: Case["ctas"][number]; primary?: boolean }) {
   return (
@@ -157,10 +160,12 @@ export function CaseStudy({ data, lang, dict }: { data: Case; lang: Locale; dict
         <a href={localePath(lang, `/${prev.slug}`)} className={styles.moreLink}>
           <span className={styles.moreDir}>{dict.case.prev}</span>
           <span className={styles.moreName}>{prev.name}</span>
+          <span className={styles.moreKind}>{prev.kind[lang]}</span>
         </a>
         <a href={localePath(lang, `/${next.slug}`)} className={`${styles.moreLink} ${styles.moreNext}`}>
           <span className={styles.moreDir}>{dict.case.next}</span>
           <span className={styles.moreName}>{next.name}</span>
+          <span className={styles.moreKind}>{next.kind[lang]}</span>
         </a>
       </nav>
     </main>
