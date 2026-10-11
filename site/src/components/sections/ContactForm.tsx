@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 import { PICK_EVENT } from "@/components/pricing/PickPackage";
 import type { Locale } from "@/i18n/config";
 import { Icon } from "@/components/icons/Icon";
@@ -21,6 +21,7 @@ type State = { kind: "idle" } | { kind: "sending" } | { kind: "sent" } | { kind:
 // a hidden field people never fill, and how long the form was open.
 export function ContactForm({ lang, copy, groups, preset = "" }: { lang: Locale; copy: Copy; groups: Group[]; preset?: string }) {
   const openedAt = useRef<number | null>(null);
+  const formId = useId();
   const [state, setState] = useState<State>({ kind: "idle" });
   const [pkg, setPkg] = useState(preset);
 
@@ -89,8 +90,9 @@ export function ContactForm({ lang, copy, groups, preset = "" }: { lang: Locale;
           <input name="company" autoComplete="organization" maxLength={150} aria-invalid={invalid("company")} />
         </label>
         <div className={styles.field}>
-          <span>{copy.need}</span>
+          <span id={`${formId}-need`}>{copy.need}</span>
           <PackageSelect
+            labelledBy={`${formId}-need`}
             value={pkg}
             onChange={setPkg}
             groups={groups}

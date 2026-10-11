@@ -4,6 +4,8 @@ import styles from "./Studio.module.css";
 
 // `bare`: on the studio page the h1 carries the title, so only the body and principles remain.
 export function Studio({ dict, bare = false }: { dict: Dictionary; bare?: boolean }) {
+  // Bare, the items sit right under the page's h1, so they step up to h2.
+  const Name = bare ? "h2" : "h3";
   return (
     <section
       id={bare ? undefined : "studio"}
@@ -25,7 +27,7 @@ export function Studio({ dict, bare = false }: { dict: Dictionary; bare?: boolea
             <li key={p.title} className={styles.principle}>
               <span className={styles.dash} aria-hidden />
               <div>
-                <h3 className={styles.pTitle}>{p.title}</h3>
+                <Name className={styles.pTitle}>{p.title}</Name>
                 <p className={styles.pBody}>{p.body}</p>
               </div>
             </li>

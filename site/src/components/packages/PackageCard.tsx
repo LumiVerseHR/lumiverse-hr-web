@@ -18,7 +18,21 @@ type Labels = { delivery: string; more: string; order: string };
 
 // A package as a placard: a still of work it's been proven on, name, the one price, how long it takes, the first few inclusions,
 // and two ways on: its own page, or straight to the order.
-export function PackageCard({ pkg, lang, labels, compact = false }: { pkg: Packaged; lang: Locale; labels: Labels; compact?: boolean }) {
+// `level` follows the page outline: h2 straight under a page heading, h3 under a section's h2.
+export function PackageCard({
+  pkg,
+  lang,
+  labels,
+  compact = false,
+  level = 3,
+}: {
+  pkg: Packaged;
+  lang: Locale;
+  labels: Labels;
+  compact?: boolean;
+  level?: 2 | 3;
+}) {
+  const Heading = level === 2 ? "h2" : "h3";
   const c = pkg[lang];
   const p = priceParts(pkg.price, lang) as { lead: string; amount: string; unit: string };
   const page = localePath(lang, `/packages/${pkg.id}`);
@@ -31,9 +45,9 @@ export function PackageCard({ pkg, lang, labels, compact = false }: { pkg: Packa
           <img src={cover.poster} alt="" loading="lazy" width={640} height={400} />
         </a>
       )}
-      <h3 className={pricing.name}>
+      <Heading className={pricing.name}>
         <a href={page} className={styles.nameLink}>{c.name}</a>
-      </h3>
+      </Heading>
       {c.tag && <p className={pricing.tag}>{c.tag}</p>}
       <p className={pricing.summary}>{c.summary}</p>
       <p className={pricing.price}>

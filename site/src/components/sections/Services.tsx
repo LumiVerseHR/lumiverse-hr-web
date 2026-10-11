@@ -31,6 +31,8 @@ export function Services({
   doors?: boolean;
 }) {
   const headId = heading ? `services-${ids[0]}` : "services-title";
+  // Bare, the items sit right under the page's h1, so they step up to h2.
+  const Name = bare ? "h2" : "h3";
   return (
     <section
       id={bare || heading ? undefined : "services"}
@@ -49,7 +51,7 @@ export function Services({
             const offer = (packageById.get(id) as Pkg)[lang];
             return (
               <article key={id} className={styles.offer}>
-                <h3 className={styles.name}>{offer.name}</h3>
+                <Name className={styles.name}>{offer.name}</Name>
                 <p className={styles.summary}>{offer.summary}</p>
                 <ul className={styles.includes}>
                   {offer.includes.slice(0, 3).map((line) => (

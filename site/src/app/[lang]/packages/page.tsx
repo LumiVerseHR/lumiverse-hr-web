@@ -55,7 +55,7 @@ export default async function PackagesPage({ params }: PageProps<"/[lang]/packag
         <section className={pricing.group} aria-label={c.label}>
           <div className={pricing.grid}>
             {(packaged as Packaged[]).map((pkg) => (
-              <PackageCard key={pkg.id} pkg={pkg} lang={lang} labels={c} />
+              <PackageCard key={pkg.id} pkg={pkg} lang={lang} labels={c} level={2} />
             ))}
           </div>
         </section>

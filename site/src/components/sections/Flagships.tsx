@@ -23,6 +23,8 @@ export function Flagships({
   more?: boolean;
 }) {
   const shown = only ? flagships.filter((f) => only.includes(f.id)) : flagships;
+  // Bare, the items sit right under the page's h1, so they step up to h2.
+  const Name = bare ? "h2" : "h3";
   return (
     <section
       id={bare ? undefined : "work"}
@@ -37,13 +39,20 @@ export function Flagships({
           </header>
         )}
         <div className={styles.exhibits} data-count={shown.length}>
-          {shown.map((f) => (
+          {shown.map((f, i) => (
             <article key={f.id} id={f.id === "air-laser" ? "research" : undefined} className={styles.exhibit}>
               <a href={localePath(lang, `/${f.slug}`)} className={styles.frame} aria-label={`${f.name}: ${dict.flagships.open}`}>
-                <Image src={f.image} alt={f.alt[lang]} fill sizes="(max-width: 900px) 92vw, 30vw" className={styles.shot} />
+                <Image
+                  src={f.image}
+                  alt={f.alt[lang]}
+                  fill
+                  sizes="(max-width: 900px) 92vw, 30vw"
+                  className={styles.shot}
+                  priority={bare && i === 0}
+                />
               </a>
               <div className={styles.label}>
-                <h3 className={styles.name}>{f.name}</h3>
+                <Name className={styles.name}>{f.name}</Name>
                 <p className={styles.kind}>{f.kind[lang]}</p>
                 <p className={styles.stat}>
                   <span className={styles.value}>{f.stat.value}</span>

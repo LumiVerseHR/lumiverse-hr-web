@@ -11,6 +11,10 @@ import { boxOf, trace, type Device } from "./laserTrace";
 // rendered from one camera, so wireframe and solid line up exactly; only the reveal is animated.
 
 const FRAME = { w: 1600, h: 1100 };
+
+// Every layer comes in 800, 1100 and 1600 wide; a phone takes the 1100, a desktop the full frame.
+const SIZES = "(max-aspect-ratio: 1/1) 100vw, 60vw";
+const srcSet = (name: string) => `/hero/${name}-800.webp 800w, /hero/${name}-1100.webp 1100w, /hero/${name}.webp 1600w`;
 // One round trip: up drawing the wireframe, straight back down making it solid.
 const T = { wire: 1150, cut: 850, hold: 4800, vanish: 520 };
 
@@ -250,7 +254,16 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
       <figure className={styles.scene}>
         <div ref={stage} className={styles.stage} data-phase={phase} data-reduced={reduced || undefined}>
           {/* eslint-disable-next-line @next/next/no-img-element -- layered stills, sized by the frame */}
-          <img className={styles.layer} src="/hero/stage.webp" alt="" width={FRAME.w} height={FRAME.h} />
+          <img
+            className={styles.layer}
+            src="/hero/stage.webp"
+            srcSet={srcSet("stage")}
+            sizes={SIZES}
+            alt=""
+            width={FRAME.w}
+            height={FRAME.h}
+            fetchPriority="high"
+          />
           <div ref={wire} className={`${styles.layer} ${styles.wire}`}>
             {PRODUCTS.map((item, i) => (
               // eslint-disable-next-line @next/next/no-img-element
@@ -258,6 +271,9 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
                 key={item.device}
                 className={styles.layer}
                 src={`/hero/wire-${item.device}.webp`}
+                srcSet={srcSet(`wire-${item.device}`)}
+                sizes={SIZES}
+                fetchPriority={i === 0 ? undefined : "low"}
                 alt=""
                 width={FRAME.w}
                 height={FRAME.h}
@@ -277,6 +293,9 @@ export function HeroLaser({ copy }: { lang: Locale; copy: Copy }) {
                 key={item.id}
                 className={styles.layer}
                 src={`/hero/solid-${item.id}.webp`}
+                srcSet={srcSet(`solid-${item.id}`)}
+                sizes={SIZES}
+                fetchPriority={i === 0 ? undefined : "low"}
                 alt={i === product && showSolid ? copy.alt[item.id] : ""}
                 width={FRAME.w}
                 height={FRAME.h}

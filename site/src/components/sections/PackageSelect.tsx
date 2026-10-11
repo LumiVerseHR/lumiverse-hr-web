@@ -17,6 +17,7 @@ export function PackageSelect({
   none,
   other,
   invalid,
+  labelledBy,
 }: {
   value: string;
   onChange: (id: string) => void;
@@ -24,6 +25,8 @@ export function PackageSelect({
   none: string;
   other: string;
   invalid?: boolean;
+  // The visible field label; a combobox takes its name from it, not from its value.
+  labelledBy: string;
 }) {
   const id = useId();
   const [open, setOpen] = useState(false);
@@ -119,10 +122,11 @@ export function PackageSelect({
         aria-controls={`${id}-list`}
         aria-activedescendant={open ? `${id}-o${active}` : undefined}
         aria-invalid={invalid || undefined}
+        aria-labelledby={`${labelledBy} ${id}-value`}
         onClick={() => (open ? setOpen(false) : openAt(flat.indexOf(selected)))}
         onKeyDown={onKey}
       >
-        <span className={styles.selectValue} data-placeholder={!value || undefined}>
+        <span id={`${id}-value`} className={styles.selectValue} data-placeholder={!value || undefined}>
           {selected.name}
         </span>
         <span className={styles.selectChevron} aria-hidden />
