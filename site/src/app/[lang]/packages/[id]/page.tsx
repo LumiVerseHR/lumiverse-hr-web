@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Header } from "@/components/chrome/Header";
 import { Icon } from "@/components/icons/Icon";
 import type { Packaged } from "@/components/packages/PackageCard";
-import { coverOf, PackageWork } from "@/components/packages/PackageWork";
+import { PackageWork } from "@/components/packages/PackageWork";
 import styles from "@/components/packages/Packages.module.css";
 import page from "@/components/page/Page.module.css";
 import { PageHero, pageMetadata } from "@/components/page/PageHero";
@@ -41,8 +41,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/packages/[
   if (!hasLocale(lang) || !pkg) return {};
   const c = pkg[lang];
   const price = priceParts(pkg.price, lang) as { amount: string };
-  const image = coverOf(pkg.pack.work)?.poster;
-  return pageMetadata(lang, `/packages/${id}`, `${c.name} - ${price.amount} | LumiVerse`, c.summary, image);
+  return pageMetadata(lang, `/packages/${id}`, `${c.name} - ${price.amount} | LumiVerse`, c.summary);
 }
 
 // Case studies are translated; blog posts and the homepage path are not prefixed the same way.

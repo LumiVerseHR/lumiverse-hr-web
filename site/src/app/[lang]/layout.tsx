@@ -3,6 +3,7 @@ import { Barlow_Condensed, Golos_Text } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { cardOf } from "@/lib/seo";
 import Script from "next/script";
 import { Consent } from "@/components/chrome/Consent";
 import { Footer } from "@/components/sections/Footer";
@@ -43,9 +44,9 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
       url: lang === "en" ? "/" : "/hr",
       locale: lang === "hr" ? "hr_HR" : "en_US",
       alternateLocale: lang === "hr" ? "en_US" : "hr_HR",
-      images: ["/og/index.jpg"],
+      images: [cardOf(lang, "/")],
     },
-    twitter: { card: "summary_large_image" },
+    twitter: { card: "summary_large_image", images: [cardOf(lang, "/")] },
     icons: { icon: [{ url: "/favicon.ico" }, { url: "/favicon.svg", type: "image/svg+xml" }], apple: "/apple-touch-icon.png" },
     manifest: "/manifest.json",
   };

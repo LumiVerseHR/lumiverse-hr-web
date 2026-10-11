@@ -5,6 +5,10 @@ export const SITE = "https://www.lumiverse.hr";
 
 const ogLocale = (lang: Locale) => (lang === "hr" ? "hr_HR" : "en_US");
 
+// The page's own share card from design-src/og-cards.mjs: public/og/pages/<lang>-<page>.jpg.
+// A new page without its own image needs a line in that script and a re-run.
+export const cardOf = (lang: Locale, path: string) => `/og/pages/${lang}-${path === "/" ? "home" : path.slice(1).replace(/\//g, "-")}.jpg`;
+
 type Seo = {
   lang: Locale;
   path: string;
@@ -18,8 +22,9 @@ type Seo = {
 
 // Title, description, canonical, hreflang, Open Graph and the X card for one page.
 // A page's openGraph replaces the layout's whole object, so every field is set here.
-export function seo({ lang, path, title, description, image = "/og/index.jpg", langs = ["en", "hr"], openGraph }: Seo): Metadata {
+export function seo({ lang, path, title, description, image, langs = ["en", "hr"], openGraph }: Seo): Metadata {
   const url = localePath(lang, path);
+  image ??= cardOf(lang, path);
   return {
     title,
     description,

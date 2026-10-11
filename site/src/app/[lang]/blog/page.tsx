@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/blog">): P
   if (!hasLocale(lang)) return {};
   const s = t[lang] as Copy;
   const meta = seo({ lang, path: "/blog", title: s.indexTitle, description: s.indexDescription });
-  return { ...meta, alternates: { ...meta.alternates, types: { "application/rss+xml": "/blog/rss.xml" } } };
+  return { ...meta, alternates: { ...meta.alternates, types: { "application/rss+xml": localePath(lang, "/blog/rss.xml") } } };
 }
 
 export default async function BlogIndex({ params }: PageProps<"/[lang]/blog">) {
@@ -61,7 +61,7 @@ export default async function BlogIndex({ params }: PageProps<"/[lang]/blog">) {
           </nav>
           <h1 className={styles.title}>{s.heading.join(" ")}</h1>
           <p className={styles.intro}>{s.intro}</p>
-          <a className={styles.rss} href="/blog/rss.xml">{s.rss}</a>
+          <a className={styles.rss} href={localePath(lang, "/blog/rss.xml")}>{s.rss}</a>
           {posts.length === 0 ? (
             <p className={styles.intro}>{s.empty}</p>
           ) : (

@@ -54,7 +54,7 @@ export async function Footer({ lang, dict }: { lang: Locale; dict: Dictionary })
               <li><a href="mailto:info@lumiverse.hr">info@lumiverse.hr</a></li>
               <li><a href="https://www.linkedin.com/company/lumiversehr" rel="noopener" target="_blank">LinkedIn</a></li>
               <li><a href="https://github.com/LumiVerseHR" rel="noopener" target="_blank">GitHub</a></li>
-              <li><a href="/blog/rss.xml">RSS</a></li>
+              <li><a href={localePath(lang, "/blog/rss.xml")}>RSS</a></li>
             </ul>
           </div>
         </nav>
