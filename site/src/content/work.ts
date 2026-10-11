@@ -4,7 +4,7 @@ import type { Locale } from "@/i18n/config";
 type Text = Record<Locale, string>;
 
 export type Flagship = {
-  id: "moj-kolega" | "bridj" | "air-laser" | "lider-translations" | "mojkraj" | "overserved";
+  id: "moj-kolega" | "bridj" | "air-laser" | "country-guides" | "mojkraj" | "overserved";
   slug: string;
   name: string;
   image: string;
@@ -15,6 +15,22 @@ export type Flagship = {
 };
 
 export const flagships: Flagship[] = [
+  {
+    id: "mojkraj",
+    slug: "mojkraj",
+    name: "MOJ KRAJ.",
+    image: "/work/mojkraj-home.jpg",
+    alt: {
+      en: "MOJ KRAJ.'s national front page: a calm, content-first news layout",
+      hr: "Naslovnica MOJ KRAJ.-a: miran raspored vijesti u kojem je sadržaj na prvom mjestu",
+    },
+    kind: { en: "AI newsroom · our product", hr: "AI redakcija · naš proizvod" },
+    stat: { value: "8", unit: { en: "checks every draft must pass", hr: "provjera koje svaki nacrt mora proći" } },
+    summary: {
+      en: "A Croatian news portal run as a public experiment: every article written fresh from cited sources, claims checked against the source before it publishes, and news from the towns big media left behind.",
+      hr: "Hrvatski news portal vođen kao javni eksperiment: svaki članak napisan iznova iz citiranih izvora, tvrdnje provjerene prema izvoru prije objave, uz vijesti iz mjesta koja su veliki mediji napustili.",
+    },
+  },
   {
     id: "moj-kolega",
     slug: "moj-kolega",
@@ -64,35 +80,19 @@ export const flagships: Flagship[] = [
     },
   },
   {
-    id: "lider-translations",
-    slug: "lider-translations",
-    name: "Lider Translations",
-    image: "/work/lidertranslations-1.jpg",
+    id: "country-guides",
+    slug: "country-guides",
+    name: "Country Guides",
+    image: "/work/countryguides-1.jpg",
     alt: {
-      en: "One of the Lider translation sites: the Croatian business newsroom published in another language",
-      hr: "Jedna od prevedenih stranica Lidera: hrvatska poslovna redakcija objavljena na drugom jeziku",
+      en: "One of the Country Guides travel sites: a destination page with photos and an itinerary",
+      hr: "Jedan od putnih vodiča Country Guides: stranica odredišta s fotografijama i planom puta",
     },
-    kind: { en: "AI translation · client work", hr: "AI prevođenje · rad za klijenta" },
-    stat: { value: "10", unit: { en: "languages, ~1.4M articles published", hr: "jezika, ~1,4 mil. objavljenih članaka" } },
+    kind: { en: "AI content platform · our product", hr: "AI platforma za sadržaj · naš proizvod" },
+    stat: { value: "14", unit: { en: "travel guide sites on one codebase", hr: "putnih vodiča na jednoj bazi koda" } },
     summary: {
-      en: "One Croatian newsroom translated into ten languages and published as ten more live news sites, kept current every day by a pipeline that runs itself.",
-      hr: "Jedna hrvatska redakcija prevedena na deset jezika i objavljena kao deset novih news portala, koje svaki dan ažurira pipeline koji radi sam.",
-    },
-  },
-  {
-    id: "mojkraj",
-    slug: "mojkraj",
-    name: "MOJ KRAJ.",
-    image: "/work/mojkraj-home.jpg",
-    alt: {
-      en: "MOJ KRAJ.'s national front page: a calm, content-first news layout",
-      hr: "Naslovnica MOJ KRAJ.-a: miran raspored vijesti u kojem je sadržaj na prvom mjestu",
-    },
-    kind: { en: "AI newsroom · our product", hr: "AI redakcija · naš proizvod" },
-    stat: { value: "8", unit: { en: "checks every draft must pass", hr: "provjera koje svaki nacrt mora proći" } },
-    summary: {
-      en: "A Croatian news portal run as a public experiment: every article written fresh from cited sources, claims checked against the source before it publishes, and news from the towns big media left behind.",
-      hr: "Hrvatski news portal vođen kao javni eksperiment: svaki članak napisan iznova iz citiranih izvora, tvrdnje provjerene prema izvoru prije objave, uz vijesti iz mjesta koja su veliki mediji napustili.",
+      en: "Fourteen branded travel guides, from Croatia and Italy to Morocco, Canada, Colorado and Oregon, with an AI pipeline that researches and writes every destination: 6,000+ attractions so far.",
+      hr: "Četrnaest brendiranih putnih vodiča, od Hrvatske i Italije do Maroka, Kanade, Colorada i Oregona, s AI pipelineom koji istražuje i piše svako odredište: dosad više od 6.000 znamenitosti.",
     },
   },
   {
@@ -124,11 +124,11 @@ export type WorkItem = {
 // The rest of the work, newest strengths first; one hard fact each.
 export const workIndex: WorkItem[] = [
   {
-    slug: "country-guides",
-    name: "Country Guides",
-    image: "/work/countryguides-1.jpg",
-    kind: { en: "AI content platform · our product", hr: "AI platforma za sadržaj · naš proizvod" },
-    fact: { en: "14 branded guide sites, one codebase", hr: "14 brendiranih vodiča, jedna baza koda" },
+    slug: "lider-translations",
+    name: "Lider Translations",
+    image: "/work/lidertranslations-1.jpg",
+    kind: { en: "AI translation", hr: "AI prevođenje" },
+    fact: { en: "1 newsroom, 10 languages, ~1.4M articles", hr: "1 redakcija, 10 jezika, ~1,4 mil. članaka" },
   },
   {
     slug: "tvrtko",
