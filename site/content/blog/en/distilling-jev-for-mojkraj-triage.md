@@ -44,6 +44,8 @@ The code itself was clean: safetensors only, no remote code, no telemetry.
 
 We built **openjev**, a server that answers Jev's API from local Laya checkpoints. TypeSafe's official SDK reads its server address from an environment variable, so it works against openjev without code changes. Switching an app over is one setting.
 
+<figure><picture><source media="(max-width: 600px)" srcset="/blog/distilling-jev-for-mojkraj-triage/architecture-en-sm.webp"><img src="/blog/distilling-jev-for-mojkraj-triage/architecture-en.webp" alt="Diagram: an app using the official TypeSafe SDK sends POST /v1/systemone to openjev, which routes English text to laya-en (421M), any other language to laya-multilingual (322M), and requests that name it to the MOJ KRAJ. triage model" loading="lazy"></picture><figcaption>openjev answers Jev's API from local checkpoints. The language decides the model, unless the caller asks for one by name.</figcaption></figure>
+
 - **It behaves like Jev.** Responses match live Jev: the same rounding, option order, confidence formula and error bodies. Tests check this against captured Jev responses. Our copy of Laya's code reproduces the upstream package to within 0.004 probability.
 - **It routes by language.** We added Croatian stopwords to Laya's language detector. Before that, Croatian written without diacritics ("molim vas vratite novac sto prije") landed on the English model. That mistake is expensive: Croatian topic classification scores 48.5% on the English model and 76.0% on the multilingual one.
 - **It's safe on a shared GPU.** Other model servers use most of the card. openjev caps its own memory and won't load onto the GPU unless 8 GB stays free; otherwise it runs on the CPU. If it runs out of memory, it halves its batch. In a test with a 1.25 GiB cap, a 96-question request halved four times and still finished on the GPU.
@@ -52,19 +54,7 @@ We built **openjev**, a server that answers Jev's API from local Laya checkpoint
 
 We sent byte-identical requests to Jev 1.13 and to Laya on 11 public tasks and 8 hand-labelled Jev use cases. Laya was about 20× faster, 9–18 ms per request against 258–288 ms. But it was only competitive on short texts with few options. The Jev side of this benchmark cost $0.10.
 
-| Task (decisions) | Laya trained on it? | Jev | Laya | Laya − Jev, 95% CI |
-|---|---|--:|--:|---|
-| AG News topic, 4 options (200) | yes | 86.5% | 93.5% | +7.0 (+2.0, +12.5) |
-| Emotion, 6 options (210) | no | 49.5% | 44.3% | −5.2 (−12.4, +1.4) |
-| Prompt-injection check, yes/no (116) | no | 75.9% | 70.7% | −5.2 (−13.8, +3.4) |
-| XNLI in 5 languages (750) | no | 77.7% | 71.1% | −6.7 (−10.3, −2.9) |
-| BoolQ, passage first (300) | yes | 92.3% | 83.0% | −9.3 (−14.0, −5.0) |
-| SIB-200 topic, Croatian + English (408) | unknown | 91.2% | 78.2% | −13.0 (−17.4, −8.8) |
-| Yelp stars, 5-level score (250) | unknown | 60.8% | 33.6% | −27.2 (−34.4, −19.6) |
-| BoolQ, question first (300) | yes | 90.7% | 62.0% | −28.7 (−35.3, −22.0) |
-| typed-decisions, 4 workflows (2,000) | no | 73.8% | 36.4% | −37.4 (−40.2, −34.4) |
-| Banking77 intent, 77 options (308) | no | 83.1% | 44.5% | −38.6 (−44.2, −33.1) |
-| Browser agent next action (22) | no | 100% | 18.2% | −81.8 (−95.5, −63.6) |
+<figure><picture><source media="(max-width: 600px)" srcset="/blog/distilling-jev-for-mojkraj-triage/zero-shot-en-sm.webp"><img src="/blog/distilling-jev-for-mojkraj-triage/zero-shot-en.webp" alt="Dot-and-whisker chart of Laya minus Jev accuracy on 11 tasks. Laya is ahead only on AG News (+7.0); every other task is behind, from −5.2 on Emotion to −81.8 on the browser-agent task" loading="lazy"></picture><figcaption>Zero-shot, Laya against Jev 1.13 on byte-identical requests. Dots are the difference in accuracy points, whiskers the 95% confidence interval; the right-hand column shows each model's accuracy. Decision counts in brackets.</figcaption></figure>
 
 If you use Laya directly, watch out for three things:
 
@@ -93,15 +83,11 @@ We fine-tuned the multilingual checkpoint on Jev's answers to MOJ KRAJ.'s four t
 
 That's a statistical tie with production: +0.7 points, with a 95% confidence interval of −1.7 to +3.0. The small model is better at spotting what isn't news. The LLM is better at picking the section.
 
+<figure><picture><source media="(max-width: 600px)" srcset="/blog/distilling-jev-for-mojkraj-triage/speed-accuracy-en-sm.webp"><img src="/blog/distilling-jev-for-mojkraj-triage/speed-accuracy-en.webp" alt="Scatter chart of accuracy against median latency: fine-tuned Laya at 94.4% and 12 ms, Jev at 97.3% and 269 ms, DeepSeek v4.1 flash at 93.7% and 647 ms, untrained Laya at 48.0% and 17 ms" loading="lazy"></picture><figcaption>Accuracy on the clear gold decisions against median latency per item. Fine-tuning moved the local model from the bottom of the chart to the production LLM's level, at about a fiftieth of its latency.</figcaption></figure>
+
 The data didn't need to be large. We trained five versions on different amounts of Jev-labelled items:
 
-| Training items | Accuracy on clear gold | Agreement with Jev |
-|--:|--:|--:|
-| 125 | 89.3% | 86.9% |
-| 250 | 92.7% | 90.6% |
-| 500 | 93.7% | 92.1% |
-| 1,000 | 93.7% | 92.2% |
-| 2,000 | 94.4% | 92.8% |
+<figure><picture><source media="(max-width: 600px)" srcset="/blog/distilling-jev-for-mojkraj-triage/learning-curve-en-sm.webp"><img src="/blog/distilling-jev-for-mojkraj-triage/learning-curve-en.webp" alt="Line chart of accuracy against the number of Jev-labelled training items: 89.3% at 125, 92.7% at 250, 93.7% at 500 and 1,000, 94.4% at 2,000; agreement with Jev runs 2 to 3 points lower" loading="lazy"></picture><figcaption>Five fine-tunes on 125 to 2,000 Jev-labelled items. Untrained, the same model scores 48.0%.</figcaption></figure>
 
 Most of the gain arrives with the first 250 items, which cost less than a cent of Jev time. Past 500, the student levels off just below its teacher.
 
@@ -109,14 +95,11 @@ Most of the gain arrives with the first 250 items, which cost less than a cent o
 
 Using both models beats either one alone. The local model answers what it's sure of, and the LLM takes the rest. At a 0.6 confidence threshold the combination scored 96.4%, against 94.4% for the local model alone and 93.7% for the LLM alone. The two make different mistakes.
 
+<figure><picture><source media="(max-width: 600px)" srcset="/blog/distilling-jev-for-mojkraj-triage/cascade-en-sm.webp"><img src="/blog/distilling-jev-for-mojkraj-triage/cascade-en.webp" alt="Flow diagram: an intake item goes to the local model; if every answer has p of at least 0.6 the local decision stands, otherwise the LLM decides with the production prompt; a timeout, error or unreadable reply also goes to the LLM" loading="lazy"></picture><figcaption>One rule routes each item. Any doubt, and any failure of the local path, falls back to the original LLM call.</figcaption></figure>
+
 One rule decides. If any of the four answers is less sure than the threshold, the whole item goes to the LLM exactly as before. So does any failure of the local path: a timeout, an error, or a response it can't read. A broken local model costs one extra LLM call, never an article or a shift.
 
-| Minimum confidence to answer locally | Items answered locally | Combined accuracy |
-|--:|--:|--:|
-| 0.6 | 70% | 96.4% |
-| 0.7 | 50.5% | 95.4% |
-| 0.8 | 27.5% | 94.8% |
-| 0.9 | 5% | 94.0% |
+<figure><picture><source media="(max-width: 600px)" srcset="/blog/distilling-jev-for-mojkraj-triage/thresholds-en-sm.webp"><img src="/blog/distilling-jev-for-mojkraj-triage/thresholds-en.webp" alt="Two charts: items answered locally fall from 70% at a 0.6 threshold to 5% at 0.9; combined accuracy falls from 96.4% to 94.0%, above both the local model alone (94.4%) and the LLM alone (93.7%) for thresholds up to 0.8" loading="lazy"></picture><figcaption>Simulated on the 200 blind-gold items. A lower threshold keeps more items local and, with this pair of models, is also more accurate.</figcaption></figure>
 
 A lower threshold keeps more items local, and here it also scores higher, because the local model is the better judge of what is news. With only 200 test items the exact best threshold is noisy, but every one we tried matched or beat production. We shipped 0.6.
 

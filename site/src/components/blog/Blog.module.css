@@ -239,13 +239,19 @@
   background: #0c0c10;
 }
 
-.prose img + em {
+.prose img + em,
+.prose figcaption {
   display: block;
   margin-top: 12px;
   color: var(--text-muted);
   font-size: 14px;
   font-style: normal;
   line-height: 1.55;
+}
+
+/* Charts are <figure><picture>: a narrow drawing for phones, so their labels stay readable. */
+.prose figure {
+  margin: 0;
 }
 
 .prose ol {

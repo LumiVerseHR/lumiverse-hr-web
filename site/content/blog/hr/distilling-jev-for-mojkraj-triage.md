@@ -44,6 +44,8 @@ Sam kod bio je čist: samo safetensors, bez udaljenog koda, bez telemetrije.
 
 Napravili smo **openjev**, poslužitelj koji odgovara na Jevov API iz lokalnih Laya checkpointa. TypeSafeov službeni SDK adresu poslužitelja čita iz varijable okruženja, pa radi s openjevom bez izmjena koda. Prebacivanje aplikacije svodi se na jednu postavku.
 
+<figure><picture><source media="(max-width: 600px)" srcset="/blog/distilling-jev-for-mojkraj-triage/architecture-hr-sm.webp"><img src="/blog/distilling-jev-for-mojkraj-triage/architecture-hr.webp" alt="Dijagram: aplikacija sa službenim TypeSafe SDK-om šalje POST /v1/systemone openjevu, koji tekst na engleskom šalje modelu laya-en (421M), sve ostale jezike modelu laya-multilingual (322M), a zahtjeve koji ga traže imenom MOJ KRAJ. trijažnom modelu" loading="lazy"></picture><figcaption>openjev odgovara na Jevov API iz lokalnih checkpointa. Jezik odlučuje o modelu, osim ako ga pozivatelj ne zatraži imenom.</figcaption></figure>
+
 - **Ponaša se kao Jev.** Odgovori se poklapaju sa živim Jevom: isto zaokruživanje, redoslijed opcija, formula pouzdanosti i tijela grešaka. Testovi to provjeravaju prema snimljenim Jevovim odgovorima. Naša kopija Layina koda reproducira izvorni paket unutar 0,004 vjerojatnosti.
 - **Usmjerava po jeziku.** U Layin detektor jezika dodali smo hrvatske stop-riječi. Prije toga hrvatski pisan bez dijakritika („molim vas vratite novac sto prije”) završavao je na engleskom modelu. Ta je greška skupa: hrvatska klasifikacija tema postiže 48,5 % na engleskom modelu i 76,0 % na višejezičnom.
 - **Siguran je na dijeljenom GPU-u.** Ostali poslužitelji modela zauzimaju većinu kartice. openjev ograničava vlastitu memoriju i ne učitava se na GPU ako ne ostane slobodno barem 8 GB; inače radi na CPU-u. Ako ostane bez memorije, prepolovi batch. U testu s ograničenjem od 1,25 GiB zahtjev s 96 pitanja prepolovio se četiri puta i ipak završio na GPU-u.
@@ -52,19 +54,7 @@ Napravili smo **openjev**, poslužitelj koji odgovara na Jevov API iz lokalnih L
 
 Jevu 1.13 i Layi poslali smo bajt-identične zahtjeve na 11 javnih zadataka i 8 ručno označenih Jevovih primjena. Laya je bila otprilike 20× brža, 9–18 ms po zahtjevu prema 258–288 ms. Ali konkurentna je bila samo na kratkim tekstovima s malo opcija. Jevova strana ovog benchmarka stajala je 0,10 $.
 
-| Zadatak (odluke) | Laya trenirana na njemu? | Jev | Laya | Laya − Jev, 95 % CI |
-|---|---|--:|--:|---|
-| AG News tema, 4 opcije (200) | da | 86,5 % | 93,5 % | +7,0 (+2,0, +12,5) |
-| Emocija, 6 opcija (210) | ne | 49,5 % | 44,3 % | −5,2 (−12,4, +1,4) |
-| Provjera prompt injectiona, da/ne (116) | ne | 75,9 % | 70,7 % | −5,2 (−13,8, +3,4) |
-| XNLI na 5 jezika (750) | ne | 77,7 % | 71,1 % | −6,7 (−10,3, −2,9) |
-| BoolQ, prvo odlomak (300) | da | 92,3 % | 83,0 % | −9,3 (−14,0, −5,0) |
-| SIB-200 tema, hrvatski + engleski (408) | nepoznato | 91,2 % | 78,2 % | −13,0 (−17,4, −8,8) |
-| Yelp zvjezdice, ocjena u 5 razina (250) | nepoznato | 60,8 % | 33,6 % | −27,2 (−34,4, −19,6) |
-| BoolQ, prvo pitanje (300) | da | 90,7 % | 62,0 % | −28,7 (−35,3, −22,0) |
-| typed-decisions, 4 tijeka rada (2.000) | ne | 73,8 % | 36,4 % | −37,4 (−40,2, −34,4) |
-| Banking77 namjera, 77 opcija (308) | ne | 83,1 % | 44,5 % | −38,6 (−44,2, −33,1) |
-| Sljedeća akcija browser agenta (22) | ne | 100 % | 18,2 % | −81,8 (−95,5, −63,6) |
+<figure><picture><source media="(max-width: 600px)" srcset="/blog/distilling-jev-for-mojkraj-triage/zero-shot-hr-sm.webp"><img src="/blog/distilling-jev-for-mojkraj-triage/zero-shot-hr.webp" alt="Grafikon razlike točnosti Laye i Jeva na 11 zadataka. Laya je ispred samo na AG Newsu (+7,0); na svim ostalima zaostaje, od −5,2 na Emociji do −81,8 na zadatku browser agenta" loading="lazy"></picture><figcaption>Bez treniranja, Laya protiv Jeva 1.13 na bajt-identičnim zahtjevima. Točke su razlika u postotnim bodovima, crte interval pouzdanosti od 95 %; desni stupac pokazuje točnost svakog modela. Broj odluka u zagradama.</figcaption></figure>
 
 Ako Layu koristite izravno, pazite na tri stvari:
 
@@ -93,15 +83,11 @@ Višejezični checkpoint fino smo podesili na Jevovim odgovorima na četiri trij
 
 To je statističko izjednačenje s produkcijom: +0,7 boda, uz interval pouzdanosti od 95 % od −1,7 do +3,0. Mali model bolje prepoznaje što nije vijest. LLM bolje bira rubriku.
 
+<figure><picture><source media="(max-width: 600px)" srcset="/blog/distilling-jev-for-mojkraj-triage/speed-accuracy-hr-sm.webp"><img src="/blog/distilling-jev-for-mojkraj-triage/speed-accuracy-hr.webp" alt="Grafikon točnosti prema medijanu latencije: fino podešena Laya 94,4 % i 12 ms, Jev 97,3 % i 269 ms, DeepSeek v4.1 flash 93,7 % i 647 ms, netrenirana Laya 48,0 % i 17 ms" loading="lazy"></picture><figcaption>Točnost na jasnim zlatnim odlukama prema medijanu latencije po stavci. Fino podešavanje podiglo je lokalni model s dna grafikona na razinu produkcijskog LLM-a, uz otprilike pedeseti dio njegove latencije.</figcaption></figure>
+
 Podataka nije trebalo puno. Istrenirali smo pet verzija na različitim količinama stavki koje je označio Jev:
 
-| Stavke za trening | Točnost na jasnim oznakama | Slaganje s Jevom |
-|--:|--:|--:|
-| 125 | 89,3 % | 86,9 % |
-| 250 | 92,7 % | 90,6 % |
-| 500 | 93,7 % | 92,1 % |
-| 1.000 | 93,7 % | 92,2 % |
-| 2.000 | 94,4 % | 92,8 % |
+<figure><picture><source media="(max-width: 600px)" srcset="/blog/distilling-jev-for-mojkraj-triage/learning-curve-hr-sm.webp"><img src="/blog/distilling-jev-for-mojkraj-triage/learning-curve-hr.webp" alt="Linijski grafikon točnosti prema broju stavki za trening koje je označio Jev: 89,3 % na 125, 92,7 % na 250, 93,7 % na 500 i 1.000, 94,4 % na 2.000; slaganje s Jevom 2 do 3 boda niže" loading="lazy"></picture><figcaption>Pet finih podešavanja na 125 do 2.000 stavki koje je označio Jev. Netreniran, isti model postiže 48,0 %.</figcaption></figure>
 
 Većina dobitka stiže s prvih 250 stavki, koje su stajale manje od centa Jevova vremena. Nakon 500 učenik se ustali tik ispod učitelja.
 
@@ -109,14 +95,11 @@ Većina dobitka stiže s prvih 250 stavki, koje su stajale manje od centa Jevova
 
 Korištenje obaju modela bolje je od svakog zasebno. Lokalni model odgovara na ono u što je siguran, a LLM preuzima ostatak. Uz prag pouzdanosti od 0,6 kombinacija je postigla 96,4 %, prema 94,4 % samog lokalnog modela i 93,7 % samog LLM-a. Ta dva modela griješe na različitim mjestima.
 
+<figure><picture><source media="(max-width: 600px)" srcset="/blog/distilling-jev-for-mojkraj-triage/cascade-hr-sm.webp"><img src="/blog/distilling-jev-for-mojkraj-triage/cascade-hr.webp" alt="Dijagram toka: ulazna stavka ide lokalnom modelu; ako svaki odgovor ima p od barem 0,6, vrijedi lokalna odluka, inače odlučuje LLM s produkcijskim promptom; istek vremena, greška ili nečitljiv odgovor također idu LLM-u" loading="lazy"></picture><figcaption>Jedno pravilo usmjerava svaku stavku. Svaka sumnja i svaki kvar lokalnog puta vraćaju se na izvorni poziv LLM-u.</figcaption></figure>
+
 Odlučuje jedno pravilo. Ako je bilo koji od četiri odgovora manje siguran od praga, cijela stavka ide LLM-u točno kao i prije. Isto vrijedi za svaki kvar lokalnog puta: istek vremena, grešku ili odgovor koji ne može pročitati. Pokvaren lokalni model košta jedan dodatni poziv LLM-u, nikad članak ili smjenu.
 
-| Minimalna pouzdanost za lokalni odgovor | Stavke odgovorene lokalno | Ukupna točnost |
-|--:|--:|--:|
-| 0,6 | 70 % | 96,4 % |
-| 0,7 | 50,5 % | 95,4 % |
-| 0,8 | 27,5 % | 94,8 % |
-| 0,9 | 5 % | 94,0 % |
+<figure><picture><source media="(max-width: 600px)" srcset="/blog/distilling-jev-for-mojkraj-triage/thresholds-hr-sm.webp"><img src="/blog/distilling-jev-for-mojkraj-triage/thresholds-hr.webp" alt="Dva grafikona: stavke odgovorene lokalno padaju sa 70 % uz prag 0,6 na 5 % uz 0,9; ukupna točnost pada s 96,4 % na 94,0 %, iznad samog lokalnog modela (94,4 %) i samog LLM-a (93,7 %) za pragove do 0,8" loading="lazy"></picture><figcaption>Simulirano na 200 zlatnih stavki označenih naslijepo. Niži prag zadržava više stavki lokalno i, s ovim parom modela, ujedno je točniji.</figcaption></figure>
 
 Niži prag zadržava više stavki lokalno, a ovdje i postiže više, jer je lokalni model bolji sudac o tome što je vijest. Sa samo 200 testnih stavki točan najbolji prag je nepouzdan, ali svaki koji smo isprobali bio je jednak produkciji ili bolji. Pustili smo 0,6.
 
