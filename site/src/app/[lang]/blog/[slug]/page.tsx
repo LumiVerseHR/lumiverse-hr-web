@@ -6,7 +6,7 @@ import { Header } from "@/components/chrome/Header";
 import styles from "@/components/blog/Blog.module.css";
 import { Icon } from "@/components/icons/Icon";
 import { author, t } from "@/content/blog-i18n.mjs";
-import { hasLocale, localePath } from "@/i18n/config";
+import { hasLocale, localePath, locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getCase } from "@/lib/cases";
 import { jsonLdHtml } from "@/lib/jsonld";
@@ -18,24 +18,29 @@ type Copy = { home: string; blog: string; min: string; related: string; relatedC
 // Unknown slugs wait for the full render so notFound() answers with a real 404.
 export const ensureStatic = "navigation";
 
-// Posts are written in English; they live at /blog/<slug>.
+// Posts live at /blog/<slug>, and their translations at /hr/blog/<slug>.
 export async function generateStaticParams() {
-  return (await allPosts()).map((p) => ({ lang: "en", slug: p.slug }));
+  const all = await Promise.all(locales.map(async (lang) => (await allPosts(lang)).filter((p) => p.lang === lang).map((p) => ({ lang, slug: p.slug }))));
+  return all.flat();
 }
+
+// Both language URLs of a post, for the ones it's written in.
+const languagesOf = (slug: string, langs: Locale[]) => Object.fromEntries(langs.map((l) => [l, localePath(l, `/blog/${slug}`)]));
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/blog/[slug]">): Promise<Metadata> {
   const { lang, slug } = await params;
-  if (lang !== "en") return {};
-  const post = await getPost(slug);
+  if (!hasLocale(lang)) return {};
+  const post = await getPost(slug, lang);
   if (!post) return {};
   const m = post.meta;
   return {
     title: `${m.title} | LumiVerse`,
     description: m.description,
     keywords: m.tags,
-    alternates: { canonical: `/blog/${slug}` },
+    alternates: { canonical: localePath(lang, `/blog/${slug}`), languages: languagesOf(slug, m.langs) },
     openGraph: {
       type: "article",
+      locale: lang === "hr" ? "hr_HR" : "en_US",
       title: m.title,
       description: m.description,
       images: m.image ? [m.image] : undefined,
@@ -49,14 +54,14 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/blog/[slug
 
 export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug]">) {
   const { lang, slug } = await params;
-  if (!hasLocale(lang) || lang !== "en") notFound();
-  const post = await getPost(slug);
+  if (!hasLocale(lang)) notFound();
+  const post = await getPost(slug, lang);
   if (!post) notFound();
   const dict = await getDictionary(lang);
   const s = t[lang] as Copy;
   const m = post.meta;
   const related = (await Promise.all(m.related.map(async (r) => ({ slug: r, data: await getCase(r, lang) })))).filter((r) => r.data);
-  const date = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric" });
+  const date = new Intl.DateTimeFormat(lang === "hr" ? "hr-HR" : "en-GB", { day: "numeric", month: "long", year: "numeric" });
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -68,20 +73,28 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
     keywords: m.tags.join(", "),
     author: { "@type": "Person", name: author.name, url: author.url },
     publisher: { "@type": "Organization", name: "LumiVerse d.o.o.", url: SITE },
-    mainEntityOfPage: `${SITE}/blog/${slug}`,
+    inLanguage: lang,
+    mainEntityOfPage: `${SITE}${localePath(lang, `/blog/${slug}`)}`,
   };
 
   return (
     <>
-      {/* Posts are English only: the Croatian switch goes to the Croatian blog index, as before. */}
-      <Header lang={lang} dict={dict} switchTo={{ en: `/blog/${slug}`, hr: "/hr/blog" }} />
+      {/* An untranslated post switches to the other language's blog index. */}
+      <Header
+        lang={lang}
+        dict={dict}
+        switchTo={{
+          en: localePath("en", `/blog/${slug}`),
+          hr: m.langs.includes("hr") ? localePath("hr", `/blog/${slug}`) : localePath("hr", "/blog"),
+        }}
+      />
       <main className={styles.page}>
         <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdHtml(jsonLd)} />
         <article className={styles.column}>
           <nav className={styles.crumbs} aria-label="Breadcrumb">
             <a href={localePath(lang)}>{s.home}</a>
             <span aria-hidden>/</span>
-            <Link href="/blog">{s.blog}</Link>
+            <Link href={localePath(lang, "/blog")}>{s.blog}</Link>
           </nav>
           <h1 className={styles.postTitle}>{m.title}</h1>
           <p className={styles.lede}>{m.description}</p>
@@ -115,7 +128,7 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
               ))}
             </aside>
           )}
-          <Link className={styles.back} href="/blog">{s.back}</Link>
+          <Link className={styles.back} href={localePath(lang, "/blog")}>{s.back}</Link>
         </article>
       </main>
     </>

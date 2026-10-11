@@ -25,7 +25,7 @@ export default async function BlogIndex({ params }: PageProps<"/[lang]/blog">) {
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary(lang);
   const s = t[lang] as Copy;
-  const posts = await allPosts();
+  const posts = await allPosts(lang);
   const date = new Intl.DateTimeFormat(lang === "hr" ? "hr-HR" : "en-GB", { day: "numeric", month: "long", year: "numeric" });
 
   return (
@@ -47,19 +47,23 @@ export default async function BlogIndex({ params }: PageProps<"/[lang]/blog">) {
             <ol className={styles.list}>
               {posts.map((post) => (
                 <li key={post.slug}>
-                  <a className={styles.item} href={`/blog/${post.slug}`} hrefLang="en">
+                  <a
+                    className={styles.item}
+                    href={localePath(post.lang, `/blog/${post.slug}`)}
+                    hrefLang={post.lang === lang ? undefined : post.lang}
+                  >
                     <span className={styles.meta}>
                       <time dateTime={post.date}>{date.format(new Date(post.date))}</time>
                       <br />
                       {post.minutes} {s.min}
-                      {s.langNote && (
+                      {post.lang !== lang && s.langNote && (
                         <>
                           <br />
                           <span className={styles.langNote}>{s.langNote}</span>
                         </>
                       )}
                     </span>
-                    <span className={styles.itemBody} lang="en">
+                    <span className={styles.itemBody} lang={post.lang === lang ? undefined : post.lang}>
                       <span className={styles.itemTitle}>{post.title}</span>
                       <span className={styles.itemDesc}>{post.description}</span>
                     </span>

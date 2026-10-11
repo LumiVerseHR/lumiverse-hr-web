@@ -34,7 +34,7 @@ export const t = {
     label: "Blog",
     heading: ["Bilješke iz", "radionice"],
     intro:
-      "Što učimo dok gradimo AI proizvode, sustave za klijente i istraživanja - zapisano s brojkama i s greškama. Većina članaka zasad je na engleskom.",
+      "Što učimo dok gradimo AI proizvode, sustave za klijente i istraživanja - zapisano s brojkama i s greškama.",
     min: "min čitanja",
     by: "Autor:",
     related: "Projekt iza ovog članka",

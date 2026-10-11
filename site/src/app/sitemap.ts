@@ -20,6 +20,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   };
   const work = [...flagships.map((f) => f.slug), ...workIndex.map((w) => w.slug)];
   const posts = await allPosts();
+  // A post's own URLs, naming the translations it has.
+  const postEntries = posts.flatMap((post) => {
+    const languages = Object.fromEntries(post.langs.map((l) => [l, `${SITE}${localePath(l, `/blog/${post.slug}`)}`]));
+    return post.langs.map((l) => ({ url: languages[l], lastModified: post.updated ?? post.date, priority: 0.6, alternates: { languages } }));
+  });
   return [
     ...pair("/", 1),
     ...work.flatMap((slug, i) => pair(`/${slug}`, Math.max(0.5, 0.9 - i * 0.03))),
@@ -34,6 +39,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...pair("/tech-lead", 0.7),
     ...pair("/technical-founder", 0.7),
     ...pair("/blog", 0.6),
-    ...posts.map((post) => ({ url: `${SITE}/blog/${post.slug}`, lastModified: post.updated ?? post.date, priority: 0.6 })),
+    ...postEntries,
   ];
 }
