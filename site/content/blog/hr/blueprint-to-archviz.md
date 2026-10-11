@@ -1,6 +1,6 @@
 ---
 title: Od nacrta do arhitektonskih rendera u Blenderu bez ekrana
-description: "Jedan nacrt, kratke upute i dan u kojem Claude piše skripte za Blender: sedam rendera u 2400×1600 i 3D model za šetnju u pregledniku. Što je trebalo i gdje je zapelo."
+description: "Jedan nacrt, kratke upute i dan u kojem Claude piše skripte za Blender: sedam rendera u 2400×1600 i 3D model za šetnju. Što je trebalo i gdje je zapelo."
 date: 2026-10-11
 tags: [Build Log, Agentic Engineering]
 related: []
