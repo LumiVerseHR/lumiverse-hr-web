@@ -1,37 +1,37 @@
 ---
-title: Hrvatski je pao sudac, a ne bot
-description: Naš eval sudac 12 puta zaredom srušio je točan odgovor. Agent je bio u pravu; sudac nije znao pročitati hrvatsku negaciju. Kako smo testirali onoga tko testira.
+title: Iz hrvatskog je pao sudac, a ne bot
+description: Naš AI sudac 12 puta zaredom srušio je točan odgovor. Agent je bio u pravu, a sudac nije razumio hrvatsku negaciju. Evo kako smo testirali onoga tko testira.
 date: 2026-09-03
 tags: [Agentic Engineering, AI Evaluation]
 related: [moj-kolega]
 image: /images/og/moj-kolega.jpg
 ---
 
-[Moj Kolega](/hr/moj-kolega) naš je AI zaposlenik za webshopove. Stoji na stranici trgovine, odgovara kupcima iz kataloga i pravila same trgovine i kaže „ne znam” umjesto da izmišlja.
+[Moj Kolega](/hr/moj-kolega) naš je AI zaposlenik za webshopove. Nalazi se na stranici trgovine, kupcima odgovara na temelju njezina kataloga i uvjeta poslovanja te kaže „ne znam” umjesto da izmišlja.
 
-To posljednje obećanje cijeli je proizvod, pa ga neprestano testiramo. Svaki agent ima paket testnih razgovora, a AI sudac svaki odgovor ocjenjuje kao pass, partial ili fail. Kad sudac kaže fail, idemo popraviti agenta.
+Upravo je to obećanje cijeli proizvod, pa ga neprestano testiramo. Svaki agent ima svoj skup testnih razgovora, a AI sudac svaki odgovor ocjenjuje kao pass, partial ili fail. Kad sudac kaže fail, popravljamo agenta.
 
 Ovo je priča o tjednu u kojem je sudac rekao fail, a agent je bio u pravu.
 
-## Izmišljotina, pa popravak, pa pad koji to nije bio
+## Izmišljotina, popravak i pad koji to nije bio
 
-Počelo je stvarnim bugom. Kupac je u jednoj od naših demo trgovina pitao *„mogu li platiti pouzećem?”*. Agent je rekao da.
+Sve je počelo stvarnim bugom. Kupac je u jednoj od naših demo trgovina pitao *„mogu li platiti pouzećem?”*. Agent je odgovorio da može.
 
-Trgovina nije nudila plaćanje pouzećem. Alat za pravila upravo je vratio načine plaćanja: kartica, Klarna, PayPal, bankovna uplata. Agent je zanemario rezultat vlastitog alata i dao odgovor koji je zvučao uslužno.
+Trgovina nije nudila plaćanje pouzećem. Alat za uvjete poslovanja netom je vratio dostupne načine plaćanja: kartica, Klarna, PayPal, bankovna uplata. Agent je zanemario rezultat vlastitog alata i odgovorio ono što je zvučalo uslužno.
 
-Popravili smo to determinističkim pravilom umjesto dodatnim promptanjem. Točni odgovori na tom slučaju porasli su s otprilike nijednog od četiri na otprilike tri od četiri. Zatim smo ponovno pokrenuli eval da to potvrdimo, a on je i dalje padao, uključujući i odgovore koji su izgledali savršeno točno:
+Umjesto daljnjeg dorađivanja prompta, problem smo riješili determinističkim pravilom. Na tom je slučaju broj točnih odgovora narastao s gotovo nijednog od četiri na otprilike tri od četiri. Zatim smo ponovno pokrenuli eval da to potvrdimo, a on je i dalje javljao pad, i to čak i na odgovorima koji su izgledali savršeno točno:
 
 > *"Plaćanje pouzećem nije dostupno; možete platiti karticama…"*
 
-Sudac je to ocijenio s FAIL, uz obrazloženje: *"incorrectly states cash-on-delivery is available."* („pogrešno tvrdi da je plaćanje pouzećem dostupno”).
+Sudac je to ocijenio kao FAIL, uz obrazloženje: *"incorrectly states cash-on-delivery is available."* („pogrešno tvrdi da je plaćanje pouzećem dostupno”).
 
-## Prvo reproducirajte, pa onda vjerujte
+## Prvo reproducirajte, tek onda vjerujte
 
-Jedna čudna presuda mogla je biti šum, pa smo zabilježili točno taj ulaz: pitanje, agentov odgovor, njegove pozive alata i očekivano ponašanje. Zatim smo ga dali sucu na ponovno ocjenjivanje, iznova i iznova.
+Jedna neobična presuda može biti i šum, pa smo spremili upravo taj ulaz: pitanje, agentov odgovor, pozive alata i očekivano ponašanje. Zatim smo ga sucu davali na ocjenu iznova i iznova.
 
-**Fail, 12 puta od 12.** Nije šum. Deterministički bug, i to u sucu.
+**Fail, 12 puta od 12.** Nije bio šum, nego deterministički bug, i to u sucu.
 
-Zatim A/B test na istom ulazu:
+Slijedio je A/B test na istom ulazu:
 
 | Sudac | Presuda o točnom odgovoru |
 |---|---|
@@ -40,55 +40,55 @@ Zatim A/B test na istom ulazu:
 | gpt-4o, originalni prompt | pass 12/12 |
 | gpt-4.1-mini, originalni prompt | pass 12/12 |
 
-Mali model u ulozi suca letimično je čitao hrvatski, hvatao „pouzećem … dostupno” i propuštao *nije* između. Veći modeli čitali su to bez problema, a isti je odgovor na engleskom prolazio.
+Mali model u ulozi suca hrvatski je tekst samo preletio: uhvatio je „pouzećem … dostupno” i previdio *nije* između. Veći modeli nisu imali problema, a isti je odgovor na engleskom prolazio.
 
-Zadržali smo jeftini model i popravili prompt: kratka klauzula LANGUAGE CARE koja sucu nalaže da razriješi hrvatsku negaciju (*ne, nije, nema, bez…*) prije ocjenjivanja. Isti trošak, točna presuda.
+Zadržali smo jeftini model i popravili prompt: dodali smo kratku klauzulu LANGUAGE CARE koja od suca traži da prije ocjenjivanja razriješi hrvatsku negaciju (*ne, nije, nema, bez…*). Trošak je ostao isti, a presuda je sada točna.
 
 ## Popravak suca treba testirati u oba smjera
 
-Evo zamke. Suca je lako „popraviti” tako da postane blaži. Prestane rušiti točan odgovor jer je prestao rušiti bilo što.
+U tome je zamka. Suca je lako „popraviti” tako da postane blaži. Prestane rušiti točan odgovor jer više ne ruši ništa.
 
-Zato je popravak morao proći dva testa, ne jedan:
+Zato je popravak morao proći ne jedan, nego dva testa:
 
-- **Točno odbijanje** („nije dostupno”) → pass **10/10**, gdje je prije bilo fail 12/12.
-- **Prava izmišljotina** („plaćanje pouzećem *je* dostupno”, iako nije na popisu) → i dalje fail **10/10**.
+- **Točno odbijanje** („nije dostupno”) → pass **10/10**, a prije je bio fail 12/12.
+- **Prava izmišljotina** („plaćanje pouzećem *je* dostupno”, iako ga nema na popisu) → i dalje fail **10/10**.
 
-Oba smjera su izdržala. Od tada je fail na tom slučaju opet značio stvarnu pogrešku agenta.
+Popravak je izdržao u oba smjera. Od tada je fail na tom slučaju opet značio stvarnu pogrešku agenta.
 
-## Onda smo krenuli tražiti ostale
+## Zatim smo potražili i ostale
 
-Jedna slijepa točka obično znači da ih ima još. Zato smo složili mali adversarial sweep: **jedanaest slučajeva za koje smo unaprijed znali točnu presudu**, svaki ocijenjen šest puta. Pokrivali su cijene, količine, negaciju, odgovore na njemačkom i slovenskom, odgovore iz više dijelova i pristojna odbijanja.
+Gdje postoji jedna slijepa točka, obično ih ima još. Zato smo složili mali adversarial sweep: **jedanaest slučajeva za koje smo unaprijed znali točnu presudu**, a svaki je ocijenjen šest puta. Obuhvaćali su cijene, količine, negaciju, odgovore na njemačkom i slovenskom, odgovore od više dijelova i pristojna odbijanja.
 
-Pronašao je još dvije. Sve tri imale su isti oblik: **engleski odgovor je prolazio, hrvatski nije.**
+Sweep je otkrio još dvije. Sve tri imale su isti obrazac: **engleski odgovor je prolazio, a hrvatski nije.**
 
-1. **Ispuštena negacija.** Ona opisana gore.
-2. **Hrvatsko preusmjeravanje nije prepoznato kao preusmjeravanje.** Kad agent pristojno odbije pitanje izvan teme i vrati razgovor na trgovinu („rado pomažem s proizvodima…”), sudac je to ocijenio samo kao partial, šest puta od šest.
-3. **Primjeri čitani kao checklista.** Ako je u očekivanom ponašanju pisalo „spomeni npr. A, B ili C”, sudac je tražio sva tri.
+1. **Previđena negacija.** Ona opisana gore.
+2. **Preusmjeravanje na hrvatskom nije prepoznato kao preusmjeravanje.** Kad agent pristojno odbije pitanje izvan teme i vrati razgovor na trgovinu („rado pomažem s proizvodima…”), sudac mu je dao tek partial, šest puta od šest.
+3. **Primjeri shvaćeni kao obavezan popis.** Ako je u očekivanom ponašanju pisalo „spomeni npr. A, B ili C”, sudac je tražio sva tri.
 
-Popravak za 2 i 3 bio je iste vrste: ocjenjuj *značenje*, a ne površinsku formulaciju ili jezik, i liste s „npr.” tretiraj kao primjere, dok eksplicitni zahtjevi ostaju strogi.
+Za 2 i 3 popravak je bio sličan: ocjenjuj *značenje*, a ne doslovnu formulaciju ili jezik; popise s „npr.” shvati kao primjere, a izričite zahtjeve i dalje provjeravaj strogo.
 
-Nakon popravka: **11 od 11 točnih presuda.** Jednako je važna bila još jedna provjera. Slučaj napravljen da padne, odgovor kojem nedostaje cijeli obavezni dio, **i dalje je pao 6 od 6.** Ocjenjivanje je postalo točnije, a ne velikodušnije.
+Nakon popravka: **11 od 11 točnih presuda.** Jednako je važna bila još jedna provjera. Slučaj koji je namjerno složen da padne, odgovor u kojem nedostaje cijeli obavezni dio, **i dalje je pao 6 od 6.** Ocjenjivanje je postalo točnije, a ne popustljivije.
 
-Jedna napomena o metodi, jer nas je stajala vremena: slijepe točke reproducirale su se samo na *stvarnim* zabilježenim ulazima. Ručno napisani testni stringovi koji su izgledali jednako prolazili su. Ako Vam se sudac ponaša čudno u produkciji, zabilježite točan ulaz i ponovite ga. Nemojte ga parafrazirati.
+I jedna napomena o metodi, jer nas je koštala vremena: slijepe točke mogli smo reproducirati samo na *stvarnim* spremljenim ulazima. Ručno napisani testni primjeri koji su izgledali isto prolazili su bez problema. Ako se Vaš sudac u produkciji ponaša čudno, spremite točan ulaz i pokrenite ga ponovno. Nemojte ga parafrazirati.
 
-## Što nam je pokazao sudac kojem se može vjerovati
+## Što nam je pokazao pouzdan sudac
 
-S popravljenim sucem ocijenili smo agente u produkciji: onaj na mojkolega.hr dobio je 9 od 12, a onaj na ovoj stranici 8 od 12. Rezultati su upozorili na dva stvarna problema, i oba su bila upravo ono što eval postoji da pronađe:
+S popravljenim sucem ocijenili smo agente u produkciji: onaj na mojkolega.hr dobio je 9 od 12, a onaj na ovoj stranici 8 od 12. Rezultati su otkrili dva stvarna problema, upravo onakva kakve eval i treba pronaći:
 
-- **Jezična rupa.** Posjetiteljima na španjolskom i japanskom odgovaralo se na hrvatskom, a talijanski je bio pogrešno prepoznat kao slovenski. Detektor jezika poznavao je samo pet jezika. Širi je napisan i na putu je u produkciju.
-- **Pristran testni paket.** Nekoliko demo trgovina dobilo je loše ocjene, ali pokazalo se da je paket pisan za katalog elektronike: slušalice, adaptere. Trgovina tekstilom ili ljekarna „padala” je zato što pošteno nije imala skateboarde. Agent je opet bio u pravu. Ovaj put pogrešan je bio test.
+- **Rupa u jezicima.** Posjetitelji koji su pisali na španjolskom i japanskom dobivali su odgovore na hrvatskom, a talijanski je pogrešno prepoznat kao slovenski. Detektor jezika poznavao je samo pet jezika. Novi, s više jezika, već je napisan i uskoro ide u produkciju.
+- **Pristran skup testova.** Nekoliko demo trgovina dobilo je loše ocjene, no kad smo pogledali bolje, pokazalo se da su testovi pisani za katalog elektronike: slušalice, adaptere. Trgovina tekstilom ili ljekarna „padala” je zato što je pošteno rekla da nema skateboarde. Agent je opet bio u pravu. Ovaj put pogriješio je test.
 
 ## Obrazac
 
-Pogledajte lanac iz tog tjedna:
+Pogledajte lanac provjera iz tog tjedna:
 
 - **Alat** koji je vratio načine plaćanja.
-- **Pravilo** koje agentu ne da proturječiti vlastitim alatima.
+- **Pravilo** koje agentu ne dopušta da proturječi vlastitim alatima.
 - **Sudac** koji provjerava agenta.
-- **Sweep** s poznatim odgovorima koji provjerava suca.
+- **Sweep** s unaprijed poznatim odgovorima, koji provjerava suca.
 - **Testovi u oba smjera** koji provjeravaju popravak suca.
-- **Scorecard** koji je provjerio testni paket i uhvatio ga.
+- **Scorecard** koji je provjerio skup testova i u njemu ulovio pogrešku.
 
-Svaki provjeravatelj trebao je vlastitu provjeru i svaki je barem jednom pogriješio. To nije neuspjeh pristupa. To *jest* pristup. Verifikator koji nikad ne provjerite samo je još jedan model kojem vjerujete.
+Svaki provjeravač i sam je trebao provjeru i svaki je barem jednom pogriješio. To ne znači da pristup ne valja. To *jest* pristup. Provjeravač kojeg nikad ne provjerite samo je još jedan model kojem vjerujete na riječ.
 
-Ako vodite LLM evale na bilo kojem jeziku osim engleskog, ovo je ono što vrijedi ukrasti: **uzmite sučeve padove, ponovite ih točno i zamijenite jezik.** Ako engleska verzija prolazi, a Vaša ne, problem nije u Vašem agentu.
+Ako pokrećete LLM evale na bilo kojem jeziku osim engleskog, ovo slobodno preuzmite: **uzmite slučajeve koje je sudac srušio, ponovite ih doslovno i promijenite jezik.** Ako engleska verzija prolazi, a Vaša ne, problem nije u Vašem agentu.
