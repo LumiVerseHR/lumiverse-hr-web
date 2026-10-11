@@ -1,12 +1,13 @@
-# Dokploy compose for the v3 site (Next.js, site/). NOT wired yet: production
-# still deploys docker-compose.prod.yml (the legacy static site). To cut over,
-# point the Dokploy app at this file; Traefik labels and hosts match the
-# current setup, so the switch is one compose change and a redeploy.
+# Dokploy compose for the v3 site (Next.js, site/). Production deploys this file
+# from 2026-10-11 (composePath ./deploy/dokploy/docker-compose.v3.yml). The legacy
+# static site's compose is ../../docker-compose.prod.yml; switching back is one
+# composePath change and a redeploy.
 
 services:
   lumiverse-web:
     build:
-      context: ./site
+      # Build paths resolve from this file's folder (deploy/dokploy/), not the repo root.
+      context: ../../site
       dockerfile: Dockerfile
     restart: unless-stopped
     networks: [default, dokploy-network]
@@ -51,7 +52,7 @@ services:
   # The contact form backend, unchanged. Next.js rewrites /api/contact to it.
   lumiverse-contact:
     build:
-      context: .
+      context: ../..
       dockerfile: contact/Dockerfile
     restart: unless-stopped
     networks: [default]
