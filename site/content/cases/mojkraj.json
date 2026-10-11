@@ -395,6 +395,34 @@
         ]
       },
       {
+        "title": "Noticed by Journalism Researchers",
+        "blocks": [
+          {
+            "type": "text",
+            "paragraphs": [
+              "MOJ KRAJ. is listed in J·Index, the Journalism AI Index: an open database, built by Ukrainian journalist Katya Gorchinskaya, of more than 3,000 cases of AI use in news organisations across 142 countries. Its entry files MOJ KRAJ. under editorial production, AI-led with human oversight, and it is one of eight cases from six Croatian news organisations in the index.",
+              "That entry is how Gretel Kahn of the Reuters Institute for the Study of Journalism at Oxford found us. She interviewed our founder about MOJ KRAJ. while reporting on J·Index. Her published piece is about the database and what it shows, and does not name MOJ KRAJ."
+            ]
+          },
+          {
+            "type": "links",
+            "lead": "Read",
+            "items": [
+              {
+                "label": "MOJ KRAJ. on J·Index",
+                "href": "https://jindex.ai/org/moj-kraj",
+                "external": true
+              },
+              {
+                "label": "the Reuters Institute article on J·Index",
+                "href": "https://reutersinstitute.politics.ox.ac.uk/news/journalist-built-database-tracking-thousands-cases-ai-adoption-news-organisations-heres-what",
+                "external": true
+              }
+            ]
+          }
+        ]
+      },
+      {
         "title": "Why It's in Our Portfolio",
         "blocks": [
           {
@@ -801,6 +829,34 @@
             "type": "quote",
             "text": "Pravilo na kojem sve počiva: važnije je da vijest bude točna nego da bude prva.",
             "cite": "— iz rubrike O nama portala MOJ KRAJ."
+          }
+        ]
+      },
+      {
+        "title": "Zapazili su nas istraživači novinarstva",
+        "blocks": [
+          {
+            "type": "text",
+            "paragraphs": [
+              "MOJ KRAJ. uvršten je u J·Index (Journalism AI Index), otvorenu bazu koju je izradila ukrajinska novinarka Katya Gorchinskaya i koja bilježi više od 3.000 primjera korištenja AI-ja u medijima iz 142 zemlje. Ondje je MOJ KRAJ. svrstan u uređivačku produkciju, kao rad koji vodi AI uz ljudski nadzor, i jedan je od osam primjera iz šest hrvatskih medija u bazi.",
+              "Preko tog unosa pronašla nas je Gretel Kahn s Reuters Institutea za proučavanje novinarstva na Oxfordu. O MOJ KRAJ.-u razgovarala je s našim osnivačem dok je pisala o J·Indexu. Objavljeni tekst govori o samoj bazi i onome što ona pokazuje, a MOJ KRAJ. u njemu nije spomenut."
+            ]
+          },
+          {
+            "type": "links",
+            "lead": "Pročitajte",
+            "items": [
+              {
+                "label": "MOJ KRAJ. na J·Indexu",
+                "href": "https://jindex.ai/org/moj-kraj",
+                "external": true
+              },
+              {
+                "label": "članak Reuters Institutea o J·Indexu",
+                "href": "https://reutersinstitute.politics.ox.ac.uk/news/journalist-built-database-tracking-thousands-cases-ai-adoption-news-organisations-heres-what",
+                "external": true
+              }
+            ]
           }
         ]
       },
