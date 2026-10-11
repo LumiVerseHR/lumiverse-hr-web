@@ -596,15 +596,15 @@ export const packages = [
     },
     hr: {
       name: "Arhitektonska vizualizacija iz Vaših nacrta",
-      summary: "Vaša zgrada, renderirana iz nacrta prije nego što je izgrađena: fotografije kao iz časopisa i 3D model kroz koji kupci šeću na Vašoj stranici.",
+      summary: "Vaša zgrada, prikazana prije nego što je izgrađena: slike kao iz arhitektonskog časopisa i 3D model kroz koji kupci mogu prošetati na Vašoj web stranici.",
       includes: [
         "3D model izrađen iz Vaših tlocrta i pročelja, u PDF-u ili CAD-u",
         "Do 5 slika u 2400×1600: eksterijer danju i u plavom satu, interijeri, presjek",
         "Opremljene prostorije i uređen okoliš",
-        "Interaktivni 3D model za Vašu stranicu: okretanje, šetnja, rezanje kat po kat",
+        "Interaktivni 3D model za Vašu web stranicu: razgledavanje sa svih strana, šetnja kroz prostor i presjek po katovima",
         "Dva kruga izmjena"
       ],
-      proof: "Jedan nacrt, sedam rendera i web model kroz koji se šeće",
+      proof: "Jedan nacrt, sedam rendera i 3D model za šetnju u pregledniku",
       cta: "Naručite vizualizaciju",
       brief: ["Vaši nacrti: tlocrti i pročelja, u PDF-u ili CAD-u", "Materijali i završne obrade, ako su odabrani", "Gdje će se slike koristiti: prodajna stranica, brošura, oglas"]
     }

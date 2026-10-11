@@ -66,7 +66,7 @@ const svg = (w, h, body) => `<svg xmlns="http://www.w3.org/2000/svg" width="${w}
 // ---------------------------------------------------------------- 1. openjev architecture
 const T1 = {
   en: { app: ["Your app", "official TypeSafe SDK"], api: "POST /v1/systemone", oj: ["openjev", "Jev's API on our GPU", "keeps 8 GB of GPU free"], en: ["laya-en · 421M", "English text"], ml: ["laya-multilingual · 322M", "any other language"], ft: ["MOJ KRAJ. triage model", "fine-tune, asked for by name"], route: "routed by language" },
-  hr: { app: ["Vaša aplikacija", "službeni TypeSafe SDK"], api: "POST /v1/systemone", oj: ["openjev", "Jevov API na našem GPU-u", "ostavlja 8 GB GPU-a slobodno"], en: ["laya-en · 421M", "tekst na engleskom"], ml: ["laya-multilingual · 322M", "svi ostali jezici"], ft: ["MOJ KRAJ. trijažni model", "fino podešen, traži se imenom"], route: "usmjereno po jeziku" },
+  hr: { app: ["Vaša aplikacija", "službeni TypeSafe SDK"], api: "POST /v1/systemone", oj: ["openjev", "Jevov API na našem GPU-u", "čuva 8 GB memorije GPU-a"], en: ["laya-en · 421M", "tekst na engleskom"], ml: ["laya-multilingual · 322M", "svi ostali jezici"], ft: ["MOJ KRAJ. trijažni model", "fino podešen, poziva se imenom"], route: "usmjereno po jeziku" },
 };
 function architecture(lang, narrow) {
   const t = T1[lang];
@@ -114,7 +114,7 @@ const tasks = [
 ];
 const T2 = {
   en: { trained: "Laya was trained on this dataset", other: "not trained on it, or unknown", axis: "Laya minus Jev, accuracy points (95% CI)", vals: "Jev → Laya", better: "Jev better ←", laya: "→ Laya better" },
-  hr: { trained: "Laya je trenirana na ovom skupu", other: "nije trenirana na njemu ili nepoznato", axis: "Laya minus Jev, postotni bodovi točnosti (95 % CI)", vals: "Jev → Laya", better: "Jev bolji ←", laya: "→ Laya bolja" },
+  hr: { trained: "Laya je trenirana na ovom skupu podataka", other: "nije trenirana na njemu ili se ne zna", axis: "Laya minus Jev, postotni bodovi točnosti (95 % CI)", vals: "Jev → Laya", better: "Jev bolji ←", laya: "→ Laya bolja" },
 };
 function zeroShot(lang, narrow) {
   const t = T2[lang];
@@ -126,7 +126,7 @@ function zeroShot(lang, narrow) {
   let s = "";
   // legend
   s += `<circle cx="6" cy="14" r="5" fill="${C.wood}"/>` + text(18, 19, t.trained, { size: 13, fill: C.soft });
-  const lx = narrow ? 0 : 290;
+  const lx = narrow ? 0 : 320;
   const ly = narrow ? 36 : 14;
   s += `<circle cx="${lx + 6}" cy="${ly}" r="5" fill="${C.text}"/>` + text(lx + 18, ly + 5, t.other, { size: 13, fill: C.soft });
   if (!narrow) s += text(W, top - 8, t.vals, { anchor: "end", size: 12, fill: C.muted });
