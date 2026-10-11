@@ -1,0 +1,43 @@
+/* Each dust layer wears its lamp's cone (same geometry as Beams.module.css) as a mask. */
+.dust {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.logo {
+  --origin-x: calc(var(--gutter) + clamp(128px, 10.6vw, 166px));
+  --origin-y: clamp(30px, 3.2vw, 46px);
+  --from: 75deg;
+  z-index: 1;
+  mask-image:
+    conic-gradient(from var(--from) at var(--origin-x) var(--origin-y), transparent 0deg, rgb(0 0 0 / 0.6) 22deg, #000 42deg, #000 78deg, rgb(0 0 0 / 0.6) 98deg, transparent 120deg, transparent 360deg),
+    radial-gradient(ellipse 110% 115% at var(--origin-x) var(--origin-y), #000 0%, rgb(0 0 0 / 0.5) 45%, transparent 80%);
+  mask-composite: intersect;
+}
+
+.spot {
+  --origin-x: calc(100% - 1.5vw - min(30vw, 43svh * 1600 / 1100));
+  --origin-y: -140px;
+  --from: 148deg;
+  z-index: 2;
+  mask-image:
+    conic-gradient(from var(--from) at var(--origin-x) var(--origin-y), transparent 0deg, #000 18deg, #000 46deg, transparent 64deg, transparent 360deg),
+    linear-gradient(to bottom, #000 0%, #000 60%, transparent 92%);
+  mask-composite: intersect;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .spot {
+    --origin-x: 50%;
+    --origin-y: 40svh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dust {
+    display: none;
+  }
+}

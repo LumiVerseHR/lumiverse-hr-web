@@ -1,0 +1,666 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-09T20:49:43+00:00",
+  "title": "Design System: LumiVerse",
+  "extensions": {
+    "colorMeta": {
+      "coral": {
+        "role": "primary",
+        "displayName": "Figure Coral",
+        "canonical": "#ff4d4d",
+        "tonalRamp": [
+          "oklch(15% 0.200 25.0)",
+          "oklch(26% 0.200 25.0)",
+          "oklch(38% 0.200 25.0)",
+          "oklch(50% 0.200 25.0)",
+          "oklch(62% 0.200 25.0)",
+          "oklch(74% 0.200 25.0)",
+          "oklch(85% 0.200 25.0)",
+          "oklch(95% 0.200 25.0)"
+        ]
+      },
+      "coral-press": {
+        "role": "primary",
+        "displayName": "Pressed Coral",
+        "canonical": "#f03a3a",
+        "tonalRamp": [
+          "oklch(15% 0.200 26.2)",
+          "oklch(26% 0.200 26.2)",
+          "oklch(38% 0.200 26.2)",
+          "oklch(50% 0.200 26.2)",
+          "oklch(62% 0.200 26.2)",
+          "oklch(74% 0.200 26.2)",
+          "oklch(85% 0.200 26.2)",
+          "oklch(95% 0.200 26.2)"
+        ]
+      },
+      "gallery": {
+        "role": "neutral",
+        "displayName": "Gallery Wall",
+        "canonical": "#0e0f12",
+        "tonalRamp": [
+          "oklch(15% 0.006 271.0)",
+          "oklch(26% 0.006 271.0)",
+          "oklch(38% 0.006 271.0)",
+          "oklch(50% 0.006 271.0)",
+          "oklch(62% 0.006 271.0)",
+          "oklch(74% 0.006 271.0)",
+          "oklch(85% 0.006 271.0)",
+          "oklch(95% 0.006 271.0)"
+        ]
+      },
+      "thesis-band": {
+        "role": "neutral",
+        "displayName": "Thesis Band",
+        "canonical": "#0b0c0e",
+        "tonalRamp": [
+          "oklch(15% 0.005 264.4)",
+          "oklch(26% 0.005 264.4)",
+          "oklch(38% 0.005 264.4)",
+          "oklch(50% 0.005 264.4)",
+          "oklch(62% 0.005 264.4)",
+          "oklch(74% 0.005 264.4)",
+          "oklch(85% 0.005 264.4)",
+          "oklch(95% 0.005 264.4)"
+        ]
+      },
+      "footer-ground": {
+        "role": "neutral",
+        "displayName": "Footer Ground",
+        "canonical": "#0a0a0c",
+        "tonalRamp": [
+          "oklch(15% 0.004 285.9)",
+          "oklch(26% 0.004 285.9)",
+          "oklch(38% 0.004 285.9)",
+          "oklch(50% 0.004 285.9)",
+          "oklch(62% 0.004 285.9)",
+          "oklch(74% 0.004 285.9)",
+          "oklch(85% 0.004 285.9)",
+          "oklch(95% 0.004 285.9)"
+        ]
+      },
+      "placard-black": {
+        "role": "neutral",
+        "displayName": "Placard Black",
+        "canonical": "#0b0b0c",
+        "tonalRamp": [
+          "oklch(15% 0.002 286.1)",
+          "oklch(26% 0.002 286.1)",
+          "oklch(38% 0.002 286.1)",
+          "oklch(50% 0.002 286.1)",
+          "oklch(62% 0.002 286.1)",
+          "oklch(74% 0.002 286.1)",
+          "oklch(85% 0.002 286.1)",
+          "oklch(95% 0.002 286.1)"
+        ]
+      },
+      "moulding": {
+        "role": "neutral",
+        "displayName": "Moulding",
+        "canonical": "#0a0a0b",
+        "tonalRamp": [
+          "oklch(15% 0.002 286.1)",
+          "oklch(26% 0.002 286.1)",
+          "oklch(38% 0.002 286.1)",
+          "oklch(50% 0.002 286.1)",
+          "oklch(62% 0.002 286.1)",
+          "oklch(74% 0.002 286.1)",
+          "oklch(85% 0.002 286.1)",
+          "oklch(95% 0.002 286.1)"
+        ]
+      },
+      "mat": {
+        "role": "neutral",
+        "displayName": "Mat",
+        "canonical": "#1d1c1a",
+        "tonalRamp": [
+          "oklch(15% 0.004 84.6)",
+          "oklch(26% 0.004 84.6)",
+          "oklch(38% 0.004 84.6)",
+          "oklch(50% 0.004 84.6)",
+          "oklch(62% 0.004 84.6)",
+          "oklch(74% 0.004 84.6)",
+          "oklch(85% 0.004 84.6)",
+          "oklch(95% 0.004 84.6)"
+        ]
+      },
+      "frame-ground": {
+        "role": "neutral",
+        "displayName": "Frame Ground",
+        "canonical": "#111116",
+        "tonalRamp": [
+          "oklch(15% 0.010 285.3)",
+          "oklch(26% 0.010 285.3)",
+          "oklch(38% 0.010 285.3)",
+          "oklch(50% 0.010 285.3)",
+          "oklch(62% 0.010 285.3)",
+          "oklch(74% 0.010 285.3)",
+          "oklch(85% 0.010 285.3)",
+          "oklch(95% 0.010 285.3)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Field",
+        "canonical": "#141417",
+        "tonalRamp": [
+          "oklch(15% 0.006 285.8)",
+          "oklch(26% 0.006 285.8)",
+          "oklch(38% 0.006 285.8)",
+          "oklch(50% 0.006 285.8)",
+          "oklch(62% 0.006 285.8)",
+          "oklch(74% 0.006 285.8)",
+          "oklch(85% 0.006 285.8)",
+          "oklch(95% 0.006 285.8)"
+        ]
+      },
+      "field-focus": {
+        "role": "neutral",
+        "displayName": "Field Focus",
+        "canonical": "#18181b",
+        "tonalRamp": [
+          "oklch(15% 0.006 285.9)",
+          "oklch(26% 0.006 285.9)",
+          "oklch(38% 0.006 285.9)",
+          "oklch(50% 0.006 285.9)",
+          "oklch(62% 0.006 285.9)",
+          "oklch(74% 0.006 285.9)",
+          "oklch(85% 0.006 285.9)",
+          "oklch(95% 0.006 285.9)"
+        ]
+      },
+      "code-ground": {
+        "role": "neutral",
+        "displayName": "Code Ground",
+        "canonical": "#16161a",
+        "tonalRamp": [
+          "oklch(15% 0.008 285.7)",
+          "oklch(26% 0.008 285.7)",
+          "oklch(38% 0.008 285.7)",
+          "oklch(50% 0.008 285.7)",
+          "oklch(62% 0.008 285.7)",
+          "oklch(74% 0.008 285.7)",
+          "oklch(85% 0.008 285.7)",
+          "oklch(95% 0.008 285.7)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Text",
+        "canonical": "#f7f7f6",
+        "tonalRamp": [
+          "oklch(15% 0.001 106.4)",
+          "oklch(26% 0.001 106.4)",
+          "oklch(38% 0.001 106.4)",
+          "oklch(50% 0.001 106.4)",
+          "oklch(62% 0.001 106.4)",
+          "oklch(74% 0.001 106.4)",
+          "oklch(85% 0.001 106.4)",
+          "oklch(95% 0.001 106.4)"
+        ]
+      },
+      "text-prose": {
+        "role": "neutral",
+        "displayName": "Text Prose",
+        "canonical": "#d8d6d2",
+        "tonalRamp": [
+          "oklch(15% 0.006 84.6)",
+          "oklch(26% 0.006 84.6)",
+          "oklch(38% 0.006 84.6)",
+          "oklch(50% 0.006 84.6)",
+          "oklch(62% 0.006 84.6)",
+          "oklch(74% 0.006 84.6)",
+          "oklch(85% 0.006 84.6)",
+          "oklch(95% 0.006 84.6)"
+        ]
+      },
+      "text-soft": {
+        "role": "neutral",
+        "displayName": "Text Soft",
+        "canonical": "#cacaca",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(38% 0.000 89.9)",
+          "oklch(50% 0.000 89.9)",
+          "oklch(62% 0.000 89.9)",
+          "oklch(74% 0.000 89.9)",
+          "oklch(85% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Text Muted",
+        "canonical": "#8f8e8b",
+        "tonalRamp": [
+          "oklch(15% 0.005 91.5)",
+          "oklch(26% 0.005 91.5)",
+          "oklch(38% 0.005 91.5)",
+          "oklch(50% 0.005 91.5)",
+          "oklch(62% 0.005 91.5)",
+          "oklch(74% 0.005 91.5)",
+          "oklch(85% 0.005 91.5)",
+          "oklch(95% 0.005 91.5)"
+        ]
+      },
+      "text-placeholder": {
+        "role": "neutral",
+        "displayName": "Text Placeholder",
+        "canonical": "#6f6e6b",
+        "tonalRamp": [
+          "oklch(15% 0.005 91.5)",
+          "oklch(26% 0.005 91.5)",
+          "oklch(38% 0.005 91.5)",
+          "oklch(50% 0.005 91.5)",
+          "oklch(62% 0.005 91.5)",
+          "oklch(74% 0.005 91.5)",
+          "oklch(85% 0.005 91.5)",
+          "oklch(95% 0.005 91.5)"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Error",
+        "canonical": "#ff8a8a",
+        "tonalRamp": [
+          "oklch(15% 0.142 20.9)",
+          "oklch(26% 0.142 20.9)",
+          "oklch(38% 0.142 20.9)",
+          "oklch(50% 0.142 20.9)",
+          "oklch(62% 0.142 20.9)",
+          "oklch(74% 0.142 20.9)",
+          "oklch(85% 0.142 20.9)",
+          "oklch(95% 0.142 20.9)"
+        ]
+      },
+      "basswood": {
+        "role": "secondary",
+        "displayName": "Basswood",
+        "canonical": "#c9a57a",
+        "tonalRamp": [
+          "oklch(15% 0.072 71.3)",
+          "oklch(26% 0.072 71.3)",
+          "oklch(38% 0.072 71.3)",
+          "oklch(50% 0.072 71.3)",
+          "oklch(62% 0.072 71.3)",
+          "oklch(74% 0.072 71.3)",
+          "oklch(85% 0.072 71.3)",
+          "oklch(95% 0.072 71.3)"
+        ]
+      },
+      "white-card": {
+        "role": "tertiary",
+        "displayName": "White Card",
+        "canonical": "#edebe7",
+        "tonalRamp": [
+          "oklch(15% 0.006 84.6)",
+          "oklch(26% 0.006 84.6)",
+          "oklch(38% 0.006 84.6)",
+          "oklch(50% 0.006 84.6)",
+          "oklch(62% 0.006 84.6)",
+          "oklch(74% 0.006 84.6)",
+          "oklch(85% 0.006 84.6)",
+          "oklch(95% 0.006 84.6)"
+        ]
+      },
+      "lamplight": {
+        "role": "secondary",
+        "displayName": "Lamplight",
+        "canonical": "#ffd2a6",
+        "tonalRamp": [
+          "oklch(15% 0.077 65.9)",
+          "oklch(26% 0.077 65.9)",
+          "oklch(38% 0.077 65.9)",
+          "oklch(50% 0.077 65.9)",
+          "oklch(62% 0.077 65.9)",
+          "oklch(74% 0.077 65.9)",
+          "oklch(85% 0.077 65.9)",
+          "oklch(95% 0.077 65.9)"
+        ]
+      },
+      "plinth-stone": {
+        "role": "neutral",
+        "displayName": "Plinth Stone (scene)",
+        "canonical": "#0d0c0b",
+        "tonalRamp": [
+          "oklch(15% 0.003 67.6)",
+          "oklch(26% 0.003 67.6)",
+          "oklch(38% 0.003 67.6)",
+          "oklch(50% 0.003 67.6)",
+          "oklch(62% 0.003 67.6)",
+          "oklch(74% 0.003 67.6)",
+          "oklch(85% 0.003 67.6)",
+          "oklch(95% 0.003 67.6)"
+        ]
+      },
+      "scene-floor": {
+        "role": "neutral",
+        "displayName": "Scene Floor (scene)",
+        "canonical": "#6a5240",
+        "tonalRamp": [
+          "oklch(15% 0.043 58.3)",
+          "oklch(26% 0.043 58.3)",
+          "oklch(38% 0.043 58.3)",
+          "oklch(50% 0.043 58.3)",
+          "oklch(62% 0.043 58.3)",
+          "oklch(74% 0.043 58.3)",
+          "oklch(85% 0.043 58.3)",
+          "oklch(95% 0.043 58.3)"
+        ]
+      },
+      "scene-wall": {
+        "role": "neutral",
+        "displayName": "Scene Wall (scene)",
+        "canonical": "#1e1b18",
+        "tonalRamp": [
+          "oklch(15% 0.007 67.4)",
+          "oklch(26% 0.007 67.4)",
+          "oklch(38% 0.007 67.4)",
+          "oklch(50% 0.007 67.4)",
+          "oklch(62% 0.007 67.4)",
+          "oklch(74% 0.007 67.4)",
+          "oklch(85% 0.007 67.4)",
+          "oklch(95% 0.007 67.4)"
+        ]
+      },
+      "hairline-rule": {
+        "role": "neutral",
+        "displayName": "Hairline Rule",
+        "canonical": "rgb(255 255 255 / 0.12)"
+      },
+      "hairline-row": {
+        "role": "neutral",
+        "displayName": "Hairline Row",
+        "canonical": "rgb(255 255 255 / 0.08)"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline lines and the thesis statement only."
+      },
+      "page-title": {
+        "displayName": "Page Title",
+        "purpose": "Inner-page H1: case studies, pricing, landing, blog."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Homepage section titles, max 18ch, balanced."
+      },
+      "headline-inner": {
+        "displayName": "Headline Inner",
+        "purpose": "Section H2 on inner pages."
+      },
+      "stat": {
+        "displayName": "Stat",
+        "purpose": "Proof numbers, tabular figures."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Exhibit, offer and list-row names."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Paragraph under a headline, text-soft, 54-60ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descriptions and list items."
+      },
+      "prose": {
+        "displayName": "Prose",
+        "purpose": "Long-form reading at 68ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase data labels: dt, footer column titles, table heads. Never above a headline."
+      },
+      "placard-title": {
+        "displayName": "Placard Title",
+        "purpose": "Uppercase condensed italic project names on plinth placards."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Condensed italic captions, step numbers, tags, metadata."
+      }
+    },
+    "shadows": [
+      {
+        "name": "exhibit-frame",
+        "value": "inset 0 0 0 6px #1d1c1a, 0 34px 70px rgb(0 0 0 / 0.65), 0 -14px 40px -18px rgb(255 214 170 / 0.32)",
+        "purpose": "Framed screenshot at rest: mat, long drop shadow, warm top bounce."
+      },
+      {
+        "name": "exhibit-frame-hover",
+        "value": "inset 0 0 0 6px #1d1c1a, 0 46px 90px rgb(0 0 0 / 0.7), 0 -18px 50px -18px rgb(255 214 170 / 0.42)",
+        "purpose": "Framed screenshot lifted on hover."
+      },
+      {
+        "name": "showcase-frame",
+        "value": "inset 0 0 0 6px #1d1c1a, 0 50px 120px rgb(0 0 0 / 0.65), 0 -20px 60px -24px rgb(255 214 170 / 0.3)",
+        "purpose": "Case-study hero showcase."
+      },
+      {
+        "name": "small-frame",
+        "value": "inset 0 0 0 5px #1d1c1a, 0 30px 70px rgb(0 0 0 / 0.6), 0 -14px 40px -18px rgb(255 214 170 / 0.3)",
+        "purpose": "Landing exhibits; in-body case images drop the warm bounce."
+      },
+      {
+        "name": "plinth-placard",
+        "value": "0 6px 18px rgb(0 0 0 / 0.55)",
+        "purpose": "3D plinth labels."
+      },
+      {
+        "name": "lit-placard",
+        "value": "0 30px 80px rgb(0 0 0 / 0.55)",
+        "purpose": "Contact form placard."
+      },
+      {
+        "name": "resting-placard",
+        "value": "0 24px 60px rgb(0 0 0 / 0.45)",
+        "purpose": "Package cards."
+      },
+      {
+        "name": "door",
+        "value": "0 10px 30px rgb(0 0 0 / 0.4)",
+        "purpose": "Landing-page door placards."
+      },
+      {
+        "name": "consent",
+        "value": "0 20px 60px rgb(0 0 0 / 0.6)",
+        "purpose": "Fixed consent placard."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state",
+        "value": "160ms ease-out",
+        "purpose": "Colour, border and background state changes."
+      },
+      {
+        "name": "ease-lift",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Lifts, slides and reveals at 240-320ms (frames, doors, consent rise, menu reveal 280ms, row slide 260ms)."
+      },
+      {
+        "name": "crossfade",
+        "value": "600ms ease-out",
+        "purpose": "Showcase image crossfade; work-index preview fades 360ms with a 1.03 to 1 scale over 600ms."
+      },
+      {
+        "name": "arrow-gap",
+        "value": "gap 8px to 12px, 200ms ease-out",
+        "purpose": "Arrow-link hover."
+      },
+      {
+        "name": "scene-arrival",
+        "value": "1.6s ease-out-cubic",
+        "purpose": "3D maquette settles once on load (rises 0.35 and scales 0.94 to 1)."
+      },
+      {
+        "name": "scene-lean",
+        "value": "smoothstep(scrollY / innerHeight), damped lerp k = 1 - exp(-6 delta)",
+        "purpose": "Model leans toward the visitor as the hero scrolls away; orbit disabled once scrolled; frozen under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "rows-stack",
+        "value": "560px"
+      },
+      {
+        "name": "small",
+        "value": "640px"
+      },
+      {
+        "name": "thesis-figure",
+        "value": "760px"
+      },
+      {
+        "name": "nav-collapse",
+        "value": "900px"
+      },
+      {
+        "name": "layout-collapse",
+        "value": "960px"
+      },
+      {
+        "name": "portrait-hero",
+        "value": "max-aspect-ratio: 1/1"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one coral action per view: Start a Project, Send, Book. Square, white text, optional arrow.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Start a Project <svg width=\"16\" height=\"16\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 10h11M11 5.5 15.5 10 11 14.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 15px 28px; background: var(--coral, #ff4d4d); color: #fff; font-family: var(--font-body, 'Golos Text', ui-sans-serif, system-ui, sans-serif); font-size: 16px; font-weight: 500; text-decoration: none; border-radius: 0; transition: background-color 160ms ease-out, transform 160ms ease-out; } .ds-btn-primary:hover { background: var(--coral-press, #f03a3a); } .ds-btn-primary:active { transform: translateY(1px); } .ds-btn-primary:focus-visible { outline: 2px solid var(--coral, #ff4d4d); outline-offset: 4px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action on a placard (package choice, consent). Hairline border that turns coral.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Choose this package <svg width=\"16\" height=\"16\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 10h11M11 5.5 15.5 10 11 14.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: space-between; gap: 8px; padding: 13px 16px; border: 1px solid rgb(255 255 255 / 0.18); background: transparent; color: var(--text, #f7f7f6); font-family: var(--font-body, 'Golos Text', ui-sans-serif, system-ui, sans-serif); font-size: 16px; font-weight: 500; text-decoration: none; border-radius: 0; transition: border-color 160ms ease-out, color 160ms ease-out; } .ds-btn-outline:hover { border-color: var(--coral, #ff4d4d); color: var(--coral, #ff4d4d); } .ds-btn-outline:focus-visible { outline: 2px solid var(--coral, #ff4d4d); outline-offset: 4px; }"
+    },
+    {
+      "name": "Arrow Link",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Tertiary navigation link: no underline, arrow gap widens and text turns coral on hover.",
+      "html": "<a class=\"ds-arrow-link\" href=\"#\">All work <svg width=\"16\" height=\"16\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 10h11M11 5.5 15.5 10 11 14.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-arrow-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text, #f7f7f6); font-family: var(--font-body, 'Golos Text', ui-sans-serif, system-ui, sans-serif); font-size: 16px; font-weight: 500; text-decoration: none; transition: color 160ms ease-out, gap 200ms ease-out; } .ds-arrow-link:hover { gap: 12px; color: var(--coral, #ff4d4d); } .ds-arrow-link:focus-visible { outline: 2px solid var(--coral, #ff4d4d); outline-offset: 4px; }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Square field on the contact placard; coral border on focus and on invalid.",
+      "html": "<label class=\"ds-field\">Email <input type=\"email\" placeholder=\"you@company.com\"></label>",
+      "css": ".ds-field { display: grid; gap: 8px; color: var(--text, #f7f7f6); font-family: var(--font-body, 'Golos Text', ui-sans-serif, system-ui, sans-serif); font-size: 14px; font-weight: 500; } .ds-field input { width: 100%; padding: 13px 14px; border: 1px solid rgb(255 255 255 / 0.12); border-radius: 0; background: #141417; color: var(--text, #f7f7f6); font: inherit; font-size: 16px; font-weight: 400; transition: border-color 160ms ease-out, background-color 160ms ease-out; } .ds-field input::placeholder { color: #6f6e6b; } .ds-field input:hover { border-color: rgb(255 255 255 / 0.22); } .ds-field input:focus-visible { outline: none; border-color: var(--coral, #ff4d4d); background: #18181b; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Wordmark with coral dot, centred nav, locale switch and compact coral CTA.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-mark\" href=\"#\">LumiVerse<span class=\"ds-nav-dot\"></span></a><div class=\"ds-nav-links\"><a href=\"#\">Work</a><a href=\"#\">Services</a><a href=\"#\">Research</a><a href=\"#\">Studio</a><a href=\"#\">Contact</a></div><div class=\"ds-nav-end\"><span class=\"ds-nav-locale\"><a href=\"#\" aria-current=\"true\">EN</a> / <a href=\"#\">HR</a></span><a class=\"ds-nav-cta\" href=\"#\">Start a Project</a></div></nav>",
+      "css": ".ds-nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 20px 32px; background: rgb(14 15 18 / 0.86); border-bottom: 1px solid rgb(255 255 255 / 0.06); color: var(--text, #f7f7f6); font-family: var(--font-body, 'Golos Text', ui-sans-serif, system-ui, sans-serif); } .ds-nav a { color: inherit; text-decoration: none; transition: color 160ms ease-out; } .ds-nav-mark { justify-self: start; font-size: 24px; font-weight: 600; letter-spacing: -0.02em; } .ds-nav-dot { display: inline-block; width: 0.34em; height: 0.34em; margin-left: 0.3em; border-radius: 50%; background: var(--coral, #ff4d4d); } .ds-nav-links { display: flex; gap: 36px; font-size: 15px; font-weight: 500; } .ds-nav-links a:hover { color: var(--coral, #ff4d4d); } .ds-nav-end { display: flex; align-items: center; justify-self: end; gap: 24px; } .ds-nav-locale { color: #8f8e8b; font-size: 14px; } .ds-nav-locale a[aria-current] { color: var(--text, #f7f7f6); } .ds-nav-cta { padding: 8px 12px; background: var(--coral, #ff4d4d); color: #fff !important; font-size: 13px; font-weight: 500; transition: background-color 160ms ease-out; } .ds-nav-cta:hover { background: var(--coral-press, #f03a3a); } .ds-nav a:focus-visible { outline: 2px solid var(--coral, #ff4d4d); outline-offset: 4px; }"
+    },
+    {
+      "name": "Plinth Placard",
+      "kind": "custom",
+      "refersTo": "plinth-placard",
+      "description": "Black museum label: condensed italic uppercase title over an italic caption.",
+      "html": "<div class=\"ds-placard\"><span class=\"ds-placard-title\">Moj Kolega</span><span class=\"ds-placard-caption\">AI employee for webshops</span></div>",
+      "css": ".ds-placard { display: inline-block; min-width: 210px; padding: 10px 16px 12px; background: #0b0b0c; color: var(--text, #f7f7f6); box-shadow: 0 6px 18px rgb(0 0 0 / 0.55); font-family: 'Barlow Condensed', var(--font-golos, 'Golos Text'), sans-serif; font-style: italic; white-space: nowrap; } .ds-placard-title { display: block; font-size: 19px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; } .ds-placard-caption { display: block; margin-top: 2px; color: #cacaca; font-size: 15px; font-weight: 500; }"
+    },
+    {
+      "name": "Package Placard",
+      "kind": "card",
+      "refersTo": "placard",
+      "description": "A package or plan as a black placard: name, floor price, basswood-dashed includes.",
+      "html": "<article class=\"ds-pkg\"><h3>AI Prototype</h3><p class=\"ds-pkg-sum\">A working prototype on your data in two weeks.</p><p class=\"ds-pkg-price\"><span>€4,900</span><small>fixed</small></p><ul><li>Scoping workshop</li><li>Working prototype</li><li>Handover notes</li></ul></article>",
+      "css": ".ds-pkg { display: flex; flex-direction: column; padding: 28px; background: #0b0b0c; box-shadow: 0 24px 60px rgb(0 0 0 / 0.45); color: var(--text, #f7f7f6); font-family: var(--font-body, 'Golos Text', ui-sans-serif, system-ui, sans-serif); border-radius: 0; } .ds-pkg h3 { margin: 0; font-size: 23px; font-weight: 700; letter-spacing: -0.02em; } .ds-pkg-sum { margin: 8px 0 0; color: #cacaca; font-size: 15px; line-height: 1.5; } .ds-pkg-price { display: flex; align-items: baseline; gap: 10px; margin: 22px 0 0; } .ds-pkg-price span { font-size: 40px; font-weight: 700; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; } .ds-pkg-price small { color: #8f8e8b; font-size: 14px; } .ds-pkg ul { display: grid; gap: 9px; margin: 22px 0 0; padding: 18px 0 0; border-top: 1px solid rgb(255 255 255 / 0.1); list-style: none; font-size: 15px; line-height: 1.45; } .ds-pkg li { position: relative; padding-left: 20px; } .ds-pkg li::before { content: ''; position: absolute; left: 0; top: 0.7em; width: 10px; height: 1px; background: var(--basswood, #c9a57a); }"
+    },
+    {
+      "name": "Framed Exhibit",
+      "kind": "custom",
+      "refersTo": "exhibit-frame",
+      "description": "A real screenshot hung as a framed print with a wall label; lifts on hover.",
+      "html": "<a class=\"ds-exhibit\" href=\"#\"><span class=\"ds-exhibit-frame\"><span class=\"ds-exhibit-shot\"></span></span><span class=\"ds-exhibit-name\">Bridj</span><span class=\"ds-exhibit-kind\">SaaS rebuild</span></a>",
+      "css": ".ds-exhibit { display: grid; gap: 6px; max-width: 420px; color: var(--text, #f7f7f6); font-family: var(--font-body, 'Golos Text', ui-sans-serif, system-ui, sans-serif); text-decoration: none; } .ds-exhibit-frame { display: block; aspect-ratio: 16 / 10; overflow: hidden; margin-bottom: 14px; border: 14px solid #0a0a0b; outline: 1px solid rgb(255 255 255 / 0.07); background: #111116; box-shadow: inset 0 0 0 6px #1d1c1a, 0 34px 70px rgb(0 0 0 / 0.65), 0 -14px 40px -18px rgb(255 214 170 / 0.32); transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 320ms ease-out; } .ds-exhibit-shot { display: block; height: 100%; background: linear-gradient(180deg, #2a2a30, #18181c); } .ds-exhibit:hover .ds-exhibit-frame { transform: translateY(-6px); box-shadow: inset 0 0 0 6px #1d1c1a, 0 46px 90px rgb(0 0 0 / 0.7), 0 -18px 50px -18px rgb(255 214 170 / 0.42); } .ds-exhibit-name { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; transition: color 160ms ease-out; } .ds-exhibit:hover .ds-exhibit-name { color: var(--coral, #ff4d4d); } .ds-exhibit-kind { color: #8f8e8b; font-size: 15px; } .ds-exhibit:focus-visible { outline: 2px solid var(--coral, #ff4d4d); outline-offset: 4px; }"
+    },
+    {
+      "name": "Hairline List Row",
+      "kind": "custom",
+      "refersTo": "list-row",
+      "description": "Work index row: name and kind beside the proving fact, divided by hairlines; slides and warms when active.",
+      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\"><span class=\"ds-row-name\">Lider Translations</span><span class=\"ds-row-kind\">Newsroom · 10 languages</span><span class=\"ds-row-fact\">About 1.4M articles across 11 sites</span></a></li><li><a class=\"ds-row\" href=\"#\"><span class=\"ds-row-name\">Barcoder</span><span class=\"ds-row-kind\">Standards platform</span><span class=\"ds-row-fact\">463 standards, 197 countries</span></a></li></ul>",
+      "css": ".ds-rows { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgb(255 255 255 / 0.1); font-family: var(--font-body, 'Golos Text', ui-sans-serif, system-ui, sans-serif); } .ds-row { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr); grid-template-areas: 'name fact' 'kind fact'; gap: 4px 24px; padding: 20px 4px; border-bottom: 1px solid rgb(255 255 255 / 0.1); color: var(--text, #f7f7f6); text-decoration: none; transition: background-color 200ms ease-out; } .ds-row > span { transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-row:hover, .ds-row:focus-visible { outline: none; background: linear-gradient(90deg, rgb(255 210 166 / 0.06), transparent 70%); } .ds-row:hover > span, .ds-row:focus-visible > span { transform: translateX(12px); } .ds-row-name { grid-area: name; font-size: 21px; font-weight: 600; letter-spacing: -0.015em; } .ds-row-kind { grid-area: kind; color: #8f8e8b; font-size: 13px; } .ds-row-fact { grid-area: fact; align-self: center; color: #cacaca; font-size: 16px; line-height: 1.4; font-variant-numeric: tabular-nums; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Scale Model Gallery",
+    "overview": "Every shipped project is a white scale model standing on one plinth in a dark gallery, under a single warm raking spotlight. The site is that room. The walls are near-black (gallery), the light is warm (lamplight, used only as a soft wash from above), and the models are white card and basswood. Tiny coral human figures stand among the models: they are the people each project amplifies, and coral belongs to them, to the logo dot and to the action the visitor should take next.\n\nThe homepage hero is a real-time React Three Fiber maquette (`site/src/components/stage/Scene.tsx`). Three models stand on a near-black plinth over a warm basswood-brown floor. Each one shows its real product screenshot as a lit screen, and black museum placards hang on the plinth front. Everything below the hero borrows from that room. Screenshots hang as framed prints. Labels and offers sit on black placards. Lists are wall labels divided by hairlines instead of boxed cards. Headlines are heavy white grotesk set at monumental scale with tight tracking. Density is low and the rhythm generous: sections breathe at up to 184px, and the copy rarely runs past 60–68ch.\n\nThe world refuses the AI-agency default: a dark field with neon glow, a bento grid, glass cards and gradient text. It also refuses showreel-over-video. MOTION.md, style-guide.md and the visual parts of writing-guide.md at the repo root describe the **previous** world (Inter, coral gradient text, glassmorphic cards, a dot-grid shader, a cyan secondary). That world has been replaced, and those files do not govern v3 visuals. Voice and copy rules in writing-guide.md still apply: active voice, specific numbers, no fluff, action-led CTAs, and its word-choice and sentence-length guidance. Two of its sections do not carry over: \"Section Labels\" (small uppercase labels above headlines) and the hero rule that the \"middle word gets gradient treatment\".",
+    "keyCharacteristics": [
+      "One dark room with one warm light. All atmosphere comes from a lamplight wash from above.",
+      "Coral marks the human figures, the logo dot and actions, and nothing decorative.",
+      "Black placards are the labelling device, with a condensed italic caption face for their titles.",
+      "Screenshots are always framed exhibits: a black moulding, a dark mat and a warm top bounce.",
+      "Hairline-divided lists, not card boxes.",
+      "Square corners everywhere. Only the logo dot and avatars are round.",
+      "Heavy white grotesk headlines with negative tracking and leading under 1."
+    ],
+    "rules": [
+      {
+        "name": "The Coral Is Human Rule",
+        "body": "Coral fills only the human figures, the logo dot and actions, and it colours only interaction states (hover, focus, selection, current). It never appears in a gradient, a glow, a background wash, a border ornament or an illustration other than the figures.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Warm Light Rule",
+        "body": "All atmosphere is one warm light from above: radial washes of lamplight at 0.16 alpha or less, anchored at the top edge. Coloured glows, neon and cool light in the interface are out. The scene's single cool fill (`#9aa6c8` at 0.5) is a bounce panel inside the 3D environment only.",
+        "section": "colors"
+      },
+      {
+        "name": "The Monumental Grotesk Rule",
+        "body": "Headlines are Golos Text 700 with negative tracking (−0.03 to −0.04em) and leading under 1. Light or regular weights never set a headline.",
+        "section": "typography"
+      },
+      {
+        "name": "The Caption Face Rule",
+        "body": "Barlow Condensed italic labels things: placards, sequence numbers, tags and metadata. It never sets a headline, body copy or a button.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lit From Above Rule",
+        "body": "Every cast shadow falls downward (positive y, blur at least 18px), and any warm light sits on the top edge. Coloured or upward shadows are not used.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** put every real screenshot in a framed exhibit (moulding, mat, warm top bounce). Never show it as a bare image.",
+      "**Do** use placard-black placards for labels, offers, forms and stat bands, with square corners and a downward shadow.",
+      "**Do** divide lists with hairlines (`hairline-rule` on top, `hairline-row` between rows) and start included items with a 10–12px basswood dash.",
+      "**Do** set headlines in Golos Text 700 with −0.03 to −0.04em tracking and leading of 0.82–0.98.",
+      "**Do** keep coral to the figures, the logo dot, action fills and interaction states, with coral-press for hover.",
+      "**Do** light sections only with lamplight radial washes from the top edge at 0.16 alpha or less.",
+      "**Do** use 160ms ease-out for colour changes and cubic-bezier(0.22, 1, 0.36, 1) at 240–320ms for lifts and reveals, and honour `prefers-reduced-motion`."
+    ],
+    "donts": [
+      "**Don't** put an eyebrow or kicker (a small uppercase or italic category line) above a headline. The writing-guide's \"Section Labels\" pattern belongs to the previous world.",
+      "**Don't** use gradient text, glassmorphic cards, neon or coloured glows, bento grids or the dot-grid shader from the legacy style-guide.md and MOTION.md.",
+      "**Don't** round corners on buttons, placards, frames or inputs.",
+      "**Don't** box list items into individual cards when a hairline list will do.",
+      "**Don't** use coral for decoration, backgrounds, gradients or illustration other than the human figures.",
+      "**Don't** use white card or basswood as large interface fills. They are model materials, and basswood appears in the interface only as small ornament.",
+      "**Don't** use glowing brains, robots or circuit-board imagery."
+    ]
+  }
+}

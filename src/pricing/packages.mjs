@@ -111,7 +111,7 @@ export const packages = [
         "Hands-on development when it counts",
         "A flat monthly rate, no timesheets"
       ],
-      proof: "Bridj: tech lead on a 17-service platform for over a year",
+      proof: "Bridj: tech lead on a 17-service platform for over a year, and still today",
       cta: "Talk About Your Team"
     },
     hr: {
@@ -124,7 +124,7 @@ export const packages = [
         "Razvoj vlastitim rukama kad je najvažnije",
         "Fiksna mjesečna cijena, bez satnica"
       ],
-      proof: "Bridj: više od godinu dana tech lead platforme od 17 servisa",
+      proof: "Bridj: više od godinu dana tech lead platforme od 17 servisa, i danas",
       cta: "Razgovarajmo o timu"
     }
   },
@@ -206,7 +206,7 @@ export const packages = [
         "Automated checks on every article before it publishes",
         "A human signs off before anything goes live"
       ],
-      proof: "MOJ KRAJ: 9 automated checks on every article, 1 operator",
+      proof: "MOJ KRAJ.: 8 checks every draft must pass, 1 operator",
       cta: "Ask About a Newsroom",
       priceNote: "AI token and hosting usage billed separately, at cost."
     },
@@ -219,7 +219,7 @@ export const packages = [
         "Automatske provjere svakog članka prije objave",
         "Čovjek odobrava prije nego što išta izađe"
       ],
-      proof: "MOJ KRAJ: 9 automatskih provjera svakog članka, 1 operater",
+      proof: "MOJ KRAJ.: 8 provjera koje svaki nacrt mora proći, 1 operater",
       cta: "Pitajte za redakciju",
       priceNote: "Potrošnja AI tokena i hosting naplaćuju se zasebno, po stvarnom trošku."
     }

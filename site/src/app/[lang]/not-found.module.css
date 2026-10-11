@@ -1,0 +1,126 @@
+.page {
+  position: relative;
+  display: grid;
+  justify-items: start;
+  min-height: 78svh;
+  padding: clamp(64px, 9vw, 140px) var(--gutter) clamp(64px, 8vw, 120px);
+  max-width: 1440px;
+  margin: 0 auto;
+  isolation: isolate;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(ellipse 50% 55% at 70% 0%, rgb(255 210 166 / 0.1), transparent 70%);
+}
+
+.code {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: clamp(96px, 16vw, 240px);
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+}
+
+.title {
+  margin: 12px 0 0;
+  font-size: clamp(40px, 5.6vw, 88px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
+.body {
+  margin: 20px 0 0;
+  max-width: 44ch;
+  color: var(--text-soft);
+  font-size: clamp(17px, 1.3vw, 20px);
+  line-height: 1.5;
+}
+
+.plinth {
+  position: relative;
+  width: min(420px, 80vw);
+  height: 18px;
+  margin: 72px 0 40px;
+  background: linear-gradient(to bottom, var(--basswood), #a7865f);
+  box-shadow: 0 22px 0 -4px #0d0c0b, 0 40px 60px rgb(0 0 0 / 0.5);
+}
+
+.figure {
+  position: absolute;
+  left: 62%;
+  bottom: 100%;
+  display: flex;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 28px;
+  font-size: 16px;
+}
+
+.links a {
+  text-underline-offset: 0.3em;
+}
+
+.links a:hover {
+  color: var(--coral);
+}
+
+.home {
+  padding: 14px 26px;
+  background: var(--action);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.home:hover {
+  background: var(--coral-press);
+  color: #fff !important;
+}
+
+.flagships {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 32px;
+  width: 100%;
+  max-width: 900px;
+  margin: 56px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flagships a {
+  display: grid;
+  gap: 4px;
+  padding: 18px 0;
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+  text-decoration: none;
+}
+
+.flagships strong {
+  font-size: 20px;
+}
+
+.flagships span {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.flagships a:hover strong {
+  color: var(--coral);
+}
+
+@media (max-width: 760px) {
+  .flagships {
+    grid-template-columns: 1fr;
+  }
+}

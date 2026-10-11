@@ -1,0 +1,8 @@
+{
+  "prompt": "Desktop website homepage, first viewport, 1536x1024, for \"LumiVerse\", a senior AI product studio in Zagreb, rendered in the premium digital-agency standard. Layout: a minimal top bar on a black #0A0A0A ground with the wordmark \"LumiVerse\" (small coral dot) at left, nav \"Work  Services  Research  Studio  Contact\", \"EN / HR\", and a small white \"Start a Project\" pill at right. The hero is a full-bleed cinematic showreel video frame (blurred motion of laptop screens showing real product UIs: a webshop chat assistant, an analytics dashboard, scientific plot figures), darkened. Over it, a huge white heavy grotesk headline on two lines: \"We build / Better Humans.\" A small sub line: \"AI products and the checks that make them safe to ship.\" A white button \"Start a Project →\" and a play button labelled \"Watch reel\". Along the bottom edge, the tops of three large case-study tiles begin: \"Moj Kolega\", \"Bridj\", \"Air-laser\", each with a tiny caption. White, grey #9A9A9A, one coral #FF4D4D accent on the dot only. Crisp, legible UI text, realistic web design, no purple, no glow.\n",
+  "createdAt": "2026-10-09T18:09:56.932Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "opaque",
+  "outputFormat": "png"
+}

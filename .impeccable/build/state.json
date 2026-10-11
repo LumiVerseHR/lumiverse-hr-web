@@ -1,0 +1,323 @@
+{
+  "tool": "build-phase",
+  "version": 2,
+  "startedAt": "2026-10-09T18:20:02.940Z",
+  "comp": ".impeccable/mocks/comp-3-screens-in-model.png",
+  "direction": "4c8b5bef",
+  "breakpoint": "1536x1024",
+  "artifact": null,
+  "phase": "hero",
+  "phases": {
+    "comps": {
+      "status": "closed",
+      "openedAt": "2026-10-09T18:20:02.940Z",
+      "closedAt": "2026-10-09T18:22:12.256Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "3 comps, 1 approved",
+        "approved": ".impeccable/mocks/comp-3-screens-in-model.png",
+        "at": "2026-10-09T18:22:12.256Z"
+      },
+      "forced": null
+    },
+    "spec": {
+      "status": "closed",
+      "openedAt": "2026-10-09T18:22:12.269Z",
+      "closedAt": "2026-10-09T19:02:44.598Z",
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "14 regions, 0 plates, 11 text regions measured",
+        "at": "2026-10-09T19:02:44.598Z"
+      },
+      "forced": null
+    },
+    "plates": {
+      "status": "closed",
+      "openedAt": "2026-10-09T19:02:44.598Z",
+      "closedAt": "2026-10-09T19:02:52.920Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "no plates owed",
+        "at": "2026-10-09T19:02:52.920Z"
+      },
+      "forced": null
+    },
+    "hero": {
+      "status": "open",
+      "openedAt": "2026-10-09T19:02:52.920Z",
+      "closedAt": null,
+      "attempts": 4,
+      "notes": [],
+      "gate": {
+        "ok": false,
+        "reasons": [
+          "hero overall 61.7% < 72% (structure 43%, color 65%, detail 65%)",
+          "region locale (text) is contradicted (structure 3%, detail added 14%): the composition of this text region differs from the comp; re-derive it from the spec box",
+          "region nav-cta (control) is contradicted (structure 39%, detail added 17%): this control does not read as the comp's: rebuild its chrome from the crop (border, fill, radius, chevron or arrow, label size) rather than from a component default",
+          "region placard-mojkolega (text) is contradicted (structure 21%, detail added 27%): the composition of this text region differs from the comp; re-derive it from the spec box",
+          "region placard-bridj (text) is contradicted (structure 19%, detail added 42%): the composition of this text region differs from the comp; re-derive it from the spec box",
+          "region placard-airlaser (text) is contradicted (structure 20%, detail added 14%): the composition of this text region differs from the comp; re-derive it from the spec box",
+          "region orbit-hint (text) is contradicted (structure 65%, detail added 13%): the composition of this text region differs from the comp; re-derive it from the spec box",
+          "READINGS, each one CSS edit (3):",
+          "text placard-mojkolega: ink is #0a0808 in the build, #6a503f in the comp; use the comp's colour",
+          "text placard-bridj: ink is #e1c292 in the build, #956f55 in the comp; use the comp's colour",
+          "text placard-airlaser: ink is #f1d3a8 in the build, #735845 in the comp; use the comp's colour"
+        ],
+        "summary": "hero 62% (drift)",
+        "score": 0.6165,
+        "verdict": "drift",
+        "report": ".impeccable/review/diff/hero/report.json",
+        "sideBySide": "/Users/tjauk/LumiVerseHR/lumiverse-hr-web/.impeccable/review/diff/hero/side-by-side.png",
+        "worst": [
+          "locale contradicted 15%",
+          "placard-mojkolega contradicted 27%",
+          "placard-airlaser contradicted 34%"
+        ],
+        "worstIds": [
+          "locale",
+          "placard-mojkolega",
+          "placard-airlaser"
+        ],
+        "worstCrops": [
+          {
+            "id": "locale",
+            "verdict": "contradicted",
+            "score": {
+              "overall": 0.152,
+              "structure": 0.029,
+              "color": 0.0758,
+              "colorIntersection": 0.001,
+              "paletteMatch": 0.1161,
+              "detail": 0.3905,
+              "detailRaw": 0.4582,
+              "detailAdded": 0.1354,
+              "bands": 0.6
+            },
+            "file": ".impeccable/review/diff/hero/regions/locale.png"
+          },
+          {
+            "id": "placard-mojkolega",
+            "verdict": "contradicted",
+            "score": {
+              "overall": 0.2688,
+              "structure": 0.2091,
+              "color": 0.5873,
+              "colorIntersection": 0.2904,
+              "paletteMatch": 0.7471,
+              "detail": 0.1159,
+              "detailRaw": 0.2513,
+              "detailAdded": 0.2708,
+              "bands": 0
+            },
+            "file": ".impeccable/review/diff/hero/regions/placard-mojkolega.png"
+          },
+          {
+            "id": "placard-airlaser",
+            "verdict": "contradicted",
+            "score": {
+              "overall": 0.3376,
+              "structure": 0.2045,
+              "color": 0.5731,
+              "colorIntersection": 0.2901,
+              "paletteMatch": 0.7255,
+              "detail": 0.307,
+              "detailRaw": 0.3747,
+              "detailAdded": 0.1354,
+              "bands": 0.46
+            },
+            "file": ".impeccable/review/diff/hero/regions/placard-airlaser.png"
+          }
+        ],
+        "regionVerdicts": {
+          "wordmark": "drift",
+          "nav": "drift",
+          "locale": "contradicted",
+          "nav-cta": "contradicted",
+          "headline": "drift",
+          "subline": "drift",
+          "cta": "drift",
+          "secondary": "drift",
+          "stage": "contradicted",
+          "placard-mojkolega": "contradicted",
+          "placard-bridj": "contradicted",
+          "placard-airlaser": "contradicted",
+          "scroll-hint": "drift",
+          "orbit-hint": "contradicted"
+        },
+        "at": "2026-10-09T19:11:35.306Z"
+      },
+      "forced": null,
+      "readingsSeen": {
+        "text subline: ink is #f8f8f8 in the build, #080808 in the comp; use the comp's colour": 1,
+        "text secondary: ink is #f84848 in the build, #080808 in the comp; use the comp's colour": 1,
+        "text placard-mojkolega: ink is #0d0d0f in the build, #6a503f in the comp; use the comp's colour": 1,
+        "text placard-airlaser: ink is #e3d9ce in the build, #735845 in the comp; use the comp's colour": 1,
+        "control cta: its rule sits 5px into the box in the comp and 33px in the build (+28px), so the strip is taller than the comp's; match the height, not only the position": 1,
+        "text placard-bridj: ink is #d2a571 in the build, #956f55 in the comp; use the comp's colour": 1,
+        "text placard-airlaser: ink is #e4c08a in the build, #735845 in the comp; use the comp's colour": 1,
+        "control cta: its rule sits 5px into the box in the comp and 17px in the build (+12px), so the strip is taller than the comp's; match the height, not only the position": 1,
+        "text placard-mojkolega: ink is #0a0808 in the build, #6a503f in the comp; use the comp's colour": 2,
+        "text placard-bridj: ink is #e1c292 in the build, #956f55 in the comp; use the comp's colour": 2,
+        "text placard-airlaser: ink is #f1d3a8 in the build, #735845 in the comp; use the comp's colour": 2,
+        "text scroll-hint: letter-spacing is wider than the comp's (gap 0.121 vs 0.073 of the cap height); set letter-spacing to close it by about 1px": 1,
+        "text placard-mojkolega: ink is #2d1d0d in the build, #6a503f in the comp; use the comp's colour": 1,
+        "text placard-bridj: ink is #e6c290 in the build, #956f55 in the comp; use the comp's colour": 1,
+        "text placard-airlaser: ink is #eccd9d in the build, #735845 in the comp; use the comp's colour": 1
+      },
+      "history": [
+        {
+          "at": "2026-10-09T19:06:44.186Z",
+          "score": 0.5517,
+          "worstIds": [
+            "locale",
+            "nav-cta",
+            "wordmark"
+          ],
+          "regionVerdicts": {
+            "wordmark": "missing",
+            "nav": "missing",
+            "locale": "missing",
+            "nav-cta": "missing",
+            "headline": "drift",
+            "subline": "drift",
+            "cta": "contradicted",
+            "secondary": "missing",
+            "stage": "contradicted",
+            "placard-mojkolega": "missing",
+            "placard-bridj": "contradicted",
+            "placard-airlaser": "contradicted",
+            "scroll-hint": "missing",
+            "orbit-hint": "missing"
+          },
+          "artifactHash": "ab941e5ea716"
+        },
+        {
+          "at": "2026-10-09T19:09:42.215Z",
+          "score": 0.5612,
+          "worstIds": [
+            "locale",
+            "nav-cta",
+            "placard-airlaser"
+          ],
+          "regionVerdicts": {
+            "wordmark": "contradicted",
+            "nav": "contradicted",
+            "locale": "contradicted",
+            "nav-cta": "contradicted",
+            "headline": "drift",
+            "subline": "drift",
+            "cta": "missing",
+            "secondary": "missing",
+            "stage": "contradicted",
+            "placard-mojkolega": "missing",
+            "placard-bridj": "contradicted",
+            "placard-airlaser": "contradicted",
+            "scroll-hint": "drift",
+            "orbit-hint": "contradicted"
+          },
+          "artifactHash": "ab941e5ea716"
+        },
+        {
+          "at": "2026-10-09T19:10:34.742Z",
+          "score": 0.6165,
+          "worstIds": [
+            "locale",
+            "placard-mojkolega",
+            "placard-airlaser"
+          ],
+          "regionVerdicts": {
+            "wordmark": "drift",
+            "nav": "drift",
+            "locale": "contradicted",
+            "nav-cta": "contradicted",
+            "headline": "drift",
+            "subline": "drift",
+            "cta": "drift",
+            "secondary": "drift",
+            "stage": "contradicted",
+            "placard-mojkolega": "contradicted",
+            "placard-bridj": "contradicted",
+            "placard-airlaser": "contradicted",
+            "scroll-hint": "drift",
+            "orbit-hint": "contradicted"
+          },
+          "artifactHash": "ab941e5ea716"
+        },
+        {
+          "at": "2026-10-09T19:11:10.643Z",
+          "score": 0.5759,
+          "worstIds": [
+            "locale",
+            "placard-mojkolega",
+            "placard-bridj"
+          ],
+          "regionVerdicts": {
+            "wordmark": "match",
+            "nav": "drift",
+            "locale": "contradicted",
+            "nav-cta": "contradicted",
+            "headline": "drift",
+            "subline": "drift",
+            "cta": "drift",
+            "secondary": "drift",
+            "stage": "contradicted",
+            "placard-mojkolega": "missing",
+            "placard-bridj": "contradicted",
+            "placard-airlaser": "contradicted",
+            "scroll-hint": "drift",
+            "orbit-hint": "contradicted"
+          },
+          "artifactHash": "ab941e5ea716"
+        }
+      ],
+      "records": 1
+    },
+    "sections": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "motion": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "responsive": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "review": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    }
+  },
+  "finish": null,
+  "plates": {}
+}

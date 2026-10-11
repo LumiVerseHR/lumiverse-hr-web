@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "title": "LumiVerse — AI product studio in Zagreb",
+    "description": "AI product studio in Zagreb. We build ambitious AI products, and the checks that make them safe to ship."
+  },
+  "nav": {
+    "work": "Work",
+    "services": "Services",
+    "research": "Research",
+    "studio": "Studio",
+    "contact": "Contact",
+    "cta": "Start a Project",
+    "menu": "Menu",
+    "close": "Close",
+    "pricing": "Pricing",
+    "packages": "Packages"
+  },
+  "hero": {
+    "titleLines": [
+      "Human",
+      "Imagination.",
+      "AI Speed."
+    ],
+    "titleCycle": [
+      "Human\nImagination.\nAI Speed.",
+      "Human\nJudgement.\nAI Speed.",
+      "Human\nTaste.\nAI Speed."
+    ],
+    "subline": "AI product studio in Zagreb. Ambitious products, shipped and checked.",
+    "cta": "Start a Project",
+    "secondary": "Explore the work",
+    "scrollHint": "Scroll to the work",
+    "exhibit": {
+      "idea": "Idea",
+      "shipped": "Shipped",
+      "alt": {
+        "moj-kolega": "A laptop on a turntable showing Moj Kolega, the AI employee answering a webshop customer",
+        "titlomat": "A monitor on a turntable showing Titlomat's homepage: automatic Croatian subtitles for YouTube",
+        "bridj": "A curved ultrawide workstation on a turntable showing the Bridj dashboard, with emerging risks from customer conversations"
+      }
+    }
+  },
+  "flagships": {
+    "title": "Humans, Amplified.",
+    "lede": "Our own products, work for clients, research and experiments. Each one with the number that proves it.",
+    "open": "Open the case study",
+    "all": "All work"
+  },
+  "thesis": {
+    "lines": [
+      "Generation is cheap.",
+      "Judgement isn’t."
+    ],
+    "body": "Every model can write the code, the article, the level. That part gets cheaper every quarter. What we bring is the part after the model: the checks, the cross-references and the human sign-off that decide whether its output is allowed to ship.",
+    "link": "The moat is the verifier, not the generator",
+    "href": "/blog/verifier-not-generator"
+  },
+  "index": {
+    "title": "Everything else we’ve shipped",
+    "lede": "Newsrooms, legacy rebuilds, games, BI. Different domains, the same discipline.",
+    "open": "Open"
+  },
+  "services": {
+    "title": "Pick how we work together",
+    "lede": "Three ways in, each priced in writing before we start.",
+    "doorsTitle": "Looking for something specific?",
+    "doors": [
+      {
+        "label": "Need a senior tech lead inside your team",
+        "href": "/tech-lead"
+      },
+      {
+        "label": "Founder looking for a technical co-founder",
+        "href": "/technical-founder"
+      }
+    ],
+    "more": "See every package and price",
+    "how": "How we work",
+    "upskillTitle": "Or make your own team AI‑native"
+  },
+  "notes": {
+    "title": "Notes from the workbench",
+    "all": "All posts",
+    "read": "min read",
+    "langNote": ""
+  },
+  "studio": {
+    "title": "Small studio, unreasonable range",
+    "body": "LumiVerse is a founder-led AI product studio in Zagreb. We build our own products and embed with teams to build theirs. The same hands that rebuilt a ten-year-old rent-a-car system also run an agentic simulation station that computes plasma-display physics. Range isn’t a lack of focus. It’s the focus.",
+    "principles": [
+      {
+        "title": "We eat our own cooking",
+        "body": "Titlomat, Tvrtko.ai and Country Guides are our products in production, with real users. We know what shipping costs because we pay it ourselves."
+      },
+      {
+        "title": "We embed, we don’t hover",
+        "body": "For a UK intelligence platform we own the architecture, a 17-service system and release sign-off, and have for over a year. We still run it today."
+      },
+      {
+        "title": "Honest about the hard parts",
+        "body": "Every case study says what needed a human and what’s still rough."
+      }
+    ],
+    "founder": "LumiVerse d.o.o. · Zagreb, Croatia · founded and led by Tihomir Jauk"
+  },
+  "contact": {
+    "title": "Tell us what you’re building",
+    "lede": "Pick what you need, or describe it in your own words. We reply within 24 hours.",
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "optional": "optional",
+    "need": "What do you need?",
+    "notSure": "Not sure yet",
+    "other": "Something else",
+    "message": "Tell us about it",
+    "messageHint": "What you want to build or fix, and anything you already know about timing or budget.",
+    "send": "Send your brief",
+    "sending": "Sending…",
+    "sent": "Thanks. Your brief is with us, and we’ll reply within 24 hours.",
+    "errorField": "Check this field:",
+    "errorSend": "That didn’t send. Email us at info@lumiverse.hr and we’ll pick it up from there.",
+    "privacy": "We use these details only to reply to you. They reach our inbox through Brevo, our EU email provider, and go nowhere else.",
+    "office": "Office",
+    "phone": "Phone",
+    "emailLabel": "Email",
+    "vat": "VAT ID",
+    "fields": {
+      "name": "name",
+      "email": "email",
+      "company": "company",
+      "package": "what you need",
+      "message": "message (at least 10 characters)"
+    }
+  },
+  "footer": {
+    "tagline": "AI products, and the checks that make them safe to ship.",
+    "work": "Work",
+    "studio": "Studio",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "cookies": "Cookie preferences",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "research": "Research",
+    "packages": "Packages"
+  },
+  "consent": {
+    "text": "We use analytics cookies to see what’s working.",
+    "deny": "Deny",
+    "allow": "Allow",
+    "region": "Cookie consent"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Nothing hangs here",
+    "body": "This page moved or never existed. The work is still on the wall.",
+    "home": "Back to home",
+    "services": "Services",
+    "work": "Our work",
+    "contact": "Contact",
+    "meta": "404 - Page Not Found | LumiVerse"
+  },
+  "case": {
+    "work": "Work",
+    "more": "More work",
+    "next": "Next",
+    "prev": "Previous",
+    "showcase": "Screens",
+    "show": "Show",
+    "prevShot": "Previous screen",
+    "nextShot": "Next screen",
+    "closingCta": "Tell us what you're building"
+  },
+  "contactBand": {
+    "title": "Have something to build?",
+    "lede": "Tell us in a few lines. We reply within 24 hours with an honest view on scope and price."
+  },
+  "pages": {
+    "work": {
+      "label": "Work",
+      "title": "Work - AI Products, Platforms and Research | LumiVerse",
+      "description": "{count} case studies: our own AI products, embedded tech-lead work and independent research, each with the number that proves it."
+    },
+    "services": {
+      "label": "Services",
+      "title": "Services - How We Build AI Products With You | LumiVerse",
+      "description": "Three ways to work with us: a one-week AI prototype, a full product build, or a senior tech lead inside your team. Plus workshops that make your own team AI-native."
+    },
+    "research": {
+      "label": "Research",
+      "title": "Research - Agentic Engineering and AI Verification | LumiVerse",
+      "description": "Independent research in computational physics and AI verification: a 49-page simulation study of a hologram floating in open air, and how we check AI output.",
+      "heading": "Hard problems, checked twice",
+      "intro": "Independent research in computational physics and AI verification. We test our methods where mistakes are expensive and easy to spot, cross-check every result against published science, and retract the ones that fail.",
+      "notesTitle": "Research notes",
+      "explainer": {
+        "label": "Computational physics",
+        "title": "A Star Trek hologram, with today's lasers",
+        "lede": "We asked one question: can you build a true 3D image that floats in open air, the kind of hologram you see in Star Trek, from parts you can order today? We simulated the physics end to end, and the answer is yes.",
+        "how": "How it works, simply",
+        "steps": [
+          [
+            "Two beams cross",
+            "Two invisible laser beams, each too weak to do anything on its own, meet at one point in the air."
+          ],
+          [
+            "The air glows",
+            "Where they meet, the air turns into a tiny spark of light: one pixel with a real address in space."
+          ],
+          [
+            "The eye sees a picture",
+            "Move about 10,000 of those points 60 times a second and you see a floating image you can walk around and pass your hand through."
+          ]
+        ],
+        "facts": [
+          [
+            "~$378,000",
+            "Prototype priced from real vendor catalogues"
+          ],
+          [
+            "184",
+            "Photons per point reach the eye, where about 100 are enough to see it"
+          ],
+          [
+            "40+",
+            "Simulations across nine areas of physics, from quantum chemistry to plasma"
+          ],
+          [
+            "22",
+            "Published references, each verified by its DOI"
+          ]
+        ],
+        "honest": "What it is, and isn't: a computational study, not a working device. No laser was switched on. Every number comes from open-source physics simulators run by an AI agent, and the image would be line art (outlines, text, shapes), not a solid picture.",
+        "paper": "Read the 49-page study",
+        "case": "How we built it",
+        "figure": "Computed, not photographed: cross the two beams at a wider angle and the glow shrinks from a streak (left) to a single point (right)."
+      }
+    },
+    "studio": {
+      "label": "Studio",
+      "title": "Studio - A Founder-Led AI Product Studio in Zagreb | LumiVerse",
+      "description": "LumiVerse d.o.o. is a founder-led AI product studio in Zagreb. We build our own products and embed with teams to build theirs.",
+      "company": "Company details",
+      "name": "Company",
+      "address": "Address",
+      "oib": "OIB",
+      "court": "Court register (MBS)"
+    },
+    "contact": {
+      "label": "Contact",
+      "title": "Contact - Start a Project With LumiVerse | LumiVerse",
+      "description": "Tell us what you're building, or order a package. We reply within 24 hours from Zagreb, with a clear next step and a price."
+    },
+    "home": "Home"
+  }
+}

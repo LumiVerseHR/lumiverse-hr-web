@@ -1,0 +1,62 @@
+:root {
+  /* Gallery: the dark room the scale model stands in. */
+  --gallery: #0e0f12;
+  /* The model: white card and basswood. */
+  --basswood: #c9a57a;
+  /* Coral: the humans, the logo dot and the primary action. Nothing else. */
+  --coral: #ff4d4d;
+  /* Buttons with white labels sit on a deeper coral so the label passes WCAG AA (4.5:1). */
+  --action: #e03131;
+  --coral-press: #c42b2b;
+  --text: #f7f7f6;
+  --text-soft: #cacaca;
+  --text-muted: #8f8e8b;
+
+  --font-body: var(--font-golos), ui-sans-serif, system-ui, sans-serif;
+  --font-label: var(--font-caption), var(--font-golos), sans-serif;
+
+  --gutter: clamp(16px, 2.6vw, 40px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: dark;
+  /* Decorative glows may reach past the edge; they never create a sideways scroll. */
+  overflow-x: clip;
+  scrollbar-color: #3a3833 var(--gallery);
+}
+
+body {
+  background: var(--gallery);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--action);
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 4px;
+}

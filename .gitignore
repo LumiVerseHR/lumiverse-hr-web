@@ -13,3 +13,8 @@ node_modules/
 dist/
 .astro/
 .tmp/
+
+# design-v3: regenerated review captures and Blender autosave backups
+.impeccable/review/
+.impeccable/questions/
+*.blend1

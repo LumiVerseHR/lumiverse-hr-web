@@ -1,0 +1,58 @@
+.thesis {
+  border-top: 1px solid rgb(255 255 255 / 0.06);
+  border-bottom: 1px solid rgb(255 255 255 / 0.06);
+  background:
+    radial-gradient(ellipse 40% 60% at 50% 0%, rgb(255 210 166 / 0.07), transparent 70%),
+    #0b0c0e;
+}
+
+.statement {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: clamp(48px, 8vw, 136px);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.line {
+  display: block;
+}
+
+/* The figure travels with the last word, so a wrap never strands it. */
+.tail {
+  white-space: nowrap;
+}
+
+/* One coral human stands on the baseline of the line that matters. */
+.figure {
+  display: inline-block;
+  margin-left: 0.18em;
+  vertical-align: baseline;
+}
+
+.body {
+  display: grid;
+  gap: 24px;
+  max-width: 60ch;
+  margin: clamp(40px, 4.5vw, 72px) 0 0 auto;
+}
+
+.body p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: clamp(18px, 1.35vw, 22px);
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .figure svg {
+    height: 36px;
+    width: auto;
+  }
+}

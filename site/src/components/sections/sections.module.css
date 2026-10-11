@@ -1,0 +1,63 @@
+/* Shared section grammar: one gutter, one rhythm, more space above a heading than below. */
+.section {
+  position: relative;
+  padding: clamp(96px, 11vw, 184px) var(--gutter);
+  scroll-margin-top: 24px;
+}
+
+.inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* A warm gallery wall-wash from above, the same light as the hero beam. */
+.wallLight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(ellipse 55% 45% at 62% 0%, rgb(255 210 166 / 0.09), transparent 72%);
+  pointer-events: none;
+}
+
+.title {
+  margin: 0;
+  max-width: 18ch;
+  font-size: clamp(40px, 5.2vw, 84px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.lede {
+  margin: clamp(18px, 1.8vw, 28px) 0 0;
+  max-width: 54ch;
+  color: var(--text-soft);
+  font-size: clamp(17px, 1.25vw, 20px);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.head {
+  margin-bottom: clamp(48px, 5.5vw, 88px);
+}
+
+.arrowLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 160ms ease-out, gap 200ms ease-out;
+}
+
+.arrowLink:hover {
+  gap: 12px;
+  color: var(--coral);
+}
+
+/* The first section under an inner page's own heading: the heading already made the space. */
+.tight {
+  padding-top: clamp(40px, 4.5vw, 72px);
+}

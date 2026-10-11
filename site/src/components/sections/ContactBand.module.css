@@ -1,0 +1,23 @@
+.band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px 48px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 17px 32px;
+  background: var(--action);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 160ms ease-out;
+}
+
+.cta:hover {
+  background: var(--coral-press);
+}

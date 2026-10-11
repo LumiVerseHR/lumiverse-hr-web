@@ -13,7 +13,11 @@
 //   PORT             default 3000
 import http from "node:http";
 import { pathToFileURL } from "node:url";
-import { packageById } from "../src/pricing/packages.mjs";
+import { packageById as legacyPackages } from "../src/pricing/packages.mjs";
+import { packageById as sitePackages } from "../site/src/content/packages.mjs";
+
+// The legacy pages and the v3 site (site/) each have a package list; a brief may name either.
+const packageById = new Map([...legacyPackages, ...sitePackages]);
 
 const LIMITS = {
   body: 16 * 1024,

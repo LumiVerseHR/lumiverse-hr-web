@@ -1,0 +1,204 @@
+.page {
+  position: relative;
+  isolation: isolate;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 900px;
+  z-index: -1;
+  background: radial-gradient(ellipse 55% 45% at 65% 0%, rgb(255 210 166 / 0.11), transparent 72%);
+}
+
+.hero {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(64px, 8vw, 128px) var(--gutter) 0;
+}
+
+.title {
+  margin: 0;
+  max-width: 14ch;
+  font-size: clamp(48px, 7vw, 116px);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.subtitle {
+  margin: 28px 0 0;
+  max-width: 56ch;
+  color: var(--text-soft);
+  font-size: clamp(18px, 1.45vw, 22px);
+  line-height: 1.5;
+}
+
+.primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  padding: 15px 28px;
+  background: var(--action);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.primary:hover {
+  background: var(--coral-press);
+}
+
+.section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(80px, 9vw, 144px) var(--gutter) 0;
+}
+
+.head h2 {
+  margin: 0;
+  text-wrap: balance;
+  max-width: 20ch;
+  font-size: clamp(34px, 4.2vw, 64px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+.head p {
+  margin: 18px 0 0;
+  text-wrap: pretty;
+  max-width: 60ch;
+  color: var(--text-soft);
+  font-size: clamp(17px, 1.3vw, 20px);
+  line-height: 1.55;
+}
+
+.path {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 16px;
+  margin: clamp(32px, 3.5vw, 56px) 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.path[data-count="1"] {
+  grid-template-columns: minmax(0, 560px);
+}
+
+.path li {
+  display: flex;
+  flex-direction: column;
+}
+
+.path li > article {
+  flex: 1;
+}
+
+/* The sequence carries meaning here: prototype, then build, then lead. */
+.step {
+  margin-bottom: 10px;
+  color: var(--basswood);
+  font-family: var(--font-label);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.exhibits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: clamp(24px, 3vw, 44px);
+  margin-top: clamp(32px, 3.5vw, 56px);
+}
+
+.exhibit {
+  display: grid;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.frame {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 14px;
+  overflow: hidden;
+  border: 12px solid #0a0a0b;
+  box-shadow: inset 0 0 0 5px #1d1c1a, 0 30px 70px rgb(0 0 0 / 0.6), 0 -14px 40px -18px rgb(255 214 170 / 0.3);
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.frame img {
+  object-fit: cover;
+  object-position: left top;
+}
+
+.exhibit:hover .frame {
+  transform: translateY(-5px);
+}
+
+.exName {
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.exhibit:hover .exName {
+  color: var(--coral);
+}
+
+.exKind {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.exStat {
+  margin-top: 6px;
+  color: var(--text-soft);
+  font-size: 15px;
+}
+
+.exStat strong {
+  margin-right: 8px;
+  color: var(--text);
+  font-size: clamp(32px, 3vw, 44px);
+  letter-spacing: -0.03em;
+}
+
+/* One proof exhibit: a framed print, not a full-width banner. */
+.exhibits[data-count="1"] {
+  grid-template-columns: minmax(0, 760px);
+}
+
+/* A single offer stands beside its proof. */
+.pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(32px, 4vw, 64px);
+  align-items: start;
+  margin-top: clamp(32px, 3.5vw, 56px);
+}
+
+.pair .exhibits {
+  margin-top: 0;
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 960px) {
+  .pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pairTitle {
+  margin: 0 0 18px;
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 500;
+}

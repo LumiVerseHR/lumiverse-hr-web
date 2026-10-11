@@ -1,0 +1,13 @@
+{
+  "prompt": "Desktop website homepage, first viewport, 1536x1024 landscape, flat front-on browser view. LumiVerse, a senior AI studio in Zagreb. Keep the exact world of the first reference image: dark gallery (#0E0F12, floor #1C1D21), one warm raking spotlight, an architect's maquette in white card and basswood on a dark plinth, tiny coral #FF4D4D human scale figures, cinematic depth of field. Second reference image: three real product screenshots (Moj Kolega webshop assistant page, Bridj navy landing page, Air-laser cyan voxel plots), to be shown faithfully as real website screenshots.\nSTRUCTURE, top to bottom:\n1. Top bar: wordmark \"LumiVerse\" with a coral dot left; nav \"Work  Services  Research  Studio  Contact\"; \"EN / HR\" right.\n2. Upper half: left, heavy white grotesk headline on two lines \"We build / Better Humans.\" Below it: \"Senior AI studio in Zagreb. Ambitious products, shipped and checked.\" A solid coral button \"Start a Project →\" and a link \"See the work\". Right, the maquette smaller than before, three models on one plinth (a small storefront with a speech-bubble canopy, a tower of 17 thin stacked slabs, a wire-frame sphere above a glass lens) with coral figures, lit by the spotlight.\n3. Lower 40%: a row of three large case-study tiles, like a premium agency's case grid, each a framed real screenshot from the second reference, lit as if a gallery placard, with title and caption beneath in white and grey: \"Moj Kolega — AI employee for webshops\"; \"Bridj — Embedded tech lead, UK intelligence platform · 17 services\"; \"Air-laser — 49-page physics design study · computed, not built\". A thin leader line connects each tile up to its model on the plinth, linking the model to the proof.\nCoral only on the logo dot, CTA and figures. Text crisp and correctly spelled. Premium, not toy-like.\n",
+  "createdAt": "2026-10-09T18:21:08.818Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "opaque",
+  "outputFormat": "png",
+  "refs": [
+    ".impeccable/mocks/decision/pinned-3d.png",
+    "/private/tmp/claude-501/-Users-tjauk-LumiVerseHR-lumiverse-hr-web/3ec18b06-fc75-4452-aa48-3acea422d8c5/scratchpad/refs.jpg"
+  ],
+  "role": "section reference for the case grid after the hero (combined with approved comp-3)"
+}

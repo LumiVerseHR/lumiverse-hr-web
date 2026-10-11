@@ -1,0 +1,13 @@
+{
+  "prompt": "Desktop website hero, first viewport, 1536x1024, flat front-on browser view. Keep EXACTLY the page chrome and world of the reference screenshot: near-black warm gallery background (#0e0f12), top bar with \"LumiVerse\" wordmark and coral dot at left, nav \"Work  Services  Research  Studio  Contact\" centred, \"EN / HR\" and a small square coral \"Start a Project\" button at right; left third holds the huge white heavy grotesk headline on three lines \"We build / Better / Humans.\" with the subline \"AI product studio in Zagreb. Ambitious products, shipped and checked.\" and a square coral \"Start a Project ->\" button plus underlined \"Explore the work\" link; a soft warm light cone falls diagonally from the logo dot across the headline; a warm volumetric spotlight beam rakes in from the upper right; \"Scroll to enter the model\" bottom left, \"Drag to orbit\" bottom right. Only the 3D centrepiece on the right two thirds changes, as described next. It must read as a real-time 3D scene built from simple, reproducible geometry and real product screenshots, lit by the warm spotlight, premium, not toy-like, not sci-fi. Coral #FF4D4D only on small human scale figures and the buttons. Text crisp and correctly spelled.\nCENTREPIECE \"Turntable cutaway\": a single large object, a laptop with its screen open, standing on a slowly rotating round black turntable plinth on the gallery floor. The laptop is split down the middle like a cutaway model: its left half is a glowing white wireframe (edges only, blueprint lines, measurement callouts on its screen), and its right half is the finished polished product in brushed aluminium with a full-colour real app on the screen (a webshop page with a chat assistant). A crisp vertical seam of light marks where wireframe becomes real. Small black placards on the turntable edge in condensed italic: \"IDEA\" on the wireframe side, \"SHIPPED\" on the finished side. Two tiny coral human figures stand on the turntable, one on each side.\n",
+  "createdAt": "2026-10-09T22:18:53.330Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "opaque",
+  "outputFormat": "png",
+  "refs": [
+    ".impeccable/mocks/hero-v2/ref-current-hero.png"
+  ],
+  "approved": true,
+  "approvalNote": "User chose B: Turntable cutaway on 2026-10-10 (surface round, seed da3a7c2e) to replace the abstract maquette; real screenshots replace the invented product."
+}

@@ -1,0 +1,123 @@
+/* Hero, laid out from the approved comp (1536x1024); sizes scale with the viewport width. */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* The warm gallery fades into the sections instead of ending at a hard edge. */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  height: 140px;
+  background: linear-gradient(to bottom, transparent, var(--gallery));
+  pointer-events: none;
+}
+
+.copy {
+  position: relative;
+  z-index: 2;
+  width: fit-content;
+  padding: clamp(40px, 6vw, 96px) var(--gutter) 0;
+  pointer-events: none;
+}
+
+.copy a {
+  pointer-events: auto;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(52px, 7.8vw, 132px);
+  line-height: 0.82;
+  letter-spacing: -0.04em;
+}
+
+.subline {
+  margin: clamp(18px, 1.9vw, 30px) 0 0;
+  /* Wraps before it can run under the model on narrower desktops. */
+  max-width: min(36rem, 38vw);
+  color: var(--text-soft);
+  font-size: clamp(15px, 1.12vw, 18px);
+  line-height: 1.45;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* The Croatian pair is wider than a 390px phone; the link drops under the button instead. */
+  gap: 14px clamp(20px, 1.7vw, 28px);
+  margin-top: clamp(16px, 1vw, 16px);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  padding: 14px 32px;
+  background: var(--action);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 160ms ease-out, transform 160ms ease-out;
+  font-size: clamp(15px, 1.1vw, 17px);
+}
+
+.cta:hover {
+  background: var(--coral-press);
+}
+
+.cta:active {
+  transform: translateY(1px);
+}
+
+.link {
+  white-space: nowrap;
+  font-size: clamp(15px, 1.1vw, 17px);
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--coral);
+}
+
+.scrollHint {
+  position: absolute;
+  z-index: 2;
+  bottom: clamp(20px, 4.5vw, 64px);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.scrollHint {
+  left: var(--gutter);
+}
+
+.scrollHint:hover {
+  color: var(--text);
+}
+
+
+@media (max-aspect-ratio: 1/1) {
+  .subline {
+    max-width: 34ch;
+  }
+
+  .scrollHint {
+    display: none;
+  }
+
+}

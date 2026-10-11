@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Scaffold reference: comp-3-screens-in-model.png</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@700&display=swap">
+  <link rel="stylesheet" href="layout.css">
+  <style>html,body{margin:0}body{background:#0f0d0c}.region{box-sizing:border-box}.region.text p{white-space:pre-wrap}</style>
+</head>
+<body>
+<!-- Reference only. Every region sits at its measured box inside a comp-aspect frame. Take the boxes (layout.css), keep your own semantic structure. -->
+<main class="comp-frame" style="max-width:1536px">
+  <div class="r-wordmark region text" data-region="wordmark"><!-- LumiVerse wordmark in white heavy grotesk with a coral dot after it --><p style="font-size:var(--r-wordmark-font);line-height:1.05;margin:0">wordmark</p></div>
+  <div class="r-nav region text" data-region="nav"><!-- nav links Work, Services, Research, Studio, Contact in small white sans --><p style="font-size:var(--r-nav-font);line-height:1.05;margin:0">nav</p></div>
+  <div class="r-locale region text" data-region="locale"><!-- EN / HR switch in muted grey --><p style="line-height:1.05;margin:0">locale</p></div>
+  <div class="r-nav-cta region control" data-region="nav-cta"><!-- small solid coral Start a Project button with arrow: rebuild the control's chrome from the crop (comp-spec.mjs --crop nav-cta); its ink box, border, fill, radius, and label size are the comp's --></div>
+  <div class="r-headline region text" data-region="headline"><!-- We build / Better / Humans. on three lines, very heavy tight white grotesk --><p style="font-size:var(--r-headline-font);font-family:var(--r-headline-family),sans-serif;font-weight:var(--r-headline-weight);line-height:1.05;margin:0">headline</p></div>
+  <div class="r-subline region text" data-region="subline"><!-- one-line subline in light grey: Senior AI studio in Zagreb. Ambitious products, shipped and checked. --><p style="line-height:1.05;margin:0">subline</p></div>
+  <div class="r-cta region control" data-region="cta"><!-- solid coral Start a Project button with arrow: rebuild the control's chrome from the crop (comp-spec.mjs --crop cta); its ink box, border, fill, radius, and label size are the comp's --></div>
+  <div class="r-secondary region text" data-region="secondary"><!-- Explore the work, white underlined link --><p style="line-height:1.05;margin:0">secondary</p></div>
+  <div class="r-stage region chrome" data-region="stage"><!-- real-time WebGL canvas (React Three Fiber, user-chosen): the lit maquette on its plinth with screens, figures and placards; rendered by code, not a raster --></div>
+  <div class="r-placard-mojkolega region text" data-region="placard-mojkolega"><!-- black placard on the plinth: MOJ KOLEGA / AI employee for webshops --><p style="font-size:var(--r-placard-mojkolega-font);line-height:1.05;margin:0">placard-mojkolega</p></div>
+  <div class="r-placard-bridj region text" data-region="placard-bridj"><!-- black placard on the plinth: BRIDJ / Embedded tech lead · 17 services --><p style="font-size:var(--r-placard-bridj-font);line-height:1.05;margin:0">placard-bridj</p></div>
+  <div class="r-placard-airlaser region text" data-region="placard-airlaser"><!-- black placard on the plinth: AIR-LASER / Physics design study · computed, not built --><p style="line-height:1.05;margin:0">placard-airlaser</p></div>
+  <div class="r-scroll-hint region text" data-region="scroll-hint"><!-- Scroll to enter the model with a down arrow, muted grey --><p style="font-size:var(--r-scroll-hint-font);line-height:1.05;margin:0">scroll-hint</p></div>
+  <div class="r-orbit-hint region text" data-region="orbit-hint"><!-- drag to orbit with an orbit icon, muted grey --><p style="font-size:var(--r-orbit-hint-font);line-height:1.05;margin:0">orbit-hint</p></div>
+</main>
+</body>
+</html>

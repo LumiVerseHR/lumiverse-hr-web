@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "title": "LumiVerse — AI produktni studio u Zagrebu",
+    "description": "AI produktni studio u Zagrebu. Gradimo ambiciozne AI proizvode i provjere zbog kojih ih je sigurno pustiti u rad."
+  },
+  "nav": {
+    "work": "Radovi",
+    "services": "Usluge",
+    "research": "Istraživanje",
+    "studio": "Studio",
+    "contact": "Kontakt",
+    "cta": "Pokrenite projekt",
+    "menu": "Izbornik",
+    "close": "Zatvori",
+    "pricing": "Cijene",
+    "packages": "Paketi"
+  },
+  "hero": {
+    "titleLines": [
+      "Ljudska",
+      "mašta.",
+      "AI brzina."
+    ],
+    "titleCycle": [
+      "Ljudska\nmašta.\nAI brzina.",
+      "Ljudska\nprosudba.\nAI brzina.",
+      "Ljudski\nukus.\nAI brzina."
+    ],
+    "subline": "AI produktni studio u Zagrebu. Ambiciozni proizvodi, isporučeni i provjereni.",
+    "cta": "Pokrenite projekt",
+    "secondary": "Pogledajte reference",
+    "scrollHint": "Skrolajte do radova",
+    "exhibit": {
+      "idea": "Ideja",
+      "shipped": "Isporučeno",
+      "alt": {
+        "moj-kolega": "Laptop na okretnom postolju prikazuje Moj Kolegu, AI zaposlenika koji odgovara kupcu webshopa",
+        "titlomat": "Monitor na okretnom postolju prikazuje naslovnicu Titlomata, automatske hrvatske titlove za YouTube",
+        "bridj": "Zakrivljeni ultraširoki monitor s tipkovnicom na okretnom postolju prikazuje nadzornu ploču Bridja s rizicima iz razgovora s kupcima"
+      }
+    }
+  },
+  "flagships": {
+    "title": "Ljudi koji mogu više.",
+    "lede": "Naši proizvodi, rad za klijente, istraživanja i eksperimenti. Svaki s brojem koji to dokazuje.",
+    "open": "Otvorite referencu",
+    "all": "Svi radovi"
+  },
+  "thesis": {
+    "lines": [
+      "Generiranje je jeftino.",
+      "Prosudba nije."
+    ],
+    "body": "Svaki model napiše kod, članak ili razinu igre. Taj dio svaki kvartal postaje jeftiniji. Mi donosimo ono što dolazi nakon modela: provjere, unakrsne reference i ljudski potpis koji odlučuju smije li rezultat u produkciju.",
+    "link": "Prednost je u onome što provjerava, a ne u onome što generira",
+    "href": "/blog/verifier-not-generator"
+  },
+  "index": {
+    "title": "Sve ostalo što smo isporučili",
+    "lede": "Redakcije, obnove starih sustava, igre, poslovna inteligencija. Različita područja, ista disciplina.",
+    "open": "Otvorite"
+  },
+  "services": {
+    "title": "Odaberite kako surađujemo",
+    "lede": "Tri načina suradnje, svaki s cijenom u pisanom obliku prije početka.",
+    "doorsTitle": "Tražite nešto određeno?",
+    "doors": [
+      {
+        "label": "Trebate senior tech leada u svom timu",
+        "href": "/hr/tech-lead"
+      },
+      {
+        "label": "Osnivač ste i tražite tehničkog suosnivača",
+        "href": "/hr/technical-founder"
+      }
+    ],
+    "more": "Pogledajte sve pakete i cijene",
+    "how": "Kako radimo",
+    "upskillTitle": "Ili osposobite vlastiti tim za rad s AI‑jem"
+  },
+  "notes": {
+    "title": "Bilješke iz radionice",
+    "all": "Svi članci",
+    "read": "min čitanja",
+    "langNote": "Na engleskom"
+  },
+  "studio": {
+    "title": "Mali studio, nerazumno širok raspon",
+    "body": "LumiVerse je AI produktni studio iz Zagreba koji vodi njegov osnivač. Gradimo vlastite proizvode i uključujemo se u timove da izgrade svoje. Iste ruke koje su rent-a-car sustav star deset godina prepisale na moderan stack vode i agentsku simulacijsku stanicu koja računa fiziku plazmenog zaslona. Širina nije nedostatak fokusa. Ona je fokus.",
+    "principles": [
+      {
+        "title": "Sami koristimo ono što gradimo",
+        "body": "Titlomat, Tvrtko.ai i Country Guides naši su proizvodi u produkciji, sa stvarnim korisnicima. Znamo koliko stoji isporuka jer je plaćamo iz svog džepa."
+      },
+      {
+        "title": "Uključujemo se, ne nadgledamo sa strane",
+        "body": "Britanskoj platformi za poslovnu inteligenciju više od godinu dana vodimo arhitekturu i sustav od 17 servisa, a svako izdanje nosi naš potpis. Vodimo ga i danas."
+      },
+      {
+        "title": "Iskreni o onome što je teško",
+        "body": "Svaka referenca govori gdje je trebao čovjek i što je još sirovo."
+      }
+    ],
+    "founder": "LumiVerse d.o.o. · Zagreb, Hrvatska · osnovao i vodi Tihomir Jauk"
+  },
+  "contact": {
+    "title": "Recite nam što gradite",
+    "lede": "Odaberite što Vam treba ili to opišite svojim riječima. Odgovaramo u roku od 24 sata.",
+    "name": "Ime",
+    "email": "E-mail",
+    "company": "Tvrtka",
+    "optional": "neobavezno",
+    "need": "Što Vam treba?",
+    "notSure": "Još ne znam",
+    "other": "Nešto drugo",
+    "message": "Opišite nam",
+    "messageHint": "Što želite izgraditi ili popraviti, i sve što već znate o rokovima ili budžetu.",
+    "send": "Pošaljite upit",
+    "sending": "Šaljem…",
+    "sent": "Hvala. Vaš upit je kod nas i odgovorit ćemo u roku od 24 sata.",
+    "errorField": "Provjerite ovo polje:",
+    "errorSend": "Slanje nije uspjelo. Pišite nam na info@lumiverse.hr i nastavit ćemo odande.",
+    "privacy": "Ove podatke koristimo samo da Vam odgovorimo. Do nas stižu putem Brevoa, našeg EU pružatelja e-pošte, i ne idu nikamo drugdje.",
+    "office": "Ured",
+    "phone": "Telefon",
+    "emailLabel": "E-mail",
+    "vat": "PDV ID",
+    "fields": {
+      "name": "ime",
+      "email": "e-mail",
+      "company": "tvrtka",
+      "package": "što Vam treba",
+      "message": "poruka (najmanje 10 znakova)"
+    }
+  },
+  "footer": {
+    "tagline": "AI proizvodi i provjere zbog kojih ih je sigurno pustiti u rad.",
+    "work": "Radovi",
+    "studio": "Studio",
+    "contact": "Kontakt",
+    "rights": "Sva prava pridržana.",
+    "cookies": "Postavke kolačića",
+    "pricing": "Cijene",
+    "blog": "Blog",
+    "research": "Istraživanje",
+    "packages": "Paketi"
+  },
+  "consent": {
+    "text": "Koristimo analitičke kolačiće da vidimo što funkcionira.",
+    "deny": "Odbij",
+    "allow": "Dopusti",
+    "region": "Privola za kolačiće"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Ovdje ništa ne visi",
+    "body": "Ova stranica je premještena ili nikad nije postojala. Radovi su i dalje na zidu.",
+    "home": "Natrag na početnu",
+    "services": "Usluge",
+    "work": "Reference",
+    "contact": "Kontakt",
+    "meta": "404 - stranica nije pronađena | LumiVerse"
+  },
+  "case": {
+    "work": "Radovi",
+    "more": "Još radova",
+    "next": "Sljedeće",
+    "prev": "Prethodno",
+    "showcase": "Zasloni",
+    "show": "Prikaži",
+    "prevShot": "Prethodni zaslon",
+    "nextShot": "Sljedeći zaslon",
+    "closingCta": "Recite nam što gradite"
+  },
+  "contactBand": {
+    "title": "Imate nešto za izgraditi?",
+    "lede": "Opišite nam to u nekoliko redaka. Odgovaramo u roku od 24 sata, s iskrenim mišljenjem o opsegu i cijeni."
+  },
+  "pages": {
+    "work": {
+      "label": "Radovi",
+      "title": "Radovi - AI proizvodi, platforme i istraživanje | LumiVerse",
+      "description": "{count} studija slučaja: naši AI proizvodi, rad tech leada u timovima klijenata i neovisno istraživanje, svaka s brojem koji to dokazuje."
+    },
+    "services": {
+      "label": "Usluge",
+      "title": "Usluge - kako s Vama gradimo AI proizvode | LumiVerse",
+      "description": "Tri načina suradnje: AI prototip u tjedan dana, razvoj cijelog proizvoda ili senior tech lead u Vašem timu. Uz radionice koje Vaš tim osposobljavaju za rad s AI-jem."
+    },
+    "research": {
+      "label": "Istraživanje",
+      "title": "Istraživanje - agentno inženjerstvo i provjera AI-ja | LumiVerse",
+      "description": "Neovisno istraživanje u računalnoj fizici i provjeri AI-ja: simulacijska studija od 49 stranica o hologramu u otvorenom zraku i kako provjeravamo AI rezultate.",
+      "heading": "Teški problemi, provjereni dvaput",
+      "intro": "Neovisno istraživanje u računalnoj fizici i provjeri AI-ja. Svoje metode isprobavamo ondje gdje su greške skupe i lako se vide, svaki rezultat provjeravamo prema objavljenoj znanosti, a onaj koji ne prođe provjeru povlačimo.",
+      "notesTitle": "Bilješke iz istraživanja",
+      "explainer": {
+        "label": "Računalna fizika",
+        "title": "Hologram iz Zvjezdanih staza, s današnjim laserima",
+        "lede": "Postavili smo jedno pitanje: može li se od dijelova koje danas možete naručiti napraviti prava 3D slika koja lebdi u otvorenom zraku, hologram kakav ste vidjeli u Zvjezdanim stazama? Fiziku smo simulirali od početka do kraja, i odgovor je da.",
+        "how": "Kako radi, jednostavno",
+        "steps": [
+          [
+            "Dvije zrake se križaju",
+            "Dvije nevidljive laserske zrake, svaka preslaba da sama išta napravi, sretnu se u jednoj točki u zraku."
+          ],
+          [
+            "Zrak zasvijetli",
+            "Gdje se sretnu, zrak postaje sićušna iskra svjetla: jedan piksel sa stvarnom adresom u prostoru."
+          ],
+          [
+            "Oko vidi sliku",
+            "Pomaknite oko 10.000 takvih točaka 60 puta u sekundi i vidite sliku koja lebdi, koju možete obići i kroz koju možete provući ruku."
+          ]
+        ],
+        "facts": [
+          [
+            "~378.000 $",
+            "Prototip izračunat po stvarnim katalozima dobavljača"
+          ],
+          [
+            "184",
+            "Fotona po točki stiže do oka, a stotinjak je dovoljno da se vidi"
+          ],
+          [
+            "40+",
+            "Simulacija u devet područja fizike, od kvantne kemije do plazme"
+          ],
+          [
+            "22",
+            "Objavljene reference, svaka provjerena preko DOI-ja"
+          ]
+        ],
+        "honest": "Što jest, a što nije: računalna studija, a ne uređaj koji radi. Nijedan laser nije upaljen. Svaki broj dolazi iz open-source fizikalnih simulatora koje vodi AI agent, a slika bi bila crtež od linija (obrisi, tekst, oblici), a ne puna slika.",
+        "paper": "Pročitajte studiju od 49 stranica",
+        "case": "Kako smo je izradili",
+        "figure": "Izračunato, ne snimljeno: kad se dvije zrake križaju pod većim kutom, sjaj se skuplja iz pruge (lijevo) u jednu točku (desno)."
+      }
+    },
+    "studio": {
+      "label": "Studio",
+      "title": "Studio - AI produktni studio iz Zagreba | LumiVerse",
+      "description": "LumiVerse d.o.o. je AI produktni studio iz Zagreba koji vodi osnivač. Gradimo vlastite proizvode i ulazimo u timove da izgradimo njihove.",
+      "company": "Podaci o tvrtki",
+      "name": "Tvrtka",
+      "address": "Adresa",
+      "oib": "OIB",
+      "court": "Sudski registar (MBS)"
+    },
+    "contact": {
+      "label": "Kontakt",
+      "title": "Kontakt - pokrenite projekt s LumiVerseom | LumiVerse",
+      "description": "Recite nam što gradite ili naručite paket. Odgovaramo u roku od 24 sata iz Zagreba, s jasnim sljedećim korakom i cijenom."
+    },
+    "home": "Početna"
+  }
+}

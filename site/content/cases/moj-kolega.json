@@ -1,0 +1,343 @@
+{
+  "en": {
+    "slug": "moj-kolega",
+    "meta": {
+      "title": "Moj Kolega – An AI Employee for Your Webshop | LumiVerse",
+      "description": "A managed AI employee for your webshop: it answers customers, recommends from your catalogue, captures leads and escalates to your team, 24/7."
+    },
+    "kind": "Our Product · AI Employee",
+    "title": "Moj Kolega",
+    "titleNote": "(My Colleague)",
+    "subtitle": "An AI employee for your webshop. It answers customers, recommends from your catalogue, captures the leads you'd lose after hours, and hands off to your team when it should – 24/7. We set it up, watch it, and improve it every month. You see results, not another chatbot.",
+    "ctas": [
+      {
+        "label": "Visit Moj Kolega",
+        "href": "https://www.mojkolega.hr/en",
+        "external": true
+      },
+      {
+        "label": "Build Something Similar",
+        "href": "/contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/moj-kolega/mojkolega-1.jpg",
+        "alt": "mojkolega.hr - the Moj Kolega homepage, with the agent answering a real catalogue question in the embedded chat widget",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/moj-kolega/mojkolega-2.jpg",
+        "alt": "An overnight report - questions answered, recommended and escalated through the night, resolved alone vs handed to the team",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/moj-kolega/mojkolega-3.jpg",
+        "alt": "The five jobs Moj Kolega does - grounded answers, recommendations, lead capture and five languages, all from the shop's own data",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "24/7",
+        "label": "Answering customers, day and night"
+      },
+      {
+        "value": "5",
+        "label": "Languages it detects and replies in"
+      },
+      {
+        "value": "5",
+        "label": "Jobs it does, grounded in your data"
+      },
+      {
+        "value": "Monthly",
+        "label": "We tune it, every improvement cycle"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Hire a Role, Not a Chatbot",
+        "lede": "A managed AI employee that answers only from your catalogue and policies – and says \"I don't know\" instead of inventing.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Grounded, Never Invented",
+                "body": "Answers only from your catalogue and policies\nWhen the data isn't there, it says so and escalates – it doesn't guess\nProduct picks come with a reason to buy, from your catalogue only\nEvery answer is traceable to the source it came from"
+              },
+              {
+                "title": "Managed, Not DIY",
+                "body": "You don't get a prompt editor and a model picker. You hire a role – Sales, Support or Reception – and we do the rest: set it up, connect your catalogue, and test it against real questions before it goes live.\n\nThen every month we send a report of what your customers asked, what the agent handled alone, what it missed, and what we changed. The improvement is the product, not a dashboard you have to babysit."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Five Jobs, Done Reliably",
+        "lede": "Not forty jobs done badly by a generic model. Five that matter for a webshop, each grounded in your own data.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Answers, Grounded",
+                "body": "From your catalogue and policies. When it doesn't know, it says so and hands off – it never guesses and costs you a sale.",
+                "meta": "01"
+              },
+              {
+                "title": "Recommends the Right Product",
+                "body": "Two or three picks for the need and the budget, each with a reason to buy – drawn from your catalogue, never invented.",
+                "meta": "02"
+              },
+              {
+                "title": "Captures Leads You'd Lose",
+                "body": "Wholesale, B2B and undecided buyers – qualified, with the full conversation, on your desk by morning instead of gone by dawn.",
+                "meta": "03"
+              },
+              {
+                "title": "Escalates Safely",
+                "body": "When it's out of its depth, it hands off to your team with the full context – a clean handoff, not a bluff.",
+                "meta": "04"
+              },
+              {
+                "title": "Speaks Your Customers' Language",
+                "body": "Detects the visitor's language on every message and replies in it – Croatian, English, Slovenian, Serbian and German.",
+                "meta": "05"
+              },
+              {
+                "title": "Works the Night Shift",
+                "body": "The hours your team is offline are when leads slip away. Moj Kolega covers them – and hands you the night's conversations in the morning.",
+                "meta": "06"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "One Script, Grounded in Your Shop",
+        "lede": "Moj Kolega drops onto any site as a single widget – but the work behind it is what makes it trustworthy.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "An Embeddable Widget",
+                "body": "One script tag on any site. It streams answers token by token, knows which page the visitor is on, matches their language on every message, and can be switched on or off remotely – no redeploy.\n\nStreaming chat over SSE, page-context aware\nPer-message language matching and configurable appearance\nRemote on/off and roll-out without touching the host site"
+              },
+              {
+                "title": "Knowledge From Your Catalogue",
+                "body": "Crawls your site and walks your WooCommerce or Shopify catalogue, plus uploads and text. Hybrid vector-and-keyword search finds the right passage, with product and price extraction that respects EU Omnibus pricing."
+              },
+              {
+                "title": "Duties: Work in the Background",
+                "body": "Beyond the chat, the agent runs scheduled duties for the shop – catalogue audits, monitors, a weekly commerce analysis, even write-backs to your store – each one drafted for review before anything actually changes."
+              },
+              {
+                "title": "Hard to Trick",
+                "body": "Untrusted web and catalogue content is sanitized and fenced, an input tripwire catches injection attempts, and an output scanner stops leaks mid-stream. It won't be talked into going off-script."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Built On",
+                "body": "Next.js 16 and React 19 on the front end; FastAPI with async SQLAlchemy on the backend and agent runtime; Celery and Redis for crawls and scheduled duties; PostgreSQL 17 with pgvector for storage and hybrid search – all in Docker, bilingual in Croatian and English. The interesting engineering isn't the model; it's everything that keeps the model honest."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Meet Your Webshop's AI Employee",
+      "body": "Moj Kolega is live and taking on shops now. See it answer real questions in your language, then get one set up for your own catalogue.",
+      "cta": {
+        "label": "Visit mojkolega.hr",
+        "href": "https://www.mojkolega.hr/en",
+        "external": true
+      },
+      "secondary": {
+        "label": "Talk to Us",
+        "href": "/contact"
+      }
+    }
+  },
+  "hr": {
+    "slug": "moj-kolega",
+    "meta": {
+      "title": "Moj Kolega - AI zaposlenik za Vaš webshop | LumiVerse",
+      "description": "Vođeni AI zaposlenik za Vaš webshop: odgovara kupcima, preporučuje iz kataloga, hvata upite i prosljeđuje ih Vašem timu, 24/7."
+    },
+    "kind": "Naš proizvod · AI zaposlenik",
+    "title": "Moj Kolega",
+    "subtitle": "AI zaposlenik za Vaš webshop. Odgovara kupcima, preporučuje iz Vašeg kataloga, hvata upite koje biste izvan radnog vremena izgubili i prosljeđuje ih Vašem timu kad treba — 24/7. Mi ga postavljamo, nadziremo i svaki mjesec poboljšavamo. Vi vidite rezultate, a ne još jedan chatbot.",
+    "ctas": [
+      {
+        "label": "Posjetite Mog Kolegu",
+        "href": "https://www.mojkolega.hr",
+        "external": true
+      },
+      {
+        "label": "Napravite nešto slično",
+        "href": "/hr/contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/moj-kolega/hr-mojkolega-1.jpg",
+        "alt": "mojkolega.hr - naslovnica Mog Kolege, agent odgovara na stvarno pitanje iz kataloga u ugrađenom chat widgetu",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/moj-kolega/hr-mojkolega-2.jpg",
+        "alt": "Noćni izvještaj - pitanja na koja je odgovoreno, preporuke i proslijeđeni upiti tijekom noći, riješeno samostalno naspram predano timu",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/moj-kolega/hr-mojkolega-3.jpg",
+        "alt": "Pet poslova koje Moj Kolega obavlja - utemeljeni odgovori, preporuke, prikupljanje upita i pet jezika, sve iz podataka same trgovine",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "24/7",
+        "label": "Odgovara kupcima, danju i noću"
+      },
+      {
+        "value": "5",
+        "label": "Jezika koje prepoznaje i na kojima odgovara"
+      },
+      {
+        "value": "5",
+        "label": "Poslova koje obavlja, utemeljenih na Vašim podacima"
+      },
+      {
+        "value": "Mjesečno",
+        "label": "Podešavamo ga u svakom ciklusu poboljšanja"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Zaposlite ulogu, a ne chatbot",
+        "lede": "Vođeni AI zaposlenik koji odgovara isključivo iz Vašeg kataloga i pravila — i kaže „ne znam\" umjesto da izmišlja.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Utemeljeno, nikad izmišljeno",
+                "body": "Odgovara samo iz Vašeg kataloga i pravila\nKad podatka nema, to i kaže te proslijedi dalje — ne pogađa\nUz svaki predloženi proizvod ide razlog za kupnju, isključivo iz Vašeg kataloga\nSvaki se odgovor može pratiti do izvora iz kojeg je došao"
+              },
+              {
+                "title": "Vođeno, ne uradi-sam",
+                "body": "Ne dobivate uređivač promptova i izbornik modela. Zapošljavate ulogu — prodaja, podrška ili recepcija — a mi radimo ostalo: postavimo ga, povežemo Vaš katalog i testiramo ga na stvarnim pitanjima prije nego što ide u rad.\n\nZatim svaki mjesec šaljemo izvještaj o tome što su Vaši kupci pitali, što je agent riješio sam, što je promašio i što smo promijenili. Proizvod je upravo to poboljšanje, a ne nadzorna ploča koju morate stalno nadgledati."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Pet poslova koje odrađuje pouzdano",
+        "lede": "Ne četrdeset poslova koje generički model odradi loše. Pet onih koji su webshopu doista važni, svaki utemeljen na Vašim podacima.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Odgovara iz Vaših podataka",
+                "body": "Iz Vašeg kataloga i pravila. Kad ne zna, to kaže i preda dalje — nikad ne pogađa i ne košta Vas prodaje.",
+                "meta": "01"
+              },
+              {
+                "title": "Preporučuje pravi proizvod",
+                "body": "Dva ili tri prijedloga za potrebu i proračun, svaki s razlogom za kupnju — izvučeni iz Vašeg kataloga, nikad izmišljeni.",
+                "meta": "02"
+              },
+              {
+                "title": "Hvata upite koje biste izgubili",
+                "body": "Veleprodaja, B2B i neodlučni kupci — kvalificirani, s cijelim razgovorom, na Vašem stolu ujutro umjesto da nestanu do zore.",
+                "meta": "03"
+              },
+              {
+                "title": "Sigurno prosljeđuje dalje",
+                "body": "Kad mu je preko glave, predaje Vašem timu s punim kontekstom — čista predaja, a ne blef.",
+                "meta": "04"
+              },
+              {
+                "title": "Govori jezikom Vaših kupaca",
+                "body": "Na svakoj poruci prepoznaje jezik posjetitelja i odgovara na njemu — hrvatski, engleski, slovenski, srpski i njemački.",
+                "meta": "05"
+              },
+              {
+                "title": "Radi noćnu smjenu",
+                "body": "Upiti izmiču upravo u satima kad Vaš tim nije tu. Moj Kolega ih pokriva — i ujutro Vam preda noćne razgovore.",
+                "meta": "06"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Jedna skripta koja poznaje Vašu trgovinu",
+        "lede": "Moj Kolega se na bilo koju stranicu spušta kao jedan widget — ali pouzdanim ga čini posao iza njega.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Ugradivi widget",
+                "body": "Jedan script tag na bilo kojoj stranici. Odgovore prenosi token po token, zna na kojoj je stranici posjetitelj, na svakoj poruci prati njegov jezik i može se uključiti ili isključiti na daljinu — bez novog deploya.\n\nStreaming chata preko SSE-a, svjestan konteksta stranice\nPrilagodba jezika po poruci i podesiv izgled\nUključivanje, isključivanje i uvođenje na daljinu, bez diranja stranice domaćina"
+              },
+              {
+                "title": "Znanje iz Vašeg kataloga",
+                "body": "Obilazi Vašu stranicu i prolazi kroz WooCommerce ili Shopify katalog, uz priložene datoteke i tekst. Hibridna vektorska i tekstualna pretraga pronalazi pravi odlomak, uz izvlačenje proizvoda i cijena, usklađeno s EU Omnibus pravilima o cijenama."
+              },
+              {
+                "title": "Zadaci: rad u pozadini",
+                "body": "Osim chata, agent za trgovinu obavlja i zakazane zadatke — provjere kataloga, nadzor, tjednu analizu prodaje, čak i upisivanje natrag u Vašu trgovinu — svaki od njih prvo kao prijedlog na pregled, prije nego što se išta stvarno promijeni."
+              },
+              {
+                "title": "Teško ga je prevariti",
+                "body": "Nepouzdan sadržaj s weba i iz kataloga čisti se i ograđuje, okidač na ulazu hvata pokušaje ubacivanja uputa, a skener na izlazu zaustavlja curenje usred odgovora. Neće ga se nagovoriti da izađe iz uloge."
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Izgrađeno na",
+                "body": "Next.js 16 i React 19 na frontendu; FastAPI s asinkronim SQLAlchemyjem na backendu i u pogonu agenta; Celery i Redis za obilaske i zakazane zadatke; PostgreSQL 17 s pgvectorom za pohranu i hibridnu pretragu — sve u Dockeru, dvojezično na hrvatskom i engleskom. Zanimljivo inženjerstvo nije model, nego sve ono što model drži poštenim."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Upoznajte AI zaposlenika svog webshopa",
+      "body": "Moj Kolega je u pogonu i prima nove trgovine. Pogledajte kako odgovara na stvarna pitanja na Vašem jeziku, pa ga postavimo i za Vaš katalog.",
+      "cta": {
+        "label": "Posjetite mojkolega.hr",
+        "href": "https://www.mojkolega.hr",
+        "external": true
+      },
+      "secondary": {
+        "label": "Razgovarajmo",
+        "href": "/hr/contact"
+      }
+    }
+  }
+}

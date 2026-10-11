@@ -1,0 +1,12 @@
+# Local dev in Docker. Plain `npm run dev` is faster on macOS; use this to match the container.
+services:
+  site:
+    image: node:24-alpine
+    working_dir: /app
+    command: sh -c "npm ci && npx next dev -H 0.0.0.0 -p 3000"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app          # Live code reload
+      - /app/node_modules
+      - /app/.next       # Container-managed, prevents stale cache

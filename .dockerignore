@@ -6,3 +6,5 @@ dist
 .playwright-mcp
 reports
 .DS_Store
+site/node_modules
+site/.next

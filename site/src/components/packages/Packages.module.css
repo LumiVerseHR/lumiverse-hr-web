@@ -1,0 +1,291 @@
+.card {
+  position: relative;
+}
+
+.nameLink {
+  text-decoration: none;
+}
+
+.nameLink:hover {
+  color: var(--coral);
+}
+
+.delivery {
+  margin-top: 8px !important;
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.more {
+  color: var(--text-soft);
+  font-size: 15px;
+  text-underline-offset: 0.3em;
+}
+
+.more:hover {
+  color: var(--text);
+}
+
+.order {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background: var(--action);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 160ms ease-out;
+}
+
+.order:hover {
+  background: var(--coral-press);
+}
+
+/* A package's own page. */
+.detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.7fr);
+  gap: clamp(32px, 5vw, 96px);
+  align-items: start;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(48px, 5vw, 80px) var(--gutter) 0;
+}
+
+.panel {
+  position: sticky;
+  top: 24px;
+}
+
+.panel .order {
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 24px;
+  padding: 15px 20px;
+}
+
+.block + .block {
+  margin-top: clamp(40px, 4vw, 64px);
+}
+
+.blockTitle {
+  margin: 0 0 18px;
+  font-size: clamp(22px, 1.9vw, 28px);
+  letter-spacing: -0.02em;
+}
+
+/* Previous work: the lead clip spans the column, the rest pair up beneath it. */
+.work {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 3vw, 40px) clamp(16px, 2vw, 28px);
+  align-items: start;
+}
+
+.work[data-lead="screen"] .clip:first-child,
+.work[data-lead="wide"] .clip:first-child,
+.work[data-count="1"] .clip {
+  grid-column: 1 / -1;
+}
+
+/* A phone video beside a wide one. */
+.work[data-lead="tall"] {
+  grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
+}
+
+.clip {
+  margin: 0;
+}
+
+.frame {
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  background: #0a0a0b;
+  box-shadow: 0 34px 70px rgb(0 0 0 / 0.55);
+}
+
+.clip[data-shape="tall"] .frame {
+  border: 8px solid #0a0a0b;
+  border-radius: 22px;
+  outline: 1px solid rgb(255 255 255 / 0.1);
+}
+
+.frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #111116;
+}
+
+.clip[data-shape="screen"] video {
+  aspect-ratio: 16 / 10;
+}
+
+.clip[data-shape="wide"] video {
+  aspect-ratio: 16 / 9;
+}
+
+.clip[data-shape="tall"] video {
+  aspect-ratio: 9 / 16;
+  border-radius: 14px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 12px;
+  border-bottom: 1px solid rgb(255 255 255 / 0.07);
+  background: #141416;
+}
+
+.bar span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.16);
+}
+
+.bar em {
+  flex: 1;
+  margin-right: 33px;
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-style: normal;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clip figcaption {
+  display: grid;
+  gap: 4px;
+  margin-top: 14px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.clip figcaption a,
+.clip figcaption strong {
+  justify-self: start;
+  color: var(--text);
+  font-weight: 600;
+  text-underline-offset: 0.3em;
+}
+
+.clip figcaption a:hover {
+  color: var(--coral);
+}
+
+.clip figcaption span {
+  color: var(--text-soft);
+}
+
+/* A card's poster: the first piece of work, linked to the package page. */
+.cover {
+  display: block;
+  margin: -28px -28px 24px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: #111116;
+}
+
+.cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cover:hover img {
+  transform: scale(1.03);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps li {
+  padding-top: 18px;
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+  counter-increment: step;
+}
+
+.steps li::before {
+  content: counter(step);
+  display: block;
+  margin-bottom: 10px;
+  color: var(--basswood);
+  font-family: var(--font-label);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.steps strong {
+  display: block;
+  font-size: 17px;
+}
+
+.steps p {
+  margin: 6px 0 0;
+  color: var(--text-soft);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.customNote {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(64px, 7vw, 112px) var(--gutter) 0;
+  color: var(--text-soft);
+  font-size: 17px;
+}
+
+.customNote a {
+  margin-left: 8px;
+  color: var(--text);
+  text-underline-offset: 0.3em;
+}
+
+.customNote a:hover {
+  color: var(--coral);
+}
+
+@media (max-width: 900px) {
+  .detail,
+  .steps,
+  .work[data-lead="tall"] {
+    grid-template-columns: 1fr;
+  }
+
+  .clip[data-shape="tall"] {
+    max-width: 320px;
+  }
+
+  /* On a phone the price and the order button come first, right under the heading. */
+  .panel {
+    position: static;
+    order: -1;
+  }
+}

@@ -1,0 +1,1016 @@
+{
+  "tool": "comp-spec",
+  "version": 1,
+  "createdAt": "2026-10-09T19:00:57.702Z",
+  "comp": ".impeccable/mocks/comp-3-screens-in-model.png",
+  "warnings": [
+    "region stage: \"codeDrawn\": true set in the regions file (the painted-material refusal is overridden: code draws this region)",
+    "region stage: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+  ],
+  "uncoveredInkCells": [],
+  "compSize": {
+    "width": 1536,
+    "height": 1024
+  },
+  "aspect": 1.5,
+  "orientation": "landscape",
+  "palette": [
+    {
+      "hex": "#0f0d0c",
+      "coverage": 0.6348
+    },
+    {
+      "hex": "#3c3126",
+      "coverage": 0.2039
+    },
+    {
+      "hex": "#755841",
+      "coverage": 0.0735
+    },
+    {
+      "hex": "#f7f7f6",
+      "coverage": 0.0557
+    },
+    {
+      "hex": "#a37c5f",
+      "coverage": 0.0321
+    }
+  ],
+  "bands": [
+    {
+      "y": 0.0471,
+      "strength": 0.3682
+    },
+    {
+      "y": 0.1765,
+      "strength": 0.3068
+    },
+    {
+      "y": 0.2,
+      "strength": 0.2967
+    },
+    {
+      "y": 0.2588,
+      "strength": 0.6019
+    },
+    {
+      "y": 0.2941,
+      "strength": 0.2732
+    },
+    {
+      "y": 0.3529,
+      "strength": 0.3349
+    },
+    {
+      "y": 0.3882,
+      "strength": 0.5488
+    },
+    {
+      "y": 0.4471,
+      "strength": 0.665
+    },
+    {
+      "y": 0.4824,
+      "strength": 0.2168
+    },
+    {
+      "y": 0.5294,
+      "strength": 0.2446
+    },
+    {
+      "y": 0.5765,
+      "strength": 0.2232
+    },
+    {
+      "y": 0.6235,
+      "strength": 0.3661
+    }
+  ],
+  "regions": [
+    {
+      "id": "wordmark",
+      "kind": "text",
+      "note": "LumiVerse wordmark in white heavy grotesk with a coral dot after it",
+      "grid": "A0:B0",
+      "coverBox": {
+        "x": 0,
+        "y": 0,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.0234,
+        "y": 0.0176,
+        "w": 0.1172,
+        "h": 0.041
+      },
+      "px": {
+        "x": 36,
+        "y": 18,
+        "w": 180,
+        "h": 42
+      },
+      "aspect": 4.2857,
+      "palette": [
+        {
+          "hex": "#080808",
+          "coverage": 0.8105
+        },
+        {
+          "hex": "#f7f7f7",
+          "coverage": 0.1418
+        },
+        {
+          "hex": "#9d9d9e",
+          "coverage": 0.0196
+        },
+        {
+          "hex": "#535453",
+          "coverage": 0.0159
+        },
+        {
+          "hex": "#f63840",
+          "coverage": 0.0122
+        }
+      ],
+      "detail": {
+        "energy": 38.245
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 9,
+          "capHeightPx": 21.1,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.6873,
+          "advTall": 0.6992,
+          "advX": 0.5807,
+          "gap": 0.0711,
+          "xRatio": 0.708,
+          "stemW": 0.2082,
+          "contrast": 1.176,
+          "serif": 1.0048,
+          "densTall": 0.5197,
+          "densX": 0.5979,
+          "weight": 0.5197
+        },
+        "widthClass": "condensed",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "nav",
+      "kind": "text",
+      "note": "nav links Work, Services, Research, Studio, Contact in small white sans",
+      "grid": "D0:G0",
+      "coverBox": {
+        "x": 0.3,
+        "y": 0,
+        "w": 0.4,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.4642,
+        "y": 0.0234,
+        "w": 0.0547,
+        "h": 0.0293
+      },
+      "px": {
+        "x": 713,
+        "y": 24,
+        "w": 84,
+        "h": 30
+      },
+      "aspect": 2.8,
+      "palette": [
+        {
+          "hex": "#090909",
+          "coverage": 0.8393
+        },
+        {
+          "hex": "#edeef0",
+          "coverage": 0.075
+        },
+        {
+          "hex": "#b6b7bc",
+          "coverage": 0.0607
+        },
+        {
+          "hex": "#7d7b7d",
+          "coverage": 0.0214
+        },
+        {
+          "hex": "#383838",
+          "coverage": 0.0036
+        }
+      ],
+      "detail": {
+        "energy": 20.0699
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 8,
+          "capHeightPx": 10.7,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.6695,
+          "advTall": 0.7006,
+          "advX": 0.6695,
+          "gap": 0.0934,
+          "xRatio": 0.7219,
+          "stemW": 0.194,
+          "contrast": 1.2167,
+          "serif": 0.5131,
+          "densTall": 0.5658,
+          "densX": 0.59,
+          "weight": 0.5658
+        },
+        "widthClass": "normal",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "locale",
+      "kind": "text",
+      "note": "EN / HR switch in muted grey",
+      "grid": "I0:I0",
+      "box": {
+        "x": 0.8,
+        "y": 0,
+        "w": 0.1,
+        "h": 0.1
+      },
+      "px": {
+        "x": 1229,
+        "y": 0,
+        "w": 154,
+        "h": 102
+      },
+      "aspect": 1.5098,
+      "palette": [
+        {
+          "hex": "#9a7658",
+          "coverage": 0.5675
+        },
+        {
+          "hex": "#664e3b",
+          "coverage": 0.2523
+        },
+        {
+          "hex": "#bd966f",
+          "coverage": 0.1407
+        },
+        {
+          "hex": "#f83739",
+          "coverage": 0.0263
+        },
+        {
+          "hex": "#d5cbbe",
+          "coverage": 0.0132
+        }
+      ],
+      "detail": {
+        "energy": 3.6754
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": null,
+        "measuredAt": "2026-10-09T19:02:44.420Z",
+        "note": "no separable lettering in the crop; size by the region box"
+      }
+    },
+    {
+      "id": "nav-cta",
+      "kind": "control",
+      "note": "small solid coral Start a Project button with arrow",
+      "grid": "J0:J0",
+      "coverBox": {
+        "x": 0.9,
+        "y": 0,
+        "w": 0.1,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.8997,
+        "y": 0,
+        "w": 0.0781,
+        "h": 0.0645
+      },
+      "px": {
+        "x": 1382,
+        "y": 0,
+        "w": 120,
+        "h": 66
+      },
+      "aspect": 1.8182,
+      "palette": [
+        {
+          "hex": "#f83739",
+          "coverage": 0.3844
+        },
+        {
+          "hex": "#403525",
+          "coverage": 0.3313
+        },
+        {
+          "hex": "#2f1f1f",
+          "coverage": 0.1298
+        },
+        {
+          "hex": "#684c38",
+          "coverage": 0.1088
+        },
+        {
+          "hex": "#7f322e",
+          "coverage": 0.0457
+        }
+      ],
+      "detail": {
+        "energy": 10.211
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "headline",
+      "kind": "text",
+      "note": "We build / Better / Humans. on three lines, very heavy tight white grotesk",
+      "grid": "A1:D4",
+      "coverBox": {
+        "x": 0,
+        "y": 0.1,
+        "w": 0.4,
+        "h": 0.4
+      },
+      "box": {
+        "x": 0.0221,
+        "y": 0.1621,
+        "w": 0.3776,
+        "h": 0.3379
+      },
+      "px": {
+        "x": 34,
+        "y": 166,
+        "w": 580,
+        "h": 346
+      },
+      "aspect": 1.6763,
+      "palette": [
+        {
+          "hex": "#090808",
+          "coverage": 0.6695
+        },
+        {
+          "hex": "#f8f8f7",
+          "coverage": 0.3015
+        },
+        {
+          "hex": "#7d7e80",
+          "coverage": 0.0123
+        },
+        {
+          "hex": "#4b4c4e",
+          "coverage": 0.0096
+        },
+        {
+          "hex": "#b7babe",
+          "coverage": 0.0071
+        }
+      ],
+      "detail": {
+        "energy": 47.6754
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 3,
+          "glyphs": 16,
+          "capHeightPx": 84.5,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.7084,
+          "advTall": 0.788,
+          "advX": 0.7084,
+          "gap": 0.0412,
+          "xRatio": 0.7556,
+          "stemW": 0.2511,
+          "contrast": 1.2513,
+          "serif": null,
+          "densTall": 0.713,
+          "densX": 0.7433,
+          "weight": 0.713
+        },
+        "widthClass": "normal",
+        "weightClass": "black",
+        "chosen": {
+          "family": "Golos Text",
+          "weight": 700,
+          "fontSizePx": 120,
+          "source": "index",
+          "fp": {
+            "lines": 1,
+            "glyphs": 7,
+            "capHeightPx": 85,
+            "inkIsDark": true,
+            "allCaps": false,
+            "advance": 0.753,
+            "advTall": 0.7589,
+            "advX": 0.7059,
+            "gap": 0.1294,
+            "xRatio": 0.7588,
+            "stemW": 0.2324,
+            "contrast": 1.2454,
+            "serif": 0.5963,
+            "densTall": 0.6332,
+            "densX": 0.6935,
+            "weight": 0.6332
+          },
+          "stamp": "ffe908a5eaca"
+        }
+      }
+    },
+    {
+      "id": "subline",
+      "kind": "text",
+      "note": "one-line subline in light grey: Senior AI studio in Zagreb. Ambitious products, shipped and checked.",
+      "grid": "A4:D5",
+      "coverBox": {
+        "x": 0,
+        "y": 0.4,
+        "w": 0.4,
+        "h": 0.2
+      },
+      "box": {
+        "x": 0.0273,
+        "y": 0.4004,
+        "w": 0.3047,
+        "h": 0.0586
+      },
+      "px": {
+        "x": 42,
+        "y": 410,
+        "w": 468,
+        "h": 60
+      },
+      "aspect": 7.8,
+      "palette": [
+        {
+          "hex": "#f8f8f8",
+          "coverage": 0.5221
+        },
+        {
+          "hex": "#080808",
+          "coverage": 0.4221
+        },
+        {
+          "hex": "#cacaca",
+          "coverage": 0.0361
+        },
+        {
+          "hex": "#505151",
+          "coverage": 0.0155
+        },
+        {
+          "hex": "#878787",
+          "coverage": 0.0042
+        }
+      ],
+      "detail": {
+        "energy": 62.2392
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": null,
+        "measuredAt": "2026-10-09T19:01:03.148Z",
+        "note": "no separable lettering in the crop; size by the region box"
+      }
+    },
+    {
+      "id": "cta",
+      "kind": "control",
+      "note": "solid coral Start a Project button with arrow",
+      "grid": "A5:B5",
+      "coverBox": {
+        "x": 0,
+        "y": 0.5,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.0273,
+        "y": 0.5176,
+        "w": 0.1328,
+        "h": 0.0645
+      },
+      "px": {
+        "x": 42,
+        "y": 530,
+        "w": 204,
+        "h": 66
+      },
+      "aspect": 3.0909,
+      "palette": [
+        {
+          "hex": "#f8383a",
+          "coverage": 0.6486
+        },
+        {
+          "hex": "#090808",
+          "coverage": 0.2993
+        },
+        {
+          "hex": "#f8f2f1",
+          "coverage": 0.0217
+        },
+        {
+          "hex": "#f5565a",
+          "coverage": 0.0217
+        },
+        {
+          "hex": "#f8898d",
+          "coverage": 0.0088
+        }
+      ],
+      "detail": {
+        "energy": 16.4634
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "secondary",
+      "kind": "text",
+      "note": "Explore the work, white underlined link",
+      "grid": "B5:C5",
+      "coverBox": {
+        "x": 0.1,
+        "y": 0.5,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.1003,
+        "y": 0.5176,
+        "w": 0.0586,
+        "h": 0.0645
+      },
+      "px": {
+        "x": 154,
+        "y": 530,
+        "w": 90,
+        "h": 66
+      },
+      "aspect": 1.3636,
+      "palette": [
+        {
+          "hex": "#f8383a",
+          "coverage": 0.6631
+        },
+        {
+          "hex": "#080808",
+          "coverage": 0.2844
+        },
+        {
+          "hex": "#621818",
+          "coverage": 0.0263
+        },
+        {
+          "hex": "#f8f8f8",
+          "coverage": 0.017
+        },
+        {
+          "hex": "#f8a0a3",
+          "coverage": 0.0093
+        }
+      ],
+      "detail": {
+        "energy": 7.6357
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": null,
+        "measuredAt": "2026-10-09T19:02:44.477Z",
+        "note": "no separable lettering in the crop; size by the region box"
+      }
+    },
+    {
+      "id": "stage",
+      "kind": "chrome",
+      "note": "real-time WebGL canvas (React Three Fiber, user-chosen): the lit maquette on its plinth with screens, figures and placards; rendered by code, not a raster",
+      "grid": "D1:J8",
+      "codeDrawn": true,
+      "container": true,
+      "box": {
+        "x": 0.3,
+        "y": 0.1,
+        "w": 0.7,
+        "h": 0.8
+      },
+      "px": {
+        "x": 461,
+        "y": 102,
+        "w": 1075,
+        "h": 819
+      },
+      "aspect": 1.3126,
+      "palette": [
+        {
+          "hex": "#110f0d",
+          "coverage": 0.6389
+        },
+        {
+          "hex": "#3e3124",
+          "coverage": 0.2042
+        },
+        {
+          "hex": "#745841",
+          "coverage": 0.0814
+        },
+        {
+          "hex": "#142746",
+          "coverage": 0.0384
+        },
+        {
+          "hex": "#f5d7b0",
+          "coverage": 0.0371
+        }
+      ],
+      "detail": {
+        "energy": 24.0684
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "placard-mojkolega",
+      "kind": "text",
+      "note": "black placard on the plinth: MOJ KOLEGA / AI employee for webshops",
+      "grid": "D6:E6",
+      "coverBox": {
+        "x": 0.3,
+        "y": 0.6,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.3353,
+        "y": 0.5996,
+        "w": 0.1647,
+        "h": 0.0645
+      },
+      "px": {
+        "x": 515,
+        "y": 614,
+        "w": 253,
+        "h": 66
+      },
+      "aspect": 3.8333,
+      "palette": [
+        {
+          "hex": "#141312",
+          "coverage": 0.7647
+        },
+        {
+          "hex": "#6a503f",
+          "coverage": 0.0884
+        },
+        {
+          "hex": "#3c322a",
+          "coverage": 0.0679
+        },
+        {
+          "hex": "#a2795c",
+          "coverage": 0.0601
+        },
+        {
+          "hex": "#52504d",
+          "coverage": 0.0189
+        }
+      ],
+      "detail": {
+        "energy": 20.0109
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 3,
+          "capHeightPx": 54,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 1.6574,
+          "advTall": 1.6574,
+          "advX": null,
+          "gap": 0.1111,
+          "xRatio": 0.7479,
+          "stemW": 0.0322,
+          "contrast": 0.8948,
+          "serif": null,
+          "densTall": 0.3459,
+          "densX": null,
+          "weight": 0.3459
+        },
+        "widthClass": "wide",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "placard-bridj",
+      "kind": "text",
+      "note": "black placard on the plinth: BRIDJ / Embedded tech lead · 17 services",
+      "grid": "F6:G6",
+      "coverBox": {
+        "x": 0.5,
+        "y": 0.6,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.5,
+        "y": 0.5996,
+        "w": 0.1999,
+        "h": 0.0879
+      },
+      "px": {
+        "x": 768,
+        "y": 614,
+        "w": 307,
+        "h": 90
+      },
+      "aspect": 3.4111,
+      "palette": [
+        {
+          "hex": "#181412",
+          "coverage": 0.6827
+        },
+        {
+          "hex": "#956f55",
+          "coverage": 0.169
+        },
+        {
+          "hex": "#cd9a6e",
+          "coverage": 0.0551
+        },
+        {
+          "hex": "#5e4837",
+          "coverage": 0.0515
+        },
+        {
+          "hex": "#eeae70",
+          "coverage": 0.0417
+        }
+      ],
+      "detail": {
+        "energy": 26.4445
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 7,
+          "capHeightPx": 60,
+          "inkIsDark": false,
+          "allCaps": true,
+          "advance": 0.2167,
+          "advTall": 0.2167,
+          "advX": null,
+          "gap": 0.1667,
+          "xRatio": null,
+          "stemW": 0.025,
+          "contrast": 0.3805,
+          "serif": null,
+          "densTall": 0.3355,
+          "densX": null,
+          "weight": 0.3355
+        },
+        "widthClass": "compressed",
+        "weightClass": "light"
+      }
+    },
+    {
+      "id": "placard-airlaser",
+      "kind": "text",
+      "note": "black placard on the plinth: AIR-LASER / Physics design study · computed, not built",
+      "grid": "H6:I6",
+      "box": {
+        "x": 0.7,
+        "y": 0.6,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "px": {
+        "x": 1075,
+        "y": 614,
+        "w": 307,
+        "h": 102
+      },
+      "aspect": 3.0098,
+      "palette": [
+        {
+          "hex": "#171515",
+          "coverage": 0.5702
+        },
+        {
+          "hex": "#735845",
+          "coverage": 0.181
+        },
+        {
+          "hex": "#f4d1aa",
+          "coverage": 0.1058
+        },
+        {
+          "hex": "#9e7a5e",
+          "coverage": 0.0862
+        },
+        {
+          "hex": "#3c2f24",
+          "coverage": 0.0568
+        }
+      ],
+      "detail": {
+        "energy": 29.7325
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": null,
+        "measuredAt": "2026-10-09T19:02:44.449Z",
+        "note": "no separable lettering in the crop; size by the region box"
+      }
+    },
+    {
+      "id": "scroll-hint",
+      "kind": "text",
+      "note": "Scroll to enter the model with a down arrow, muted grey",
+      "grid": "A9:B9",
+      "coverBox": {
+        "x": 0,
+        "y": 0.9,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.0273,
+        "y": 0.918,
+        "w": 0.1367,
+        "h": 0.0293
+      },
+      "px": {
+        "x": 42,
+        "y": 940,
+        "w": 210,
+        "h": 30
+      },
+      "aspect": 7,
+      "palette": [
+        {
+          "hex": "#0a0a09",
+          "coverage": 0.8743
+        },
+        {
+          "hex": "#2c2d36",
+          "coverage": 0.0414
+        },
+        {
+          "hex": "#797d86",
+          "coverage": 0.04
+        },
+        {
+          "hex": "#52575b",
+          "coverage": 0.0329
+        },
+        {
+          "hex": "#9ca4aa",
+          "coverage": 0.0114
+        }
+      ],
+      "detail": {
+        "energy": 30.1121
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 19,
+          "capHeightPx": 13.6,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.5881,
+          "advTall": 0.5881,
+          "advX": 0.5881,
+          "gap": 0.0735,
+          "xRatio": 0.647,
+          "stemW": 0.1514,
+          "contrast": 1.0042,
+          "serif": 0.4337,
+          "densTall": 0.5105,
+          "densX": 0.5361,
+          "weight": 0.5105
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "orbit-hint",
+      "kind": "text",
+      "note": "drag to orbit with an orbit icon, muted grey",
+      "grid": "J9:J9",
+      "coverBox": {
+        "x": 0.9,
+        "y": 0.9,
+        "w": 0.1,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.8997,
+        "y": 0.9004,
+        "w": 0.082,
+        "h": 0.0527
+      },
+      "px": {
+        "x": 1382,
+        "y": 922,
+        "w": 126,
+        "h": 54
+      },
+      "aspect": 2.3333,
+      "palette": [
+        {
+          "hex": "#2e2826",
+          "coverage": 0.5627
+        },
+        {
+          "hex": "#514130",
+          "coverage": 0.3773
+        },
+        {
+          "hex": "#7a7470",
+          "coverage": 0.0307
+        },
+        {
+          "hex": "#9c999c",
+          "coverage": 0.0173
+        },
+        {
+          "hex": "#78583a",
+          "coverage": 0.012
+        }
+      ],
+      "detail": {
+        "energy": 8.6996
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 5,
+          "capHeightPx": 39,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.2051,
+          "advTall": null,
+          "advX": 0.2051,
+          "gap": 0.2949,
+          "xRatio": 0.3333,
+          "stemW": 0.0609,
+          "contrast": 1.0064,
+          "serif": null,
+          "densTall": null,
+          "densX": 0.6266,
+          "weight": 0.6266
+        },
+        "widthClass": "compressed",
+        "weightClass": "bold"
+      }
+    }
+  ]
+}

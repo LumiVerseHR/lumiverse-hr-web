@@ -1,0 +1,322 @@
+{
+  "en": {
+    "slug": "lider-pdf-archive",
+    "meta": {
+      "title": "Lider Digital Archive – AI Document Digitization | LumiVerse",
+      "description": "AI-powered digitization of 50,000+ magazine articles: custom OCR, layout detection and Croatian NLP turning decades of print into structured data."
+    },
+    "kind": "Document AI",
+    "title": "Lider Digital Archive",
+    "subtitle": "Decades of business journalism, locked in PDFs. We built an AI pipeline that extracted, structured, and indexed 50,000+ articles – making them searchable and ready for the age of AI.",
+    "ctas": [
+      {
+        "label": "Digitize Your Archive",
+        "href": "/contact"
+      },
+      {
+        "label": "See How It Works",
+        "href": "#pipeline"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/lider-pdf-archive/0017_014.jpg",
+        "alt": "Original Lider magazine page showing complex multi-column layout with images and Croatian text - demonstrating the complexity of documents processed",
+        "caption": "Original magazine page showing the complex layouts our AI pipeline processes",
+        "width": 900,
+        "height": 1200
+      }
+    ],
+    "stats": [
+      {
+        "value": "50K+",
+        "label": "Articles Processed"
+      },
+      {
+        "value": "Decades",
+        "label": "of Archive Content"
+      },
+      {
+        "value": "Croatian",
+        "label": "Language Processing"
+      },
+      {
+        "value": "Structured",
+        "label": "Searchable Data"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Not Your Typical OCR Job",
+        "lede": "Magazine layouts break standard document processing – multi-column text, images that split articles, stories that span pages.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Layout Detection & OCR",
+                "body": "Magazine pages aren't documents. Articles wrap around images, jump across pages, and share space with ads. Standard OCR gives you garbled soup.\n\nMulti-column text recognition\nArticle boundary detection\nImage and caption identification\nMulti-page article tracking"
+              },
+              {
+                "title": "Croatian Language AI",
+                "body": "Most AI models struggle with Croatian. Diacritical marks get mangled, context is lost, and business terminology comes out wrong.\n\nCustom language model training\nDiacritical mark preservation\nContext-aware text correction\nAuthor and title extraction"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pipeline",
+        "title": "Processing Pipeline",
+        "lede": "Four stages from raw PDF to structured, searchable content.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "PDF Ingestion",
+                "body": "Automated processing of scanned magazine pages with quality normalization"
+              },
+              {
+                "title": "Layout Analysis",
+                "body": "Computer vision for structure detection, segmentation, and reading order"
+              },
+              {
+                "title": "OCR & Extraction",
+                "body": "Text recognition with Croatian language processing and error correction"
+              },
+              {
+                "title": "Data Structuring",
+                "body": "Converting to searchable, structured format with metadata enrichment"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "What We Built",
+        "lede": "Custom algorithms for the specific challenges of magazine digitization.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Multi-Page Tracking",
+                "body": "Articles that continue on page 47 get automatically connected. Our algorithms track continuity markers and content flow across the entire magazine."
+              },
+              {
+                "title": "Author Recognition",
+                "body": "Pattern recognition extracts and normalizes author information from various byline formats and positions within magazine layouts."
+              },
+              {
+                "title": "Auto-categorization",
+                "body": "Machine learning classifies articles by topic, industry, and content type – making the archive instantly navigable by subject."
+              },
+              {
+                "title": "Post-Processing Pipeline",
+                "body": "Every extracted article runs through validation and quality control. Spell checking, format normalization, metadata enrichment, and deduplication happen automatically.\n\nAutomated quality scoring\nCross-reference validation\nHuman review queuing for edge cases"
+              },
+              {
+                "title": "Full-text Indexing",
+                "body": "Every word, every article, instantly searchable. The archive becomes a queryable database, ready for AI applications."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Results & Impact",
+        "lede": "From locked PDFs to living, searchable archive.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Digital Preservation",
+                "body": "Decades of Croatian business journalism preserved in structured, future-proof format. Full-text search across the entire archive.\n\nComplete archive digitization\nRich metadata for every article\nFull-text search capability"
+              },
+              {
+                "title": "AI-Ready Data",
+                "body": "The structured archive now powers Pitaj Lider – the AI assistant. What was locked in PDFs is now training data for business intelligence.\n\nPowers AI assistants\nSemantic search ready\nRAG-compatible format"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Have Archives to Digitize?",
+      "body": "Our document AI handles complex layouts, multiple languages, and archives of any size. Let's talk about your digitization project.",
+      "cta": {
+        "label": "See starting prices",
+        "href": "/pricing"
+      },
+      "secondary": {
+        "label": "tell us what you're building",
+        "href": "/contact"
+      },
+      "badge": "Open for new projects",
+      "note": "See starting prices for this kind of work, or tell us what you're building and we'll reply within 24 hours. Rather use one of our products, like Tvrtko.ai, Moj Kolega or Titlomat? Those are open too."
+    }
+  },
+  "hr": {
+    "slug": "lider-pdf-archive",
+    "meta": {
+      "title": "Lider digitalna arhiva - AI digitalizacija dokumenata | LumiVerse",
+      "description": "Digitalizacija više od 50.000 članaka iz magazina uz AI: vlastiti OCR, prepoznavanje prijeloma i hrvatski NLP pretvaraju desetljeća tiska u strukturirane podatke."
+    },
+    "kind": "AI za dokumente",
+    "title": "Lider digitalna arhiva",
+    "subtitle": "Desetljeća poslovnog novinarstva, zaključana u PDF-ovima. Izgradili smo AI pipeline koji je izdvojio, strukturirao i indeksirao više od 50.000 članaka — i učinio ih pretraživima i spremnima za doba AI-ja.",
+    "ctas": [
+      {
+        "label": "Digitalizirajte svoju arhivu",
+        "href": "/hr/contact"
+      },
+      {
+        "label": "Pogledajte kako radi",
+        "href": "#pipeline"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/lider-pdf-archive/0017_014.jpg",
+        "alt": "Izvorna stranica magazina Lider sa složenim višestupčanim prijelomom, slikama i hrvatskim tekstom - prikaz složenosti obrađenih dokumenata",
+        "caption": "Izvorna stranica magazina s prikazom složenih prijeloma koje naš AI pipeline obrađuje",
+        "width": 900,
+        "height": 1200
+      }
+    ],
+    "stats": [
+      {
+        "value": "50K+",
+        "label": "Obrađenih članaka"
+      },
+      {
+        "value": "Desetljeća",
+        "label": "sadržaja iz arhive"
+      },
+      {
+        "value": "Hrvatski",
+        "label": "Obrada jezika"
+      },
+      {
+        "value": "Strukturirani",
+        "label": "Pretraživi podaci"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Nije običan OCR posao",
+        "lede": "Prijelom magazina lomi standardnu obradu dokumenata — tekst u više stupaca, slike koje presijecaju članke, priče preko više stranica.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Prepoznavanje prijeloma i OCR",
+                "body": "Stranice magazina nisu dokumenti. Članci se ovijaju oko slika, preskaču na druge stranice i dijele prostor s oglasima. Standardni OCR daje nerazumljivu kašu.\n\nPrepoznavanje teksta u više stupaca\nOtkrivanje granica članka\nPrepoznavanje slika i potpisa\nPraćenje članaka kroz više stranica"
+              },
+              {
+                "title": "AI za hrvatski jezik",
+                "body": "Većina AI modela muči se s hrvatskim. Dijakritički se znakovi izobliče, kontekst se izgubi, a poslovno nazivlje ispadne krivo.\n\nTreniranje vlastitog jezičnog modela\nOčuvanje dijakritičkih znakova\nIspravak teksta uz razumijevanje konteksta\nIzdvajanje autora i naslova"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pipeline",
+        "title": "Pipeline obrade",
+        "lede": "Četiri koraka od sirovog PDF-a do strukturiranog, pretraživog sadržaja.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Učitavanje PDF-a",
+                "body": "Automatska obrada skeniranih stranica magazina, uz izjednačavanje kvalitete"
+              },
+              {
+                "title": "Analiza prijeloma",
+                "body": "Računalni vid za prepoznavanje strukture, segmentaciju i redoslijed čitanja"
+              },
+              {
+                "title": "OCR i izdvajanje",
+                "body": "Prepoznavanje teksta uz obradu hrvatskog jezika i ispravljanje pogrešaka"
+              },
+              {
+                "title": "Strukturiranje podataka",
+                "body": "Pretvaranje u pretraživ, strukturiran oblik, uz obogaćivanje metapodacima"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Što smo izgradili",
+        "lede": "Vlastiti algoritmi za specifične izazove digitalizacije magazina.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Praćenje kroz stranice",
+                "body": "Članci koji se nastavljaju na 47. stranici automatski se povezuju. Naši algoritmi prate oznake nastavka i tok sadržaja kroz cijeli magazin."
+              },
+              {
+                "title": "Prepoznavanje autora",
+                "body": "Prepoznavanje obrazaca izvlači i ujednačava podatke o autoru iz različitih oblika i položaja potpisa unutar prijeloma."
+              },
+              {
+                "title": "Automatsko razvrstavanje",
+                "body": "Strojno učenje razvrstava članke po temi, djelatnosti i vrsti sadržaja — pa arhiva odmah postaje prohodna po predmetu."
+              },
+              {
+                "title": "Naknadna obrada",
+                "body": "Svaki izdvojeni članak prolazi provjeru i kontrolu kvalitete. Provjera pravopisa, ujednačavanje formata, obogaćivanje metapodacima i uklanjanje duplikata odvijaju se automatski.\n\nAutomatsko ocjenjivanje kvalitete\nProvjera unakrsnih poveznica\nRubni slučajevi idu u red za ljudski pregled"
+              },
+              {
+                "title": "Indeksiranje cijelog teksta",
+                "body": "Svaka riječ, svaki članak, odmah pretraživi. Arhiva postaje baza nad kojom se postavljaju upiti, spremna za AI primjene."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Rezultati i učinak",
+        "lede": "Od zaključanih PDF-ova do žive, pretražive arhive.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Digitalno očuvanje",
+                "body": "Desetljeća hrvatskog poslovnog novinarstva sačuvana u strukturiranom obliku otpornom na vrijeme. Pretraga cijelog teksta kroz cijelu arhivu.\n\nDigitalizacija cijele arhive\nBogati metapodaci za svaki članak\nMogućnost pretrage cijelog teksta"
+              },
+              {
+                "title": "Podaci spremni za AI",
+                "body": "Strukturirana arhiva danas pogoni AI asistenta Pitaj Lider. Ono što je bilo zaključano u PDF-ovima sada je podloga za poslovnu inteligenciju.\n\nPogoni AI asistente\nSpremno za semantičku pretragu\nOblik kompatibilan s RAG-om"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Imate arhivu za digitalizaciju?",
+      "body": "Naš AI za dokumente nosi složene prijelome, više jezika i arhive bilo koje veličine. Razgovarajmo o Vašem projektu digitalizacije.",
+      "cta": {
+        "label": "Pogledajte početne cijene",
+        "href": "/hr/pricing"
+      },
+      "secondary": {
+        "label": "recite što gradite",
+        "href": "/hr/contact"
+      },
+      "badge": "Primamo nove projekte",
+      "note": "Pogledajte početne cijene za ovakav posao ili nam recite što gradite i odgovorit ćemo u roku od 24 sata. Radije biste koristili neki od naših proizvoda, poput Tvrtko.ai, Moj Kolega ili Titlomata? I oni su dostupni."
+    }
+  }
+}

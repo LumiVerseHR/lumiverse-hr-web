@@ -1,0 +1,444 @@
+{
+  "en": {
+    "slug": "aimito",
+    "meta": {
+      "title": "The Aimito – A Store With a Content Engine Inside It | LumiVerse",
+      "description": "A comic-book apparel brand for developers: 889 original designs, cross-modal vibe search over CLIP embeddings, and artwork generated as a build step."
+    },
+    "kind": "Our Product · Commerce & Content Engine",
+    "title": "The Aimito",
+    "subtitle": "A comic-book apparel brand for developers – 889 original designs, a search that takes a feeling instead of a keyword, and a pipeline that makes new artwork a build step rather than a budget line.",
+    "ctas": [
+      {
+        "label": "Visit The Aimito",
+        "href": "https://theaimito.com",
+        "external": true
+      },
+      {
+        "label": "Build One For Your Brand",
+        "href": "/contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/aimito/aimito-1.jpg",
+        "alt": "The Aimito storefront - every dev is a hero, dress like one - with the vibe search bar",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/aimito/aimito-2.jpg",
+        "alt": "Vibe search results for \"3am on-call despair\" - 24 matching on-call designs",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/aimito/aimito-3.jpg",
+        "alt": "Swipe the Slop - flicking through the 889-design catalogue one card at a time",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "889",
+        "label": "Original designs, zero licensing risk"
+      },
+      {
+        "value": "10",
+        "label": "Themed collections, called squads"
+      },
+      {
+        "value": "0",
+        "label": "Units of inventory held"
+      },
+      {
+        "value": "€0",
+        "label": "Outside funding raised"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Two Jokes in One Word",
+        "blocks": [
+          {
+            "type": "text",
+            "paragraphs": [
+              "The Aimito.\nSay it out loud: daj mi to.",
+              "In English it reads \"the AI-mito.\" In Croatian it's \"gimme that\" – the exact sound an impulse buy makes. The AI angle and the purchase intent, hiding in the same four syllables. The buy button on every product just says Gimme that.",
+              "The site is English-only. The Croatian is saved as a reveal on the About page, not sprinkled through the UI."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "A Tribe With Nothing Good to Wear",
+        "lede": "Developers buy clothing to signal who they are – conference tees, swag, \"it's always DNS\" mugs. Trigger: humour plus belonging, on repeat.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "What They're Offered Instead",
+                "body": "Enormous unmoderated marketplaces – vast selection, thin quality, trademark landmines, no brand to belong to\nOne-joke shops with a dozen shirts and no reason to ever come back\nCompany swag stores, which have a world but aren't funny and aren't for sale to the tribe\n\nNobody owns the curated lane: original art, a brand world, and a way to find the thing you meant."
+              },
+              {
+                "title": "Why Now",
+                "body": "\"AI slop.\" Vibe coding. The confidently wrong model. An entire comedic seam opened up in the last two years and nobody had mined it properly – which is why two of the ten squads are AI Slop and AI Voices.\n\nEvery design is original artwork, which turns the marketplaces' structural weakness – takedowns and trademark risk – into a moat instead of a threat."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "A Content Engine Wearing a Shop",
+        "lede": "The defensible part is the loop, not the joke: the marginal cost of a new design or advert is compute. Content is a build step.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Generate",
+                "body": "A local generation stack produces artwork in batches – no per-image API bill, no external rights questions, and the freedom to throw most of it away."
+              },
+              {
+                "title": "Curate",
+                "body": "A quality and diversity pass prunes hard. Generation is cheap, so the catalogue is defined by what gets cut – the same lesson the game taught us about taste being the scarce input."
+              },
+              {
+                "title": "Produce",
+                "body": "A promo pipeline turns any design into a vertical hero clip starring a recurring caped character, with the deterministic branding pieces composited identically every time."
+              },
+              {
+                "title": "Distribute",
+                "body": "Short-form video and the places the tribe actually lives. A bootstrapped brand can't buy attention, so the plan is built around content that costs compute rather than budget."
+              },
+              {
+                "title": "Convert",
+                "body": "Vibe search turns a described feeling into a product page. Print-on-demand fulfilment means no inventory, no upfront capital and worldwide shipping from day one."
+              },
+              {
+                "title": "Feed It Back",
+                "body": "Which jokes convert decides what gets generated next. The loop closes, and the catalogue starts learning the audience instead of guessing at it."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Where the Engineering Went",
+        "lede": "The hard part wasn't making an image – it was everything that turns a generated picture into a garment someone is happy to receive.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Search That Takes a Feeling",
+                "body": "Type \"3am on-call despair\" or \"npm chaos\" and get the shirt you meant. The query and the artwork live in one shared embedding space, so text finds images directly – no keyword tagging, no manual taxonomy across 889 designs. Product pages use the same vectors in reverse for visually similar neighbours.\n\nCLIP embeddings served by a dedicated microservice\nPostgreSQL with pgvector, HNSW-indexed for fast nearest-neighbour\nTrigram fallback, so the search box is never useless\nThe killer feature for gift buyers: \"shirt for my programmer boyfriend\""
+              },
+              {
+                "title": "A Model That Checks the Art",
+                "body": "A multimodal model running on local hardware reviews designs at publish time – reading back the text, catching botched background removal, and flagging anything not print-worthy. No cloud call, no per-image cost."
+              },
+              {
+                "title": "Most of It Isn't Prompting",
+                "body": "Diffusion models are bad at legible text and precise layout, and a joke shirt is mostly legible text and precise layout. So the recurring formats are built by deterministic generators instead: certification badges with curved ring text, syntax-highlighted code panels, OS error dialogs, captcha grids, nutrition-facts labels, flowcharts, tonal ASCII art. The model supplies illustration; code supplies typography.\n\nComposition and typesetting are a separate, repeatable stage\nSame joke format, infinite variations, consistent every time"
+              },
+              {
+                "title": "A Measured Print Box",
+                "body": "The exact printable area of each garment was measured by printing a calibration pattern through the fulfiller's own mockup generator and reading the result back – not estimated."
+              },
+              {
+                "title": "The Audit That Caught 65",
+                "body": "A pre-launch sweep of all 889 designs found 65 with no print-resolution file – every one of which would have handed the printer a dead link on a real order. All 65 were regenerated and upscaled before anyone could buy them."
+              },
+              {
+                "title": "No Mockup Slop",
+                "body": "Every product photo is the real garment with the real print, not a glossy fake. It's the brand's trust promise: what you see is what ships."
+              },
+              {
+                "title": "Which Shirts It Works On",
+                "body": "Pale artwork disappears on a cream tee. Rules decide the garment colours each design is offered on, and a colour-adaptation step retunes two-tone text so it survives the switch."
+              }
+            ]
+          },
+          {
+            "type": "images",
+            "items": [
+              {
+                "src": "/work/aimito/aimito-designs.jpg",
+                "alt": "A grid of Aimito designs - certification badges, captcha grids, error dialogs, mascot stickers and nutrition-facts labels",
+                "width": 1280,
+                "height": 800
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Built, Stocked, Running",
+        "blocks": [
+          {
+            "type": "text",
+            "paragraphs": [
+              "The storefront is live, the catalogue is full, and the purchase path – checkout, tax, fulfilment, confirmation email – is wired end to end against real providers.",
+              "What's left is the part no pipeline can automate: distribution. Getting the first hundred people to find it, wear it, and tell someone. That's the honest state of it, and it's the phase the whole engine was built to make survivable on a bootstrapped budget."
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Built On",
+                "body": "Next.js 16 and React 19 storefront, Tailwind\nFastAPI, SQLAlchemy 2.0, background worker on Redis\nPostgreSQL 16 with pgvector, S3-compatible object storage\nStripe Checkout with EU VAT handling, print-on-demand fulfilment\nEvery service containerized, deployed behind a reverse proxy"
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Why This Is in Our Portfolio",
+                "body": "The Aimito is the commercial version of a thesis we keep testing: when generation gets cheap, the advantage moves to whoever built the machinery around it – the curation pass, the deterministic composition, the automated quality check, the loop that feeds sales data back into what gets made next. A brand that manufactures its own catalogue and its own marketing is just the clearest way to demonstrate that. The same engine works for anyone whose growth is throttled by how much content they can afford to produce."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Content as a Build Step",
+      "body": "If your growth is limited by how much content you can afford to make, that's a pipeline problem, not a budget problem. Go look at the store first – then let's talk about yours.",
+      "cta": {
+        "label": "Visit The Aimito",
+        "href": "https://theaimito.com",
+        "external": true
+      },
+      "secondary": {
+        "label": "Start a Project",
+        "href": "/contact"
+      }
+    }
+  },
+  "hr": {
+    "slug": "aimito",
+    "meta": {
+      "title": "The Aimito - trgovina s pogonom za sadržaj u sebi | LumiVerse",
+      "description": "Strip-brend odjeće za programere: 889 originalnih dizajna, pretraga po dojmu preko CLIP vektora i grafika koja nastaje kao korak u buildu."
+    },
+    "kind": "Naš proizvod · Trgovina i pogon za sadržaj",
+    "title": "The Aimito",
+    "subtitle": "Strip-brend odjeće za programere — 889 originalnih dizajna, pretraga koja prima dojam umjesto ključne riječi i pipeline koji novu grafiku pretvara u korak u buildu, a ne u stavku u proračunu.",
+    "ctas": [
+      {
+        "label": "Posjetite The Aimito",
+        "href": "https://theaimito.com",
+        "external": true
+      },
+      {
+        "label": "Napravite ovakvo nešto za svoj brend",
+        "href": "/hr/contact"
+      }
+    ],
+    "showcase": [
+      {
+        "src": "/work/aimito/aimito-1.jpg",
+        "alt": "Izlog trgovine The Aimito - svaki je programer heroj, neka se tako i oblači - s trakom za pretragu po dojmu",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/aimito/aimito-2.jpg",
+        "alt": "Rezultati pretrage po dojmu za \"3am on-call despair\" - 24 odgovarajuća dizajna na temu dežurstva",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "/work/aimito/aimito-3.jpg",
+        "alt": "Swipe the Slop - prelistavanje kataloga od 889 dizajna, karticu po karticu",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "stats": [
+      {
+        "value": "889",
+        "label": "Originalnih dizajna, bez rizika s licencama"
+      },
+      {
+        "value": "10",
+        "label": "Tematskih kolekcija, zvanih squads"
+      },
+      {
+        "value": "0",
+        "label": "Komada zaliha na skladištu"
+      },
+      {
+        "value": "€0",
+        "label": "Prikupljenog vanjskog kapitala"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Dvije šale u jednoj riječi",
+        "blocks": [
+          {
+            "type": "text",
+            "paragraphs": [
+              "The Aimito.\nIzgovorite naglas: daj mi to.",
+              "Upravo to — zvuk impulzivne kupnje. Stranom uhu isto ime zvuči kao „the AI-mito\". AI i namjera kupnje, skriveni u istim četirima slogovima. Na gumbu za kupnju svakog proizvoda piše samo Gimme that.",
+              "Trgovina je samo na engleskom. Hrvatska se šala čuva kao otkriće na stranici O nama, umjesto da se posipa po cijelom sučelju."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Pleme koje nema što dobro obući",
+        "lede": "Programeri odjeću kupuju da pokažu tko su — majice s konferencija, swag, šalice „it's always DNS\". Okidač: humor plus pripadnost, uvijek iznova.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Što im se nudi umjesto toga",
+                "body": "Ogromna nemoderirana tržišta — golem izbor, tanka kvaliteta, mine sa žigovima i nijedan brend kojem se može pripadati\nTrgovine s jednom šalom, desetak majica i nijednim razlogom za povratak\nFirmine swag trgovine, koje imaju svijet, ali nisu smiješne i ne prodaju se plemenu\n\nNitko nije zauzeo kurirani prostor: originalnu grafiku, svijet brenda i način da se pronađe baš ono što ste mislili."
+              },
+              {
+                "title": "Zašto sada",
+                "body": "„AI slop.\" Vibe coding. Model koji samouvjereno griješi. U posljednje dvije godine otvorila se cijela komična žila koju nitko nije valjano iskopao — zato su dva od deset squadova AI Slop i AI Voices.\n\nSvaki je dizajn originalna grafika, što strukturnu slabost velikih tržišta — uklanjanja i rizik sa žigovima — pretvara u prednost umjesto u prijetnju."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Pogon za sadržaj prerušen u trgovinu",
+        "lede": "Obranjiva je petlja, a ne šala: granični trošak novog dizajna ili reklame je procesorsko vrijeme. Sadržaj je korak u buildu.",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Generiranje",
+                "body": "Lokalni generativni stack izrađuje grafiku u serijama — bez API računa po slici, bez pitanja o tuđim pravima i sa slobodom da se većina baci."
+              },
+              {
+                "title": "Kuriranje",
+                "body": "Prolaz za kvalitetu i raznolikost reže bez milosti. Generiranje je jeftino, pa katalog definira ono što se izbaci — ista lekcija koju nas je naučila igra: ukus je rijedak sastojak."
+              },
+              {
+                "title": "Produkcija",
+                "body": "Promo pipeline svaki dizajn pretvara u okomiti udarni video s likom u plaštu koji se stalno vraća, a determinističke elemente brenda svaki put slaže jednako."
+              },
+              {
+                "title": "Distribucija",
+                "body": "Kratke forme videa i mjesta na kojima pleme stvarno živi. Brend bez ulagača ne može kupiti pažnju, pa je plan građen oko sadržaja koji stoji procesorskog vremena, a ne novca."
+              },
+              {
+                "title": "Konverzija",
+                "body": "Pretraga po dojmu opisani osjećaj pretvara u stranicu proizvoda. Print-on-demand znači bez zaliha, bez početnog kapitala i s dostavom po cijelom svijetu od prvog dana."
+              },
+              {
+                "title": "Povratna sprega",
+                "body": "Koje šale prodaju određuje što se sljedeće generira. Petlja se zatvara i katalog počinje učiti publiku umjesto da je pogađa."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Gdje je otišlo inženjerstvo",
+        "lede": "Teško nije bilo napraviti sliku, nego sve što generiranu sliku pretvara u odjevni predmet kojem će se netko obradovati.",
+        "blocks": [
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Pretraga koja prima osjećaj",
+                "body": "Upišite „3am on-call despair\" ili „npm chaos\" i dobijete majicu koju ste mislili. Upit i grafika žive u istom vektorskom prostoru, pa tekst pronalazi slike izravno — bez označavanja ključnim riječima i bez ručne taksonomije preko 889 dizajna. Stranice proizvoda iste vektore koriste obrnuto, za vizualno slične susjede.\n\nCLIP vektore poslužuje namjenski mikroservis\nPostgreSQL s pgvectorom, HNSW indeks za brzo traženje najbližih susjeda\nTrigramska zamjena, pa pretraga nikad nije beskorisna\nUbojita značajka za kupce darova: „majica za mog dečka programera\""
+              },
+              {
+                "title": "Model koji provjerava grafiku",
+                "body": "Multimodalni model na lokalnom hardveru pregledava dizajne pri objavi — čita tekst natrag, hvata loše uklonjenu pozadinu i označava sve što nije za tisak. Bez poziva u oblak i bez troška po slici."
+              },
+              {
+                "title": "Većina toga nije pisanje promptova",
+                "body": "Difuzijski su modeli loši u čitljivom tekstu i preciznom prijelomu, a majica sa šalom uglavnom je čitljiv tekst i precizan prijelom. Zato formate koji se ponavljaju izrađuju deterministički generatori: certifikacijske značke s tekstom u prstenu, isječci koda s obojenom sintaksom, dijalozi s greškama operacijskog sustava, captcha mreže, deklaracije s nutritivnim vrijednostima, dijagrami toka, ASCII art u tonovima. Model daje ilustraciju, kod daje tipografiju.\n\nKompozicija i slaganje teksta zaseban su, ponovljiv korak\nIsti format šale, beskonačno varijacija, svaki put dosljedno"
+              },
+              {
+                "title": "Izmjereno polje tiska",
+                "body": "Točna površina za tisak na svakom odjevnom predmetu izmjerena je tako da je kalibracijski uzorak propušten kroz partnerov vlastiti generator maketa i rezultat pročitan natrag — nije procijenjena."
+              },
+              {
+                "title": "Provjera koja je uhvatila njih 65",
+                "body": "Provjera prije lansiranja prošla je svih 889 dizajna i našla 65 bez datoteke u rezoluciji za tisak — svaki bi od njih na stvarnoj narudžbi tiskari predao mrtvu poveznicu. Svih 65 ponovno je generirano i povećano prije nego što ih je itko mogao kupiti."
+              },
+              {
+                "title": "Bez lažnih maketa",
+                "body": "Svaka je fotografija proizvoda stvarni odjevni predmet sa stvarnim tiskom, a ne uglancana laž. To je obećanje povjerenja: što vidite, to i stiže."
+              },
+              {
+                "title": "Na kojim majicama radi",
+                "body": "Blijeda grafika nestaje na kremastoj majici. Pravila određuju na kojim se bojama svaki dizajn nudi, a korak prilagodbe boje podešava dvobojni tekst da preživi promjenu."
+              }
+            ]
+          },
+          {
+            "type": "images",
+            "items": [
+              {
+                "src": "/work/aimito/aimito-designs.jpg",
+                "alt": "Mreža Aimito dizajna - certifikacijske značke, captcha mreže, dijalozi s greškama, naljepnice s maskotama i deklaracije s nutritivnim vrijednostima",
+                "width": 1280,
+                "height": 800
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Izgrađeno, napunjeno i u pogonu",
+        "blocks": [
+          {
+            "type": "text",
+            "paragraphs": [
+              "Trgovina je u pogonu, katalog je pun, a put do kupnje — blagajna, porez, isporuka, e-mail potvrde — spojen je od kraja do kraja na stvarne pružatelje usluga.",
+              "Ostaje dio koji nijedan pipeline ne može automatizirati: distribucija. Dovesti prvih sto ljudi da to pronađu, nose i nekome kažu. To je pošteno stanje stvari i faza zbog koje je cijeli pogon i građen — da se preživi bez ulagača."
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Izgrađeno na",
+                "body": "Trgovina na Next.js 16 i React 19, Tailwind\nFastAPI, SQLAlchemy 2.0, pozadinski radnik na Redisu\nPostgreSQL 16 s pgvectorom, objektna pohrana kompatibilna sa S3\nStripe Checkout s obračunom EU PDV-a, isporuka print-on-demand\nSvaki servis u kontejneru, iza obrnutog proxyja"
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "items": [
+              {
+                "title": "Zašto je ovo u našim referencama",
+                "body": "The Aimito je komercijalna verzija teze koju stalno provjeravamo: kad generiranje pojeftini, prednost prelazi na onoga tko je oko njega izgradio strojeve — prolaz kuriranja, determinističku kompoziciju, automatsku provjeru kvalitete i petlju koja podatke o prodaji vraća u ono što se sljedeće radi. Brend koji sam proizvodi vlastiti katalog i vlastiti marketing samo je najjasniji način da se to pokaže. Isti pogon radi za svakoga kome rast koči količina sadržaja koju si može priuštiti."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Sadržaj kao korak u buildu",
+      "body": "Ako Vam rast ograničava količina sadržaja koju si možete priuštiti, to je problem pipelinea, a ne proračuna. Prvo pogledajte trgovinu — pa onda razgovarajmo o Vašem.",
+      "cta": {
+        "label": "Posjetite The Aimito",
+        "href": "https://theaimito.com",
+        "external": true
+      },
+      "secondary": {
+        "label": "Pokrenite projekt",
+        "href": "/hr/contact"
+      }
+    }
+  }
+}
