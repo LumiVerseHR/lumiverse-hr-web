@@ -235,7 +235,7 @@ export const packagesCopy = {
   en: {
     title: `Packages - Fixed-Price AI and Web Services From ${from("web-to-video", "en")} | LumiVerse`,
     description:
-      "Fixed scope, fixed price, ordered in one message: a TikTok video from your web page, an AI prototype, a business website, an animated 3D hero and more. Prices in EUR, excluding VAT.",
+      "Fixed scope, fixed price, ordered in one message: a TikTok video of your web page, an AI prototype, a website, a 3D hero and more. EUR, excl. VAT.",
     label: "Packages",
     heading: "One thing, one price",
     intro:
@@ -263,7 +263,7 @@ export const packagesCopy = {
   hr: {
     title: `Paketi - AI i web usluge po fiksnoj cijeni od ${from("web-to-video", "hr")} | LumiVerse`,
     description:
-      "Fiksni opseg, fiksna cijena, narudžba u jednoj poruci: TikTok video od Vaše web stranice, AI prototip, poslovna web stranica, animirani 3D hero i više. Cijene u eurima, bez PDV-a.",
+      "Fiksni opseg, fiksna cijena, narudžba u jednoj poruci: TikTok video od Vaše stranice, AI prototip, web stranica, 3D hero i više. U eurima, bez PDV-a.",
     label: "Paketi",
     heading: "Jedna stvar, jedna cijena",
     intro:

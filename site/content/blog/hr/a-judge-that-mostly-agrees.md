@@ -1,6 +1,6 @@
 ---
 title: Sudac koji se uglavnom slaže nije sudac
-description: Testirali smo mali model kao suca za provjeru činjenica na portalu MOJ KRAJ. Bio je brži, slagao se oko lakih odluka i objavio bi 15 od 20 članaka koje je pravi sudac zadržao.
+description: Testirali smo mali model kao suca za provjeru činjenica na MOJ KRAJ. Bio je brži, slagao se oko lakih odluka i objavio bi 15 od 20 članaka koje je sudac zadržao.
 date: 2026-09-17
 tags: [Build Log, AI Evaluation]
 related: [mojkraj]

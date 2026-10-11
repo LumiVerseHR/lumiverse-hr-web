@@ -14,6 +14,8 @@ import { PackagesTeaser } from "@/components/packages/PackagesTeaser";
 import { hasLocale, localePath } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import styles from "./page.module.css";
+import { jsonLdHtml } from "@/lib/jsonld";
+import { organizationLd } from "@/lib/seo";
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
@@ -23,6 +25,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   return (
     <>
     <main>
+    <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdHtml(organizationLd)} />
     <section className={styles.hero} aria-labelledby="hero-title">
       <Beams />
       <HeroLaser lang={lang} copy={dict.hero.exhibit} />

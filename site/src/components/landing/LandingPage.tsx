@@ -12,6 +12,8 @@ import { localePath } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { getCase } from "@/lib/cases";
 import styles from "./Landing.module.css";
+import { breadcrumbLd, seo } from "@/lib/seo";
+import { jsonLdHtml } from "@/lib/jsonld";
 
 export async function LandingPage({ slug, lang, dict }: { slug: Landing["slug"]; lang: Locale; dict: Dictionary }) {
   const page = landings[slug];
@@ -46,6 +48,10 @@ export async function LandingPage({ slug, lang, dict }: { slug: Landing["slug"];
     <>
       <Header lang={lang} dict={dict} path={`/${slug}`} />
       <main className={styles.page}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdHtml(breadcrumbLd(lang, dict.pages.home, [{ name: page.meta.title[lang].split(/ [-|] /)[0], path: `/${slug}` }]))}
+        />
         <section className={styles.hero} aria-labelledby="landing-title">
           <h1 id="landing-title" className={styles.title}>{page.title[lang]}</h1>
           <p className={styles.subtitle}>{page.subtitle[lang]}</p>
@@ -122,9 +128,5 @@ export async function LandingPage({ slug, lang, dict }: { slug: Landing["slug"];
 
 export function landingMetadata(slug: Landing["slug"], lang: Locale) {
   const page = landings[slug];
-  return {
-    title: page.meta.title[lang],
-    description: page.meta.description[lang],
-    alternates: { canonical: localePath(lang, `/${slug}`), languages: { en: `/${slug}`, hr: `/hr/${slug}` } },
-  };
+  return seo({ lang, path: `/${slug}`, title: page.meta.title[lang], description: page.meta.description[lang] });
 }

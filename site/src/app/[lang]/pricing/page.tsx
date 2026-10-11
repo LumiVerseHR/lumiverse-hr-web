@@ -13,6 +13,7 @@ import { hasLocale, localePath, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { jsonLdHtml } from "@/lib/jsonld";
 import { priceSpecification, type Price } from "@/lib/offer";
+import { seo } from "@/lib/seo";
 
 const SITE = "https://www.lumiverse.hr";
 
@@ -36,11 +37,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/pricing">)
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const s = t[lang] as Copy;
-  return {
-    title: s.title,
-    description: s.description,
-    alternates: { canonical: localePath(lang, "/pricing"), languages: { en: "/pricing", hr: "/hr/pricing" } },
-  };
+  return seo({ lang, path: "/pricing", title: s.title, description: s.description });
 }
 
 function jsonLd(lang: Locale, s: Copy) {

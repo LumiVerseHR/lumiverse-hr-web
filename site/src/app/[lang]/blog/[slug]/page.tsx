@@ -6,11 +6,12 @@ import { Header } from "@/components/chrome/Header";
 import styles from "@/components/blog/Blog.module.css";
 import { Icon } from "@/components/icons/Icon";
 import { author, t } from "@/content/blog-i18n.mjs";
-import { hasLocale, localePath, locales, type Locale } from "@/i18n/config";
+import { hasLocale, localePath, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getCase } from "@/lib/cases";
 import { jsonLdHtml } from "@/lib/jsonld";
 import { allPosts, getPost } from "@/lib/posts";
+import { breadcrumbLd, seo } from "@/lib/seo";
 
 const SITE = "https://www.lumiverse.hr";
 type Copy = { home: string; blog: string; min: string; related: string; relatedCta: string; back: string };
@@ -24,9 +25,6 @@ export async function generateStaticParams() {
   return all.flat();
 }
 
-// Both language URLs of a post, for the ones it's written in.
-const languagesOf = (slug: string, langs: Locale[]) => Object.fromEntries(langs.map((l) => [l, localePath(l, `/blog/${slug}`)]));
-
 export async function generateMetadata({ params }: PageProps<"/[lang]/blog/[slug]">): Promise<Metadata> {
   const { lang, slug } = await params;
   if (!hasLocale(lang)) return {};
@@ -34,21 +32,23 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/blog/[slug
   if (!post) return {};
   const m = post.meta;
   return {
-    title: `${m.title} | LumiVerse`,
-    description: m.description,
-    keywords: m.tags,
-    alternates: { canonical: localePath(lang, `/blog/${slug}`), languages: languagesOf(slug, m.langs) },
-    openGraph: {
-      type: "article",
-      locale: lang === "hr" ? "hr_HR" : "en_US",
-      title: m.title,
+    ...seo({
+      lang,
+      path: `/blog/${slug}`,
+      title: `${m.title} | LumiVerse`,
       description: m.description,
-      images: m.image ? [m.image] : undefined,
-      publishedTime: m.date,
-      modifiedTime: m.updated,
-      authors: [author.name],
-      tags: m.tags,
-    },
+      image: m.image,
+      langs: m.langs,
+      openGraph: {
+        type: "article",
+        title: m.title,
+        publishedTime: m.date,
+        modifiedTime: m.updated,
+        authors: [author.name],
+        tags: m.tags,
+      },
+    }),
+    keywords: m.tags,
   };
 }
 
@@ -72,7 +72,7 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
     image: m.image ? `${SITE}${m.image}` : undefined,
     keywords: m.tags.join(", "),
     author: { "@type": "Person", name: author.name, url: author.url },
-    publisher: { "@type": "Organization", name: "LumiVerse d.o.o.", url: SITE },
+    publisher: { "@type": "Organization", "@id": `${SITE}/#organization`, name: "LumiVerse d.o.o.", url: SITE },
     inLanguage: lang,
     mainEntityOfPage: `${SITE}${localePath(lang, `/blog/${slug}`)}`,
   };
@@ -89,7 +89,7 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
         }}
       />
       <main className={styles.page}>
-        <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdHtml(jsonLd)} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdHtml([jsonLd, breadcrumbLd(lang, s.home, [{ name: s.blog, path: "/blog" }, { name: m.title, path: `/blog/${slug}` }])])} />
         <article className={styles.column}>
           <nav className={styles.crumbs} aria-label="Breadcrumb">
             <a href={localePath(lang)}>{s.home}</a>

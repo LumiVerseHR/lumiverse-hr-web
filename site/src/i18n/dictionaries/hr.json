@@ -190,7 +190,7 @@
     "research": {
       "label": "Istraživanje",
       "title": "Istraživanje - agentno inženjerstvo i provjera AI-ja | LumiVerse",
-      "description": "Neovisno istraživanje LumiVersea u računalnoj fizici i provjeri AI-ja: simulacijska studija od 49 stranica o hologramu koji lebdi u otvorenom zraku i bilješke o provjeri AI rezultata prije objave.",
+      "description": "Neovisno istraživanje u računalnoj fizici i provjeri AI-ja: simulacijska studija od 49 stranica o hologramu u otvorenom zraku i kako provjeravamo AI rezultate.",
       "heading": "Teški problemi, provjereni dvaput",
       "intro": "Neovisno istraživanje u računalnoj fizici i provjeri AI-ja. Svoje metode isprobavamo ondje gdje su greške skupe i lako se vide, svaki rezultat provjeravamo prema objavljenoj znanosti, a onaj koji ne prođe provjeru povlačimo.",
       "notesTitle": "Bilješke iz istraživanja",
@@ -250,7 +250,7 @@
     "contact": {
       "label": "Kontakt",
       "title": "Kontakt - pokrenite projekt s LumiVerseom | LumiVerse",
-      "description": "Recite nam što gradite. Odgovaramo u roku od 24 sata, iz Zagreba."
+      "description": "Recite nam što gradite ili naručite paket. Odgovaramo u roku od 24 sata iz Zagreba, s jasnim sljedećim korakom i cijenom."
     },
     "home": "Početna"
   }

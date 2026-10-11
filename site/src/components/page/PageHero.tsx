@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { localePath, type Locale } from "@/i18n/config";
 import { jsonLdHtml } from "@/lib/jsonld";
+import { seo } from "@/lib/seo";
 import styles from "./Page.module.css";
 
 const SITE = "https://www.lumiverse.hr";
@@ -57,11 +58,6 @@ export function PageHero({
 }
 
 // Title, description and both language URLs for an inner page.
-export function pageMetadata(lang: Locale, path: string, title: string, description: string, image = "/og/index.jpg"): Metadata {
-  return {
-    title,
-    description,
-    alternates: { canonical: localePath(lang, path), languages: { en: path, hr: localePath("hr", path) } },
-    openGraph: { title, description, url: localePath(lang, path), images: [image] },
-  };
+export function pageMetadata(lang: Locale, path: string, title: string, description: string, image?: string): Metadata {
+  return seo({ lang, path, title, description, image });
 }

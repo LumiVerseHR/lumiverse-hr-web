@@ -1,6 +1,6 @@
 ---
 title: Svaki očiti popravak pogoršao je naše hrvatske titlove
-description: Izmjerili smo Whisper na pravim hrvatskim podcastima, a zatim isprobali svaki očiti popravak. Nijedan nije pomogao - a nekoliko tjedana kasnije jedan smo ipak pustili u produkciju.
+description: Izmjerili smo Whisper na pravim hrvatskim podcastima i isprobali svaki očiti popravak. Nijedan nije pomogao, a tjednima kasnije jedan smo ipak pustili u rad.
 date: 2026-08-27
 tags: [Build Log, Speech AI]
 related: [titlomat]

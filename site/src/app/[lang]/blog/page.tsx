@@ -6,6 +6,8 @@ import { t } from "@/content/blog-i18n.mjs";
 import { hasLocale, localePath } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { allPosts } from "@/lib/posts";
+import { breadcrumbLd, seo, SITE } from "@/lib/seo";
+import { jsonLdHtml } from "@/lib/jsonld";
 
 type Copy = { indexTitle: string; indexDescription: string; home: string; blog: string; heading: string[]; intro: string; min: string; rss: string; empty: string; langNote: string };
 
@@ -13,11 +15,8 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/blog">): P
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const s = t[lang] as Copy;
-  return {
-    title: s.indexTitle,
-    description: s.indexDescription,
-    alternates: { canonical: localePath(lang, "/blog"), languages: { en: "/blog", hr: "/hr/blog" }, types: { "application/rss+xml": "/blog/rss.xml" } },
-  };
+  const meta = seo({ lang, path: "/blog", title: s.indexTitle, description: s.indexDescription });
+  return { ...meta, alternates: { ...meta.alternates, types: { "application/rss+xml": "/blog/rss.xml" } } };
 }
 
 export default async function BlogIndex({ params }: PageProps<"/[lang]/blog">) {
@@ -32,6 +31,28 @@ export default async function BlogIndex({ params }: PageProps<"/[lang]/blog">) {
     <>
       <Header lang={lang} dict={dict} path="/blog" />
       <main className={styles.page}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdHtml([
+            breadcrumbLd(lang, s.home, [{ name: s.blog, path: "/blog" }]),
+            {
+              "@context": "https://schema.org",
+              "@type": "Blog",
+              name: s.indexTitle,
+              description: s.indexDescription,
+              inLanguage: lang,
+              url: `${SITE}${localePath(lang, "/blog")}`,
+              publisher: { "@id": `${SITE}/#organization` },
+              blogPost: posts.map((post) => ({
+                "@type": "BlogPosting",
+                headline: post.title,
+                datePublished: post.date,
+                inLanguage: post.lang,
+                url: `${SITE}${localePath(post.lang, `/blog/${post.slug}`)}`,
+              })),
+            },
+          ])}
+        />
         <div className={styles.wrap}>
           <nav className={styles.crumbs} aria-label="Breadcrumb">
             <a href={localePath(lang)}>{s.home}</a>

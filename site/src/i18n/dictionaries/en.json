@@ -190,7 +190,7 @@
     "research": {
       "label": "Research",
       "title": "Research - Agentic Engineering and AI Verification | LumiVerse",
-      "description": "Independent research from LumiVerse in computational physics and AI verification: a 49-page simulation study of a hologram that floats in open air, and notes on judging AI output before it ships.",
+      "description": "Independent research in computational physics and AI verification: a 49-page simulation study of a hologram floating in open air, and how we check AI output.",
       "heading": "Hard problems, checked twice",
       "intro": "Independent research in computational physics and AI verification. We test our methods where mistakes are expensive and easy to spot, cross-check every result against published science, and retract the ones that fail.",
       "notesTitle": "Research notes",
@@ -250,7 +250,7 @@
     "contact": {
       "label": "Contact",
       "title": "Contact - Start a Project With LumiVerse | LumiVerse",
-      "description": "Tell us what you're building. We reply within 24 hours, from Zagreb."
+      "description": "Tell us what you're building, or order a package. We reply within 24 hours from Zagreb, with a clear next step and a price."
     },
     "home": "Home"
   }

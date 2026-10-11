@@ -1,6 +1,6 @@
 ---
 title: Kako smo laserom izrezali naslovnicu iz Blender rendera
-description: Tri uređaja, zlatni žičani modeli i figure poput onih s arhitektonskih maketa, izrađeni u Blenderu uz pomoć AI agenta i animirani bez WebGL-a. Plus bug sa sjenom koji je trebao četiri pokušaja.
+description: Tri uređaja, zlatni žičani modeli i figure s makete, izrađeni u Blenderu uz AI agenta i animirani bez WebGL-a. Plus bug sa sjenom koji je trebao četiri pokušaja.
 date: 2026-10-10
 tags: [Build Log, Agentic Engineering]
 related: [moj-kolega, titlomat, bridj]

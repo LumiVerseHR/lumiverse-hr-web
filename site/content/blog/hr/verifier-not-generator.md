@@ -1,6 +1,6 @@
 ---
 title: Prednost je u provjeravaču, ne u generatoru
-description: Generiranje je postalo jeftino. AI rezultat vrijedan isporuke čini ono što ga provjerava - četiri naša projekta, četiri provjeravača i jedna provjera koju bot nije mogao napraviti.
+description: "Generiranje je postalo jeftino. AI rezultat vrijedan isporuke čini ono što ga provjerava: četiri projekta, četiri provjeravača i provjera koju bot nije mogao."
 date: 2026-09-24
 tags: [Agentic Engineering, AI Quality]
 related: [air-laser, overserved]
