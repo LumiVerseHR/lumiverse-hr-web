@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Header } from "@/components/chrome/Header";
 import { Icon } from "@/components/icons/Icon";
 import type { Packaged } from "@/components/packages/PackageCard";
+import { coverOf, PackageWork } from "@/components/packages/PackageWork";
 import styles from "@/components/packages/Packages.module.css";
 import page from "@/components/page/Page.module.css";
 import { PageHero, pageMetadata } from "@/components/page/PageHero";
@@ -20,7 +21,7 @@ type Copy = { name: string; summary: string; includes: string[]; proof?: string;
 type Pkg = Packaged & {
   price: Price;
   proof?: string;
-  pack: Packaged["pack"] & { preview?: { video?: string; poster?: string; image?: string }; proofHref?: string };
+  pack: Packaged["pack"] & { proofHref?: string };
   en: Copy;
   hr: Copy;
 };
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/packages/[
   if (!hasLocale(lang) || !pkg) return {};
   const c = pkg[lang];
   const price = priceParts(pkg.price, lang) as { amount: string };
-  const image = pkg.pack.preview?.poster ?? pkg.pack.preview?.image;
+  const image = coverOf(pkg.pack.work)?.poster;
   return pageMetadata(lang, `/packages/${id}`, `${c.name} - ${price.amount} | LumiVerse`, c.summary, image);
 }
 
@@ -61,7 +62,6 @@ export default async function PackagePage({ params }: PageProps<"/[lang]/package
   const c = pkg[lang];
   const p = priceParts(pkg.price, lang) as { lead: string; amount: string; unit: string };
   const proof = proofLink(pkg, lang);
-  const preview = pkg.pack.preview;
   const order = `${localePath(lang, "/contact")}?package=${pkg.id}`;
   const ld = {
     "@context": "https://schema.org",
@@ -93,17 +93,7 @@ export default async function PackagePage({ params }: PageProps<"/[lang]/package
         />
         <div className={styles.detail}>
           <div>
-            {preview?.video && (
-              <figure className={styles.media}>
-                <video src={preview.video} poster={preview.poster} controls muted playsInline preload="none" />
-              </figure>
-            )}
-            {preview?.image && (
-              <a className={styles.media} href={proof}>
-                {/* eslint-disable-next-line @next/next/no-img-element -- a fixed-size preview still */}
-                <img src={preview.image} alt="" />
-              </a>
-            )}
+            {pkg.pack.work?.length ? <PackageWork work={pkg.pack.work} lang={lang} title={t.work} /> : null}
             <section className={styles.block} aria-labelledby="includes-title">
               <h2 id="includes-title" className={styles.blockTitle}>{t.includes}</h2>
               <ul className={pricing.includes}>

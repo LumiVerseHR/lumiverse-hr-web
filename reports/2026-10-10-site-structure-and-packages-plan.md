@@ -149,3 +149,18 @@ Not packaged (stay custom): the AI newsroom (mojkraj), custom internal tools (re
   (now fixed, up to 12 people), animated 3D hero €2,400, business website €3,900.
 - Open: real-estate visualisation waits for its example. The TikTok package's preview is our 22s launch
   reel, which still shows the retired "We build Better Humans" slogan; a vertical example would be better.
+
+## Status (2026-10-11)
+- Prices now: TikTok video €250, AI prototype €490, Moj Kolega setup €490, animated 3D hero €999,
+  business website €1,900 (1.5 weeks), premium website €4,900 (3 weeks, assumed). Workshop back to custom.
+- Every package page shows "Previous work": silent loops recorded from the live sites with a CDP
+  screencast (site/public/packages/evidence, 0.3-1.8 MB each), each linked to its case study.
+  Cards on /packages show the first wide clip's poster.
+  - web-to-video: ARMY Adria 9:16 news teaser + our launch reel
+  - ai-prototype: Overserved gameplay, Barcoder, Rentalica
+  - moj-kolega-setup: the live widget answering a question on mojkolega.hr
+  - animated-hero: our homepage hero
+  - business-website: Titlomat.com, Croatian Guide, MOJ KRAJ.
+  - premium-website: homepage hero, overserved.lumiverse.hr, launch reel
+- Open: the ARMY Adria teaser uses BANGTANTV photos (credited in frame); the launch reel still ends on
+  the retired "We build Better Humans" slogan.

@@ -249,6 +249,7 @@ export const packagesCopy = {
     includes: "What you get",
     brief: "What to send us",
     proof: "Proof",
+    work: "Previous work",
     how: "How ordering works",
     steps: [
       ["Send the brief", "Pick the package and send what's listed above. Two minutes."],
@@ -276,6 +277,7 @@ export const packagesCopy = {
     includes: "Što dobivate",
     brief: "Što nam pošaljite",
     proof: "Dokaz",
+    work: "Dosadašnji rad",
     how: "Kako funkcionira narudžba",
     steps: [
       ["Pošaljite upit", "Odaberite paket i pošaljite ono što je navedeno gore. Dvije minute."],

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Header } from "@/components/chrome/Header";
 import styles from "@/components/page/Page.module.css";
 import { PageHero, pageMetadata } from "@/components/page/PageHero";
+import { ResearchExplainer } from "@/components/page/ResearchExplainer";
 import { Flagships } from "@/components/sections/Flagships";
 import { Notes } from "@/components/sections/Notes";
 import { Thesis } from "@/components/sections/Thesis";
@@ -29,6 +30,7 @@ export default async function ResearchPage({ params }: PageProps<"/[lang]/resear
       <Header lang={lang} dict={dict} path="/research" />
       <main className={styles.page}>
         <PageHero lang={lang} path="/research" home={dict.pages.home} label={p.label} title={p.heading} intro={p.intro} />
+        <ResearchExplainer lang={lang} copy={p.explainer as Parameters<typeof ResearchExplainer>[0]["copy"]} />
         <Flagships lang={lang} dict={dict} bare only={["air-laser"]} />
         <Thesis lang={lang} dict={dict} />
         <Notes lang={lang} dict={dict} tags={RESEARCH_TAGS} title={p.notesTitle} />

@@ -190,10 +190,52 @@
     "research": {
       "label": "Research",
       "title": "Research - Agentic Engineering and AI Verification | LumiVerse",
-      "description": "Independent research from LumiVerse: a 49-page physics study computed by one AI agent loop, and notes on judging AI output before it ships.",
+      "description": "Independent research from LumiVerse in computational physics and AI verification: a 49-page simulation study of a hologram that floats in open air, and notes on judging AI output before it ships.",
       "heading": "Hard problems, checked twice",
-      "intro": "Before a method goes into client work, we run it where mistakes are expensive and easy to spot. Physics, evaluation, agent loops: every result is cross-checked, and the ones that fail are retracted.",
-      "notesTitle": "Research notes"
+      "intro": "Independent research in computational physics and AI verification. We test our methods where mistakes are expensive and easy to spot, cross-check every result against published science, and retract the ones that fail.",
+      "notesTitle": "Research notes",
+      "explainer": {
+        "label": "Computational physics",
+        "title": "A Star Trek hologram, with today's lasers",
+        "lede": "We asked one question: can you build a true 3D image that floats in open air, the kind of hologram you see in Star Trek, from parts you can order today? We simulated the physics end to end, and the answer is yes.",
+        "how": "How it works, simply",
+        "steps": [
+          [
+            "Two beams cross",
+            "Two invisible laser beams, each too weak to do anything on its own, meet at one point in the air."
+          ],
+          [
+            "The air glows",
+            "Where they meet, the air turns into a tiny spark of light: one pixel with a real address in space."
+          ],
+          [
+            "The eye sees a picture",
+            "Move about 10,000 of those points 60 times a second and you see a floating image you can walk around and pass your hand through."
+          ]
+        ],
+        "facts": [
+          [
+            "~$378,000",
+            "Prototype priced from real vendor catalogues"
+          ],
+          [
+            "184",
+            "Photons per point reach the eye, where about 100 are enough to see it"
+          ],
+          [
+            "40+",
+            "Simulations across nine areas of physics, from quantum chemistry to plasma"
+          ],
+          [
+            "22",
+            "Published references, each verified by its DOI"
+          ]
+        ],
+        "honest": "What it is, and isn't: a computational study, not a working device. No laser was switched on. Every number comes from open-source physics simulators run by an AI agent, and the image would be line art (outlines, text, shapes), not a solid picture.",
+        "paper": "Read the 49-page study",
+        "case": "How we built it",
+        "figure": "Computed, not photographed: cross the two beams at a wider angle and the glow shrinks from a streak (left) to a single point (right)."
+      }
     },
     "studio": {
       "label": "Studio",

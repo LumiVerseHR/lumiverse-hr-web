@@ -18,7 +18,8 @@
 // `pack` (optional) makes a service a package: one defined deliverable at one
 // price, listed on /packages with its own page and ordered through the brief.
 //   pack.delivery   {en, hr} how long it takes
-//   pack.preview    optional {video, poster} or {image}, shown on its page
+//   pack.work       previous work that shows it, from `work` below: the page plays
+//                   each one, and the card shows the first wide one's poster
 //   pack.proofHref  optional link for the proof line when it isn't a case study
 // Packages also carry `brief` per language: what to send us with the order.
 //
@@ -36,6 +37,57 @@ export const amountsOf = (price) => [price.from, price.then, price.fullTime].fil
 
 export const groups = ["engagement", "upskill", "system", "package"];
 
+
+// Previous work, recorded from the live sites (public/packages/evidence). Each links to
+// its case study (`case`) or to where it lives (`href`); the captions only state what
+// that case study or the clip itself shows.
+//   shape   "screen" 16:10 browser recording | "wide" 16:9 video | "tall" 9:16 video
+//   site    the address shown in a screen recording's browser bar
+const clip = (name, shape, link, en, hr) => ({
+  video: `/packages/evidence/${name}.mp4`,
+  poster: `/packages/evidence/${name}.webp`,
+  shape,
+  ...link,
+  en,
+  hr
+});
+
+export const work = {
+  armyShort: clip("army-short", "tall", { href: "https://www.bts-army-adria.com" },
+    { title: "ARMY Adria", caption: "A news story from the site, cut into a 14-second vertical teaser" },
+    { title: "ARMY Adria", caption: "Vijest sa stranice, izrezana u vertikalnu najavu od 14 sekundi" }),
+  launchReel: clip("launch-reel", "wide", { href: "/" },
+    { title: "LumiVerse launch video", caption: "22 seconds cut to music from our own site and case studies" },
+    { title: "LumiVerse video za lansiranje", caption: "22 sekunde uz glazbu, od naše stranice i studija slučaja" }),
+  hero: clip("hero", "screen", { href: "/", site: "lumiverse.hr" },
+    { title: "lumiverse.hr", caption: "The laser-cut hero on our homepage: three devices, no WebGL" },
+    { title: "lumiverse.hr", caption: "Laserom izrezan hero na našoj naslovnici: tri uređaja, bez WebGL-a" }),
+  overservedPlay: clip("overserved-play", "screen", { case: "overserved", site: "overserved.lumiverse.hr/play" },
+    { title: "Overserved", caption: "A playable game, from an empty repo in about three weeks" },
+    { title: "Overserved", caption: "Igra koja se igra, od praznog repozitorija u otprilike tri tjedna" }),
+  overservedSite: clip("overserved-site", "screen", { href: "https://overserved.lumiverse.hr", site: "overserved.lumiverse.hr" },
+    { title: "overserved.lumiverse.hr", caption: "The game's site, with generated characters and motion" },
+    { title: "overserved.lumiverse.hr", caption: "Stranica igre, s generiranim likovima i pokretom" }),
+  barcoder: clip("barcoder", "screen", { case: "barcoder", site: "barcoder.lumiverse.hr" },
+    { title: "Barcoder", caption: "463 visual-code standards across 197 countries, as one reference site" },
+    { title: "Barcoder", caption: "463 standarda vizualnih kodova iz 197 zemalja, kao jedna referentna stranica" }),
+  rentalica: clip("rentalica", "screen", { case: "rentalica", site: "rentalica.lumiverse.hr" },
+    { title: "Rentalica", caption: "A rent-a-car back-office from PHP 5.6, rebuilt as a modern SaaS" },
+    { title: "Rentalica", caption: "Rent-a-car back-office s PHP-a 5.6, prepisan kao moderan SaaS" }),
+  mojKolegaChat: clip("mojkolega-chat", "screen", { case: "moj-kolega", site: "mojkolega.hr" },
+    { title: "Moj Kolega", caption: "Live on mojkolega.hr, answering a visitor in Croatian" },
+    { title: "Moj Kolega", caption: "Uživo na mojkolega.hr, odgovara posjetitelju na hrvatskom" }),
+  titlomat: clip("titlomat", "screen", { case: "titlomat", site: "titlomat.com" },
+    { title: "Titlomat.com", caption: "The site for our subtitle product, with pricing and sign-up" },
+    { title: "Titlomat.com", caption: "Stranica našeg proizvoda za titlove, s cijenama i prijavom" }),
+  croatianGuide: clip("croatian-guide", "screen", { case: "country-guides", site: "croatian-guide.com" },
+    { title: "Croatian Guide", caption: "One of 14 travel guides running on one codebase" },
+    { title: "Croatian Guide", caption: "Jedan od 14 turističkih vodiča na jednoj bazi koda" }),
+  mojKraj: clip("mojkraj", "screen", { case: "mojkraj", site: "mojkraj.hr" },
+    { title: "MOJ KRAJ.", caption: "A Croatian news portal, with an auto-translated English mirror" },
+    { title: "MOJ KRAJ.", caption: "Hrvatski news portal, s automatski prevedenim engleskim zrcalom" })
+};
+
 export const packages = [
   {
     id: "ai-prototype",
@@ -43,7 +95,7 @@ export const packages = [
     icon: "fa-pencil-ruler",
     price: { from: 490, per: "once" },
     proof: "overserved",
-    pack: { delivery: { en: "1 week", hr: "1 tjedan" } },
+    pack: { delivery: { en: "1 week", hr: "1 tjedan" }, work: [work.overservedPlay, work.barcoder, work.rentalica] },
     en: {
       name: "AI Prototype",
       summary: "For testing an idea on real people before you commit to a full build.",
@@ -407,7 +459,7 @@ export const packages = [
     price: { from: 250, per: "once" },
     pack: {
       delivery: { en: "2 working days", hr: "2 radna dana" },
-      preview: { video: "/assets/reel/38bf03/lumiverse-reel.mp4", poster: "/assets/reel/38bf03/poster.jpg" }
+      work: [work.armyShort, work.launchReel]
     },
     en: {
       name: "Your Web Page as a TikTok Video",
@@ -444,7 +496,7 @@ export const packages = [
     icon: "fa-robot",
     price: { from: 490, per: "setup", fixed: true },
     proof: "moj-kolega",
-    pack: { delivery: { en: "2 weeks", hr: "2 tjedna" } },
+    pack: { delivery: { en: "2 weeks", hr: "2 tjedna" }, work: [work.mojKolegaChat] },
     en: {
       name: "Moj Kolega, Set Up for You",
       summary: "Our AI employee on your webshop, trained on your catalogue and tested on real questions before it goes live.",
@@ -481,7 +533,7 @@ export const packages = [
     price: { from: 999, per: "once" },
     pack: {
       delivery: { en: "4 working days", hr: "4 radna dana" },
-      preview: { image: "/blog/laser-cut-hero/cover.webp" },
+      work: [work.hero],
       proofHref: "/blog/laser-cut-hero"
     },
     en: {
@@ -519,8 +571,12 @@ export const packages = [
     id: "business-website",
     group: "package",
     icon: "fa-globe",
-    price: { from: 3900, per: "once" },
-    pack: { delivery: { en: "1.5 weeks", hr: "1,5 tjedana" }, proofHref: "/" },
+    price: { from: 1900, per: "once" },
+    pack: {
+      delivery: { en: "1.5 weeks", hr: "1,5 tjedana" },
+      work: [work.titlomat, work.croatianGuide, work.mojKraj],
+      proofHref: "/"
+    },
     en: {
       name: "Business Website, Up to 20 Pages",
       summary: "A fast, bilingual company website, designed and built by the team behind this one.",
@@ -557,7 +613,7 @@ export const packages = [
     price: { from: 4900, per: "once" },
     pack: {
       delivery: { en: "3 weeks", hr: "3 tjedna" },
-      preview: { image: "/blog/laser-cut-hero/exhibits.webp" },
+      work: [work.hero, work.overservedSite, work.launchReel],
       proofHref: "/"
     },
     en: {

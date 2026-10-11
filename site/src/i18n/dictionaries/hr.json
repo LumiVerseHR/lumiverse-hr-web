@@ -190,10 +190,52 @@
     "research": {
       "label": "Istraživanje",
       "title": "Istraživanje - agentno inženjerstvo i provjera AI-ja | LumiVerse",
-      "description": "Neovisno istraživanje LumiVersea: studija fizike od 49 stranica koju je izračunala jedna petlja AI agenata i bilješke o provjeri AI rezultata prije objave.",
+      "description": "Neovisno istraživanje LumiVersea u računalnoj fizici i provjeri AI-ja: simulacijska studija od 49 stranica o hologramu koji lebdi u otvorenom zraku i bilješke o provjeri AI rezultata prije objave.",
       "heading": "Teški problemi, provjereni dvaput",
-      "intro": "Prije nego što metoda uđe u rad za klijente, isprobavamo je ondje gdje su greške skupe i lako se vide. Fizika, evaluacija, petlje agenata: svaki rezultat provjeravamo unakrsno, a onaj koji ne prođe provjeru povlačimo.",
-      "notesTitle": "Bilješke iz istraživanja"
+      "intro": "Neovisno istraživanje u računalnoj fizici i provjeri AI-ja. Svoje metode isprobavamo ondje gdje su greške skupe i lako se vide, svaki rezultat provjeravamo prema objavljenoj znanosti, a onaj koji ne prođe provjeru povlačimo.",
+      "notesTitle": "Bilješke iz istraživanja",
+      "explainer": {
+        "label": "Računalna fizika",
+        "title": "Hologram iz Zvjezdanih staza, s današnjim laserima",
+        "lede": "Postavili smo jedno pitanje: može li se od dijelova koje danas možete naručiti napraviti prava 3D slika koja lebdi u otvorenom zraku, hologram kakav ste vidjeli u Zvjezdanim stazama? Fiziku smo simulirali od početka do kraja, i odgovor je da.",
+        "how": "Kako radi, jednostavno",
+        "steps": [
+          [
+            "Dvije zrake se križaju",
+            "Dvije nevidljive laserske zrake, svaka preslaba da sama išta napravi, sretnu se u jednoj točki u zraku."
+          ],
+          [
+            "Zrak zasvijetli",
+            "Gdje se sretnu, zrak postaje sićušna iskra svjetla: jedan piksel sa stvarnom adresom u prostoru."
+          ],
+          [
+            "Oko vidi sliku",
+            "Pomaknite oko 10.000 takvih točaka 60 puta u sekundi i vidite sliku koja lebdi, koju možete obići i kroz koju možete provući ruku."
+          ]
+        ],
+        "facts": [
+          [
+            "~378.000 $",
+            "Prototip izračunat po stvarnim katalozima dobavljača"
+          ],
+          [
+            "184",
+            "Fotona po točki stiže do oka, a stotinjak je dovoljno da se vidi"
+          ],
+          [
+            "40+",
+            "Simulacija u devet područja fizike, od kvantne kemije do plazme"
+          ],
+          [
+            "22",
+            "Objavljene reference, svaka provjerena preko DOI-ja"
+          ]
+        ],
+        "honest": "Što jest, a što nije: računalna studija, a ne uređaj koji radi. Nijedan laser nije upaljen. Svaki broj dolazi iz open-source fizikalnih simulatora koje vodi AI agent, a slika bi bila crtež od linija (obrisi, tekst, oblici), a ne puna slika.",
+        "paper": "Pročitajte studiju od 49 stranica",
+        "case": "Kako smo je izradili",
+        "figure": "Izračunato, ne snimljeno: kad se dvije zrake križaju pod većim kutom, sjaj se skuplja iz pruge (lijevo) u jednu točku (desno)."
+      }
     },
     "studio": {
       "label": "Studio",
