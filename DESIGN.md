@@ -3,7 +3,8 @@ name: LumiVerse
 description: A founder-led AI product studio shown as a scale model under gallery light.
 colors:
   coral: "#ff4d4d"
-  coral-press: "#f03a3a"
+  coral-press: "#c42b2b"
+  action: "#e03131"
   gallery: "#0e0f12"
   thesis-band: "#0b0c0e"
   footer-ground: "#0a0a0c"
@@ -158,7 +159,7 @@ components:
 
 Every shipped project is a white scale model standing on one plinth in a dark gallery, under a single warm raking spotlight. The site is that room. The walls are near-black (gallery), the light is warm (lamplight, used only as a soft wash from above), and the models are white card and basswood. Tiny coral human figures stand among the models: they are the people each project amplifies, and coral belongs to them, to the logo dot and to the action the visitor should take next.
 
-The homepage hero is a real-time React Three Fiber maquette (`site/src/components/stage/Scene.tsx`). Three models stand on a near-black plinth over a warm basswood-brown floor. Each one shows its real product screenshot as a lit screen, and black museum placards hang on the plinth front. Everything below the hero borrows from that room. Screenshots hang as framed prints. Labels and offers sit on black placards. Lists are wall labels divided by hairlines instead of boxed cards. Headlines are heavy white grotesk set at monumental scale with tight tracking. Density is low and the rhythm generous: sections breathe at up to 184px, and the copy rarely runs past 60–68ch.
+The homepage hero is a laser-cut exhibit on a plinth (`site/src/components/hero/`; replaced the earlier real-time 3D maquette). A coral beam leaves the logo dot, traces a device in gold, cuts it solid with a real product on its screen, holds it under the lamp with a black placard, and moves on to the next device. The plinth, devices and figures are pre-rendered layers; the browser only animates the reveal. Everything below the hero borrows from that room. Screenshots hang as framed prints. Labels and offers sit on black placards. Lists are wall labels divided by hairlines instead of boxed cards. Headlines are heavy white grotesk set at monumental scale with tight tracking. Density is low and the rhythm generous: sections breathe at up to 184px, and the copy rarely runs past 60–68ch.
 
 The world refuses the AI-agency default: a dark field with neon glow, a bento grid, glass cards and gradient text. It also refuses showreel-over-video. MOTION.md, style-guide.md and the visual parts of writing-guide.md at the repo root describe the **previous** world (Inter, coral gradient text, glassmorphic cards, a dot-grid shader, a cyan secondary). That world has been replaced, and those files do not govern v3 visuals. Voice and copy rules in writing-guide.md still apply: active voice, specific numbers, no fluff, action-led CTAs, and its word-choice and sentence-length guidance. Two of its sections do not carry over: "Section Labels" (small uppercase labels above headlines) and the hero rule that the "middle word gets gradient treatment".
 
@@ -176,7 +177,7 @@ The world refuses the AI-agency default: a dark field with neon glow, a bento gr
 The palette is a near-black gallery with three warm material colours from the model (white card, basswood and lamplight) and a single saturated coral.
 
 ### Primary
-- **Figure Coral** (coral): the scale figures in the 3D maquette and the inline SVG `Figure` (the thesis line, case-study pull quotes, the 404 plinth), the logo dot, and every primary action fill. Coral is also the system's interaction signal: link and title hover colour, the 2px focus ring, text selection, the active showcase indicator, and the border of an invalid or focused form field.
+- **Figure Coral** (coral): the scale figures on the hero plinth, the laser beam, and the inline SVG `Figure` (the thesis line, case-study pull quotes, the 404 plinth), the logo dot, and every primary action fill. Coral is also the system's interaction signal: link and title hover colour, the 2px focus ring, text selection, the active showcase indicator, and the border of an invalid or focused form field.
 - **Pressed Coral** (coral-press): the hover and pressed state of every coral fill. Nothing else uses it.
 
 ### Secondary
@@ -184,7 +185,7 @@ The palette is a near-black gallery with three warm material colours from the mo
 - **Lamplight** (lamplight): the spotlight colour (`#ffd2a6` in the scene). In CSS it appears only as low-alpha radial wall-washes from above (`rgb(255 210 166 / 0.06–0.16)`), as the warm top bounce on framed exhibits, and as the active-row wash in the work index.
 
 ### Tertiary
-- **White Card** (white-card): the maquette's model material, which lives in the GLB and nowhere in the CSS. It is reserved for the models themselves. Interface surfaces are never white.
+- **White Card** (white-card): the models' material, which lives in the rendered hero layers and nowhere in the CSS. It is reserved for the models themselves. Interface surfaces are never white.
 
 ### Neutral
 - **Gallery Wall** (gallery): the page background, the 3D canvas clear colour, and the base of the mobile menu panel.
@@ -195,7 +196,7 @@ The palette is a near-black gallery with three warm material colours from the mo
 - **Text** (text) for headings and active values. **Text Prose** (text-prose) for long-form paragraphs. **Text Soft** (text-soft) for ledes and descriptions. **Text Muted** (text-muted) for metadata, crumbs and labels. **Text Placeholder** (text-placeholder) for inputs only.
 - **Error** (error): form error text only.
 - **Hairlines:** rules at `hairline-rule` (the top edge of a list), rows at `hairline-row`, and chrome edges at `rgb(255 255 255 / 0.06)`.
-- **Scene-only:** Plinth Stone (plinth-stone), Scene Floor (scene-floor) and Scene Wall (scene-wall) belong to the 3D room and live in `Scene.tsx`, not in globals.css.
+- **Render-only:** Plinth Stone (plinth-stone), Scene Floor (scene-floor) and Scene Wall (scene-wall) belong to the rendered hero room, not to globals.css.
 
 ### Named Rules
 **The Coral Is Human Rule.** Coral fills only the human figures, the logo dot and actions, and it colours only interaction states (hover, focus, selection, current). It never appears in a gradient, a glow, a background wash, a border ornament or an illustration other than the figures.
@@ -211,7 +212,7 @@ The palette is a near-black gallery with three warm material colours from the mo
 **Character:** A heavy, slightly humanist grotesk carries everything at monumental scale with tight tracking. A condensed italic plays the museum-label hand beside it, used small and only where something is being labelled.
 
 ### Hierarchy
-- **Display** (700, clamp(52px, 7.8vw, 132px), 0.82): the hero's three stacked lines ("We build / Better / Humans."). The thesis statement uses the same voice at clamp(48px, 8vw, 136px) / 0.92, with its muted line in text-muted.
+- **Display** (700, clamp(52px, 7.8vw, 132px), 0.82): the hero's three stacked lines ("Human / Imagination. / AI Speed.", cycling the middle word through Judgement. and Taste.). The thesis statement uses the same voice at clamp(48px, 8vw, 136px) / 0.92, with its muted line in text-muted.
 - **Page Title** (700, clamp(48px, 7vw, 116px), 0.92, max 14–16ch): case-study, pricing, landing and blog index titles. The 404 code goes larger and muted (clamp(96px, 16vw, 240px)).
 - **Headline** (700, clamp(40px, 5.2vw, 84px), 0.95, max 18ch, balanced): homepage section titles. Inner pages step down to **Headline Inner** (700, clamp(34px, 4.2vw, 64px), 0.98, max 20ch).
 - **Stat** (700, clamp(44px, 4vw, 64px), 1, tabular): the numbers that prove a case. Stat bands and prices use clamp(36px, 3.6vw, 56px) and clamp(36px, 3vw, 44px).
@@ -290,8 +291,8 @@ Lists of work, offers, steps, posts, FAQs and products are wall labels divided b
 ### Plinth Placard (signature)
 A black museum label on the 3D plinth front: min-width 210px, padded 10px 16px 12px. It carries an uppercase Placard Title and a 15px italic caption in text-soft, under the plinth-placard shadow.
 
-### Maquette Stage (signature)
-The 3D scene (`Scene.tsx`) has a set lighting rig. The key light is a lamplight spotlight from the upper right (intensity 420, angle 0.62, penumbra 0.8, volumetric beam at 0.1 opacity), with a warm pool light on the floor and a warm glow inside the storefront. Ambient light sits at 0.05, and the environment is two authored Lightformers (warm `#ffd9b0` at 2.2, cool `#9aa6c8` at 0.5). Post-processing adds N8AO, bloom at luminance threshold 1 (so only the lit screens glow) and a 0.55 vignette. Figures are coral with 0.28 emissive, so their shadow side never turns maroon. Motion is a one-time 1.6s ease-out-cubic arrival, a scroll-driven lean toward the visitor, and orbit limited to the resting hero. Pan and zoom are off. Rendering pauses offscreen, and the stage holds still under reduced motion.
+### Laser Hero (signature)
+The hero (`site/src/components/hero/HeroLaser.tsx`) is one cycle per device: four beams from the logo dot trace the device's real edges in gold (1.15s), a cut line sweeps down and reveals the solid render (0.85s), it holds under the lamp with its placard (4.8s), then vanishes (0.52s) and the next device begins (a laptop with Moj Kolega, a monitor with Titlomat, a curved workstation with Bridj). Lamplight cones fall from the logo on a 9.3s loop, with dust in the beams. Layers are responsive WebP (800/1100/1600w), the stage image loads first, and the stage holds its final solid frame under reduced motion. MOTION.md carries the same timings for video work.
 
 ## Do's and Don'ts
 
