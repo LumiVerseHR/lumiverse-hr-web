@@ -53,14 +53,14 @@ export const landings: Record<Landing["slug"], Landing> = {
     meta: {
       title: { en: "For Founders Without a Technical Co-founder | LumiVerse", hr: "Za osnivače bez tehničkog suosnivača | LumiVerse" },
       description: {
-        en: "You have the idea and the market. We test it on real people, build the product with senior engineers, then stay on as your tech lead.",
-        hr: "Vi imate ideju i tržište. Mi je provjerimo na stvarnim ljudima, izgradimo proizvod sa senior inženjerima i ostajemo kao Vaš tech lead.",
+        en: "You have the idea and the market. We test it on real people, build the product, then stay on as your tech lead.",
+        hr: "Vi imate ideju i tržište. Mi je provjerimo na stvarnim ljudima, izgradimo proizvod i ostajemo kao Vaš tech lead.",
       },
     },
     title: { en: "The technical side of your startup, covered", hr: "Tehnička strana Vašeg startupa, pokrivena" },
     subtitle: {
-      en: "You have the idea and the market. We bring senior engineering: test it on real people, build the product, then stay on as your tech lead.",
-      hr: "Vi imate ideju i tržište. Mi donosimo senior inženjerstvo: provjerimo ideju na stvarnim ljudima, izgradimo proizvod, a zatim ostajemo kao Vaš tech lead.",
+      en: "You have the idea and the market. We bring a founder-led build: test it on real people, build the product, then stay on as your tech lead.",
+      hr: "Vi imate ideju i tržište. Mi donosimo izradu koju vodi osnivač: provjerimo ideju na stvarnim ljudima, izgradimo proizvod, a zatim ostajemo kao Vaš tech lead.",
     },
     cta: { en: "Start with a prototype", hr: "Krenite s prototipom" },
     packages: ["ai-prototype", "custom-ai-build", "embedded-tech-lead"],

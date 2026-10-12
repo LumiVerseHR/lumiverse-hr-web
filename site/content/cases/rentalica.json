@@ -5,7 +5,7 @@
       "title": "Rentalica – Rebuilding a Decade-Old System | LumiVerse",
       "description": "Rebuilding a 10-year-old PHP 5.6 rent-a-car system as a modern multi-tenant SaaS: parity first, verified data migration, rehearsed cutover, then beyond."
     },
-    "kind": "Our Product · Legacy Modernization",
+    "kind": "Client Work · Legacy Modernization",
     "title": "Rentalica",
     "subtitle": "A rent-a-car back-office that ran for over ten years on PHP 5.6, rebuilt as a modern multi-tenant SaaS – carrying a decade of bookings, contracts and documents across without asking a single user to reset their password. Then taken well past where the old system could go.",
     "ctas": [
@@ -277,7 +277,7 @@
       "title": "Rentalica - prepisivanje sustava starog deset godina | LumiVerse",
       "description": "Rent-a-car sustav star deset godina prepisan s PHP-a 5.6 u moderan multi-tenant SaaS: prvo istovjetnost, provjerena migracija, uvježbani prelazak."
     },
-    "kind": "Naš proizvod · Modernizacija naslijeđenog sustava",
+    "kind": "Rad za klijenta · Modernizacija naslijeđenog sustava",
     "title": "Rentalica",
     "subtitle": "Rent-a-car back-office koji je više od deset godina radio na PHP-u 5.6, prepisan kao moderan multi-tenant SaaS — s desetljećem rezervacija, ugovora i dokumenata prenesenim bez ijednog zahtjeva korisniku da resetira lozinku. A onda odveden mnogo dalje nego što je stari sustav ikad mogao.",
     "ctas": [

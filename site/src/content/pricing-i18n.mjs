@@ -62,7 +62,7 @@ export const t = {
         ],
         [
           "Can you train our team instead of building it for us?",
-          "Yes. A workshop takes one team through a day of their own work and leaves them reusable skills; a rollout does the same company-wide, with a monthly cadence."
+          "Yes. An AI team rollout trains your people on their own work, sets up a shared library of skills, and keeps a monthly cadence so the team keeps improving."
         ],
         [
           "Do you discount?",
@@ -143,7 +143,7 @@ export const t = {
         ],
         [
           "Možete li osposobiti naš tim umjesto da gradite za nas?",
-          "Da. Radionica provede jedan tim kroz dan njihovog stvarnog posla i ostavi im vještine koje mogu ponovno koristiti; uvođenje radi isto za cijelu tvrtku, uz mjesečni ritam."
+          "Da. Uvođenje AI-ja u tvrtku osposobljava Vaše ljude na njihovom stvarnom poslu, postavlja zajedničku knjižnicu vještina i drži mjesečni ritam u kojem tim napreduje."
         ],
         [
           "Dajete li popuste?",

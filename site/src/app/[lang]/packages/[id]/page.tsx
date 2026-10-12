@@ -59,7 +59,7 @@ export default async function PackagePage({ params }: PageProps<"/[lang]/package
   const dict = await getDictionary(lang);
   const t = packagesCopy[lang];
   const c = pkg[lang];
-  const p = priceParts(pkg.price, lang) as { lead: string; amount: string; unit: string };
+  const p = priceParts(pkg.price, lang) as { lead: string; amount: string; unit: string; then: string };
   const proof = proofLink(pkg, lang);
   const order = `${localePath(lang, "/contact")}?package=${pkg.id}`;
   const ld = {
@@ -127,6 +127,7 @@ export default async function PackagePage({ params }: PageProps<"/[lang]/package
               <span className={pricing.amount}>{p.amount}</span>
               <span className={pricing.unit}>{p.unit}</span>
             </p>
+            {p.then && <p className={pricing.then}>{p.then}</p>}
             {c.priceNote && <p className={pricing.note}>{c.priceNote}</p>}
             <p className={styles.delivery}>
               {t.delivery}: {pkg.pack.delivery[lang]}
