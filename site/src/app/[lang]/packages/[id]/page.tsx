@@ -128,6 +128,7 @@ export default async function PackagePage({ params }: PageProps<"/[lang]/package
               <span className={pricing.unit}>{p.unit}</span>
             </p>
             {p.then && <p className={pricing.then}>{p.then}</p>}
+            <p className={pricing.note}>{t.vat}</p>
             {c.priceNote && <p className={pricing.note}>{c.priceNote}</p>}
             <p className={styles.delivery}>
               {t.delivery}: {pkg.pack.delivery[lang]}
