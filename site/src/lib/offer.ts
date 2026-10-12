@@ -8,5 +8,5 @@ export function priceSpecification(price: Price) {
   const first = { ...base, ...amount, ...unit };
   if (price.fullTime) return [{ ...first, name: "Part-time" }, { ...base, minPrice: price.fullTime, unitCode: "MON", name: "Full-time" }];
   if (!price.then) return first;
-  return [first, { ...base, minPrice: price.then, unitCode: "MON" }];
+  return [first, { ...base, ...(price.fixed ? { price: price.then } : { minPrice: price.then }), unitCode: "MON" }];
 }

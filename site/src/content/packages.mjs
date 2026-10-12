@@ -13,7 +13,7 @@
 //   price.then   with per: "setup", the monthly fee that follows
 //   price.fullTime  with per: "month", the full-time rate; `from` is then
 //                   the part-time rate
-//   price.fixed     true when `from` is the price, not a floor (e.g. €1,900 per day)
+//   price.fixed     true when `from` (and `then`) are the price, not a floor (e.g. €1,900 per day)
 //
 // `pack` (optional) makes a service a package: one defined deliverable at one
 // price, listed on /packages with its own page and ordered through the brief.
@@ -30,7 +30,7 @@
 // it has to be something that page already states.
 
 // Last change to any price or package: the sitemap's <lastmod> for /pricing.
-export const updated = "2026-10-11";
+export const updated = "2026-10-12";
 
 // Every euro amount a package quotes, for the checks.
 export const amountsOf = (price) => [price.from, price.then, price.fullTime].filter(Boolean);
@@ -136,7 +136,7 @@ export const packages = [
     proof: "titlomat",
     en: {
       name: "Custom AI Product Build",
-      summary: "A production AI product, from agreed scope to paying users, built by senior engineers.",
+      summary: "A production AI product, from agreed scope to paying users, led by the founder and built with AI.",
       includes: [
         "Everything in the prototype",
         "Product design and full-stack engineering",
@@ -149,7 +149,7 @@ export const packages = [
     },
     hr: {
       name: "Razvoj AI proizvoda po mjeri",
-      summary: "AI proizvod u produkciji, od dogovorenog opsega do korisnika koji plaćaju, u izradi senior inženjera.",
+      summary: "AI proizvod u produkciji, od dogovorenog opsega do korisnika koji plaćaju, pod vodstvom osnivača i izrađen uz AI.",
       includes: [
         "Sve iz prototipa",
         "Dizajn proizvoda i full-stack razvoj",
@@ -177,7 +177,7 @@ export const packages = [
         "Hands-on development when it counts",
         "A flat monthly rate, no timesheets"
       ],
-      proof: "Bridj: tech lead on a 17-service platform for over a year, and still today",
+      proof: "Bridj: tech lead on a 17-service platform since August 2025",
       cta: "Talk about your team"
     },
     hr: {
@@ -190,41 +190,8 @@ export const packages = [
         "Razvoj vlastitim rukama kad je najvažnije",
         "Fiksna mjesečna cijena, bez satnica"
       ],
-      proof: "Bridj: više od godinu dana tech lead platforme od 17 servisa, i danas",
+      proof: "Bridj: tech lead platforme od 17 servisa od kolovoza 2025.",
       cta: "Razgovarajmo o timu"
-    }
-  },
-  {
-    id: "ai-team-workshop",
-    group: "upskill",
-    icon: "fa-chalkboard-teacher",
-    price: { from: 1900, per: "day" },
-    proof: "air-laser",
-    en: {
-      name: "AI Team Workshop",
-      summary: "A day with your team on your own work: where AI pays off, how to use it well, and the first tools built for you.",
-      includes: [
-        "A hands-on day, on-site or remote, built around your team's real tasks",
-        "Claude and its team tools, used on your documents and workflows",
-        "3 to 5 reusable skills for your recurring work, left with your team",
-        "A 30-day plan for what to hand to AI first, and what not to"
-      ],
-      proof: "Air-laser study: one agent loop on Claude Code, the bulk of the work in 3 days",
-      cta: "Book a workshop",
-      tag: "New"
-    },
-    hr: {
-      name: "AI radionica za tim",
-      summary: "Dan s Vašim timom na Vašem stvarnom poslu: gdje se AI isplati, kako ga dobro koristiti i prvi alati izrađeni za Vas.",
-      includes: [
-        "Praktičan dan, kod Vas ili na daljinu, oko stvarnih zadataka Vašeg tima",
-        "Claude i njegovi alati za timove, na Vašim dokumentima i procesima",
-        "3 do 5 vještina za posao koji se ponavlja, koje ostaju Vašem timu",
-        "Plan za 30 dana: što prvo prepustiti AI-ju, a što ne"
-      ],
-      proof: "Studija Air-laser: jedna petlja agenata na Claude Codeu, većina posla u 3 dana",
-      cta: "Rezervirajte radionicu",
-      tag: "Novo"
     }
   },
   {
@@ -236,7 +203,7 @@ export const packages = [
       name: "AI Team Rollout",
       summary: "Your whole company working with AI: a shared skill library, trained people, and a monthly cadence that keeps everyone improving.",
       includes: [
-        "Workshops for each team that needs one",
+        "Training for each team, on its own workflows",
         "A shared library of skills for your workflows, set up for your admin",
         "Admin training, so you can run and extend it in-house",
         "Every month: new skills, office hours and a review of what's being used"
@@ -248,7 +215,7 @@ export const packages = [
       name: "Uvođenje AI-ja u tvrtku",
       summary: "Cijela tvrtka radi s AI-jem: zajednička knjižnica vještina, osposobljeni ljudi i mjesečni ritam u kojem svi napreduju.",
       includes: [
-        "Radionice za svaki tim kojem trebaju",
+        "Obuka za svaki tim, na njegovim procesima",
         "Zajednička knjižnica vještina za Vaše procese, postavljena za Vašeg administratora",
         "Obuka administratora, da sustav vodite i širite sami",
         "Svaki mjesec: nove vještine, konzultacije i pregled onoga što se koristi"
@@ -497,7 +464,7 @@ export const packages = [
     id: "moj-kolega-setup",
     group: "package",
     icon: "fa-robot",
-    price: { from: 490, per: "setup", fixed: true },
+    price: { from: 490, per: "setup", then: 220, fixed: true },
     proof: "moj-kolega",
     pack: { delivery: { en: "2 weeks", hr: "2 tjedna" }, work: [work.mojKolegaChat] },
     en: {
@@ -511,7 +478,6 @@ export const packages = [
       ],
       proof: "Moj Kolega: on shift 24/7, improved every month",
       cta: "Order the setup",
-      priceNote: "The monthly Moj Kolega plan is billed separately.",
       brief: ["Your webshop's URL and platform", "The role you want: sales, support or reception", "Your FAQs or support emails, if you have them"]
     },
     hr: {
@@ -525,7 +491,6 @@ export const packages = [
       ],
       proof: "Moj Kolega: na smjeni 24/7, poboljšan svaki mjesec",
       cta: "Naručite postavljanje",
-      priceNote: "Mjesečni Moj Kolega paket naplaćuje se zasebno.",
       brief: ["Adresa i platforma Vašeg webshopa", "Uloga koju želite: prodaja, podrška ili recepcija", "Vaša česta pitanja ili e-poruke podrške, ako ih imate"]
     }
   },
@@ -729,11 +694,11 @@ export function formatEuro(amount, lang) {
 
 const unit = {
   en: {
-    once: "one-time", project: "per project", month: "per month", day: "per day", setup: "setup", from: "from", then: "then from", perMonth: "/month",
+    once: "one-time", project: "per project", month: "per month", day: "per day", setup: "setup", from: "from", then: "then from", thenFixed: "then", perMonth: "/month",
     partTime: "per month, 2 days a week", fullTime: "full-time from"
   },
   hr: {
-    once: "jednokratno", project: "po projektu", month: "mjesečno", day: "po danu", setup: "postavljanje", from: "od", then: "zatim od", perMonth: "/mj.",
+    once: "jednokratno", project: "po projektu", month: "mjesečno", day: "po danu", setup: "postavljanje", from: "od", then: "zatim od", thenFixed: "zatim", perMonth: "/mj.",
     partTime: "mjesečno, 2 dana tjedno", fullTime: "puno radno vrijeme od"
   }
 };
@@ -747,7 +712,7 @@ const unit = {
 export function priceParts(price, lang) {
   const u = unit[lang];
   const then = price.then
-    ? `${u.then} ${formatEuro(price.then, lang)}${u.perMonth}`
+    ? `${price.fixed ? u.thenFixed : u.then} ${formatEuro(price.then, lang)}${u.perMonth}`
     : price.fullTime
       ? `${u.fullTime} ${formatEuro(price.fullTime, lang)}${u.perMonth}`
       : "";

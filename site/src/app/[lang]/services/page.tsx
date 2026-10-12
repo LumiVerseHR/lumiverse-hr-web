@@ -30,7 +30,7 @@ export default async function ServicesPage({ params }: PageProps<"/[lang]/servic
         <Services
           lang={lang}
           dict={dict}
-          ids={["ai-team-workshop", "ai-team-rollout"]}
+          ids={["ai-team-rollout"]}
           heading={dict.services.upskillTitle}
         />
         <Thesis lang={lang} dict={dict} />

@@ -34,7 +34,7 @@ export function PackageCard({
 }) {
   const Heading = level === 2 ? "h2" : "h3";
   const c = pkg[lang];
-  const p = priceParts(pkg.price, lang) as { lead: string; amount: string; unit: string };
+  const p = priceParts(pkg.price, lang) as { lead: string; amount: string; unit: string; then: string };
   const page = localePath(lang, `/packages/${pkg.id}`);
   const cover = coverOf(pkg.pack.work);
   return (
@@ -55,6 +55,7 @@ export function PackageCard({
         <span className={pricing.amount}>{p.amount}</span>
         <span className={pricing.unit}>{p.unit}</span>
       </p>
+      {p.then && <p className={pricing.then}>{p.then}</p>}
       <p className={styles.delivery}>
         {labels.delivery}: {pkg.pack.delivery[lang]}
       </p>

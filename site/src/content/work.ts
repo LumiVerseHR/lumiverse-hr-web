@@ -59,8 +59,8 @@ export const flagships: Flagship[] = [
     kind: { en: "Embedded tech lead · UK", hr: "Tech lead u timu klijenta · UK" },
     stat: { value: "17", unit: { en: "services, every release signed off", hr: "servisa, svako izdanje s našim potpisom" } },
     summary: {
-      en: "A year and counting as embedded tech lead for a UK intelligence platform: a 17-service system with an AI agent layer, multi-cloud infrastructure, and the final sign-off on every release.",
-      hr: "Više od godinu dana kao ugrađeni tech lead britanske platforme za poslovnu inteligenciju: sustav od 17 servisa sa slojem AI agenata, multi-cloud infrastrukturom i završnom riječju na svakom izdanju.",
+      en: "Embedded tech lead for a UK intelligence platform since August 2025: a 17-service system with an AI agent layer, multi-cloud infrastructure, and the final sign-off on every release.",
+      hr: "Ugrađeni tech lead britanske platforme za poslovnu inteligenciju od kolovoza 2025.: sustav od 17 servisa sa slojem AI agenata, multi-cloud infrastrukturom i završnom riječju na svakom izdanju.",
     },
   },
   {
