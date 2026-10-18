@@ -16,7 +16,13 @@ services:
     deploy:
       resources:
         limits:
-          memory: 256M
+          # 512M, raised from 256M on 2026-10-18: the Next.js server sat at
+          # 219-237 MB resident, i.e. 86-93% of the old cap, one traffic bump
+          # from an OOM kill. Box 1 is at 17% of its cap budget, so the headroom
+          # is free. Applied live with `docker update` the same day, so the
+          # running container already has it — this line is what keeps it across
+          # the next deploy.
+          memory: 512M
     labels:
       - traefik.enable=true
       - traefik.docker.network=dokploy-network
