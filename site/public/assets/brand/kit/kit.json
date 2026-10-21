@@ -8,12 +8,15 @@
     "mbs": "081511108",
     "court": "Trgovački sud u Zagrebu",
     "capital": "2.500,00 EUR",
+    "capitalPaid": "uplaćen u cijelosti",
+    "board": "Tihomir Jauk",
     "iban": "HR94 2340 0091 1112 3354 4",
     "bank": "Privredna banka Zagreb d.d.",
     "swift": "PBZGHR2X",
     "email": "info@lumiverse.hr",
     "web": "lumiverse.hr",
-    "legal": "LumiVerse d.o.o. · Markuševečka cesta 20C, 10000 Zagreb, Hrvatska · OIB 88595646800 · MBS 081511108, Trgovački sud u Zagrebu · Temeljni kapital 2.500,00 EUR",
+    "legal": "LumiVerse d.o.o. · Markuševečka cesta 20C, 10000 Zagreb, Hrvatska · OIB 88595646800 · MBS 081511108, Trgovački sud u Zagrebu",
+    "capitalLine": "Temeljni kapital 2.500,00 EUR, uplaćen u cijelosti · Član uprave: Tihomir Jauk",
     "bankLine": "IBAN HR94 2340 0091 1112 3354 4 · Privredna banka Zagreb d.d. · SWIFT PBZGHR2X · info@lumiverse.hr · lumiverse.hr"
   },
   "groups": {
@@ -352,7 +355,7 @@
         {
           "name": "letterhead-a4.pdf",
           "href": "letterhead-a4.pdf",
-          "bytes": 53197
+          "bytes": 55331
         },
         {
           "name": "letterhead-a4.docx",
@@ -362,7 +365,7 @@
         {
           "name": "letterhead-sample-a4.pdf",
           "href": "letterhead-sample-a4.pdf",
-          "bytes": 94046
+          "bytes": 96183
         }
       ]
     },
@@ -377,12 +380,12 @@
         {
           "name": "memo-en-a4.pdf",
           "href": "memo-en-a4.pdf",
-          "bytes": 63951
+          "bytes": 66083
         },
         {
           "name": "memo-hr-a4.pdf",
           "href": "memo-hr-a4.pdf",
-          "bytes": 66801
+          "bytes": 68933
         },
         {
           "name": "memo-en-a4.docx",

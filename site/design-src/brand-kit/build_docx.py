@@ -46,7 +46,7 @@ def base():
     # Footer: a hairline, then the legal lines every business letter carries.
     fp = sec.footer.paragraphs[0]
     rule(fp)
-    for i, line in enumerate((CO["legal"], CO["bankLine"])):
+    for i, line in enumerate((CO["legal"], CO["capitalLine"], CO["bankLine"])):
         r = fp.add_run(("\n" if i else "") + line)
         r.font.size = Pt(7)
         r.font.color.rgb = SOFT
