@@ -33,6 +33,8 @@ export const COMPANY = {
   mbs: "081511108",
   court: "Trgovački sud u Zagrebu",
   capital: "2.500,00 EUR",
+  capitalPaid: "uplaćen u cijelosti",
+  board: "Tihomir Jauk",
   iban: "HR94 2340 0091 1112 3354 4",
   bank: "Privredna banka Zagreb d.d.",
   swift: "PBZGHR2X",
@@ -166,7 +168,9 @@ function callBackground() {
 
 // Print: A4 is 794x1123 CSS px at 96dpi. The same HTML renders the PDF and its preview.
 const A4 = { w: 794, h: 1123 };
-const legal = () => `${COMPANY.name} · ${COMPANY.street}, ${COMPANY.city} · OIB ${COMPANY.oib} · MBS ${COMPANY.mbs}, ${COMPANY.court} · Temeljni kapital ${COMPANY.capital}`;
+// Croatian business letters must carry all three lines (Zakon o trgovačkim društvima, čl. 21).
+const legal = () => `${COMPANY.name} · ${COMPANY.street}, ${COMPANY.city} · OIB ${COMPANY.oib} · MBS ${COMPANY.mbs}, ${COMPANY.court}`;
+const capitalLine = () => `Temeljni kapital ${COMPANY.capital}, ${COMPANY.capitalPaid} · Član uprave: ${COMPANY.board}`;
 const bankLine = () => `IBAN ${COMPANY.iban} · ${COMPANY.bank} · SWIFT ${COMPANY.swift} · ${COMPANY.email} · ${COMPANY.web}`;
 
 const PAPER = `
@@ -192,7 +196,7 @@ function letterhead({ sample }) {
     <div class="head">${lockup("lumiverse-logo-light.svg").replace("<svg ", `<svg style="height:30px;width:auto" `)}
       <div class="meta">${COMPANY.street}<br>${COMPANY.city}<br>${COMPANY.email} · ${COMPANY.web}</div></div>
     ${body}
-    <div class="foot">${legal()}<br>${bankLine()}</div></div>` };
+    <div class="foot">${legal()}<br>${capitalLine()}<br>${bankLine()}</div></div>` };
 }
 
 function memo({ lang }) {
@@ -206,7 +210,7 @@ function memo({ lang }) {
       <div style="font-weight:700;font-size:44px;letter-spacing:-0.04em;line-height:1">${L.title}</div>
       <div style="margin-top:30px;border-bottom:1px solid #e4e2de">${[L.to, L.from, L.cc, L.date, L.re].map(row).join("")}</div>
       <div style="margin-top:26px;font-size:11px;line-height:1.6;color:#9a9893">${L.body}</div></div>
-    <div class="foot">${legal()}<br>${bankLine()}</div></div>` };
+    <div class="foot">${legal()}<br>${capitalLine()}<br>${bankLine()}</div></div>` };
 }
 
 // Business card: 85x55 mm plus 3 mm bleed each side = 91x61 mm (344x231 px at 96dpi).
@@ -373,7 +377,7 @@ const groups = {
 };
 const manifest = {
   generated: new Date().toISOString().slice(0, 10),
-  company: { ...COMPANY, legal: legal(), bankLine: bankLine() },
+  company: { ...COMPANY, legal: legal(), capitalLine: capitalLine(), bankLine: bankLine() },
   groups,
   assets: ASSETS.map((a) => ({
     group: a.group, id: a.id, title: a.title, use: a.use,
