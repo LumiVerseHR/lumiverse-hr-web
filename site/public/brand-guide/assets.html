@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LumiVerse Brand Assets</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,500;1,600&family=Golos+Text:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/brand-guide/brand.css">
+<style>
+  .kit-btn {
+    display: inline-flex; align-items: center; gap: 10px; margin-top: 32px;
+    background: #e03131; color: #fff; text-decoration: none; font-weight: 500; font-size: 16px;
+    padding: 14px 20px; transition: background-color 160ms ease-out;
+  }
+  .kit-btn:hover { background: #c42b2b; }
+  .kit-btn:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; }
+  .kit-btn small { color: rgb(255 255 255 / .75); font-size: 14px; }
+
+  .assets { display: grid; gap: 28px 20px; grid-template-columns: repeat(var(--cols, 2), minmax(0, 1fr)); }
+  @media (max-width: 900px) { .assets { --cols: 2 !important; } }
+  @media (max-width: 600px) { .assets { --cols: 1 !important; } }
+
+  .asset { display: flex; flex-direction: column; }
+  .asset .stage { min-height: 0; padding: clamp(16px, 3vw, 32px); }
+  .asset .stage img { max-height: 340px; width: auto; max-width: 100%; box-shadow: 0 18px 40px rgb(0 0 0 / .45); }
+  .asset .stage.paper img { box-shadow: 0 14px 30px rgb(0 0 0 / .18); }
+  .asset h3 { margin-top: 14px; font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
+  .asset p { margin-top: 4px; color: var(--text-2); font-size: 15px; }
+  .asset ul { list-style: none; padding: 0; margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+  .asset li a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--rule); transition: color 160ms ease-out, border-color 160ms ease-out; }
+  .asset li a:hover { color: var(--coral); border-color: var(--coral); }
+  .asset li span { color: var(--muted); margin-left: 6px; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a href="/brand-guide" aria-label="Brand guide"><img class="bar-logo" src="/assets/brand/logo/lumiverse-logo-dark.svg" alt="LumiVerse"></a>
+    <nav aria-label="Sections" id="nav">
+      <a href="/brand-guide">← Brand guide</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <h1>Every file, ready to use.</h1>
+      <p>Profile pictures, covers, letterhead, business cards, slides and ads, all at the sizes each place asks for. Every file is generated from the same logo source, so none of them can drift.</p>
+      <a class="kit-btn" href="/assets/brand/kit/lumiverse-brand-kit.zip" download>Download the whole kit <small id="zipsize">ZIP</small></a>
+      <div class="status">
+        <span class="tag placard" id="generated">Generated</span>
+        <span class="tag placard">Not published yet</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="groups"></div>
+
+  <section id="notes">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="num" id="notes-num">··</span>
+        <h2>Before you use them</h2>
+      </div>
+      <ol class="q">
+        <li><div><h3>The legal footer needs two more facts</h3><p>Croatian business letters must also name the management board and state whether the share capital is paid in full. Neither is in the brand data yet, so the letterhead and memo footers leave them out. Tell me both and the generator adds them everywhere.</p><span class="state open">Open</span></div></li>
+        <li><div><h3>Word templates need Golos Text installed</h3><p>The DOCX files are set in Golos Text. On a machine without it, Word substitutes a default font. The font is in the zip's <code>fonts/</code> folder and is free to install.</p><span class="state open">Check in Word</span></div></li>
+        <li><div><h3>The email signature points at the live site</h3><p>Its logo loads from <code>lumiverse.hr/assets/brand/kit/</code>, so it shows only once this is published.</p><span class="state open">After publishing</span></div></li>
+        <li><div><h3>Names, roles and phone numbers are placeholders</h3><p>Business card, letter sample and signature say "Ime Prezime" and "Funkcija". Send the team list for personalised versions.</p><span class="state open">Needs the team list</span></div></li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Regenerate everything with <code>site/design-src/brand-kit/build.sh</code>. Internal page, not indexed.</div>
+</footer>
+
+<script>
+(async () => {
+  const BASE = '/assets/brand/kit/';
+  const kb = (n) => n >= 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(n / 1024)) + ' KB';
+  const size = async (href) => {
+    try { const r = await fetch(href, { method: 'HEAD' }); const n = +r.headers.get('content-length'); return n ? kb(n) : ''; } catch { return ''; }
+  };
+  const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+
+  let kit;
+  try { kit = await (await fetch(BASE + 'kit.json')).json(); } catch { return; }
+  document.getElementById('generated').textContent = 'Generated ' + kit.generated;
+  size(BASE + 'lumiverse-brand-kit.zip').then((s) => { if (s) document.getElementById('zipsize').textContent = 'ZIP · ' + s; });
+
+  // Wide formats get two columns, square ones four.
+  const cols = { icons: 3, avatars: 3, social: 2, meetings: 3, email: 2, documents: 2, ads: 2 };
+  const host = document.getElementById('groups');
+  const nav = document.getElementById('nav');
+  let n = 0;
+  for (const [key, title] of Object.entries(kit.groups)) {
+    const items = kit.assets.filter((a) => a.group === key);
+    if (!items.length) continue;
+    n++;
+    const sec = document.createElement('section');
+    sec.id = key;
+    sec.innerHTML = `<div class="wrap"><div class="sec-h"><span class="num">${String(n).padStart(2, '0')}</span><h2>${esc(title)}</h2></div><div class="assets" style="--cols:${cols[key] ?? 2}"></div></div>`;
+    const grid = sec.querySelector('.assets');
+    for (const a of items) {
+      const el = document.createElement('article');
+      el.className = 'asset';
+      el.innerHTML = `
+        <div class="stage ${a.dark ? '' : 'paper'}"><img loading="lazy" src="${BASE + a.preview}" alt="${esc(a.title)} preview"></div>
+        <h3>${esc(a.title)}</h3>
+        <p>${esc(a.use)}</p>
+        <ul>${a.files.map((f) => `<li><a href="${BASE + f.href}" download>${esc(f.name)}</a><span data-size="${BASE + f.href}"></span></li>`).join('')}</ul>`;
+      grid.appendChild(el);
+    }
+    host.appendChild(sec);
+    const link = document.createElement('a');
+    link.href = '#' + key;
+    link.textContent = title.split(' ')[0];
+    nav.appendChild(link);
+  }
+  document.getElementById('notes-num').textContent = String(n + 1).padStart(2, '0');
+  document.querySelectorAll('[data-size]').forEach(async (s) => { s.textContent = await size(s.dataset.size); });
+})();
+</script>
+</body>
+</html>

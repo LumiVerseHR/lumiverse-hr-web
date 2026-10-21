@@ -9,162 +9,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,500;1,600&family=Golos+Text:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --wall: #0e0f12;
-    --wall-deep: #0a0a0c;
-    --placard: #0b0b0c;
-    --coral: #ff4d4d;
-    --basswood: #c9a57a;
-    --lamp: #ffd2a6;
-    --card: #edebe7;
-    --text: #f7f7f6;
-    --text-2: #cacaca;
-    --muted: #8f8e8b;
-    --rule: rgb(255 255 255 / 0.12);
-    --rule-soft: rgb(255 255 255 / 0.08);
-    --label: 'Barlow Condensed', 'Golos Text', sans-serif;
-    --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  * { box-sizing: border-box; margin: 0; }
-  html { background: var(--wall); }
-  body {
-    background: var(--wall);
-    color: var(--text);
-    font: 400 17px/1.55 'Golos Text', ui-sans-serif, system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: inherit; }
-  img { display: block; max-width: 100%; }
-
-  .wrap { width: min(1240px, 100% - 32px); margin-inline: auto; }
-
-  /* Top bar: the current site wordmark, so the comparison starts from what's live. */
-  .bar { border-bottom: 1px solid var(--rule-soft); }
-  .bar .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-  .live-mark { font-weight: 600; font-size: 24px; letter-spacing: -0.02em; text-decoration: none; }
-  .live-mark i { display: inline-block; width: .34em; height: .34em; margin-left: .3em; border-radius: 50%; background: var(--coral); }
-  .bar nav { display: flex; gap: 22px; font-size: 14px; color: var(--text-2); flex-wrap: wrap; justify-content: flex-end; }
-  .bar nav a { text-decoration: none; transition: color 160ms ease-out; }
-  .bar nav a:hover { color: var(--text); }
-
-  /* Hero, lit from above */
-  .hero {
-    padding: 96px 0 72px;
-    background: radial-gradient(60% 80% at 50% -10%, rgb(255 210 166 / 0.10), transparent 70%);
-  }
-  .hero h1 { font-weight: 700; font-size: clamp(52px, 7.8vw, 132px); line-height: .9; letter-spacing: -0.04em; max-width: 11ch; }
-  .hero p { margin-top: 28px; max-width: 58ch; color: var(--text-2); font-size: 19px; }
-  .status { margin-top: 32px; display: flex; gap: 10px; flex-wrap: wrap; }
-
-  .tag { font: italic 600 15px/1 var(--label); color: var(--basswood); letter-spacing: .01em; }
-  .placard { background: var(--placard); padding: 9px 12px 8px; box-shadow: 0 10px 22px rgb(0 0 0 / .45); }
-
-  section { padding: 88px 0; border-top: 1px solid var(--rule-soft); }
-  .sec-h { display: grid; grid-template-columns: 64px 1fr; gap: 0 20px; margin-bottom: 44px; }
-  .sec-h .num { font: italic 600 34px/1 var(--label); color: var(--basswood); padding-top: 6px; }
-  .sec-h h2 { font-weight: 700; font-size: clamp(36px, 4.4vw, 64px); line-height: .95; letter-spacing: -0.035em; }
-  .sec-h p { grid-column: 2; margin-top: 16px; color: var(--text-2); max-width: 64ch; }
-  @media (max-width: 640px) { .sec-h { grid-template-columns: 1fr; } .sec-h p { grid-column: 1; } .sec-h .num { margin-bottom: 10px; } }
-
-  /* Specimen tiles: square corners, hairline, caption below */
-  .grid { display: grid; gap: 20px; }
-  .g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  @media (max-width: 900px) { .g3, .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 640px) { .g2, .g3, .g4 { grid-template-columns: 1fr; } }
-
-  .tile { display: flex; flex-direction: column; }
-  .stage {
-    position: relative; display: grid; place-items: center;
-    padding: clamp(28px, 5vw, 64px); min-height: 240px;
-    background: var(--wall-deep); outline: 1px solid var(--rule-soft); outline-offset: -1px;
-  }
-  .stage.light { background: #ffffff; outline: none; }
-  .stage.paper { background: var(--card); outline: none; }
-  .stage.coral { background: var(--coral); outline: none; }
-  .stage.lamp { background: radial-gradient(70% 90% at 50% 0%, rgb(255 210 166 / 0.14), transparent 70%), var(--wall); }
-  .stage.tall { min-height: 420px; }
-  .cap { display: flex; justify-content: space-between; gap: 12px; padding-top: 12px; font-size: 14px; color: var(--muted); }
-  .cap b { font-weight: 500; color: var(--text-2); }
-  .cap a { color: var(--text-2); text-decoration: none; border-bottom: 1px solid var(--rule); transition: color 160ms ease-out; }
-  .cap a:hover { color: var(--text); }
-
-  .lockup-xl { width: min(860px, 100%); }
-  .w-70 { width: 70%; } .w-50 { width: 50%; } .w-40 { width: 40%; }
-
-  /* Before / after */
-  .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  @media (max-width: 640px) { .ba { grid-template-columns: 1fr; } }
-  .zoom { overflow: hidden; height: 360px; background: var(--wall-deep); position: relative; outline: 1px solid var(--rule-soft); outline-offset: -1px; }
-  .zoom img { position: absolute; max-width: none; }
-  .zoom .old { width: 3000px; left: -660px; top: -110px; }
-  .zoom .new { width: 3502px; left: -825px; top: -200px; }
-
-  /* Construction */
-  .construct { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; align-items: start; }
-  @media (max-width: 900px) { .construct { grid-template-columns: 1fr; } }
-  .construct svg { width: 100%; height: auto; display: block; background: var(--wall-deep); }
-  .toggles { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
-  .toggles button {
-    font: 500 14px/1 'Golos Text', sans-serif; color: var(--text-2); background: transparent;
-    border: 1px solid var(--rule); padding: 9px 12px; cursor: pointer; border-radius: 0;
-    transition: color 160ms ease-out, border-color 160ms ease-out, background 160ms ease-out;
-  }
-  .toggles button[aria-pressed="true"] { color: var(--wall); background: var(--text); border-color: var(--text); }
-  .toggles button:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
-
-  .rules { list-style: none; padding: 0; }
-  .rules li { display: grid; grid-template-columns: 88px 1fr; gap: 14px; padding: 13px 0; border-top: 1px solid var(--rule-soft); }
-  .rules li:last-child { border-bottom: 1px solid var(--rule-soft); }
-  .rules .v { font-weight: 700; font-variant-numeric: tabular-nums; }
-  .rules .d { color: var(--text-2); font-size: 15px; }
-  .rules .d s { color: var(--muted); }
-
-  /* Small sizes */
-  .sizes { display: flex; align-items: flex-end; gap: 28px; flex-wrap: wrap; }
-  .sizes figure { display: flex; flex-direction: column; align-items: center; gap: 10px; }
-  .sizes figcaption { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
-  canvas.px { image-rendering: pixelated; width: 128px; height: 128px; background: var(--wall-deep); }
-
-  /* Header in context */
-  .hdr { display: flex; align-items: center; justify-content: space-between; height: 76px; padding: 0 28px; background: rgb(14 15 18 / .86); border-bottom: 1px solid rgb(255 255 255 / .06); }
-  .hdr .links { display: flex; gap: 26px; font-size: 15px; color: var(--text-2); }
-  .hdr .btn { background: #e03131; color: #fff; font-weight: 500; font-size: 15px; padding: 11px 16px; }
-  @media (max-width: 760px) { .hdr .links { display: none; } }
-
-  /* Colour */
-  .sw { display: flex; flex-direction: column; }
-  .sw .chip { height: 120px; outline: 1px solid var(--rule-soft); outline-offset: -1px; }
-  .sw .meta { padding-top: 12px; display: grid; gap: 2px; font-size: 14px; }
-  .sw .meta code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--text-2); font-size: 13px; }
-  .sw .meta span { color: var(--muted); }
-
-  .type-row { display: grid; grid-template-columns: 180px 1fr; gap: 20px; padding: 22px 0; border-top: 1px solid var(--rule-soft); align-items: baseline; }
-  @media (max-width: 640px) { .type-row { grid-template-columns: 1fr; gap: 6px; } }
-  .type-row .m { font-size: 14px; color: var(--muted); }
-
-  /* Decisions */
-  .q { list-style: none; padding: 0; counter-reset: q; }
-  .q li { counter-increment: q; display: grid; grid-template-columns: 64px 1fr; gap: 20px; padding: 22px 0; border-top: 1px solid var(--rule-soft); }
-  .q li::before { content: counter(q, decimal-leading-zero); font: italic 600 26px/1 var(--label); color: var(--basswood); }
-  .q h3 { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
-  .q p { color: var(--text-2); margin-top: 6px; max-width: 70ch; }
-  .q .state { display: inline-block; margin-top: 10px; font: italic 600 15px/1 var(--label); }
-  .q .done { color: var(--basswood); }
-  .q .open { color: var(--coral); }
-
-  footer { padding: 48px 0 64px; border-top: 1px solid var(--rule-soft); color: var(--muted); font-size: 14px; background: var(--wall-deep); }
-
-  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-</style>
+<link rel="stylesheet" href="/brand-guide/brand.css">
 </head>
 <body>
 
 <header class="bar">
   <div class="wrap">
-    <a class="live-mark" href="/" aria-label="LumiVerse home">LumiVerse<i aria-hidden="true"></i></a>
+    <a href="/" aria-label="LumiVerse home"><img class="bar-logo" src="/assets/brand/logo/lumiverse-logo-dark.svg" alt="LumiVerse"></a>
     <nav aria-label="Sections">
       <a href="#logo">Logo</a>
       <a href="#construction">Construction</a>
@@ -173,6 +24,7 @@
       <a href="#colour">Colour</a>
       <a href="#downloads">Downloads</a>
       <a href="#decisions">Decisions</a>
+      <a href="/brand-guide/assets" style="color:var(--text)">Assets →</a>
     </nav>
   </div>
 </header>
@@ -184,7 +36,7 @@
       <p>The W2 "woven" concept, redrawn on a 16-unit grid with one stroke, one gap and one angle. The wordmark is now real Golos Text 500, the font the site already uses, instead of an 89 KB bitmap trace.</p>
       <div class="status">
         <span class="tag placard">Work in progress · 21 Oct 2026</span>
-        <span class="tag placard">Not on the live header yet</span>
+        <span class="tag placard">On the site header · not published yet</span>
       </div>
     </div>
   </div>
@@ -300,7 +152,7 @@
             <span class="links"><span>Work</span><span>Services</span><span>Studio</span><span>Research</span></span>
             <span class="btn">Start a Project</span>
           </div>
-          <div class="cap"><b>Header today: live text and the dot</b><span>Golos at weight 600, which renders as 700</span></div>
+          <div class="cap"><b>Before: live text and the dot</b><span>Golos at weight 600, which renders as 700</span></div>
         </div>
         <div class="tile">
           <div class="hdr">
@@ -308,7 +160,7 @@
             <span class="links"><span>Work</span><span>Services</span><span>Studio</span><span>Research</span></span>
             <span class="btn">Start a Project</span>
           </div>
-          <div class="cap"><b>Header with the W2 lockup</b><span>Preview only. The dot stays the laser origin.</span></div>
+          <div class="cap"><b>Now: the LV lockup</b><span>The dot stays the laser origin.</span></div>
         </div>
       </div>
     </div>
@@ -363,7 +215,7 @@
         <li><div><h3>Colour: site coral #ff4d4d</h3><p>MOTION.md reserves coral for people, the dot, the beam and actions. A coral symbol needs one more line there: "the logo symbol".</p><span class="state done">Decided · MOTION.md update pending</span></div></li>
         <li><div><h3>Dot stays</h3><p>It remains the laser's origin. In the logo it sits 0.12em after the word, tighter than the header's 0.3em, because 0.3em looked detached at logo size.</p><span class="state open">Check the spacing</span></div></li>
         <li><div><h3>The hook stays, for now</h3><p>Check it in section 04 at 16–32 px. Options: keep it everywhere, widen it only in the favicon, or close it in the favicon.</p><span class="state open">Open: look at small sizes</span></div></li>
-        <li><div><h3>Adopt in the header</h3><p>Swap the live text wordmark for the lockup, then regenerate the favicons, OG card, social banners and brand zip in <code>public/assets/brand/</code>.</p><span class="state open">Next pass</span></div></li>
+        <li><div><h3>Adopt on the site</h3><p>The header and footer use the lockup, the hero lamp aims at the dot, and the favicons, share cards and the full kit are regenerated. <a href="/brand-guide/assets">See every asset</a>.</p><span class="state done">Done · not published</span></div></li>
       </ol>
     </div>
   </section>

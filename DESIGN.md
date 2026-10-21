@@ -157,7 +157,7 @@ components:
 
 **Creative North Star: "The Scale Model Gallery"**
 
-Every shipped project is a white scale model standing on one plinth in a dark gallery, under a single warm raking spotlight. The site is that room. The walls are near-black (gallery), the light is warm (lamplight, used only as a soft wash from above), and the models are white card and basswood. Tiny coral human figures stand among the models: they are the people each project amplifies, and coral belongs to them, to the logo dot and to the action the visitor should take next.
+Every shipped project is a white scale model standing on one plinth in a dark gallery, under a single warm raking spotlight. The site is that room. The walls are near-black (gallery), the light is warm (lamplight, used only as a soft wash from above), and the models are white card and basswood. Tiny coral human figures stand among the models: they are the people each project amplifies, and coral belongs to them, to the LV logo symbol and its dot, and to the action the visitor should take next.
 
 The homepage hero is a laser-cut exhibit on a plinth (`site/src/components/hero/`; replaced the earlier real-time 3D maquette). A coral beam leaves the logo dot, traces a device in gold, cuts it solid with a real product on its screen, holds it under the lamp with a black placard, and moves on to the next device. The plinth, devices and figures are pre-rendered layers; the browser only animates the reveal. Everything below the hero borrows from that room. Screenshots hang as framed prints. Labels and offers sit on black placards. Lists are wall labels divided by hairlines instead of boxed cards. Headlines are heavy white grotesk set at monumental scale with tight tracking. Density is low and the rhythm generous: sections breathe at up to 184px, and the copy rarely runs past 60–68ch.
 
@@ -165,7 +165,7 @@ The world refuses the AI-agency default: a dark field with neon glow, a bento gr
 
 **Key Characteristics:**
 - One dark room with one warm light. All atmosphere comes from a lamplight wash from above.
-- Coral marks the human figures, the logo dot and actions, and nothing decorative.
+- Coral marks the human figures, the logo symbol and dot, and actions, and nothing decorative.
 - Black placards are the labelling device, with a condensed italic caption face for their titles.
 - Screenshots are always framed exhibits: a black moulding, a dark mat and a warm top bounce.
 - Hairline-divided lists, not card boxes.
@@ -177,7 +177,7 @@ The world refuses the AI-agency default: a dark field with neon glow, a bento gr
 The palette is a near-black gallery with three warm material colours from the model (white card, basswood and lamplight) and a single saturated coral.
 
 ### Primary
-- **Figure Coral** (coral): the scale figures on the hero plinth, the laser beam, and the inline SVG `Figure` (the thesis line, case-study pull quotes, the 404 plinth), the logo dot, and every primary action fill. Coral is also the system's interaction signal: link and title hover colour, the 2px focus ring, text selection, the active showcase indicator, and the border of an invalid or focused form field.
+- **Figure Coral** (coral): the scale figures on the hero plinth, the laser beam, and the inline SVG `Figure` (the thesis line, case-study pull quotes, the 404 plinth), the LV logo symbol and dot, and every primary action fill. Coral is also the system's interaction signal: link and title hover colour, the 2px focus ring, text selection, the active showcase indicator, and the border of an invalid or focused form field.
 - **Pressed Coral** (coral-press): the hover and pressed state of every coral fill. Nothing else uses it.
 
 ### Secondary
@@ -199,7 +199,7 @@ The palette is a near-black gallery with three warm material colours from the mo
 - **Render-only:** Plinth Stone (plinth-stone), Scene Floor (scene-floor) and Scene Wall (scene-wall) belong to the rendered hero room, not to globals.css.
 
 ### Named Rules
-**The Coral Is Human Rule.** Coral fills only the human figures, the logo dot and actions, and it colours only interaction states (hover, focus, selection, current). It never appears in a gradient, a glow, a background wash, a border ornament or an illustration other than the figures.
+**The Coral Is Human Rule.** Coral fills only the human figures, the logo symbol and dot, and actions, and it colours only interaction states (hover, focus, selection, current). It never appears in a gradient, a glow, a background wash, a border ornament or an illustration other than the figures.
 
 **The One Warm Light Rule.** All atmosphere is one warm light from above: radial washes of lamplight at 0.16 alpha or less, anchored at the top edge. Coloured glows, neon and cool light in the interface are out. The scene's single cool fill (`#9aa6c8` at 0.5) is a bounce panel inside the 3D environment only.
 
@@ -280,7 +280,7 @@ Coral and solid, square at every size.
 - **Error:** a coral border via `aria-invalid`, with the message in the error colour.
 
 ### Navigation
-The header is a three-column grid: wordmark (600, clamp(21px, 1.8vw, 28px), with the coral dot) on the left, nav (15px, 500, clamp(28px, 3.2vw, 50px) gaps) in the centre, and EN/HR (14px, text-muted, current in text) with the compact CTA on the right. Over the hero it is transparent. On inner pages it sticks to the top on `rgb(14 15 18 / 0.86)` with a 12px backdrop blur and a 0.06 bottom hairline. Links turn coral on hover. Below 900px a Menu toggle opens a full-screen panel on gallery under a lamplight wash, with links at clamp(36px, 10vw, 52px) 700. It reveals over 280ms and respects reduced motion.
+The header is a three-column grid: the logo lockup (`Logo`: the generated LV symbol on the text baseline, the name in Golos 500 at clamp(21px, 1.8vw, 28px), and the coral dot that is the laser origin) on the left, nav (15px, 500, clamp(28px, 3.2vw, 50px) gaps) in the centre, and EN/HR (14px, text-muted, current in text) with the compact CTA on the right. Over the hero it is transparent. On inner pages it sticks to the top on `rgb(14 15 18 / 0.86)` with a 12px backdrop blur and a 0.06 bottom hairline. Links turn coral on hover. Below 900px a Menu toggle opens a full-screen panel on gallery under a lamplight wash, with links at clamp(36px, 10vw, 52px) 700. It reveals over 280ms and respects reduced motion.
 
 ### Framed Exhibit (signature)
 Real screenshots always hang as framed prints: a 14px moulding border (12px on smaller exhibits, 10px for the work-index preview, 8px for related thumbnails), a 6px inset mat, the frame ground, a 1px `rgb(255 255 255 / 0.07)` outline and the exhibit shadow. Homepage frames are 16/10 and landing frames 1200/630. On hover a frame lifts 5–6px over 320ms cubic-bezier(0.22, 1, 0.36, 1). A wall label beneath the frame holds the name, kind (text-muted), stat and summary. On the homepage each exhibit hangs in its own lamplight pool.
@@ -292,7 +292,7 @@ Lists of work, offers, steps, posts, FAQs and products are wall labels divided b
 A black museum label on the 3D plinth front: min-width 210px, padded 10px 16px 12px. It carries an uppercase Placard Title and a 15px italic caption in text-soft, under the plinth-placard shadow.
 
 ### Laser Hero (signature)
-The hero (`site/src/components/hero/HeroLaser.tsx`) is one cycle per device: four beams from the logo dot trace the device's real edges in gold (1.15s), a cut line sweeps down and reveals the solid render (0.85s), it holds under the lamp with its placard (4.8s), then vanishes (0.52s) and the next device begins (a laptop with Moj Kolega, a monitor with Titlomat, a curved workstation with Bridj). Lamplight cones fall from the logo on a 9.3s loop, with dust in the beams. Layers are responsive WebP (800/1100/1600w), the stage image loads first, and the stage holds its final solid frame under reduced motion. MOTION.md carries the same timings for video work.
+The hero (`site/src/components/hero/HeroLaser.tsx`) is one cycle per device: four beams from the logo dot trace the device's real edges in gold (1.15s), a cut line sweeps down and reveals the solid render (0.85s), it holds under the lamp with its placard (4.8s), then vanishes (0.52s) and the next device begins (a laptop with Moj Kolega, a monitor with Titlomat, a curved workstation with Bridj). Lamplight cones fall from the logo dot on a 9.3s loop, with dust in the beams; `LampOrigin` measures the dot so the cone always starts there. Layers are responsive WebP (800/1100/1600w), the stage image loads first, and the stage holds its final solid frame under reduced motion. MOTION.md carries the same timings for video work.
 
 ## Do's and Don'ts
 
@@ -301,7 +301,7 @@ The hero (`site/src/components/hero/HeroLaser.tsx`) is one cycle per device: fou
 - **Do** use placard-black placards for labels, offers, forms and stat bands, with square corners and a downward shadow.
 - **Do** divide lists with hairlines (`hairline-rule` on top, `hairline-row` between rows) and start included items with a 10–12px basswood dash.
 - **Do** set headlines in Golos Text 700 with −0.03 to −0.04em tracking and leading of 0.82–0.98.
-- **Do** keep coral to the figures, the logo dot, action fills and interaction states, with coral-press for hover.
+- **Do** keep coral to the figures, the logo symbol and dot, action fills and interaction states, with coral-press for hover.
 - **Do** light sections only with lamplight radial washes from the top edge at 0.16 alpha or less.
 - **Do** use 160ms ease-out for colour changes and cubic-bezier(0.22, 1, 0.36, 1) at 240–320ms for lifts and reveals, and honour `prefers-reduced-motion`.
 

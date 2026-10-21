@@ -6,7 +6,7 @@ import type { NextConfig } from "next";
 const appRoot = path.resolve(__dirname);
 
 // Kept as the original static files (noindex, linked from nowhere).
-const STATIC_PAGES = ["/brand-guide", "/decks/tvrtko-agents", "/v/reel-38bf03"];
+const STATIC_PAGES = ["/brand-guide", "/brand-guide/assets", "/decks/tvrtko-agents", "/v/reel-38bf03"];
 
 // The proxy marks its own rewrites to /en with x-lv-rewrite, so only visitor requests get redirected.
 const visitorOnly = [{ type: "header" as const, key: "x-lv-rewrite" }];
@@ -26,7 +26,7 @@ const nextConfig: NextConfig = {
       // Legacy .html URLs, as nginx redirected them.
       { source: "/index.html", destination: "/", permanent: true },
       { source: "/hr/index.html", destination: "/hr", permanent: true },
-      { source: "/:path((?!brand-guide|decks/|v/).*)\\.html", destination: "/:path", permanent: true },
+      { source: "/:path((?!brand-guide|decks/|v/|assets/).*)\\.html", destination: "/:path", permanent: true },
     ];
   },
 
