@@ -4,6 +4,7 @@ import { localePath } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { Icon } from "@/components/icons/Icon";
 import { MobileMenu } from "@/components/nav/MobileMenu";
+import { Logo } from "./Logo";
 import styles from "./Header.module.css";
 
 // One header for every page. `path` is the unprefixed path of the current page,
@@ -39,7 +40,7 @@ export function Header({
   return (
     <header className={`${styles.bar} ${overlay ? styles.overlay : styles.page}`}>
       <Link href={localePath(lang)} className={styles.wordmark} aria-label="LumiVerse">
-        LumiVerse<span className={styles.dot} data-laser-origin aria-hidden />
+        <Logo laserOrigin />
       </Link>
       <nav className={styles.nav} aria-label="Primary">
         {items.map((item) => (
