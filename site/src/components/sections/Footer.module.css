@@ -14,18 +14,7 @@
 
 .wordmark {
   font-size: 26px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
   text-decoration: none;
-}
-
-.dot {
-  display: inline-block;
-  width: 0.34em;
-  height: 0.34em;
-  margin-left: 0.3em;
-  border-radius: 50%;
-  background: var(--coral);
 }
 
 .tagline {

@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { localePath } from "@/i18n/config";
 import { ConsentOpen } from "@/components/chrome/ConsentOpen";
+import { Logo } from "@/components/chrome/Logo";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { flagships, workIndex } from "@/content/work";
 import styles from "./Footer.module.css";
@@ -20,7 +21,7 @@ export async function Footer({ lang, dict }: { lang: Locale; dict: Dictionary })
       <div className={styles.inner}>
         <div className={styles.brand}>
           <Link href={localePath(lang)} className={styles.wordmark}>
-            LumiVerse<span className={styles.dot} aria-hidden />
+            <Logo />
           </Link>
           <p className={styles.tagline}>{dict.footer.tagline}</p>
         </div>

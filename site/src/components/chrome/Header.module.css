@@ -29,19 +29,8 @@
 
 .wordmark {
   justify-self: start;
-  font-weight: 600;
   font-size: clamp(21px, 1.8vw, 28px);
-  letter-spacing: -0.02em;
   text-decoration: none;
-}
-
-.dot {
-  display: inline-block;
-  width: 0.34em;
-  height: 0.34em;
-  margin-left: 0.3em;
-  border-radius: 50%;
-  background: var(--coral);
 }
 
 .nav {
@@ -115,10 +104,4 @@
   .cta {
     display: none;
   }
-}
-
-/* The dot as a laser emitter while a title is being written. */
-.dot[data-firing] {
-  box-shadow: 0 0 0 3px rgb(255 77 77 / 0.25), 0 0 16px 4px rgb(255 77 77 / 0.7);
-  transition: box-shadow 120ms ease-out;
 }

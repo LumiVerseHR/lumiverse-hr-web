@@ -1,0 +1,445 @@
+{
+  "generated": "2026-10-21",
+  "company": {
+    "name": "LumiVerse d.o.o.",
+    "street": "Markuševečka cesta 20C",
+    "city": "10000 Zagreb, Hrvatska",
+    "oib": "88595646800",
+    "mbs": "081511108",
+    "court": "Trgovački sud u Zagrebu",
+    "capital": "2.500,00 EUR",
+    "iban": "HR94 2340 0091 1112 3354 4",
+    "bank": "Privredna banka Zagreb d.d.",
+    "swift": "PBZGHR2X",
+    "email": "info@lumiverse.hr",
+    "web": "lumiverse.hr",
+    "legal": "LumiVerse d.o.o. · Markuševečka cesta 20C, 10000 Zagreb, Hrvatska · OIB 88595646800 · MBS 081511108, Trgovački sud u Zagrebu · Temeljni kapital 2.500,00 EUR",
+    "bankLine": "IBAN HR94 2340 0091 1112 3354 4 · Privredna banka Zagreb d.d. · SWIFT PBZGHR2X · info@lumiverse.hr · lumiverse.hr"
+  },
+  "groups": {
+    "icons": "Icons",
+    "avatars": "Profile pictures",
+    "social": "Social covers and share cards",
+    "meetings": "Meetings and presentations",
+    "email": "Email",
+    "documents": "Print and documents",
+    "ads": "Display ads"
+  },
+  "assets": [
+    {
+      "group": "icons",
+      "id": "favicon",
+      "title": "Favicon",
+      "use": "Browser tab. SVG for modern browsers, ICO with 16/32/48 for the rest.",
+      "preview": "icon-512.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "favicon.svg",
+          "href": "favicon.svg",
+          "bytes": 452
+        },
+        {
+          "name": "favicon.ico",
+          "href": "favicon.ico",
+          "bytes": 3324
+        }
+      ]
+    },
+    {
+      "group": "icons",
+      "id": "app-icon",
+      "title": "App icon",
+      "use": "Home-screen icon (iOS 180, Android 192/512).",
+      "preview": "icon-512.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "apple-touch-icon.png",
+          "href": "apple-touch-icon.png",
+          "bytes": 4058
+        },
+        {
+          "name": "icon-192.png",
+          "href": "icon-192.png",
+          "bytes": 4093
+        },
+        {
+          "name": "icon-512.png",
+          "href": "icon-512.png",
+          "bytes": 7367
+        }
+      ]
+    },
+    {
+      "group": "icons",
+      "id": "maskable",
+      "title": "Maskable icon",
+      "use": "Android adaptive icon: symbol inside the 80% safe circle.",
+      "preview": "icon-maskable-512.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "icon-maskable-512.png",
+          "href": "icon-maskable-512.png",
+          "bytes": 6672
+        }
+      ]
+    },
+    {
+      "group": "avatars",
+      "id": "avatar-coral",
+      "title": "Avatar, coral on dark",
+      "use": "Default profile picture: LinkedIn, X, GitHub, Slack, YouTube. Safe for round crops.",
+      "preview": "avatar-coral-on-dark-800.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "avatar-coral-on-dark-800.png",
+          "href": "avatar-coral-on-dark-800.png",
+          "bytes": 12215
+        }
+      ]
+    },
+    {
+      "group": "avatars",
+      "id": "avatar-white",
+      "title": "Avatar, white on coral",
+      "use": "Where the default disappears on a dark UI.",
+      "preview": "avatar-white-on-coral-800.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "avatar-white-on-coral-800.png",
+          "href": "avatar-white-on-coral-800.png",
+          "bytes": 10904
+        }
+      ]
+    },
+    {
+      "group": "avatars",
+      "id": "avatar-light",
+      "title": "Avatar, coral on white",
+      "use": "Light directories, marketplaces, partner listings.",
+      "preview": "avatar-coral-on-white-800.png",
+      "dark": false,
+      "files": [
+        {
+          "name": "avatar-coral-on-white-800.png",
+          "href": "avatar-coral-on-white-800.png",
+          "bytes": 10880
+        }
+      ]
+    },
+    {
+      "group": "social",
+      "id": "linkedin-company",
+      "title": "LinkedIn company cover",
+      "use": "1128×191. The page logo overlaps bottom-left, so the text sits right.",
+      "preview": "linkedin-company-cover-1128x191.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "linkedin-company-cover-1128x191.png",
+          "href": "linkedin-company-cover-1128x191.png",
+          "bytes": 83417
+        }
+      ]
+    },
+    {
+      "group": "social",
+      "id": "linkedin-personal",
+      "title": "LinkedIn profile banner",
+      "use": "1584×396, for team profiles. The photo covers bottom-left.",
+      "preview": "linkedin-profile-banner-1584x396.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "linkedin-profile-banner-1584x396.png",
+          "href": "linkedin-profile-banner-1584x396.png",
+          "bytes": 198362
+        }
+      ]
+    },
+    {
+      "group": "social",
+      "id": "x-header",
+      "title": "X header",
+      "use": "1500×500.",
+      "preview": "x-header-1500x500.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "x-header-1500x500.png",
+          "href": "x-header-1500x500.png",
+          "bytes": 225700
+        }
+      ]
+    },
+    {
+      "group": "social",
+      "id": "facebook",
+      "title": "Facebook cover",
+      "use": "851×315. Mobile crops the sides; content stays central.",
+      "preview": "facebook-cover-851x315.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "facebook-cover-851x315.png",
+          "href": "facebook-cover-851x315.png",
+          "bytes": 101862
+        }
+      ]
+    },
+    {
+      "group": "social",
+      "id": "youtube",
+      "title": "YouTube channel banner",
+      "use": "2560×1440. Everything inside the 1546×423 safe area.",
+      "preview": "youtube-banner-2560x1440.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "youtube-banner-2560x1440.png",
+          "href": "youtube-banner-2560x1440.png",
+          "bytes": 571266
+        }
+      ]
+    },
+    {
+      "group": "social",
+      "id": "og",
+      "title": "Share card",
+      "use": "1200×630, the default link preview (Open Graph).",
+      "preview": "og-default-1200x630.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "og-default-1200x630.png",
+          "href": "og-default-1200x630.png",
+          "bytes": 184314
+        }
+      ]
+    },
+    {
+      "group": "social",
+      "id": "instagram-post",
+      "title": "Instagram post",
+      "use": "1080×1080.",
+      "preview": "instagram-post-1080x1080.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "instagram-post-1080x1080.png",
+          "href": "instagram-post-1080x1080.png",
+          "bytes": 302304
+        }
+      ]
+    },
+    {
+      "group": "social",
+      "id": "instagram-story",
+      "title": "Story / Reel cover",
+      "use": "1080×1920, Instagram and LinkedIn stories.",
+      "preview": "story-1080x1920.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "story-1080x1920.png",
+          "href": "story-1080x1920.png",
+          "bytes": 571386
+        }
+      ]
+    },
+    {
+      "group": "meetings",
+      "id": "call-bg",
+      "title": "Video call background",
+      "use": "1920×1080 for Zoom, Meet and Teams. The logo sits top-right, clear of your head.",
+      "preview": "video-call-background-1920x1080.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "video-call-background-1920x1080.png",
+          "href": "video-call-background-1920x1080.png",
+          "bytes": 342794
+        }
+      ]
+    },
+    {
+      "group": "meetings",
+      "id": "slide-title",
+      "title": "Slide, title",
+      "use": "1920×1080 background for a title slide.",
+      "preview": "slide-title-1920x1080.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "slide-title-1920x1080.png",
+          "href": "slide-title-1920x1080.png",
+          "bytes": 245221
+        }
+      ]
+    },
+    {
+      "group": "meetings",
+      "id": "slide-content",
+      "title": "Slide, content",
+      "use": "1920×1080 background with the footer rule and page number.",
+      "preview": "slide-content-1920x1080.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "slide-content-1920x1080.png",
+          "href": "slide-content-1920x1080.png",
+          "bytes": 168689
+        }
+      ]
+    },
+    {
+      "group": "email",
+      "id": "signature",
+      "title": "Email signature",
+      "use": "Logo PNG at 3× on white (shown at 180 px) and a paste-ready HTML signature.",
+      "preview": "email-signature-logo.png",
+      "dark": false,
+      "files": [
+        {
+          "name": "email-signature-logo.png",
+          "href": "email-signature-logo.png",
+          "bytes": 9498
+        },
+        {
+          "name": "email-signature.html",
+          "href": "email-signature.html",
+          "bytes": 982
+        }
+      ]
+    },
+    {
+      "group": "documents",
+      "id": "invoice-logo",
+      "title": "Invoice logo",
+      "use": "For invoicing software and PDFs. Colour and black, transparent PNG at 2000 px. Use the SVG where the tool accepts it.",
+      "preview": "invoice-logo-preview.png",
+      "dark": false,
+      "files": [
+        {
+          "name": "invoice-logo-colour.png",
+          "href": "invoice-logo-colour.png",
+          "bytes": 35987
+        },
+        {
+          "name": "invoice-logo-black.png",
+          "href": "invoice-logo-black.png",
+          "bytes": 36236
+        },
+        {
+          "name": "lumiverse-logo-light.svg",
+          "href": "../logo/lumiverse-logo-light.svg",
+          "bytes": 3428
+        }
+      ]
+    },
+    {
+      "group": "documents",
+      "id": "letterhead",
+      "title": "Letterhead",
+      "use": "A4, with the legal footer every business letter needs. PDF to print or stamp, DOCX to write in.",
+      "preview": "letterhead-preview.png",
+      "dark": false,
+      "files": [
+        {
+          "name": "letterhead-a4.pdf",
+          "href": "letterhead-a4.pdf",
+          "bytes": 53197
+        },
+        {
+          "name": "letterhead-a4.docx",
+          "href": "letterhead-a4.docx",
+          "bytes": 66947
+        },
+        {
+          "name": "letterhead-sample-a4.pdf",
+          "href": "letterhead-sample-a4.pdf",
+          "bytes": 94046
+        }
+      ]
+    },
+    {
+      "group": "documents",
+      "id": "memo",
+      "title": "Memorandum",
+      "use": "A4 internal memo, English and Croatian. PDF and DOCX.",
+      "preview": "memo-preview.png",
+      "dark": false,
+      "files": [
+        {
+          "name": "memo-en-a4.pdf",
+          "href": "memo-en-a4.pdf",
+          "bytes": 63951
+        },
+        {
+          "name": "memo-hr-a4.pdf",
+          "href": "memo-hr-a4.pdf",
+          "bytes": 66801
+        },
+        {
+          "name": "memo-en-a4.docx",
+          "href": "memo-en-a4.docx",
+          "bytes": 67070
+        },
+        {
+          "name": "memo-hr-a4.docx",
+          "href": "memo-hr-a4.docx",
+          "bytes": 67076
+        }
+      ]
+    },
+    {
+      "group": "documents",
+      "id": "business-card",
+      "title": "Business card",
+      "use": "85×55 mm with 3 mm bleed, front and back, print-ready PDF. Name and role are placeholders.",
+      "preview": "business-card-preview.png",
+      "dark": false,
+      "files": [
+        {
+          "name": "business-card-85x55.pdf",
+          "href": "business-card-85x55.pdf",
+          "bytes": 9924
+        }
+      ]
+    },
+    {
+      "group": "ads",
+      "id": "leaderboard",
+      "title": "Leaderboard",
+      "use": "728×90 display ad.",
+      "preview": "ad-leaderboard-728x90.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "ad-leaderboard-728x90.png",
+          "href": "ad-leaderboard-728x90.png",
+          "bytes": 22755
+        }
+      ]
+    },
+    {
+      "group": "ads",
+      "id": "rectangle",
+      "title": "Medium rectangle",
+      "use": "300×250 display ad.",
+      "preview": "ad-rectangle-300x250.png",
+      "dark": true,
+      "files": [
+        {
+          "name": "ad-rectangle-300x250.png",
+          "href": "ad-rectangle-300x250.png",
+          "bytes": 27544
+        }
+      ]
+    }
+  ]
+}

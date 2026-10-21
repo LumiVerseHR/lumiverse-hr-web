@@ -4,7 +4,7 @@ import { defaultLocale } from "@/i18n/config";
 // English is served without a prefix: /about is rewritten to /en/about internally.
 // The reverse redirect (/en/about -> /about) lives in next.config.ts.
 // Original static pages (served from /public by next.config rewrites), never localised.
-const STATIC_PAGES = ["/brand-guide", "/decks/tvrtko-agents", "/v/reel-38bf03"];
+const STATIC_PAGES = ["/brand-guide", "/brand-guide/assets", "/decks/tvrtko-agents", "/v/reel-38bf03"];
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;

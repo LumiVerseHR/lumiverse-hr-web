@@ -4,7 +4,7 @@
 //
 //   node design-src/og-cards.mjs [http://localhost:3391]  ->  public/og/pages/<lang>-<page>.jpg
 import { createRequire } from "node:module";
-import { mkdirSync } from "node:fs";
+import { mkdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 
 const require = createRequire(import.meta.url);
@@ -14,6 +14,15 @@ const sharp = require("sharp");
 const BASE = process.argv[2] ?? "http://localhost:3391";
 const ROOT = path.resolve(import.meta.dirname, "..");
 const OUT = path.join(ROOT, "public/og/pages");
+
+// The lockup from public/assets/brand/logo, cropped to its ink (the file carries clear space).
+const LOGO = (() => {
+  const dir = path.join(ROOT, "public/assets/brand/logo");
+  const pad = JSON.parse(readFileSync(path.join(dir, "construction.json"), "utf8")).lockup.clear_space;
+  const svg = readFileSync(path.join(dir, "lumiverse-logo-dark.svg"), "utf8");
+  const [, , w, h] = svg.match(/viewBox="([^"]+)"/)[1].split(" ").map(Number);
+  return svg.replace(/viewBox="[^"]+"/, `viewBox="${pad} ${pad} ${w - 2 * pad} ${h - 2 * pad}"`).replace(/ width="[^"]+" height="[^"]+"/, "");
+})();
 mkdirSync(OUT, { recursive: true });
 
 const { packaged, priceParts } = await import(path.join(ROOT, "src/content/packages.mjs"));
@@ -53,8 +62,7 @@ const css = `
   .price { margin-top: 26px; font-size: 44px; font-weight: 700; letter-spacing: -0.03em; }
   .price small { margin-left: 10px; color: #cacaca; font-size: 22px; font-weight: 500; letter-spacing: 0; }
   .foot { margin-top: auto; display: flex; align-items: center; gap: 18px; font-size: 22px; color: #cacaca; }
-  .logo { color: #f7f7f6; font-weight: 700; font-size: 30px; letter-spacing: -0.02em; }
-  .logo i { display: inline-block; width: 9px; height: 9px; margin-left: 3px; border-radius: 50%; background: #ff4d4d; }
+  .logo svg { display: block; height: 34px; width: auto; }
   .art { position: relative; margin: 48px 48px 48px 8px; }
   .frame { position: absolute; inset: 0; overflow: hidden; border: 10px solid #0a0a0b; outline: 1px solid rgb(255 255 255 / 0.08); background: #111116; box-shadow: 0 30px 70px rgb(0 0 0 / 0.6); }
   .frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
@@ -82,7 +90,7 @@ function html(page, data) {
   ${data.label ? `<div class="label">${data.label}</div>` : ""}
   <h1 class="${data.title.length > 34 ? "long" : ""}">${data.title}</h1>
   ${data.price ? `<div class="price">${data.price}<small>${data.unit}</small></div>` : data.intro ? `<p class="intro">${data.intro}</p>` : ""}
-  <div class="foot"><span class="logo">LumiVerse<i></i></span><span>${data.host}</span></div>
+  <div class="foot"><span class="logo">${LOGO}</span><span>${data.host}</span></div>
 </div>
 <div class="art ${a.src && a.fit !== "contain" ? "still" : ""}">${art}</div>
 </div></body></html>`;

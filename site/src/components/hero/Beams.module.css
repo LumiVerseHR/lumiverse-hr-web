@@ -1,8 +1,8 @@
 /* The second lamp: a soft beam that seems to fall from the LumiVerse logo, washing the
    headline in warm light. Painted in CSS over the canvas, so it costs no extra 3D frames. */
 .beam {
-  --origin-x: calc(var(--gutter) + clamp(128px, 10.6vw, 166px));
-  --origin-y: clamp(30px, 3.2vw, 46px);
+  --origin-x: var(--logo-dot-x, calc(var(--gutter) + clamp(139px, 11.9vw, 185px)));
+  --origin-y: var(--logo-dot-y, clamp(30px, 3.2vw, 46px));
   --from: 75deg;
   position: absolute;
   inset: 0;

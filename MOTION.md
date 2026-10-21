@@ -25,7 +25,7 @@ One dark room, one warm light, white card and basswood models, and coral for peo
 | `#0b0c0e` / `#0a0a0c` | One step darker: the thesis band and the footer. |
 | `#0b0b0c` | **Placard black.** Labels, offers, stat bands, captions on screen. |
 | `#0a0a0b` + `#1d1c1a` + `#111116` | Moulding, mat and ground of a **framed exhibit** (screenshots). |
-| `#ff4d4d` | **Coral.** The human figures, the logo dot, the laser beam, and the action. Nothing decorative. |
+| `#ff4d4d` | **Coral.** The human figures, the LV logo symbol and its dot, the laser beam, and the action. Nothing decorative. |
 | `#e03131` | Coral for a button with a white label (passes WCAG AA). `#c42b2b` when pressed. |
 | `#c9a57a` | **Basswood.** The models' wood. In graphics: hairline dashes, step numbers, small tags, our-model highlight in charts. Never a large fill. |
 | `#ffd2a6` | **Lamplight.** The only atmosphere: low-alpha washes and cones from above (`rgb(255 210 166 / 0.06–0.16)`, beams up to ~0.36 at the core). |
@@ -38,7 +38,7 @@ One dark room, one warm light, white card and basswood models, and coral for peo
 
 - **No gradients on type**, no coloured glows, no neon, no cool light in the interface. The only
   "gradient" is lamplight falling off from above.
-- **Coral is human.** A coral fill is a figure, the logo dot, the beam or the button. Never a
+- **Coral is human.** A coral fill is a figure, the logo symbol or dot, the beam or the button. Never a
   background, a wash, a border ornament or an illustration.
 - **Brightness budget:** dark-first. Content glows only where the lamp hits it.
 
@@ -128,7 +128,7 @@ One dark room, one warm light, white card and basswood models, and coral for peo
 ## 7. Done right — the reference
 
 **The homepage hero (live since 2026-10-11)** is the reference for "done right":
-1. Dark gallery, the LumiVerse wordmark with its coral dot, one warm lamp cone falling from it.
+1. Dark gallery, the LumiVerse lockup (coral LV symbol, Golos 500 name, coral dot), one warm lamp cone falling from the dot.
 2. The cycling headline in Golos Text 700: "Human / Imagination. / AI Speed.", then "Judgement.",
    then "Taste." in the middle line. The lede in `#cacaca` ("AI product studio in Zagreb. Ambitious
    products, shipped and checked.") and one coral "Start a Project" button.
