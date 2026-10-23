@@ -25,7 +25,7 @@ export const flagships: Flagship[] = [
       hr: "Naslovnica MOJ KRAJ.-a: miran raspored vijesti u kojem je sadržaj na prvom mjestu",
     },
     kind: { en: "AI newsroom · our product", hr: "AI redakcija · naš proizvod" },
-    stat: { value: "8", unit: { en: "checks every draft must pass", hr: "provjera koje svaki nacrt mora proći" } },
+    stat: { value: "23", unit: { en: "checks and steps from wire to front page", hr: "provjere i koraka od izvora do naslovnice" } },
     summary: {
       en: "A Croatian news portal run as a public experiment: every article written fresh from cited sources, claims checked against the source before it publishes, and news from the towns big media left behind.",
       hr: "Hrvatski news portal vođen kao javni eksperiment: svaki članak napisan iznova iz citiranih izvora, tvrdnje provjerene prema izvoru prije objave, uz vijesti iz mjesta koja su veliki mediji napustili.",
