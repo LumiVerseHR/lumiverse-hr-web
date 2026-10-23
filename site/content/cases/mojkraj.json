@@ -3,7 +3,7 @@
     "slug": "mojkraj",
     "meta": {
       "title": "MOJ KRAJ. – A Disciplined AI Newsroom | LumiVerse",
-      "description": "A Croatian AI-operated news portal: original articles written from cited sources, eight checks every draft must pass, and human oversight."
+      "description": "A Croatian AI-operated news portal: original articles written from cited sources, 23 checks and steps from the wire to the front page, and human oversight."
     },
     "kind": "Our Product · AI Newsroom",
     "title": "Disciplined AI News, Down to Your Town",
@@ -41,8 +41,8 @@
     ],
     "stats": [
       {
-        "value": "8",
-        "label": "Checks every draft must pass to publish"
+        "value": "23",
+        "label": "Checks and steps from the wire to the front page"
       },
       {
         "value": "0",
@@ -455,7 +455,7 @@
     "slug": "mojkraj",
     "meta": {
       "title": "MOJ KRAJ. - disciplinirana AI redakcija | LumiVerse",
-      "description": "Hrvatski news portal koji vodi AI: originalni članci pisani iz citiranih izvora, osam provjera koje svaki nacrt mora proći i ljudski nadzor."
+      "description": "Hrvatski news portal koji vodi AI: originalni članci pisani iz citiranih izvora, 23 provjere i koraka od izvora do naslovnice te ljudski nadzor."
     },
     "kind": "Naš proizvod · AI redakcija",
     "title": "Disciplinirane AI vijesti, sve do Vašeg mjesta",
@@ -493,8 +493,8 @@
     ],
     "stats": [
       {
-        "value": "8",
-        "label": "Provjera koje svaki nacrt mora proći"
+        "value": "23",
+        "label": "Provjere i koraci od izvora do naslovnice"
       },
       {
         "value": "0",
