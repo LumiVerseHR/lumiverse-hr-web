@@ -18,3 +18,6 @@ dist/
 .impeccable/review/
 .impeccable/questions/
 *.blend1
+
+# /brag launch-video renders (large; kept local)
+brag-output*/
